@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13777;
+		nextID=13799;
 	};
 	class Camera
 	{
-		pos[]={840.36127,27.033556,13950.835};
-		dir[]={0.72950161,-0.6727556,-0.12357266};
-		up[]={0.66331053,0.73986197,-0.11236028};
-		aside[]={-0.16701776,6.5425411e-08,-0.9859733};
+		pos[]={819.29651,295.72189,13343.727};
+		dir[]={0.67666745,-0.43333906,-0.5952633};
+		up[]={0.32536218,0.90123099,-0.28622058};
+		aside[]={-0.66050029,1.4901161e-08,-0.75082576};
 	};
 };
 binarizationWanted=0;
@@ -52,7 +52,6 @@ addons[]=
 	"ace_smallarms",
 	"ace_ballistics",
 	"A3_Weapons_F_Pistols_P07",
-	"jsrs_soundmod_2025_Beta",
 	"ace_optics",
 	"ace_goggles",
 	"ace_nightvision",
@@ -80,7 +79,6 @@ addons[]=
 	"CUP_Terrains_Winter_Plants",
 	"A3_Structures_F_Exp_Military_Trenches",
 	"A3_Data_F_ParticleEffects",
-	"Blastcore_VEP",
 	"A3_Structures_F_Enoch_Industrial_Agriculture",
 	"CUP_Editor_Plants_Config",
 	"A3_Structures_F_Exp_Civilian_Accessories",
@@ -111,7 +109,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=57;
+		items=55;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -206,279 +204,267 @@ class AddonsMetaData
 		};
 		class Item14
 		{
-			className="jsrs_soundmod_2025_Beta";
-			name="JSRS Soundmod 2025 Beta";
-			author="LordJarhead";
-			url="https://www.arma3.com";
-		};
-		class Item15
-		{
 			className="ace_optics";
 			name="ACE3 - Optics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item16
+		class Item15
 		{
 			className="ace_goggles";
 			name="ACE3 - Goggles";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item17
+		class Item16
 		{
 			className="ace_nightvision";
 			name="ACE3 - Night Vision";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item18
+		class Item17
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item19
+		class Item18
 		{
 			className="ace_chemlights";
 			name="ACE3 - Chemlights";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item20
+		class Item19
 		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item21
+		class Item20
 		{
 			className="A3_Characters_F_Mark";
 			name="Arma 3 Marksmen - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item22
+		class Item21
 		{
 			className="J3FF_foxHoles";
 			name="J3FF_foxHoles";
 		};
-		class Item23
+		class Item22
 		{
 			className="realistic_mine_detector";
 			name="realistic_mine_detector";
 			author="FraggerNut";
 		};
-		class Item24
+		class Item23
 		{
 			className="A3_Weapons_F_Orange";
 			name="Arma 3 Orange - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item24
 		{
 			className="ace_arsenal";
 			name="ACE3 - Arsenal";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item26
+		class Item25
 		{
 			className="FIR_PilotCrewPack_US";
 			name="FIR_PilotCrewPack_US";
 		};
-		class Item27
+		class Item26
 		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item28
+		class Item27
 		{
 			className="GOL_MISC_ADDON";
 			name="GOL Misc Addon";
 			author="OksmanTV";
 			url="https://gol-clan.com/";
 		};
-		class Item29
+		class Item28
 		{
 			className="rhsusf_c_melb";
 			name="MELB";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item30
+		class Item29
 		{
 			className="Vsqz_melber";
 			name="Vsqz_melber";
 		};
-		class Item31
+		class Item30
 		{
 			className="ace_compat_rhs_usf3_fastroping";
 			name="ACE3 - RHS USAF Compatibility - Fastroping";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item32
+		class Item31
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item33
+		class Item32
 		{
 			className="GO_Rocks_N_Snow";
 			name="GO_Rocks_N_Snow";
 		};
-		class Item34
+		class Item33
 		{
 			className="CUP_Terrains_Winter_Plants";
 			name="CUP_Terrains_Winter_Plants";
 		};
-		class Item35
+		class Item34
 		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item36
+		class Item35
 		{
 			className="A3_Data_F";
 			name="Arma 3 - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item37
-		{
-			className="Blastcore_VEP";
-			name="Blastcore_VEP";
-		};
-		class Item38
+		class Item36
 		{
 			className="A3_Structures_F_Enoch_Industrial";
 			name="Arma 3 Contact Platform - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item39
+		class Item37
 		{
 			className="CUP_Editor_Plants_Config";
 			name="CUP_Editor_Plants_Config";
 		};
-		class Item40
+		class Item38
 		{
 			className="A3_Structures_F_Exp_Civilian";
 			name="Arma 3 Apex - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item41
+		class Item39
 		{
 			className="GW_3den";
 			name="GW - 3DEN Component";
 			author="GuzzenVonlidl";
 			url="https://github.com/GuzzenVonLidl/";
 		};
-		class Item42
+		class Item40
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item43
+		class Item41
 		{
 			className="A3_Props_F_Enoch";
 			name="Arma 3 Contact Platform - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item44
+		class Item42
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item45
+		class Item43
 		{
 			className="ace_dragging";
 			name="ACE3 - Dragging";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item46
+		class Item44
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item47
+		class Item45
 		{
 			className="CUP_Misc3_Config";
 			name="CUP_Misc3_Config";
 		};
-		class Item48
+		class Item46
 		{
 			className="CUP_Terrains_Winter_Plants_Bushes";
 			name="CUP_Terrains_Winter_Plants_Bushes";
 		};
-		class Item49
+		class Item47
 		{
 			className="emr_main";
 			name="Enhanced Movement Rework";
 			author="Simplex Team";
 			url="https://github.com/SceptreOfficial/Enhanced-Movement-Rework";
 		};
-		class Item50
+		class Item48
 		{
 			className="ace_logistics_wirecutter";
 			name="ACE3 - Logistics Wire Cutter";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item51
+		class Item49
 		{
 			className="ace_concertina_wire";
 			name="ACE3 - Concertina Wire";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item52
+		class Item50
 		{
 			className="A3_Rocks_F_Exp";
 			name="Arma 3 Apex - Rocks and Stones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item53
+		class Item51
 		{
 			className="GO_Rocks_N_Rocks";
 			name="GO_Rocks_N_Rocks";
 			author="Jacko";
 		};
-		class Item54
+		class Item52
 		{
 			className="rhs_c_rva";
 			name="Tochka-U Launcher";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item55
+		class Item53
 		{
 			className="UK3CB_Factions_CW_SOV";
 			name="3CB Factions - CW_SOV";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item56
+		class Item54
 		{
 			className="A3_Ui_F_Enoch";
 			name="Arma 3 Enoch - User Interface";
@@ -508,9 +494,10 @@ randomSeed=15706391;
 class ScenarioData
 {
 	author="Oksman";
-	overviewText="Framework Version 2.8";
+	overviewText="Framework Version 3.0.0.241225";
 	overViewPicture="\OKS_GOL_Misc\data\images\loadImage.jpg";
 	overViewPictureLocked="\OKS_GOL_Misc\data\images\loadImage.jpg";
+	loadScreen="\OKS_GOL_Misc\data\images\loadImage.jpg";
 	saving=0;
 	respawnDialog=0;
 	disabledAI=1;
@@ -35394,7 +35381,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Operation Frozen Road";
-		overviewText="Framework Version 2.8";
+		overviewText="Framework Version 3.0.0.241225";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -35959,7 +35946,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={873.06879,5.4248943,13952.404};
-								angles[]={-0,4.1916523,0};
+								angles[]={0,4.1916523,0};
 							};
 							side="Empty";
 							flags=4;
@@ -36387,7 +36374,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={865.30817,5.4248943,13948.093};
-								angles[]={-0,4.1916523,0};
+								angles[]={0,4.1916523,0};
 							};
 							side="Empty";
 							flags=4;
@@ -36815,7 +36802,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={858.38086,5.4248943,13944.871};
-								angles[]={-0,4.1916523,0};
+								angles[]={0,4.1916523,0};
 							};
 							side="Empty";
 							flags=4;
