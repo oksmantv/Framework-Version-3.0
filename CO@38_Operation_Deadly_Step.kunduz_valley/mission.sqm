@@ -1,4 +1,4 @@
-﻿version=54;
+version=54;
 class EditorData
 {
 	moveGridStep=1;
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13967;
+		nextID=13991;
 	};
 	class Camera
 	{
 		pos[]={8297.6943,34.680283,6797.9814};
-		dir[]={0.61640882,-0.58252037,-0.53002608};
-		up[]={0.44174272,0.81277359,-0.37983757};
-		aside[]={-0.65204966,7.332419e-07,-0.75831991};
+		dir[]={0.61634189,-0.58245695,-0.5299685};
+		up[]={0.44164053,0.8128615,-0.37974957};
+		aside[]={-0.65197873,0,-0.75823718};
 	};
 };
 binarizationWanted=0;
@@ -385,9 +385,10 @@ randomSeed=15706391;
 class ScenarioData
 {
 	author="Oksman";
-	overviewText="Framework Version 3.0";
-	overViewPicture=""
-	overViewPictureLocked=""
+	overviewText="Framework Version 3.0.0.241225";
+	overViewPicture="\OKS_GOL_Misc\data\images\loadImage.jpg";
+	overViewPictureLocked="\OKS_GOL_Misc\data\images\loadImage.jpg";
+	loadScreen="\OKS_GOL_Misc\data\images\loadImage.jpg";
 	saving=0;
 	respawnDialog=0;
 	disabledAI=1;
@@ -428,7 +429,7 @@ class CustomAttributes
 				class data
 				{
 					singleType="BOOL";
-					value=0;
+					value=1;
 				};
 			};
 		};
@@ -35340,8 +35341,8 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="COOP@36 Operation Deadly Step";
-		overviewText="Framework Version 2.8";
+		briefingName="Operation Deadly Step";
+		overviewText="Framework Version 3.0.0.241225";
 		timeOfChanges=1800.0002;
 		startWeather=0.26648659;
 		startWind=0.1;
@@ -40880,6 +40881,7 @@ class Mission
 					};
 					id=4307;
 					type="Box_FIA_Support_F";
+					atlOffset=0.00036621094;
 				};
 				class Item17
 				{
@@ -42118,13 +42120,14 @@ class Mission
 						angles[]={6.2635961,2.9037302,0.028710097};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						name="DestroyObject_16";
 					};
 					id=3520;
 					type="Box_FIA_Support_F";
-					atlOffset=2.768919;
+					atlOffset=0.0007724762;
 				};
 				class Item16
 				{
@@ -42212,13 +42215,14 @@ class Mission
 						angles[]={0,0.94466954,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						name="DestroyObject_15";
 					};
 					id=3519;
 					type="Box_FIA_Support_F";
-					atlOffset=1.3212299;
+					atlOffset=0.0039520264;
 				};
 				class Item22
 				{
@@ -42426,7 +42430,7 @@ class Mission
 				};
 			};
 			id=3449;
-			atlOffset=-0.39565086;
+			atlOffset=-0.39562035;
 		};
 		class Item5
 		{
@@ -50861,6 +50865,3 @@ class Mission
 		};
 	};
 };
-
-
-

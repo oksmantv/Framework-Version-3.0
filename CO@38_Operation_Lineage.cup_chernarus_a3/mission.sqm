@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13860;
+		nextID=13898;
 	};
 	class Camera
 	{
@@ -619,9 +619,10 @@ randomSeed=15706391;
 class ScenarioData
 {
 	author="Oksman";
-	overviewText="Framework Version 2.8";
+	overviewText="Framework Version 3.0.0.241225";
 	overViewPicture="\OKS_GOL_Misc\data\images\loadImage.jpg";
 	overViewPictureLocked="\OKS_GOL_Misc\data\images\loadImage.jpg";
+	loadScreen="\OKS_GOL_Misc\data\images\loadImage.jpg";
 	saving=0;
 	respawnDialog=0;
 	disabledAI=1;
@@ -699,7 +700,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category2
+	class Category3
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -882,7 +883,7 @@ class CustomAttributes
 		};
 		nAttributes=4;
 	};
-	class Category3
+	class Category4
 	{
 		name="Scenario";
 		class Attribute0
@@ -35644,8 +35645,8 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Operation Lineage 1.1";
-		overviewText="Framework Version 2.8";
+		briefingName="Operation Lineage";
+		overviewText="Framework Version 3.0.0.241225";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -36115,7 +36116,7 @@ class Mission
 						{
 							dataType="Trigger";
 							position[]={3259.3401,138.82742,4229.9526};
-							angle=3.9308021;
+							angle=3.9308019;
 							class Attributes
 							{
 								text="Spawn Trigger 8";
@@ -58956,7 +58957,7 @@ class Mission
 					fillName="SolidFull";
 					a=371.47177;
 					b=12.5;
-					angle=178.27777;
+					angle=178.27776;
 					id=6607;
 					atlOffset=19.288391;
 					class CustomAttributes
@@ -58988,7 +58989,7 @@ class Mission
 					fillName="DiagGrid";
 					a=393.77753;
 					b=50;
-					angle=178.27777;
+					angle=178.27776;
 					id=6608;
 					atlOffset=25.942795;
 					class CustomAttributes
@@ -60300,7 +60301,7 @@ class Mission
 					fillName="SolidFull";
 					a=346.091;
 					b=12.5;
-					angle=46.808144;
+					angle=46.80814;
 					id=6699;
 					atlOffset=31.151443;
 					class CustomAttributes
@@ -60332,7 +60333,7 @@ class Mission
 					fillName="DiagGrid";
 					a=371.6264;
 					b=50;
-					angle=46.808144;
+					angle=46.80814;
 					id=6700;
 					atlOffset=27.415188;
 					class CustomAttributes
@@ -60364,7 +60365,7 @@ class Mission
 					fillName="SolidFull";
 					a=346.091;
 					b=12.5;
-					angle=73.777054;
+					angle=73.777046;
 					id=6701;
 					atlOffset=31.689516;
 					class CustomAttributes
@@ -60396,7 +60397,7 @@ class Mission
 					fillName="DiagGrid";
 					a=371.6264;
 					b=50;
-					angle=73.777054;
+					angle=73.777046;
 					id=6702;
 					atlOffset=27.95326;
 					class CustomAttributes
@@ -60492,7 +60493,7 @@ class Mission
 					fillName="SolidFull";
 					a=346.091;
 					b=12.5;
-					angle=99.304108;
+					angle=99.3041;
 					id=6705;
 					atlOffset=42.181076;
 					class CustomAttributes
@@ -60524,7 +60525,7 @@ class Mission
 					fillName="DiagGrid";
 					a=371.6264;
 					b=50;
-					angle=99.304108;
+					angle=99.3041;
 					id=6706;
 					atlOffset=38.444824;
 					class CustomAttributes
@@ -61108,7 +61109,7 @@ class Mission
 					fillName="SolidFull";
 					a=371.47177;
 					b=12.5;
-					angle=195.78073;
+					angle=195.78072;
 					id=6726;
 					class CustomAttributes
 					{
@@ -61139,7 +61140,7 @@ class Mission
 					fillName="DiagGrid";
 					a=393.77753;
 					b=50;
-					angle=195.78073;
+					angle=195.78072;
 					id=6727;
 					atlOffset=-3.0517578e-05;
 					class CustomAttributes
