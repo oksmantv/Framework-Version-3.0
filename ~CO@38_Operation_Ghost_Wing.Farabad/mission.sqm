@@ -24,14 +24,14 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8273.7998,193.36484,2855.5891};
-		dir[]={0.51855046,-0.46199581,0.71949244};
-		up[]={0.27012414,0.88688111,0.37479904};
-		aside[]={0.81125963,-3.6379788e-09,-0.5846886};
+		pos[]={7877.0889,124.41081,2946.7539};
+		dir[]={0.21587168,-0.45092803,0.8660621};
+		up[]={0.10906002,0.89255959,0.43754086};
+		aside[]={0.97031164,5.4424163e-08,-0.2418566};
 	};
 };
 binarizationWanted=0;
-sourceName="CO@38_Operation_Ghost_Wing";
+sourceName="~CO@38_Operation_Ghost_Wing";
 addons[]=
 {
 	"A3_Characters_F",
@@ -645,7 +645,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=979;
+									items=972;
 									class Item0
 									{
 										class data
@@ -8422,62 +8422,6 @@ class CustomAttributes
 											value="ace_medical_alternatearmorpenetration";
 										};
 									};
-									class Item972
-									{
-										class data
-										{
-											singleType="STRING";
-											value="gw_common_blockaigear";
-										};
-									};
-									class Item973
-									{
-										class data
-										{
-											singleType="STRING";
-											value="gw_common_autodelete";
-										};
-									};
-									class Item974
-									{
-										class data
-										{
-											singleType="STRING";
-											value="gw_common_autoqueue";
-										};
-									};
-									class Item975
-									{
-										class data
-										{
-											singleType="STRING";
-											value="gw_gear_auto_assign";
-										};
-									};
-									class Item976
-									{
-										class data
-										{
-											singleType="STRING";
-											value="gw_gear_randomgear";
-										};
-									};
-									class Item977
-									{
-										class data
-										{
-											singleType="STRING";
-											value="gw_gear_extragear";
-										};
-									};
-									class Item978
-									{
-										class data
-										{
-											singleType="STRING";
-											value="gw_startup_timelimit";
-										};
-									};
 								};
 							};
 						};
@@ -8488,7 +8432,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=979;
+									items=972;
 									class Item0
 									{
 										class data
@@ -35145,195 +35089,6 @@ class CustomAttributes
 											};
 										};
 									};
-									class Item972
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=2;
-												class Item0
-												{
-													class data
-													{
-														singleType="BOOL";
-														value=1;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=1;
-													};
-												};
-											};
-										};
-									};
-									class Item973
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=2;
-												class Item0
-												{
-													class data
-													{
-														singleType="BOOL";
-														value=1;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=1;
-													};
-												};
-											};
-										};
-									};
-									class Item974
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=2;
-												class Item0
-												{
-													class data
-													{
-														singleType="BOOL";
-														value=1;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=1;
-													};
-												};
-											};
-										};
-									};
-									class Item975
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=2;
-												class Item0
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=1;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=1;
-													};
-												};
-											};
-										};
-									};
-									class Item976
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=2;
-												class Item0
-												{
-													class data
-													{
-														singleType="BOOL";
-														value=1;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=1;
-													};
-												};
-											};
-										};
-									};
-									class Item977
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=2;
-												class Item0
-												{
-													class data
-													{
-														singleType="BOOL";
-														value=0;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=1;
-													};
-												};
-											};
-										};
-									};
-									class Item978
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=2;
-												class Item0
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=5;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=1;
-													};
-												};
-											};
-										};
-									};
 								};
 							};
 						};
@@ -42169,7 +41924,7 @@ class Mission
 					alpha=0.50281316;
 					a=0.60000002;
 					b=0.60000002;
-					angle=227.12102;
+					angle=227.12103;
 					id=3790;
 					class CustomAttributes
 					{
