@@ -1,4 +1,4 @@
-// *	DO NOT CHANCE THE ORDER/STRUCTIOR OF THE FILE
+﻿// *	DO NOT CHANCE THE ORDER/STRUCTIOR OF THE FILE
 //	https://community.bistudio.com/wiki/description.ext
 // ==============================================================================
 // *	Includes the most nessasary configs for the framework to work
@@ -7,6 +7,9 @@
 #define DOUBLES(var1,var2) ##var1##_##var2
 #define TRIPLES(var1,var2,var3) ##var1##_##var2##_##var3
 #include "\OKS_GOL_Misc\script_Component.hpp"
+#undef VERSION
+#include "Core\version.hpp"
+#define VERSION FRAMEWORK_VERSION
 #include "Modules\LARs\compositions\compositions.cfg"
 
 class GW_FRAMEWORK {	// NOTE: SENSETIVE, UPPERCASE ONLY FOR BOOL
@@ -17,13 +20,11 @@ class GW_FRAMEWORK {	// NOTE: SENSETIVE, UPPERCASE ONLY FOR BOOL
 		//	NOTE: Changing any of these settings will require mission reload for it to be affected
 		#define GAME_MODE "COOP"								// GameMode
 		#define PLAYER_COUNT "36"								// Player Count - Do not go above 36 - Server Limit 
-		#define BRIEFING_NAME "Operation Volodomyr"					// Mission Name
+		#define BRIEFING_NAME "Operation Volodymyr"					// Mission Name
 		#define LOBBY_DESCRIPTION ""							// Description in mission select
-		#define ON_LOAD_TEXT ""									// Description on loading
+		#define ON_LOAD_TEXT __EVAL("Framework Version " + QUOTE(VERSION))	// Description on loading
 		#define MISSION_VERSION 1								// Version of mission
 		#define SELECT_PICTURE ""								// Path to loading screen
-		//#define SELECT_PICTURE RANDOM_PICTURES				// Random loading screen
-		// picture path: "\OKS_GOL_Misc\data\images\loadImage.jpg"
 		Author = "Oksman";				// Author
 		AuthorUID[] = {"_SP_PLAYER_"};			// UIDs with admin access
 
@@ -83,15 +84,14 @@ class Params {
 		#include "Modules\Modules.cpp"
 	#undef LOAD_PARAMS
 
-	// If you want to enable dynamic time selection at mission setup.
-	// class Daytime
-	// {
-	// 	title = "Time";
-	// 	texts[] = { "Dawn", "Noon", "Afternoon", "Evening", "Night" };
-	// 	values[] = { 5.6, 12, 16, 19, 23 };
-	// 	default = 23;
-	// 	function = "BIS_fnc_paramDaytime";
-	// };	
+	class Daytime
+	{
+		title = "Mission Time";
+		texts[] = { "Mission Defined", "Dawn", "Noon", "Afternoon", "Evening", "Night" };
+		values[] = { -1, 5.6, 12, 16, 19, 23 };
+		default = -1;
+		function = "GW_fnc_paramDaytime";
+	};
 
 	class ShouldGiveMedicalToAsstGunner
 	{
@@ -152,3 +152,4 @@ class ACE_Settings {
 
 #include "Modules\Callsigns\defines.hpp"
 #include "Modules\Callsigns\dialogs.hpp"
+

@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=14614;
+		nextID=14679;
 	};
 	class Camera
 	{
-		pos[]={766.03925,264.03305,2212.7861};
+		pos[]={770.0376,264.03305,2197.0911};
 		dir[]={-0.22345573,-0.425055,0.87715691};
 		up[]={-0.10493197,0.90516311,0.41190419};
 		aside[]={0.96905386,-6.4494088e-08,0.24686511};
 	};
 };
 binarizationWanted=0;
-sourceName="co@38_operation_volodymyr";
+sourceName="CO@38_Operation_Volodymyr";
 addons[]=
 {
 	"A3_Characters_F",
@@ -53,7 +53,6 @@ addons[]=
 	"ace_smallarms",
 	"ace_ballistics",
 	"A3_Weapons_F_Pistols_P07",
-	"jsrs_soundmod_2025_Beta",
 	"ace_optics",
 	"ace_goggles",
 	"ace_nightvision",
@@ -110,7 +109,6 @@ addons[]=
 	"A3_Structures_F_Orange_Signs_Mines",
 	"A3_Structures_F_Exp_Military_Trenches",
 	"A3_Data_F_ParticleEffects",
-	"Blastcore_VEP",
 	"A3_Structures_F_Civ_Camping",
 	"ace_interaction",
 	"ace_cargo",
@@ -145,7 +143,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=68;
+		items=66;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -237,366 +235,354 @@ class AddonsMetaData
 		};
 		class Item13
 		{
-			className="jsrs_soundmod_2025_Beta";
-			name="JSRS Soundmod 2025 Beta";
-			author="LordJarhead";
-			url="https://www.arma3.com";
-		};
-		class Item14
-		{
 			className="ace_optics";
 			name="ACE3 - Optics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item15
+		class Item14
 		{
 			className="ace_goggles";
 			name="ACE3 - Goggles";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item16
+		class Item15
 		{
 			className="ace_nightvision";
 			name="ACE3 - Night Vision";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item17
+		class Item16
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item18
+		class Item17
 		{
 			className="ace_chemlights";
 			name="ACE3 - Chemlights";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item19
+		class Item18
 		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item20
+		class Item19
 		{
 			className="A3_Characters_F_Mark";
 			name="Arma 3 Marksmen - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item21
+		class Item20
 		{
 			className="J3FF_foxHoles";
 			name="J3FF_foxHoles";
 		};
-		class Item22
+		class Item21
 		{
 			className="realistic_mine_detector";
 			name="realistic_mine_detector";
 			author="FraggerNut";
 		};
-		class Item23
+		class Item22
 		{
 			className="A3_Weapons_F_Orange";
 			name="Arma 3 Orange - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item23
 		{
 			className="ace_arsenal";
 			name="ACE3 - Arsenal";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item25
+		class Item24
 		{
 			className="FIR_PilotCrewPack_US";
 			name="FIR_PilotCrewPack_US";
 		};
-		class Item26
+		class Item25
 		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item27
+		class Item26
 		{
 			className="GOL_MISC_ADDON";
 			name="GOL Misc Addon";
 			author="OksmanTV";
 			url="https://gol-clan.com/";
 		};
-		class Item28
+		class Item27
 		{
 			className="UK3CB_Factions_GAF";
 			name="3CB Factions - GAF";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item29
+		class Item28
 		{
 			className="RHS_US_A2_AirImport";
 			name="RHSUSF A2 Air Ports";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item30
+		class Item29
 		{
 			className="rhsusf_c_MATV";
 			name="MATV MRAP";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item31
+		class Item30
 		{
 			className="RHS_US_A2Port_Armor";
 			name="M2 Bradley IFV";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item32
+		class Item31
 		{
 			className="A3_Props_F_Decade_Objectives";
 			name="A3_Props_F_Decade_Objectives";
 		};
-		class Item33
+		class Item32
 		{
 			className="A3_Structures_F_Enoch_Military";
 			name="Arma 3 Contact Platform - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item34
+		class Item33
 		{
 			className="A3_Structures_F_Orange";
 			name="Arma 3 Orange - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item35
+		class Item34
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item36
+		class Item35
 		{
 			className="rhsusf_c_troops";
 			name="RHSUSF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item37
+		class Item36
 		{
 			className="A3_Structures_F_Enoch_Industrial";
 			name="Arma 3 Contact Platform - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item38
+		class Item37
 		{
 			className="A3_Structures_F_Exp_Civilian";
 			name="Arma 3 Apex - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item39
+		class Item38
 		{
 			className="A3_Structures_F_Argo";
 			name="Arma 3 Malden - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item40
+		class Item39
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item41
+		class Item40
 		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item42
+		class Item41
 		{
 			className="CUP_CAMisc";
 			name="CUP_CAMisc";
 		};
-		class Item43
+		class Item42
 		{
 			className="emr_main";
 			name="Enhanced Movement Rework";
 			author="Simplex Team";
 			url="https://github.com/SceptreOfficial/Enhanced-Movement-Rework";
 		};
-		class Item44
+		class Item43
 		{
 			className="A3_Structures_F_Enoch";
 			name="Arma 3 Contact Platform - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item45
+		class Item44
 		{
 			className="A3_Ui_F_Enoch";
 			name="Arma 3 Enoch - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item46
+		class Item45
 		{
 			className="rhs_c_kamaz";
 			name="KamAZ 5350";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item47
+		class Item46
 		{
 			className="A3_Static_F";
 			name="Arma 3 Alpha - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item48
+		class Item47
 		{
 			className="ace_logistics_wirecutter";
 			name="ACE3 - Logistics Wire Cutter";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item49
+		class Item48
 		{
 			className="ace_concertina_wire";
 			name="ACE3 - Concertina Wire";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item50
+		class Item49
 		{
 			className="A3_Data_F";
 			name="Arma 3 - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item51
-		{
-			className="Blastcore_VEP";
-			name="Blastcore_VEP";
-		};
-		class Item52
+		class Item50
 		{
 			className="ace_interaction";
 			name="ACE3 - Interaction";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item53
+		class Item51
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item54
+		class Item52
 		{
 			className="ace_dragging";
 			name="ACE3 - Dragging";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item55
+		class Item53
 		{
 			className="rhs_c_heavyweapons";
 			name="Heavy weapons pack";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item56
+		class Item54
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item57
+		class Item55
 		{
 			className="rhs_c_weapons";
 			name="AFRF Weapons Pack";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item58
+		class Item56
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item59
+		class Item57
 		{
 			className="A3_Props_F_Enoch";
 			name="Arma 3 Contact Platform - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item60
+		class Item58
 		{
 			className="CUP_Editor_Plants_Config";
 			name="CUP_Editor_Plants_Config";
 		};
-		class Item61
+		class Item59
 		{
 			className="CUP_CAStructures_E_HouseC";
 			name="CUP_CAStructures_E_HouseC";
 		};
-		class Item62
+		class Item60
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item63
+		class Item61
 		{
 			className="CUP_Misc3_Config";
 			name="CUP_Misc3_Config";
 		};
-		class Item64
+		class Item62
 		{
 			className="A3_Supplies_F_Exp";
 			name="Arma 3 Apex - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item65
+		class Item63
 		{
 			className="A3_Supplies_F_Enoch";
 			name="Arma 3 Contact Platform - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item66
+		class Item64
 		{
 			className="rhsusf_c_weapons";
 			name="RHSUSF Weapons & Accessories";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item67
+		class Item65
 		{
 			className="A3_Rocks_F";
 			name="Arma 3 - Rocks and Stones";
@@ -625,9 +611,10 @@ randomSeed=15706391;
 class ScenarioData
 {
 	author="Oksman";
-	overviewText="Framework Version 2.8";
+	overviewText="Framework Version 3.0.0.241225";
 	overViewPicture="\OKS_GOL_Misc\data\images\loadImage.jpg";
 	overViewPictureLocked="\OKS_GOL_Misc\data\images\loadImage.jpg";
+	loadScreen="\OKS_GOL_Misc\data\images\loadImage.jpg";
 	saving=0;
 	respawnDialog=0;
 	disabledAI=1;
@@ -705,7 +692,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category2
+	class Category3
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -888,7 +875,7 @@ class CustomAttributes
 		};
 		nAttributes=4;
 	};
-	class Category3
+	class Category4
 	{
 		name="Scenario";
 		class Attribute0
@@ -918,7 +905,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=983;
+									items=986;
 									class Item0
 									{
 										class data
@@ -8783,6 +8770,30 @@ class CustomAttributes
 											value="gol_missilewarningsound_enabled";
 										};
 									};
+									class Item983
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ace_medical_alternatearmorpenetration";
+										};
+									};
+									class Item984
+									{
+										class data
+										{
+											singleType="STRING";
+											value="gw_setdifficulty_unittraining_east";
+										};
+									};
+									class Item985
+									{
+										class data
+										{
+											singleType="STRING";
+											value="gw_setdifficulty_unittraining_independent";
+										};
+									};
 								};
 							};
 						};
@@ -8793,7 +8804,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=983;
+									items=986;
 									class Item0
 									{
 										class data
@@ -11021,7 +11032,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=-1;
+														value=-0.89884597;
 													};
 												};
 												class Item1
@@ -19256,7 +19267,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=3;
+														value=2;
 													};
 												};
 												class Item1
@@ -21920,7 +21931,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0.045195885;
+														value=0.30346099;
 													};
 												};
 												class Item1
@@ -35747,6 +35758,87 @@ class CustomAttributes
 											};
 										};
 									};
+									class Item983
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item984
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=2;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item985
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
 								};
 							};
 						};
@@ -35826,7 +35918,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Operation Volodymyr";
-		overviewText="Framework Version 2.8";
+		overviewText="Framework Version 3.0.0.241225";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -60831,7 +60923,7 @@ class Mission
 					fillName="SolidFull";
 					a=8.9469995;
 					b=48.348663;
-					angle=114.43228;
+					angle=114.43227;
 					id=15261;
 					class CustomAttributes
 					{
@@ -60862,7 +60954,7 @@ class Mission
 					fillName="DiagGrid";
 					a=29.525;
 					b=49.507195;
-					angle=114.43228;
+					angle=114.43227;
 					id=15262;
 					atlOffset=-0.13897705;
 					class CustomAttributes
@@ -61144,7 +61236,7 @@ class Mission
 					colorName="ColorEAST";
 					a=0.69999999;
 					b=0.69999999;
-					angle=224.30109;
+					angle=224.30107;
 					id=15281;
 					atlOffset=1.5258789e-05;
 					class CustomAttributes
@@ -77093,7 +77185,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={1866.7137,237.79654,3840.6548};
-					angle=0.48536032;
+					angle=0.48536029;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -82065,7 +82157,7 @@ class Mission
 				class Item4
 				{
 					dataType="Layer";
-					name="Østfront Division - Bakhmut Trench Position";
+					name="Ã˜stfront Division - Bakhmut Trench Position";
 					class Entities
 					{
 						items=64;
@@ -90157,7 +90249,7 @@ class Mission
 				class Item22
 				{
 					dataType="Layer";
-					name="Østfront Division - Trenches & Dugouts Vol. 2";
+					name="Ã˜stfront Division - Trenches & Dugouts Vol. 2";
 					class Entities
 					{
 						items=12;
@@ -113138,7 +113230,7 @@ class Mission
 						{
 							dataType="Trigger";
 							position[]={590.11499,262.15033,3183.4209};
-							angle=3.8992383;
+							angle=3.8992379;
 							class Attributes
 							{
 								name="ExplosiveTrigger_2";
@@ -115042,7 +115134,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={1165.816,245.28282,3260.772};
-					angle=3.6947827;
+					angle=3.6947825;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -115061,7 +115153,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={1111.4551,250.12784,3232.5688};
-					angle=3.6947825;
+					angle=3.6947823;
 					class Attributes
 					{
 						text="HideTrigger";
