@@ -20,11 +20,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13799;
+		nextID=13843;
 	};
 	class Camera
 	{
-		pos[]={819.29651,295.72189,13343.727};
+		pos[]={938.0434,224.54361,13248.612};
 		dir[]={0.67666745,-0.43333906,-0.5952633};
 		up[]={0.32536218,0.90123099,-0.28622058};
 		aside[]={-0.66050029,1.4901161e-08,-0.75082576};
@@ -575,7 +575,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category2
+	class Category3
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -758,7 +758,7 @@ class CustomAttributes
 		};
 		nAttributes=4;
 	};
-	class Category3
+	class Category4
 	{
 		name="Scenario";
 		class Attribute0
@@ -788,7 +788,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=974;
+									items=980;
 									class Item0
 									{
 										class data
@@ -8581,6 +8581,54 @@ class CustomAttributes
 											value="gol_surrender_flashbang";
 										};
 									};
+									class Item974
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ace_medical_alternatearmorpenetration";
+										};
+									};
+									class Item975
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ae3_terminaldialogtitle";
+										};
+									};
+									class Item976
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ae3_terminalbiosversion";
+										};
+									};
+									class Item977
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ae3_terminalcopyright";
+										};
+									};
+									class Item978
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ae3_terminaltipmessage";
+										};
+									};
+									class Item979
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ae3_terminaltagline";
+										};
+									};
 								};
 							};
 						};
@@ -8591,7 +8639,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=974;
+									items=980;
 									class Item0
 									{
 										class data
@@ -10819,7 +10867,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=-0.89884555;
+														value=-0.89884597;
 													};
 												};
 												class Item1
@@ -21718,7 +21766,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0.30346069;
+														value=0.30346099;
 													};
 												};
 												class Item1
@@ -35297,6 +35345,168 @@ class CustomAttributes
 													{
 														singleType="SCALAR";
 														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item974
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item975
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="SHITEâ„¢ COMPUTING";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+											};
+										};
+									};
+									class Item976
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="SHITEâ„¢ BIOS v1.0.0";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+											};
+										};
+									};
+									class Item977
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Â© 2025 System Hardware Integration & Technology Enterprises";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+											};
+										};
+									};
+									class Item978
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="> Tip: SHITEâ„¢ laptops perform better when plugged in.";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+											};
+										};
+									};
+									class Item979
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Powered by SHITEâ„¢ Technologies â€“ Excellence, from the ground up.";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
 													};
 												};
 											};

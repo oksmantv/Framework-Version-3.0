@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13898;
+		nextID=14012;
 	};
 	class Camera
 	{
-		pos[]={4118.1899,221.63055,4641.5952};
-		dir[]={-0.5210858,-0.2504327,0.81593764};
-		up[]={-0.1347928,0.96813309,0.21106416};
-		aside[]={0.84279346,1.4528632e-07,0.53823739};
+		pos[]={4121.0156,241.8364,4632.6133};
+		dir[]={-0.46056214,-0.42527288,0.77912033};
+		up[]={-0.21640959,0.90506327,0.36609405};
+		aside[]={0.86084288,3.882451e-08,0.50887126};
 	};
 };
 binarizationWanted=0;
@@ -913,7 +913,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=978;
+									items=983;
 									class Item0
 									{
 										class data
@@ -8738,6 +8738,46 @@ class CustomAttributes
 											value="ace_medical_alternatearmorpenetration";
 										};
 									};
+									class Item978
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ae3_terminaldialogtitle";
+										};
+									};
+									class Item979
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ae3_terminalbiosversion";
+										};
+									};
+									class Item980
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ae3_terminalcopyright";
+										};
+									};
+									class Item981
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ae3_terminaltipmessage";
+										};
+									};
+									class Item982
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ae3_terminaltagline";
+										};
+									};
 								};
 							};
 						};
@@ -8748,7 +8788,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=978;
+									items=983;
 									class Item0
 									{
 										class data
@@ -10976,7 +11016,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=-0.89884555;
+														value=-0.89884597;
 													};
 												};
 												class Item1
@@ -21875,7 +21915,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0.30346069;
+														value=0.30346099;
 													};
 												};
 												class Item1
@@ -22388,7 +22428,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=-1;
+														value=25;
 													};
 												};
 												class Item1
@@ -35526,7 +35566,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=-1;
+														value=5;
 													};
 												};
 												class Item1
@@ -35562,6 +35602,141 @@ class CustomAttributes
 													{
 														singleType="SCALAR";
 														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item978
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="SHITEâ„¢ COMPUTING";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+											};
+										};
+									};
+									class Item979
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="SHITEâ„¢ BIOS v1.0.0";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+											};
+										};
+									};
+									class Item980
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Â© 2025 System Hardware Integration & Technology Enterprises";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+											};
+										};
+									};
+									class Item981
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="> Tip: SHITEâ„¢ laptops perform better when plugged in.";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+											};
+										};
+									};
+									class Item982
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Powered by SHITEâ„¢ Technologies â€“ Excellence, from the ground up.";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
 													};
 												};
 											};
@@ -36116,7 +36291,7 @@ class Mission
 						{
 							dataType="Trigger";
 							position[]={3259.3401,138.82742,4229.9526};
-							angle=3.9308019;
+							angle=3.9308009;
 							class Attributes
 							{
 								text="Spawn Trigger 8";
@@ -60301,7 +60476,7 @@ class Mission
 					fillName="SolidFull";
 					a=346.091;
 					b=12.5;
-					angle=46.80814;
+					angle=46.808136;
 					id=6699;
 					atlOffset=31.151443;
 					class CustomAttributes
@@ -60333,7 +60508,7 @@ class Mission
 					fillName="DiagGrid";
 					a=371.6264;
 					b=50;
-					angle=46.80814;
+					angle=46.808136;
 					id=6700;
 					atlOffset=27.415188;
 					class CustomAttributes
@@ -60493,7 +60668,7 @@ class Mission
 					fillName="SolidFull";
 					a=346.091;
 					b=12.5;
-					angle=99.3041;
+					angle=99.304077;
 					id=6705;
 					atlOffset=42.181076;
 					class CustomAttributes
@@ -60525,7 +60700,7 @@ class Mission
 					fillName="DiagGrid";
 					a=371.6264;
 					b=50;
-					angle=99.3041;
+					angle=99.304077;
 					id=6706;
 					atlOffset=38.444824;
 					class CustomAttributes
