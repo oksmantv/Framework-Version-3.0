@@ -1,5 +1,4 @@
 #define	COMPONENT CORE
-#define VERSION 3
 #define CUSTOM_FOLDER Core\Framework\Functions
 #include "script_Component.hpp"
 
@@ -38,22 +37,22 @@ if (hasInterface) then {
 	player createDiarySubject ["framework_diary","Modules Loaded"];
 	{
 		player createDiaryRecord ["framework_diary", [FORMAT_1("%1", (_x select 0)),
-			FORMAT_3("Framework Version: %2  by %1, <br/>Description: %3", (_x select 1), (_x select 2), (_x select 3))
+			FORMAT_3("Version: %2  by %1, <br/>Description: %3", (_x select 1), (_x select 2), (_x select 3))
 		]];
 	} forEach GVARMAIN(logModules);
 
 	[{
 		private _framework = "==============================================
-				<br/>
-				<br/>	Framework by: GuzzenVonLidl, Oksman, Blu.
-				<br/>	Framework Version: "+GVARMAIN(Version)+"
-				<br/>
-				<br/>	==============================================
-				<br/>
-				<br/>	Guerrillas of Liberation
-				<br/>	Discord: GOL Official (https://discord.com/invite/scpD7EUHNp)
-				<br/>	Website: https://gol-clan.com
-				<br/>	==============================================";
+			<br/>
+			<br/>	Framework by: GuzzenVonLidl, Oksman, Blu.
+			<br/>	Framework Version: "+GVARMAIN(Version)+"
+			<br/>
+			<br/>	==============================================
+			<br/>
+			<br/>	Guerrillas of Liberation
+			<br/>	Discord: GOL Official (https://discord.com/invite/scpD7EUHNp)
+			<br/>	Website: https://gol-clan.com
+			<br/>	==============================================";
 		player createDiaryRecord ["framework_diary", ["Framework",_framework]];
 	}, []] call CBA_Fnc_execNextFrame;
 };
@@ -115,6 +114,10 @@ GVARMAIN(postLoad) = nil;
 			GVARMAIN(ZeuzModuleAdminLogged) setVariable ["Forced", 0, true];
 			GVARMAIN(ZeuzModuleAdminLogged) setVariable ["birdType", "", true];
 			GVARMAIN(ZeuzModuleAdminLogged) setVariable ["showNotification", false, true];
+			GVARMAIN(ZeuzModuleAdminLogged) setVariable ["bis_fnc_moduleexecute_activate", true];
+			GVARMAIN(ZeuzModuleAdminLogged) setVariable ["bis_fnc_moduleinit_status", true];
+			GVARMAIN(ZeuzModuleAdminLogged) setVariable ["bis_fnc_initmodules_activate", true];
+			
 			player assignCurator GVARMAIN(ZeuzModuleAdminLogged);
 			publicVariable QGVARMAIN(ZeuzModuleAdminLogged);
 

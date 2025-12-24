@@ -1,4 +1,4 @@
-version=54;
+﻿version=54;
 class EditorData
 {
 	moveGridStep=1;
@@ -386,8 +386,8 @@ class ScenarioData
 {
 	author="Oksman";
 	overviewText="Framework Version 3.0";
-	overViewPicture="\OKS_GOL_Misc\data\images\loadImage.jpg";
-	overViewPictureLocked="\OKS_GOL_Misc\data\images\loadImage.jpg";
+	overViewPicture="\OKS_GOL_Misc\data\$1\OKS_GOL_Misc\data\$1\OKS_GOL_Misc\data\$1\OKS_GOL_Misc\data\$1\OKS_GOL_Misc\data\images\loadImage.jpg$3;$3$3$3
+	overViewPictureLocked="\OKS_GOL_Misc\data\$1\OKS_GOL_Misc\data\$1\OKS_GOL_Misc\data\$1\OKS_GOL_Misc\data\$1\OKS_GOL_Misc\data\images\loadImage.jpg$3;$3$3$3
 	saving=0;
 	respawnDialog=0;
 	disabledAI=1;
@@ -50861,3 +50861,6 @@ class Mission
 		};
 	};
 };
+
+
+
