@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8273.7998,193.36484,2855.5891};
-		dir[]={0.51855046,-0.46199581,0.71949244};
-		up[]={0.27012414,0.88688111,0.37479904};
-		aside[]={0.81125963,-3.6379788e-09,-0.5846886};
+		pos[]={8008.1177,153.86035,3101.2439};
+		dir[]={0.015586674,-0.38277158,0.92371583};
+		up[]={0.0064578224,0.92384207,0.38271841};
+		aside[]={0.99986112,-4.9438313e-08,-0.016871072};
 	};
 };
 binarizationWanted=0;
@@ -432,7 +432,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category3
+	class Category2
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -615,7 +615,7 @@ class CustomAttributes
 		};
 		nAttributes=4;
 	};
-	class Category4
+	class Category3
 	{
 		name="Scenario";
 		class Attribute0
@@ -42169,7 +42169,7 @@ class Mission
 					alpha=0.50281316;
 					a=0.60000002;
 					b=0.60000002;
-					angle=227.12102;
+					angle=227.12097;
 					id=3790;
 					class CustomAttributes
 					{

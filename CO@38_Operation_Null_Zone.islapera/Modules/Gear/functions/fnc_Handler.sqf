@@ -177,11 +177,8 @@ if (_isMan) then {
 	#include "..\Scripts\factions.sqf"
 	#include "isNilCheck.hpp"
 
-	if (side group _unit == EAST) then {
-		_UAVTerminal = "O_UavTerminal";
-	};
-	if (side group _unit == independent) then {
-		_UAVTerminal = "I_UavTerminal";
+	if(side group _unit == EAST) then {
+		_UAVTerminal = "O_UavTerminal"
 	};
 
 	if (_isCivilian) then {
@@ -209,7 +206,7 @@ if (_isMan) then {
 
 	if !(_errorCode) then {
 		_unit setUnitLoadout _loadout;
-		_unit setVariable ["GW_Gear_appliedGear", true, true];
+		(_unit) setVariable ['GW_Gear_appliedGear', true, true];
 
 		if (_isPlayer && _useFactionRadio && _roleUseRadio) then {
 			if(!isNIl "zade_boc_fnc_removeChestpack" && !isNil "zade_boc_fnc_chestpack") then {
@@ -346,7 +343,6 @@ if (_isMan) then {
 				[_unit, "42cdo_vs17_item", 15] call _fnc_AddObjectsCargo;
 				[_unit, _glsmokeY, 20] call _fnc_AddObjectsCargo;
 				[_unit, _glflareW, 20] call _fnc_AddObjectsCargo;
-				[_unit, _glHEDP, 10] call _fnc_AddObjectsCargo;
 				[_unit, _smokegrenadeY, 20] call _fnc_AddObjectsCargo;
 				[_unit, _smokegrenadeB, 10] call _fnc_AddObjectsCargo;
 
@@ -588,16 +584,17 @@ if (_isMan) then {
 					[_unit, _handFlareG, 3] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareW, 3] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareR, 3] call _fnc_AddObjectsCargo;
-					[_unit, _chemB, 6] call _fnc_AddObjectsCargo;
+					[_unit, _chemB, 3] call _fnc_AddObjectsCargo;
 					[_unit, _chemR, 3] call _fnc_AddObjectsCargo;
-					[_unit, _chemG, 6] call _fnc_AddObjectsCargo;	
-					[_unit, _grenadeIR, 3] call _fnc_AddObjectsCargo;											
+					[_unit, _chemG, 3] call _fnc_AddObjectsCargo;	
+					[_unit, "ACE_Chemlight_HiGreen", 3] call _fnc_AddObjectsCargo;
+					[_unit, "ACE_Chemlight_HiBlue", 3] call _fnc_AddObjectsCargo;
+					[_unit, "B_IR_Grenade", 3] call _fnc_AddObjectsCargo;											
 				};		
 			};			
 
 			case "tiny_box": {		
 				[_unit, _glHEDP, 16] call _fnc_AddObjectsCargo;
-				[_unit, "10Rnd_50BW_Mag_F",16] call _fnc_AddObjectsCargo;
 				[_unit, _glsmokeR, 8] call _fnc_AddObjectsCargo;
 				[_unit, _grenade, 8] call _fnc_AddObjectsCargo;
 				[_unit, _smokegrenadeY, 10] call _fnc_AddObjectsCargo;
@@ -625,18 +622,19 @@ if (_isMan) then {
 					[_unit, _handFlareG, 8] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareW, 8] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareR, 8] call _fnc_AddObjectsCargo;
-					[_unit, _chemB, 12] call _fnc_AddObjectsCargo;
+					[_unit, _chemB, 6] call _fnc_AddObjectsCargo;
 					[_unit, _chemR, 6] call _fnc_AddObjectsCargo;
-					[_unit, _chemG, 9] call _fnc_AddObjectsCargo;		
-					[_unit, _grenadeIR, 8] call _fnc_AddObjectsCargo;				
+					[_unit, _chemG, 3] call _fnc_AddObjectsCargo;		
+					[_unit, "ACE_Chemlight_HiGreen", 6] call _fnc_AddObjectsCargo;
+					[_unit, "ACE_Chemlight_HiBlue", 6] call _fnc_AddObjectsCargo;
+					[_unit, "B_IR_Grenade", 8] call _fnc_AddObjectsCargo;				
 				};		
 			};
 
 			case "tiny_box_special": {
 				[_unit, _glHEDP, 16] call _fnc_AddObjectsCargo;
 				[_unit, _glsmokeR, 8] call _fnc_AddObjectsCargo;
-				[_unit, _grenade, 8] call _fnc_AddObjectsCargo;	
-				[_unit, "10Rnd_50BW_Mag_F",16] call _fnc_AddObjectsCargo;			
+				[_unit, _grenade, 8] call _fnc_AddObjectsCargo;				
 				[_unit, _smokegrenadeY, 8] call _fnc_AddObjectsCargo;
 				[_unit, _smokegrenadeB, 6] call _fnc_AddObjectsCargo;
 				[_unit, _bandage, 20] call _fnc_AddObjectsCargo;
@@ -667,10 +665,12 @@ if (_isMan) then {
 					[_unit, _handFlareG, 8] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareW, 8] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareR, 8] call _fnc_AddObjectsCargo;
-					[_unit, _chemB, 12] call _fnc_AddObjectsCargo;
+					[_unit, _chemB, 6] call _fnc_AddObjectsCargo;
 					[_unit, _chemR, 6] call _fnc_AddObjectsCargo;
-					[_unit, _chemG, 9] call _fnc_AddObjectsCargo;	
-					[_unit, _grenadeIR, 8] call _fnc_AddObjectsCargo;	
+					[_unit, _chemG, 3] call _fnc_AddObjectsCargo;	
+					[_unit, "ACE_Chemlight_HiGreen", 6] call _fnc_AddObjectsCargo;
+					[_unit, "ACE_Chemlight_HiBlue", 6] call _fnc_AddObjectsCargo;
+					[_unit, "B_IR_Grenade", 8] call _fnc_AddObjectsCargo;	
 					[_unit, "GOL_Packed_60mm_Flare", 5] call _fnc_AddObjectsCargo;											
 				};				
 			};
@@ -679,7 +679,6 @@ if (_isMan) then {
 				[_unit, _glHEDP, 24] call _fnc_AddObjectsCargo;
 				[_unit, _glsmokeR, 20] call _fnc_AddObjectsCargo;
 				[_unit, _grenade, 16] call _fnc_AddObjectsCargo;
-				[_unit, "10Rnd_50BW_Mag_F",35] call _fnc_AddObjectsCargo;
 				[_unit, _smokegrenadeY, 15] call _fnc_AddObjectsCargo;
 				[_unit, _smokegrenadeB, 5] call _fnc_AddObjectsCargo;
 				[_unit, _bandage, 50] call _fnc_AddObjectsCargo;
@@ -724,10 +723,12 @@ if (_isMan) then {
 					[_unit, _handFlareG, 10] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareW, 10] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareR, 10] call _fnc_AddObjectsCargo;
-					[_unit, _chemB, 24] call _fnc_AddObjectsCargo;
+					[_unit, _chemB, 12] call _fnc_AddObjectsCargo;
 					[_unit, _chemR, 12] call _fnc_AddObjectsCargo;
-					[_unit, _chemG, 18] call _fnc_AddObjectsCargo;
-					[_unit, _grenadeIR, 12] call _fnc_AddObjectsCargo;										
+					[_unit, _chemG, 6] call _fnc_AddObjectsCargo;
+					[_unit, "ACE_Chemlight_HiGreen", 12] call _fnc_AddObjectsCargo;
+					[_unit, "ACE_Chemlight_HiBlue", 12] call _fnc_AddObjectsCargo;
+					[_unit, "B_IR_Grenade", 12] call _fnc_AddObjectsCargo;										
 				};
 			};
 
@@ -738,7 +739,6 @@ if (_isMan) then {
 				[_unit, _glflareG, 40] call _fnc_AddObjectsCargo;
 				[_unit, _glflareW, 40] call _fnc_AddObjectsCargo;
 				[_unit, _grenade, 60] call _fnc_AddObjectsCargo;
-				[_unit, "10Rnd_50BW_Mag_F",40] call _fnc_AddObjectsCargo;
 				[_unit, _smokegrenadeY, 60] call _fnc_AddObjectsCargo;
 				[_unit, _smokegrenadeG, 15] call _fnc_AddObjectsCargo;
 
