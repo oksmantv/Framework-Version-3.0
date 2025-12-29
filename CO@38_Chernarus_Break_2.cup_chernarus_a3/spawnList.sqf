@@ -69,8 +69,8 @@ switch (_case) do {
 		"Radio_2" remoteExec ["playSound",0];
 		["hq","side","Landing party, this is eagle squadron, airstrike inbound, eagle out."] remoteExec ["OKS_fnc_Chat",0];
 
-		[getpos jetspawn_1, jetstrike_1,getpos jetexit_1,selectRandom ["B_Plane_Fighter_01_Stealth_F"],west,200] spawn OKS_fnc_AirStrike;  sleep 5;
-		[getpos jetspawn_2, jetstrike_2,getpos jetexit_2,selectRandom ["B_Plane_Fighter_01_Stealth_F"],west,200] spawn OKS_fnc_AirStrike;  sleep 5; 
+		[getpos jetspawn_1, jetstrike_1,getpos jetexit_1,selectRandom ["B_Plane_Fighter_01_Stealth_F"],west,200] spawn OKS_fnc_AirStrike;  sleep 10;
+		[getpos jetspawn_2, jetstrike_2,getpos jetexit_2,selectRandom ["B_Plane_Fighter_01_Stealth_F"],west,200] spawn OKS_fnc_AirStrike;
 
 		sleep 120;
 		
@@ -177,7 +177,7 @@ switch (_case) do {
 		sleep 180;
 
 		_ConvoyArray = [];
-		[convoy_1,convoy_2,convoy_3,east,[4,["rhs_tigr_msv"], 40, 25],[true,4],_ConvoyArray, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoy_1,convoy_2,convoy_3,east,[7,["rhs_btr80a_vmf","rhs_tigr_msv","rhs_tigr_msv","rhs_kamaz5350_msv","rhs_kamaz5350_msv","rhs_kamaz5350_msv","rhs_btr80_vmf"], 40, 25],[true,4],_ConvoyArray, false, false] spawn OKS_fnc_Convoy_Spawn;
 	    [true, ["Defend_1","main"], ["A convoy of vehicles are heading towards Komarovo, you are to repel the attack. Good luck!", "Defend Komarovo (NW)", ""], [3586.52,2532.27,0],"ASSIGNED",-1,true,"defend"] call BIS_fnc_taskCreate;
 
 		waitUntil{
@@ -199,7 +199,7 @@ switch (_case) do {
 		[true, ["Defend_2","main"], ["Another counter-attack is inbound from the east. They will be there in 4 minutes, prepare your defences. Good luck!", "Defend Komarovo (E)", ""], [3758.1,2552.13,0],"ASSIGNED",-1,true,"defend"] call BIS_fnc_taskCreate;
 		sleep 240;
 		_ConvoyArray2 = [];
-		[convoy_4,convoy_5,convoy_6,east,[4,["rhs_bmp1_msv","rhs_bmp1_msv","RHS_Ural_VDV_01","RHS_Ural_Open_VDV_01"], 35, 30],[true,4],_ConvoyArray2, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoy_4,convoy_5,convoy_6,east,[7,["rhs_bmp1_msv","rhs_bmp1_msv","RHS_Ural_VDV_01","RHS_Ural_Open_VDV_01"], 35, 30],[true,4],_ConvoyArray2, false, false] spawn OKS_fnc_Convoy_Spawn;
 
 		waitUntil{
 			sleep 5; 
@@ -243,7 +243,7 @@ switch (_case) do {
 		[[[[4692.19,2434.99,0],327,[]],[[4699.11,2433.52,0],327,[]],[[4690.73,2428.07,0],327,[]],[[4706.03,2432.06,0],327,[]]],[],[[[4547.53,2564.78,0],[[0,"Move"],[1,"SAFE"]]],[[4487.52,2498.41,0],[[0,"Move"]]],[[4531.23,2442.23,2.85592],[[0,"Move"]]],[[4682.93,2439.71,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 
 		// Airfield Sentries.
-		[[[[4714.21,2590.83,9.22541],239,"Gunner",[]],[[4718.37,2593.74,13.1194],184,"Gunner",[]],[[4713.56,2599.98,9.28187],213,"Gunner",[]],[[4719.79,2593.65,9.23805],194,"Gunner",[]],[[4722.87,2592.78,0.715226],350,"Gunner",[]],[[4721.73,2596.49,4.877],173,"Gunner",[]],[[4716.03,2594.64,9.21365],71,"Gunner",[]],[[4716.76,2598.61,9.25221],122,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
+		[[[[4714.21,2590.83,9.22541],239,"Up",[]],[[4718.37,2593.74,13.1194],184,"Up",[]],[[4713.56,2599.98,9.28187],213,"Up",[]],[[4719.79,2593.65,9.23805],194,"Up",[]],[[4722.87,2592.78,0.715226],350,"Up",[]],[[4721.73,2596.49,4.877],173,"Up",[]],[[4716.03,2594.64,9.21365],71,"Up",[]],[[4716.76,2598.61,9.25221],122,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 
 		[speaker_1,2500] spawn OKS_fnc_AlarmSound;
 	};
@@ -259,9 +259,9 @@ switch (_case) do {
 
 		// Balota Counter-Attack
 		Enemy_AirAssault = [];
-		[independent, "RHS_Mi8mt_vvs", False, "paradrop", helistart_1, land_1, heliend_1, [2,0.5], [[4492.85,2439.17,0]],false,false,objNull,Enemy_AirAssault] spawn NEKY_AirDrop; sleep 5;
-		[independent, "RHS_Mi8mt_vvs", False, "paradrop", helistart_2, land_2, heliend_2, [2,0.5], [[4492.85,2439.17,0]],false,false,objNull,Enemy_AirAssault] spawn NEKY_AirDrop; sleep 5;
-		[independent, "RHS_Mi8AMT_vvsc", False, "paradrop", helistart_3, land_3, heliend_3, [2,0.5], [[4492.85,2439.17,0]],false,false,objNull,Enemy_AirAssault] execVM "Scripts\NEKY_AirDrop\NEKY_AirDrop.sqf"; sleep 15;
+		[independent, "RHS_Mi8mt_vvs", False, "paradrop", helistart_1, land_1, heliend_1, [2,0.5], [[4492.85,2439.17,0]],false,false,objNull,Enemy_AirAssault] spawn OKS_fnc_AirDrop; sleep 5;
+		[independent, "RHS_Mi8mt_vvs", False, "paradrop", helistart_2, land_2, heliend_2, [2,0.5], [[4492.85,2439.17,0]],false,false,objNull,Enemy_AirAssault] spawn OKS_fnc_AirDrop; sleep 5;
+		[independent, "RHS_Mi8AMT_vvsc", False, "paradrop", helistart_3, land_3, heliend_3, [2,0.5], [[4492.85,2439.17,0]],false,false,objNull,Enemy_AirAssault] spawn OKS_fnc_AirDrop; sleep 15;
 
 		waitUntil{
 			sleep 5; 
@@ -317,126 +317,3 @@ switch (_case) do {
 		ERROR(FORMAT_1("Case missing: %1", _case));
 	};
 };
-
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-		/*
-		   Dynamic Script Params
-		   0 - Trigger Name (Object)
-		   1 - Disabled - Keep False
-		   2 - Number of Infantry - [Static Integer,Patrol Integer,CreateSectorObjective?,LocalPatrols?] (Array) -
-		   3 - Wheeled Patrols (Integer/Number)
-		   4 - APC Patrols (Integer/Number)
-		   5 - Tank Patrols (Integer/Number)
-		   6 - Roadblocks [RoadBlocksCount,OnlyOnTarmac,LocalPatrols?,NumberChanceForVehicle(0-1)] (Array)
-		   7 - Mortar Pits [MortarCount,LocalPatrols?] (Array)
-		   8 - Random Objectives [ObjectiveCount,LocalPatrols?] (Array)
-		   9 - Hunt Array Bases [Infantry,Wheeled,APC,Tank,Helicopter]
-		   10 - Dynamic Civilians on? (Boolean)
-
-			Local Patrols - This means that the strongpoints / roadblocks / mortar pits / objectives have their own local patrols near their position.
-			If you use it on Parameter 2, 30% of the static contacts will be turned into patrols.
-
-		   Note:
-		   The Dynamic Scripts does work on its own however is very limited in selecting positions for strongpoints.
-		   You as an editor can assist the dynamic script by placing down locations for pinpointing different positions.
-		   In Eden-Editor "Location"s can be found in Systems (F5) and Game Logics > Locations.
-
-		   Area, Base, City, Evac Point, Resupply Point & Town -> Spawns Strongpoints & Sector Tasks (Selects Random Buildings in Area. Generally more contacts per building)
-		   Outpost -> Spawns Compounds & Sector Tasks (Selects all buildings in range of compoundSize (Settings) and spawns even-spread over all buildings)
-		   FOB -> Spawns Roadblocks, use the direction of the logic to define the direction of the roadblock.
-		   Respawn Point -> If you use HuntBases these locations will be picked, use the direction of the logic to choose the spawn direction 15-25m away from logic.
-		   Camp -> Static Objective positions, once again direction of logic defines direction of Objective compositions.
-		   Village -> Defines village area for the Dynamic Civilian presence, radius is found in Settings.sqf
-
-		   All Locations are not required, the script will find its own locations, however for the best experience and best result, help the dynamic script by placing these logics.
-
-		   Example:
-		   [Trigger_1,false,[0,0,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
-		*/
-
-		/* Example of Dynamic Scripts */
-		/*
-		if(isServer) then {
-			waitUntil{sleep 5; !(isNil "OKS_fnc_CreateZone")};
-
-			//// START OF ZONE /////
-			[	Trigger_1,  // Name of Trigger used as Spawn Area
-				false, 		// DO NOT EDIT
-				[
-					8,      // Number of Static Infantry - Preferred Game Logic Location 'Outpost'"
-					25,		// Number of Patrolling Infantry
-					false,  // Create Sector Objective on Garrison?
-					false   // Should have dedicated patrols near static positions
-				],
-				east, // Side of Enemy
-				0,    // Number of Wheeled on Patrol
-				0,    // Number of APCs on Patrol
-				0,    // Number of Tanks on Patrol
-				[
-					0,     // Number of Roadblocks - Preferred Game Logic Location 'FOB'"
-					true,  // Should be on tarmac.
-					false, // Should have dedicated patrol.
-					0  	   // Chance for Static Vehicle (1 = 100%, 0.5 = 50%)
-				],
-				[
-					0,     // Number of Mortars
-					false  // Should have dedicated patrols around it
-				],[
-					0,    // Number of Random Objectives - Preferred Game Logic Location 'Camp'"
-					false // Should have dedicated patrols around it
-				],
-				[0,0,0,0,0] // Infantry, Wheeled, APCs, Tanks, Air Assault - Hunt Bases - Preferred Game Logic Location 'Respawn Point'"
-				,false      // Should Enable Civilian Presence - Required Game Logic Location 'Village'"
-			] spawn OKS_fnc_CreateZone;
-			//// END OF ZONE ////
-
-		};
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-		/*
-		   	HuntBase Params
-
-		   	0 - Base Object (Object)
-		   	1 - Spawn Object (Object)
-		   	2 - Hunt Trigger (Trigger)
-		   	3 - Wave Count (Integer/Number)
-		   	4 - Respawn Delay in Seconds (Integer/Number)
-		   	5 - Enemy Side (Side)
-		   	6 - Unit Selection - (Integer/String/Array with Strings)
-		   	7 - Refresh Rate in Seconds (Integer/Number)
-
-			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,30,independent,6,30] spawn OKS_fnc_Huntbase;
-			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,"CUP_I_LR_MG_AAF",30] spawn OKS_fnc_Huntbase;
-			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,["CUP_I_LR_MG_AAF","CUP_I_LR_MG_AAF"],30] spawn OKS_fnc_Huntbase;
-		*/
-		/* Example of Hunt Bases */
-		/*
-		if(isServer && GOL_NEKY_HUNT isEqualTo 1) then {
-			waitUntil{sleep 5; !(isNil "OKS_fnc_Huntbase")};
-			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,600+(random 300),east,6,120+(120)] spawn OKS_fnc_Huntbase;
-		};
-
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-		/*
-		   AirBase Params
-
-		   0 - Base Object (Object)
-		   1 - Spawn Object (Object)
-		   2 - Hunt Trigger (Trigger)
-		   3 - Enemy Side (Side)
-		   4 - Classname of Helicopter (String)
-		   5 - Type of Insert (Unload ONLY) (String)
-		   6 - gunner Split - [How many teams,Procent of gunner] (Array)
-
-		   [Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
-		*/
-		/* Example of Air Bases */
-		/*
-		if(isServer && GOL_NEKY_AIRDROP isEqualTo 1) then {
-			waitUntil{sleep 5; !(isNil "OKS_fnc_Airbase")};
-			[Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
-		};
-
-
