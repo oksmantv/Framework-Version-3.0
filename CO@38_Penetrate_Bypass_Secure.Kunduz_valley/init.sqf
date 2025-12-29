@@ -12,5 +12,20 @@
 if(isServer) then {
 	// Difficulty Setup
 	OKS_Difficulty = ["OKS_Difficulty", -1] call BIS_fnc_getParamValue;
-	publicVariable "OKS_Difficulty";	
+	publicVariable "OKS_Difficulty";
+
+	sleep 5;
+
+	if(OKS_Difficulty == 0) then {
+		// Moto
+		missionNamespace setVariable ["LAT_Chance",0.05, true];
+		missionNamespace setVariable ["MAT_Chance",0.02, true];
+		missionNamespace setVariable ["UGL_Chance",0.35, true];
+	};
+	if(OKS_Difficulty == 1) then {
+		// Medium
+		missionNamespace setVariable ["LAT_Chance",0.7, true];
+		missionNamespace setVariable ["MAT_Chance",0.5, true];
+		missionNamespace setVariable ["UGL_Chance",0.4, true];
+	};
 };

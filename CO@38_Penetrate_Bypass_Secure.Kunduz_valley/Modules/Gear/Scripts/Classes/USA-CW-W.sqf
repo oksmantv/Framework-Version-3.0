@@ -2,27 +2,23 @@ _useMineDetector = false;
 _allowedNightStuff = false;
 
 _insignia = "";
-_goggles = ["rhsusf_shemagh_od","rhsusf_shemagh2_od","rhsusf_shemagh_gogg_od","rhsusf_shemagh2_gogg_od","rhsusf_oakley_goggles_blk","UK3CB_G_Tactical_Clear_Gloves_Green","UK3CB_G_Tactical_Gloves_Green","UK3CB_G_Tactical_Gloves_Green_Shemagh_Green","UK3CB_G_KLR_BLK","UK3CB_G_Gloves_Green"];
-_helmet = ["UK3CB_CW_US_B_LATE_H_PASGT_02_WDL","UK3CB_CW_US_B_LATE_H_PASGT_01_WDL"];
+_goggles = ["rhsusf_shemagh_tan","rhsusf_shemagh2_tan","rhsusf_shemagh_gogg_tan","rhsusf_shemagh2_gogg_tan","rhsusf_oakley_goggles_blk","UK3CB_G_Tactical_Clear_Gloves_Green","UK3CB_G_Tactical_Gloves_Green","UK3CB_G_Tactical_Gloves_Green_Shemagh_Green","UK3CB_G_KLR_BLK","UK3CB_G_Gloves_Green"];
+_helmet = ["rhsgref_helmet_pasgt_3color_desert"];
 _OfficerHelmet = "UK3CB_AAF_B_H_Beret_Army_Off";
-_uniform = ["UK3CB_B_U_CombatUniform_03_WDL","UK3CB_CW_US_B_LATE_U_CombatUniform_01_WDL","UK3CB_CW_US_B_LATE_U_CombatUniform_02_WDL","UK3CB_CW_US_B_LATE_U_CombatUniform_03_WDL","UK3CB_CW_US_B_LATE_U_CombatUniform_04_WDL"];
-_vest = ["UK3CB_CW_US_B_LATE_V_PASGT_Crew_Vest","UK3CB_CW_US_B_LATE_V_PASGT_Medic_Vest","UK3CB_CW_US_B_LATE_V_PASGT_MG_Vest","UK3CB_CW_US_B_LATE_V_PASGT_Rif_Vest"];
+_uniform = ["rhsgref_uniform_3color_desert"];
+_vest = ["UK3CB_CW_US_B_LATE_V_PASGT_Crew_Vest_GOL","UK3CB_CW_US_B_LATE_V_PASGT_Medic_Vest_GOL","UK3CB_CW_US_B_LATE_V_PASGT_MG_Vest_GOL","UK3CB_CW_US_B_LATE_V_PASGT_Rif_Vest_GOL"];
 _backpack = "UK3CB_B_Kitbag_WDL_01";
 if (true) then {
 	_backpackRadio = "UK3CB_ION_B_B_RadioBag_OLI";
 };
 
-if(_role in ["sl","pl"]) then {
-	_uniform = "UK3CB_CW_US_B_LATE_U_JNR_OFFICER_Uniform_01_WDL";
-};
-
 if (_role in ["ag","ammg","lr","ab","hat","ahat"]) then {
 	_backpack = "rhsgref_hidf_alicepack";
-	_vest = "UK3CB_CW_US_B_LATE_V_PASGT_Medic_Vest";
+	_vest = "UK3CB_CW_US_B_LATE_V_PASGT_Medic_Vest_GOL";
 };
 
 if (_role isEqualTo "crew") then {
-	_vest = "UK3CB_CW_US_B_LATE_V_PASGT_Crew_Vest";
+	_vest = "UK3CB_CW_US_B_LATE_V_PASGT_Crew_Vest_GOL";
 };
 if (_role isEqualTo "p") then {
 	_helmet = "UK3CB_H_Pilot_Helmet";
@@ -42,13 +38,13 @@ if (_role isEqualTo "jetp") then {
 
 _silencer = "";
 _pointer = "";
-_sight = "";
+_sight = "rhsusf_acc_compm4";
 _bipod = "";
 
-_rifle = ["UK3CB_M16A1", _silencer, _pointer, _sight, _bipod];
-_rifleC = ["UK3CB_M16_Carbine", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["UK3CB_M16A2_UGL", _silencer, _pointer, _sight, _bipod];
-_rifleL = ["UK3CB_M16A1_LSW", _silencer, _pointer, _sight, _bipod];
+_rifle = ["UK3CB_M16A3", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["rhs_weap_m4a1_carryhandle", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["UK3CB_M16A3_UGL", _silencer, _pointer, _sight, _bipod];
+_rifleL = ["rhs_weap_m16a4", _silencer, _pointer, _sight, _bipod];
 _rifle_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
 _rifle_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
 _rifleGL_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";

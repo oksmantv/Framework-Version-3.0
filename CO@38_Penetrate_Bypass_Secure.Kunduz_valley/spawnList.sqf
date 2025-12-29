@@ -122,8 +122,8 @@ switch (_case) do {
 			true
 		] spawn OKS_fnc_AirScout;	
 
-		[getPos aa_1,east,50,500,1500,120] spawn OKS_IR_AA;
-		[getPos aa_2,east,50,500,1500,120] spawn OKS_IR_AA;
+		[getPos aa_1,east,50,500,1500,120] spawn OKS_fnc_IR_AA;
+		[getPos aa_2,east,50,500,1500,120] spawn OKS_fnc_IR_AA;
 	
 	};
 
@@ -192,7 +192,7 @@ switch (_case) do {
 	case 4: {
 
 		// Clear Phase 1 area of enemies
-		[Phase1Trigger] spawn OKS_DeleteDeadAndObjects;
+		[Phase1Trigger] spawn OKS_fnc_DeleteDeadAndObjects;
 
 		[Trigger_4,false,[0,_PatrolCountLarge,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;	
 
@@ -219,7 +219,7 @@ switch (_case) do {
 
 		// HQ Objective
 		{
-			[_X,nil,selectRandom _Vehicles,east,(600 + (random 300)),"hunt",1000] spawn OKS_Inactive_VehicleSpawn;
+			// OKS_Inactive_VehicleSpawn removed (no longer used)
 		} foreach [Reserve_1,Reserve_2,Reserve_3,Reserve_4,Reserve_5,Reserve_6];		
 
 		[[[[6290.77,8572.9,0.173855],114,"Up",[]],[[6289.72,8583.8,0.173855],114,"Up",[]],[[6308.36,8585.05,0.50825],266,"Up",[]],[[6308.78,8580.52,3.08951],265,"Middle",[]],[[6305.13,8590.45,0.173855],206,"Middle",[]],[[6298.2,8605.16,6.77992],270,"Up",[]],[[6301.24,8602.62,3.8387],194,"Up",[]],[[6296.81,8607,3.82457],13,"Up",[]],[[6304.09,8607.59,0.745148],271,"Up",[]],[[6311.08,8576.48,0.523855],194,"Up",[]],[[6306.98,8607.33,0.173856],182,"Up",[]],[[6300.36,8614.28,0.173856],194,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;

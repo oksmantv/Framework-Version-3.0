@@ -1,0 +1,288 @@
+// *	DO NOT CHANCE THE ORDER/STRUCTIOR OF THE FILE
+//	https://community.bistudio.com/wiki/description.ext
+// ==============================================================================
+// *	Includes the most nessasary configs for the framework to work
+#define	isDescription
+#define QUOTE(var1) #var1
+#define DOUBLES(var1,var2) ##var1##_##var2
+#define TRIPLES(var1,var2,var3) ##var1##_##var2##_##var3
+#include "script_Component.hpp"
+#include "Scripts\LARs\compositions\compositions.cfg"
+
+class GW_FRAMEWORK {	// NOTE: SENSETIVE, UPPERCASE ONLY FOR BOOL
+	class Core {
+		Version = QUOTE(VERSION);
+	};
+
+	class Naming {		//	NOTE: Changing any of these settings will require mission reload for it to be affected
+		#define GAME_MODE "COOP"									// GameMode
+		#define PLAYER_COUNT "21"								// Player Count
+		#define BRIEFING_NAME "Chernarus Break 2"						// Mission Name
+		#define LOBBY_DESCRIPTION ""							// Description in mission select
+		#define ON_LOAD_TEXT ""									// Description on loading
+		#define MISSION_VERSION 1								// Version of mission
+		#define SELECT_PICTURE ""								// Path to loading screen
+		//#define SELECT_PICTURE RANDOM_PICTURES					// Random loading screen
+
+		Author = "Oksman";				// Author
+		AuthorUID[] = {"_SP_PLAYER_"};			// UIDs with admin access
+
+		Name = __EVAL(GAME_MODE + PLAYER_COUNT + " " + BRIEFING_NAME);
+		Description = LOBBY_DESCRIPTION;
+		onLoad = ON_LOAD_TEXT;
+		Picture = SELECT_PICTURE;
+		version = MISSION_VERSION;
+		GameMode = GAME_MODE;
+	};
+	#define LOAD_Behaviour
+		#include "Modules\Modules.cpp"
+	#undef LOAD_Behaviour
+
+	#define LOAD_SpawnUnits
+		#include "Modules\Modules.cpp"
+	#undef LOAD_SpawnUnits
+
+	#define LOAD_Loadout
+		#include "Modules\Modules.cpp"
+	#undef LOAD_Loadout
+};
+
+// *	DO NOT EDIT BELOW
+// Global Mission Settings
+aiKills = 0;
+allowFunctionsLog = 0;
+allowFunctionsRecompile = 0;
+briefingName = __EVAL(GAME_MODE + "@" + PLAYER_COUNT + " " + BRIEFING_NAME);
+disableChannels[]={{0,true,true},{1,false,true},{2,false,true},{5,false,true}};
+disabledAi = 1;
+ACE_maxWeightcarry = 1800;
+ACE_maxWeightdrag = 2000;
+//disableRandomization[] = {"CAManBase"};	// Disable random gear for units
+//disableRandomization[] = {"AllVehicles"};	// Disable for vehicles and units
+enableDebugConsole = 1;
+joinUnassigned = 1;
+scriptedPlayer = 1;
+
+corpseManagerMode = 0;
+wreckManagerMode = 0;
+
+respawn = "BASE";
+respawnOnStart = 0;
+respawnTemplates[] = {"ACE_Spectator"}; // Enables the spectator template for all
+
+class Params {
+	#define LOAD_PARAMS
+		#include "Modules\Modules.cpp"
+	#undef LOAD_PARAMS
+
+	class RespawnDelay_Param
+	{
+		title = "Respawn Delay";
+		texts[] = { "No Respawn", "Standard Respawn" };
+		values[] = { 648000, 20};
+		default = 20;
+	};
+};
+
+class CfgFunctions {
+	#include "Scripts\LARs\spawnComp\functions\functions.cpp"
+	#include "Modules\Callsigns\Functions\functions.hpp"
+
+    class NEKY
+    {
+        class Tasks
+        {
+			class Tasks_Init
+			{
+				file = "Scripts\NEKY_Tasks\Init.sqf";
+				PreInit = 1;
+			};
+        };
+    };
+
+	class BLUFUNC
+	{
+		class Radios
+		{
+			class Radio_Channel_Init
+			{
+				file = "Scripts\BLU_SetChannel.sqf";
+				preInit = 1;
+			};
+		};
+	};
+};
+
+class CfgSounds
+{
+	sounds[] = {}; // OFP required it filled, now it can be empty or absent depending on the game's version
+
+	class Radio_1
+	{
+		name = "Radio_1";						// display name
+		sound[] = { "Audio\Radio_1.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};
+
+	class Radio_2
+	{
+		name = "Radio_2";						// display name
+		sound[] = { "Audio\Radio_2.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};
+	
+	class Radio_3
+	{
+		name = "Radio_3";						// display name
+		sound[] = { "Audio\Radio_3.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};	
+
+	class Radio_4
+	{
+		name = "Radio_4";						// display name
+		sound[] = { "Audio\Radio_4.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};	
+
+	class Radio_5
+	{
+		name = "Radio_5";						// display name
+		sound[] = { "Audio\Radio_5.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};
+
+	class Radio_6
+	{
+		name = "Radio_6";						// display name
+		sound[] = { "Audio\Radio_6.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};
+
+	class Radio_7
+	{
+		name = "Radio_7";						// display name
+		sound[] = { "Audio\Radio_7.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};		
+
+	class Radio_8
+	{
+		name = "Radio_8";						// display name
+		sound[] = { "Audio\Radio_8.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};	
+
+	class Radio_9
+	{
+		name = "Radio_9";						// display name
+		sound[] = { "Audio\Radio_9.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};		
+
+	class Radio_Resupply
+	{
+		name = "Radio_Resupply";						// display name
+		sound[] = { "Audio\Radio_Resupply.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};					
+};
+
+
+class GW_Modules_Base {
+	name = "GW Modules Base";
+	Authors[] = {};
+	version = 1;
+	description = "Dummy for each module";
+	preInit = "preInit.sqf";
+	postInit = "postInit.sqf";
+	requiredModules[] = {};
+	requiredAddons[] = {};
+};
+
+class GW_Modules {
+	#define LOAD_MODULES
+		#include "Modules\Modules.cpp"
+	#undef LOAD_MODULES
+};
+
+class Extended_PreInit_EventHandlers {
+	class preInit {
+		Init = QUOTE(call compile preprocessFileLineNumbers 'core\XEH_preInit.sqf');
+	};
+};
+
+class Extended_PostInit_EventHandlers {
+	class postInit {
+		Init = QUOTE(call compile preprocessFileLineNumbers 'core\XEH_postInit.sqf');
+	};
+};
+
+class ACE_Settings {
+	#define LOAD_ACE
+		#include "Modules\Modules.cpp"
+	#undef LOAD_ACE
+};
+
+#include "Modules\Callsigns\defines.hpp"
+#include "Modules\Callsigns\dialogs.hpp"
