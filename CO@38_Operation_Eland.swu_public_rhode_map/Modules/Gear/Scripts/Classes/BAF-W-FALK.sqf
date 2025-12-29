@@ -21,7 +21,7 @@ _goggles = ["UK3CB_G_Gloves_Tan","UK3CB_G_KLR_TAN","UK3CB_G_KR_TAN"];
 _helmet = ["UK3CB_H_HSAT_MKIII","UK3CB_H_HSAT_PTYPE","UK3CB_H_MKIV_Helmet","UK3CB_H_MKIV_Net_Helmet"];
 _OfficerHelmet = "UK3CB_AAF_B_H_Beret_Army";
 _uniform = ["UK3CB_ADM_B_U_CombatUniform_Shortsleeve_01_DDPM"];
-_vest = ["UK3CB_TKA_O_V_6b23_ml_sniper_Oli","UK3CB_TKA_O_V_6b23_ml_Oli","UK3CB_TKA_O_V_6b23_ml_engineer_Oli"];
+_vest = ["rhs_6b2_chicom_GOL","rhs_6b2_lifchik_GOL","rhs_6b2_RPK_GOL","rhs_6b2_SVD_GOL","rhs_6b2_AK_GOL"];
 _backpack = ["UK3CB_B_Alice_Bedroll_K","UK3CB_B_Alice_Bedroll_2_K"];
 _backpackRadio = _backpack;
 
@@ -35,7 +35,7 @@ if (_role in ["ag","ammg","lr","ab"]) then {
 };
 if (_role isEqualTo "crew") then {
 	_helmet = "H_HelmetCrew_B";
-	_vest = "UK3CB_TKA_O_V_6b23_ml_crew_Oli";
+	_vest = "rhs_6b2_holster_GOL";
 };
 if (_role isEqualTo "p") then {
 	_helmet = "rhs_pilotka";
@@ -61,8 +61,8 @@ _sight = "";
 _bipod = "";
 
 _rifle = [["rhs_weap_m1garand_sa43"], _silencer, _pointer, _sight, _bipod];
-_rifleC = ["uk3cb_thompson_m1928a1", _silencer, _pointer, _sight, _bipod];
-_rifleGL = [["uk3cb_m2carbine"], "uk3cb_muzzle_m1_flash_hider", _pointer, _sight, _bipod];
+_rifleC = ["uk3cb_thompson_m1a1", _silencer, _pointer, _sight, _bipod];
+_rifleGL = [["uk3cb_m2a1_carbine"], "uk3cb_muzzle_m1_flash_hider", _pointer, _sight, _bipod];
 _rifleL = ["UK3CB_M1903A1_unertl", _silencer, _pointer, _sight, _bipod];
 _rifle_mag = "rhsgref_8Rnd_762x63_M2B_M1rifle";
 _rifle_mag_tr = "rhsgref_8Rnd_762x63_Tracer_M1T_M1rifle";
@@ -92,13 +92,9 @@ _HAT_mag = "rhs_fgm148_magazine_AT";
 _AA = ["rhs_weap_fim92", _silencer, _pointer, _sight, _bipod];
 _AA_mag = "Titan_AA";
 
-if(_role in ["g","amat","fac","pl","sl","ftl"]) then {
-	_pistol = ["rhs_weap_M320", _silencer, _pointer, _sight, _bipod];
-	_pistol_mag = "rhs_mag_M433_HEDP";	
-} else {
-	_pistol = ["rhsusf_weap_m1911a1", _silencer, _pointer, _sight, _bipod];
-	_pistol_mag = "9Rnd_45ACP_Mag";
-};
+_pistol = ["rhsusf_weap_m1911a1", _silencer, _pointer, _sight, _bipod];
+_pistol_mag = "9Rnd_45ACP_Mag";
+
 
 _pdw = ["UK3CB_Sten", _silencer, _pointer, _sight, _bipod];
 _pdw_mag = "UK3CB_Sten_34Rnd_Magazine_RT";

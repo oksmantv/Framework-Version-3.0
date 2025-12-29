@@ -11,18 +11,4 @@
 */
 if(isServer) then {
 
-	execVM "ZAM_fnc_liveMapsComp.sqf";
-	[] spawn {
-		waitUntil {
-			sleep 1;
-			!(isNil "MAZ_fnc_makeNewMapDisplay")
-		};
-		[MapBoard] spawn MAZ_fnc_makeNewMapDisplay;
-		
-		waitUntil{
-			sleep 1;
-			!(isNil "sebs_briefing_table_fnc_createTable")
-		};
-		[Table, "marker_0", 35, 2, true, true, -0.15] call sebs_briefing_table_fnc_createTable;
-	};	
 };

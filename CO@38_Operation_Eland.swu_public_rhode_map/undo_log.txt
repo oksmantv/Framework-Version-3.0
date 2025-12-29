@@ -1,10 +1,19 @@
-2025-12-29 16:08:18 - Parsed folder name: CO@38_Operation_Eland.swu_public_rhode_map
-2025-12-29 16:08:18 - Extracted briefingName: Operation Eland
-2025-12-29 16:08:18 - Map: swu_public_rhode_map
-2025-12-29 16:08:29 - spawnList.sqf updated successfully
-2025-12-29 16:08:39 - Reset GW_isConfigured to 0 (false) to trigger first-time setup
-2025-12-29 16:08:39 - Extracted author from mission.sqm: Oksman
-2025-12-29 16:08:39 - Updated BRIEFING_NAME to 'Operation Eland' in Description.ext
-2025-12-29 16:08:39 - Updated author to 'Oksman' in Description.ext
-2025-12-29 16:08:39 - Description.ext updated
-2025-12-29 16:08:39 - mission.sqm updated successfully
+2025-12-29 17:06:15 - Parsed folder name: CO@38_Operation_Eland.swu_public_rhode_map
+2025-12-29 17:06:15 - Extracted briefingName: Operation Eland
+2025-12-29 17:06:15 - Map: swu_public_rhode_map
+2025-12-29 17:06:17 - spawnList.sqf updated successfully
+2025-12-29 17:11:23 - Loaded mission.sqm
+2025-12-29 17:11:23 - Loaded Description.ext
+2025-12-29 17:11:23 - Parsed folder name: CO@38_Operation_Eland.swu_public_rhode_map
+2025-12-29 17:11:23 - Extracted briefingName: Operation Eland
+2025-12-29 17:11:23 - Map: swu_public_rhode_map
+2025-12-29 17:11:24 - spawnList.sqf updated successfully
+2025-12-29 17:13:09 - Starting mission processing in: C:\Users\aleok\OneDrive\Dokument\Arma 3\Users\Oksman\missions\Framework-Version-3.0\CO@38_Operation_Eland.swu_public_rhode_map
+2025-12-29 17:13:09 - Log file: C:\Users\aleok\OneDrive\Dokument\Arma 3\Users\Oksman\missions\Framework-Version-3.0\CO@38_Operation_Eland.swu_public_rhode_map\undo_log.txt
+2025-12-29 17:13:09 - Loaded mission.sqm
+2025-12-29 17:13:09 - Loaded Description.ext
+2025-12-29 17:13:09 - Parsed folder name: CO@38_Operation_Eland.swu_public_rhode_map
+2025-12-29 17:13:09 - Extracted briefingName: Operation Eland
+2025-12-29 17:13:09 - Map: swu_public_rhode_map
+2025-12-29 17:13:10 - spawnList.sqf updated successfully
+2025-12-29 17:13:10 - Processing mission.sqm rewrites...

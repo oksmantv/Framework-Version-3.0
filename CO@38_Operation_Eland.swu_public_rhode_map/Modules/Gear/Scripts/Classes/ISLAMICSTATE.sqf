@@ -53,12 +53,11 @@ _rifleC_mag_tr = "UK3CB_MAT49_35Rnd_762x25_Magazine_G";
 _rifleL_mag = "uk3cb_PPSH_71rnd_magazine_GT";
 _rifleL_mag_tr = "uk3cb_PPSH_71rnd_magazine_GT";
 
+_LMG = ["rhs_weap_MP44", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "rhsgref_30Rnd_792x33_SmE_StG";
 
-_LMG = ["UK3CB_UK59", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "UK3CB_UK59_100Rnd_762x54mmR_Magazine_G";
-
-_MMG = ["rhs_weap_pkm", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "rhs_100Rnd_762x54mmR_green";
+_MMG = ["rhs_weap_mg42", _silencer, _pointer, _sight, _bipod];
+_MMG_mag = "rhsgref_50Rnd_792x57_SmK_alltracers_drum";
 
 if(random 1 > 0.5) then {
 	_LAT = ["rhs_weap_rpg75", _silencer, _pointer, _sight, _bipod];

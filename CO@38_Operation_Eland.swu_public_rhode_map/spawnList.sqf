@@ -126,7 +126,7 @@ switch (_case) do {
 	case 4: {
 		// Outpost Counter-attack
 		[[counter_1,counter_2,counter_3],3,1,1,"rush",east,1500,"OutpostCounter"] spawn OKS_fnc_Lambs_Wavespawn;
-		[counter_4,"UK3CB_ADA_O_Hilux_Pkm",east,1500,nil,0,false] spawn OKS_PlayerWaypoint_SpawnGroup;
+		[counter_4,"attack","UK3CB_ADA_O_Hilux_Pkm",east,1500,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 	};
 
 	case 5: {
@@ -169,18 +169,18 @@ switch (_case) do {
 	case 7: {	
 
 		// Second Counter-Attack Wave Mid section in City
-		[SecondAttack_1,selectRandom["UK3CB_ADA_O_BTR60","UK3CB_ADA_O_BRDM2"],east,1000,nil,0,false] spawn OKS_PlayerWaypoint_SpawnGroup;
-		[SecondAttack_2,5,east,1000,nil,0,true] spawn OKS_PlayerWaypoint_SpawnGroup;
-		[SecondAttack_3,5,east,1000,nil,0,true] spawn OKS_PlayerWaypoint_SpawnGroup;
+		[SecondAttack_1,"attack",selectRandom["UK3CB_TKM_O_BTR40_DSHKMS","UK3CB_TKM_O_BTR40_PKM"],east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
+		[SecondAttack_2,"attack",5,east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
+		[SecondAttack_3,"attack",5,east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 
 	};
 
 	case 8: {
 
 		// Third Counter-Attack Wave Last section in City
-		[ThirdAttack_1,selectRandom["UK3CB_ADA_O_BTR60","UK3CB_ADA_O_BRDM2"],east,1000,nil,0,false] spawn OKS_PlayerWaypoint_SpawnGroup;
-		[ThirdAttack_2,5,east,1000,nil,0,true] spawn OKS_PlayerWaypoint_SpawnGroup;
-		[ThirdAttack_3,5,east,1000,nil,0,true] spawn OKS_PlayerWaypoint_SpawnGroup;
+		[ThirdAttack_1,"attack",selectRandom["UK3CB_TKM_O_BTR40_DSHKMS","UK3CB_TKM_O_BTR40_PKM"],east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
+		[ThirdAttack_2,"attack",5,east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
+		[ThirdAttack_3,"attack",5,east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 
 	};
 
@@ -249,11 +249,11 @@ switch (_case) do {
 
 		// Attack on Village
 		[[civilianattack_1,civilianattack_2,civilianattack_3,civilianattack_4,civilianattack_5],4,1,1,"rush",east,1500,"CivilianAttack_1"] spawn OKS_fnc_Lambs_Wavespawn;
-		_Vehicle2 = [civilianattack_vehicle_2,selectRandom["UK3CB_ADA_O_BTR60","UK3CB_ADA_O_BRDM2"],east,1000,nil,0,false] call OKS_PlayerWaypoint_SpawnGroup;
+		_Vehicle2 = [civilianattack_vehicle_2,"attack",selectRandom["UK3CB_TKM_O_BTR40_DSHKMS","UK3CB_TKM_O_BTR40_PKM"],east,1000,[]] call OKS_fnc_Lambs_SpawnGroup;
 		sleep 120;
 
 		[[civilianattack_6,civilianattack_7,civilianattack_8],4,1,1,"rush",east,1500,"CivilianAttack_2"] spawn OKS_fnc_Lambs_Wavespawn;
-		_Vehicle1 = [civilianattack_vehicle_1,selectRandom["UK3CB_ADA_O_BTR60","UK3CB_ADA_O_BRDM2"],east,1000,nil,0,false] call OKS_PlayerWaypoint_SpawnGroup;
+		_Vehicle1 = [civilianattack_vehicle_1,"attack",selectRandom["UK3CB_TKM_O_BTR40_DSHKMS","UK3CB_TKM_O_BTR40_PKM"],east,1000,[]] call OKS_fnc_Lambs_SpawnGroup;
 		_Crews = [];
 		{_Crews pushbackUnique _X} foreach units _Vehicle1;
 		{_Crews pushbackUnique _X} foreach units _Vehicle2;
