@@ -25,7 +25,7 @@ _uniform = ["UK3CB_CHD_B_U_H_Pilot_Uniform_03","UK3CB_CHD_B_U_CombatUniform_07",
 _vest = ["rhs_6b2_chicom","rhs_6b2_lifchik","rhs_6b2_RPK"];
 _backpack = "rhs_sidor";
 _backpackRadio = _backpack;
-if (GVARMAIN(mod_TFAR)) then {
+if (true) then {
 	_backpackRadio = "tfar_mr3000_rhs";
 };
 
@@ -79,8 +79,8 @@ _bipod = "";
 _rifleC = ["rhs_weap_aks74u", _silencer, _pointer, _sight, _bipod];
 
 
-_LMG = ["hlc_rifle_rpk", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "rhs_75Rnd_762x39mm_tracer";
+_LMG = ["rhs_weap_rpk74m", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "UK3CB_RPK74_60rnd_545x39_GT";
 
 _MMG = ["rhs_weap_pkm", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhs_100Rnd_762x54mmR_green";
@@ -91,6 +91,7 @@ _LAT_ReUsable = false;
 
 _MAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "RPG7_F";
+_MAT_mag_HE = "rhs_rpg7_TBG7V_mag";
 
 _HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";
@@ -110,5 +111,5 @@ _sight = "rhs_acc_pso1m2";
 _bipod = "";
 
 _rifleMarksman = ["rhs_weap_svdp_wd", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "rhs_10Rnd_762x54mmR_7N1";
-_rifleMarksman_mag_tr = "rhs_10Rnd_762x54mmR_7N14";
+_rifleMarksman_mag = "UK3CB_SVD_10rnd_762x54_GT";
+_rifleMarksman_mag_tr = "UK3CB_SVD_10rnd_762x54_GT";

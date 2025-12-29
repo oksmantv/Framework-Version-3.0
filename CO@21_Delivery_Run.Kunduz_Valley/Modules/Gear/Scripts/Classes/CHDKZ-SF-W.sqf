@@ -23,7 +23,7 @@ _uniform = "UK3CB_CHD_B_U_CombatUniform_05";
 _vest = "rhs_vydra_3m";
 _backpack = "UK3CB_LDF_B_B_ASS_OLI";
 _backpackRadio = _backpack;
-if (GVARMAIN(mod_TFAR)) then {
+if (true) then {
 	_backpackRadio = "UK3CB_B_O_Alice_Radio_Backpack";
 };
 
@@ -45,10 +45,11 @@ if (_role isEqualTo "jetp") then {
 	_backpack = "B_Parachute";
 };
 
-_silencer = "rhs_acc_dtk2";
-_pointer = "rhs_acc_perst1ik_ris";
-_sight = "rhs_acc_pkas";
-_bipod = "rhs_acc_grip_rk2";
+// Attachments
+_silencer = "";
+_pointer = "";
+_sight = "";
+_bipod = "";
 
 _rifle = ["rhs_weap_asval_grip", _silencer, _pointer, _sight, _bipod];
 _rifleC = ["rhs_weap_asval_grip", _silencer, _pointer, _sight, _bipod];
@@ -75,6 +76,7 @@ _LAT_ReUsable = false;
 
 _MAT = ["rhs_weap_rpg7", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "rhs_rpg7_PG7VS_mag";
+_MAT_mag_HE = "rhs_rpg7_OG7V_mag";
 
 _HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";
@@ -93,11 +95,11 @@ if(_role in ["sl","fac","tl","g"]) then {
 _pdw = ["rhs_weap_pp2000", _silencer, _pointer, _sight, _bipod];
 _pdw_mag = "rhs_mag_9x19mm_7n31_44";
 
-_silencer = "rhs_acc_tgpv2";
+_silencer = "";
 _pointer = "";
 _sight = "rhs_acc_pso1m21";
 _bipod = "";
 
 _rifleMarksman = ["rhs_weap_svdp", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "rhs_10Rnd_762x54mmR_7N14";
-_rifleMarksman_mag_tr = "ACE_10Rnd_762x54_Tracer_mag";
+_rifleMarksman_mag = "UK3CB_SVD_10rnd_762x54_GT";
+_rifleMarksman_mag_tr = "UK3CB_SVD_10rnd_762x54_GT";
