@@ -1,4 +1,4 @@
-/*
+﻿/*
 	AUTHOR: GuzzenVonLidl
 	Description:
 		What case tha should be called for the zone player is in
@@ -9,7 +9,7 @@
 	Returning Value:
 		None
 */
-#include "script_Component.hpp"
+#include "\OKS_GOL_MISC\script_Component.hpp"
 #define	COMPONENT spawnList
 
 if !(isServer) exitWith {false};
@@ -22,14 +22,14 @@ switch (_case) do {
 
 	case 1: {
 
-		["hq","side","1-1 this is Crossroads, we are reports of morning prayer, you still have time to setup your defences, make the best of the situation, crossroads out!"] remoteExec ["OKS_Chat",0];	
+		["hq","side","1-1 this is Crossroads, we are reports of morning prayer, you still have time to setup your defences, make the best of the situation, crossroads out!"] remoteExec ["OKS_fnc_Chat",0];	
 		sleep 200;
 		deleteVehicle PrayerTrigger;
 
 		sleep 30;
 
 		[] spawn {
-			[mortar_1,[getPos target_1,getPos target_2,getPos target_3,getPos target_4],east,4,5,true] execVM "Scripts\OKS_Spawn\OKS_ArtySupression.sqf";
+			[mortar_1,[getPos target_1,getPos target_2,getPos target_3,getPos target_4],east,4,5,true] execVM "Scripts\OKS_Spawn\OKS_fnc_ArtySuppression.sqf";
 			sleep 40;
 			[
 				mortar_1,
@@ -38,9 +38,9 @@ switch (_case) do {
 				"A mortar position is located in the area of operations and is shelling our positions. Make use of our own support assets and silence the enemy mortar!",
 				nil,
 				"TaskDefend"
-			] execVM "Scripts\OKS_Task\OKS_Destroy_Task.sqf";
+			] spawn OKS_fnc_Destroy_Task;;
 			sleep 30;
-			[mortar_2,[getPos target_5,getPos target_6,getPos target_7],east,4,5,true] execVM "Scripts\OKS_Spawn\OKS_ArtySupression.sqf";
+			[mortar_2,[getPos target_5,getPos target_6,getPos target_7],east,4,5,true] execVM "Scripts\OKS_Spawn\OKS_fnc_ArtySuppression.sqf";
 			sleep 40;
 			[
 				mortar_2,
@@ -49,9 +49,9 @@ switch (_case) do {
 				"A mortar position is located in the area of operations and is shelling our positions. Make use of our own support assets and silence the enemy mortar!",
 				nil,
 				"TaskDefend"
-			] execVM "Scripts\OKS_Task\OKS_Destroy_Task.sqf";
+			] spawn OKS_fnc_Destroy_Task;;
 			sleep 30;
-			[mortar_3,[getPos target_8,getPos target_9,getPos target_10],east,4,5,true] execVM "Scripts\OKS_Spawn\OKS_ArtySupression.sqf";
+			[mortar_3,[getPos target_8,getPos target_9,getPos target_10],east,4,5,true] execVM "Scripts\OKS_Spawn\OKS_fnc_ArtySuppression.sqf";
 			sleep 40;
 			[
 				mortar_3,
@@ -60,7 +60,7 @@ switch (_case) do {
 				"A mortar position is located in the area of operations and is shelling our positions. Make use of our own support assets and silence the enemy mortar!",
 				nil,
 				"TaskDefend"
-			] execVM "Scripts\OKS_Task\OKS_Destroy_Task.sqf";
+			] spawn OKS_fnc_Destroy_Task;;
 		};	
 
 		Wave1Complete = false;
@@ -115,7 +115,7 @@ switch (_case) do {
 		sleep 60;
 		Phase1Complete = true;
 		publicVariable "Phase1Complete";
-		["hq","side","1-1 this is Crossroads, we have reports of insurgents retreating, good work! Prepare for the counter-attack, crossroads out!"] remoteExec ["OKS_Chat",0];	
+		["hq","side","1-1 this is Crossroads, we have reports of insurgents retreating, good work! Prepare for the counter-attack, crossroads out!"] remoteExec ["OKS_fnc_Chat",0];	
 	};
 
 	case 2: {
@@ -147,8 +147,8 @@ switch (_case) do {
 
 	case 5: {
 
-		["hq","side","1-1 this is Crossroads, intel suggests captives are held in the city, clear the buildings with extreme caution, rescue the captives. Crossroads out!"] remoteExec ["OKS_Chat",0];	
-		[Group HVT_1,getPos ExfilSite_1,west,false,"TaskRescue"] execVM "Scripts\OKS_Task\OKS_Evacuate_HVT.sqf";
+		["hq","side","1-1 this is Crossroads, intel suggests captives are held in the city, clear the buildings with extreme caution, rescue the captives. Crossroads out!"] remoteExec ["OKS_fnc_Chat",0];	
+		[Group HVT_1,getPos ExfilSite_1,west,false,"TaskRescue"] spawn OKS_fnc_Evacuate_HVT;
 
 		// Patrols
 		[[[[985.859,2640.82,0],35,[]],[[987.07,2633.86,2.85419],35,[]],[[983.256,2637.69,0],35,[]],[[988.281,2626.89,1.00126],35,[]]],[],[[[960.187,2614.8,3.37107],[[0,"Move"]]],[[872.296,2611.11,0],[[0,"Move"]]],[[884.533,2659.54,0],[[0,"Move"]]],[[939.334,2691.68,0],[[0,"Move"]]],[[981.723,2645.86,3.8147e-006],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
@@ -204,11 +204,11 @@ switch (_case) do {
 
 		// Final Counter-Attack Wave Last Compound east of City
 		{
-			[getPos _X,3,east,1500,[]] spawn OKS_Rush_SpawnGroup;
+			[getPos _X,3,east,1500,[]] spawn OKS_fnc_Rush_SpawnGroup;
 		} foreach [counter_5,counter_6,counter_7,counter_8,counter_9,counter_10];
 
 		sleep 5;
-		[Trigger_1,false,[0,0,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],true] spawn OKS_CreateZone;
+		[Trigger_1,false,[0,0,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],true] spawn OKS_fnc_CreateZone;
 	};
 
 	case 10: {
@@ -222,10 +222,10 @@ switch (_case) do {
 
 		[] spawn {
 	
-			[mortar_4,[getPos target_11,getPos target_12,getPos target_13,getPos target_14],east,3,5,true] execVM "Scripts\OKS_Spawn\OKS_ArtySupression.sqf";
-			[mortar_5,[getPos target_15,getPos target_16,getPos target_17],east,3,5,true] execVM "Scripts\OKS_Spawn\OKS_ArtySupression.sqf";
+			[mortar_4,[getPos target_11,getPos target_12,getPos target_13,getPos target_14],east,3,5,true] execVM "Scripts\OKS_Spawn\OKS_fnc_ArtySuppression.sqf";
+			[mortar_5,[getPos target_15,getPos target_16,getPos target_17],east,3,5,true] execVM "Scripts\OKS_Spawn\OKS_fnc_ArtySuppression.sqf";
 			sleep 10;
-			["hq","side","1-1 this is Crossroads, we have intel regarding the village of Siwundula, they are about to be hit by insurgent mortars. Assault or use your own support elements to silence them, crossroads out!"] remoteExec ["OKS_Chat",0];
+			["hq","side","1-1 this is Crossroads, we have intel regarding the village of Siwundula, they are about to be hit by insurgent mortars. Assault or use your own support elements to silence them, crossroads out!"] remoteExec ["OKS_fnc_Chat",0];
 			sleep 10;
 			[
 				mortar_4,
@@ -234,7 +234,7 @@ switch (_case) do {
 				"A mortar position is located in the area of operations and is shelling the civilians in Siwundula. Make use of our own support assets or assault their position and silence the enemy mortar!",
 				nil,
 				"TaskCounter"
-			] execVM "Scripts\OKS_Task\OKS_Destroy_Task.sqf";
+			] spawn OKS_fnc_Destroy_Task;;
 			sleep 5;
 			[
 				mortar_5,
@@ -243,7 +243,7 @@ switch (_case) do {
 				"A mortar position is located in the area of operations and is shelling the civilians in Siwundula. Make use of our own support assets or assault their position and silence the enemy mortar!",
 				nil,
 				"TaskCounter"
-			] execVM "Scripts\OKS_Task\OKS_Destroy_Task.sqf";
+			] spawn OKS_fnc_Destroy_Task;;
 		};	
 
 	};
@@ -296,3 +296,4 @@ switch (_case) do {
 		ERROR(FORMAT_1("Case missing: %1", _case));
 	};
 };
+

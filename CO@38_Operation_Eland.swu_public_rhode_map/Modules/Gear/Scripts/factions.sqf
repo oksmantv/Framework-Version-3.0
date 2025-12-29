@@ -6,8 +6,8 @@ switch (_side) do {
 	case "AAF-SF-W": {
 		#include "Classes\AAF-SF-W.sqf"
 	};
-		case "UN-IRISH": {
-		#include "Classes\UN-IRISH.sqf"
+	case "IRISH-UN": {
+		#include "Classes\IRISH-UN.sqf"
 	};
 	case "CBRN-WINTER": {
 		#include "Classes\CBRN-WINTER.sqf"
@@ -24,7 +24,6 @@ switch (_side) do {
 	case "CTRG-D": {
 		#include "Classes\CTRG-D.sqf"
 	};	
-
 	case "BAF-W-FALK": {
 		#include "Classes\BAF-W-FALK.sqf"
 	};
@@ -58,12 +57,6 @@ switch (_side) do {
 	case "LIVONIA-W": {
 		#include "Classes\LIVONIA-W.sqf"
 	};
-	// case "LIVONIA-1950-W": {
-	// 	#include "Classes\LIVONIA-1950-W.sqf"
-	// };
-	// case "CHDKZ-1950-W": {
-	// 	#include "Classes\CHDKZ-1950-W.sqf"
-	// };
 	case "CZECH-W": {
 		#include "Classes\CZECH-W.sqf"
 	};
@@ -79,6 +72,9 @@ switch (_side) do {
 	case "TANOA-SF": {
 		#include "Classes\TANOA-SF.sqf"
 	};	
+	case "TANOA-ARMY": {
+		#include "Classes\TANOA-ARMY.sqf"
+	};		
 	case "SYRIA-W": {
 		#include "Classes\SYRIA-W.sqf"
 	};
@@ -133,6 +129,12 @@ switch (_side) do {
 	case "INSURGENT-TANOA": {
 		#include "Classes\INSURGENT-TANOA.sqf"
 	};
+	case "INSURGENT-FIA": {
+		#include "Classes\INSURGENT-FIA.sqf"
+	};	
+	case "INSURGENT-MALDEN": {
+		#include "Classes\INSURGENT-MALDEN.sqf"
+	};		
 	case "AUS-TAN": {
 		#include "Classes\AUS-TAN.sqf"
 	};
@@ -151,12 +153,6 @@ switch (_side) do {
 	case "MALDEN-W": {
 		#include "Classes\MALDEN-W.sqf"
 	};	
-	// case "FRENCH-D": {
-	// 	#include "Classes\FRENCH-D.sqf"
-	// };
-	// case "FRENCH-UN": {
-	// 	#include "Classes\FRENCH-UN.sqf"
-	// };
 	case "GERMAN-W": {
 		#include "Classes\GERMAN-W.sqf"
 	};
@@ -184,9 +180,6 @@ switch (_side) do {
 	case "USA-CW-W": {
 		#include "Classes\USA-CW-W.sqf"
 	};
-	case "USA-XM8-W": {
-		#include "Classes\USA-XM8-W.sqf"
-	};
 	case "USA-W": {
 		#include "Classes\USA-W.sqf"
 	};
@@ -199,18 +192,10 @@ switch (_side) do {
 	case "USMC-W": {
 		#include "Classes\USMC-W.sqf"
 	};
-	// case "NORWEGIAN": {
-	// 	#include "Classes\NORWEGIAN.sqf"
-	// };
+
 	case "SWEDISH": {
 		#include "Classes\SWEDISH.sqf"
 	};
-	// case "POLISH": {
-	// 	#include "Classes\POLISH.sqf"
-	// };
-	// case "LATVIAN": {
-	// 	#include "Classes\LATVIAN.sqf"
-	// };
 	case "ISRAELI": {
 		#include "Classes\ISRAELI.sqf"
 	};
@@ -222,10 +207,3 @@ switch (_side) do {
 		ERROR(FORMAT_1("Faction does not exist: %1", _side));
 	};
 };
-
-/*
-	case "UN-D": {
-		#include "Classes\UN-D.sqf"
-	};
-
-*/

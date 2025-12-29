@@ -1,7 +1,8 @@
 _useMineDetector = false;
 _allowedNightStuff = true;
 
-_glHE = "rhs_VOG25P";
+_glHE = "rhs_VOG25";
+_glHEDP = "rhs_VOG25";
 _glsmokeW = "rhs_GRD40_White";
 _glsmokeB = "";
 _glsmokeG = "rhs_GRD40_Green";
@@ -22,7 +23,7 @@ _uniform = "rhsgref_uniform_olive";
 _vest = "rhs_6b3_holster";
 _backpack = "UK3CB_CHC_C_B_HIKER";
 _backpackRadio = _backpack;
-if (GVARMAIN(mod_TFAR)) then {
+if (true) then {
 	_backpackRadio = "UK3CB_CW_SOV_O_LATE_B_ASS_BERGEN_Radio";
 };
 
@@ -43,10 +44,11 @@ if (_role isEqualTo "jetp") then {
 	_backpack = "B_Parachute";
 };
 
-_silencer = "rhs_acc_dtk2";
-_pointer = "rhs_acc_perst3";
+// Attachments
+_silencer = "";
+_pointer = "";
 _sight = "";
-_bipod = "rhs_acc_grip_rk6";
+_bipod = "";
 
 _rifle = ["rhs_weap_ak74mr", _silencer, _pointer, _sight, _bipod];
 _rifleC = ["rhs_weap_aks74un", _silencer, _pointer, _sight, _bipod];
@@ -71,6 +73,7 @@ _LAT_ReUsable = false;
 
 _MAT = ["launch_RPG32_green_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "RPG32_F";
+_MAT_mag_HE = "RPG32_HE_F";
 
 _HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";
@@ -91,5 +94,5 @@ _sight = "rhs_acc_pso1m21";
 _bipod = "";
 
 _rifleMarksman = ["rhs_weap_svdp_wd", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "rhs_10Rnd_762x54mmR_7N1";
-_rifleMarksman_mag_tr = "rhs_10Rnd_762x54mmR_7N14";
+_rifleMarksman_mag = "UK3CB_SVD_10rnd_762x54_GT";
+_rifleMarksman_mag_tr = "UK3CB_SVD_10rnd_762x54_GT";

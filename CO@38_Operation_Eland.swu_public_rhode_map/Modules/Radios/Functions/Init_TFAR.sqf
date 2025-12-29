@@ -1,5 +1,5 @@
 
-if (GVARMAIN(mod_TFAR_CORE)) then {
+if (true) then {
 	["CBA_settingsInitializedDelayed", {	// TFAR calls cba settings in postInit so this needs a delay
 		_disableAutoLongRange = true;
 		_givePersonalRadio = false;
@@ -56,7 +56,7 @@ TF_freq_guer_lr = TF_freq_west_lr;
 TF_defaultWestAirborneRadio = "TFAR_rt1523g_big_bwmod";
 TF_defaultWestBackpack = "TFAR_rt1523g_big_bwmod";
 TF_defaultWestPersonalRadio = "TFAR_anprc152";
-TF_defaultWestRiflemanRadio = "TFAR_rf7800str";
+TF_defaultWestRiflemanRadio = "TFAR_anprc148jem";
 
 TF_defaultEastAirborneRadio = TF_defaultWestAirborneRadio;
 TF_defaultEastBackpack = TF_defaultWestBackpack;

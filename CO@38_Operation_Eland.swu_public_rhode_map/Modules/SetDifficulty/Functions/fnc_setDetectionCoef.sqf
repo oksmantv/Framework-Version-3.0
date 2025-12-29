@@ -14,21 +14,29 @@
 */
 #include "script_Component.hpp"
 
-params [
-	["_unit", objNull, [objNull]]
-];
+if(!isNil "GOL_OKS_Stealth_Mission") then {
+	if(GOL_OKS_Stealth_Mission isEqualTo 1) then {
 
-_skill = (missionConfigFile >> "GW_FRAMEWORK" >> "Behaviour" >> (GVAR(names) select GVAR(unitTraining)) >> "playerCamoCoef");
+	} else {
+		params [
+			["_unit", objNull, [objNull]]
+		];
 
-(getArray(_skill)) params ["_min","_mid","_max"];
-private _value = _mid;
+		private _difficulty = [_unit] call FUNC(getDifficultyForSide);
+		_skill = (missionConfigFile >> "GW_FRAMEWORK" >> "Behaviour" >> (GVAR(names) select _difficulty) >> "playerCamoCoef");
 
-if (GVAR(randomSkill)) then {
-	_value = (random [_min, _mid, _max]);
-	_value = (parseNumber (_value toFixed 3));
-};
+		(getArray(_skill)) params ["_min","_mid","_max"];
+		private _value = _mid;
 
-if (isPlayer _unit) then {
-	_unit setUnitTrait ["camouflageCoef", _value];
-};
-true
+		if (GVAR(randomSkill)) then {
+			_value = (random [_min, _mid, _max]);
+			_value = (parseNumber (_value toFixed 3));
+		};
+
+		if (isPlayer _unit) then {
+			_unit setUnitTrait ["camouflageCoef", _value];
+		};
+		true
+	}
+}
+
