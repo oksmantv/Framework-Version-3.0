@@ -126,7 +126,7 @@ switch (_case) do {
 	case 4: {
 		// Outpost Counter-attack
 		[[counter_1,counter_2,counter_3],3,1,1,"rush",east,1500,"OutpostCounter"] spawn OKS_fnc_Lambs_Wavespawn;
-		[counter_4,"attack","UK3CB_ADA_O_Hilux_Pkm",east,1500,[]] spawn OKS_fnc_Lambs_SpawnGroup;
+		[counter_4,"attack",[["UK3CB_ADA_O_Hilux_Pkm"],0],east,1500,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 	};
 
 	case 5: {
@@ -169,7 +169,7 @@ switch (_case) do {
 	case 7: {	
 
 		// Second Counter-Attack Wave Mid section in City
-		[SecondAttack_1,"attack",selectRandom["UK3CB_TKM_O_BTR40_DSHKMS","UK3CB_TKM_O_BTR40_PKM"],east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
+		[SecondAttack_1,"attack",[["UK3CB_TKM_O_BTR40_DSHKMS","UK3CB_TKM_O_BTR40_PKM"],0],east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 		[SecondAttack_2,"attack",5,east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 		[SecondAttack_3,"attack",5,east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 
@@ -178,7 +178,7 @@ switch (_case) do {
 	case 8: {
 
 		// Third Counter-Attack Wave Last section in City
-		[ThirdAttack_1,"attack",selectRandom["UK3CB_TKM_O_BTR40_DSHKMS","UK3CB_TKM_O_BTR40_PKM"],east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
+		[ThirdAttack_1,"attack",[["UK3CB_TKM_O_BTR40_DSHKMS","UK3CB_TKM_O_BTR40_PKM"],0],east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 		[ThirdAttack_2,"attack",5,east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 		[ThirdAttack_3,"attack",5,east,1000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 
@@ -234,8 +234,8 @@ switch (_case) do {
 
 	case 11:{
 
-		CivilianAttack_1 = false;
-		CivilianAttack_2 = false;
+		CivilianAttackValue_1 = false;
+		CivilianAttackValue_2 = false;
 
 		// Civilian Village Defend
 		civilian setFriend [east,0];
@@ -248,17 +248,17 @@ switch (_case) do {
 		[[[[2773.23,2469.58,0.627541],240,"Up",[]],[[2768.07,2464.57,0.758539],45,"Up",[]],[[2770.93,2460.72,0.770796],1,"Up",[]],[[2777.49,2457.93,0.972334],300,"Up",[]],[[2775.55,2452.62,0.999037],45,"Up",[]],[[2769.46,2454.4,1.59853],254,"Up",[]]],[["UK3CB_ADA_O_BTR80",[2780.37,2440.44,0],285,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["ADA",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_l4_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"crate_r4_unhide",1,"water_1_unhide",1,"water_2_unhide",0,"wheel_1_unhide",1,"wheel_2_unhide",1]]]]],[]] call GW_Common_fnc_spawnGroup;
 
 		// Attack on Village
-		[[civilianattack_1,civilianattack_2,civilianattack_3,civilianattack_4,civilianattack_5],4,1,1,"rush",east,1500,"CivilianAttack_1"] spawn OKS_fnc_Lambs_Wavespawn;
-		_Vehicle2 = [civilianattack_vehicle_2,"attack",selectRandom["UK3CB_TKM_O_BTR40_DSHKMS","UK3CB_TKM_O_BTR40_PKM"],east,1000,[]] call OKS_fnc_Lambs_SpawnGroup;
+		[[civilianattack_1,civilianattack_2,civilianattack_3,civilianattack_4,civilianattack_5],4,1,1,"rush",east,1500,"CivilianAttackValue_1"] spawn OKS_fnc_Lambs_Wavespawn;
+		_Vehicle2 = [civilianattack_vehicle_2,"attack",[["UK3CB_TKM_O_BTR40_DSHKMS","UK3CB_TKM_O_BTR40_PKM"],0],east,1000,[]] call OKS_fnc_Lambs_SpawnGroup;
 		sleep 120;
 
-		[[civilianattack_6,civilianattack_7,civilianattack_8],4,1,1,"rush",east,1500,"CivilianAttack_2"] spawn OKS_fnc_Lambs_Wavespawn;
-		_Vehicle1 = [civilianattack_vehicle_1,"attack",selectRandom["UK3CB_TKM_O_BTR40_DSHKMS","UK3CB_TKM_O_BTR40_PKM"],east,1000,[]] call OKS_fnc_Lambs_SpawnGroup;
+		[[civilianattack_6,civilianattack_7,civilianattack_8],4,1,1,"rush",east,1500,"CivilianAttackValue_2"] spawn OKS_fnc_Lambs_Wavespawn;
+		_Vehicle1 = [civilianattack_vehicle_1,"attack",[["UK3CB_TKM_O_BTR40_DSHKMS","UK3CB_TKM_O_BTR40_PKM"],0],east,1000,[]] call OKS_fnc_Lambs_SpawnGroup;
 		_Crews = [];
 		{_Crews pushbackUnique _X} foreach units _Vehicle1;
 		{_Crews pushbackUnique _X} foreach units _Vehicle2;
 
-		waitUntil {sleep 5; {Alive _X || [_X] call ace_common_fnc_isAwake} count _Crews == 0 && CivilianAttack_1 && CivilianAttack_2};
+		waitUntil {sleep 5; {Alive _X || [_X] call ace_common_fnc_isAwake} count _Crews == 0 && CivilianAttackValue_1 && CivilianAttackValue_2};
 		["DefendCivilian","SUCCEEDED",true] call BIS_fnc_taskSetState;
 		Phase2Complete = true;
 		publicVariable "Phase2Complete";
@@ -280,5 +280,9 @@ switch (_case) do {
 		ERROR(FORMAT_1("Case missing: %1", _case));
 	};
 };
+
+
+
+
 
 

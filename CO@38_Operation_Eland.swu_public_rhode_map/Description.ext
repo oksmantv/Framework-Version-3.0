@@ -113,14 +113,6 @@ class Params {
 class CfgFunctions {
 	#include "Modules\LARs\spawnComp\functions\functions.cpp"
 	#include "Modules\Callsigns\Functions\functions.hpp"
-
-	class sebs_briefing_table {
-        class sebs_briefing_table {
-            file = "sebsBriefingTable";
-            class createTable {};
-            class clearTable {};
-        };
-    };
 };
 
 class GW_Modules_Base {
@@ -160,6 +152,7 @@ class ACE_Settings {
 
 #include "Modules\Callsigns\defines.hpp"
 #include "Modules\Callsigns\dialogs.hpp"
+
 
 
 

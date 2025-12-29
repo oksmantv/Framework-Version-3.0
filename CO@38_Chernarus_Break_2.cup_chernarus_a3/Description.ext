@@ -115,6 +115,141 @@ class CfgFunctions {
 	#include "Modules\Callsigns\Functions\functions.hpp"
 };
 
+class CfgSounds
+{
+	sounds[] = {}; // OFP required it filled, now it can be empty or absent depending on the game's version
+
+	class Radio_1
+	{
+		name = "Radio_1";						// display name
+		sound[] = { "Audio\Radio_1.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};
+
+	class Radio_2
+	{
+		name = "Radio_2";						// display name
+		sound[] = { "Audio\Radio_2.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};
+	
+	class Radio_3
+	{
+		name = "Radio_3";						// display name
+		sound[] = { "Audio\Radio_3.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};	
+
+	class Radio_4
+	{
+		name = "Radio_4";						// display name
+		sound[] = { "Audio\Radio_4.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};	
+
+	class Radio_5
+	{
+		name = "Radio_5";						// display name
+		sound[] = { "Audio\Radio_5.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};
+
+	class Radio_6
+	{
+		name = "Radio_6";						// display name
+		sound[] = { "Audio\Radio_6.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};
+
+	class Radio_7
+	{
+		name = "Radio_7";						// display name
+		sound[] = { "Audio\Radio_7.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};		
+
+	class Radio_8
+	{
+		name = "Radio_8";						// display name
+		sound[] = { "Audio\Radio_8.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};	
+
+	class Radio_9
+	{
+		name = "Radio_9";						// display name
+		sound[] = { "Audio\Radio_9.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};		
+
+	class Radio_Resupply
+	{
+		name = "Radio_Resupply";						// display name
+		sound[] = { "Audio\Radio_Resupply.ogg", 5, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - titles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 1;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 1;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};					
+};
+
 class GW_Modules_Base {
 	name = "GW Modules Base";
 	Authors[] = {};

@@ -177,7 +177,7 @@ switch (_case) do {
 		sleep 180;
 
 		_ConvoyArray = [];
-		[convoy_1,convoy_2,convoy_3,east,[4,["rhs_tigr_msv"], 9, 25],[true,4],_ConvoyArray, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoy_1,convoy_2,convoy_3,east,[4,["rhs_tigr_msv"], 40, 25],[true,4],_ConvoyArray, false, false] spawn OKS_fnc_Convoy_Spawn;
 	    [true, ["Defend_1","main"], ["A convoy of vehicles are heading towards Komarovo, you are to repel the attack. Good luck!", "Defend Komarovo (NW)", ""], [3586.52,2532.27,0],"ASSIGNED",-1,true,"defend"] call BIS_fnc_taskCreate;
 
 		waitUntil{
@@ -199,7 +199,7 @@ switch (_case) do {
 		[true, ["Defend_2","main"], ["Another counter-attack is inbound from the east. They will be there in 4 minutes, prepare your defences. Good luck!", "Defend Komarovo (E)", ""], [3758.1,2552.13,0],"ASSIGNED",-1,true,"defend"] call BIS_fnc_taskCreate;
 		sleep 240;
 		_ConvoyArray2 = [];
-		[convoy_4,convoy_5,convoy_6,east,[4,["rhs_bmp1_msv","rhs_bmp1_msv","RHS_Ural_VDV_01","RHS_Ural_Open_VDV_01"], 8, 30],[true,4],_ConvoyArray2, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoy_4,convoy_5,convoy_6,east,[4,["rhs_bmp1_msv","rhs_bmp1_msv","RHS_Ural_VDV_01","RHS_Ural_Open_VDV_01"], 35, 30],[true,4],_ConvoyArray2, false, false] spawn OKS_fnc_Convoy_Spawn;
 
 		waitUntil{
 			sleep 5; 
@@ -217,7 +217,8 @@ switch (_case) do {
 
 		"Radio_4" remoteExec ["playSound",0];
 		["hq","side","1-1 this is Godfather of the 2nd Marines, we are inbound from the west, check your fire. Clear the road for us, we will arrive at the intersection with resupply! Godfather, out."] remoteExec ["OKS_fnc_Chat",0];
-		[convoy_7,convoy_8,convoy_9,west,[2,["UK3CB_B_AAV_US_WDL"], 15, 30],[true,3], false, "Reinforced1"] spawn OKS_fnc_Convoy_Reinforce;
+		
+		[convoy_7,convoy_8,convoy_9,west,[2,["UK3CB_B_AAV_US_WDL"], 60, 30],[true,3], false, "Reinforced1"] spawn OKS_fnc_Convoy_Reinforce;
 		waitUntil {sleep 5; !isNil "Reinforced1"};
 		Defend1Complete = true;
 	};
