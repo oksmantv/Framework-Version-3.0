@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=5497;
+		nextID=5501;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={20.836576,62.026909,2409.7266};
-		dir[]={0.77499861,-0.57724893,0.25721741};
-		up[]={0.54786247,0.81656826,0.1818323};
-		aside[]={0.31499806,1.4901161e-08,-0.94909227};
+		pos[]={73.097023,46.426941,2413.9063};
+		dir[]={-0.89131826,-0.36582556,-0.26791021};
+		up[]={-0.3503603,0.93067074,-0.10531014};
+		aside[]={-0.28786415,1.3265526e-07,0.95770019};
 	};
 };
 binarizationWanted=0;
@@ -72,7 +72,6 @@ addons[]=
 	"rhsusf_c_m113",
 	"UK3CB_BAF_Vehicles_Bulldog",
 	"A3_Structures_F_Mil_Fortification",
-	"A3_Static_F_Mortar_01",
 	"A3_Props_F_Enoch_Military_Decontamination",
 	"A3_Structures_F_System",
 	"A3_Structures_F_Enoch_Industrial_Materials",
@@ -98,6 +97,7 @@ addons[]=
 	"A3_Structures_F_Mil_BagFence",
 	"A3_Structures_F_Exp_Walls_Wooden",
 	"A3_Props_F_Orange_Humanitarian_Garbage",
+	"A3_Static_F_Mortar_01",
 	"A3_Weapons_F_Orange_Explosives",
 	"A3_Props_F_Orange_Items_Tools",
 	"A3_Structures_F_Items_Tools",
@@ -339,69 +339,69 @@ class AddonsMetaData
 		};
 		class Item31
 		{
-			className="A3_Static_F";
-			name="Arma 3 Alpha - Turrets";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item32
-		{
 			className="A3_Props_F_Enoch";
 			name="Arma 3 Contact Platform - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item33
+		class Item32
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item34
+		class Item33
 		{
 			className="A3_Structures_F_Enoch_Industrial";
 			name="Arma 3 Contact Platform - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item35
+		class Item34
 		{
 			className="A3_Structures_F_Enoch";
 			name="Arma 3 Contact Platform - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item36
+		class Item35
 		{
 			className="CUP_CAMisc";
 			name="CUP_CAMisc";
 		};
-		class Item37
+		class Item36
 		{
 			className="emr_main";
 			name="Enhanced Movement Rework";
 			author="Simplex Team";
 			url="https://github.com/SceptreOfficial/Enhanced-Movement-Rework";
 		};
-		class Item38
+		class Item37
 		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item39
+		class Item38
 		{
 			className="A3_Structures_F_Enoch_Military";
 			name="Arma 3 Contact Platform - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item40
+		class Item39
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item40
+		{
+			className="A3_Static_F";
+			name="Arma 3 Alpha - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -849,7 +849,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=861;
+									items=866;
 									class Item0
 									{
 										class data
@@ -7738,6 +7738,46 @@ class CustomAttributes
 											value="forcenvgclassname";
 										};
 									};
+									class Item861
+									{
+										class data
+										{
+											singleType="STRING";
+											value="lat_chance";
+										};
+									};
+									class Item862
+									{
+										class data
+										{
+											singleType="STRING";
+											value="mat_chance";
+										};
+									};
+									class Item863
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ugl_chance";
+										};
+									};
+									class Item864
+									{
+										class data
+										{
+											singleType="STRING";
+											value="static_enable_chance";
+										};
+									};
+									class Item865
+									{
+										class data
+										{
+											singleType="STRING";
+											value="static_enable_refresh";
+										};
+									};
 								};
 							};
 						};
@@ -7748,7 +7788,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=861;
+									items=866;
 									class Item0
 									{
 										class data
@@ -31408,6 +31448,141 @@ class CustomAttributes
 											};
 										};
 									};
+									class Item861
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.088240586;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item862
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.012913207;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item863
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.60476887;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item864
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.78232628;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item865
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=30.068764;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
 								};
 							};
 						};
@@ -31513,7 +31688,7 @@ class Mission
 			name="Framework Playable";
 			class Entities
 			{
-				items=58;
+				items=54;
 				class Item0
 				{
 					dataType="Layer";
@@ -33151,7 +33326,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={46.212166,41.484608,2411.5112};
-												angles[]={6.2631893,0.019477876,0.027993103};
+												angles[]={6.2631893,1.5255259,0.027993103};
 											};
 											side="West";
 											flags=4;
@@ -36532,74 +36707,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={50.127441,42.384377,2416.3779};
-						angles[]={0.028099921,1.5848801,0.0076015778};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=2884;
-					type="B_Mortar_01_F";
-					atlOffset=-0.0021476746;
-				};
-				class Item49
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={50.05209,42.403236,2418.0242};
-						angles[]={0.028099921,1.5848801,0.0076015778};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=2885;
-					type="B_Mortar_01_F";
-					atlOffset=0.0053596497;
-				};
-				class Item50
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={49.908367,42.414135,2419.6501};
-						angles[]={0.028099921,1.5848801,0.0076015778};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=2886;
-					type="B_Mortar_01_F";
-					atlOffset=0.007850647;
-				};
-				class Item51
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={50.003597,42.413933,2421.1033};
-						angles[]={0.028099921,1.5848801,0.0076015778};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=2887;
-					type="B_Mortar_01_F";
-					atlOffset=-0.0025939941;
-				};
-				class Item52
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={35.534988,41.291702,2418.6077};
 						angles[]={6.2751846,0,0.02399601};
 					};
@@ -36611,7 +36718,7 @@ class Mission
 					id=4055;
 					type="Tarp_01_Large_Black_F";
 				};
-				class Item53
+				class Item49
 				{
 					dataType="Object";
 					class PositionInfo
@@ -36627,7 +36734,7 @@ class Mission
 					id=4056;
 					type="Tarp_01_Large_Black_F";
 				};
-				class Item54
+				class Item50
 				{
 					dataType="Object";
 					class PositionInfo
@@ -36643,7 +36750,7 @@ class Mission
 					id=4057;
 					type="Tarp_01_Large_Black_F";
 				};
-				class Item55
+				class Item51
 				{
 					dataType="Object";
 					class PositionInfo
@@ -36660,7 +36767,7 @@ class Mission
 					type="Land_ClutterCutter_large_F";
 					atlOffset=-3.8146973e-06;
 				};
-				class Item56
+				class Item52
 				{
 					dataType="Object";
 					class PositionInfo
@@ -36677,7 +36784,7 @@ class Mission
 					type="Land_ClutterCutter_large_F";
 					atlOffset=-3.8146973e-06;
 				};
-				class Item57
+				class Item53
 				{
 					dataType="Object";
 					class PositionInfo
@@ -36709,7 +36816,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={597.01001,37.38195,2233.3879};
-					angle=3.1804428;
+					angle=3.1804426;
 					class Attributes
 					{
 						name="TriggerSpawn_1";
@@ -62811,7 +62918,6 @@ class Mission
 				sizeB=1790.838;
 				interuptable=1;
 				activationBy="ANY";
-				effectSoundTrigger="Zeus_Sound_Desert_Call_To_Prayer";
 			};
 			id=3986;
 			type="EmptyDetectorAreaR250";
