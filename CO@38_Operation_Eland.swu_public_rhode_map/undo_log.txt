@@ -1,0 +1,10 @@
+2025-12-29 16:08:18 - Parsed folder name: CO@38_Operation_Eland.swu_public_rhode_map
+2025-12-29 16:08:18 - Extracted briefingName: Operation Eland
+2025-12-29 16:08:18 - Map: swu_public_rhode_map
+2025-12-29 16:08:29 - spawnList.sqf updated successfully
+2025-12-29 16:08:39 - Reset GW_isConfigured to 0 (false) to trigger first-time setup
+2025-12-29 16:08:39 - Extracted author from mission.sqm: Oksman
+2025-12-29 16:08:39 - Updated BRIEFING_NAME to 'Operation Eland' in Description.ext
+2025-12-29 16:08:39 - Updated author to 'Oksman' in Description.ext
+2025-12-29 16:08:39 - Description.ext updated
+2025-12-29 16:08:39 - mission.sqm updated successfully

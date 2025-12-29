@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={73.097023,46.426941,2413.9063};
-		dir[]={-0.89131826,-0.36582556,-0.26791021};
-		up[]={-0.3503603,0.93067074,-0.10531014};
-		aside[]={-0.28786415,1.3265526e-07,0.95770019};
+		pos[]={27.926224,58.802113,2409.7485};
+		dir[]={0.60532725,-0.58112133,0.5439527};
+		up[]={0.43224427,0.81381464,0.38841853};
+		aside[]={0.6683948,1.2177043e-07,-0.74381077};
 	};
 };
 binarizationWanted=0;
@@ -849,7 +849,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=866;
+									items=868;
 									class Item0
 									{
 										class data
@@ -7778,6 +7778,22 @@ class CustomAttributes
 											value="static_enable_refresh";
 										};
 									};
+									class Item866
+									{
+										class data
+										{
+											singleType="STRING";
+											value="aiforcenvg";
+										};
+									};
+									class Item867
+									{
+										class data
+										{
+											singleType="STRING";
+											value="aiforcenvgclassname";
+										};
+									};
 								};
 							};
 						};
@@ -7788,7 +7804,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=866;
+									items=868;
 									class Item0
 									{
 										class data
@@ -31583,6 +31599,60 @@ class CustomAttributes
 											};
 										};
 									};
+									class Item866
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item867
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="UK3CB_Gloves_tan_NVG";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
 								};
 							};
 						};
@@ -36803,7 +36873,7 @@ class Mission
 				};
 			};
 			id=402;
-			atlOffset=0.0044250488;
+			atlOffset=0.36230087;
 		};
 		class Item1
 		{
@@ -36816,7 +36886,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={597.01001,37.38195,2233.3879};
-					angle=3.1804426;
+					angle=3.1804423;
 					class Attributes
 					{
 						name="TriggerSpawn_1";

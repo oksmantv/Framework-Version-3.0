@@ -1,4 +1,4 @@
-﻿/*
+/*
 	AUTHOR: GuzzenVonLidl
 	Description:
 		What case tha should be called for the zone player is in
@@ -29,7 +29,7 @@ switch (_case) do {
 		sleep 30;
 
 		[] spawn {
-			[mortar_1,[getPos target_1,getPos target_2,getPos target_3,getPos target_4],east,4,5,true] execVM "Scripts\OKS_Spawn\OKS_fnc_ArtySuppression.sqf";
+			[mortar_1,[getPos target_1,getPos target_2,getPos target_3,getPos target_4],east,4,5,true] spawn OKS_fnc_ArtySuppression;
 			sleep 40;
 			[
 				mortar_1,
@@ -40,7 +40,7 @@ switch (_case) do {
 				"TaskDefend"
 			] spawn OKS_fnc_Destroy_Task;;
 			sleep 30;
-			[mortar_2,[getPos target_5,getPos target_6,getPos target_7],east,4,5,true] execVM "Scripts\OKS_Spawn\OKS_fnc_ArtySuppression.sqf";
+			[mortar_2,[getPos target_5,getPos target_6,getPos target_7],east,4,5,true] spawn OKS_fnc_ArtySuppression;
 			sleep 40;
 			[
 				mortar_2,
@@ -51,7 +51,7 @@ switch (_case) do {
 				"TaskDefend"
 			] spawn OKS_fnc_Destroy_Task;;
 			sleep 30;
-			[mortar_3,[getPos target_8,getPos target_9,getPos target_10],east,4,5,true] execVM "Scripts\OKS_Spawn\OKS_fnc_ArtySuppression.sqf";
+			[mortar_3,[getPos target_8,getPos target_9,getPos target_10],east,4,5,true] spawn OKS_fnc_ArtySuppression;
 			sleep 40;
 			[
 				mortar_3,
@@ -74,28 +74,12 @@ switch (_case) do {
 		_Group5 = [[],[["UK3CB_ADA_O_BTR40_MG",[1121.32,1993.28,0],283,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["ADA",1]],[7,["Beacons_Hide",1,"Hull_Flag_Hide",1]]]]],[[[732.102,2067.07,0],[[0,"Move"]]],[[664.28,2146.32,0],[[0,"Hold"]]]]] call GW_Common_fnc_spawnGroup;
 		sleep 120;
 		// Rush Attack Waves
-		[
-			[attack_1,attack_2,attack_3,attack_4,attack_5,attack_6,attack_7],
-			2,
-			3,
-			180,
-			east,
-			1500,
-			"Wave1Complete"
-		] spawn OKS_Rush_Wavespawn;
+		[[attack_1,attack_2,attack_3,attack_4,attack_5,attack_6,attack_7],2,3,180,"rush",east,1500,"Wave1Complete"] spawn OKS_fnc_Lambs_Wavespawn;
 		sleep 60;
 		_Group6 = [[],[["UK3CB_ADA_O_MTLB_KPVT",[1001.69,2349.04,0],258,[["driver",-1,[]],["commander",-1,[0]],["gunner",-1,[1]]],[[6,["ADA",1]]]]],[[[859.937,2310.58,0],[[0,"Move"]]],[[767.755,2280.49,1.36547],[[0,"Hold"]]]]] call GW_Common_fnc_spawnGroup;
 		sleep 180;
 		_Group7 = [[],[["UK3CB_ADA_O_MTLB_PKT",[925.149,2477.05,0],178,[["driver",-1,[]],["commander",-1,[0]]],[[6,["ADA",1]]]]],[[[862.712,2426.11,16.3595],[[0,"Move"]]],[[742.326,2312.51,2.12179],[[0,"Hold"]]]]] call GW_Common_fnc_spawnGroup;
-		[
-			[attack_8,attack_9,attack_10,attack_11,attack_12],
-			2,
-			2,
-			180,
-			east,
-			1500,
-			"Wave2Complete"
-		] spawn OKS_Rush_Wavespawn;
+		[[attack_8,attack_9,attack_10,attack_11,attack_12],2,2,180,"rush",east,1500,"Wave2Complete"] spawn OKS_fnc_Lambs_Wavespawn;
 		sleep 60;
 		_Group8 = [[],[["UK3CB_ADA_O_T55",[1133.59,2031.18,0],178,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["AD",1]],[7,["Barrels_Hide",0]]]]],[[[873.382,2023.56,0],[[0,"Move"]]],[[693.372,2113.66,0],[[0,"Hold"]]]]] call GW_Common_fnc_spawnGroup;
 
@@ -136,12 +120,12 @@ switch (_case) do {
 
 	case 3: {
 		// Silawa Counter-attack
-		[[rush_1,rush_2,rush_3,rush_4],3,1,1,east,1500,"SilawaCounter"] spawn OKS_Rush_Wavespawn;
+		[[rush_1,rush_2,rush_3,rush_4],3,1,1,"rush",east,1500,"SilawaCounter"] spawn OKS_fnc_Lambs_Wavespawn;
 	};
 
 	case 4: {
 		// Outpost Counter-attack
-		[[counter_1,counter_2,counter_3],3,1,1,east,1500,"OutpostCounter"] spawn OKS_Rush_Wavespawn;
+		[[counter_1,counter_2,counter_3],3,1,1,"rush",east,1500,"OutpostCounter"] spawn OKS_fnc_Lambs_Wavespawn;
 		[counter_4,"UK3CB_ADA_O_Hilux_Pkm",east,1500,nil,0,false] spawn OKS_PlayerWaypoint_SpawnGroup;
 	};
 
@@ -178,7 +162,7 @@ switch (_case) do {
 	case 6: {
 
 		// Hunt Parties
-		{[getPos _X,2,east,1000,[],EndTrackerTrigger] spawn OKS_Rush_Spawner} foreach [tracker_1,tracker_2,tracker_3,tracker_4,tracker_5];
+		{[getPos _X,"rush",2,east,1000,[],EndTrackerTrigger] spawn OKS_fnc_Lambs_Spawner} foreach [tracker_1,tracker_2,tracker_3,tracker_4,tracker_5];
 
 	};
 
@@ -204,7 +188,7 @@ switch (_case) do {
 
 		// Final Counter-Attack Wave Last Compound east of City
 		{
-			[getPos _X,3,east,1500,[]] spawn OKS_fnc_Rush_SpawnGroup;
+			[getPos _X,"rush",3,east,1500,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 		} foreach [counter_5,counter_6,counter_7,counter_8,counter_9,counter_10];
 
 		sleep 5;
@@ -222,8 +206,8 @@ switch (_case) do {
 
 		[] spawn {
 	
-			[mortar_4,[getPos target_11,getPos target_12,getPos target_13,getPos target_14],east,3,5,true] execVM "Scripts\OKS_Spawn\OKS_fnc_ArtySuppression.sqf";
-			[mortar_5,[getPos target_15,getPos target_16,getPos target_17],east,3,5,true] execVM "Scripts\OKS_Spawn\OKS_fnc_ArtySuppression.sqf";
+			[mortar_4,[getPos target_11,getPos target_12,getPos target_13,getPos target_14],east,3,5,true] spawn OKS_fnc_ArtySuppression;
+			[mortar_5,[getPos target_15,getPos target_16,getPos target_17],east,3,5,true] spawn OKS_fnc_ArtySuppression;
 			sleep 10;
 			["hq","side","1-1 this is Crossroads, we have intel regarding the village of Siwundula, they are about to be hit by insurgent mortars. Assault or use your own support elements to silence them, crossroads out!"] remoteExec ["OKS_fnc_Chat",0];
 			sleep 10;
@@ -264,11 +248,11 @@ switch (_case) do {
 		[[[[2773.23,2469.58,0.627541],240,"Up",[]],[[2768.07,2464.57,0.758539],45,"Up",[]],[[2770.93,2460.72,0.770796],1,"Up",[]],[[2777.49,2457.93,0.972334],300,"Up",[]],[[2775.55,2452.62,0.999037],45,"Up",[]],[[2769.46,2454.4,1.59853],254,"Up",[]]],[["UK3CB_ADA_O_BTR80",[2780.37,2440.44,0],285,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["ADA",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_l4_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"crate_r4_unhide",1,"water_1_unhide",1,"water_2_unhide",0,"wheel_1_unhide",1,"wheel_2_unhide",1]]]]],[]] call GW_Common_fnc_spawnGroup;
 
 		// Attack on Village
-		[[civilianattack_1,civilianattack_2,civilianattack_3,civilianattack_4,civilianattack_5],4,1,1,east,1500,"CivilianAttack_1"] spawn OKS_Rush_Wavespawn;
+		[[civilianattack_1,civilianattack_2,civilianattack_3,civilianattack_4,civilianattack_5],4,1,1,"rush",east,1500,"CivilianAttack_1"] spawn OKS_fnc_Lambs_Wavespawn;
 		_Vehicle2 = [civilianattack_vehicle_2,selectRandom["UK3CB_ADA_O_BTR60","UK3CB_ADA_O_BRDM2"],east,1000,nil,0,false] call OKS_PlayerWaypoint_SpawnGroup;
 		sleep 120;
 
-		[[civilianattack_6,civilianattack_7,civilianattack_8],4,1,1,east,1500,"CivilianAttack_2"] spawn OKS_Rush_Wavespawn;
+		[[civilianattack_6,civilianattack_7,civilianattack_8],4,1,1,"rush",east,1500,"CivilianAttack_2"] spawn OKS_fnc_Lambs_Wavespawn;
 		_Vehicle1 = [civilianattack_vehicle_1,selectRandom["UK3CB_ADA_O_BTR60","UK3CB_ADA_O_BRDM2"],east,1000,nil,0,false] call OKS_PlayerWaypoint_SpawnGroup;
 		_Crews = [];
 		{_Crews pushbackUnique _X} foreach units _Vehicle1;
@@ -296,4 +280,5 @@ switch (_case) do {
 		ERROR(FORMAT_1("Case missing: %1", _case));
 	};
 };
+
 

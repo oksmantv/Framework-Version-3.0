@@ -599,7 +599,7 @@ class CustomAttributes
 				class data
 				{
 					singleType="BOOL";
-					value=1;
+					value=0;
 				};
 			};
 		};
@@ -72075,3 +72075,4 @@ class Mission
 		};
 	};
 };
+

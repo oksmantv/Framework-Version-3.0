@@ -2,7 +2,7 @@ _useMineDetector = false;
 _allowedNightStuff = false;
 
 _insignia = "";
-_goggles = "UK3CB_Gloves_tan_NVG";
+_goggles = "G_Armband_tura_alt_F";
 _helmet = ["rhs_pilotka","UK3CB_TKM_O_H_Turban_04_1","UK3CB_TKM_I_H_Turban_04_1","UK3CB_TKA_B_H_Beret","UK3CB_ARD_B_H_Crew_Cap","UK3CB_LSM_B_H_Field_Cap_OLI","rhs_fieldcap_early","UK3CB_PLM_B_H_Headband_Red","UK3CB_TKP_B_H_Patrolcap_TAN"];
 _uniform = ["UK3CB_TKA_I_U_CrewUniform_03_KHK"];
 _vest = ["UK3CB_TKP_I_V_6Sh92_Radio_Khk","UK3CB_TKA_I_V_6Sh92_Khk","UK3CB_TKP_I_V_6Sh92_Khk","UK3CB_TKP_I_V_6Sh92_Radio_Khk","rhs_belt_AK4","rhs_belt_RPK","rhs_belt_AK_GL","rhs_belt_AK_back","rhs_lifchik_NCO","rhs_suspender_ak"];
@@ -15,7 +15,6 @@ if (true) then {
 if(_role in ["sl","officer","ftl"]) then {
 	_vest = "rhs_gear_OFF";
 };
-
 
 if (_role in ["ag","ammg"]) then {
 	_backpack = "UK3CB_CW_SOV_O_LATE_B_Sidor_RIF";
