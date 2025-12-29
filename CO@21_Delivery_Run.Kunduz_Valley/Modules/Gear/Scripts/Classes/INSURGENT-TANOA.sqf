@@ -25,7 +25,7 @@ _uniform = ["U_I_C_Soldier_Para_2_F","U_I_C_Soldier_Para_3_F","U_I_C_Soldier_Par
 _vest = ["rhs_6b2_chicom","rhs_6b2_holster","rhs_6b2_lifchik","rhs_6b2_RPK","rhs_6b2_SVD","rhs_6b2"];
 _backpack = "rhs_sidor";
 _backpackRadio = _backpack;
-if (GVARMAIN(mod_TFAR)) then {
+if (true) then {
 	_backpackRadio = "UK3CB_CW_SOV_O_LATE_B_ASS_BERGEN_Radio";
 };
 
@@ -58,7 +58,7 @@ _sight = "";
 _bipod = "";
 
 _rifle = ["rhs_weap_l1a1_wood", _silencer, _pointer, _sight, _bipod];
-_rifleC = ["hlc_rifle_aks74u", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["rhs_weap_aks74u", _silencer, _pointer, _sight, _bipod];
 _rifleGL = ["rhs_weap_m70ab2", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["uk3cb_sks_01_sling", _silencer, _pointer, _sight, _bipod];
 _rifle_mag = "UK3CB_FNFAL_30rnd_762x51_GT";
@@ -66,8 +66,8 @@ _rifleGL_mag = "rhs_30Rnd_762x39mm";
 _rifleC_mag = "30Rnd_545x39_Mag_Tracer_Green_F";
 _rifleL_mag = "uk3cb_10rnd_magazine_sks_GT";
 
-_LMG = ["hlc_rifle_rpk74n", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "hlc_60Rnd_545x39_t_rpk";
+_LMG = ["rhs_weap_rpk74m", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "UK3CB_RPK74_60rnd_545x39_GT";
 
 _MMG = ["uk3cb_ppsh41", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "uk3cb_PPSH_71rnd_magazine_GT";
@@ -84,6 +84,7 @@ if(random 1 > 0.5) then {
 
 _MAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "RPG7_F";
+_MAT_mag_HE = "rhs_rpg7_TBG7V_mag";
 
 _HAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "RPG7_F";

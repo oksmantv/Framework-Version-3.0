@@ -1,4 +1,4 @@
-/*
+﻿/*
 	AUTHOR: GuzzenVonLidl
 	Description:
 		What case tha should be called for the zone player is in
@@ -12,7 +12,7 @@
 
 
 
-#include "script_Component.hpp"
+#include "\OKS_GOL_MISC\script_Component.hpp"
 #define	COMPONENT spawnList
 
 if !(isServer) exitWith {false};
@@ -25,32 +25,32 @@ switch (_case) do {
 
 	case 1: {
 
-		[Trigger_1,false,[0,0,false,false],civilian,10,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],true] spawn OKS_CreateZone;
-		[Trigger_1,false,[0,0,false,false],east,5,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],true] spawn OKS_CreateZone;
+		[Trigger_1,false,[0,0,false,false],civilian,10,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],true] spawn OKS_fnc_CreateZone;
+		[Trigger_1,false,[0,0,false,false],east,5,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],true] spawn OKS_fnc_CreateZone;
 
-		[Trigger_2,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
-		[Trigger_4,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
-		[Trigger_5,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
-		[Trigger_6,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
+		[Trigger_2,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
+		[Trigger_4,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
+		[Trigger_5,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
+		[Trigger_6,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
 
 
-		[Delivery_Outpost, "ammo", 2, "DeliveryTask_0", "Delivery to Outpost Roy", "Deliver Ammo", "colorIndependent"] spawn OKS_Deliver_Supplies; sleep 6;
+		[Delivery_Outpost, "ammo", 2, "DeliveryTask_0", "Delivery to Outpost Roy", "Deliver Ammo", "colorIndependent"] spawn OKS_fnc_Deliver_Supplies; sleep 6;
 
-		[Delivery_Jumat_Ka, "food", 2, "DeliveryTask_2", "Delivery to Jumat Ka", "Deliver Food"] spawn OKS_Deliver_Supplies;
-		[Delivery_Jumat_Ka, "water", 2, "DeliveryTask_2", "Delivery to Jumat Ka", "Deliver Water"] spawn OKS_Deliver_Supplies; sleep 6;
+		[Delivery_Jumat_Ka, "food", 2, "DeliveryTask_2", "Delivery to Jumat Ka", "Deliver Food"] spawn OKS_fnc_Deliver_Supplies;
+		[Delivery_Jumat_Ka, "water", 2, "DeliveryTask_2", "Delivery to Jumat Ka", "Deliver Water"] spawn OKS_fnc_Deliver_Supplies; sleep 6;
 
-		[Delivery_Pradesh, "water", 3, "DeliveryTask_5", "Delivery to Pradesh", "Deliver Water"] spawn OKS_Deliver_Supplies;
-		[Delivery_Pradesh, "food", 2, "DeliveryTask_5", "Delivery to Pradesh", "Deliver Food"] spawn OKS_Deliver_Supplies; sleep 6;
+		[Delivery_Pradesh, "water", 3, "DeliveryTask_5", "Delivery to Pradesh", "Deliver Water"] spawn OKS_fnc_Deliver_Supplies;
+		[Delivery_Pradesh, "food", 2, "DeliveryTask_5", "Delivery to Pradesh", "Deliver Food"] spawn OKS_fnc_Deliver_Supplies; sleep 6;
 
-		[Delivery_Tahar_Kamar, "water", 1, "DeliveryTask_6", "Delivery to Taher Kamar", "Deliver Water"] spawn OKS_Deliver_Supplies;
-		[Delivery_Tahar_Kamar, "food", 1, "DeliveryTask_6", "Delivery to Taher Kamar", "Deliver Food"] spawn OKS_Deliver_Supplies; sleep 6;
+		[Delivery_Tahar_Kamar, "water", 1, "DeliveryTask_6", "Delivery to Taher Kamar", "Deliver Water"] spawn OKS_fnc_Deliver_Supplies;
+		[Delivery_Tahar_Kamar, "food", 1, "DeliveryTask_6", "Delivery to Taher Kamar", "Deliver Food"] spawn OKS_fnc_Deliver_Supplies; sleep 6;
 
-		[Delivery_FuelStation, "fuel", 3, "DeliveryTask_1", "Delivery to Fuel Station", "Deliver Fuel"] spawn OKS_Deliver_Supplies; sleep 6;
+		[Delivery_FuelStation, "fuel", 3, "DeliveryTask_1", "Delivery to Fuel Station", "Deliver Fuel"] spawn OKS_fnc_Deliver_Supplies; sleep 6;
 
-		[Delivery_Kar_Shek, "ammo", 4, "DeliveryTask_3", "Delivery to FOB Orango", "Deliver Ammo", "colorIndependent"] spawn OKS_Deliver_Supplies;  sleep 6;
+		[Delivery_Kar_Shek, "ammo", 4, "DeliveryTask_3", "Delivery to FOB Orango", "Deliver Ammo", "colorIndependent"] spawn OKS_fnc_Deliver_Supplies;  sleep 6;
 		
-		[Delivery_Mosque, "water", 2, "DeliveryTask_4", "Delivery to Mosque", "Deliver Water"] spawn OKS_Deliver_Supplies; 
-		[Delivery_Mosque, "food", 2, "DeliveryTask_4", "Delivery to Mosque", "Deliver Food"] spawn OKS_Deliver_Supplies;
+		[Delivery_Mosque, "water", 2, "DeliveryTask_4", "Delivery to Mosque", "Deliver Water"] spawn OKS_fnc_Deliver_Supplies; 
+		[Delivery_Mosque, "food", 2, "DeliveryTask_4", "Delivery to Mosque", "Deliver Food"] spawn OKS_fnc_Deliver_Supplies;
 
 		/// Insurgent Hideout in Taher Kamar
 		[[[[3948.15,9530.11,3.68563],168,"Up",[]],[[3943.56,9533.14,3.725],282,"Up",[]],[[3944.64,9533.13,3.725],356,"Up",[]],[[3949.12,9530.54,0.984913],354,"Up",[]],[[3952.23,9534.91,0.97285],254,"Up",[]],[[3951.52,9541.13,0.266046],294,"Up",[]],[[3936.37,9538.02,0],225,"Up",[]],[[3943.78,9562.57,0.178714],193,"Up",[]],[[3938.51,9562.89,0.165157],156,"Up",[]],[[3935.57,9561.49,0.230324],196,"Up",[]],[[3934.51,9548.83,0.493814],294,"Up",[]],[[3932.95,9539.52,0.794895],354,"Up",[]],[[3934.92,9550.79,3.58414],287,"Middle",[]],[[3931.54,9542.02,3.27723],287,"Middle",[]],[[3932.25,9545.59,3.62866],287,"Middle",[]],[[3953.3,9540.25,3.31],96,"Up",[]]],[["UK3CB_ARD_O_DSHKM",[3932.48,9544.77,0.783058],293,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
@@ -69,9 +69,9 @@ switch (_case) do {
 			"UK3CB_MEE_O_Pickup", 
 			"UK3CB_MEE_O_M998_2DR"
 		];
-		[Spawn_1, Spawn_1, NEKY_Hunt_Trigger_1, 6,1800,east,_Vehicles,200] spawn NEKY_Hunt_HuntBase;
-		[Spawn_2, Spawn_2, NEKY_Hunt_Trigger_1, 6,1800,east,_Vehicles,200] spawn NEKY_Hunt_HuntBase;
-		[Spawn_3, Spawn_3, NEKY_Hunt_Trigger_1, 6,1800,east,_Vehicles,200] spawn NEKY_Hunt_HuntBase;
+		[Spawn_1, Spawn_1, NEKY_Hunt_Trigger_1, 6,1800,east,_Vehicles,200] spawn OKS_fnc_Huntbase;
+		[Spawn_2, Spawn_2, NEKY_Hunt_Trigger_1, 6,1800,east,_Vehicles,200] spawn OKS_fnc_Huntbase;
+		[Spawn_3, Spawn_3, NEKY_Hunt_Trigger_1, 6,1800,east,_Vehicles,200] spawn OKS_fnc_Huntbase;
 
 	};
 
@@ -79,7 +79,7 @@ switch (_case) do {
 
 		// Fuel Station Attack
 		{
-			[getPos _X,"rush",5,east,3000,[]] spawn OKS_Lambs_SpawnGroup;
+			[getPos _X,"rush",5,east,3000,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 		} foreach [fuel_1,fuel_2,fuel_3,fuel_4,fuel_5,fuel_6];
 	};
 
@@ -89,7 +89,7 @@ switch (_case) do {
 
 		// FOB Attack
 		{
-			[getPos _X,"rush",5,east,3000,[]] spawn OKS_Lambs_SpawnGroup; sleep 5;
+			[getPos _X,"rush",5,east,3000,[]] spawn OKS_fnc_Lambs_SpawnGroup; sleep 5;
 		} foreach [fob_1,fob_2,fob_3,fob_4,fob_5,fob_6];
 
 		[true, "DefendFOB", ["FOB Orango is about to be hit by an Insurgent attack. Drop the supplies off and help defend the FOB!", "Defend FOB Orango", "Defend"], getMarkerPos "marker_4","ASSIGNED",-1,true,"defend"] call BIS_fnc_taskCreate;
@@ -106,10 +106,10 @@ switch (_case) do {
 
 	case 4: {
 
-		[Trigger_3,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
-		[Trigger_7,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
-		[Trigger_8,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
-		[Trigger_9,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
+		[Trigger_3,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
+		[Trigger_7,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
+		[Trigger_8,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
+		[Trigger_9,false,[0,16,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
 
 		_Vehicles = [
 			"UK3CB_MEE_O_Datsun_Pkm", 
@@ -121,9 +121,9 @@ switch (_case) do {
 			"UK3CB_MEE_O_Pickup", 
 			"UK3CB_MEE_O_M998_2DR"
 		];
-		[Spawn_4, Spawn_4, NEKY_Hunt_Trigger_2, 6,1800,east,_Vehicles,200] spawn NEKY_Hunt_HuntBase;
-		[Spawn_5, Spawn_5, NEKY_Hunt_Trigger_2, 6,1800,east,_Vehicles,200] spawn NEKY_Hunt_HuntBase;
-		[Spawn_6, Spawn_6, NEKY_Hunt_Trigger_2, 6,1800,east,_Vehicles,200] spawn NEKY_Hunt_HuntBase;
+		[Spawn_4, Spawn_4, NEKY_Hunt_Trigger_2, 6,1800,east,_Vehicles,200] spawn OKS_fnc_Huntbase;
+		[Spawn_5, Spawn_5, NEKY_Hunt_Trigger_2, 6,1800,east,_Vehicles,200] spawn OKS_fnc_Huntbase;
+		[Spawn_6, Spawn_6, NEKY_Hunt_Trigger_2, 6,1800,east,_Vehicles,200] spawn OKS_fnc_Huntbase;
 	};
 
 	case 5: {
@@ -208,13 +208,13 @@ switch (_case) do {
 		   All Locations are not required, the script will find its own locations, however for the best experience and best result, help the dynamic script by placing these logics.
 
 		   Example:
-		   [Trigger_1,false,[0,0,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
+		   [Trigger_1,false,[0,0,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
 		*/
 
 		/* Example of Dynamic Scripts */
 		/*
 		if(isServer) then {
-			waitUntil{sleep 5; !(isNil "OKS_CreateZone")};
+			waitUntil{sleep 5; !(isNil "OKS_fnc_CreateZone")};
 
 			//// START OF ZONE /////
 			[	Trigger_1,  // Name of Trigger used as Spawn Area
@@ -244,7 +244,7 @@ switch (_case) do {
 				],
 				[0,0,0,0,0] // Infantry, Wheeled, APCs, Tanks, Air Assault - Hunt Bases - Preferred Game Logic Location 'Respawn Point'"
 				,false      // Should Enable Civilian Presence - Required Game Logic Location 'Village'"
-			] spawn OKS_CreateZone;
+			] spawn OKS_fnc_CreateZone;
 			//// END OF ZONE ////
 
 		};
@@ -262,15 +262,15 @@ switch (_case) do {
 		   	6 - Unit Selection - (Integer/String/Array with Strings)
 		   	7 - Refresh Rate in Seconds (Integer/Number)
 
-			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,30,independent,6,30] spawn NEKY_Hunt_HuntBase;
-			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,"CUP_I_LR_MG_AAF",30] spawn NEKY_Hunt_HuntBase;
-			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,["CUP_I_LR_MG_AAF","CUP_I_LR_MG_AAF"],30] spawn NEKY_Hunt_HuntBase;
+			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,30,independent,6,30] spawn OKS_fnc_Huntbase;
+			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,"CUP_I_LR_MG_AAF",30] spawn OKS_fnc_Huntbase;
+			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,["CUP_I_LR_MG_AAF","CUP_I_LR_MG_AAF"],30] spawn OKS_fnc_Huntbase;
 		*/
 		/* Example of Hunt Bases */
 		/*
 		if(isServer && GOL_NEKY_HUNT isEqualTo 1) then {
-			waitUntil{sleep 5; !(isNil "NEKY_Hunt_HuntBase")};
-			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,600+(random 300),east,6,120+(120)] spawn NEKY_Hunt_HuntBase;
+			waitUntil{sleep 5; !(isNil "OKS_fnc_Huntbase")};
+			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,600+(random 300),east,6,120+(120)] spawn OKS_fnc_Huntbase;
 		};
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -286,11 +286,12 @@ switch (_case) do {
 		   5 - Type of Insert (Unload ONLY) (String)
 		   6 - Cargo Split - [How many teams,Procent of Cargo] (Array)
 
-		   [Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn NEKY_Airbase;
+		   [Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
 		*/
 		/* Example of Air Bases */
 		/*
 		if(isServer && GOL_NEKY_AIRDROP isEqualTo 1) then {
-			waitUntil{sleep 5; !(isNil "NEKY_Airbase")};
-			[Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn NEKY_Airbase;
+			waitUntil{sleep 5; !(isNil "OKS_fnc_Airbase")};
+			[Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
 		};
+

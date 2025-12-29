@@ -17,10 +17,10 @@
 
 params ["_unit","_role"];
 
-private _radioSmall = ["sl","sm","ftl","r","g","ag","ar","mat","amat","ammg","mmg","lr","ab"];
-private _radioMedium = ["pl","fac","ftl","p","crew","marksman","pj","jetp","dragon","uav"];
+private _radioSmall = ["sl","sm","ftl","r","g","ag","ar","mat","amat","ammg","mmg","lr","ab","aa","atab"];
+private _radioMedium = ["pl","fac","ftl","p","crew","marksman","pj","jetp","dragon","uav","pm","mortar","drone","lightdragon"];
 
-if (GVARMAIN(mod_TFAR)) then {
+if (true) then {
 	if ({_x call TFAR_fnc_isRadio} count (items _unit + assignedItems _unit) > 0) then {
 		{
 			if (_x call TFAR_fnc_isRadio || _x isEqualTo "ItemRadio") then {
@@ -31,7 +31,7 @@ if (GVARMAIN(mod_TFAR)) then {
 	};
 
 	if (_role in _radioSmall) then {
-		_unit linkItem "TFAR_rf7800str";
+		_unit linkItem "TFAR_anprc148jem";
 	};
 	if (_role in _radioMedium) then {
 		if (_role in _radioSmall) then {
@@ -41,7 +41,7 @@ if (GVARMAIN(mod_TFAR)) then {
 		};
 	};
 } else {
-	if (GVARMAIN(mod_ACRE)) then {
+	if (false) then {
 		private _radioBP = ["pl","fac","sl","p"];
 		private _time = 1;
 		if ((time < 5) || didJip) then { // For first connection

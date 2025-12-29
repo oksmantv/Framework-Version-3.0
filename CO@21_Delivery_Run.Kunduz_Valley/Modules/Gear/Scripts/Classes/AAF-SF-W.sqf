@@ -9,7 +9,7 @@ _uniform = ["UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_
 _vest = ["UK3CB_AAF_I_V_Falcon_3_DIGI_GRN","UK3CB_AAF_I_V_Falcon_4_DIGI_GRN","UK3CB_AAF_I_V_Falcon_5_DIGI_GRN","UK3CB_AAF_I_V_Falcon_6_DIGI_GRN","UK3CB_AAF_I_V_Falcon_7_DIGI_GRN","UK3CB_AAF_I_V_Falcon_8_DIGI_GRN","UK3CB_AAF_I_V_Falcon_9_DIGI_GRN"];
 _backpack = ["UK3CB_AAF_B_B_FIELDPACK_DIGI_GRN"];
 _backpackRadio = _backpack;
-if (GVARMAIN(mod_TFAR)) then {
+if (true) then {
 	_backpackRadio = ["UK3CB_AAF_B_B_FIELDPACK_DIGI_GRN_Radio"];
 };
 if (_role in ["ag","ammg","lr","ab"]) then {
@@ -38,10 +38,11 @@ if (_role isEqualTo "jetp") then {
 	_backpack = "B_Parachute";
 };
 
-_silencer = "rhssaf_acc_g36_rotex";
+// Attachments
+_silencer = "";
 _pointer = "";
 _sight = "";
-_bipod = "rhsusf_acc_tdstubby_blk";
+_bipod = "";
 
 _rifle = ["rhs_weap_g36kv", _silencer, _pointer, _sight, _bipod];
 _rifleC = ["rhs_weap_g36c", _silencer, _pointer, _sight, _bipod];
@@ -60,7 +61,7 @@ _LMG = ["LMG_03_F", _silencer, _pointer, _sight, _bipod];
 _LMG_mag = "200Rnd_556x45_Box_Tracer_Red_F";
 
 _MMG = ["UK3CB_MG3_KWS_B", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "hlc_200Rnd_762x51_T_M60E4";
+_MMG_mag = "UK3CB_MG3_250rnd_762x51_RT";
 
 
 _LAT = ["UK3CB_BAF_AT4_CS_AT_Launcher", _silencer, _pointer, _sight, _bipod];
@@ -86,9 +87,9 @@ _pdw_mag_tr = "UK3CB_MP5_30Rnd_9x19_Magazine_RT";
 
 _silencer = "";
 _pointer = "";
-_sight = "optic_LRPS_tna_F";
+_sight = "rhsusf_acc_ACOG_RMR";
 _bipod = "bipod_03_F_oli";
 
 _rifleMarksman = ["srifle_DMR_03_woodland_F", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "20Rnd_762x51_Mag";
-_rifleMarksman_mag_tr = "20Rnd_762x51_Mag";
+_rifleMarksman_mag = "ACE_20Rnd_762x51_Mag_Tracer";
+_rifleMarksman_mag_tr = "ACE_20Rnd_762x51_Mag_Tracer";

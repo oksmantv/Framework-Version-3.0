@@ -25,7 +25,7 @@ _uniform = ["UK3CB_MDF_B_U_CombatUniform_01_LIZ","UK3CB_CW_SOV_O_Late_U_VDV_Comb
 _vest = ["rhs_6b2_chicom","rhs_6b2_lifchik","rhs_6b2_RPK","UK3CB_V_Belt_Rig_KHK","rhsgref_chicom","V_SmershVest_01_F","UK3CB_V_Chestrig_TKA_OLI","UK3CB_TKA_I_V_6Sh92_Oli","UK3CB_TKA_I_V_6Sh92_vog_Oli"];
 _backpack = "rhs_sidor";
 _backpackRadio = _backpack;
-if (GVARMAIN(mod_TFAR)) then {
+if (true) then {
 	_backpackRadio = "tfar_mr3000_rhs";
 };
 
@@ -65,8 +65,8 @@ _rifleGL_mag = "30Rnd_545x39_Mag_F";
 _rifleGL_mag_tr = "30Rnd_545x39_Mag_Tracer_F";
 _rifleL_mag = "rhs_30Rnd_762x39mm_bakelite_tracer";
 
-_LMG = ["hlc_rifle_rpk", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "rhs_75Rnd_762x39mm_tracer";
+_LMG = ["rhs_weap_rpk74m", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "UK3CB_RPK74_60rnd_545x39_GT";
 
 _MMG = ["rhs_weap_pkm", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhs_100Rnd_762x54mmR_green";
@@ -77,6 +77,7 @@ _LAT_ReUsable = false;
 
 _MAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "RPG7_F";
+_MAT_mag_HE = "rhs_rpg7_TBG7V_mag";
 
 _HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";
@@ -96,5 +97,5 @@ _sight = "rhs_acc_pso1m21";
 _bipod = "";
 
 _rifleMarksman = ["rhs_weap_svdp_wd", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "rhs_10Rnd_762x54mmR_7N1";
-_rifleMarksman_mag_tr = "rhs_10Rnd_762x54mmR_7N14";
+_rifleMarksman_mag = "UK3CB_SVD_10rnd_762x54_GT";
+_rifleMarksman_mag_tr = "UK3CB_SVD_10rnd_762x54_GT";
