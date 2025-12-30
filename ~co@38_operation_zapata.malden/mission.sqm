@@ -25,13 +25,13 @@ class EditorData
 	class Camera
 	{
 		pos[]={707.66498,53.919998,12167.418};
-		dir[]={0.90515977,-0.3628031,-0.22149421};
-		up[]={0.35240564,0.93186581,-0.086234286};
-		aside[]={-0.23768896,0,-0.97134131};
+		dir[]={0.90516758,-0.36280629,-0.221496};
+		up[]={0.35241708,0.93186051,-0.086236969};
+		aside[]={-0.23769212,-1.7881393e-07,-0.97134918};
 	};
 };
 binarizationWanted=0;
-sourceName="co@38_operation_zapata";
+sourceName="~co@38_operation_zapata";
 addons[]=
 {
 	"A3_Characters_F",
@@ -540,7 +540,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category2
+	class Category3
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -723,7 +723,7 @@ class CustomAttributes
 		};
 		nAttributes=4;
 	};
-	class Category3
+	class Category4
 	{
 		name="Scenario";
 		class Attribute0
@@ -35453,7 +35453,7 @@ class Mission
 						};
 					};
 					id=2721;
-					atlOffset=-0.00052452087;
+					atlOffset=-0.00057411194;
 				};
 				class Item6
 				{
@@ -47882,7 +47882,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2997.0334,8.259201,10973.063};
-				angles[]={0,0,6.6268917e-08};
+				angles[]={6.2831855,0,6.6268917e-08};
 			};
 			side="Empty";
 			class Attributes
@@ -47908,7 +47908,6 @@ class Mission
 			};
 			id=4144;
 			type="GOL_ResupplyStation_WEST_Small";
-			atlOffset=-0.001832962;
 		};
 		class Item11
 		{

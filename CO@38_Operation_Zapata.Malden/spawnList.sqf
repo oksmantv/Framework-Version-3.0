@@ -26,10 +26,11 @@ Private _ConvoyVehicle = "UK3CB_CSAT_M_O_Tigr_FFV";
 switch (_case) do {
 
 	case 0:{
-		// SAM
+		// AAA Sites
 		{
-			[_X,selectRandom [radar_1,radar_2],20,4,30] spawn OKS_fnc_SAM;
+			[_X,east,false,1500,true] spawn OKS_fnc_Ambient_AAA;
 		} foreach [SAM_1,SAM_2,SAM_3];
+
 
 		// Lolisse Strongpoint
 		[[5457.59,10905.7,0],30,EAST] spawn OKS_fnc_Populate_StaticWeapons;
@@ -74,8 +75,8 @@ switch (_case) do {
 		[[[[5025.67,9700.38,3.13229],0,[]],[[5025.68,9697.53,3.51202],0,[]],[[5022.71,9698.94,2.81503],0,[]],[[5023.39,9694.1,3.97043],0,[]]],[],[[[5007.13,9828.75,0],[[0,"Move"]]],[[4959.25,9903.44,0],[[0,"Move"]]],[[4816.21,10046.6,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[4841.46,9616.32,0],0,[]],[[4841.48,9613.47,0.83374],0,[]],[[4838.51,9614.89,2.46722],0,[]],[[4839.19,9610.05,1.29053],0,[]]],[],[[[4773.72,9620.34,0],[[0,"Move"]]],[[4688.45,9692.32,0],[[0,"Move"]]],[[4728.99,9853.96,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
 
-		[convoystart_1,convoywp_1,convoyend_1,independent,[3,[_ConvoyVehicle], 12, 40],[true,4],[], false, false] spawn OKS_fnc_Convoy_Spawn;
-		[convoystart_2,convoywp_2,convoyend_2,independent,[3,[_ConvoyVehicle], 12, 40],[true,4],[], false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_1,convoywp_1,convoyend_1,independent,[3,[_ConvoyVehicle], 50, 40],[true,4],[], false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_2,convoywp_2,convoyend_2,independent,[3,[_ConvoyVehicle], 50, 40],[true,4],[], false, false] spawn OKS_fnc_Convoy_Spawn;
 	};
 
 	case 3: {
@@ -104,7 +105,7 @@ switch (_case) do {
 		[[[[5586.17,11106.4,0],73,[]],[[5582.84,11100.2,0],73,[]],[[5579.94,11109.7,0],73,[]],[[5579.5,11093.9,0],73,[]]],[],[[[5483.53,11127.5,1.94917],[[0,"Move"],[1,"SAFE"]]],[[5461.58,11187.1,0],[[0,"Move"]]],[[5548.49,11191.5,0],[[0,"Move"]]],[[5597.96,11149.1,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[5522.57,11254.8,0],155,[]],[[5515.93,11257.2,0],155,[]],[[5525.01,11261.4,-7.62939e-06],155,[]],[[5509.29,11259.6,-7.62939e-06],155,[]]],[],[[[5466.1,11343.1,1.9491],[[0,"Move"],[1,"SAFE"]]],[[5506.94,11353.5,0],[[0,"Move"]]],[[5555.33,11298.4,0],[[0,"Move"]]],[[5528.89,11256.9,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 
-		[[5445.13,11387.5,0],"sector",50,EAST,false,"Task_2"] spawn OKS_fnc_CreateObjectives;
+		[[5445.13,11387.5,0],"sector",50,EAST,false, false, false, "Task_2"] spawn OKS_fnc_CreateObjectives;
 
 		[AirBase_1, AirSpawn_1, AirHuntTrigger_2, independent, "O_Heli_Transport_04_covered_F", 'fastrope', [1,0.5], 900, 100, 90, 5] spawn OKS_fnc_Airbase; sleep 20;
 		[AirBase_2, AirSpawn_2, AirHuntTrigger_2, independent, "O_Heli_Transport_04_covered_F", 'fastrope', [1,0.5], 900, 100, 90, 5] spawn OKS_fnc_Airbase; sleep 20;
@@ -128,8 +129,8 @@ switch (_case) do {
 
 		_ConvoyArray1 = [];
 		_ConvoyArray2 = [];
-		[convoystart_3,convoywp_3,convoyend_3,independent,[6,[_ConvoyVehicle], 10, 40],[true,4], _ConvoyArray1, false, false] spawn OKS_fnc_Convoy_Spawn;
-		[convoystart_4,convoywp_4,convoyend_4,independent,[6,[_ConvoyVehicle], 10, 40],[true,4], _ConvoyArray2, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_3,convoywp_3,convoyend_3,independent,[6,[_ConvoyVehicle], 50, 40],[true,4], _ConvoyArray1, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_4,convoywp_4,convoyend_4,independent,[6,[_ConvoyVehicle], 50, 40],[true,4], _ConvoyArray2, false, false] spawn OKS_fnc_Convoy_Spawn;
 
 		waitUntil {
 			sleep 10;	
@@ -167,9 +168,9 @@ switch (_case) do {
 		[[[[3413.38,8459.41,0],0,[]],[[3418.38,8454.41,0],0,[]],[[3408.38,8454.41,0],0,[]],[[3423.38,8449.41,0],0,[]]],[],[[[3240.34,8468.88,0],[[0,"Move"]]],[[3119.96,8431.19,0],[[0,"Move"]]],[[3335.78,8347.66,6.10352e-05],[[0,"Move"]]],[[3399.79,8445.26,7.62939e-06],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[3667.58,8530.95,0.948288],0,[]],[[3672.58,8525.95,0],0,[]],[[3662.58,8525.95,1.16879],0,[]],[[3677.58,8520.95,0],0,[]]],[],[[[3566.79,8580.8,0],[[0,"Move"]]],[[3498.01,8507.94,0],[[0,"Move"]]],[[3569.08,8439.73,0],[[0,"Move"]]],[[3653.99,8516.8,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 
-		[[3226.55,8493.46,0],"sector",50,EAST,false,"Task_3"] spawn OKS_fnc_CreateObjectives;
-		[[3552.68,8487.15,0],"sector",50,EAST,false,"Task_3"] spawn OKS_fnc_CreateObjectives;
-		[[3612.76,8571.86,0],"sector",50,EAST,false,"Task_3"] spawn OKS_fnc_CreateObjectives;
+		[[3226.55,8493.46,0],"sector",50,EAST,false, false, false, "Task_3"] spawn OKS_fnc_CreateObjectives;
+		[[3552.68,8487.15,0],"sector",50,EAST,false, false, false, "Task_3"] spawn OKS_fnc_CreateObjectives;
+		[[3612.76,8571.86,0],"sector",50,EAST,false, false, false, "Task_3"] spawn OKS_fnc_CreateObjectives;
 
 		[AirBase_1, AirSpawn_1, AirHuntTrigger_1, independent, "O_Heli_Transport_04_covered_F", 'fastrope', [1,0.5], 900, 100, 90, 5] spawn OKS_fnc_Airbase; sleep 20;
 		[AirBase_2, AirSpawn_2, AirHuntTrigger_1, independent, "O_Heli_Transport_04_covered_F", 'fastrope', [1,0.5], 900, 100, 90, 5] spawn OKS_fnc_Airbase; sleep 20;
@@ -191,9 +192,9 @@ switch (_case) do {
 		_ConvoyArray1 = [];
 		_ConvoyArray2 = [];
 		_ConvoyArray3 = [];
-		[convoystart_5,convoywp_5,convoyend_5,independent,[6,[_ConvoyVehicle], 10, 40],[true,4], _ConvoyArray1, false, false] spawn OKS_fnc_Convoy_Spawn;
-		[convoystart_6,convoywp_6,convoyend_6,independent,[6,[_ConvoyVehicle], 10, 40],[true,4], _ConvoyArray2, false, false] spawn OKS_fnc_Convoy_Spawn;
-		[convoystart_7,convoywp_7,convoyend_7,independent,[6,[_ConvoyVehicle], 10, 40],[true,4], _ConvoyArray3, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_5,convoywp_5,convoyend_5,independent,[6,[_ConvoyVehicle], 50, 40],[true,4], _ConvoyArray1, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_6,convoywp_6,convoyend_6,independent,[6,[_ConvoyVehicle], 50, 40],[true,4], _ConvoyArray2, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_7,convoywp_7,convoyend_7,independent,[6,[_ConvoyVehicle], 50, 40],[true,4], _ConvoyArray3, false, false] spawn OKS_fnc_Convoy_Spawn;
 
 		waitUntil {
 			sleep 10;	
@@ -339,8 +340,9 @@ switch (_case) do {
 		*/
 		/* Example of Air Bases */
 		/*
-		if(isServer && GOL_NEKY_AIRDROP isEqualTo 1) then {
+		if(isServer && GOL_OKS_fnc_AirDrop isEqualTo 1) then {
 			waitUntil{sleep 5; !(isNil "OKS_fnc_Airbase")};
 			[Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
 		};
+
 

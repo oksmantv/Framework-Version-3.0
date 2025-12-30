@@ -63,8 +63,8 @@ _rifleGL_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
 _rifleL_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
 _rifleL_mag_tr = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 
-_LMG = ["rhs_weap_m249_light_L", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "rhsusf_200rnd_556x45_mixed_box";
+_LMG = ["LMG_03_F", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "200Rnd_556x45_Box_Tracer_Red_F";
 
 _MMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "UK3CB_BAF_762_200Rnd_T";
@@ -77,6 +77,7 @@ _LAT_ReUsable = false;
 
 _MAT = ["launch_MRAWS_olive_rail_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "MRAWS_HEAT55_F";
+_MAT_mag_HE = "MRAWS_HE_F";
 
 _HAT = ["launch_O_Vorona_brown_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";
@@ -93,9 +94,9 @@ _pistol_mag = "UK3CB_USP_9_15Rnd";
 
 _silencer = "";
 _pointer = "";
-_sight = "uk3cb_optic_ZFSG1";
+_sight = "uk3cb_optic_STANAGZF2D_G3";
 _bipod = "rhsusf_acc_harris_bipod";
 
 _rifleMarksman = ["UK3CB_PSG1A1", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";
+_rifleMarksman_mag = "ACE_20Rnd_762x51_Mag_Tracer";
 _rifleMarksman_mag_tr = "ACE_20Rnd_762x51_Mag_Tracer";
