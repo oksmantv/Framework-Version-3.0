@@ -1,0 +1,20 @@
+﻿2025-12-30 01:57:23 - Starting mission processing in: C:\Users\aleok\OneDrive\Dokument\Arma 3\Users\Oksman\missions\Framework-Version-3.0\Trainings\ATG@38_Basic_Training.Altis
+2025-12-30 01:57:23 - Log file: C:\Users\aleok\OneDrive\Dokument\Arma 3\Users\Oksman\missions\Framework-Version-3.0\Trainings\ATG@38_Basic_Training.Altis\undo_log.txt
+2025-12-30 01:57:23 - Loaded mission.sqm
+2025-12-30 01:57:23 - Loaded Description.ext
+2025-12-30 01:57:23 - Parsed folder name: ATG@38_Basic_Training.Altis
+2025-12-30 01:57:23 - Extracted briefingName: Basic Training
+2025-12-30 01:57:23 - Map: Altis
+2025-12-30 01:57:23 - spawnList.sqf updated successfully
+2025-12-30 01:57:23 - Processing mission.sqm rewrites...
+2025-12-30 01:57:24 - mission.sqm: structured rewrites done
+2025-12-30 01:57:24 - mission.sqm: string replacements done
+2025-12-30 01:57:48 - mission.sqm: image path fixes done
+2025-12-30 01:57:48 - mission.sqm: legacy line removal done
+2025-12-30 01:57:48 - Reset GW_isConfigured to 0 (false) to trigger first-time setup
+2025-12-30 01:57:48 - Extracted author from mission.sqm: Oksman, Blu
+2025-12-30 01:57:48 - Updated BRIEFING_NAME to 'Basic Training' in Description.ext
+2025-12-30 01:57:48 - Updated author to 'Oksman, Blu' in Description.ext
+2025-12-30 01:57:48 - Description.ext updated
+2025-12-30 01:57:48 - Saving mission.sqm...
+2025-12-30 01:57:48 - mission.sqm updated successfully

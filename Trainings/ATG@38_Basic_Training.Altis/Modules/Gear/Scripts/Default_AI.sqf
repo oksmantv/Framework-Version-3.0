@@ -45,12 +45,6 @@ switch (toLower(_role)) do {
 		[_map, "", "ItemRadio", _compass, _watch, ""] call _addLinkedItems;
 	};
 
-	case "unarmed": {
-		[_goggles,_helmet,_uniform,_vest,_backpackRadio] call _addEquipment;
-		_IFAK call _addToUniform;
-		[_map, "", "ItemRadio", _compass, _watch, ""] call _addLinkedItems;
-	};
-
 	case "pl": {
 		[_goggles,_helmet,_uniform,_vest,_backpackRadio] call _addEquipment;
 		[_rifle, _rifle_mag_tr, ""] call _addPrimary;
