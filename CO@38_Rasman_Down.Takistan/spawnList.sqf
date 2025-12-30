@@ -47,8 +47,8 @@ switch (_case) do {
 			[getPos _X,Independent,150,500,2500,60] spawn OKS_fnc_IR_AA;
 		} foreach [AA_1,AA_2,AA_3,AA_4];
 
-		// [SAM_1,Radar_2,30,4,300] spawn OKS_SAM;
-		// [SAM_2,Radar_1,30,4,300] spawn OKS_SAM;
+		// [SAM_1,Radar_2,30,4,300] spawn OKS_fnc_SAM;
+		// [SAM_2,Radar_1,30,4,300] spawn OKS_fnc_SAM;
 
 		[Radar_1,["UK3CB_MEI_O_V3S_Zu23"]] spawn OKS_fnc_Radar;
 		[Radar_2,["UK3CB_MEI_O_V3S_Zu23"]] spawn OKS_fnc_Radar;

@@ -69,8 +69,8 @@ _rifleC_mag_tr = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 _rifleL_mag = "rhs_mag_30Rnd_556x45_Mk262_Stanag";
 _rifleL_mag_tr = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 
-_LMG = ["rhs_weap_m249_light_L", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "rhsusf_200rnd_556x45_mixed_box";
+_LMG = ["LMG_03_F", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "200Rnd_556x45_Box_Tracer_Red_F";
 
 _MMG = ["UK3CB_M60", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhsusf_100Rnd_762x51_m62_tracer";
@@ -98,11 +98,7 @@ _pdw = ["rhs_weap_m92", _silencer, _pointer, _sight, _bipod];
 _pdw_mag = "rhssaf_30Rnd_762x39_M82_api";
 _pdw_mag_tr = "rhssaf_30Rnd_762x39_M82_api";
 
-_silencer = "";
-_pointer = "";
-_sight = "optic_LRPS";
-_bipod = "rhsusf_acc_harris_bipod";
-
-_rifleMarksman = ["srifle_DMR_06_hunter_F", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "20Rnd_762x51_Mag";
-_rifleMarksman_mag_tr = "ACE_20Rnd_762x51_Mag_Tracer";
+_sight = "rhs_acc_pso1m21";
+_rifleMarksman = ["rhs_weap_svdp", _silencer, _pointer, _sight, _bipod];
+_rifleMarksman_mag = "UK3CB_SVD_10rnd_762x54_RT";
+_rifleMarksman_mag_tr = "UK3CB_SVD_10rnd_762x54_RT";
