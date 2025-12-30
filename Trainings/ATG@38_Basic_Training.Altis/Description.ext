@@ -1,4 +1,4 @@
-﻿// *	DO NOT CHANCE THE ORDER/STRUCTIOR OF THE FILE
+// *	DO NOT CHANCE THE ORDER/STRUCTIOR OF THE FILE
 //	https://community.bistudio.com/wiki/description.ext
 // ==============================================================================
 // *	Includes the most nessasary configs for the framework to work
@@ -152,6 +152,13 @@ class ACE_Settings {
 
 #include "Modules\Callsigns\defines.hpp"
 #include "Modules\Callsigns\dialogs.hpp"
+
+
+
+
+
+
+
 
 
 
