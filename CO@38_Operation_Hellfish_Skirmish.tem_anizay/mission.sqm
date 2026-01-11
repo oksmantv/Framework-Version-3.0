@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=3701;
+		nextID=3711;
 	};
 	class MarkerIDProvider
 	{
@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13828;
+		nextID=13882;
 	};
 	class Camera
 	{
-		pos[]={1010.4901,159.08823,5441.4404};
-		dir[]={0.084406853,-0.79066879,0.60646904};
-		up[]={0.10899045,0.61225027,0.78310579};
-		aside[]={0.99049294,-1.0583317e-06,-0.13785279};
+		pos[]={4283.1001,172.31633,9300.9482};
+		dir[]={-0.062386151,-0.55118579,0.83204699};
+		up[]={-0.041211747,0.83438259,0.54964298};
+		aside[]={0.99720091,0,0.074769244};
 	};
 };
 binarizationWanted=0;
-sourceName="CO@38_Operation_Hellfish_Skirmish";
+sourceName="co@38_operation_hellfish_skirmish";
 addons[]=
 {
 	"A3_Characters_F",
@@ -445,7 +445,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category3
+	class Category2
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -628,7 +628,7 @@ class CustomAttributes
 		};
 		nAttributes=4;
 	};
-	class Category4
+	class Category3
 	{
 		name="Scenario";
 		class Attribute0
@@ -35449,7 +35449,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=6;
+		items=10;
 		class Item0
 		{
 			dataType="Layer";
@@ -45601,6 +45601,53 @@ class Mission
 			};
 			id=3648;
 			atlOffset=-61.698425;
+		};
+		class Item6
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4282.1602,147.57144,9318.79};
+			};
+			name="AirSpawnPosition_1";
+			id=3704;
+			type="Logic";
+		};
+		class Item7
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1095.6169,2685.6943,5531.8755};
+			};
+			name="AirSpawnTarget_1";
+			id=3705;
+			type="Logic";
+			atlOffset=2553.4148;
+		};
+		class Item8
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4033.7642,152.88725,9365.2676};
+				angles[]={0.018000545,0,0.14301692};
+			};
+			name="AirSpawnPosition_2";
+			id=3709;
+			type="Logic";
+		};
+		class Item9
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1247.475,2771.6775,5267.5957};
+			};
+			name="AirSpawnTarget_2";
+			id=3710;
+			type="Logic";
+			atlOffset=2649.5012;
 		};
 	};
 	class Connections
