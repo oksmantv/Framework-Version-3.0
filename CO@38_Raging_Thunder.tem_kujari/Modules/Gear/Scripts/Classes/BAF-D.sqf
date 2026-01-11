@@ -42,7 +42,7 @@ if (_role isEqualTo "jetp") then {
 // Attachments
 _silencer = "UK3CB_BAF_SFFH";
 _pointer = "";
-_sight = "JCA_optic_ACOG_black";
+_sight = "JCA_optic_AICO_black";
 _bipod = "UK3CB_underbarrel_acc_grippod";
 
 _rifle = ["UK3CB_BAF_L85A2", _silencer, _pointer, _sight, _bipod];
@@ -55,8 +55,8 @@ _rifleGL_mag = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 _rifleGL_mag_tr = "UK3CB_BAF_556_30Rnd_T";
 _rifleC_mag = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 
-_LMG = ["UK3CB_BAF_L110A3", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "UK3CB_BAF_556_200Rnd_T";
+_LMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "UK3CB_BAF_762_200Rnd_T";
 
 _MMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "UK3CB_BAF_762_200Rnd_T";

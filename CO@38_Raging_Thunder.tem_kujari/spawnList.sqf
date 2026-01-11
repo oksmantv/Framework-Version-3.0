@@ -22,7 +22,7 @@ params [
 ];
 
 private _Vehicles = [
-	"UK3CB_ADE_O_BRDM2", 
+	"UK3CB_MEE_O_Hilux_M2", 
 	"UK3CB_ADE_O_BRDM2_HQ", 
 	"UK3CB_ADE_O_Datsun_Pkm", 
 	"UK3CB_ADE_O_Hilux_Dshkm", 
@@ -36,7 +36,7 @@ private _Vehicles = [
 	"UK3CB_ADE_O_V3S_Open", 
 	"UK3CB_ADE_O_Van_Transport", 
 	"UK3CB_ADE_O_BTR40_MG", 
-	"UK3CB_ADE_O_MTLB_KPVT"
+	"UK3CB_MEE_O_Hilux_M2"
 ];
 
 switch (_case) do {
@@ -76,7 +76,7 @@ switch (_case) do {
 
 	case 1: {
 
-		[CivTrigger_1,7,5,7,8,false,true, true] spawn OKS_fnc_Civilians;
+		[CivTrigger_1,4,5,4,4,false,true, true] spawn OKS_fnc_Civilians;
 		[[[[2895.43,12951.6,0],49,"Middle",[]],[[2920.42,12935.6,0],49,"Middle",[]],[[2890.16,12956.5,0],49,"Middle",[]],[[2908.76,12926.6,0],102,"Middle",[]]],[["UK3CB_ADE_O_BTR40_MG",[2885.42,12957.9,1],57,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["ADE_2",1]],[7,["Beacons_Hide",1,"Hull_Flag_Hide",1]]]],["UK3CB_MEE_O_KORD",[2892.93,12943.5,0],99,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 		[[[[3585.92,14254.4,-2.57492e-05],0,"Up",[]],[[3584.68,14261.7,-2.57492e-05],322,"Up",[]],[[3566.27,14266,-2.57492e-05],201,"Up",[]],[[3579.23,14269.5,0.651718],141,"Up",[]],[[3569.65,14266.1,0.403474],83,"Up",[]],[[3577.82,14272.9,-2.57492e-05],101,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 		[[[[3531.06,14230.6,-9.53674e-07],326,"Up",[]],[[3539.44,14243.8,0.995537],62,"Up",[]],[[3546.03,14240.4,-1.90735e-06],204,"Up",[]],[[3544.35,14228.4,0.521185],341,"Up",[]],[[3494.35,14276.1,0],192,"Up",[]],[[3483.18,14267,-9.53674e-07],355,"Up",[]],[[3477.58,14282.6,-1.90735e-06],194,"Up",[]],[[3486.3,14286.4,1.07474],326,"Up",[]],[[3486.74,14278.2,1.42518],288,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
@@ -90,7 +90,7 @@ switch (_case) do {
 	case 2: {
 
 		// Clear Civilians.
-		[CivTrigger_2] spawn OKS_fnc_ClearCivilians;		
+		//[CivTrigger_2] spawn OKS_fnc_ClearCivilians;		
 
 		// Conuter-Attack West.
 		[[
@@ -112,8 +112,8 @@ switch (_case) do {
 		[[],[["UK3CB_ADE_O_LR_M2",[2296.47,14029,1],69,[["driver",-1,[]],["gunner",-1,[2]]],[[6,["ADE",1]],[7,["Radio_Hide",0,"Front_Grill_Hide",0,"Light_Covers_Hide",0,"Fuel_Cans_Hide",0,"Spare_Wheel_Hide",0,"Beacons_Hide",1,"ClanLogo_Hide",1]]]]],[[[2869.26,14212.4,-1.33514e-05],[[0,"Move"]]],[[3321.36,14247.1,1.90735e-05],[[0,"Move"]]],[[3417.81,14191.5,0],[[0,"Hold"]]]]] call GW_Common_fnc_spawnGroup;
 		[[],[["UK3CB_ADE_O_LR_M2",[2287.6,14309.4,0.6],51,[["driver",-1,[]],["gunner",-1,[2]]],[[6,["ADE",1]],[7,["Radio_Hide",0,"Front_Grill_Hide",0,"Light_Covers_Hide",0,"Fuel_Cans_Hide",0,"Spare_Wheel_Hide",0,"Beacons_Hide",1,"ClanLogo_Hide",1]]]]],[[[2676.16,14434.2,0],[[0,"Move"]]],[[3303.85,14684.3,0],[[0,"Move"]]],[[3455.39,14481,0],[[0,"Hold"]]]]] call GW_Common_fnc_spawnGroup;
 
-		[MechanizedSpawn_1,NEKY_Hunt_Trigger_1,"UK3CB_ADE_O_MTLB_KPVT",5,east,500] spawn OKS_fnc_Mechanized_Spawn;
-		[MechanizedSpawn_2,NEKY_Hunt_Trigger_1,"UK3CB_ADE_O_MTLB_KPVT",5,east,500] spawn OKS_fnc_Mechanized_Spawn;
+		[MechanizedSpawn_1,NEKY_Hunt_Trigger_1,"UK3CB_MEE_O_MTLB_PKT",5,east,500] spawn OKS_fnc_Mechanized_Spawn;
+		[MechanizedSpawn_2,NEKY_Hunt_Trigger_1,"UK3CB_MEE_O_MTLB_PKT",5,east,500] spawn OKS_fnc_Mechanized_Spawn;
 
 	};
 
@@ -148,8 +148,8 @@ switch (_case) do {
 
 		// Task Kaoya
 		// Clear Civilians.
-		[CivTrigger_5] spawn OKS_fnc_ClearCivilians;
-		[CivTrigger_2,0,7,0,0, false, true, false] spawn OKS_fnc_Civilians;
+		//[CivTrigger_5] spawn OKS_fnc_ClearCivilians;
+		[CivTrigger_2,0,5,0,0, false, true, false] spawn OKS_fnc_Civilians;
 
 		[[DestroyObject_3,DestroyObject_4],nil,nil,nil,"truck","Task_0",false,false] spawn OKS_fnc_Destroy_Task;
 		[[DestroyObject_5],nil,nil,nil,"truck","Task_0",false,false] spawn OKS_fnc_Destroy_Task;
@@ -188,7 +188,7 @@ switch (_case) do {
 	case 5: {
 
 		// Clear Civilians.
-		[CivTrigger_1] spawn OKS_fnc_ClearCivilians;
+		//[CivTrigger_1] spawn OKS_fnc_ClearCivilians;
 
 		// Inside Boukar.
 		[[[[3240.95,11947.4,3.09125],19,"Up",[]],[[3240.23,11939.3,3.29969],19,"Up",[]],[[3233.52,11946.2,3.68295],19,"Up",[]],[[3232.9,11945.3,0.937788],262,"Up",[]],[[3235.67,11946.8,0.745241],353,"Up",[]],[[3241.16,11946.4,0.427759],58,"Up",[]],[[3242.67,11941.1,0.315668],65,"Up",[]],[[3255.82,11937.6,3.53017],336,"Up",[]],[[3258.28,11938,3.66405],19,"Up",[]],[[3249.63,11935,0.654039],305,"Up",[]],[[3258.36,11934.9,0.387821],33,"Up",[]],[[3219.89,11943.4,0.372835],278,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
@@ -204,15 +204,15 @@ switch (_case) do {
 			"UK3CB_ADE_O_Offroad", 
 			"UK3CB_ADE_O_Pickup"
 		];
-		[HuntBase_5, HuntSpawn_5, NEKY_HuntTrigger_1, 6, 60, EAST, _Vehicles, 120] spawn OKS_fnc_HuntBase;
+		[HuntBase_5, HuntSpawn_5, NEKY_Hunt_Trigger_1, 6, 60, EAST, _Vehicles, 120] spawn OKS_fnc_HuntBase;
 
 		[[],[["UK3CB_ADE_O_LR_M2",[1930.91,12155.1,0.5],102,[["driver",-1,[]],["gunner",-1,[2]]],[[6,["ADE",1]],[7,["Radio_Hide",0,"Front_Grill_Hide",0,"Light_Covers_Hide",0,"Fuel_Cans_Hide",0,"Spare_Wheel_Hide",0,"Beacons_Hide",1,"ClanLogo_Hide",1]]]]],[[[2819.74,11928.1,0],[[0,"Move"],[1,"SAFE"]]],[[2895.42,12027.6,0],[[0,"Move"],[1,"AWARE"]]],[[2993.68,12009.9,0],[[0,"Hold"]]]]] call GW_Common_fnc_spawnGroup;
 		[[],[["UK3CB_ADR_O_Hilux_M2",[1898.43,12162.7,0.5],108,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["AD",1]],[7,["ClanLogo_Hide",1,"Beacons_Hide",1,"Bonnet_Armour_Hide",1,"Central_Armour_Hide",1,"Front_Armour_Hide",1,"Rear_Armour_Hide",1,"Roof_Armour_Hide",1,"Wheel_Armour_Hide",1,"Windscreen_Armour_Hide",1,"Running_Board_Hide",0,"Roof_Rack_Hide",0,"Aerial_Hide",0,"Wipers_Hide",0]]]]],[[[2819.74,11928.1,0],[[0,"Move"],[1,"SAFE"]]],[[2895.42,12027.6,0],[[0,"Move"],[1,"AWARE"]]],[[3017.32,11949.8,0],[[0,"Hold"]]]]] call GW_Common_fnc_spawnGroup;
 		[[],[["UK3CB_ADR_O_Hilux_Pkm",[1872.97,12170.3,0.5],108,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["AD",1]],[7,["ClanLogo_Hide",1,"Beacons_Hide",1,"Bonnet_Armour_Hide",1,"Central_Armour_Hide",1,"Front_Armour_Hide",1,"Rear_Armour_Hide",1,"Roof_Armour_Hide",1,"Wheel_Armour_Hide",1,"Windscreen_Armour_Hide",1,"Running_Board_Hide",0,"Roof_Rack_Hide",0,"Aerial_Hide",0,"Wipers_Hide",0]]]]],[[[2819.74,11928.1,0],[[0,"Move"],[1,"SAFE"]]],[[2895.42,12027.6,0],[[0,"Move"],[1,"AWARE"]]],[[2982.74,12048.5,0],[[0,"Hold"]]]]] call GW_Common_fnc_spawnGroup;
 	
-		[MechanizedSpawn_3,NEKY_Hunt_Trigger_2,"UK3CB_ADE_O_MTLB_KPVT",5,east,500] spawn OKS_fnc_Mechanized_Spawn; sleep 120;
-		[MechanizedSpawn_4,NEKY_Hunt_Trigger_2,"UK3CB_ADE_O_MTLB_KPVT",5,east,500] spawn OKS_fnc_Mechanized_Spawn; sleep 120;
-		[MechanizedSpawn_5,NEKY_Hunt_Trigger_2,"UK3CB_ADE_O_MTLB_KPVT",5,east,500] spawn OKS_fnc_Mechanized_Spawn;
+		[MechanizedSpawn_3,NEKY_Hunt_Trigger_2,"UK3CB_MEE_O_MTLB_PKT",5,east,500] spawn OKS_fnc_Mechanized_Spawn; sleep 120;
+		[MechanizedSpawn_4,NEKY_Hunt_Trigger_2,"UK3CB_MEE_O_MTLB_PKT",5,east,500] spawn OKS_fnc_Mechanized_Spawn; sleep 120;
+		[MechanizedSpawn_5,NEKY_Hunt_Trigger_2,"UK3CB_MEE_O_MTLB_PKT",5,east,500] spawn OKS_fnc_Mechanized_Spawn;
 	};
 
 	case 6: {
@@ -234,7 +234,7 @@ switch (_case) do {
 		[[[[3659.35,11365.7,0.889482],285,"Up",[]],[[3666.13,11375.5,0],120,"Up",[]],[[3668.45,11366.8,0.845207],285,"Up",[]],[[3663.78,11358.9,0.733511],231,"Up",[]],[[3674.15,11342.5,1.90735e-06],296,"Up",[]],[[3691.07,11339.5,0],311,"Up",[]],[[3680.16,11332.7,0.306345],15,"Up",[]],[[3674.54,11345.5,3.18749],231,"Up",[]],[[3682,11350,3.05222],348,"Middle",[]],[[3688.55,11327.4,0],7,"Middle",[]],[[3696.94,11305.8,0.299339],36,"Middle",[]],[[3696.66,11320.9,0.81242],351,"Up",[]],[[3692.96,11315.8,4.1384],19,"Up",[]],[[3695.79,11312.4,0],42,"Middle",[]]],[["UK3CB_ADE_O_BTR40_MG",[3700.56,11295.4,0],294,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["ADE_2",1]],[7,["Beacons_Hide",1,"Hull_Flag_Hide",1]]]]],[]] call GW_Common_fnc_spawnGroup;
 		[[[[3725.55,11318.3,0.733921],270,"Up",[]],[[3726.47,11327.1,-1.71661e-05],239,"Up",[]],[[3714.59,11332.6,-1.90735e-05],77,"Up",[]],[[3729.44,11332,-1.90735e-05],275,"Up",[]],[[3721.59,11341.9,0.517265],238,"Up",[]],[[3718.41,11350.3,0.363663],287,"Up",[]],[[3707.86,11346.7,1.06323],234,"Up",[]],[[3711.09,11350.6,0.5154],294,"Up",[]],[[3700.54,11364.1,0.464008],205,"Up",[]],[[3708.41,11366.1,0.7645],261,"Up",[]],[[3697.06,11363.3,3.53678],283,"Up",[]],[[3706.37,11368,3.41117],239,"Up",[]],[[3709.14,11365.5,3.46525],58,"Up",[]]],[["UK3CB_ADE_O_MTLB_KPVT",[3756.08,11295.4,-1.33514e-05],304,[["driver",-1,[]],["commander",-1,[0]],["gunner",-1,[1]]],[[6,["ADE",1]]]],["UK3CB_TKP_O_KORD_high",[3718.71,11345.4,1.90735e-06],239,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 
-		[CivTrigger_3,0,8,0,0,false, true, false] spawn OKS_fnc_Civilians;
+		[CivTrigger_3,0,4,0,0,false, true, false] spawn OKS_fnc_Civilians;
 
 		[getpos LambsGroupSpawn_11, "ambushrush", 4, EAST, 400] spawn OKS_fnc_Lambs_SpawnGroup;
 		[getpos LambsGroupSpawn_12, "ambushrush", 4, EAST, 400] spawn OKS_fnc_Lambs_SpawnGroup;
@@ -251,19 +251,19 @@ switch (_case) do {
 	case 7: {
 
 		// Clear Civilians.
-		[CivTrigger_2] spawn OKS_fnc_ClearCivilians;	
+		//[CivTrigger_2] spawn OKS_fnc_ClearCivilians;	
 
-		[Spawn_6, Spawn_6, NEKY_HuntTrigger_3, 2, 600, EAST, _Vehicles, 180, false, "AWARE"] spawn OKS_fnc_HuntBase; sleep 60;
-		[Spawn_7, Spawn_7, NEKY_HuntTrigger_3, 2, 600, EAST, _Vehicles, 180, false, "AWARE"] spawn OKS_fnc_HuntBase; sleep 60;
-		[Spawn_8, Spawn_8, NEKY_HuntTrigger_3, 2, 600, EAST, _Vehicles, 180, false, "AWARE"] spawn OKS_fnc_HuntBase; sleep 60;
-		[Spawn_9, Spawn_9, NEKY_HuntTrigger_3, 2, 600, EAST, _Vehicles, 180, false, "AWARE"] spawn OKS_fnc_HuntBase;
+		[Spawn_6, Spawn_6, NEKY_Hunt_Trigger_3, 2, 600, EAST, _Vehicles, 180, false, "AWARE"] spawn OKS_fnc_HuntBase; sleep 60;
+		[Spawn_7, Spawn_7, NEKY_Hunt_Trigger_3, 2, 600, EAST, _Vehicles, 180, false, "AWARE"] spawn OKS_fnc_HuntBase; sleep 60;
+		[Spawn_8, Spawn_8, NEKY_Hunt_Trigger_3, 2, 600, EAST, _Vehicles, 180, false, "AWARE"] spawn OKS_fnc_HuntBase; sleep 60;
+		[Spawn_9, Spawn_9, NEKY_Hunt_Trigger_3, 2, 600, EAST, _Vehicles, 180, false, "AWARE"] spawn OKS_fnc_HuntBase;
 
 	};
 
 	case 8: {
 
 		// Clear Civilians.
-		[CivTrigger_4] spawn OKS_fnc_ClearCivilians;
+		//[CivTrigger_4] spawn OKS_fnc_ClearCivilians;
 
 		// Ari Boudou.
 		[[[[4086.82,10779.1,6.67572e-06],298,"Up",[]],[[4086.77,10772.8,5.72205e-06],219,"Up",[]],[[4075.7,10755.6,0.517511],71,"Up",[]],[[4068.3,10758.8,0.156782],298,"Up",[]],[[4078.75,10773,5.72205e-06],17,"Up",[]],[[4111.05,10761.4,5.72205e-06],282,"Up",[]],[[4124.95,10771.1,0.24322],277,"Up",[]],[[4115.73,10767,4.76837e-06],113,"Up",[]],[[4123.47,10774.5,6.67572e-06],194,"Up",[]],[[4116.4,10771,0.360458],29,"Middle",[]],[[4093.02,10769,0.285316],118,"Up",[]],[[4082.71,10749.6,0.517913],23,"Up",[]]],[["UK3CB_ADE_O_BTR40_MG",[4079.7,10779.4,0],22,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["ADE_2",1]],[7,["Beacons_Hide",1,"Hull_Flag_Hide",1]]]]],[]] call GW_Common_fnc_spawnGroup;
@@ -282,7 +282,7 @@ switch (_case) do {
 	case 9: {
 
 		// Clear Civilians.
-		[CivTrigger_3] spawn OKS_fnc_ClearCivilians;		
+		//[CivTrigger_3] spawn OKS_fnc_ClearCivilians;		
 
 		// Counter-Attack Ari Boudou.
 		[[[[4107.9,10454.3,0],0,[]],[[4112.9,10449.3,0],0,[]],[[4102.9,10449.3,0],0,[]],[[4117.9,10444.3,0],0,[]],[[4097.9,10444.3,0],0,[]],[[4122.9,10439.3,0],0,[]],[[4092.9,10439.3,0],0,[]],[[4127.9,10434.3,0],0,[]]],[],[[[4137.08,10764.8,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
@@ -305,7 +305,7 @@ switch (_case) do {
 		[getpos LambsGroupSpawn_17, "ambushrush", 6, EAST, 200] spawn OKS_fnc_Lambs_SpawnGroup;
 		[getpos LambsGroupSpawn_18, "ambushrush", 6, EAST, 200] spawn OKS_fnc_Lambs_SpawnGroup;
 
-		[CivTrigger_3,0,9,0,0, false, true, false] spawn OKS_fnc_Civilians;
+		[CivTrigger_3,0,4,0,0, false, true, false] spawn OKS_fnc_Civilians;
 
 		[east, arty_4, [5393.04,14620.9,0], 10, 300, 30] spawn OKS_fnc_ArtyFire; sleep 3;
 		[east, arty_5, [5393.04,14620.9,0], 10, 300, 30] spawn OKS_fnc_ArtyFire; sleep 3;
@@ -356,7 +356,7 @@ switch (_case) do {
 		[[[[6660.83,11119.3,0],0,[]],[[6665.83,11114.3,0],0,[]],[[6655.83,11114.3,0],0,[]],[[6670.83,11109.3,0],0,[]]],[],[[[6579.44,11142.1,0],[[0,"Move"]]],[[6598.7,11209.8,1.33514e-05],[[0,"Move"]]],[[6708.05,11167.6,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[6663.28,11233.3,1.90735e-06],0,[]],[[6668.28,11228.3,3.8147e-06],0,[]],[[6658.28,11228.3,3.8147e-06],0,[]],[[6673.28,11223.3,5.72205e-06],0,[]]],[],[[[6581.89,11256,3.8147e-06],[[0,"Move"]]],[[6601.15,11323.8,1.90735e-05],[[0,"Move"]]],[[6710.5,11281.6,1.90735e-06],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 
-		[CivTrigger_4,0,7,0,0, false, true, false] spawn OKS_fnc_Civilians;
+		[CivTrigger_4,0,4,0,0, false, true, false] spawn OKS_fnc_Civilians;
 
 		[east, arty_6, [5393.04,14620.9,0], 7, 300, 30] spawn OKS_fnc_ArtyFire;
 	};
@@ -387,7 +387,7 @@ switch (_case) do {
 	case 15: {
 
 		// Clear Civilians.
-		[CivTrigger_5] spawn OKS_fnc_ClearCivilians;
+		//[CivTrigger_5] spawn OKS_fnc_ClearCivilians;
 
 		// Gambori Counter.
 		[[[[6544.02,10026.1,0],0,[]],[[6549.02,10021.1,0],0,[]],[[6539.02,10021.1,0],0,[]],[[6554.02,10016.1,0],0,[]],[[6534.02,10016.1,0],0,[]],[[6559.02,10011.1,0],0,[]],[[6529.02,10011.1,0],0,[]],[[6564.02,10006.1,0],0,[]]],[],[[[6689.53,10372.4,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
