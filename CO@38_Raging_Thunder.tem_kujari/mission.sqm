@@ -1,4 +1,4 @@
-version=54;
+﻿version=54;
 class EditorData
 {
 	moveGridStep=1;
@@ -676,7 +676,7 @@ class CustomAttributes
 				class data
 				{
 					singleType="BOOL";
-					value=1;
+					value=0;
 				};
 			};
 		};
@@ -38606,7 +38606,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="[(_this select 0), false,false] execVM ""Scripts\OKS_Vehicles\OKS_Helicopter.sqf"";";
+											value="[(_this select 0), false,false] spawn OKS_fnc_Helicopter;";
 										};
 									};
 								};
@@ -60400,3 +60400,4 @@ class Mission
 		};
 	};
 };
+

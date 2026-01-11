@@ -18,17 +18,16 @@ if (_role in ["ag","ammg","lr","ab","atab"]) then {
 };
 if (_role isEqualTo "crew") then {
 	_uniform = "U_B_T_Soldier_SL_F";
-	_vest = "V_BandollierB_oli";
+	_vest = "V_PlateCarrier2_tna_F";
 };
 if (_role isEqualTo "p") then {
 	_helmet = "H_PilotHelmetHeli_B";
 	_uniform = "U_B_HeliPilotCoveralls";
-	_vest = "V_TacVest_blk";
+	_vest = "V_PlateCarrier2_tna_F";
 };
 if (_role isEqualTo "uav") then {
 	_backpack = "B_UAV_01_backpack_F";
 	_gps = "B_UAVTerminal";
-
 };
 if (_role isEqualTo "jetp") then {
 	_goggles = "G_Aviator";
@@ -57,8 +56,8 @@ _rifleL_mag_tr = "30Rnd_65x39_caseless_khaki_mag_Tracer";
 _LMG = ["arifle_MX_SW_khk_F", _silencer, _pointer, _sight, _bipod];
 _LMG_mag = "100Rnd_65x39_caseless_khaki_mag_Tracer";
 
-_MMG = ["rhs_weap_m249_pip_L", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "rhsusf_200rnd_556x45_mixed_box";
+_MMG = ["LMG_03_F", _silencer, _pointer, _sight, _bipod];
+_MMG_mag = "200Rnd_556x45_Box_Tracer_Red_F";
 
 _sight = "";
 
@@ -68,6 +67,7 @@ _LAT_ReUsable = false;
 
 _MAT = ["launch_MRAWS_green_rail_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "MRAWS_HEAT_F";
+_MAT_mag_HE = "MRAWS_HE_F";
 
 _HAT = ["launch_I_Titan_short_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Titan_AT";
