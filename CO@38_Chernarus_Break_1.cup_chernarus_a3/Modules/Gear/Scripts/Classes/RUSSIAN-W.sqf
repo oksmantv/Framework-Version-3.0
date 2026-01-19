@@ -16,16 +16,25 @@ _glflareR = "rhs_VG40OP_red";
 _glflareW = "rhs_VG40OP_white";
 
 _insignia = "";
-_goggles = "";
-_helmet = ["rhs_6b27m_digi"];
-_OfficerHelmet = "rhs_ushanka";
-_uniform = "rhs_uniform_emr_patchless";
-_vest = ["rhs_6b2_chicom","rhs_6b2_lifchik","rhs_6b2_RPK"];
-_backpack = "rhs_rd54_emr1";
+_goggles = "rhsusf_oakley_goggles_clr";
+_helmet = ["rhs_6b27m_digi_bala"];
+_OfficerHelmet = "rhs_6b7_1m_ess";
+_uniform = "rhs_uniform_vdv_emr";
+_vest = ["rhs_6b23_digi_6sh92_spetsnaz2"];
+_backpack = "rhs_rk_sht_30_emr";
 _backpackRadio = _backpack;
 
 if (true) then {
 	_backpackRadio = "UK3CB_B_O_Tactical_Backpack_Radio";
+};
+
+if(_role isEqualTo "officer") then {
+	_helmet = "rhs_6b7_1m_ess";
+	_uniform = "rhs_uniform_vdv_emr";
+	_goggles = "G_Armband_red_F";
+	_vest = "rhs_6b23_digi_6sh92_vog_headset";
+	_backpackRadio = "rhs_r148";
+	_backpack = "rhs_r148";
 };
 
 if(_role in ["ag","ammg"]) then {
@@ -48,6 +57,10 @@ if (_role isEqualTo "jetp") then {
 	_backpack = "B_Parachute";
 };
 
+if (_role isEqualTo "crew") then {
+	_Helmet = "rhs_6b48";
+};
+
 
 _silencer = "rhs_acc_dtk2";
 _pointer = "";
@@ -67,7 +80,7 @@ _rifleL_mag = "rhs_60Rnd_545X39_AK_Green";
 _LMG = ["rhs_weap_rpk74m_npz", _silencer, _pointer, _sight, _bipod];
 _LMG_mag = "rhs_60Rnd_545X39_AK_Green";
 
-_MMG = ["rhs_weap_pkm", _silencer, _pointer, _sight, _bipod];
+_MMG = ["rhs_weap_pkp", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhs_100Rnd_762x54mmR_green";
 
 _LAT = ["rhs_weap_rpg26", _silencer, _pointer, _sight, _bipod];
@@ -76,6 +89,7 @@ _LAT_ReUsable = false;
 
 _MAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "RPG7_F";
+_MAT_mag_HE = "rhs_rpg7_TBG7V_mag";
 
 _HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";
@@ -95,5 +109,5 @@ _sight = "rhs_acc_pso1m21";
 _bipod = "";
 
 _rifleMarksman = ["rhs_weap_svdp_wd", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "rhs_10Rnd_762x54mmR_7N1";
-_rifleMarksman_mag_tr = "rhs_10Rnd_762x54mmR_7N14";
+_rifleMarksman_mag = "UK3CB_SVD_10rnd_762x54_GT";
+_rifleMarksman_mag_tr = "UK3CB_SVD_10rnd_762x54_GT";

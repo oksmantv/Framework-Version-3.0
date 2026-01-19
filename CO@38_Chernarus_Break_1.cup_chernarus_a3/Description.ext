@@ -1,4 +1,4 @@
-// *	DO NOT CHANCE THE ORDER/STRUCTIOR OF THE FILE
+﻿// *	DO NOT CHANCE THE ORDER/STRUCTIOR OF THE FILE
 //	https://community.bistudio.com/wiki/description.ext
 // ==============================================================================
 // *	Includes the most nessasary configs for the framework to work
@@ -6,24 +6,25 @@
 #define QUOTE(var1) #var1
 #define DOUBLES(var1,var2) ##var1##_##var2
 #define TRIPLES(var1,var2,var3) ##var1##_##var2##_##var3
-#include "script_Component.hpp"
-#include "Scripts\OKS_Dynamic\LARs\compositions\compositions.cfg"
+#include "\OKS_GOL_Misc\script_Component.hpp"
+#undef VERSION
+#include "Core\version.hpp"
+#define VERSION FRAMEWORK_VERSION
+#include "Modules\LARs\compositions\compositions.cfg"
 
 class GW_FRAMEWORK {	// NOTE: SENSETIVE, UPPERCASE ONLY FOR BOOL
 	class Core {
 		Version = QUOTE(VERSION);
 	};
-
-	class Naming {		//	NOTE: Changing any of these settings will require mission reload for it to be affected
-		#define GAME_MODE "COOP"									// GameMode
-		#define PLAYER_COUNT "21"								// Player Count
-		#define BRIEFING_NAME "Chernarus Break I"						// Mission Name
+	class Naming {		
+		//	NOTE: Changing any of these settings will require mission reload for it to be affected
+		#define GAME_MODE "COOP"								// GameMode
+		#define PLAYER_COUNT "36"								// Player Count - Do not go above 36 - Server Limit 
+		#define BRIEFING_NAME "Chernarus Break 1"					// Mission Name
 		#define LOBBY_DESCRIPTION ""							// Description in mission select
-		#define ON_LOAD_TEXT ""									// Description on loading
+		#define ON_LOAD_TEXT __EVAL("Framework Version " + QUOTE(VERSION))	// Description on loading
 		#define MISSION_VERSION 1								// Version of mission
 		#define SELECT_PICTURE ""								// Path to loading screen
-		//#define SELECT_PICTURE RANDOM_PICTURES					// Random loading screen
-
 		Author = "Oksman";				// Author
 		AuthorUID[] = {"_SP_PLAYER_"};			// UIDs with admin access
 
@@ -57,59 +58,61 @@ disableChannels[]={{0,true,true},{1,false,true},{2,false,true},{5,false,true}};
 disabledAi = 1;
 ACE_maxWeightcarry = 1800;
 ACE_maxWeightdrag = 2000;
-//disableRandomization[] = {"CAManBase"};	// Disable random gear for units
-//disableRandomization[] = {"AllVehicles"};	// Disable for vehicles and units
 enableDebugConsole = 1;
 joinUnassigned = 1;
 scriptedPlayer = 1;
 
-corpseManagerMode = 0;
-wreckManagerMode = 0;
+corpseManagerMode = 3;
+corpseLimit = 25; // Default: 15
+corpseRemovalMinTime = 120; // seconds. Default: 10
+corpseRemovalMaxTime = 3600; // seconds. Default: 3600
+disposalCheckPeriod = 30; // seconds. Default: 10
+minPlayerDistance[] = {400, 1200, 0}; // meters. Default: {0, 0, 0}
+weaponholderManagerMode = 0; // Default: 0
+wreckManagerMode = 1;
+wreckLimit = 10; // seconds. Default: 15
+wreckRemovalMinTime = 600; // seconds. Default: 10
+wreckRemovalMaxTime = 3600; // seconds. Default: 36000 (10 hours)
 
 respawn = "BASE";
 respawnOnStart = 0;
-
-// Comment this to remove default respawn.
 respawnTemplates[] = {"Counter"};
 respawnDelay = 20;
-
-// Uncomment this for Spectator
-//respawnTemplates[] = {"ACE_Spectator"};
-//respawnDelay = 648000;
 
 class Params {
 	#define LOAD_PARAMS
 		#include "Modules\Modules.cpp"
 	#undef LOAD_PARAMS
+
+	class Daytime
+	{
+		title = "Mission Time";
+		texts[] = { "Mission Defined", "Dawn", "Noon", "Afternoon", "Evening", "Night" };
+		values[] = { -1, 5.6, 12, 16, 19, 23 };
+		default = -1;
+		function = "GW_fnc_paramDaytime";
+	};
+
+	class ShouldGiveMedicalToAsstGunner
+	{
+		title = "Should Asst. Gunner have medical supplies?";
+		texts[] = { "No", "Yes" };
+		values[] = { 0, 1 };
+		default = 0;
+	};	
+
+	class ShouldGiveServiceStationToVehicle
+	{
+		title = "Should non-MHQ vehicles have service station?";
+		texts[] = { "Yes", "No" };
+		values[] = { 1, 0 };
+		default = 1;
+	};		
 };
 
 class CfgFunctions {
-	#include "Scripts\OKS_Dynamic\LARs\spawnComp\functions\functions.cpp"
+	#include "Modules\LARs\spawnComp\functions\functions.cpp"
 	#include "Modules\Callsigns\Functions\functions.hpp"
-
-    class NEKY
-    {
-        class Tasks
-        {
-			class Tasks_Init
-			{
-				file = "Scripts\NEKY_Tasks\Init.sqf";
-				PreInit = 1;
-			};
-        };
-    };
-
-	class BLUFUNC
-	{
-		class Radios
-		{
-			class Radio_Channel_Init
-			{
-				file = "Scripts\GOL_PlayerSetup\BLU_SetChannel.sqf";
-				preInit = 1;
-			};
-		};
-	};
 };
 
 class GW_Modules_Base {
@@ -149,3 +152,4 @@ class ACE_Settings {
 
 #include "Modules\Callsigns\defines.hpp"
 #include "Modules\Callsigns\dialogs.hpp"
+
