@@ -39,7 +39,7 @@ OKS_SpawnVehicleAndCrew = {
 		SystemChat format["Spawned %1 on %2",_VehicleClass,_PositionObject];
 	};	
 	_Vehicle setDir (getDir _PositionObject);
-	[_Vehicle,_Side] call OKS_AddVehicleCrew;
+	[_Vehicle,_Side] call OKS_fnc_AddVehicleCrew;
 	if(_Debug_Variable) then {
 		SystemChat format["Crewed %1 for %2",_Vehicle,_Side];
 	};

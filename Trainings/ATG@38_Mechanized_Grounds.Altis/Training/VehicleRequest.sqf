@@ -38,9 +38,9 @@ _Image = "";
 {
 	Switch _x do 
 	{
-		case "car": { _Filter pushBack "car"; _Kind = "Car"; _Image = "Images\cars.jpg" };
-		case "ifv": { _Filter pushBack "car"; _Kind = "Armored"; _Image = "Images\ifv.jpg" };
-		case "tank": { _Filter pushBack "tank"; _Image = "Images\tanks.jpg" };
+		case "car": { _Filter pushBack "car"; _Kind = "Car"; _Image = "" };
+		case "ifv": { _Filter pushBack "car"; _Kind = "Armored"; _Image = "" };
+		case "tank": { _Filter pushBack "tank"; _Image = "" };
 		case "helicopter": { _Filter pushBack "helicopter"; _Image = "Images\helicopter.jpg"  };
 		case "plane": { _Filter pushBack "plane"; _Image = "Images\plane.jpg"  };
 		default { systemChat "DEBUG VehicleRequest.sqf - Unknown type" };
@@ -148,6 +148,19 @@ _Filter = [];	// To avoid having each scheme of same vehicles appear.
 				// Creation of Vehicle
 				_Spawned = CreateVehicle [_Veh, _SpawnPos, [], 0, "CAN_COLLIDE"];
 				_Spawned setDir _Dir;
+				
+				// Apply vehicle setup based on type using OKS framework functions
+				if (_Spawned isKindOf "Helicopter") then {
+					[_Spawned] spawn OKS_fnc_Helicopter;
+				} else {
+					if (_Spawned isKindOf "Plane") then {
+						[_Spawned] spawn OKS_fnc_Jet;
+					} else {
+						if (_Spawned isKindOf "LandVehicle") then {
+							[_Spawned] spawn OKS_fnc_Mechanized;
+						};
+					};
+				};
 				
 				// Clean up
 				{ DeleteVehicle _x } forEach (_Spheres + [_Dummy]);

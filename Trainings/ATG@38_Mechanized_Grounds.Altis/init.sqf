@@ -4,9 +4,9 @@
 		BermCourseShow=false;
 	};	
 
-	[] execVM "scripts\AddActions.sqf";
-	OKS_SpawnEnemyVehicle = compile preprocessFileLineNumbers "Scripts\OKS_SpawnEnemyVehicle.sqf";
-	execVM "Scripts\BermActions.sqf";
+	[] execVM "Training\AddActions.sqf";
+	OKS_SpawnEnemyVehicle = compile preprocessFileLineNumbers "Training\OKS_SpawnEnemyVehicle.sqf";
+	execVM "Training\BermActions.sqf";
 
 	[helo_1, getpos helospawn_1, getDir helospawn_1, ["helicopter"]] execVM "Training\VehicleRequest.sqf";
 	[helo_2, getpos helospawn_2, getDir helospawn_2, ["helicopter"]] execVM "Training\VehicleRequest.sqf";

@@ -28,7 +28,7 @@ if (true) then {
 	_backpackRadio = "UK3CB_B_B_Alice_Radio_Backpack";
 };
 
-if(_role in ["ag","ammg"]) then {
+if(_role in ["ag","atab","ammg"]) then {
 	_backpack = "UK3CB_B_Alice_Bedroll_K";
 };
 if (_role isEqualTo "p") then {
@@ -84,6 +84,7 @@ _LAT_ReUsable = false;
 
 _MAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "RPG7_F";
+_MAT_mag_HE = "rhs_rpg7_TBG7V_mag";
 
 _HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";
