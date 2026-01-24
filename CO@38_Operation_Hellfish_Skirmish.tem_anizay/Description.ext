@@ -93,6 +93,14 @@ class Params {
 		function = "GW_fnc_paramDaytime";
 	};
 
+	class MissionIntensity
+	{
+		title = "Mission Intensity: Spawn Percentage";
+		texts[] = { "30%", "60%", "100% (Platoon)" };
+		values[] = { 0.3, 0.6, 1 };
+		default = 0.6;
+	};
+
 	class ShouldGiveMedicalToAsstGunner
 	{
 		title = "Should Asst. Gunner have medical supplies?";

@@ -73,7 +73,7 @@ if(isServer) then {
 	[[arty_3],"Silence MLRS",nil,nil,"truck","Sub2",false,true] spawn OKS_fnc_Destroy_Task;
 
 	// HVT.
-	[Group officer_1,[9169.74,3844.94,0.00143433],west,false,"Main",false] spawn OKS_fnc_Evacuate_HVT;
+	[Group officer_1,[9169.74,3844.94,0.00143433],west,false,"Sub2",false] spawn OKS_fnc_Evacuate_HVT;
 
 	[] spawn {
 		// Recon Drone Marker Update

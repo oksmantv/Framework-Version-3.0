@@ -59,6 +59,13 @@ switch (_case) do {
 			[_X,east,2] call OKS_fnc_AddVehicleCrew; sleep 1;
 		}  foreach [aaa_1,aaa_2,aaa_3,aaa_4,aaa_5];
 
+		[[],[
+			["rhs_Igla_AA_pod_msv",[5175.75,2072.94,0],358,[["gunner",-1,[0]]],[[351,false]]],
+			["rhs_Igla_AA_pod_msv",[5166.7,2318.1,9.01548],180,[["gunner",-1,[0]]],[[351,false]]],
+			["rhs_Igla_AA_pod_msv",[4818.51,2550.05,0],206,[["gunner",-1,[0]]],[[351,false]]],
+			["rhs_zsu234_aa",[4682.96,2610.14,9.53674e-07],0,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["standard",1]],[351,false]]]
+		],[],independent] call GW_Common_fnc_spawnGroup;
+
 		null = [radar_1,["rhsgref_ins_ural_Zu23","UK3CB_CW_SOV_O_LATE_BTR40_ZU23"],3500,3500,30] spawn OKS_fnc_Radar; sleep 1;
 
 		// Vyshnoye Vehicles.
@@ -72,7 +79,7 @@ switch (_case) do {
 			while {true} do {
 				{
 					_X Params ["_PlaneStart","_PlaneEnd"];
-					[_PlaneStart,_PlaneEnd,selectRandom ["UK3CB_B_Osprey_IDWS_HMG_USMC_D"],west,false,"MOVE",400,[]] spawn OKS_fnc_AirSpawn; sleep 120;
+					[_PlaneStart,_PlaneEnd,selectRandom ["UK3CB_B_Osprey_IDWS_HMG_USMC_D"],west,true,"MOVE",400,[]] spawn OKS_fnc_AirSpawn; sleep 120;
 				} foreach [
 					[getpos Plane_1,getpos PlaneExit_1],
 					[getpos Plane_2,getpos PlaneExit_2],
@@ -174,7 +181,7 @@ switch (_case) do {
 		sleep 5;
 		[true, ["Defend_2","Sub0"], ["Surveillance suggest a large force of infantry is heading towards Mogilevka from the south-west. Prepare to defend the village!", "Defend Mogilevka", "AD"], [7536.9,5138.46,0.00144958], "ASSIGNED", 2, true,"defend"] call BIS_fnc_taskCreate;
 		OKS_Battle_Case4 setVariable ["OKS_AIBattle_On", false, true];
-		["hq","side","1st Platoon be advised, a large counter-attack is building up to the south-east and south-west. Expect two columns and infantry support. ETA Momentarily."] remoteExec ["OKS_fnc_Chat",0];
+		["hq","side","1st Platoon be advised, a large counter-attack is building up to the south-east and south-west. Expect two columns and infantry support. ETA Momentarily.","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
 		sleep 15;
 		deleteVehicle alarm_2;
 		{
@@ -223,18 +230,39 @@ switch (_case) do {
 	case 7: {
 
 		// Pusta Defence
-		["Main1","SUCCEEDED"] call BIS_fnc_taskSetState;
-		sleep 5;
 		[true, ["Defend_3","Sub0"], ["Surveillance suggest a large force air assault group has just left Balota, we suspect air assault infantry is heading towards Pusta for a combat drop. We also detect a follow up mechanized force is detaching from the siege of Elektrozavodsk. Prepare to defend the village!", "Defend Pusta", "AD"], [9173.2,3833.5,0], "CREATED", 2, true,"defend"] call BIS_fnc_taskCreate;
-		["hq","side","1st Platoon be advised, radar has picked up a large helicopter formation heading towards your position, we also picked up on a mechanized force detaching from the siege of Elektrozavodsk to counter-attack. ETA 3 minutes"] remoteExec ["OKS_fnc_Chat",0];
-		sleep 120;
+		["hq","side","1st Platoon be advised, radar has picked up a large helicopter formation heading towards your position, we also picked up on a mechanized force detaching from the siege of Elektrozavodsk to counter-attack. ETA 3 minutes","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
+		sleep 300;
 
-		[independent, "UK3CB_CHD_O_Mi8AMT", False, "paradrop", enemyair_1, enemydrop_1, enemyend_1, [2,0.5], [village_1]] spawn OKS_fnc_AirDrop; sleep 5;
-		[independent, "UK3CB_CHD_O_Mi8AMT", true, "paradrop", enemyair_2, enemydrop_2, enemyend_2, [2,0.5], [village_1]] spawn OKS_fnc_AirDrop; sleep 5;
-		[independent, "UK3CB_CHD_O_Mi8AMT", False, "paradrop", enemyair_3, enemydrop_3, enemyend_3, [2,0.5], [village_1]] spawn OKS_fnc_AirDrop; sleep 5;
-		[independent, "UK3CB_CHD_O_Mi8AMT", true, "paradrop", enemyair_4, enemydrop_4, enemyend_4, [2,0.5], [village_1]] spawn OKS_fnc_AirDrop; sleep 5;
-		[independent, "UK3CB_CHD_O_Mi8AMT", False, "paradrop", enemyair_5, enemydrop_5, enemyend_5, [2,0.5], [village_1]] spawn OKS_fnc_AirDrop;
+		[independent, "UK3CB_CHD_O_Mi8AMT", False, "paradrop", enemyair_1, enemydrop_1, enemyend_1, [1,0.5], [village_1]] spawn OKS_fnc_AirDrop; sleep 5;
+		[independent, "UK3CB_CHD_O_Mi8AMT", true, "paradrop", enemyair_2, enemydrop_2, enemyend_2, [1,0.5], [village_1]] spawn OKS_fnc_AirDrop; sleep 5;
+		[independent, "UK3CB_CHD_O_Mi8AMT", False, "paradrop", enemyair_3, enemydrop_3, enemyend_3, [1,0.5], [village_1]] spawn OKS_fnc_AirDrop; sleep 5;
+		[independent, "UK3CB_CHD_O_Mi8AMT", true, "paradrop", enemyair_4, enemydrop_4, enemyend_4, [1,0.5], [village_1]] spawn OKS_fnc_AirDrop; sleep 5;
+		[independent, "UK3CB_CHD_O_Mi8AMT", False, "paradrop", enemyair_5, enemydrop_5, enemyend_5, [1,0.5], [village_1]] spawn OKS_fnc_AirDrop;	
 
+		// Convoy Attack.
+		_AttackGroups = [];
+		[ConvoySpawn_3,ConvoyWP_3,ConvoyEnd_3,independent,[7,["rhs_t80","rhs_t80","rhs_bmp1_vmf","rhs_bmp1_vmf","rhs_kamaz5350_msv","rhs_kamaz5350_msv","rhs_t80"],25,40],[true,6],_AttackGroups,false,false,["hunt"],false] spawn OKS_fnc_Convoy_Spawn;
+		sleep 10;
+		_AttackingHelicopters = vehicles select {typeOf _X == "UK3CB_CHD_O_Mi8AMT"};
+		{
+			_Helicopter = _X;
+			{
+				if(((leader _X) in _Helicopter) && (_Helicopter getCargoIndex (leader _X) != -1)) then {
+					_AttackGroups pushBackUnique _X;
+				};
+			} foreach allGroups;
+		} foreach _AttackingHelicopters;
+
+		waitUntil {
+			sleep 15;
+			{
+				{Alive _X || [_X] call ace_common_fnc_isAwake} count units _X == 0
+			} count _AttackGroups == count _AttackGroups
+		};
+		
+		["Main","SUCCEEDED"] call BIS_fnc_taskSetState;
+	
 		{_X setMarkerAlpha 1} foreach [
 			"breach_1","breach_2","breach_3","breach_4","breach_5",
 			"breach_6","breach_7","breach_8","breach_9","breach_10",
@@ -246,7 +274,7 @@ switch (_case) do {
 		];
 
 		{_X setMarkerAlpha 0} foreach [
-			"remove_1","remove_2","remove_3","remove_4","remove_5",
+			"remove_1","remove_2","remove_3","remove_4","remove_5","remove_14","remove_15",
 			"remove_6","remove_7","remove_9","remove_10",
 			"remove_11","remove_12","enemy_4","enemy_4_1","enemy_4_2","enemy_3","enemy_2","enemy_1",
 			"break_1","break_2","break_3","break_4","break_5","break_6",
@@ -254,14 +282,12 @@ switch (_case) do {
 			"enemy_5","enemy_5_1","enemy_5_2",
 			"enemy_7","enemy_7_1","enemy_7_2"
 		];		
-
-		// Convoy Attack.
-		[ConvoySpawn_3,ConvoyWP_3,ConvoyEnd_3,independent,[9,["rhs_t80","rhs_t80","rhs_bmp1_vmf","rhs_bmp1_vmf","rhs_kamaz5350_msv","rhs_kamaz5350_msv","rhs_kamaz5350_msv","rhs_kamaz5350_msv","rhs_t80"],25,40],[true,6],[],false,false,["hunt"],false] spawn OKS_fnc_Convoy_Spawn;
+		["hq","side","1st Platoon, the counter-attack has been defeated. Good work! Fresh reserves will arrive shorly to relieve Elektrozavodsk. Mission Complete, HQ out.","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
 	};
 
 	case 8: {
 		// MLRS Strikes.
-		["hq","side","1-1 Be advised, friendly artillery is targeting Mogilevka to assist your assault, HQ out"] remoteExec ["OKS_fnc_Chat",0];
+		["hq","side","1-1 Be advised, friendly artillery is targeting Mogilevka to assist your assault, HQ out","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
 
 		[mlrs_1,[getPos target_5,getPos target_6],west,3,1,true,false,30,false] spawn OKS_fnc_ArtySuppression;
 		[mlrs_2,[getPos target_7,getPos target_8],west,3,1,true,false,30,false] spawn OKS_fnc_ArtySuppression;
@@ -269,7 +295,7 @@ switch (_case) do {
 
 	case 9: {
 		// Vyshnoye Artillery Strikes.
-		["hq","side","1-1 Be advised, friendly artillery is targeting Zub Castle to neutralize the strongpoint, HQ out"] remoteExec ["OKS_fnc_Chat",0];
+		["hq","side","1-1 Be advised, friendly artillery is targeting Zub Castle to neutralize the strongpoint, HQ out","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
 
 		[mlrs_1,[getPos target_1,getPos target_2],west,3,1,true,false,30,false] spawn OKS_fnc_ArtySuppression;
 		[mlrs_2,[getPos target_3,getPos target_4],west,3,1,true,false,30,false] spawn OKS_fnc_ArtySuppression;
@@ -282,14 +308,14 @@ switch (_case) do {
 		"reinforceMarker_1" setMarkerAlpha 1; "enemy_1" setMarkerAlpha 0; "enemy_1_1" setMarkerAlpha 0;  
 		[reinforce_1,reinforce_2,reinforce_3,west,[2,["UK3CB_B_BTR40_M2_CDF","UK3CB_B_BTR40_M2_CDF"],60,50],[true,2],[],false,false,["defend"],false] spawn OKS_fnc_Convoy_Spawn;
 		//[reinforce_1,reinforce_2,reinforce_3,west,[2,["rhsgref_BRDM2_b"], 15, 30],[true,5], false, "Reinforced1"] spawn OKS_fnc_Convoy_Reinforce;
-		["hq","side","1-1 be advised friendly forces are inbound from the north-west to garrison the village of Stary Sobor, get clear of the MSR. Once they arrive you are cleared to proceed on mission, HQ out."] remoteExec ["OKS_fnc_Chat",0];
+		["hq","side","1-1 be advised, we are inbound from the north-west to garrison the village of Stary Sobor, get clear of the MSR. 2-Actual out.","2nd Platoon"] remoteExec ["OKS_fnc_Chat",0];
 	
 		{_X setMarkerAlpha 1} foreach [
 			"break_1","break_2","break_3","break_4","break_5","break_6"
 		];
 
 		{_X setMarkerAlpha 0} foreach [
-			"remove_5",
+			"remove_5","remove_14","remove_15",
 			"remove_6","remove_7","remove_8","remove_9","remove_10",
 			"remove_11","remove_13"
 		];	
@@ -299,13 +325,12 @@ switch (_case) do {
 	case 11: {
 
 		// Reinforce Vyshnoye
-
 		"reinforceMarker_2" setMarkerAlpha 1; "enemy_2" setMarkerAlpha 0; "enemy_2_1" setMarkerAlpha 0;
 		[reinforce_4,reinforce_5,reinforce_6,west,[2,["UK3CB_B_BTR40_M2_CDF","UK3CB_B_BTR40_M2_CDF"],60,50],[true,3],[],false,false,["defend"],false] spawn OKS_fnc_Convoy_Spawn;
 
 		//[reinforce_4,reinforce_5,reinforce_6,west,[2,["rhsgref_BRDM2_b"], 15, 30],[true,5], false, "Reinforced2"] spawn OKS_fnc_Convoy_Reinforce;
 
-		["hq","side","1-1 be advised friendly forces are inbound from the north to garrison the village of Vyshnoye, clear the road. Once they arrive you are cleared to proceed on mission, HQ out."] remoteExec ["OKS_fnc_Chat",0];
+		["hq","side","1-1 be advised, friendly forces inbound from the north to garrison the village of Vyshnoye, clear the road for us. 3-Actual out.","3rd Platoon"] remoteExec ["OKS_fnc_Chat",0];
 	};
 
 	case 12: {
@@ -316,7 +341,7 @@ switch (_case) do {
 
 		//[reinforce_7,reinforce_8,reinforce_9,west,[2,["rhsgref_BRDM2_b"], 15, 25],[true,5], false, "Reinforced3"] spawn OKS_fnc_Convoy_Reinforce;
 
-		["hq","side","1-1 be advised friendly forces are inbound from the north-west to garrison the village of Mogilevka, clear the road. Once they arrive you are cleared to proceed on mission, HQ out."] remoteExec ["OKS_fnc_Chat",0];
+		["hq","side","1-1 be advised, we are about to arrive from the north-west to garrison the village of Mogilevka, clear the road. 4-Actual out.","4th Platoon"] remoteExec ["OKS_fnc_Chat",0];
 	};
 
 	case 13: {
@@ -327,7 +352,7 @@ switch (_case) do {
 		
 		//[reinforce_10,reinforce_11,reinforce_12,west,[2,["rhsgref_BRDM2_b"], 15, 25],[true,5], false, "Reinforced4","small",true,false] spawn OKS_fnc_Convoy_Reinforce;
 
-		["hq","side","1-1 be advised friendly forces are inbound from the north-west to garrison the village of Pusta, clear the road. Once they arrive you are to regroup and prepare for the final push to Elektrozavodsz, mission complete! HQ out."] remoteExec ["OKS_fnc_Chat",0];
+		["hq","side","1-1 be advised 5th Platoon are inbound from the north-west to garrison the village of Pusta, clear the road.","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
 
 		"reinforceMarker_4" setMarkerAlpha 1; "enemy_4" setMarkerAlpha 0; "enemy_4_1" setMarkerAlpha 0;
 	};

@@ -93,6 +93,14 @@ class Params {
 		function = "GW_fnc_paramDaytime";
 	};
 
+	class AAC_Enabled
+	{
+		title = "Enable AAC";
+		texts[] = { "No", "Yes" };
+		values[] = { 0, 1 };
+		default = 1;
+	};
+
 	class ShouldGiveMedicalToAsstGunner
 	{
 		title = "Should Asst. Gunner have medical supplies?";

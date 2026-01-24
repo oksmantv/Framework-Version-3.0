@@ -56,7 +56,7 @@ if (_role isEqualTo "jetp") then {
 // Attachments
 _silencer = "rhs_acc_uuk";
 _pointer = "";
-_sight = "optic_Arco_blk_F";
+_sight = "JCA_optic_MRCS_black";
 _bipod = "rhs_acc_grip_rk6";
 
 _rifle = ["UK3CB_AK12", _silencer, _pointer, _sight, _bipod];
@@ -78,8 +78,8 @@ _LMG_mag = "UK3CB_BAF_762_200Rnd_T";
 _MMG = ["UK3CB_MG3_KWS_B", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "UK3CB_MG3_100rnd_762x51_GT";
 
-_LAT = ["rhs_weap_rpg18", _silencer, _pointer, _sight, _bipod];
-_LAT_mag = "rhs_rpg18_mag";
+_LAT = ["JCA_launch_M72_sand_F", _silencer, _pointer, _sight, _bipod];
+_LAT_mag = "";
 _LAT_ReUsable = false;
 
 _MAT = ["launch_MRAWS_sand_rail_F", _silencer, _pointer, _sight, _bipod];
