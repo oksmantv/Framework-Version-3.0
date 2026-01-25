@@ -10,5 +10,7 @@
 	Server Commands should be within the isServer check.
 */
 if(isServer) then {
-	
+	Reinforced1 = false;
+	Reinforced2 = false;
+	Reinforced3 = false;
 };

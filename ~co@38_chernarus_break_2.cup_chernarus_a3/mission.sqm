@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="co@38_chernarus_break_2";
+sourceName="~co@38_chernarus_break_2";
 addons[]=
 {
 	"A3_Characters_F",

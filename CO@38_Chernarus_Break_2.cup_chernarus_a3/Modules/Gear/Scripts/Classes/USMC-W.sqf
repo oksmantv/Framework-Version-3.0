@@ -47,24 +47,24 @@ if (_role isEqualTo "jetp") then {
 };
 
 _silencer = "";
-_pointer = "";
-_sight = "JCA_optic_ARO_olive";
-_bipod = "";
+_pointer = "JCA_acc_flashlight_tactical_olive";
+_sight = "JCA_optic_AICO_olive";
+_bipod = "JCA_bipod_04_olive";
 
-_rifle = ["rhs_weap_m4a1_blockII_wd", _silencer, _pointer, _sight, _bipod];
-_rifleC = ["rhs_weap_mk18_wd", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["rhs_weap_m4a1_blockII_M203_wd", _silencer, _pointer, _sight, _bipod];
+_rifle = ["JCA_arifle_HK433_olive_F", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["JCA_arifle_HK433_short_olive_F", "", _pointer, _sight, _bipod];
+_rifleGL = ["JCA_arifle_HK433_olive_F", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["JCA_arifle_SR10_AFG_black_F", _silencer, _pointer, _sight, _bipod];
-_rifle_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-_rifle_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
-_rifleGL_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-_rifleGL_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
-_rifleC_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-_rifleC_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
+_rifle_mag = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+_rifle_mag_tr = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
+_rifleGL_mag = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+_rifleGL_mag_tr = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
+_rifleC_mag = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+_rifleC_mag_tr = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 _rifleL_mag = "JCA_20Rnd_762x51_Red_PMAG";
 _rifleL_mag_tr = "JCA_20Rnd_762x51_Tracer_Red_PMAG";
 
-_LMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, "JCA_optic_ARO_black", _bipod];
+_LMG = ["UK3CB_BAF_L110_762", "", _pointer, "JCA_optic_ARO_black", _bipod];
 _LMG_mag = "UK3CB_BAF_762_100Rnd_T";
 
 _MMG = ["rhs_weap_m240B", _silencer, _pointer, _sight, _bipod];
@@ -84,8 +84,13 @@ _HAT_mag = "rhs_fgm148_magazine_AT";
 _AA = ["rhs_weap_fim92", _silencer, _pointer, _sight, _bipod];
 _AA_mag = "Titan_AA";
 
-_pistol = ["JCA_hgun_P226_black_F", _silencer, _pointer, _sight, _bipod];
-_pistol_mag = "JCA_15Rnd_9x21_P226_Red_Mag";
+if(_role in ["pl","fac","sl","ftl","g","amat"]) then {
+	_pistol = ["rhs_weap_M320", _silencer, _pointer, _sight, _bipod];
+	_pistol_mag = "rhs_mag_M433_HEDP";
+} else {
+	_pistol = ["JCA_hgun_P226_black_F", _silencer, _pointer, _sight, _bipod];
+	_pistol_mag = "JCA_15Rnd_9x21_P226_Red_Mag";
+};
 
 _pdw = ["JCA_smg_UMP_black_F", _silencer, _pointer, _sight, _bipod];
 _pdw_mag = "JCA_25Rnd_45ACP_UMP_Red_Mag";
