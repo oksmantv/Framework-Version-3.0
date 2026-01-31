@@ -80,7 +80,7 @@ _rifleL_mag = "rhs_60Rnd_545X39_AK_Green";
 _LMG = ["rhs_weap_rpk74m_npz", _silencer, _pointer, _sight, _bipod];
 _LMG_mag = "rhs_60Rnd_545X39_AK_Green";
 
-_MMG = ["rhs_weap_pkm", _silencer, _pointer, _sight, _bipod];
+_MMG = ["rhs_weap_pkp", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhs_100Rnd_762x54mmR_green";
 
 _LAT = ["rhs_weap_rpg26", _silencer, _pointer, _sight, _bipod];
@@ -89,6 +89,7 @@ _LAT_ReUsable = false;
 
 _MAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "RPG7_F";
+_MAT_mag_HE = "rhs_rpg7_TBG7V_mag";
 
 _HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";
