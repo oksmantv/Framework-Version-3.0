@@ -1,0 +1,6 @@
+More lenient counter-attack complete triggers, stragglers get stuck, need easier way to proceed.
+Make initial start triggers unable to be triggered by AAC.
+Add new counter-attack west in Kamorovo?
+Add other support?
+
+Better clean up, clean up AI battles and other objects.

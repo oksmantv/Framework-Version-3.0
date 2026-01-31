@@ -2,7 +2,7 @@ _useMineDetector = false;
 _allowedNightStuff = true;
 
 _insignia = "";
-_goggles = ["rhs_googles_clear","rhs_googles_black","rhs_ess_black","UK3CB_G_KLR_TAN","UK3CB_G_Neck_Shemag_KLR_tan","rhsusf_shemagh_od","rhsusf_shemagh2_od","rhsusf_shemagh_gogg_od","rhsusf_shemagh2_gogg_od","rhsusf_oakley_goggles_clr","G_Shades_Black","G_Bandanna_tan"];
+_goggles = ["JCA_G_balaclava_01_olive_F"];
 _helmet = ["rhsusf_opscore_fg_pelt_nsw","rhsusf_opscore_fg_pelt_cam","rhsusf_opscore_fg_pelt","rhsusf_opscore_fg"];
 _OfficerHelmet = "rhs_8point_marpatwd";
 _uniform = ["UK3CB_ADM_B_U_CombatUniform_01_MAR","UK3CB_ADM_B_U_CombatUniform_Shortsleeve_01_MAR"];
@@ -47,34 +47,34 @@ if (_role isEqualTo "jetp") then {
 };
 
 _silencer = "";
-_pointer = "JCA_acc_flashlight_tactical_olive";
-_sight = "JCA_optic_AICO_olive";
-_bipod = "JCA_bipod_04_olive";
+_pointer = "";
+_sight = "optic_Hamr";
+_bipod = "rhsusf_acc_harris_bipod";
 
-_rifle = ["JCA_arifle_HK433_olive_F", _silencer, _pointer, _sight, _bipod];
-_rifleC = ["JCA_arifle_HK433_short_olive_F", "", _pointer, _sight, _bipod];
-_rifleGL = ["JCA_arifle_HK433_olive_F", _silencer, _pointer, _sight, _bipod];
+_rifle = ["arifle_MX_SW_Black_F", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["arifle_MX_Black_F", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["arifle_MX_GL_Black_F", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["JCA_arifle_SR10_AFG_black_F", _silencer, _pointer, _sight, _bipod];
-_rifle_mag = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
-_rifle_mag_tr = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
-_rifleGL_mag = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
-_rifleGL_mag_tr = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
-_rifleC_mag = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
-_rifleC_mag_tr = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
+_rifle_mag = "30Rnd_65x39_caseless_black_mag";
+_rifle_mag_tr = "30Rnd_65x39_caseless_black_mag_Tracer";
+_rifleGL_mag = "30Rnd_65x39_caseless_black_mag";
+_rifleGL_mag_tr = "30Rnd_65x39_caseless_black_mag_Tracer";
+_rifleC_mag = "30Rnd_65x39_caseless_black_mag";
+_rifleC_mag_tr = "30Rnd_65x39_caseless_black_mag_Tracer";
 _rifleL_mag = "JCA_20Rnd_762x51_Red_PMAG";
 _rifleL_mag_tr = "JCA_20Rnd_762x51_Tracer_Red_PMAG";
 
-_LMG = ["UK3CB_BAF_L110_762", "", _pointer, "JCA_optic_ARO_black", _bipod];
-_LMG_mag = "UK3CB_BAF_762_100Rnd_T";
+_LMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, "JCA_optic_IHO_black_magnifier", _bipod];
+_LMG_mag = "UK3CB_BAF_762_200Rnd_T";
 
-_MMG = ["rhs_weap_m240B", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "rhsusf_100Rnd_762x51_m62_tracer";
+_MMG = ["MMG_02_black_F", _silencer, _pointer, "JCA_optic_IHO_black_magnifier", _bipod];
+_MMG_mag = "130Rnd_338_Mag";
 
 _LAT = ["UK3CB_BAF_AT4_CS_AT_Launcher", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "UK3CB_BAF_AT4_CS_AT_Mag";
 _LAT_ReUsable = false;
 
-_MAT = ["launch_MRAWS_sand_rail_F", _silencer, _pointer, _sight, _bipod];
+_MAT = ["launch_MRAWS_green_rail_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "MRAWS_HEAT_F";
 _MAT_mag_HE = "MRAWS_HE_F";
 
@@ -84,20 +84,15 @@ _HAT_mag = "rhs_fgm148_magazine_AT";
 _AA = ["rhs_weap_fim92", _silencer, _pointer, _sight, _bipod];
 _AA_mag = "Titan_AA";
 
-if(_role in ["pl","fac","sl","ftl","g","amat"]) then {
-	_pistol = ["rhs_weap_M320", _silencer, _pointer, _sight, _bipod];
-	_pistol_mag = "rhs_mag_M433_HEDP";
-} else {
-	_pistol = ["JCA_hgun_P226_black_F", _silencer, _pointer, _sight, _bipod];
-	_pistol_mag = "JCA_15Rnd_9x21_P226_Red_Mag";
-};
+_pistol = ["JCA_hgun_Mk23_olive_F", _silencer, _pointer, _sight, _bipod];
+_pistol_mag = "JCA_12Rnd_45ACP_Mk23_Tracer_Red_Mag";
 
-_pdw = ["JCA_smg_UMP_black_F", _silencer, _pointer, _sight, _bipod];
+_pdw = ["JCA_smg_UMP_black_F", _silencer, _pointer, "JCA_optic_ARO_black", _bipod];
 _pdw_mag = "JCA_25Rnd_45ACP_UMP_Red_Mag";
 _pdw_mag_tr = "JCA_25Rnd_45ACP_UMP_Tracer_Red_Mag";
 
 _silencer = "";
 _pointer = "";
-_rifleMarksman = ["UK3CB_M21_Bipod_Railed", _silencer, _pointer, "rhsusf_acc_ACOG2_USMC", ""];
-_rifleMarksman_mag = "UK3CB_M14_20rnd_762x51_RT";
-_rifleMarksman_mag_tr = "UK3CB_M14_20rnd_762x51_RT";
+_rifleMarksman = ["JCA_arifle_SR25_black_F", "JCA_muzzle_snds_762_tactical_black", _pointer, "JCA_optic_CRBS_black", "JCA_bipod_04_black"];
+_rifleMarksman_mag = "JCA_20Rnd_762x51_Red_SMAG";
+_rifleMarksman_mag_tr = "JCA_20Rnd_762x51_Tracer_Red_SMAG";

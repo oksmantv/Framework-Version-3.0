@@ -106,6 +106,11 @@ switch (_case) do {
 		[getpos jetspawn_3, jetstrike_3,getpos jetexit_3,selectRandom ["B_Plane_Fighter_01_Stealth_F"],west,200] spawn OKS_fnc_AirStrike; sleep 5;
 
 		sleep 120;
+
+		{
+			{deleteVehicle _X} foreach crew _X;
+			deleteVehicle _X;
+		} foreach [arty_1,arty_2,arty_3,arty_4];
 		
 		[east,enemyarty_4,[4451.85,-2277.6,0],5,300,30] spawn OKS_fnc_ArtyFire; sleep 5;
 		[east,enemyarty_5,[4451.85,-2277.6,0],5,300,30] spawn OKS_fnc_ArtyFire; sleep 5;
@@ -180,12 +185,7 @@ switch (_case) do {
 
 	case 2: {
 
-		{
-			{deleteVehicle _X} foreach crew _X;
-			deleteVehicle _X;
-		} foreach [arty_1,arty_2,arty_3,arty_4];
-
-		[west_1,east_1,meet_1,west,east,["UK3CB_CW_US_B_LATE_LAV25"],["UK3CB_CHD_O_BMP1"]] spawn OKS_fnc_AI_Battle;   
+		BattleCase0 = [west_1,east_1,meet_1,west,east,["UK3CB_CW_US_B_LATE_LAV25"],["UK3CB_CHD_O_BMP1"]] spawn OKS_fnc_AI_Battle;   
 
 		// Komarovo
 		[[[[3571.14,2470.76,3.8147e-006],197,"Up",[]],[[3603.42,2443.39,4.29153e-006],231,"Up",[]],[[3584.52,2467.5,3.8147e-006],191,"Up",[]],[[3614.75,2451.93,4.29153e-006],266,"Up",[]],[[3598.11,2480.93,5.3179],257,"Up",[]],[[3600.63,2478.49,5.55698],185,"Up",[]],[[3602.22,2485.18,5.06123],257,"Up",[]],[[3603.66,2483.04,0.39104],161,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
@@ -217,7 +217,7 @@ switch (_case) do {
 				_Group = _X;
 				{
 					Alive _X || [_X] call ace_common_fnc_isAwake
-				} count units _Group < 2
+				} count units _Group <= 2
 			} count _ConvoyArray == count _ConvoyArray
 		};
 		["Defend_1","SUCCEEDED",true] call BIS_fnc_taskSetState;
@@ -237,7 +237,7 @@ switch (_case) do {
 				_Group = _X;
 				{
 					Alive _X || [_X] call ace_common_fnc_isAwake
-				} count units _Group == 0
+				} count units _Group <= 2
 			} count _ConvoyArray2 == count _ConvoyArray2
 		};
 		["Defend_2","SUCCEEDED",true] call BIS_fnc_taskSetState;
@@ -246,7 +246,7 @@ switch (_case) do {
 		// William
 
 		//"Radio_4" remoteExec ["playSound",0];
-		["hq","side","1-1 this is Godfather of the 2nd Marines, we are inbound from the west, check your fire. Clear the road for us, we will deploy at the intersection! Godfather, out.","GODFATHER"] remoteExec ["OKS_fnc_Chat",0];
+		["hq","side","1-1 this is Godfather of the 2nd Marines, our lead elements are inbound from the west, check your fire. Clear the road, they will deploy at the outskirts of the village! Godfather, out.","GODFATHER"] remoteExec ["OKS_fnc_Chat",0];
 		
 		[convoy_7,convoy_8,convoy_9,west,[2,["UK3CB_B_AAV_US_WDL"], 60, 30],[true,3], false, "Reinforced1","small",false,false] spawn OKS_fnc_Convoy_Reinforce;
 		waitUntil {sleep 5; !isNil "Reinforced1"};
@@ -279,9 +279,9 @@ switch (_case) do {
 		null = [AAA_5,east,false,1500,true] spawn OKS_fnc_Ambient_AAA;
 		null = [AAA_6,east,false,1500,true] spawn OKS_fnc_Ambient_AAA;
 
-		[[aaa_4],"Destroy AAA","The village of Balota is defended by AAA positions in form of %1. You must destroy the assets to achieve air superiority.","destroy","Main1"] spawn OKS_fnc_Destroy_Task;
-		[[aaa_5],"Destroy AAA","The village of Balota is defended by AAA positions in form of %1. You must destroy the assets to achieve air superiority.","destroy","Main1"] spawn OKS_fnc_Destroy_Task;
-		[[aaa_6],"Destroy AAA","The village of Balota is defended by AAA positions in form of %1. You must destroy the assets to achieve air superiority.","destroy","Main1"] spawn OKS_fnc_Destroy_Task;
+		[[aaa_4],"Destroy AAA","ZU-23s","The village of Balota is defended by AAA positions in form of %1. You must destroy the assets to achieve air superiority.","destroy","Main"] spawn OKS_fnc_Destroy_Task;
+		[[aaa_5],"Destroy AAA","ZU-23s","The village of Balota is defended by AAA positions in form of %1. You must destroy the assets to achieve air superiority.","destroy","Main"] spawn OKS_fnc_Destroy_Task;
+		[[aaa_6],"Destroy AAA","ZU-23s","The village of Balota is defended by AAA positions in form of %1. You must destroy the assets to achieve air superiority.","destroy","Main"] spawn OKS_fnc_Destroy_Task;
 
 		[speaker_1,2500] spawn OKS_fnc_AlarmSound;
 	};
@@ -292,7 +292,7 @@ switch (_case) do {
 		//"Radio_6" remoteExec ["playSound",0];
 		["hq","side","1-1 be advised! A squadron of Mi-8s was spotted inbound from the south-east. We suspect they will insert air assault forces to attack you. Repel all enemy forces. Liberty, out!","USS LIBERTY"] remoteExec ["OKS_fnc_Chat",0];
 
-		[true, ["Defend_3","main"], ["Balota is secure, however more counter-attacks are inbound! An air assault squadron is inbound for Balota Airfield, possible strike from the north. Neutralize the attackers and hold Balota!", "Repel Counter-Attack", ""], [4540.79,2503.15,0],"ASSIGNED",-1,true,"defend"] call BIS_fnc_taskCreate;
+		[true, ["Defend_3","main"], ["Balota is secure, however more counter-attacks are inbound! An air assault squadron is inbound for Balota Airfield, possible strike from the north. Neutralize the attackers and hold Balota!", "Repel Counter-Attack", ""],[4499.76,2453.48,0.00144482],"ASSIGNED",-1,true,"defend"] call BIS_fnc_taskCreate;
 		sleep 60;
 
 		// Balota Counter-Attack
@@ -306,7 +306,7 @@ switch (_case) do {
 		[independent, "RHS_Mi8AMT_vvsc", true, "paradrop", helistart_3, land_3, heliend_3, [2,0.7], [[4492.85,2439.17,0]],false,false,objNull,Enemy_AirAssault] spawn OKS_fnc_AirDrop;		
 		
 		_ConvoyGroupArray = [];
-		[ConvoySpawn_1,ConvoyWP_1,ConvoyEnd_1,east,[5,["O_G_Quadbike_01_F"],55,35],[true,1],_ConvoyGroupArray,false,false,["rush"],false] spawn OKS_fnc_Convoy_Spawn;
+		[ConvoySpawn_1,ConvoyWP_1,ConvoyEnd_1,east,[6,["O_G_Quadbike_01_F"],70,25],[true,1],_ConvoyGroupArray,false,false,["assault"],false] spawn OKS_fnc_Convoy_Spawn;
 
 		sleep 10;
 		waitUntil{
@@ -314,12 +314,12 @@ switch (_case) do {
 			(
 				{
 					Alive _X || [_X] call ace_common_fnc_isAwake
-				} count Enemy_AirAssault == 0 &&
+				} count Enemy_AirAssault <= 2 &&
 				{
 					_Group = _X;
 					{
 						Alive _X || [_X] call ace_common_fnc_isAwake
-					} count units _Group == 0
+					} count units _Group <= 2
 				} count _ConvoyGroupArray == count _ConvoyGroupArray &&
 				Reinforced3
 			)
@@ -346,9 +346,13 @@ switch (_case) do {
 		
 		{
 			[_X,3,1,east,1500,"counter1variable"] spawn OKS_fnc_LambsChargeSpawn; sleep 4;		
-		} foreach [rush_1,rush_2,rush_3,rush_4,rush_5];
+		} foreach [rush_1,rush_3,rush_4];
+
+		{
+			[_X,7,1,east,1500,"counter1variable"] spawn OKS_fnc_LambsChargeSpawn; sleep 4;		
+		} foreach [rush_2,rush_5];
 		
-		[convoy_13,convoy_14,convoy_15,independent,[5,["rhs_btr80_vdv","RHS_Ural_MSV_01","RHS_Ural_MSV_01","RHS_Ural_MSV_01","rhs_prp3_msv"], 45, 45],[true,5],[], false, false, ["attack"], true] spawn OKS_fnc_Convoy_Spawn;
+		[convoy_13,convoy_14,convoy_15,independent,[5,["rhs_btr80_vdv","RHS_Ural_MSV_01","RHS_Ural_MSV_01","RHS_Ural_MSV_01","rhs_prp3_msv"], 55, 45],[true,5],[], false, false, ["assault"], true] spawn OKS_fnc_Convoy_Spawn;
 		[[[[5030.38,2132.2,0.0689001],307,[]],[[5037.38,2133.21,-0.351353],307,[]],[[5031.39,2125.2,1.2574],307,[]],[[5044.37,2134.22,-0.305387],307,[]],[[5032.4,2118.2,2.65769],307,[]],[[5051.37,2135.24,-0.232557],307,[]],[[5033.42,2111.2,1.26961],307,[]],[[5058.37,2136.25,-0.190605],307,[]]],[],[[[4978.5,2165.28,-4.76837e-006],[[0,"Move"]]],[[4919.56,2204.56,0.0149903],[[0,"Move"]]],[[4834.52,2266.68,0],[[0,"Move"]]],[[4729.89,2350.38,4.76837e-007],[[0,"Move"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[4971.56,2052.97,0],307,[]],[[4978.56,2053.98,0],307,[]],[[4972.58,2045.97,0],307,[]],[[4985.56,2054.99,0],307,[]],[[4973.59,2038.97,0],307,[]],[[4992.56,2056.01,0],307,[]],[[4974.6,2031.97,0],307,[]],[[4999.56,2057.02,0],307,[]]],[],[[[4955.82,2073.22,0],[[0,"Move"]]],[[4923.49,2098.13,0],[[0,"Move"]]],[[4816.66,2171.36,0],[[0,"Move"]]],[[4665.47,2336.06,0],[[0,"Move"]]]]] call GW_Common_fnc_spawnGroup;
 		sleep 60;
@@ -382,13 +386,13 @@ switch (_case) do {
 		if(_aacDisabled) then {
 			//"Radio_8" remoteExec ["playSound",0];
 			["hq","side","1-1 be advised, a flight of attack helicopters and friendly APCs are inbound from the west, they will assist in repelling the counter-attack. Godfather, out!","GODFATHER"] remoteExec ["OKS_fnc_Chat",0];
-			[convoy_10,convoy_11,convoy_12,west,[4,["rhsusf_m1a1aimwd_usarmy","rhsusf_m1a1aimwd_usarmy","UK3CB_B_AAV_US_WDL"], 45, 30],[true,10],[], false, false] spawn OKS_fnc_Convoy_Spawn;
+			[convoy_10,convoy_11,convoy_12,west,[5,["rhsusf_m1a1aimwd_usarmy","rhsusf_m1a1aimwd_usarmy","UK3CB_CW_US_B_LATE_LAV25","UK3CB_CW_US_B_LATE_LAV25"], 50, 25],[true,5],[], false, false] spawn OKS_fnc_Convoy_Spawn;
 
 			[attackheli_1,attacktarget_1,west,"RHS_AH64DGrey",500] spawn OKS_fnc_Helicopter_Attack;	sleep 5;
 			[attackheli_2,attacktarget_2,west,"RHS_AH64DGrey",500] spawn OKS_fnc_Helicopter_Attack;	
 		} else {
 			["hq","side","1-1 be advised, the 2nd Marines are here, friendly APCs are inbound from the west, they will assist in repelling the counter-attack. Godfather, out!","GODFATHER"] remoteExec ["OKS_fnc_Chat",0];
-			[convoy_10,convoy_11,convoy_12,west,[4,["rhsusf_m1a1aimwd_usarmy","rhsusf_m1a1aimwd_usarmy","UK3CB_B_AAV_US_WDL"], 45, 30],[true,10],[], false, false] spawn OKS_fnc_Convoy_Spawn;
+			[convoy_10,convoy_11,convoy_12,west,[5,["rhsusf_m1a1aimwd_usarmy","rhsusf_m1a1aimwd_usarmy","UK3CB_CW_US_B_LATE_LAV25","UK3CB_CW_US_B_LATE_LAV25"], 50, 25],[true,5],[], false, false] spawn OKS_fnc_Convoy_Spawn;
 		};
 		counter2variable = true;
 
@@ -436,7 +440,7 @@ switch (_case) do {
 					_Group = _X;
 					{
 						Alive _X || [_X] call ace_common_fnc_isAwake
-					} count units _Group == 0
+					} count units _Group <= 2
 				} count _AirfieldConvoyGroupArray == count _AirfieldConvoyGroupArray
 			)
 		};
