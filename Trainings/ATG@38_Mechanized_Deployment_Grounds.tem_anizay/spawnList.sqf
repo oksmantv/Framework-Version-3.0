@@ -21,6 +21,8 @@ params [
 	"_case"
 ];
 
+systemChat format["[GW_fnc_spawnList] Spawned case: %1", _case];
+
 private _ReturnAndRemoveRandomIndex = {
 	Params ["_Array","_Selected"];
 	private _ReturnArray = [];
