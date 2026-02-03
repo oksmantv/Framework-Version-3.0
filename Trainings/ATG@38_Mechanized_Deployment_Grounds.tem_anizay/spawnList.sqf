@@ -68,7 +68,7 @@ switch (_case) do {
 
 		_vehicleArray = [_vehicleLocations, selectRandom _vehicleLocations] call _ReturnAndRemoveRandomIndex;
 		_vehicleArray params ["_Array","_SelectedObject"];		
-		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_Attack_SpawnGroup;
+		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_fnc_Attack_SpawnGroup;
 
 		// Static
 		switch (ceil (random 3)) do
@@ -112,7 +112,7 @@ switch (_case) do {
 
 		_vehicleArray = [_vehicleLocations, selectRandom _vehicleLocations] call _ReturnAndRemoveRandomIndex;
 		_vehicleArray params ["_Array","_SelectedObject"];		
-		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_Attack_SpawnGroup;
+		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_fnc_Attack_SpawnGroup;
 
 		// Static
 		switch (ceil (random 3)) do
@@ -176,7 +176,7 @@ switch (_case) do {
 
 		_vehicleArray = [_vehicleLocations, selectRandom _vehicleLocations] call _ReturnAndRemoveRandomIndex;
 		_vehicleArray params ["_Array","_SelectedObject"];		
-		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_Attack_SpawnGroup;
+		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_fnc_Attack_SpawnGroup;
 
 	};
 
@@ -210,7 +210,7 @@ switch (_case) do {
 		_vehicleLocations = [vehicle_4_1,vehicle_4_2];
 		_vehicleArray = [_vehicleLocations, selectRandom _vehicleLocations] call _ReturnAndRemoveRandomIndex;
 		_vehicleArray params ["_Array","_SelectedObject"];
-		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_Attack_SpawnGroup;
+		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_fnc_Attack_SpawnGroup;
 
 	};
 
@@ -239,7 +239,7 @@ switch (_case) do {
 		_vehicleLocations = [vehicle_5_1,vehicle_5_1];
 		_vehicleArray = [_vehicleLocations, selectRandom _vehicleLocations] call _ReturnAndRemoveRandomIndex;
 		_vehicleArray params ["_Array","_SelectedObject"];
-		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_Attack_SpawnGroup;
+		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_fnc_Attack_SpawnGroup;
 
 
 	};
@@ -269,7 +269,7 @@ switch (_case) do {
 		_vehicleLocations = [vehicle_6_1,vehicle_6_1];
 		_vehicleArray = [_vehicleLocations, selectRandom _vehicleLocations] call _ReturnAndRemoveRandomIndex;
 		_vehicleArray params ["_Array","_SelectedObject"];
-		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_Attack_SpawnGroup;
+		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_fnc_Attack_SpawnGroup;
 
 	};
 
@@ -300,7 +300,7 @@ switch (_case) do {
 		_vehicleLocations = [vehicle_7_1,vehicle_7_2];
 		_vehicleArray = [_vehicleLocations, selectRandom _vehicleLocations] call _ReturnAndRemoveRandomIndex;
 		_vehicleArray params ["_Array","_SelectedObject"];
-		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_Attack_SpawnGroup;
+		[getPos _SelectedObject,nil,selectRandom _vehicles,east] spawn OKS_fnc_Attack_SpawnGroup;
 
 	};	
 
@@ -425,8 +425,9 @@ switch (_case) do {
 		*/
 		/* Example of Air Bases */
 		/*
-		if(isServer && GOL_NEKY_AIRDROP isEqualTo 1) then {
+		if(isServer && GOL_OKS_fnc_AirDrop isEqualTo 1) then {
 			waitUntil{sleep 5; !(isNil "OKS_fnc_Airbase")};
 			[Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
 		};
+
 

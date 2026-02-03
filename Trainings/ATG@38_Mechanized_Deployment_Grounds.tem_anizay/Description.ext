@@ -1,4 +1,4 @@
-// *	DO NOT CHANCE THE ORDER/STRUCTIOR OF THE FILE
+﻿// *	DO NOT CHANCE THE ORDER/STRUCTIOR OF THE FILE
 //	https://community.bistudio.com/wiki/description.ext
 // ==============================================================================
 // *	Includes the most nessasary configs for the framework to work
@@ -20,12 +20,12 @@ class GW_FRAMEWORK {	// NOTE: SENSETIVE, UPPERCASE ONLY FOR BOOL
 		//	NOTE: Changing any of these settings will require mission reload for it to be affected
 		#define GAME_MODE "COOP"								// GameMode
 		#define PLAYER_COUNT "36"								// Player Count - Do not go above 36 - Server Limit 
-		#define BRIEFING_NAME "Mission_Name"					// Mission Name
+		#define BRIEFING_NAME "Mechanized Deployment Grounds"					// Mission Name
 		#define LOBBY_DESCRIPTION ""							// Description in mission select
 		#define ON_LOAD_TEXT __EVAL("Framework Version " + QUOTE(VERSION))	// Description on loading
 		#define MISSION_VERSION 1								// Version of mission
 		#define SELECT_PICTURE ""								// Path to loading screen
-		Author = "Editor";				// Author
+		Author = "Oksman";				// Author
 		AuthorUID[] = {"_SP_PLAYER_"};			// UIDs with admin access
 
 		Name = __EVAL(GAME_MODE + PLAYER_COUNT + " " + BRIEFING_NAME);
@@ -152,3 +152,4 @@ class ACE_Settings {
 
 #include "Modules\Callsigns\defines.hpp"
 #include "Modules\Callsigns\dialogs.hpp"
+
