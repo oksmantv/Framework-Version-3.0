@@ -20,7 +20,7 @@ _goggles = "G_Armband_red_alt_F";
 _helmet = ["rhs_6b47","rhs_6b47_bare","rhs_6b47_6m2","rhs_6b47_6m2_1","rhs_6b47_bala","rhs_6b47_6B50"];
 _OfficerHelmet = "rhs_6b7_1m_ess";
 _uniform = "rhs_uniform_emr_patchless";
-_vest = ["rhs_6b2_chicom","rhs_6b2_lifchik","rhs_6b2_RPK","rhs_6b45_rifleman","rhs_6b43","rhs_6b5"];
+_vest = ["rhs_6b2_chicom","rhs_6b2_lifchik","rhs_6b2_RPK","rhs_6b45_rifleman","rhs_6b43","rhs_6b5","UK3CB_V_SOV_CHICOM_TAN_GRN","V_SmershVest_01_F","rhs_6sh92_digi","rhs_6sh92_digi_radio","rhs_6sh92_digi_vog_headset"];
 _backpack = "rhs_rd54_emr1";
 _backpackRadio = _backpack;
 
@@ -69,16 +69,16 @@ _bipod = "";
 
 _rifle = ["rhs_weap_ak74m", _silencer, _pointer, _sight, _bipod];
 _rifleC = ["rhs_weap_aks74u", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["rhs_weap_ak74m_gp25", _silencer, _pointer, _sight, _bipod];
-_rifleL = ["rhs_weap_rpk74m_npz", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["rhs_weap_akms_gp25", _silencer, _pointer, _sight, _bipod];
+_rifleL = ["uk3cb_sks_01_sling", _silencer, _pointer, _sight, _bipod];
 _rifle_mag = "rhs_30Rnd_545x39_7N22_plum_AK";
 _rifle_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
-_rifleGL_mag = "rhs_30Rnd_545x39_7N22_plum_AK";
-_rifleGL_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
-_rifleL_mag = "rhs_60Rnd_545X39_AK_Green";
+_rifleGL_mag = "rhs_30Rnd_762x39mm_bakelite";
+_rifleGL_mag_tr = "rhs_30Rnd_762x39mm_bakelite_tracer";
+_rifleL_mag = "uk3cb_10rnd_magazine_sks_GT";
 
-_LMG = ["rhs_weap_rpk74m_npz", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "rhs_60Rnd_545X39_AK_Green";
+_LMG = ["UK3CB_RPD", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "UK3CB_RPD_100rnd_762x39_GT";
 
 _MMG = ["rhs_weap_pkp", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhs_100Rnd_762x54mmR_green";

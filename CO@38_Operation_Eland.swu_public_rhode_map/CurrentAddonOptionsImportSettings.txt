@@ -1520,3 +1520,6 @@ zen_faction_filter_3_UK3CB_ADC_C = true;
 zen_faction_filter_3_UK3CB_CHC_C = true;
 zen_faction_filter_3_UK3CB_MEC_C = true;
 zen_faction_filter_3_UK3CB_TKC_C = true;
+
+// GOL MISC
+GOL_MissileWarning_Enabled = false;

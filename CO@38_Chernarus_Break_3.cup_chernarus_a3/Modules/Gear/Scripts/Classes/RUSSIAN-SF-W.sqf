@@ -16,12 +16,12 @@ _glflareR = "rhs_VG40OP_red";
 _glflareW = "rhs_VG40OP_white";
 
 _insignia = "";
-_goggles = ["rhsusf_shemagh2_grn","rhsusf_shemagh_grn"];
-_helmet = ["rhs_beanie_green"];
+_goggles = ["G_Balaclava_TI_blk_F"];
+_helmet = ["rhs_altyn_visordown","rhs_altyn_bala","rhs_altyn"];
 _OfficerHelmet = "rhs_beret_vdv3";
-_uniform = "rhsgref_uniform_olive";
-_vest = "rhs_6b3_holster";
-_backpack = "UK3CB_CHC_C_B_HIKER";
+_uniform = "rhs_uniform_gorka_r_g_gloves";
+_vest = "rhs_6b45_rifleman_2";
+_backpack = "rhs_rk_sht_30_emr_engineer_empty";
 _backpackRadio = _backpack;
 if (true) then {
 	_backpackRadio = "UK3CB_CW_SOV_O_LATE_B_ASS_BERGEN_Radio";
@@ -50,16 +50,19 @@ _pointer = "";
 _sight = "";
 _bipod = "";
 
-_rifle = ["rhs_weap_ak74mr", _silencer, _pointer, _sight, _bipod];
+_rifle = ["UK3CB_AEK971", _silencer, _pointer, _sight, _bipod];
 _rifleC = ["rhs_weap_aks74un", _silencer, _pointer, _sight, _bipod];
 _rifleGL = ["rhs_weap_ak74mr_gp25", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["rhs_weap_svdp", _silencer, _pointer, _sight, _bipod];
 
-_rifle_mag = "rhs_30Rnd_545x39_7N22_camo_AK";
-_rifle_mag_tr = "rhs_30Rnd_545x39_AK_green";
+_rifle_mag = "UK3CB_AEK971_30rnd_Magazine_GT";
+_rifle_mag_tr = "UK3CB_AEK971_30rnd_Magazine_GT";
+_rifleC_mag = "rhs_30Rnd_545x39_7N22_camo_AK";
+_rifleC_mag_tr = "rhs_30Rnd_545x39_AK_green";
 _rifleGL_mag = "rhs_30Rnd_545x39_7N22_camo_AK";
 _rifleGL_mag_tr = "rhs_30Rnd_545x39_AK_green";
 _rifleL_mag = "ACE_10Rnd_762x54_Tracer_mag";
+_rifleL_mag_tr = "ACE_10Rnd_762x54_Tracer_mag";
 
 _LMG = ["rhs_weap_rpk74m_npz", _silencer, _pointer, _sight, _bipod];
 _LMG_mag = "rhs_60Rnd_545X39_AK_Green";
