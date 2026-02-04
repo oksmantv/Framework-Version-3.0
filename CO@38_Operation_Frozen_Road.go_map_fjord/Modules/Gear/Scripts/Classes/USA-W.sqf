@@ -75,9 +75,9 @@ _LAT = ["UK3CB_BAF_AT4_CS_AT_Launcher", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "UK3CB_BAF_AT4_CS_AT_Mag";
 _LAT_ReUsable = false;
 
-_MAT = ["", _silencer, _pointer, _sight, _bipod];
-_MAT_mag = "";
-_MAT_mag_HE = "";
+_MAT = ["launch_MRAWS_green_rail_F", _silencer, _pointer, _sight, _bipod];
+_MAT_mag = "MRAWS_HEAT_F";
+_MAT_mag_HE = "MRAWS_HE_F";
 
 _HAT = ["rhs_weap_fgm148", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "rhs_fgm148_magazine_AT";
