@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="CO@38_Operation_Frozen_Road";
+sourceName="~CO@38_Operation_Frozen_Road";
 addons[]=
 {
 	"A3_Characters_F",

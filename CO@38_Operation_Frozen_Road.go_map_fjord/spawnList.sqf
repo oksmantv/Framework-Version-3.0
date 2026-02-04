@@ -62,13 +62,13 @@ switch (_case) do {
 	case 3: {
 
 		// Mountain Ambush.
-		[convoy_4, convoy_5, convoy_6, east, [5, ["rhs_btr80_vmf","rhs_btr80_vmf", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv"], 30, 30], [true, 6], [], false, false, ["hunt"]] spawn OKS_fnc_Convoy_Spawn;
+		[convoy_4, convoy_5, convoy_6, east, [5, ["rhs_btr80_vmf","rhs_btr80_vmf", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv","rhs_prp3_vv"], 30, 35], [true, 6], [], false, false, ["hunt"]] spawn OKS_fnc_Convoy_Spawn;
 	};
 
 	case 4: {
 
 		// Final Counter.
-		[convoy_7, convoy_8, convoy_9, east, [7, ["UK3CB_CW_SOV_O_LATE_T72A","rhs_btr80_vmf","rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv","UK3CB_CW_SOV_O_LATE_T72A"], 30, 30], [true, 6], [], false, false, ["hunt"]] spawn OKS_fnc_Convoy_Spawn;
+		[convoy_7, convoy_8, convoy_9, east, [7, ["UK3CB_CW_SOV_O_LATE_T72A","rhs_btr80_vmf","rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv","UK3CB_CW_SOV_O_LATE_T72A","rhs_prp3_vv"], 30, 35], [true, 6], [], false, false, ["hunt"]] spawn OKS_fnc_Convoy_Spawn;
 
 	};
 
@@ -77,7 +77,8 @@ switch (_case) do {
 		// Village.
 		// Trench.
 		[[[[1386.73,12548,0.765823],212,"Middle",[]],[[1372.94,12524.1,1.12245],300,"Up",[]],[[1373.97,12525.1,1.44714],311,"Up",[]],[[1375.07,12526,0.891205],319,"Up",[]],[[1376.79,12521.9,4.65742],139,"Middle",[]],[[1381.33,12516.1,5.74559],149,"Middle",[]],[[1375.66,12511.8,4.57643],287,"Middle",[]],[[1369.58,12513.6,3.17169],327,"Middle",[]],[[1368.86,12512.7,3.35739],301,"Middle",[]],[[1368.23,12507.9,2.11308],218,"Middle",[]],[[1364.08,12507.9,1.31856],154,"Middle",[]],[[1368.39,12503.3,2.83856],243,"Middle",[]],[[1385.27,12523.8,0.678879],218,"Middle",[]],[[1360.67,12502.5,-0.000213623],218,"Middle",[]]],[["UK3CB_CHD_O_PKM_Low",[1382.64,12546,0.476242],300,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
-
+		[[[[1392.66,12562,2.32118],263,"Middle",[[301,0]],"ar"],[[1392.65,12563,2.17511],263,"Middle",[[301,0]],"ar"],[[1393.26,12563.6,2.33099],298,"Middle",[[301,0]],"ar"],[[1396.2,12562.5,1.00026],271,"Middle",[[301,1]],"ag"],[[1399.84,12561.5,0.626419],295,"Middle",[[301,0]],"r"]],[],[],east] call GW_Common_fnc_spawnGroup;
+		
 		// First Houses.
 		[[[[1435.57,12409.1,3.6245],322,"Up",[]],[[1436.57,12397.5,3.6245],173,"Up",[]],[[1433.69,12408.2,0.32338],327,"Up",[]],[[1438.91,12407.5,0.395691],63,"Up",[]],[[1440.3,12399.3,0.535309],338,"Up",[]],[[1450.3,12438,3.97498],283,"Up",[]],[[1451.82,12439.8,3.83926],320,"Up",[]],[[1454.26,12441.9,4.01572],283,"Up",[]],[[1458.78,12430.9,4.03781],283,"Up",[]],[[1458.6,12431.8,0.77034],283,"Up",[]],[[1461.12,12437.4,0.595001],283,"Up",[]],[[1461.92,12441.4,0.502792],174,"Up",[]],[[1456.52,12435,4.15904],283,"Up",[]]],[["UK3CB_ADG_O_PKM_High",[1452.38,12431.3,4.56029],311,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 
@@ -102,6 +103,25 @@ switch (_case) do {
 	};
 
 	case 6: {
+	};
+
+	case 7:{
+
+		// East Flank Ambushes Mountains.
+		[getPos LambsGroupSpawn_7, "ambushhunt", 6, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_8, "ambushhunt", 6, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_9, "ambushhunt", 6, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+
+	};
+
+	case 8:{
+
+		// West Flank Ambushes Mountains.
+		[getPos LambsGroupSpawn_10, "ambushhunt", 6, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_11, "ambushhunt", 6, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_12, "ambushhunt", 6, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_13, "ambushhunt", 6, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+
 	};
 
 	default {
