@@ -49,7 +49,7 @@ if (_role isEqualTo "jetp") then {
 };
 
 // Attachments
-_silencer = "JCA_muzzle_snds_556_advanced_black";
+_silencer = "";
 _pointer = "";
 _sight = "JCA_optic_AICO_black";
 _bipod = "JCA_bipod_04_black";
