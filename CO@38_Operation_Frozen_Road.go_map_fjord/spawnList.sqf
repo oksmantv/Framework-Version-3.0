@@ -35,9 +35,12 @@ switch (_case) do {
 		[getpos LambsGroupSpawn_5, "ambushrush", 6, EAST, 500] spawn OKS_fnc_Lambs_SpawnGroup;
 		[getpos LambsGroupSpawn_6, "ambushrush", 6, EAST, 500] spawn OKS_fnc_Lambs_SpawnGroup;
 
+		// Snipers.
+		[[[[1629.09,12588,0],317,"Down",[[301,0]],"marksman"],[[961.287,12892.2,0],6,"Down",[[301,0]],"marksman"]],[],[],east] call GW_Common_fnc_spawnGroup;
+
 		// AAA.
 		[[],[["UK3CB_ADE_O_KORD_high",[2813.34,11990.1,0],325,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_KORD_high",[2794.56,11924.4,3.05176e-05],325,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_KORD_high",[2709.76,11870.1,0],325,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_KORD_high",[2353.52,11752.9,0],325,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_KORD_high",[1835.87,12620.6,0],325,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_KORD_high",[1837.51,12567.9,0],216,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_KORD_high",[2060.68,12287.6,0],254,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_KORD_high",[2066.5,12283,1.52588e-05],216,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_KORD_high",[1984.14,11535.7,3.05176e-05],133,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_KORD_high",[1998.18,11550.2,0],133,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_KORD_high",[2368.51,12089.6,0],230,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_KORD_high",[2354.53,12110.7,0],230,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_KORD_high",[1009.07,11890.8,0],57,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
-		_AAA = [[],[["UK3CB_CW_SOV_O_EARLY_VDV_Ural_Zu23",[1603.21,12224.6,0],298,[["gunner",-1,[0]]],[[6,["SOV",1]],[7,["light_hide",0,"spare_hide",0,"bench_hide",0,"people_tag_hide",0,"rear_numplate_hide",1]]]]],[]] call GW_Common_fnc_spawnGroup;
+		_AAA = [[],[["UK3CB_CW_SOV_O_EARLY_VDV_Ural_Zu23",[1601.47,12224.8,1.2328064],298,[["gunner",-1,[0]]],[[6,["SOV",1]],[7,["light_hide",0,"spare_hide",0,"bench_hide",0,"people_tag_hide",0,"rear_numplate_hide",1]]]]],[]] call GW_Common_fnc_spawnGroup;
 
 		waitUntil {
 			sleep 0.5;
@@ -46,13 +49,12 @@ switch (_case) do {
 
 		_AAAVehicle = vehicle leader _AAA;
 		[[_AAAVehicle],nil,"AAA Defence",nil,"danger","task_1"] spawn OKS_fnc_Destroy_Task;
-
 	};
 
 	case 2: {
 
 		// Crossroad Counter.
-		[convoy_1, convoy_2, convoy_3, east, [5, ["rhs_btr80_vmf","rhs_btr80_vmf", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv"], 25, 30], [true, 6], [], false, false, ["hunt"]] spawn OKS_fnc_Convoy_Spawn;
+		[convoy_1, convoy_2, convoy_3, east, [6, ["rhs_btr80_vmf","rhs_btr80_vmf", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv","rhs_prp3_vv"], 35, 30], [true, 6], [], false, false, ["hunt"]] spawn OKS_fnc_Convoy_Spawn;
 
 		[[[[1695.57,12194.2,0],319,[]],[[1702.62,12193.7,1.52588e-05],319,[]],[[1695.05,12187.1,0],319,[]],[[1697.34,12189.4,0],319,[]],[[1701.65,12188.5,0],319,[]],[[1705.46,12189,0],319,[]],[[1699.74,12184.1,0],319,[]],[[1699.39,12191.1,0],319,[]]],[],[[[1642.1,12258.4,0],[[0,"Move"]]],[[1466.02,12404.1,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[1766.22,12262,1.52588e-05],319,[]],[[1773.27,12261.5,1.52588e-05],319,[]],[[1765.7,12255,1.52588e-05],319,[]],[[1767.98,12257.3,3.05176e-05],319,[]],[[1772.3,12256.3,3.05176e-05],319,[]],[[1776.11,12256.9,1.52588e-05],319,[]],[[1770.38,12252,1.52588e-05],319,[]],[[1770.03,12259,3.05176e-05],319,[]]],[],[[[1661.6,12323,0],[[0,"Move"]]],[[1472.12,12420.9,0.144058],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
@@ -64,13 +66,13 @@ switch (_case) do {
 	case 3: {
 
 		// Mountain Ambush.
-		[convoy_4, convoy_5, convoy_6, east, [5, ["rhs_btr80_vmf","rhs_btr80_vmf", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv","rhs_prp3_vv"], 30, 35], [true, 6], [], false, false, ["hunt"]] spawn OKS_fnc_Convoy_Spawn;
+		[convoy_4, convoy_5, convoy_6, east, [5, ["rhs_btr80_vmf","rhs_btr80_vmf", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv"], 30, 35], [true, 6], [], false, false, ["hunt"]] spawn OKS_fnc_Convoy_Spawn;
 	};
 
 	case 4: {
 
 		// Final Counter.
-		[convoy_7, convoy_8, convoy_9, east, [7, ["UK3CB_CW_SOV_O_LATE_T72A","rhs_btr80_vmf","rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv","UK3CB_CW_SOV_O_LATE_T72A","rhs_prp3_vv"], 30, 35], [true, 6], [], false, false, ["hunt"]] spawn OKS_fnc_Convoy_Spawn;
+		[convoy_7, convoy_8, convoy_9, east, [8, ["UK3CB_CW_SOV_O_LATE_T72A","rhs_btr80_vmf","rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv", "rhs_kamaz5350_msv","UK3CB_CW_SOV_O_LATE_T72A","rhs_prp3_vv"], 30, 35], [true, 6], [], false, false, ["hunt"]] spawn OKS_fnc_Convoy_Spawn;
 
 	};
 
@@ -102,11 +104,18 @@ switch (_case) do {
 		[[[[1570.67,12332.3,0],324,[]],[[1569.52,12335.7,0],324,[]],[[1572.7,12334.6,0],324,[]],[[1574.76,12331.1,0],324,[]]],[],[[[1519.96,12266.3,0],[[0,"Move"],[1,"SAFE"]]],[[1602.05,12213.3,0],[[0,"Move"]]],[[1587.52,12288.1,0.76944],[[0,"Move"]]],[[1575.83,12333.8,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[1480.68,12290.6,0.116394],324,[]],[[1479.53,12294,0.116394],324,[]],[[1482.71,12293,0.116394],324,[]],[[1484.77,12289.4,0.116394],324,[]]],[],[[[1444.47,12254.7,0],[[0,"Move"],[1,"SAFE"]]],[[1482.65,12202.1,0],[[0,"Move"]]],[[1517.55,12215.8,0],[[0,"Move"]]],[[1485.84,12292.1,0.116394],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 
+		// Snipers.
+		[[[[1335.58,11980.3,8.86922],40,"Down",[[301,0]],"marksman"],[[1336.94,11978.9,9.96655],40,"Down",[[301,0]],"marksman"]],[],[],east] call GW_Common_fnc_spawnGroup;
 	};
 
 	case 6: {
 
 		// Activate SCUDs.
+		[getPos LambsGroupSpawn_14, "hunt", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup; sleep 3;
+		[getPos LambsGroupSpawn_15, "rush", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup; sleep 3;
+		[getPos LambsGroupSpawn_16, "hunt", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup; sleep 3;
+		[getPos LambsGroupSpawn_17, "rush", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup; sleep 3;
+
 		{
 			[_X, getPos BallisticTarget_1, east, 20, [], "", [-1], false] spawn OKS_fnc_ScudIntercept_LaunchAI; sleep 10;
 		} foreach [DestroyObject_1, DestroyObject_2, DestroyObject_3];

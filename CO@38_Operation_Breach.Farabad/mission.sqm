@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=15396;
+		nextID=15411;
 	};
 	class Camera
 	{
@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="co@38_operation_breach";
+sourceName="CO@38_Operation_Breach";
 addons[]=
 {
 	"A3_Characters_F",
@@ -35634,7 +35634,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=248;
+		items=247;
 		class Item0
 		{
 			dataType="Layer";
@@ -40560,7 +40560,6 @@ class Mission
 							};
 							id=4471;
 							type="C_man_1";
-							atlOffset=4.7683716e-07;
 						};
 						class Item2
 						{
@@ -41280,33 +41279,30 @@ class Mission
 		class Item19
 		{
 			dataType="Marker";
-			position[]={4383.3599,7.4839425,2925.1763};
+			position[]={4309.0151,14.72,3006.1262};
 			name="marker_70";
 			type="o_motor_inf";
 			a=0.69999999;
 			b=0.69999999;
 			id=4832;
-			atlOffset=2.0503998e-05;
 		};
 		class Item20
 		{
 			dataType="Marker";
-			position[]={4383.3599,7.9758301,2935.1763};
+			position[]={4309.0151,14.72,3016.1262};
 			name="marker_71";
 			type="group_3";
 			id=4833;
-			atlOffset=2.0503998e-05;
 		};
 		class Item21
 		{
 			dataType="Marker";
-			position[]={4383.3599,12.891195,3015.1763};
+			position[]={4309.0151,16.136824,3096.1262};
 			name="marker_72";
 			type="UK3CB_Marker_MEE";
 			a=0.5;
 			b=0.5;
 			id=4834;
-			atlOffset=1.8119812e-05;
 		};
 		class Item22
 		{
@@ -44345,16 +44341,6 @@ class Mission
 				};
 				nAttributes=1;
 			};
-		};
-		class Item247
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=5717;
-			atlOffset=35;
 		};
 	};
 	class Connections
