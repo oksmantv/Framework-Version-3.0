@@ -18,6 +18,14 @@ params [
 	"_case"
 ];
 
+// Prevent duplicate execution of the same case
+private _varName = format ["GW_SpawnList_Case_%1_Executed", _case];
+if (missionNamespace getVariable [_varName, false]) exitWith {
+	format ["[SpawnList] Case %1 already executed, preventing duplicate spawn", _case] spawn OKS_fnc_LogDebug;
+	false
+};
+missionNamespace setVariable [_varName, true, true];
+
 switch (_case) do {
 
 	case 1: {

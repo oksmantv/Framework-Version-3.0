@@ -20,6 +20,8 @@ params [
 	"_case"
 ];
 
+systemChat format ["SpawnList started with case %1", _case];
+
 switch (_case) do {
 
 	case 1: {
@@ -60,7 +62,7 @@ switch (_case) do {
 			[250,500],
 			["","","","","","",""],
 			false
-		] spawn OKS_fnc_Scout;
+		] spawn OKS_fnc_AirScout;
 
 		waitUntil {sleep 20; {Alive _X || [_X] call ace_common_fnc_isAwake} count [_AA1,_AA2,_AA3,_AA4] == 0};
 		AA_COMPLETE = true;
@@ -117,7 +119,7 @@ switch (_case) do {
 				[250,500],
 				["","","","","","",""],
 				true
-			] spawn OKS_fnc_Scout;
+			] spawn OKS_fnc_AirScout;
 	};
 
 	case 3: {
@@ -152,7 +154,7 @@ switch (_case) do {
 			[250,500],
 			["","","","","","",""],
 			true
-		] spawn OKS_fnc_Scout;
+		] spawn OKS_fnc_AirScout;
 	};
 
 	case 4: {
@@ -197,7 +199,7 @@ switch (_case) do {
 			[250,500],
 			["","","","","","",""],
 			true
-		] spawn OKS_fnc_Scout;
+		] spawn OKS_fnc_AirScout;
 
 	};
 
@@ -218,7 +220,7 @@ switch (_case) do {
 			[250,500],
 			["","","","","","",""],
 			true
-		] spawn OKS_fnc_Scout;
+		] spawn OKS_fnc_AirScout;
 
 	};
 
@@ -274,4 +276,5 @@ switch (_case) do {
 	};
 
 };
+
 

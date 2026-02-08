@@ -37144,6 +37144,7 @@ class Mission
 								name="TriggerSpawn_1";
 								text="Spawn Trigger 1";
 								onActivation="null = [1] spawn GW_Fnc_spawnList;";
+								repeatable=0;
 								sizeC=0;
 								interuptable=1;
 								activationBy="ANYPLAYER";
