@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=29551;
+		nextID=29703;
 	};
 	class Camera
 	{
-		pos[]={14165.661,33.442551,16287.642};
-		dir[]={0.81070936,-0.42355767,-0.40418375};
-		up[]={0.37906566,0.90586334,-0.18898508};
-		aside[]={-0.44618154,-1.9557774e-08,-0.89494878};
+		pos[]={14176.896,42.196064,16253.72};
+		dir[]={0.53588974,-0.63820791,0.55275768};
+		up[]={0.44423705,0.76985818,0.45822021};
+		aside[]={0.71798509,-2.9290095e-07,-0.69607508};
 	};
 };
 binarizationWanted=0;
@@ -712,7 +712,7 @@ randomSeed=15706391;
 class ScenarioData
 {
 	author="Oksman, Blu";
-	overviewText="Framework Version 3.0.0.311225";
+	overviewText="Framework Version 3.0.5.100126";
 	overViewPicture="\OKS_GOL_Misc\data\images\loadImage.jpg";
 	overViewPictureLocked="\OKS_GOL_Misc\data\images\loadImage.jpg";
 	loadScreen="\OKS_GOL_Misc\data\images\loadImage.jpg";
@@ -793,7 +793,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category2
+	class Category3
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -856,7 +856,7 @@ class CustomAttributes
 		};
 		nAttributes=3;
 	};
-	class Category3
+	class Category4
 	{
 		name="Scenario";
 		class Attribute0
@@ -21086,7 +21086,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0.30346099;
+														value=0.0099999998;
 													};
 												};
 												class Item1
@@ -25478,7 +25478,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0;
+														value=1;
 													};
 												};
 												class Item1
@@ -25505,7 +25505,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=15;
+														value=10;
 													};
 												};
 												class Item1
@@ -34254,7 +34254,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Basic Training";
-		overviewText="Framework Version 3.0.0.311225";
+		overviewText="Framework Version 3.0.5.100126";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -66035,7 +66035,7 @@ class Mission
 									};
 									id=17637;
 									type="Land_HelipadEmpty_F";
-									atlOffset=3.3909893;
+									atlOffset=3.1960335;
 								};
 								class Item28
 								{
@@ -66052,7 +66052,7 @@ class Mission
 									};
 									id=17638;
 									type="Land_HelipadEmpty_F";
-									atlOffset=3.4000015;
+									atlOffset=3.1883659;
 								};
 								class Item29
 								{
@@ -66068,7 +66068,7 @@ class Mission
 									};
 									id=17639;
 									type="Land_HelipadEmpty_F";
-									atlOffset=3.4085999;
+									atlOffset=0.0017910004;
 								};
 								class Item30
 								{
@@ -66133,7 +66133,7 @@ class Mission
 									};
 									id=17643;
 									type="Land_HelipadEmpty_F";
-									atlOffset=7.3750343;
+									atlOffset=0.18309021;
 								};
 								class Item34
 								{

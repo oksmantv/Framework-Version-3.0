@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8747;
+		nextID=8768;
 	};
 	class Camera
 	{
@@ -23500,7 +23500,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0;
+														value=1;
 													};
 												};
 												class Item1
@@ -23527,7 +23527,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=15;
+														value=10;
 													};
 												};
 												class Item1
@@ -44930,7 +44930,6 @@ class Mission
 					a=0.60000002;
 					b=0.60000002;
 					id=3598;
-					atlOffset=0.49755859;
 				};
 				class Item1
 				{
@@ -45016,13 +45015,13 @@ class Mission
 								angles[]={0.0057980269,1.5019548,6.2475944};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								init="this spawn { sleep 5; waitUntil {sleep 1; !isNil ""Dry_Array_1""}; Dry_Array_1 pushBackUnique _this};";
 							};
 							id=3611;
 							type="Target_PopUp4_Moving_90deg_F";
-							atlOffset=3.1579742;
 						};
 						class Item1
 						{
@@ -45033,13 +45032,13 @@ class Mission
 								angles[]={0.0034870273,1.6401138,6.2450972};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								init="this spawn { sleep 5; waitUntil {sleep 1; !isNil ""Dry_Array_1""}; Dry_Array_1 pushBackUnique _this};";
 							};
 							id=3612;
 							type="Target_PopUp4_Moving_90deg_F";
-							atlOffset=3.0951385;
 						};
 						class Item2
 						{
@@ -45050,13 +45049,13 @@ class Mission
 								angles[]={0.021482013,1.9628993,6.2491527};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								init="this spawn { sleep 5; waitUntil {sleep 1; !isNil ""Dry_Array_1""}; Dry_Array_1 pushBackUnique _this};";
 							};
 							id=3613;
 							type="Target_PopUp4_Moving_90deg_F";
-							atlOffset=3.6338348;
 						};
 						class Item3
 						{
@@ -45067,13 +45066,13 @@ class Mission
 								angles[]={6.2737174,1.8958901,0.043098133};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								init="this spawn { sleep 5; waitUntil {sleep 1; !isNil ""Dry_Array_1""}; Dry_Array_1 pushBackUnique _this};";
 							};
 							id=3614;
 							type="Target_PopUp4_Moving_90deg_F";
-							atlOffset=3.8478699;
 						};
 						class Item4
 						{
@@ -45135,13 +45134,13 @@ class Mission
 								angles[]={0,3.2923813,6.2738953};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								init="this spawn { sleep 5; waitUntil {sleep 1; !isNil ""Dry_Array_1""}; Dry_Array_1 pushBackUnique _this};";
 							};
 							id=3618;
 							type="Target_PopUp4_Moving_90deg_F";
-							atlOffset=0.50958252;
 						};
 						class Item8
 						{
@@ -45152,13 +45151,13 @@ class Mission
 								angles[]={6.2804017,3.1082172,6.2799101};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								init="this spawn { sleep 5; waitUntil {sleep 1; !isNil ""Dry_Array_1""}; Dry_Array_1 pushBackUnique _this};";
 							};
 							id=3619;
 							type="Target_PopUp4_Moving_90deg_F";
-							atlOffset=0.69995117;
 						};
 						class Item9
 						{
@@ -45169,13 +45168,13 @@ class Mission
 								angles[]={6.2583351,3.0881674,0.018949119};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								init="this spawn { sleep 5; waitUntil {sleep 1; !isNil ""Dry_Array_1""}; Dry_Array_1 pushBackUnique _this};";
 							};
 							id=3620;
 							type="Target_PopUp4_Moving_90deg_F";
-							atlOffset=0.74090576;
 						};
 						class Item10
 						{
@@ -45320,13 +45319,13 @@ class Mission
 								angles[]={0.0059201042,0.95507121,6.2775755};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								init="this spawn { sleep 5; waitUntil {sleep 1; !isNil ""Dry_Array_2""}; Dry_Array_2 pushBackUnique _this};";
 							};
 							id=3622;
 							type="Target_PopUp4_Moving_90deg_F";
-							atlOffset=0.31672668;
 						};
 						class Item2
 						{
