@@ -21,28 +21,74 @@ params [
 	"_case"
 ];
 
-Private _ConvoyVehicle = "UK3CB_CSAT_M_O_Tigr_FFV";
+Private _ConvoyVehicle = ["UK3CB_CSAT_M_O_BRDM2","UK3CB_CSAT_M_O_BRDM2","UK3CB_CSAT_M_O_Tigr_FFV","UK3CB_CSAT_M_O_Tigr_FFV","UK3CB_CSAT_M_O_Tigr_FFV","UK3CB_CSAT_M_O_Tigr_FFV"];
 
 switch (_case) do {
 
 	case 0:{
 		// AAA Sites
 		{
-			[_X,east,false,1500,true] spawn OKS_fnc_Ambient_AAA;
+			[_X,east,false,3000,true] spawn OKS_fnc_Ambient_AAA; sleep 1;
 		} foreach [SAM_1,SAM_2,SAM_3];
 
+		private _RevealNearTargets = {
+			Params ["_Group"];
+			waitUntil {sleep 5; {alive _X} count units _Group > 0};
+			while {{alive _X || [_x] call ace_common_fnc_isAwake} count units _Group > 0} do {
+
+				private _targets = _Group targets [true,500];
+				{
+					if (alive _x || [_x] call ace_common_fnc_isAwake) then {
+						_KnowsAboutValue = _Group knowsAbout _X;
+						_Group reveal [_X, (_KnowsAboutValue + 2)];
+						sleep 0.1;
+					};
+				} foreach _targets;
+				sleep 15;
+			};
+		};
+
+		/// Hostages Air Defence.
+		[group hostage_1,"Task_1",true] spawn OKS_fnc_Hostage;
+		[group hostage_4,"Task_2",true] spawn OKS_fnc_Hostage;
+		[group hostage_7,"Task_3",true] spawn OKS_fnc_Hostage;
 
 		// Lolisse Strongpoint
 		[[5457.59,10905.7,0],30,EAST] spawn OKS_fnc_Populate_StaticWeapons;
-		[[[[5450.27,10909.7,0.281403],0,"Up",[]],[[5451.92,10909.7,0.282936],0,"Up",[]],[[5453.7,10909.7,0.264229],0,"Up",[]],[[5461.4,10905.3,3.8147e-05],180,"Up",[]],[[5460.31,10915.8,0],0,"Up",[]],[[5462.26,10914.6,3.8147e-05],0,"Up",[]],[[5468.28,10915.1,3.8147e-05],0,"Up",[]],[[5469.52,10914.4,3.8147e-05],0,"Up",[]],[[5470.4,10905.9,3.8147e-05],115,"Up",[]],[[5446.46,10900.7,3.8147e-05],263,"Up",[]],[[5454.85,10900.8,3.8147e-05],263,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
-	
+		_Strongpoint1 = [[[[5450.27,10909.7,0.281403],0,"Up",[]],[[5451.92,10909.7,0.282936],0,"Up",[]],[[5453.7,10909.7,0.264229],0,"Up",[]],[[5461.4,10905.3,3.8147e-05],180,"Up",[]],[[5460.31,10915.8,0],0,"Up",[]],[[5462.26,10914.6,3.8147e-05],0,"Up",[]],[[5468.28,10915.1,3.8147e-05],0,"Up",[]],[[5469.52,10914.4,3.8147e-05],0,"Up",[]],[[5470.4,10905.9,3.8147e-05],115,"Up",[]],[[5446.46,10900.7,3.8147e-05],263,"Up",[]],[[5454.85,10900.8,3.8147e-05],263,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
+		[_Strongpoint1] spawn _RevealNearTargets;
+
 		// Air Defence Strongpoint
-		[[[[5204.95,10366.2,1.31087],240,"Up",[]],[[5205.61,10365,1.44328],240,"Up",[]],[[5207.54,10360.9,1.93939],240,"Up",[]],[[5208.68,10358.9,2.10394],240,"Up",[]],[[5200.34,10376.5,0],269,"Middle",[]],[[5201.45,10375,0],257,"Middle",[]],[[5202.38,10373.4,0],247,"Middle",[]],[[5210.4,10361,4.68143],243,"Middle",[]],[[5209.46,10362,4.44731],243,"Middle",[]],[[5208.66,10363.3,4.27998],243,"Middle",[]],[[5208.05,10364.7,4.05704],243,"Middle",[]],[[5207.14,10366.2,3.92842],243,"Middle",[]],[[5206.11,10364.1,1.46149],240,"Up",[]],[[5208.19,10360,2.03069],240,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
+		_Strongpoint2 = [[[[5204.95,10366.2,1.31087],240,"Up",[]],[[5205.61,10365,1.44328],240,"Up",[]],[[5207.54,10360.9,1.93939],240,"Up",[]],[[5208.68,10358.9,2.10394],240,"Up",[]],[[5200.34,10376.5,0],269,"Middle",[]],[[5201.45,10375,0],257,"Middle",[]],[[5202.38,10373.4,0],247,"Middle",[]],[[5210.4,10361,4.68143],243,"Middle",[]],[[5209.46,10362,4.44731],243,"Middle",[]],[[5208.66,10363.3,4.27998],243,"Middle",[]],[[5208.05,10364.7,4.05704],243,"Middle",[]],[[5207.14,10366.2,3.92842],243,"Middle",[]],[[5206.11,10364.1,1.46149],240,"Up",[]],[[5208.19,10360,2.03069],240,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
+		[_Strongpoint2] spawn _RevealNearTargets;
+
+		_Strongpoint4 = [[[[4766.21,9900.25,1.79408],28,"Up",[[301,0]],"ar"],[[4764.33,9900.82,2.10867],24,"Up",[[301,0]],"mmg"],[[4762.46,9901.33,2.38463],23,"Up",[[301,0]],"lr"],[[4754.91,9900.94,1.83957],10,"Up",[[301,0]],"ar"],[[4752.94,9900.9,1.81505],6,"Up",[[301,0]],"mmg"],[[4751,9900.8,1.74297],5,"Up",[[301,0]],"lr"]],[],[],east] call GW_Common_fnc_spawnGroup;
+		[_Strongpoint4] spawn _RevealNearTargets;
 
 		// Goisse Strongpoint
-		[[[[3429.51,8380.99,0],316,"Up",[]],[[3431.91,8387.81,0],316,"Up",[]],[[3430.91,8386.32,0],316,"Middle",[]],[[3436.32,8385.65,-7.62939e-06],17,"Up",[]],[[3436.24,8375.24,0],7,"Up",[]],[[3665.49,8280.79,0],348,"Up",[]],[[3667.3,8280.8,0],27,"Up",[]],[[3660.27,8277.42,0],348,"Up",[]],[[3663.16,8269.24,0],86,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
+		_Strongpoint3 = [[[[3429.51,8380.99,0],316,"Up",[]],[[3431.91,8387.81,0],316,"Up",[]],[[3430.91,8386.32,0],316,"Middle",[]],[[3436.32,8385.65,-7.62939e-06],17,"Up",[]],[[3436.24,8375.24,0],7,"Up",[]],[[3665.49,8280.79,0],348,"Up",[]],[[3667.3,8280.8,0],27,"Up",[]],[[3660.27,8277.42,0],348,"Up",[]],[[3663.16,8269.24,0],86,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
+		[_Strongpoint3] spawn _RevealNearTargets;
+		
 		[[3436.85,8379.87,0],30,EAST] spawn OKS_fnc_Populate_StaticWeapons;
 		[[3665.78,8271.35,0],30,EAST] spawn OKS_fnc_Populate_StaticWeapons;
+
+		_Strongpoint5 = [[],[["UK3CB_ADE_O_PKM_nest",[5001.51,10510.2,0.0433502],202,[["gunner",-1,[0]]],[[7,["CamoNet_Hide",0]],[351,false]]],["UK3CB_ADE_O_PKM_nest",[4953.04,10331.5,-0.0268173],6,[["gunner",-1,[0]]],[[7,["CamoNet_Hide",0]],[351,false]]],["UK3CB_ADE_O_PKM_nest",[4952.92,10275,-0.0246658],274,[["gunner",-1,[0]]],[[7,["CamoNet_Hide",0]],[351,false]]],["UK3CB_ADE_O_PKM_nest",[5104.93,10183.3,0.721649],325,[["gunner",-1,[0]]],[[7,["CamoNet_Hide",0]],[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
+		[_Strongpoint5] spawn _RevealNearTargets;
+
+		waitUntil {sleep 1; triggerActivated BeachAssaultTrigger};
+		{
+			_Group = _x;
+			{
+				_Unit = _X;
+				_playerTargets = (list BeachAssaultTrigger) select { isPlayer _X && alive _X};
+				{
+					_Unit reveal [_X,3.5];
+					sleep 0.1;
+				} foreach _playerTargets;
+				sleep 0.1;
+			} foreach units _Group;
+			sleep 0.1;
+		} foreach [_Strongpoint1,_Strongpoint2,_Strongpoint3,_Strongpoint4,_Strongpoint5];
 	};
 
 	case 1: {
@@ -55,12 +101,14 @@ switch (_case) do {
 		[[[[4744.46,9896.08,0],21,"Middle",[]],[[4742.02,9896.3,1.52588e-05],17,"Middle",[]],[[4722.41,9891.84,0],337,"Up",[]],[[4713.56,9878.58,0],291,"Up",[]],[[4763.64,9898.77,0],25,"Middle",[]]],[["UK3CB_ADE_O_KORD_high",[4739.84,9896.71,0],14,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 		[[[[4714.73,9821.54,-4.57764e-05],1,"Up",[]],[[4737.62,9805.64,0],341,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 
+		/// Hostage Guards.
+		[[[[4985.02,10263.7,0.337486],305,"Up",[[301,0]],"ab"],[[4983.84,10270.3,0.651665],0,"Up",[[301,0]],"ar"],[[4986.17,10274.7,0.725418],339,"Up",[[301,0]],"mmg"],[[4993.12,10278,0.489418],261,"Up",[[301,0]],"g"],[[4991.17,10274.2,0.34185],327,"Up",[[301,0]],"ab"],[[4977.89,10256.7,0],179,"Up",[[301,0]],"ab"],[[4975.67,10279.9,0],327,"Middle",[[301,0]],"ab"],[[4977.39,10290.9,0],218,"Middle",[[301,0]],"ab"],[[4983.32,10303.9,0],0,"Up",[[301,0]],"ab"],[[4986.44,10303.8,7.62939e-06],339,"Middle",[[301,0]],"mmg"],[[4988.41,10296.2,0.326286],334,"Up",[[301,0]],"ab"],[[4987.7,10292.4,0.248894],240,"Up",[[301,0]],"ab"]],[],[],east] call GW_Common_fnc_spawnGroup;
+
 		// Patrols
 		[[[[4733.16,9825.74,0],0,[]],[[4738.16,9820.74,0],0,[]],[[4728.16,9820.74,0],0,[]],[[4743.16,9815.74,0],0,[]]],[],[[[4785.62,9909.06,0],[[0,"Move"],[1,"SAFE"]]],[[4811.19,10029.9,0.000221252],[[0,"Move"]]],[[4837.84,10129.6,7.62939e-05],[[0,"Move"]]],[[4814.53,10029,0],[[0,"Move"]]],[[4790.16,9910.44,-0.000137329],[[0,"Move"]]],[[4743.06,9823.65,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[5048.87,10514.3,0],175,[]],[[5043.45,10518.8,0],175,[]],[[5053.41,10519.7,0],175,[]],[[5038.03,10523.3,0],175,[]]],[],[[[4997.19,10426,0],[[0,"Move"],[1,"SAFE"]]],[[5006.99,10349.1,0],[[0,"Move"]]],[[4968.84,10298.9,0],[[0,"Move"]]],[[5005.17,10350.3,0],[[0,"Move"]]],[[4999.58,10424.8,0],[[0,"Move"]]],[[5038.83,10515.5,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[5060.78,10078.7,3.05176e-05],0,[]],[[5065.78,10073.7,1.52588e-05],0,[]],[[5055.78,10073.7,1.52588e-05],0,[]],[[5070.78,10068.7,1.52588e-05],0,[]]],[],[[[5147.51,10114.8,1.52588e-05],[[0,"Move"],[1,"SAFE"]]],[[5171.2,10196.4,0],[[0,"Move"]]],[[5088.94,10318.2,0],[[0,"Move"]]],[[5174.54,10195.5,0],[[0,"Move"]]],[[5152.05,10116.2,0],[[0,"Move"]]],[[5070.68,10076.6,1.52588e-05],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[4796.6,10161.6,0],0,[]],[[4801.6,10156.6,0],0,[]],[[4791.6,10156.6,0],0,[]],[[4806.6,10151.6,0],0,[]]],[],[[[4782.69,10257,0],[[0,"Move"],[1,"SAFE"]]],[[4771.43,10339.4,0],[[0,"Move"]]],[[4934.06,10422.4,3.8147e-06],[[0,"Move"]]],[[4774.77,10338.5,0],[[0,"Move"]]],[[4787.23,10258.3,0],[[0,"Move"]]],[[4806.5,10159.5,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
-
 	};
 
 	case 2: {
@@ -75,8 +123,8 @@ switch (_case) do {
 		[[[[5025.67,9700.38,3.13229],0,[]],[[5025.68,9697.53,3.51202],0,[]],[[5022.71,9698.94,2.81503],0,[]],[[5023.39,9694.1,3.97043],0,[]]],[],[[[5007.13,9828.75,0],[[0,"Move"]]],[[4959.25,9903.44,0],[[0,"Move"]]],[[4816.21,10046.6,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[4841.46,9616.32,0],0,[]],[[4841.48,9613.47,0.83374],0,[]],[[4838.51,9614.89,2.46722],0,[]],[[4839.19,9610.05,1.29053],0,[]]],[],[[[4773.72,9620.34,0],[[0,"Move"]]],[[4688.45,9692.32,0],[[0,"Move"]]],[[4728.99,9853.96,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
 
-		[convoystart_1,convoywp_1,convoyend_1,independent,[3,[_ConvoyVehicle], 50, 40],[true,4],[], false, false] spawn OKS_fnc_Convoy_Spawn;
-		[convoystart_2,convoywp_2,convoyend_2,independent,[3,[_ConvoyVehicle], 50, 40],[true,4],[], false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_1,convoywp_1,convoyend_1,independent,[5,_ConvoyVehicle, 45, 40],[true,4],[], false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_2,convoywp_2,convoyend_2,independent,[5,_ConvoyVehicle, 45, 40],[true,4],[], false, false] spawn OKS_fnc_Convoy_Spawn;
 	};
 
 	case 3: {
@@ -106,6 +154,7 @@ switch (_case) do {
 		[[[[5522.57,11254.8,0],155,[]],[[5515.93,11257.2,0],155,[]],[[5525.01,11261.4,-7.62939e-06],155,[]],[[5509.29,11259.6,-7.62939e-06],155,[]]],[],[[[5466.1,11343.1,1.9491],[[0,"Move"],[1,"SAFE"]]],[[5506.94,11353.5,0],[[0,"Move"]]],[[5555.33,11298.4,0],[[0,"Move"]]],[[5528.89,11256.9,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 
 		[[5445.13,11387.5,0],"sector",50,EAST,false, false, false, "Task_2"] spawn OKS_fnc_CreateObjectives;
+		[[[[5505.69,11169.1,0.430428],63,"Middle",[[301,0]],"ftl"],[[5513.8,11172.6,4.03304],41,"Up",[[301,0]],"mmg"],[[5518.15,11168.3,0.527542],214,"Middle",[[301,1]],"ag"],[[5507.74,11175.5,3.94691],108,"Up",[[301,0]],"r"],[[5514.34,11165.6,3.9],262,"Up",[[301,0]],"mat"],[[5506,11172.2,3.88743],12,"Up",[[301,0]],"mat"],[[5505.79,11169.1,3.85327],45,"Middle",[[301,0]],"r"]],[],[],east] call GW_Common_fnc_spawnGroup;
 
 		[AirBase_1, AirSpawn_1, AirHuntTrigger_2, independent, "O_Heli_Transport_04_covered_F", 'fastrope', [1,0.5], 900, 100, 90, 5] spawn OKS_fnc_Airbase; sleep 20;
 		[AirBase_2, AirSpawn_2, AirHuntTrigger_2, independent, "O_Heli_Transport_04_covered_F", 'fastrope', [1,0.5], 900, 100, 90, 5] spawn OKS_fnc_Airbase; sleep 20;
@@ -129,8 +178,8 @@ switch (_case) do {
 
 		_ConvoyArray1 = [];
 		_ConvoyArray2 = [];
-		[convoystart_3,convoywp_3,convoyend_3,independent,[6,[_ConvoyVehicle], 50, 40],[true,4], _ConvoyArray1, false, false] spawn OKS_fnc_Convoy_Spawn;
-		[convoystart_4,convoywp_4,convoyend_4,independent,[6,[_ConvoyVehicle], 50, 40],[true,4], _ConvoyArray2, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_3,convoywp_3,convoyend_3,independent,[6,_ConvoyVehicle, 50, 45],[true,4], _ConvoyArray1, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_4,convoywp_4,convoyend_4,independent,[6,_ConvoyVehicle, 50, 45],[true,4], _ConvoyArray2, false, false] spawn OKS_fnc_Convoy_Spawn;
 
 		waitUntil {
 			sleep 10;	
@@ -192,9 +241,9 @@ switch (_case) do {
 		_ConvoyArray1 = [];
 		_ConvoyArray2 = [];
 		_ConvoyArray3 = [];
-		[convoystart_5,convoywp_5,convoyend_5,independent,[6,[_ConvoyVehicle], 50, 40],[true,4], _ConvoyArray1, false, false] spawn OKS_fnc_Convoy_Spawn;
-		[convoystart_6,convoywp_6,convoyend_6,independent,[6,[_ConvoyVehicle], 50, 40],[true,4], _ConvoyArray2, false, false] spawn OKS_fnc_Convoy_Spawn;
-		[convoystart_7,convoywp_7,convoyend_7,independent,[6,[_ConvoyVehicle], 50, 40],[true,4], _ConvoyArray3, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_5,convoywp_5,convoyend_5,independent,[6,_ConvoyVehicle, 50, 40],[true,4], _ConvoyArray1, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_6,convoywp_6,convoyend_6,independent,[6,_ConvoyVehicle, 50, 40],[true,4], _ConvoyArray2, false, false] spawn OKS_fnc_Convoy_Spawn;
+		[convoystart_7,convoywp_7,convoyend_7,independent,[6,_ConvoyVehicle, 50, 40],[true,4], _ConvoyArray3, false, false] spawn OKS_fnc_Convoy_Spawn;
 
 		waitUntil {
 			sleep 10;	
