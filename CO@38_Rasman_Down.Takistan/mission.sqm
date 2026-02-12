@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10087;
+		nextID=10132;
 	};
 	class Camera
 	{
@@ -33213,7 +33213,7 @@ class Mission
 						};
 					};
 					id=404;
-					atlOffset=3380035.5;
+					atlOffset=3380029.8;
 				};
 				class Item13
 				{
@@ -34102,7 +34102,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9430.7256,96.675217,11990.511};
-										angles[]={-0,3.0740938,0};
+										angles[]={0,3.0740938,0};
 									};
 									side="Empty";
 									flags=4;
@@ -34118,7 +34118,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9437.3115,95.980003,11991.847};
-										angles[]={-0,3.0740938,0};
+										angles[]={0,3.0740938,0};
 									};
 									side="Empty";
 									flags=4;
@@ -34134,7 +34134,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9430.6387,95.980003,11989.864};
-										angles[]={-0,3.0670986,0};
+										angles[]={0,3.0670986,0};
 									};
 									title="Service Station";
 									description="This service station allows pilots to configure their pylons, rearm, refuel and repair using the ACE Framework.";
@@ -34146,7 +34146,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9438.0098,98.095901,11993.052};
-										angles[]={-0,3.0651996,0};
+										angles[]={0,3.0651996,0};
 									};
 									side="Empty";
 									flags=4;
@@ -49272,7 +49272,6 @@ class Mission
 			a=0.60000002;
 			b=0.60000002;
 			id=4341;
-			atlOffset=0.31952667;
 		};
 		class Item21
 		{
@@ -49390,14 +49389,14 @@ class Mission
 						angles[]={0.079829417,1.6371621,6.1637568};
 					};
 					side="Independent";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						name="radar_1G";
 					};
 					id=4403;
 					type="I_UAV_AI";
-					atlOffset=0.0096435547;
+					atlOffset=2.9342422;
 				};
 			};
 			class Attributes
@@ -49444,13 +49443,14 @@ class Mission
 						angles[]={0.12415794,0.19326052,6.2049422};
 					};
 					side="Independent";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						name="radar_1G_1";
 					};
 					id=4405;
 					type="I_UAV_AI";
+					atlOffset=2.9463501;
 				};
 			};
 			class Attributes
@@ -53055,7 +53055,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9433.7754,97.862686,11971.144};
-				angles[]={-0,1.6660154,0};
+				angles[]={0,1.6660154,0};
 			};
 			side="Empty";
 			flags=4;
