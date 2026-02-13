@@ -11,11 +11,11 @@ _vest =  ["V_PlateCarrierIAGL_dgtl"];
 _backpack = ["UK3CB_AAF_B_B_FIELDPACK_DIGI_GRN"];
 _backpackRadio = ["TFAR_anprc155"];
 
-if (_role in ["ag","ammg","lr","ab"]) then {
+if (_role in ["ag","ammg","lr","ab","atab"]) then {
 	_backpack = "UK3CB_AAF_B_B_CARRYALL_DIGI_GRN";
 	_vest = "V_PlateCarrierIAGL_dgtl";
 };
-if(_role in ["ab","drone"]) then {
+if(_role in ["ab","atab"]) then {
 	_backpack = "B_Bergen_dgtl_F";
 };
 if (_role isEqualTo "crew") then {
@@ -61,7 +61,7 @@ _LMG_mag = "200Rnd_65x39_cased_Box_Tracer";
 _MMG = ["LMG_Mk200_F", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "200Rnd_65x39_cased_Box_Tracer";
 
-_LAT = ["UK3CB_BAF_NLAW_Launcher", _silencer, _pointer, _sight, _bipod];
+_LAT = ["launch_NLAW_F", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "";
 _LAT_ReUsable = false;
 
@@ -84,9 +84,9 @@ _pdw_mag_tr = "UK3CB_MP5_30Rnd_9x19_Magazine_RT";
 
 _silencer = "muzzle_snds_B_khk_F";
 _pointer = "acc_pointer_IR";
-_sight = "optic_LRPS_tna_F";
+_sight = "rhsusf_acc_ACOG_RMR";
 _bipod = "bipod_03_F_oli";
 
 _rifleMarksman = ["srifle_DMR_03_woodland_F", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "20Rnd_762x51_Mag";
-_rifleMarksman_mag_tr = "20Rnd_762x51_Mag";
+_rifleMarksman_mag = "ACE_20Rnd_762x51_Mag_Tracer";
+_rifleMarksman_mag_tr = "ACE_20Rnd_762x51_Mag_Tracer";
