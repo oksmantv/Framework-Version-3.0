@@ -5,7 +5,7 @@ _insignia = "";
 _goggles = ["G_Balaclava_TI_blk_F"];
 _helmet = ["rhssaf_helmet_m97_black_nocamo","rhssaf_helmet_m97_black_nocamo_black_ess","rhssaf_helmet_m97_black_nocamo_black_ess_bare"];
 _OfficerHelmet = "rhssaf_beret_green";
-_uniform = ["acp_gol_US_Tigerstripe_U_O_officer_US_Tigerstripe_hex_F"];
+_uniform = ["acp_gol_US_Tigerstripe_U_B_CTRG_Soldier_3_US_Tigerstripe_F","acp_gol_US_Tigerstripe_U_B_CTRG_Soldier_US_Tigerstripe_F"];
 _vest = ["UK3CB_V_Carrier_Rig_CQB_BLK","UK3CB_TKA_B_V_GA_HEAVY_BLK"];
 _backpack = "B_ViperLightHarness_blk_F";
 _backpackRadio = _backpack;
@@ -53,11 +53,11 @@ _rifleC_mag_tr = "UK3CB_DBP88_30rnd_580x42_RT";
 _rifleL_mag = "ACE_20Rnd_65_Creedmor_mag";
 _rifleL_mag_tr = "ACE_20Rnd_65_Creedmor_mag";
 
-_LMG = ["arifle_CTARS_blk_F", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "UK3CB_DBP88_100rnd_580x42_RT";
+_LMG = ["GOL_LMG_Zafir_F", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "150Rnd_762x54_Box_Tracer_Red";
 
-_MMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "UK3CB_BAF_762_200Rnd_T";
+_MMG = ["GOL_LMG_Zafir_F", _silencer, _pointer, _sight, _bipod];
+_MMG_mag = "150Rnd_762x54_Box_Tracer_Red";
 
 _sight = "";
 

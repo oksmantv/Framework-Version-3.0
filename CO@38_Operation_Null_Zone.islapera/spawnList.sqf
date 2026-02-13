@@ -21,6 +21,8 @@ params [
 	"_case"
 ];
 
+systemChat format ["SpawnList: Case %1", _case];
+
 switch (_case) do {
 
 	case 0: {
@@ -163,6 +165,11 @@ switch (_case) do {
 
 	case 4: {
 
+		[DeleteTrigger_1] spawn OKS_fnc_DeleteDeadAndObjects;
+		{
+			deleteVehicle _X;
+		} foreach [Spawn_1,Spawn_2,Spawn_3,Spawn_4,Spawn_4,Spawn_5,Spawn_6,Spawn_19,Spawn_20,Spawn_21];
+
 		// Statics.
 		[[[[8141.43,2701.21,0.23489],16,"Up",[]],[[8138.71,2668.16,0.0503466],14,"Up",[]],[[8129.54,2670.63,0.0968374],305,"Up",[]],[[8108.2,2685.26,0.280401],91,"Up",[]],[[8140.83,2695.21,0.273988],111,"Up",[]],[[8118.83,2702.69,0.364498],171,"Up",[]],[[8119.99,2704.58,0.507792],256,"Up",[]],[[8122.31,2706.13,0.667587],159,"Middle",[]],[[8114.97,2703.3,0.107311],115,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 		[[[[8089.43,2704.55,0.409613],69,"Up",[]],[[8074.45,2723.75,0.169757],54,"Up",[]],[[8121.73,2722.87,0.232319],323,"Up",[]],[[8127.37,2725.33,0.272253],309,"Up",[]],[[8090.66,2763.87,0.697636],178,"Up",[]],[[8086.73,2769.12,0.690499],135,"Up",[]],[[8082.6,2768.36,5.96046e-08],173,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
@@ -205,17 +212,20 @@ switch (_case) do {
 		[Spawn_10, Spawn_10, NEKY_Hunt_Trigger_2, 10,180,east,_Vehicles,90] spawn OKS_fnc_Huntbase;  sleep 10;
 		[Spawn_11, Spawn_11, NEKY_Hunt_Trigger_2, 10,180,east,_Vehicles,90] spawn OKS_fnc_Huntbase;  sleep 30;
 
-		[DeleteTrigger_1] spawn OKS_fnc_DeleteDeadAndObjects;
 
-		{
-			deleteVehicle _X;
-		} foreach [Spawn_1,Spawn_2,Spawn_3,Spawn_4,Spawn_4,Spawn_5,Spawn_6,Spawn_19,Spawn_20,Spawn_21]
 	};
 
 	case 5: {
 
 		// Objective 3 - Valkyrie
 		// Patrols.
+		{ 
+			deleteVehicle _X 
+		} foreach [spawn_8, spawn_9, spawn_7, spawn_10, spawn_11, spawn_17, spawn_18];
+
+		[DeleteTrigger_2] spawn OKS_fnc_DeleteDeadAndObjects;
+
+
 		[getpos fire_5] spawn OKS_Fire;
 		[getpos fire_7] spawn OKS_Fire;
 		[[[[2388.58,6925.33,0],0,[]],[[2388.4,6923.98,1.19209e-07],0,[]],[[2386.83,6929.86,0],0,[]],[[2386.31,6926.72,0],0,[]]],[],[[[2284.54,6994.19,0],[[0,"Move"],[1,"SAFE"],[3,15]]],[[2323.11,7116.78,0],[[0,"Move"],[3,15]]],[[2394.56,7101.33,5.96046e-08],[[0,"Move"],[3,15]]],[[2403.25,6965.67,0],[[0,"Cycle"],[3,15]]]]] call GW_Common_fnc_spawnGroup;
@@ -278,8 +288,6 @@ switch (_case) do {
 
 		// Objective 3 Valkyrie
 		// Reinforcements
-
-		[DeleteTrigger_2] spawn OKS_fnc_DeleteDeadAndObjects;
 		private _Vehicles = [
 			"UK3CB_CSAT_F_O_BTR40_MG", 
 			"UK3CB_CSAT_F_O_BTR60", 
@@ -315,6 +323,15 @@ switch (_case) do {
 		[Spawn_22, Spawn_12, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
 		[Spawn_23, Spawn_23, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
 		[Spawn_24, Spawn_24, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
+	};
+
+	case 8:{
+
+		[getPos LambsGroupSpawn_1, "ambushrush", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_2, "ambushrush", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_3, "ambushrush", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_4, "ambushrush", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+
 	};
 
 	default {
