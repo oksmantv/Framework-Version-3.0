@@ -87,8 +87,6 @@ switch (_case) do {
 			["UK3CB_CSAT_F_O_BTR80",[7449.65,3840.42,0],153,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["Green",1]],[7,["light_hide",1,"spare_hide",0]]]]
 		],[]] call GW_Common_fnc_spawnGroup;
 		
-		sleep 15;
-		[Trigger_1,0,12,0,0,false,true] spawn OKS_fnc_Civilians;
 	};
 
 	case 2: {
@@ -117,16 +115,16 @@ switch (_case) do {
 			"UK3CB_CSAT_F_O_LSV_02"
 		];
 
-		[Spawn_1, Spawn_1, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_2, Spawn_2, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_3, Spawn_3, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_4, Spawn_4, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_4, Spawn_4, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_5, Spawn_5, NEKY_Hunt_Trigger_1, 10,300,independent,_Vehicles,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_6, Spawn_6, NEKY_Hunt_Trigger_1, 10,300,independent,_Vehicles,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_19, Spawn_19, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_20, Spawn_20, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_21, Spawn_21, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase;
+		[Spawn_1, Spawn_1, NEKY_Hunt_Trigger_1, 10,600,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_2, Spawn_2, NEKY_Hunt_Trigger_1, 10,600,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_3, Spawn_3, NEKY_Hunt_Trigger_1, 10,600,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_4, Spawn_4, NEKY_Hunt_Trigger_1, 10,600,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_4, Spawn_4, NEKY_Hunt_Trigger_1, 10,600,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_5, Spawn_5, NEKY_Hunt_Trigger_1, 10,600,independent,_Vehicles,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_6, Spawn_6, NEKY_Hunt_Trigger_1, 10,600,independent,_Vehicles,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_19, Spawn_19, NEKY_Hunt_Trigger_1, 10,600,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_20, Spawn_20, NEKY_Hunt_Trigger_1, 10,600,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_21, Spawn_21, NEKY_Hunt_Trigger_1, 10,600,independent,5,90] spawn OKS_fnc_Huntbase;
 	};
 
 	case 3: {
@@ -159,8 +157,7 @@ switch (_case) do {
 			["UK3CB_CSAT_F_O_BTR60",[8073.45,2740.4,0.503356],138,[["driver",-1,[]],["gunner",-1,[0]]],[[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_l4_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",0,"crate_r4_unhide",1,"water_1_unhide",0,"water_2_unhide",0,"wheel_1_unhide",0,"wheel_2_unhide",0]]]]
 		],[]] call GW_Common_fnc_spawnGroup;
 
-		sleep 15;
-		[Trigger_2,0,12,0,0,false,true] spawn OKS_fnc_Civilians;
+
 	};
 
 	case 4: {
@@ -204,13 +201,13 @@ switch (_case) do {
 			"UK3CB_CSAT_F_O_LSV_02", 
 			"UK3CB_CSAT_F_O_LSV_02"
 		];
-		[Spawn_7, Spawn_7, NEKY_Hunt_Trigger_2, 10,180,east,7,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_8, Spawn_8, NEKY_Hunt_Trigger_2, 10,180,east,7,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_9, Spawn_9, NEKY_Hunt_Trigger_2, 10,180,east,7,90] spawn OKS_fnc_Huntbase;  sleep 10;
-		[Spawn_17, Spawn_17, NEKY_Hunt_Trigger_2, 10,180,independent,7,90] spawn OKS_fnc_Huntbase;  sleep 10;
-		[Spawn_18, Spawn_18, NEKY_Hunt_Trigger_2, 10,180,independent,7,90] spawn OKS_fnc_Huntbase;  sleep 10;
-		[Spawn_10, Spawn_10, NEKY_Hunt_Trigger_2, 10,180,east,_Vehicles,90] spawn OKS_fnc_Huntbase;  sleep 10;
-		[Spawn_11, Spawn_11, NEKY_Hunt_Trigger_2, 10,180,east,_Vehicles,90] spawn OKS_fnc_Huntbase;  sleep 30;
+		[Spawn_7, Spawn_7, NEKY_Hunt_Trigger_2, 10,600,east,7,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_8, Spawn_8, NEKY_Hunt_Trigger_2, 10,600,east,7,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_9, Spawn_9, NEKY_Hunt_Trigger_2, 10,600,east,7,90] spawn OKS_fnc_Huntbase;  sleep 10;
+		[Spawn_17, Spawn_17, NEKY_Hunt_Trigger_2, 10,600,independent,7,90] spawn OKS_fnc_Huntbase;  sleep 10;
+		[Spawn_18, Spawn_18, NEKY_Hunt_Trigger_2, 10,600,independent,7,90] spawn OKS_fnc_Huntbase;  sleep 10;
+		[Spawn_10, Spawn_10, NEKY_Hunt_Trigger_2, 10,600,east,_Vehicles,90] spawn OKS_fnc_Huntbase;  sleep 10;
+		[Spawn_11, Spawn_11, NEKY_Hunt_Trigger_2, 10,600,east,_Vehicles,90] spawn OKS_fnc_Huntbase;  sleep 30;
 
 
 	};
@@ -224,7 +221,6 @@ switch (_case) do {
 		} foreach [spawn_8, spawn_9, spawn_7, spawn_10, spawn_11, spawn_17, spawn_18];
 
 		[DeleteTrigger_2] spawn OKS_fnc_DeleteDeadAndObjects;
-
 
 		[getpos fire_5] spawn OKS_Fire;
 		[getpos fire_7] spawn OKS_Fire;
@@ -262,11 +258,11 @@ switch (_case) do {
 
 		// Objective 3 
 		// Ambush HLS
-		[getpos ambush_1, "ambushrush", 6, independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
-		[getpos ambush_2, "ambushrush", 6, independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
-		[getpos ambush_3, "ambushrush", 6, independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
-		[getpos ambush_4, "ambushrush", 6, independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
-		[getpos ambush_5, "ambushrush", 6, independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getpos ambush_1, "ambushrush", 4, independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getpos ambush_2, "ambushrush", 4, independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getpos ambush_3, "ambushrush", 4, independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getpos ambush_4, "ambushrush", 4, independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getpos ambush_5, "ambushrush", 4, independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
 	};
 
 	case 6: {
@@ -315,14 +311,14 @@ switch (_case) do {
 			"UK3CB_CSAT_F_O_LSV_02", 
 			"UK3CB_CSAT_F_O_LSV_02"
 		];
-		[Spawn_12, Spawn_12, NEKY_Hunt_Trigger_3, 10,240,east,6,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_13, Spawn_13, NEKY_Hunt_Trigger_3, 10,240,east,6,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_14, Spawn_14, NEKY_Hunt_Trigger_3, 10,300,east,_Vehicles,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_15, Spawn_15, NEKY_Hunt_Trigger_3, 10,300,east,_Vehicles,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_16, Spawn_16, NEKY_Hunt_Trigger_3, 10,300,east,_Vehicles,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_22, Spawn_12, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_23, Spawn_23, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
-		[Spawn_24, Spawn_24, NEKY_Hunt_Trigger_1, 10,300,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_12, Spawn_12, NEKY_Hunt_Trigger_3, 10,300,east,6,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_13, Spawn_13, NEKY_Hunt_Trigger_3, 10,300,east,6,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_14, Spawn_14, NEKY_Hunt_Trigger_3, 10,600,east,_Vehicles,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_15, Spawn_15, NEKY_Hunt_Trigger_3, 10,600,east,_Vehicles,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_16, Spawn_16, NEKY_Hunt_Trigger_3, 10,600,east,_Vehicles,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_22, Spawn_12, NEKY_Hunt_Trigger_1, 10,600,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_23, Spawn_23, NEKY_Hunt_Trigger_1, 10,600,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
+		[Spawn_24, Spawn_24, NEKY_Hunt_Trigger_1, 10,600,independent,5,90] spawn OKS_fnc_Huntbase; sleep 10;
 	};
 
 	case 8:{
