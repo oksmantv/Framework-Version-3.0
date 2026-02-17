@@ -38,9 +38,9 @@ if (_role isEqualTo "jetp") then {
 	_backpack = "B_Parachute";
 };
 
-_silencer = "muzzle_snds_65_TI_blk_F";
+_silencer = "";
 _pointer = "JCA_acc_LaserModule_black_Pointer";
-_sight = "JCA_optic_AHO_black";
+_sight = "JCA_optic_MROS_black";
 _bipod = "JCA_bipod_04_black";
 
 _rifle = ["arifle_ARX_blk_F", _silencer, _pointer, _sight, _bipod];
@@ -56,19 +56,19 @@ _rifleGL_mag_tr = "30Rnd_65x39_caseless_green_mag_Tracer";
 _rifleL_mag = "JCA_20Rnd_762x51_Green_SMAG";
 _rifleL_mag_tr = "JCA_20Rnd_762x51_Tracer_Green_SMAG";
 
-_LMG = ["arifle_CTARS_blk_F", "muzzle_snds_58_blk_F", _pointer, _sight, _sight];
-_LMG_mag = "100Rnd_580x42_Mag_Tracer_F";
+_LMG = ["GOL_MG3_KWS_B", _silencer, _pointer, _sight, _sight];
+_LMG_mag = "UK3CB_MG3_250rnd_762x51_RT";
 
-_MMG = ["LMG_Mk200_F", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "200Rnd_65x39_cased_Box_Tracer";
+_MMG = ["GOL_MG3_KWS_B", _silencer, _pointer, _sight, _bipod];
+_MMG_mag = "UK3CB_MG3_250rnd_762x51_RT";
 
-_LAT = ["rhs_weap_m72a7", _silencer, _pointer, _sight, _bipod];
+_LAT = ["JCA_launch_M72_black_F", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "";
 _LAT_ReUsable = false;
 
-_MAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
-_MAT_mag = "RPG7_F";
-_MAT_mag_HE = "rhs_rpg7_OG7V_mag";
+_MAT = ["launch_MRAWS_green_rail_F", _silencer, _pointer, _sight, _bipod];
+_MAT_mag = "MRAWS_HEAT_F";
+_MAT_mag_HE = "MRAWS_HE_F";
 
 _HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";
