@@ -202,7 +202,7 @@ if (_isMan) then {
 		["", "", "", "", "", ""] call _addLinkedItems;
 	} else {
 		if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {
-			_nvg = "ACE_NVG_Gen4_Black";
+			_nvg = "ACE_NVG_Wide_Black_WP";
 		};
 
 		if !(_isPlayer || (_unit in switchableUnits)) then {
@@ -694,6 +694,7 @@ if (_isMan) then {
 				[_unit, _pistol_mag, 6] call _fnc_AddObjectsCargo;
 				[_unit, _rifle_mag_tr, 12] call _fnc_AddObjectsCargo;
 				[_unit, _rifleC_mag_tr, 12] call _fnc_AddObjectsCargo;
+				[_unit, "10Rnd_50BW_Mag_F", 16] call _fnc_AddObjectsCargo;
 				[_unit, _rifleGL_mag_tr, 12] call _fnc_AddObjectsCargo;
 				[_unit, _LMG_mag, (COUNT_AR_MAGS(_LMG_mag) * 1.5)] call _fnc_AddObjectsCargo;
 				[_unit, _MAT_mag, 4] call _fnc_AddObjectsCargo;
@@ -718,7 +719,8 @@ if (_isMan) then {
 			case "tiny_box_special": {
 				[_unit, _glHEDP, 16] call _fnc_AddObjectsCargo;
 				[_unit, _glsmokeR, 8] call _fnc_AddObjectsCargo;
-				[_unit, _grenade, 8] call _fnc_AddObjectsCargo;				
+				[_unit, _grenade, 8] call _fnc_AddObjectsCargo;	
+				[_unit, "10Rnd_50BW_Mag_F", 16] call _fnc_AddObjectsCargo;			
 				[_unit, _incendiaryGrenade, 8] call _fnc_AddObjectsCargo;
 				[_unit, _smokegrenadeY, 8] call _fnc_AddObjectsCargo;
 				[_unit, _smokegrenadeB, 6] call _fnc_AddObjectsCargo;
@@ -771,7 +773,7 @@ if (_isMan) then {
 				[_unit, _saline, 25] call _fnc_AddObjectsCargo;
 				[_unit, _epi, 10] call _fnc_AddObjectsCargo;
 				[_unit, _flashBang, 10	] call _fnc_AddObjectsCargo;
-
+				[_unit, "10Rnd_50BW_Mag_F", 30] call _fnc_AddObjectsCargo;
 				[_unit, _pistol_mag, 12] call _fnc_AddObjectsCargo;
 				[_unit, _rifle_mag, 9] call _fnc_AddObjectsCargo;
 				[_unit, _rifle_mag_tr, 9] call _fnc_AddObjectsCargo;
