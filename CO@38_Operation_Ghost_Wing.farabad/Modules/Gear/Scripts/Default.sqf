@@ -58,12 +58,12 @@ switch (toLower(_role)) do {
 
 	case "pl": {
 		[_goggles,_helmet,_uniform,_vest,_backpackRadio] call _addEquipment;
-		[_rifleGL, _rifleGL_mag, "10Rnd_50BW_Mag_F"] call _addPrimary;
+		[_rifleGL, _rifleGL_mag, _glHEDP] call _addPrimary;
 		[_pistol, _pistol_mag, ""] call _addHandGun;
 		_IFAK call _addToUniform;
 		[[_mapTools,1],[_notepad,1],[_cables,6],[_gps,1],[_grenade,2],[_flashBang,2],[_pistol_mag,2],[_smokegrenadeY,4],[_smokegrenadeB,3],[_glsmokeR,5]] call _addToUniform;
 		[[_grenade,2],[_rifleGL_mag_tr,5],[_glHEDP,7]] call _addToVest;
-		[["10Rnd_50BW_Mag_F",6],[_rifleGL_mag,4]] call _addToBackpack;
+		[[_rifleGL_mag,4]] call _addToBackpack;
 		_rangefinder call _addBino;
 		[_map, "", "", _compass, _watch, ""] call _addLinkedItems;
 		if (((call EFUNC(Common,isNight)) && _allowedNightStuff) || _ForceNightStuff) then {
@@ -118,12 +118,12 @@ switch (toLower(_role)) do {
 
 	case "fac": {
 		[_goggles,_helmet,_uniform,_vest,_backpackRadio] call _addEquipment;
-		[_rifleGL, _rifleGL_mag_tr, "10Rnd_50BW_Mag_F"] call _addPrimary;
+		[_rifleGL, _rifleGL_mag_tr, _glsmokeR] call _addPrimary;
 		[_pistol, _pistol_mag, ""] call _addHandGun;
 		_IFAK call _addToUniform;
 		[[_mapTools,1],[_notepad,1],[_cables,6],[_gps,1],[_pistol_mag,2],[_grenade,2],[_smokegrenadeY,5]] call _addToUniform;
 		[[_rifleGL_mag_tr,6],[_smokegrenadeB,5]] call _addToVest;
-		[["10Rnd_50BW_Mag_F",6],[_flashBang,3],[_battery,1],[_FacPanels,4]] call _addToBackpack;
+		[[_flashBang,3],[_battery,1],[_FacPanels,4]] call _addToBackpack;
 		_laserDesignator call _addBino;
 		[_map, "", "", _compass, _watch, ""] call _addLinkedItems;
 		if (((call EFUNC(Common,isNight)) && _allowedNightStuff) || _ForceNightStuff) then {
@@ -144,11 +144,11 @@ switch (toLower(_role)) do {
 
 	case "sl": {
 		[_goggles,_helmet,_uniform,_vest,_backpackRadio] call _addEquipment;
-		[_rifleGL, _rifleGL_mag, "10Rnd_50BW_Mag_F"] call _addPrimary;
+		[_rifleGL, _rifleGL_mag, _glHEDP] call _addPrimary;
 		[_pistol, _pistol_mag, ""] call _addHandGun;
 		_IFAK call _addToUniform;
 		[[_mapTools,1],[_notepad,1],[_cables,6],[_gps,1],[_grenade,2],[_flashBang,2],[_pistol_mag,2],[_glsmokeR,5],[_smokegrenadeY,4],[_smokegrenadeB,3]] call _addToUniform;
-		[["10Rnd_50BW_Mag_F",6],[_grenade,2],[_rifleGL_mag_tr,5],[_glHEDP,7]] call _addToVest;
+		[[_grenade,2],[_rifleGL_mag_tr,5],[_glHEDP,7]] call _addToVest;
 		[[_rifleGL_mag,4]] call _addToBackpack;
 		_rangefinder call _addBino;
 		[_map, "", "", _compass, _watch, ""] call _addLinkedItems;
@@ -184,12 +184,12 @@ switch (toLower(_role)) do {
 
 	case "ftl": {
 		[_goggles,_helmet,_uniform,_vest,_backpack] call _addEquipment;
-		[_rifleGL, _rifleGL_mag, "10Rnd_50BW_Mag_F"] call _addPrimary;
+		[_rifleGL, _rifleGL_mag, _glHEDP] call _addPrimary;
 		[_pistol, _pistol_mag, ""] call _addHandGun;
 		_IFAK call _addToUniform;
 		[[_notepad,1],[_cables,6],[_gps,1],[_flashBang,3],[_smokegrenadeB,3]] call _addToUniform;
 		[[_grenade,4],[_rifleGL_mag_tr,4],[_pistol_mag,2],[_smokegrenadeY,4]] call _addToVest;
-		[["10Rnd_50BW_Mag_F",6],[_rifleGL_mag,4],[_glHEDP,7],[_glSmokeR,5]] call _addToBackpack;
+		[[_rifleGL_mag,4],[_glHEDP,7],[_glSmokeR,5]] call _addToBackpack;
 		_rangefinder call _addBino;
 		[_map, "", "", _compass, _watch, ""] call _addLinkedItems;
 		if (((call EFUNC(Common,isNight)) && _allowedNightStuff) || _ForceNightStuff) then {
@@ -211,7 +211,7 @@ switch (toLower(_role)) do {
 		[_pistol, _pistol_mag, ""] call _addHandGun;
 		_IFAK call _addToUniform;
 		[[_cables,4],[_defusalKit,1],[_flashBang,3],[_pistol_mag,2],[_smokegrenadeY,3]] call _addToUniform;
-		[["10Rnd_50BW_Mag_F",6],[_grenade,2],[_rifle_mag,4],[_rifle_mag_tr,4]] call _addToVest;
+		[[_grenade,2],[_rifle_mag,4],[_rifle_mag_tr,4]] call _addToVest;
 		["","","","",_backpack] call _addEquipment;
 		[_MAT, _MAT_mag, ""] call _addLaunchers;
 		[_map, _gps, "", _compass, _watch, ""] call _addLinkedItems;
@@ -250,7 +250,7 @@ switch (toLower(_role)) do {
 		_IFAK call _addToUniform;
 		[[_cables,6],[_grenade,2],[_incendiaryGrenade,3],[_flashBang,3],[_pistol_mag,2],[_smokegrenadeY,3]] call _addToUniform;
 		[[_grenade,2],[_rifleGL_mag,4],[_rifleGL_mag_tr,2]] call _addToVest;
-		[["10Rnd_50BW_Mag_F",6],[_glHEDP,7],[_glsmokeR,3],[_glsmokeY,3],[_clacker,1],[_demoCharge,2],[_rifleGL_mag_tr,2]] call _addToBackpack;
+		[[_glHEDP,7],[_glsmokeR,3],[_glsmokeY,3],[_clacker,1],[_demoCharge,2],[_rifleGL_mag_tr,2]] call _addToBackpack;
 		[_map, _gps, "", _compass, _watch, ""] call _addLinkedItems;
 		if (((call EFUNC(Common,isNight)) && _allowedNightStuff) || _ForceNightStuff) then {
 			_nvg call _addNVG;
@@ -313,7 +313,7 @@ switch (toLower(_role)) do {
 		_IFAK call _addToUniform;
 		[[_cables,6],[_rifle_mag,2],[_pistol_mag,2],[_smokegrenadeY,4],[_grenade,2],[_flashBang,2]] call _addToUniform;
 		[[_incendiaryGrenade,3]] call _addToUniform;
-		[["10Rnd_50BW_Mag_F",6],[_rifle_mag,2],[_rifle_mag_tr,2],[_clacker,1],[_demoCharge,3]] call _addToVest;
+		[[_rifle_mag,2],[_rifle_mag_tr,2],[_clacker,1],[_demoCharge,3]] call _addToVest;
 		[[_LMG_mag,COUNT_AG_MAGS(_LMG_mag)]] call _addToBackpack;		
 		if(_MedicalAsstGunner isEqualTo 1) then {
 			(_FAKSquad) call _addToBackpack;
