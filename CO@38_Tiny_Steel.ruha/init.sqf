@@ -10,5 +10,5 @@
 	Server Commands should be within the isServer check.
 */
 if(isServer) then {
-	
+	[group hvt_1, getMarkerPos "respawn_west", west, false, nil, true, true] spawn OKS_fnc_Evacuate_HVT;
 };

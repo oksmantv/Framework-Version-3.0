@@ -51,33 +51,31 @@ _map = "ItemMap";
 _gps = "ItemGPS";
 _compass = "ItemCompass";
 _watch = "ItemWatch";
-_nvg = "ACE_NVG_Gen4_Black";
+_nvg = "ACE_NVG_Wide_Black_WP";
+_nvgPilot = "ACE_NVG_Wide_Black_WP";
 _parachute = "B_Parachute";
 
 _demoCharge = "DemoCharge_Remote_Mag";			// Small
 _satchelCharge = "SatchelCharge_Remote_Mag";	// Big
-
-if (true) then {
-	_cTab = "ItemcTab";
-	_Android = "ItemAndroid";
-	_microDAGR = "ItemMicroDAGR";
-	_microDAGRGps = "ItemMicroDAGR";
-	_HelmetCam = "ItemcTabHCam";
-	_UAVTerminal = "B_UavTerminal";
-	_UAVTerminalB = "B_UavTerminal";
-	_UAVTerminalO = "O_UavTerminal";
-	_UAVTerminalI = "I_UavTerminal";
-	_gps = "";
-	if(hasInterface) then {
-		if(_role in ["sm","lightdragon"]) then {
-			_gps = _microDAGR;
-		};
-		if (_role in ["pl","fac","crew","sl","ftl","pm"]) then {
-			_gps = _Android;
-		};
-		if (_role in ["p","pj","dragon","marksman"]) then {
-			_gps = _cTab;
-		};
+_cTab = "ItemcTab";
+_Android = "ItemAndroid";
+_microDAGR = "ItemMicroDAGR";
+_microDAGRGps = "ItemMicroDAGR";
+_HelmetCam = "ItemcTabHCam";
+_UAVTerminal = "B_UavTerminal";
+_UAVTerminalB = "B_UavTerminal";
+_UAVTerminalO = "O_UavTerminal";
+_UAVTerminalI = "I_UavTerminal";
+_gps = "";
+if(hasInterface) then {
+	if(_role in ["sm","lightdragon"]) then {
+		_gps = _microDAGR;
+	};
+	if (_role in ["pl","fac","crew","sl","ftl","pm"]) then {
+		_gps = _Android;
+	};
+	if (_role in ["p","pj","dragon","marksman"]) then {
+		_gps = _cTab;
 	};
 };
 
