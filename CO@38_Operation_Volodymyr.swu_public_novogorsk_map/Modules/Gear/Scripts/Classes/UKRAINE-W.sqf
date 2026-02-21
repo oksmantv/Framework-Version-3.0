@@ -37,6 +37,9 @@ if (true) then {
 	_backpackRadio = "UK3CB_ION_B_B_RadioBag_OLI";
 };
 
+if(_role in ["r","g","amat","lr"]) then {
+	_backpack = "UK3CB_GAF_B_B_ENG_MULTICAM_01";
+};
 if(_role in ["ag","ammg"]) then {
 	_backpack = "UK3CB_GAF_B_B_ENG_MULTICAM_01";
 	_vest = "rhsusf_iotv_ocp_Medic";
@@ -78,28 +81,29 @@ _rifle = ["rhs_weap_ak105_zenitco01_b33", _silencer, _pointer, _sight, _bipod];
 _rifleC = ["UK3CB_AEK971_Railed", _silencer, _pointer, _sight, _bipod];
 _rifleGL = ["rhs_weap_ak74mr_gp25", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["JCA_arifle_SR10_VFG_black_F", "rhsusf_acc_aac_762sdn6_silencer", "JCA_acc_DualMount_black_Pointer", "rhsusf_acc_LEUPOLDMK4_2", "JCA_bipod_04_black"];
-_rifle_mag = "rhs_60Rnd_545X39_7N22_AK";
-_rifle_mag_tr = "UK3CB_AK12_60rnd_Magazine_RT";
-_rifleC_mag = "rhs_60Rnd_545X39_7N22_AK";
-_rifleC_mag_tr = "UK3CB_AK12_60rnd_Magazine_RT";
-_rifleGL_mag = "rhs_60Rnd_545X39_7N22_AK";
-_rifleGL_mag_tr = "UK3CB_AK12_60rnd_Magazine_RT";
+_rifle_mag = "rhs_30Rnd_545x39_7N22_plum_AK";
+_rifle_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
+_rifleC_mag = "rhs_30Rnd_545x39_7N22_plum_AK";
+_rifleC_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
+_rifleGL_mag = "rhs_30Rnd_545x39_7N22_plum_AK";
+_rifleGL_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
 _rifleL_mag = "ACE_20Rnd_65_Creedmor_mag";
 _rifleL_mag_tr = "ACE_20Rnd_65_Creedmor_mag";
 
-_LMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "UK3CB_BAF_762_200Rnd_T";
+_LMG = ["GOL_weap_fnmag", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "rhsusf_100Rnd_762x51_m62_tracer";
 
 _MMG = ["rhs_weap_pkm", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhs_100Rnd_762x54mmR_green";
 
-_LAT = ["UK3CB_BAF_AT4_CS_AT_Launcher", _silencer, _pointer, _sight, _bipod];
-_LAT_mag = "";
-_LAT_ReUsable = false;
+_LAT = ["launch_MRAWS_olive_rail_F", _silencer, _pointer, _sight, _bipod];
+_LAT_mag = "MRAWS_HEAT_F";
+_LAT_mag_HE = "MRAWS_HEAT_F";
+_LAT_ReUsable = true;
 
-_MAT = ["launch_MRAWS_olive_rail_F", _silencer, _pointer, _sight, _bipod];
-_MAT_mag = "MRAWS_HEAT_F";
-_MAT_mag_HE = "MRAWS_HE_F";
+_MAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
+_MAT_mag = "Vorona_HEAT";
+_MAT_mag_HE = "Vorona_HE";
 
 _HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";

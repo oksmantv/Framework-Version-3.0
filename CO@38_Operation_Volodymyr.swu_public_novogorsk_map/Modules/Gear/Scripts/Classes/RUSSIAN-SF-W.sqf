@@ -16,15 +16,15 @@ _glflareR = "rhs_VG40OP_red";
 _glflareW = "rhs_VG40OP_white";
 
 _insignia = "";
-_goggles = ["rhs_facewear_6m2","rhs_facewear_6m2_1"];
-_helmet = ["rhs_6b28","rhs_6b28_bala","rhs_6b28_ess","rhs_6b28_ess_bala"];
+_goggles = ["rhsusf_shemagh2_grn","rhsusf_shemagh_grn"];
+_helmet = ["rhs_beanie_green"];
 _OfficerHelmet = "rhs_beret_vdv3";
-_uniform = "rhs_uniform_vdv_emr";
-_vest = "rhs_6b23_digi_6sh92";
-_backpack = "rhs_rk_sht_30_emr";
+_uniform = "rhsgref_uniform_olive";
+_vest = "rhs_6b3_holster";
+_backpack = "UK3CB_CHC_C_B_HIKER";
 _backpackRadio = _backpack;
 if (true) then {
-	_backpackRadio = "rhs_tortila_emr";
+	_backpackRadio = "UK3CB_CW_SOV_O_LATE_B_ASS_BERGEN_Radio";
 };
 
 if (_role isEqualTo "uav") then {
@@ -71,8 +71,9 @@ _LAT = ["rhs_weap_rpg26", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "rhs_rpg26_mag";
 _LAT_ReUsable = false;
 
-_MAT = ["rhs_weap_rpg7", _silencer, _pointer, _sight, _bipod];
-_MAT_mag = "rhs_rpg7_PG7V_mag";
+_MAT = ["launch_RPG32_green_F", _silencer, _pointer, _sight, _bipod];
+_MAT_mag = "RPG32_F";
+_MAT_mag_HE = "RPG32_HE_F";
 
 _HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";
