@@ -74,12 +74,12 @@ if (_role isEqualTo "jetp") then {
 
 _silencer = "rhs_acc_uuk";
 _pointer = "";
-_sight = "optic_Hamr";
+_sight = "optic_Arco_blk_F";
 _bipod = "rhs_acc_grip_rk6";
 
-_rifle = ["rhs_weap_ak105_zenitco01_b33", _silencer, _pointer, _sight, _bipod];
-_rifleC = ["UK3CB_AEK971_Railed", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["rhs_weap_ak74mr_gp25", _silencer, _pointer, _sight, _bipod];
+_rifle = [["rhs_weap_ak105_zenitco01_b33","rhs_weap_ak74m_npz","UK3CB_AK12","rhs_weap_ak105_zenitco01_b33","rhs_weap_ak74m_camo_npz","rhs_weap_ak74n_2_npz","rhs_weap_aks74n_npz"], _silencer, _pointer, _sight, _bipod];
+_rifleC = [["UK3CB_AEK971_Railed","rhs_weap_ak105_zenitco01_b33"], _silencer, _pointer, _sight, _bipod];
+_rifleGL = [["rhs_weap_ak74mr_gp25","rhs_weap_ak74m_fullplum_gp25_npz","UK3CB_AK12_GL","rhs_weap_ak74m_gp25_npz","rhs_weap_ak74n_2_gp25_npz","rhs_weap_aks74n_gp25_npz"], _silencer, _pointer, _sight, _bipod];
 _rifleL = ["JCA_arifle_SR10_VFG_black_F", "rhsusf_acc_aac_762sdn6_silencer", "JCA_acc_DualMount_black_Pointer", "rhsusf_acc_LEUPOLDMK4_2", "JCA_bipod_04_black"];
 _rifle_mag = "rhs_30Rnd_545x39_7N22_plum_AK";
 _rifle_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";

@@ -187,7 +187,7 @@ switch (toLower(_role)) do {
 		[_rifleGL, _rifleGL_mag, _glHEDP] call _addPrimary;
 		[_pistol, _pistol_mag, ""] call _addHandGun;
 		_IFAK call _addToUniform;
-		[[_notepad,1],[_cables,6],[_gps,1],[_flashBang,3],[_smokegrenadeB,3]] call _addToUniform;
+		[[_notepad,1],[_HelmetCam,1],[_cables,6],[_gps,1],[_flashBang,3],[_smokegrenadeB,3]] call _addToUniform;
 		[[_grenade,4],[_rifleGL_mag_tr,4],[_pistol_mag,2],[_smokegrenadeY,4]] call _addToVest;
 		[[_rifleGL_mag,4],[_glHEDP,7],[_glSmokeR,5]] call _addToBackpack;
 		_rangefinder call _addBino;
@@ -232,7 +232,7 @@ switch (toLower(_role)) do {
 		if(_MAT select 0 == "") then {
 			[_LAT, _LAT_mag, ""] call _addLaunchers;
 			if (_LAT_ReUsable) then {
-				[[_LAT_mag,1]] call _addToBackpack;
+				[[_LAT_mag,2]] call _addToBackpack;
 			} else {
 				///((_loadout select 5) select 1) append [[_LAT,1]];
 				((_loadout select 5) select 1) append [[[(_LAT select 0),"","","",[],[],""],1]];
@@ -257,11 +257,12 @@ switch (toLower(_role)) do {
 			[[_mapFlashLight,1],[_IRStrobe,1]] call _addToUniform;
 			[[_handFlareG,1],[_glFlareW,15]] call _addToBackpack;
 		};
-		[[_LAT_mag,2]] call _addToBackpack;
+		[[_MAT_mag,1]] call _addToBackpack;
 		[_LAT, _LAT_mag, ""] call _addLaunchers;
+		[[_LAT_mag,2]] call _addToBackpack;
 		if(_MAT select 0 == "") then {
 			if (_LAT_ReUsable) then {
-				[[_LAT_mag,1]] call _addToBackpack;
+				[[_LAT_mag,2]] call _addToBackpack;
 			} else {
 				///((_loadout select 5) select 1) append [[_LAT,1]];
 				((_loadout select 5) select 1) append [[[(_LAT select 0),"","","",[],[],""],1]];
@@ -281,7 +282,7 @@ switch (toLower(_role)) do {
 		// Mine detector is a handgun: replace the pistol
 		[_mineDetectorVMH3Weapon, "", ""] call _addHandGun;
 		_IFAK call _addToUniform;
-		[[_minedetector,1],[_cables,6],[_grenade,4],[_smokegrenadeY,2],[_defusalKit,1]] call _addToUniform;
+		[[_HelmetCam,1],[_minedetector,1],[_cables,6],[_grenade,4],[_smokegrenadeY,2],[_defusalKit,1]] call _addToUniform;
 		[[_markerFlagGreen,3],[_markerFlagRed,3],[_spraypaintRed,1],[_spraypaintGreen,1],[_fortifyTool,1]] call _addToUniform;
 		[[_grenade,2],[_rifleC_mag,4],[_rifleC_mag_tr,2]] call _addToVest;
 		[[_clacker,1],[_demoCharge,3],[_rifleC_mag_tr,2]] call _addToBackpack;
@@ -295,7 +296,7 @@ switch (toLower(_role)) do {
 		[_MAT, _MAT_mag_HE, ""] call _addLaunchers;
 		if(_MAT select 0 == "") then {
 			if (_LAT_ReUsable) then {
-				[[_LAT_mag,1]] call _addToBackpack;
+				[[_LAT_mag,2]] call _addToBackpack;
 			} else {
 				///((_loadout select 5) select 1) append [[_LAT,1]];
 				((_loadout select 5) select 1) append [[[(_LAT select 0),"","","",[],[],""],1]];

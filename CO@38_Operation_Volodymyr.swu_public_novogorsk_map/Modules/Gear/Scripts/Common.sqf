@@ -101,8 +101,8 @@ _epi = "ACE_epinephrine";
 _morph = "ACE_morphine";
 _tourn = "ACE_tourniquet";
 _pak = "ACE_personalAidKit";
-_saline = "ACE_salineIV";
-_salineSm = "ACE_SalineIV_500";
+_saline = "ACE_plasmaIV";
+_salineSm = "ACE_plasmaIV_500";
 
 _IFAK = [[_bandage,17],[_tourn,2],[_morph,5]];
 
