@@ -51,33 +51,31 @@ _map = "ItemMap";
 _gps = "ItemGPS";
 _compass = "ItemCompass";
 _watch = "ItemWatch";
-_nvg = "ACE_NVG_Gen4_Black";
+_nvg = "ACE_NVG_Wide_Black_WP";
+_nvgPilot = "ACE_NVG_Wide_Black_WP";
 _parachute = "B_Parachute";
 
 _demoCharge = "DemoCharge_Remote_Mag";			// Small
 _satchelCharge = "SatchelCharge_Remote_Mag";	// Big
-
-if (true) then {
-	_cTab = "ItemcTab";
-	_Android = "ItemAndroid";
-	_microDAGR = "ItemMicroDAGR";
-	_microDAGRGps = "ItemMicroDAGR";
-	_HelmetCam = "ItemcTabHCam";
-	_UAVTerminal = "B_UavTerminal";
-	_UAVTerminalB = "B_UavTerminal";
-	_UAVTerminalO = "O_UavTerminal";
-	_UAVTerminalI = "I_UavTerminal";
-	_gps = "";
-	if(hasInterface) then {
-		if(_role in ["sm","lightdragon"]) then {
-			_gps = _microDAGR;
-		};
-		if (_role in ["pl","fac","crew","sl","ftl","pm"]) then {
-			_gps = _Android;
-		};
-		if (_role in ["p","pj","dragon","marksman"]) then {
-			_gps = _cTab;
-		};
+_cTab = "ItemcTab";
+_Android = "ItemAndroid";
+_microDAGR = "ItemMicroDAGR";
+_microDAGRGps = "ItemMicroDAGR";
+_HelmetCam = "ItemcTabHCam";
+_UAVTerminal = "B_UavTerminal";
+_UAVTerminalB = "B_UavTerminal";
+_UAVTerminalO = "O_UavTerminal";
+_UAVTerminalI = "I_UavTerminal";
+_gps = "";
+if(hasInterface) then {
+	if(_role in ["sm","lightdragon"]) then {
+		_gps = _microDAGR;
+	};
+	if (_role in ["pl","fac","crew","sl","ftl","pm"]) then {
+		_gps = _Android;
+	};
+	if (_role in ["p","pj","dragon","marksman"]) then {
+		_gps = _cTab;
 	};
 };
 
@@ -103,8 +101,8 @@ _epi = "ACE_epinephrine";
 _morph = "ACE_morphine";
 _tourn = "ACE_tourniquet";
 _pak = "ACE_personalAidKit";
-_saline = "ACE_salineIV";
-_salineSm = "ACE_SalineIV_500";
+_saline = "ACE_plasmaIV";
+_salineSm = "ACE_plasmaIV_500";
 
 _IFAK = [[_bandage,17],[_tourn,2],[_morph,5]];
 
@@ -175,6 +173,11 @@ _packedDroneAP = "GOL_Packed_Drone_AP";
 _packedDroneAT = "GOL_Packed_Drone_AT";
 _packedDroneRecon = "GOL_Packed_Drone_Recon";
 _packedDroneSupply = "GOL_Packed_Drone_Supply";
+_Disruptor_Antenna = "OKS_Disruptor_Antenna";
+_Disruptor_Pistol = ["OKS_DroneDisruptor_Pistol",_Disruptor_Antenna,"",""];
+_Disruptor_Mag = "OKS_Mag_DroneDisruptor";
+_DroneJammer = "OKS_DroneJammer";
+_DroneDetector = "OKS_DroneDetector";
 
 _flashBang = "";
 _handFlareG = "";

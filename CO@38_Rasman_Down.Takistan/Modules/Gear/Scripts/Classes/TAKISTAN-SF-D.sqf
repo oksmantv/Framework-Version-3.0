@@ -60,32 +60,32 @@ if (_role isEqualTo "jetp") then {
 };
 
 // Attachments
-_silencer = "";
-_pointer = "";
-_sight = "";
-_bipod = "";
+_silencer = "rhs_acc_dtk4short";
+_pointer = "JCA_acc_LaserModule_black_Pointer";
+_sight = "JCA_optic_ARO_black";
+_bipod = "rhsusf_acc_rvg_blk";
 
 _rifle = ["rhs_weap_ak74mr", _silencer, _pointer, _sight, _bipod];
-_rifleC = ["rhs_weap_aks74un", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["rhs_weap_ak105_zenitco01_b33", _silencer, _pointer, _sight, _bipod];
 _rifleGL = ["rhs_weap_ak74mr_gp25", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["rhs_weap_svds", _silencer, _pointer, "rhs_acc_pso1m21", _bipod];
-_rifle_mag = "rhs_30Rnd_545x39_7N22_plum_AK";
-_rifle_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
-_rifle_mag = "rhs_30Rnd_545x39_7N22_plum_AK";
-_rifle_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
-_rifleGL_mag = "rhs_30Rnd_545x39_7N22_plum_AK";
-_rifleGL_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
-_rifleL_mag = "rhs_10Rnd_762x54mmR_7N14";
-_rifleL_mag_tr = "ACE_10Rnd_762x54_Tracer_mag";
+_rifle_mag = "UK3CB_AEK971_30rnd_Magazine_RT";
+_rifle_mag_tr = "UK3CB_AK12_30rnd_Magazine_RT";
+_rifle_mag = "UK3CB_AEK971_30rnd_Magazine_RT";
+_rifle_mag_tr = "UK3CB_AK12_30rnd_Magazine_RT";
+_rifleGL_mag = "UK3CB_AEK971_30rnd_Magazine_RT";
+_rifleGL_mag_tr = "UK3CB_AK12_30rnd_Magazine_RT";
+_rifleL_mag = "UK3CB_SVD_10rnd_762x54_R";
+_rifleL_mag_tr = "UK3CB_SVD_10rnd_762x54_RT";
 
-_LMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "UK3CB_BAF_762_200Rnd_T";
+_LMG = ["GOL_MMG_01_tan_F", "muzzle_snds_93mmg", "JCA_acc_LaserModule_sand_Pointer", "JCA_optic_AHO_sand", "JCA_bipod_04_sand"];
+_LMG_mag = "GOL_150Rnd_93x64_Mag_Tracer_Red";
 
-_MMG = ["UK3CB_MG3_KWS_B", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "UK3CB_MG3_100rnd_762x51_GT";
+_MMG = ["GOL_MMG_01_tan_F", "muzzle_snds_93mmg", "JCA_acc_LaserModule_sand_Pointer", "JCA_optic_AHO_sand", "JCA_bipod_04_sand"];
+_MMG_mag = "GOL_150Rnd_93x64_Mag_Tracer_Red";
 
-_LAT = ["rhs_weap_rpg18", _silencer, _pointer, _sight, _bipod];
-_LAT_mag = "rhs_rpg18_mag";
+_LAT = ["JCA_launch_M72_sand_F", _silencer, _pointer, _sight, _bipod];
+_LAT_mag = "";
 _LAT_ReUsable = false;
 
 _MAT = ["launch_MRAWS_sand_rail_F", _silencer, _pointer, _sight, _bipod];

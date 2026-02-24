@@ -60,9 +60,9 @@ switch (_case) do {
 		[[barricade_8],"Task_2",true] spawn OKS_fnc_Destroy_Barricade;
 
 		//[Trigger_1,false,[0,0,false,false],independent,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],true] spawn OKS_fnc_CreateZone;
-		[civilian_1,3,3,5,5,false,true] spawn OKS_fnc_Civilians;
-		[civilian_2,3,3,5,5,false,true] spawn OKS_fnc_Civilians;
-		[civilian_3,3,3,5,5,false,true] spawn OKS_fnc_Civilians;
+		[civilian_1,2,2,4,4,false,true] spawn OKS_fnc_Civilians;
+		[civilian_2,2,2,4,4,false,true] spawn OKS_fnc_Civilians;
+		[civilian_3,2,2,4,4,false,true] spawn OKS_fnc_Civilians;
 
 		// AA Guards for Supply Hubs
 		[[],[
@@ -152,7 +152,6 @@ switch (_case) do {
 
 		[Infantry_4, Infantry_4, NEKY_Hunt_Trigger_1, 4,180,independent,3,240] spawn OKS_fnc_Huntbase;
 		[Infantry_5, Infantry_5, NEKY_Hunt_Trigger_1, 4,180,independent,3,320] spawn OKS_fnc_Huntbase;		
-
 	};
 
 	case 3: {
@@ -174,9 +173,15 @@ switch (_case) do {
 	};
 
 	case 4: {
+
+		// First Convoy.
+		[ConvoySpawn_1,ConvoyWP_1,ConvoyEnd_1,independent,[5,["UK3CB_TKA_O_BMP1","UK3CB_TKA_O_BMP1","UK3CB_TKA_O_BTR40_PKM","UK3CB_TKA_O_BTR40","UK3CB_TKA_O_BTR40"],35,40],[true,4],[],false,false,["rush"],false] spawn OKS_fnc_Convoy_Spawn;
 	};
 
 	case 5: {
+
+		// Second Convoy.
+		[ConvoySpawn_2,ConvoyWP_2,ConvoyEnd_2,independent,[5,["UK3CB_TKA_O_BMP1","UK3CB_TKA_O_BMP1","UK3CB_TKA_O_BTR40_PKM","UK3CB_TKA_O_BTR40","UK3CB_TKA_O_BTR40"],35,40],[true,4],[],false,false,["rush"],false] spawn OKS_fnc_Convoy_Spawn;
 	};
 
 	case 6: {
