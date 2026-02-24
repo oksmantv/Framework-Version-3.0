@@ -161,17 +161,17 @@ switch (_case) do {
 		[[[[637.736,3377.46,1.52588e-05],0,[]],[[640.736,3374.46,1.52588e-05],0,[]],[[642.736,3374.46,1.52588e-05],0,[]],[[644.736,3374.46,1.52588e-05],0,[]]],[],[[[603.799,3409.34,1.12871],[[0,"Move"],[1,"SAFE"]]],[[521.392,3361.26,3.05176e-05],[[0,"Move"]]],[[479.692,3291.68,0],[[0,"Move"]]],[[523.06,3363.37,0],[[0,"Move"]]],[[603.153,3413.52,0.845947],[[0,"Move"]]],[[640.876,3381.05,1.52588e-05],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;		
 	
 		// HuntBases
-		// waitUntil {sleep 15; triggerActivated HuntTrigger_1};
-		// _vehicles = [
-		// 	"rhs_bmp1_msv", 
-		// 	"rhs_bmp1d_msv", 
-		// 	"UK3CB_CW_SOV_O_LATE_MTLB_BMP", 
-		// 	"UK3CB_CW_SOV_O_LATE_UAZ_SPG9", 
-		// 	"UK3CB_CW_SOV_O_LATE_BMD1", 
-		// 	"UK3CB_CW_SOV_O_LATE_BRM1K"
-		// ];
-		// [HuntSpawn_1, HuntSpawn_1, HuntTrigger_1, 10, 300, east, _vehicles, 120] spawn OKS_fnc_HuntBase;
-		// [HuntSpawn_2, HuntSpawn_2, HuntTrigger_1, 10, 300, east, _vehicles, 120] spawn OKS_fnc_HuntBase;	
+		waitUntil {sleep 15; triggerActivated HuntTrigger_1};
+		_vehicles = [
+			"rhs_bmp1_msv", 
+			"rhs_bmp1d_msv", 
+			"UK3CB_CW_SOV_O_LATE_MTLB_BMP", 
+			"UK3CB_CW_SOV_O_LATE_UAZ_SPG9", 
+			"UK3CB_CW_SOV_O_LATE_BMD1", 
+			"UK3CB_CW_SOV_O_LATE_BRM1K"
+		];
+		[HuntSpawn_1, HuntSpawn_1, HuntTrigger_1, 10, 300, east, _vehicles, 120] spawn OKS_fnc_HuntBase;
+		[HuntSpawn_2, HuntSpawn_2, HuntTrigger_1, 10, 300, east, _vehicles, 120] spawn OKS_fnc_HuntBase;	
 	};
 
 	case 1: {
@@ -225,15 +225,15 @@ switch (_case) do {
 			[[785.294,3396.56,0],266,"Up",[]]
 		],[],[]] call GW_Common_fnc_spawnGroup;
 	
-		// [AirBase_1, AirSpawn_1, AirHuntTrigger_1, independent, "RHS_Mi24P_vdv", 'Paradrop', [2,1], 900, 100, 90, 5] spawn OKS_fnc_Airbase; sleep 45;
-		// [AirBase_2, AirSpawn_2, AirHuntTrigger_1, independent, "RHS_Mi24P_vdv", 'ParadropThenPatrol', [2,1], 900, 100, 90, 5] spawn OKS_fnc_Airbase;
+		[AirBase_1, AirSpawn_1, AirHuntTrigger_1, independent, "RHS_Mi24P_vdv", 'ParadropThenPatrol', [2,1], 900, 100, 90, 5] spawn OKS_fnc_Airbase; sleep 45;
+		[AirBase_2, AirSpawn_2, AirHuntTrigger_1, independent, "RHS_Mi24P_vdv", 'ParadropThenPatrol', [2,1], 900, 100, 90, 5] spawn OKS_fnc_Airbase;
 
 	};
 
 	case 2: {
 
 		// Trench 1 Counter.
-		["hq","side","1st Platoon be advised, a large counter-attack is inbound. ETA 2 minutes, HQ out."] remoteExec ["OKS_fnc_Chat",0];
+		["Battalion HQ","side","1st Platoon be advised, a large counter-attack is inbound. ETA 2 minutes, HQ out."] remoteExec ["OKS_fnc_Chat",0];
 		sleep 120;
 
 		[convoy_1, convoy_2, convoy_3, independent, [4, ["UK3CB_CW_SOV_O_LATE_BTR80a","rhs_bmp1_msv","rhs_bmp1_msv","rhs_bmp1_msv"], 35, 45], [true, 5], [], false, false, ["rush"]] spawn OKS_fnc_Convoy_Spawn;
@@ -372,18 +372,18 @@ switch (_case) do {
 			["UK3CB_CW_SOV_O_LATE_VDV_UAZ_MG",[3220.43,3628.6,0],317,[["gunner",-1,[0]]],[[6,["SOV2",1]],[7,["light_hide",0,"spare_hide",0]]]]
 		],[]] call GW_Common_fnc_spawnGroup;
 
-		// waitUntil {sleep 15; triggerActivated HuntTrigger_2};
-		// _vehicles = [
-		// 	"rhs_bmp1_msv", 
-		// 	"rhs_bmp1d_msv", 
-		// 	"UK3CB_CW_SOV_O_LATE_MTLB_BMP", 
-		// 	"UK3CB_CW_SOV_O_LATE_UAZ_SPG9", 
-		// 	"UK3CB_CW_SOV_O_LATE_BMD1", 
-		// 	"UK3CB_CW_SOV_O_LATE_BRM1K"
-		// ];
-		// [HuntSpawn_3, HuntSpawn_3, HuntTrigger_2, 10, 300, independent, _vehicles, 120] spawn OKS_fnc_HuntBase;
-		// [HuntSpawn_4, HuntSpawn_4, HuntTrigger_2, 10, 300, independent, _vehicles, 120] spawn OKS_fnc_HuntBase;		
-		// [HuntSpawn_5, HuntSpawn_5, HuntTrigger_2, 10, 300, independent, _vehicles, 120] spawn OKS_fnc_HuntBase;	
+		waitUntil {sleep 15; triggerActivated HuntTrigger_2};
+		_vehicles = [
+			"rhs_bmp1_msv", 
+			"rhs_bmp1d_msv", 
+			"UK3CB_CW_SOV_O_LATE_MTLB_BMP", 
+			"UK3CB_CW_SOV_O_LATE_UAZ_SPG9", 
+			"UK3CB_CW_SOV_O_LATE_BMD1", 
+			"UK3CB_CW_SOV_O_LATE_BRM1K"
+		];
+		[HuntSpawn_3, HuntSpawn_3, HuntTrigger_2, 10, 300, east, _vehicles, 120] spawn OKS_fnc_HuntBase;
+		[HuntSpawn_4, HuntSpawn_4, HuntTrigger_2, 10, 300, east, _vehicles, 120] spawn OKS_fnc_HuntBase;		
+		[HuntSpawn_5, HuntSpawn_5, HuntTrigger_2, 10, 300, east, _vehicles, 120] spawn OKS_fnc_HuntBase;	
 
 	};
 
@@ -391,6 +391,8 @@ switch (_case) do {
 
 		// Counter-Attack Blockade.
 		// Attacks Groups
+		["Battalion HQ", "side", "1st Platoon be advised, Russian counter-attack is imminent. Expect BMPs and infantry to be moving in from the north-east. Prepare to repel the attack."] remoteExec ["OKS_fnc_Chat",0];
+
 		[[[[1576.84,3306.87,0],330,[]],[[1583.67,3305.03,0],330,[]],[[1579.71,3299.23,0],330,[]],[[1576.13,3301.71,0],330,[]],[[1571.54,3304.07,0],330,[]],[[1582.95,3299.87,0],330,[]],[[1570.87,3298.32,0],330,[]],[[1576.39,3296.38,0],330,[]]],[],[[[1530.96,3371.67,0],[[0,"Move"],[1,"AWARE"],[4,"DIAMOND"],[5,"FULL"]]],[[1503.05,3449.58,-1.52588e-05],[[0,"Move"]]],[[1439.37,3565.2,1.52588e-05],[[0,"Move"]]],[[1403.89,3637.44,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[1612.86,3468.11,0],330,[]],[[1619.68,3466.26,0],330,[]],[[1615.72,3460.46,0],330,[]],[[1612.14,3462.94,0],330,[]],[[1607.56,3465.3,0],330,[]],[[1618.97,3461.1,0],330,[]],[[1606.89,3459.55,0],330,[]],[[1612.4,3457.61,0],330,[]]],[],[[[1578.63,3551.55,1.52588e-05],[[0,"Move"],[1,"AWARE"],[4,"DIAMOND"],[5,"FULL"]]],[[1547.08,3587.05,0],[[0,"Move"]]],[[1503.78,3618.5,0],[[0,"Move"]]],[[1450.78,3643.05,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[1701.76,3773.65,1.52588e-05],237,[]],[[1703.27,3780.56,0],237,[]],[[1709.25,3776.88,1.52588e-05],237,[]],[[1706.95,3773.19,0],237,[]],[[1704.81,3768.5,0],237,[]],[[1708.46,3780.1,0],237,[]],[[1710.59,3768.1,1.52588e-05],237,[]],[[1712.26,3773.7,1.52588e-05],237,[]]],[],[[[1601.24,3737.11,0],[[0,"Move"],[1,"AWARE"],[4,"DIAMOND"],[5,"FULL"]]],[[1532.19,3708.7,0],[[0,"Move"]]],[[1490.31,3707.77,0],[[0,"Move"]]],[[1441.42,3672.23,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
@@ -583,6 +585,8 @@ switch (_case) do {
 	case 7: {
 
 		// Counter-Village
+		["BATTALION HQ", "side", "1st Platoon be advised, Russian counter-attack is imminent. Expect BMPs and infantry to be moving in from the north. Prepare to repel the attack."] remoteExec ["OKS_fnc_Chat",0];
+
 		[getpos LambsGroupSpawn_1, "hunt", 6, independent, 500] spawn OKS_fnc_Lambs_SpawnGroup;
 		[getpos LambsGroupSpawn_2, "hunt", 6, independent, 500] spawn OKS_fnc_Lambs_SpawnGroup;
 		[getpos LambsGroupSpawn_5, "hunt", 6, independent, 500] spawn OKS_fnc_Lambs_SpawnGroup;
@@ -603,7 +607,7 @@ switch (_case) do {
 	case 8: {
 
 		// Ending.
-		["hq","side","1st Platoon be advised, friendly relief force is breaking through to your position. They will carry on the attack, your mission is complete. Slava Grozovia! Out."] call OKS_fnc_Chat;
+		["BATTALION HQ","side","1st Platoon be advised, friendly relief force is breaking through to your position. They will carry on the attack, your mission is complete. Slava Grozovia! Out."] remoteExec ["OKS_fnc_Chat"];
 
 		[friendlyConvoy_1, friendlyConvoy_2, friendlyConvoy_3, west, [9, [
 			"UK3CB_GAF_B_T80UK", 
@@ -615,12 +619,13 @@ switch (_case) do {
 			"UK3CB_GAF_B_UAZ_Open", 
 			"UK3CB_GAF_B_Ural_Open", 
 			"UK3CB_GAF_B_BTR60"
-		], 30, 25], [true, 0], [], true, true, ["defend"]] spawn OKS_fnc_Convoy_Spawn;
+		], 30, 25], [true, 0], [], false, true, ["defend"]] spawn OKS_fnc_Convoy_Spawn;
 
 	};
 
 	case 9: {
 
+		["BATTALION HQ","side","1st Platoon be advised, an enemy counter-attack is inbound, we are uncertain from what direction. Defend yourselves, HQ out."] remoteExec ["OKS_fnc_Chat"];
 		[getpos LambsGroupSpawn_4, "rush", 6, EAST, 500] spawn OKS_fnc_Lambs_SpawnGroup;
 
 		private _vehicles = [
@@ -637,6 +642,8 @@ switch (_case) do {
 	};
 
 	case 10: {
+
+		["BATTALION HQ","side","1st Platoon be advised, an enemy counter-attack is inbound, we are uncertain from what direction. Defend yourselves, HQ out."] remoteExec ["OKS_fnc_Chat"];
 		[getpos LambsGroupSpawn_3, "rush", 6, EAST, 500] spawn OKS_fnc_Lambs_SpawnGroup;
 
 		{
