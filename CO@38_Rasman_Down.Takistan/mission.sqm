@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10180;
+		nextID=10228;
 	};
 	class Camera
 	{
-		pos[]={6299.4312,162.26773,11227.045};
-		dir[]={-0.64688486,-0.65376323,-0.3925986};
-		up[]={-0.55888724,0.75669914,-0.3391923};
-		aside[]={-0.51883048,1.4901161e-08,0.85487711};
+		pos[]={6967.3188,243.0143,11518.416};
+		dir[]={-0.46358773,-0.55281568,0.6924569};
+		up[]={-0.30754364,0.83330119,0.45937529};
+		aside[]={0.83097374,6.0535967e-08,0.55632395};
 	};
 };
 binarizationWanted=0;
@@ -32924,7 +32924,7 @@ class Mission
 						};
 					};
 					id=404;
-					atlOffset=3380035.5;
+					atlOffset=3380029.8;
 				};
 				class Item12
 				{
@@ -49036,14 +49036,14 @@ class Mission
 						angles[]={0.079829417,1.6371621,6.1637568};
 					};
 					side="Independent";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						name="radar_1G";
 					};
 					id=4403;
 					type="I_UAV_AI";
-					atlOffset=0.0096435547;
+					atlOffset=2.9342422;
 				};
 			};
 			class Attributes
@@ -49090,13 +49090,14 @@ class Mission
 						angles[]={0.12415794,0.19326052,6.2049422};
 					};
 					side="Independent";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						name="radar_1G_1";
 					};
 					id=4405;
 					type="I_UAV_AI";
+					atlOffset=2.9463501;
 				};
 			};
 			class Attributes
@@ -52779,7 +52780,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={7322.5928,91.149162,10474.782};
-								angles[]={0,5.5382495,-0};
+								angles[]={0,5.5382495,0};
 							};
 							name="ConvoyWP_1";
 							id=4781;
@@ -53989,6 +53990,7 @@ class Mission
 					b=37.45652;
 					angle=284.48877;
 					id=4883;
+					atlOffset=-4.5776367e-05;
 				};
 				class Item64
 				{
@@ -54124,7 +54126,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=36.674911;
-					angle=113.49569;
+					angle=113.49568;
 					id=4998;
 				};
 				class Item74
@@ -54138,7 +54140,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=36.674911;
-					angle=113.49569;
+					angle=113.49568;
 					id=4999;
 				};
 				class Item75
@@ -54208,7 +54210,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=117.97645;
-					angle=104.54533;
+					angle=104.54532;
 					id=5004;
 				};
 				class Item80
@@ -54222,7 +54224,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=117.97645;
-					angle=104.54533;
+					angle=104.54532;
 					id=5005;
 				};
 				class Item81
@@ -54236,7 +54238,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=37.498955;
-					angle=104.96868;
+					angle=104.96867;
 					id=5006;
 				};
 				class Item82
@@ -54250,7 +54252,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=37.498955;
-					angle=104.96868;
+					angle=104.96867;
 					id=5007;
 				};
 				class Item83
@@ -54404,7 +54406,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=37.496944;
-					angle=101.58929;
+					angle=101.58928;
 					id=5018;
 				};
 				class Item94
@@ -54418,7 +54420,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=37.496944;
-					angle=101.58929;
+					angle=101.58928;
 					id=5019;
 				};
 				class Item95
@@ -54460,7 +54462,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=37.496254;
-					angle=101.48386;
+					angle=101.48385;
 					id=5022;
 				};
 				class Item98
@@ -54474,7 +54476,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=37.496254;
-					angle=101.48386;
+					angle=101.48385;
 					id=5023;
 				};
 				class Item99
@@ -54488,7 +54490,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=196.51146;
-					angle=100.66035;
+					angle=100.66034;
 					id=5024;
 				};
 				class Item100
@@ -54502,7 +54504,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=196.51146;
-					angle=100.66035;
+					angle=100.66034;
 					id=5025;
 				};
 				class Item101
@@ -54532,6 +54534,7 @@ class Mission
 					b=37.458519;
 					angle=103.36463;
 					id=5027;
+					atlOffset=-7.6293945e-06;
 				};
 				class Item103
 				{
@@ -54544,7 +54547,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=137.15359;
-					angle=106.06853;
+					angle=106.06852;
 					id=5028;
 				};
 				class Item104
@@ -54558,7 +54561,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=137.15359;
-					angle=106.06853;
+					angle=106.06852;
 					id=5029;
 				};
 				class Item105
@@ -54684,7 +54687,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=37.350647;
-					angle=155.52849;
+					angle=155.52847;
 					id=5038;
 				};
 				class Item114
@@ -54698,7 +54701,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=37.350647;
-					angle=155.52849;
+					angle=155.52847;
 					id=5039;
 				};
 				class Item115
@@ -54728,6 +54731,7 @@ class Mission
 					b=91.150246;
 					angle=160.63997;
 					id=5041;
+					atlOffset=-5.3405762e-05;
 				};
 				class Item117
 				{
@@ -54852,7 +54856,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=37.256378;
-					angle=111.94498;
+					angle=111.94497;
 					id=5050;
 				};
 				class Item126
@@ -54866,7 +54870,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=37.256378;
-					angle=111.94498;
+					angle=111.94497;
 					id=5051;
 				};
 				class Item127
@@ -54880,7 +54884,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=116.19115;
-					angle=105.40781;
+					angle=105.4078;
 					id=5052;
 				};
 				class Item128
@@ -54894,7 +54898,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=116.19115;
-					angle=105.40781;
+					angle=105.4078;
 					id=5053;
 				};
 				class Item129
@@ -55076,7 +55080,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=34.798225;
-					angle=110.83559;
+					angle=110.83558;
 					id=5066;
 				};
 				class Item142
@@ -55090,7 +55094,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=34.798225;
-					angle=110.83559;
+					angle=110.83558;
 					id=5067;
 				};
 				class Item143
@@ -55330,6 +55334,7 @@ class Mission
 					b=160.1575;
 					angle=86.319389;
 					id=5084;
+					atlOffset=-0.00012207031;
 				};
 				class Item160
 				{
@@ -55356,7 +55361,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=36.501083;
-					angle=99.576317;
+					angle=99.576309;
 					id=5086;
 				};
 				class Item162
@@ -55370,7 +55375,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=36.501083;
-					angle=99.576317;
+					angle=99.576309;
 					id=5087;
 				};
 				class Item163
@@ -55776,7 +55781,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=91.586685;
-					angle=91.789963;
+					angle=91.789955;
 					id=5116;
 				};
 				class Item192
@@ -55790,7 +55795,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=91.586685;
-					angle=91.789963;
+					angle=91.789955;
 					id=5117;
 				};
 			};
