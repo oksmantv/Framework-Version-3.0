@@ -42,7 +42,7 @@ private [
 	"_smokegrenadeW","_smokegrenadeB","_smokegrenadeG","_smokegrenadeO","_smokegrenadeP","_smokegrenadeR","_smokegrenadeY",
 	"_chemB","_chemG","_chemR","_chemY",
 	"_glHE","_glHEDP","_glsmokeW","_glsmokeB","_glsmokeG","_glsmokeO","_glsmokeP","_glsmokeR","_glsmokeY","_glflareG","_glflareR","_glflareW",
-	"_map","_gps","_compass","_watch","_nvg","_parachute","_demoCharge","_satchelCharge","_toolKit",
+	"_map","_gps","_compass","_watch","_nvg","_nvgPilot","_parachute","_demoCharge","_satchelCharge","_toolKit",
 	"_cTab","_Android","_microDAGR","_microDAGRGps","_HelmetCam",
 	"_bandage","_blood","_epi","_morph","_IFAK","_FAKSmall","_FAKMedium","_FAKSquad","_FAKPlatoon","_pak","_saline","_salineSm",
 	"_barrel","_cables","_clacker","_defusalKit","_IRStrobe","_mapFlashLight","_mapTools","_rangefinder","_laserDesignator","_battery","_rangecard",
@@ -72,7 +72,9 @@ private [
 	"_1rndMortarHE","_1rndMortarAB","_1rndMortarFlareW","_1rndMortarWPSmokeW","_1rndMortarSmokeW",
 	"_packedHEround","_packedHEABround","_packedSmokeRound","_packedFlareRound",
 	"_mortarWeapon","_Earplugs",
-	"_tfarPersonalRadio","_tfarHandheldRadio","_acrePRC343","_acrePRC148","_acrePRC117F"
+	"_tfarPersonalRadio","_tfarHandheldRadio","_acrePRC343","_acrePRC148","_acrePRC117F",
+	"_Disruptor_Pistol","_Disruptor_Antenna","_Disruptor_Mag",
+	"_DroneJammer","_DroneDetector"
 ];
 
 params [
@@ -199,8 +201,8 @@ if (_isMan) then {
 		[_goggles,_helmet,_uniform,_vest,_backpack] call _addEquipment;
 		["", "", "", "", "", ""] call _addLinkedItems;
 	} else {
-		if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {
-			_nvg = "ACE_NVG_Gen4_Black";
+		if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {	
+			if(!isNil "_nvg") then {_nvg = "ACE_NVG_Wide_Black_WP"};
 		};
 
 		if !(_isPlayer || (_unit in switchableUnits)) then {
@@ -357,7 +359,12 @@ if (_isMan) then {
 				[_unit, _MAT_mag_HE, 10] call _fnc_AddObjectsCargo;
 				[_unit, _AA_mag, 30] call _fnc_AddObjectsCargo;
 				[_unit, (_AA select 0), 6] call _fnc_AddObjectsCargo;
-				[_unit, (_LAT select 0), 30] call _fnc_AddObjectsCargo;
+
+				if (_LAT_ReUsable) then {
+					[_unit, _LAT_mag_HE, 10] call _fnc_AddObjectsCargo;
+				} else {
+					[_unit, (_LAT select 0), 30] call _fnc_AddObjectsCargo;
+				};
 				if (_aceCombatDeafnessEnabled) then {
 					[_unit, _Earplugs, 50] call _fnc_AddObjectsCargo;
 				};
@@ -402,7 +409,7 @@ if (_isMan) then {
 					};		
 
 					_blackList = ["rhsusf_acc_SpecterDR_pvs27","JCA_optic_IHO_black_magnifier","JCA_optic_IHO_olive_magnifier","JCA_optic_IHO_sand_magnifier","JCA_optic_MROS_sand_magnifier","JCA_optic_MROS_olive_magnifier","JCA_optic_MROS_black_magnifier","rhsusf_acc_su230","rhsusf_acc_g33_T1","rhsusf_acc_g33_T1_flip","rhsusf_acc_g33_xps3","rhsusf_acc_g33_xps3_flip","rhsusf_acc_g33_xps3_tan","rhsusf_acc_g33_xps3_tan_flip","ACE_acc_pointer_green","ACE_acc_pointer_green_ir","ACE_acc_pointer_red","acc_pointer_ir","acc_pointer_ir_broken","rhsusf_acc_anpeq15_top_h","rhsusf_acc_anpeq15_top_sc","rhsusf_acc_anpeq15_wmx_sc","rhsusf_acc_anpeq15_wmx_h","rhsusf_acc_anpeq15_wmx_light_sc","rhsusf_acc_anpeq15_wmx_light_h","rhsusf_acc_anpeq15_bk_top_h","rhsusf_acc_anpeq15_bk_top_sc","rhsusf_acc_anpeq15_h","rhsusf_acc_anpeq15_sc","rhsusf_acc_anpeq15_light_sc","rhsusf_acc_anpeq15_light_h","rhsusf_acc_anpeq15_bk_h","rhsusf_acc_anpeq15_bk_sc","rhsusf_acc_anpeq15_bk_light_sc","rhsusf_acc_anpeq15_bk_light_h","rhsusf_acc_anpeq16a_top_sc","rhsusf_acc_anpeq16a_top_h","rhsusf_acc_anpeq16a_light_top_sc","rhsusf_acc_anpeq16a_light_top_h","rhsusf_acc_anpas13gv1"];
-					_whiteList = ["rhs_weap_optic_smaw"];                            
+					_whiteList = ["rhs_weap_optic_smaw","OKS_Disruptor_Antenna"];                            
 
 					if(_OpticsAllowed isEqualTo true) then {
 						if(_MagnifiedOpticsAllowed isEqualTo true) then {
@@ -504,7 +511,7 @@ if (_isMan) then {
 
 					//systemChat str _compatibleItems;
 				 	//copyToClipboard str _compatibleItems;
-					if(OKS_Weapons isEqualTo true) then {
+					if(_WeaponsAllowed isEqualTo true) then {
 						if(TYPENAME (_rifle select 0) == "ARRAY") then {
 							{
 								if !(_X in _compatibleItems) then {_compatibleItems pushBack _X};
@@ -542,6 +549,11 @@ if (_isMan) then {
 					[_ArsenalLMG, _compatibleItemsLMG] call ace_arsenal_fnc_initBox;
 					missionNamespace setVariable [format["GOL_ArsenalGL_%1",_realSide], _ArsenalGL, true];
 					missionNamespace setVariable [format["GOL_ArsenalLMG_%1",_realSide], _ArsenalLMG, true];
+
+					// TFAR wireless intercom headgear — delegate to addon
+					if (!isNil "OKS_fnc_CollectIntercomHeadgear") then {
+						[_helmet, _OfficerHelmet, _compatibleItems] call OKS_fnc_CollectIntercomHeadgear;
+					};
 				};
 			};
 
@@ -584,6 +596,12 @@ if (_isMan) then {
 				[_unit, _packedDroneAT, 10] call _fnc_AddObjectsCargo;
 				[_unit, _packedDroneRecon, 4] call _fnc_AddObjectsCargo;
 				[_unit, _packedDroneSupply, 4] call _fnc_AddObjectsCargo;
+				[_unit, (_Disruptor_Pistol select 0), 10] call _fnc_AddObjectsCargo;
+				[_unit, _Disruptor_Antenna, 10] call _fnc_AddObjectsCargo;				
+				[_unit, _Disruptor_Mag, 30] call _fnc_AddObjectsCargo;
+				[_unit, _DroneJammer, 10] call _fnc_AddObjectsCargo;				
+				[_unit, _DroneDetector, 10] call _fnc_AddObjectsCargo;				
+
 				[_unit, _FacPanels, 15] call _fnc_AddObjectsCargo;
 
 				if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {
@@ -647,7 +665,11 @@ if (_isMan) then {
 				[_unit, _LMG_mag, (COUNT_AR_MAGS(_LMG_mag) * 1.5)] call _fnc_AddObjectsCargo;
 				[_unit, _MAT_mag, 4] call _fnc_AddObjectsCargo;
 				[_unit, _MAT_mag_HE, 4] call _fnc_AddObjectsCargo;
-				[_unit, (_LAT select 0), 3] call _fnc_AddObjectsCargo;
+				if (_LAT_ReUsable) then {
+					[_unit, _LAT_mag_HE, 4] call _fnc_AddObjectsCargo;
+				} else {
+					[_unit, (_LAT select 0), 4] call _fnc_AddObjectsCargo;
+				};
 				[_unit, _demoCharge, 4] call _fnc_AddObjectsCargo;
 				[_unit, _cables, 15] call _fnc_AddObjectsCargo;
 
@@ -740,6 +762,7 @@ if (_isMan) then {
 				[_unit, _packedDroneRecon, 2] call _fnc_AddObjectsCargo;
 				if (_LAT_ReUsable) then {
 					[_unit, _LAT_mag, 6] call _fnc_AddObjectsCargo;
+					[_unit, _LAT_mag_HE, 4] call _fnc_AddObjectsCargo;
 				} else {
 					[_unit, (_LAT select 0), 6] call _fnc_AddObjectsCargo;
 				};

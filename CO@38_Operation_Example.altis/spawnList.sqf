@@ -108,9 +108,10 @@ switch (_case) do {
 	case 3: {
 
 		// SCUD Attack.
+		[beachLandingSpawn_3, beachLandingTarget_3, "UK3CB_TKA_O_RHIB_Gunboat", 7, east, "rush", 1500, ""] spawn OKS_fnc_BeachLanding;
 		["hq","side","1st Platoon be advised, a squadron of submarines have set up to the north-east. Expect inbound cruise missiles. Godfather out."] remoteExec ["OKS_fnc_Chat",0];
 		
-		[VLS_1, [7279.71,11038.9,0], east, 45] spawn OKS_fnc_ScudIntercept_LaunchAI; sleep 300;
+		[VLS_1, [7279.71,11038.9,0], east, 45] spawn OKS_fnc_ScudIntercept_LaunchAI; sleep 600;
 		[VLS_2, BallisticTarget_1, east, 45] spawn OKS_fnc_ScudIntercept_LaunchAI;
 	};
 
@@ -118,9 +119,8 @@ switch (_case) do {
 
 		// Beach Counter.
 		[beachLandingSpawn_1, beachLandingTarget_1, "UK3CB_TKA_O_RHIB_Gunboat", 7, east, "rush", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 1;
-		[beachLandingSpawn_2, beachLandingTarget_2, "UK3CB_TKA_O_RHIB_Gunboat", 7, east, "rush", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 2;
-		[beachLandingSpawn_3, beachLandingTarget_3, "UK3CB_TKA_O_RHIB_Gunboat", 7, east, "rush", 1500, ""] spawn OKS_fnc_BeachLanding;
-	
+		[beachLandingSpawn_2, beachLandingTarget_2, "UK3CB_TKA_O_RHIB_Gunboat", 7, east, "rush", 1500, ""] spawn OKS_fnc_BeachLanding;
+
 		sleep 90;
 		[[],[["UK3CB_CSAT_M_O_BTR60",[6631.54,10907.1,0],53,[["driver",-1,[]],["gunner",-1,[0]],["turret",-1,[1]],["turret",8,[2]],["turret",9,[3]],["turret",10,[4]],["turret",11,[5]],["turret",12,[6]],["turret",13,[7]],["turret",14,[8]]],[[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_l4_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",1,"crate_r4_unhide",0,"water_1_unhide",1,"water_2_unhide",0,"wheel_1_unhide",0,"wheel_2_unhide",0]],[351,false]]]],[[[6694.78,10950.5,0],[[0,"Move"]]],[[6759.69,10958.9,9.53674e-06],[[0,"Move"]]],[[6938.99,11040.6,4.29153e-05],[[0,"Move"]]],[[7066.75,11023,0],[[0,"Hold"]]]],east] call GW_Common_fnc_spawnGroup;
 		[[],[["UK3CB_CSAT_M_O_BTR60",[6251.66,10851.4,0],176,[["driver",-1,[]],["gunner",-1,[0]],["turret",-1,[1]],["turret",8,[2]],["turret",9,[3]],["turret",10,[4]],["turret",11,[5]],["turret",12,[6]],["turret",13,[7]],["turret",14,[8]]],[[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_l4_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",1,"crate_r4_unhide",0,"water_1_unhide",1,"water_2_unhide",1,"wheel_1_unhide",0,"wheel_2_unhide",0]],[351,false]]]],[[[6593,11015.7,0],[[0,"Move"],[1,"SAFE"]]],[[6936.9,11106,-9.53674e-06],[[0,"Move"]]],[[7144.79,11042.9,0],[[0,"SAD"]]]],east] call GW_Common_fnc_spawnGroup;
@@ -130,9 +130,9 @@ switch (_case) do {
 	case 5: {
 
 		// Final Compound.
-		[DroneSpawn_1, DroneHuntZone_1, "" , east] spawn OKS_fnc_DroneHuntZone; sleep 10;
-		[DroneSpawn_2, DroneHuntZone_1, "" , east] spawn OKS_fnc_DroneHuntZone; sleep 10;
-		[DroneSpawn_3, DroneHuntZone_1, "" , east] spawn OKS_fnc_DroneHuntZone; sleep 10;
+		[DroneSpawn_1, DroneHuntZone_1, "" , east] spawn OKS_fnc_DroneHuntZone; sleep 90;
+		[DroneSpawn_2, DroneHuntZone_1, "" , east] spawn OKS_fnc_DroneHuntZone; sleep 90;
+		[DroneSpawn_3, DroneHuntZone_1, "" , east] spawn OKS_fnc_DroneHuntZone; sleep 90;
 		[DroneSpawn_4, DroneHuntZone_1, "" , east] spawn OKS_fnc_DroneHuntZone;		
 		sleep 60;
 		[getPos LambsGroupSpawn_4, "hunt", 6, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
