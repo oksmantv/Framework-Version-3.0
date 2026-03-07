@@ -2,20 +2,20 @@ _useMineDetector = false;
 _allowedNightStuff = true;
 
 _insignia = "";
-_goggles =  ["rhsusf_shemagh_tan","rhsusf_shemagh2_tan","rhsusf_oakley_goggles_clr"];
-_helmet = ["acp_gol_GB_DDPM_H_MK7_GB_DDPM_F","acp_gol_GB_DDPM_H_MK7_GB_DDPM_F","acp_gol_GB_DDPM_H_MK7_GB_DDPM_F","acp_gol_GB_DDPM_H_MK7_GB_DDPM_F","acp_gol_GB_DDPM_H_MK7_GB_DDPM_F","acp_gol_GB_DDPM_H_MK7_GB_DDPM_F","acp_gol_GB_DDPM_H_MK7_GB_DDPM_F","acp_gol_GB_DDPM_H_MK7_GB_DDPM_F","acp_gol_GB_DDPM_H_MK7_GB_DDPM_F","acp_gol_GB_DDPM_H_MK7_GB_DDPM_F","acp_gol_GB_DDPM_H_MK7_GB_DDPM_F","acp_gol_GB_DDPM_H_HelmetSpecB_GB_DDPM_insignia"];
+_goggles =  ["JCA_G_balaclava_01_black_F"];
+_helmet = ["rhsusf_opscore_ut","rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam","rhsusf_opscore_ut_pelt_nsw","rhsusf_opscore_ut_pelt_nsw_cam"];
 _OfficerHelmet = "UK3CB_ANA_B_H_Beret_GRN";
 _uniform =  ["acp_gol_GB_DDPM_U_I_CombatUniform_shortsleeve_GB_DDPM_insignia","acp_gol_GB_DDPM_U_I_CombatUniform_GB_DDPM_insignia"];
 _vest = ["acp_gol_GB_DDPM_V_CarrierRigKBT_01_light_GB_DDPM_F","acp_gol_GB_DDPM_V_PlateCarrier2_GB_DDPM_insignia","acp_gol_GB_DDPM_V_PlateCarrier1_GB_DDPM"];
-_backpack = ["acp_gol_GB_DDPM_B_TacticalPack_GB_DDPM"];
+_backpack = ["UK3CB_ION_B_B_RIF_DES_01"];
 _backpackRadio = _backpack;
 
 if (true) then {
-	_backpackRadio = ["acp_gol_GB_DDPM_B_RadioBag_01_GB_DDPM_F"];
+	_backpackRadio = ["UK3CB_ION_I_B_RadioBag_DES"];
 };
 
 if (_role in ["ag","ammg","lr","ab","atab"]) then {
-	_backpack = "acp_gol_GB_DDPM_B_Carryall_GB_DDPM";
+	_backpack = "UK3CB_ION_B_B_ENG_DES";
 };
 if (_role isEqualTo "crew") then {
 	_helmet = "H_HelmetCrew_B";
@@ -39,20 +39,23 @@ if (_role isEqualTo "jetp") then {
 };
 
 // Attachments
-_silencer = "";
-_pointer = "";
-_sight = "";
-_bipod = "";
+_silencer = "UK3CB_BAF_SFFH";
+_pointer = "JCA_acc_flashlight_tactical_black";
+_sight = "JCA_optic_ARO_black";
+_bipod = "UK3CB_underbarrel_acc_grippod";
 
-_rifle = ["UK3CB_BAF_L85A2", _silencer, _pointer, _sight, _bipod];
-_rifleC = ["UK3CB_BAF_L22", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["UK3CB_BAF_L85A2_UGL_HWS", _silencer, _pointer, _sight, _bipod];
+_rifle = ["UK3CB_BAF_L85A3", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["UK3CB_BAF_L85A2", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["UK3CB_BAF_L85A3_UGL", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["UK3CB_BAF_L86A2", _silencer, _pointer, _sight, _bipod];
-_rifle_mag = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
-_rifle_mag_tr = "UK3CB_BAF_556_30Rnd_T";
-_rifleGL_mag = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
-_rifleGL_mag_tr = "UK3CB_BAF_556_30Rnd_T";
-_rifleC_mag = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
+_rifle_mag = "GOL_30Rnd_556x45_AP45";
+_rifle_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
+_rifleGL_mag = "GOL_30Rnd_556x45_AP45";
+_rifleGL_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
+_rifleC_mag = "GOL_30Rnd_556x45_AP45_Tracer_Red";
+_rifleC_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
+_rifleL_mag = "GOL_30Rnd_556x45_AP45";
+_rifleL_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
 
 _LMG = ["UK3CB_BAF_L110A2", _silencer, _pointer, _sight, _bipod];
 _LMG_mag = "UK3CB_BAF_556_200Rnd_T";

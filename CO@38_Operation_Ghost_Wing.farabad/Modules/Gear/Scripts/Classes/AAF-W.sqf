@@ -6,14 +6,14 @@ _insignia = "insignia_block35";
 _goggles = ["UK3CB_G_KLR_GRN","G_Headband_grn_F","G_Armband_aaf_alt_F","rhsusf_shemagh2_grn","rhsusf_shemagh_grn","rhsusf_shemagh_gogg_grn","rhsusf_shemagh2_gogg_grn","rhsusf_oakley_goggles_blk","rhs_balaclava1_olive","rhs_balaclava"];
 _OfficerHelmet = "H_MilCap_dgtl";
 _helmet =  ["H_HelmetIA"];
-_uniform =  ["UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_JumperUniform_DIGI_GRN"];
-_vest =  ["V_PlateCarrierIAGL_dgtl"];
+_uniform =  ["UK3CB_TKA_B_U_CombatUniform_02_DES_MARPAT","UK3CB_TKA_B_U_CombatUniform_Shortsleeve_02_DES_MARPAT","UK3CB_TKA_B_U_CombatUniform_Shortsleeve_01_DES_MARPAT","UK3CB_TKA_B_U_CombatUniform_01_DES_MARPAT"];
+_vest =  ["rhsusf_spc_rifleman"];
 _backpack = ["UK3CB_AAF_B_B_FIELDPACK_DIGI_GRN"];
 _backpackRadio = ["TFAR_anprc155"];
 
 if (_role in ["ag","ammg","lr","ab","atab"]) then {
 	_backpack = "UK3CB_AAF_B_B_CARRYALL_DIGI_GRN";
-	_vest = "V_PlateCarrierIAGL_dgtl";
+	_vest = "rhsusf_spc_rifleman";
 };
 if(_role in ["ab","atab"]) then {
 	_backpack = "B_Bergen_dgtl_F";

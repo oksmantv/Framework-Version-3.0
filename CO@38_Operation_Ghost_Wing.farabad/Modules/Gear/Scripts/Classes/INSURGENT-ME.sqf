@@ -27,6 +27,14 @@ if (true) then {
 	_backpackRadio = "UK3CB_CW_SOV_O_LATE_B_ASS_BERGEN_Radio";
 };
 
+if(_role in ["officer"]) then {
+	_helmet = "UK3CB_TKA_B_H_Beret";
+	_OfficerHelmet = "UK3CB_TKA_B_H_Beret";
+	_vest = "UK3CB_V_Carrier_Rig_CQB_BLK";
+	_uniform = "UK3CB_MEE_O_U_04_B";
+	_backpack = "B_Messenger_Black_F";
+	_goggles = "rhs_googles_black";
+};
 
 if (_role in ["ag","ammg","lr","ab"]) then {
 	_backpack = "rhs_rd54";
