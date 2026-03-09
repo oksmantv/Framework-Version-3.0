@@ -7,10 +7,26 @@
 
 if(isServer) then {
 
-	[[DestroyObject_1,DestroyObject_2,DestroyObject_3,DestroyObject_4,DestroyObject_5], nil, nil, nil, "destroy", nil, false, false] spawn OKS_fnc_Destroy_Task;
-	[[DestroyObject_6,DestroyObject_7], nil, nil, nil, "destroy", nil, false, false] spawn OKS_fnc_Destroy_Task;
-	[[DestroyObject_8,DestroyObject_9,DestroyObject_10], nil, nil, nil, "truck", nil, false, false] spawn OKS_fnc_Destroy_Task;
-	[[DestroyObject_11,DestroyObject_12,DestroyObject_13], nil, nil, nil, "truck", nil, false, false] spawn OKS_fnc_Destroy_Task;
+	[
+		true,
+		["Task_Cripple"],
+		[
+			"The insurgents have numerous assets in the areas around the stronghold, make use of our time on the ground. Cripple the Insurgents..",
+			"Cripple Insurgent Assets",
+			"Assets"
+		],
+		nil,
+		"ASSIGNED",
+		-1,
+		true,
+		"destroy",
+		false
+	] call BIS_fnc_taskCreate;
+
+	[[DestroyObject_1,DestroyObject_2,DestroyObject_3,DestroyObject_4,DestroyObject_5], nil, nil, nil, "destroy", "Task_Cripple", false, false] spawn OKS_fnc_Destroy_Task;
+	[[DestroyObject_6,DestroyObject_7], nil, nil, nil, "destroy", "Task_Cripple", false, false] spawn OKS_fnc_Destroy_Task;
+	[[DestroyObject_8,DestroyObject_9,DestroyObject_10], nil, nil, nil, "truck", "Task_Cripple", false, false] spawn OKS_fnc_Destroy_Task;
+	[[DestroyObject_11,DestroyObject_12,DestroyObject_13], nil, nil, nil, "truck", "Task_Cripple", false, false] spawn OKS_fnc_Destroy_Task;
 
 	[
 		true,

@@ -48,20 +48,20 @@ _rifle = ["UK3CB_BAF_L85A3", _silencer, _pointer, _sight, _bipod];
 _rifleC = ["UK3CB_BAF_L85A2", _silencer, _pointer, _sight, _bipod];
 _rifleGL = ["UK3CB_BAF_L85A3_UGL", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["UK3CB_BAF_L86A2", _silencer, _pointer, _sight, _bipod];
-_rifle_mag = "GOL_30Rnd_556x45_AP45";
+_rifle_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
 _rifle_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
-_rifleGL_mag = "GOL_30Rnd_556x45_AP45";
+_rifleGL_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
 _rifleGL_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
-_rifleC_mag = "GOL_30Rnd_556x45_AP45_Tracer_Red";
+_rifleC_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
 _rifleC_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
-_rifleL_mag = "GOL_30Rnd_556x45_AP45";
+_rifleL_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
 _rifleL_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
 
-_LMG = ["UK3CB_BAF_L110A2", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "UK3CB_BAF_556_200Rnd_T";
+_LMG = ["LMG_03_F", "rhsusf_acc_ARDEC_M240", _pointer, _sight, _bipod];
+_LMG_mag = "GOL_200Rnd_556x45_AP45_Box_Tracer_Red";
 
-_MMG = ["UK3CB_BAF_L7A2", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "UK3CB_BAF_762_100Rnd_T";
+_MMG = ["GOL_MMG_02_black_F", "ACE_muzzle_mzls_338", _pointer, _sight, _bipod];
+_MMG_mag = "GOL_130Rnd_338_Mag_red";
 
 _LAT = ["UK3CB_BAF_AT4_CS_AT_Launcher", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "UK3CB_BAF_AT4_CS_AT_Mag";
