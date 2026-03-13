@@ -17,29 +17,29 @@ _glflareW = "rhs_VG40OP_white";
 
 _insignia = "";
 _goggles = "rhs_facewear_6m2";
-_helmet = ["UK3CB_CSAT_G_O_H_6b27m","UK3CB_CSAT_G_O_H_6b27m_ESS"];
+_helmet = ["UK3CB_CSAT_A_O_H_6b27m","UK3CB_CSAT_A_O_H_6b27m_ESS"];
 _OfficerHelmet = "H_Beret_CSAT_01_F";
-_uniform = ["UK3CB_CSAT_G_O_U_CombatUniform","UK3CB_CSAT_G_O_U_CombatUniform_Shortsleeve"];
+_uniform = ["UK3CB_CSAT_A_O_U_CombatUniform","UK3CB_CSAT_A_O_U_CombatUniform_Shortsleeve"];
 _vest = "UK3CB_V_PlateCarrier1_oli";
-_backpack = "UK3CB_CSAT_G_O_B_RIF";
+_backpack = "UK3CB_CSAT_A_O_B_RIF";
 _backpackRadio = _backpack;
 if (true) then {
-	_backpackRadio = "UK3CB_CSAT_G_O_B_RadioBag";
+	_backpackRadio = "UK3CB_CSAT_A_O_B_RadioBag";
 };
 
-if(_role in ["sl","ftl","ag"]) then {
+if(_role in ["sl","ftl","ag","atab"]) then {
 	_goggles = "rhs_facewear_6m2_1";
 };
 
-if (_role in ["ag","ammg","lr","ab"]) then {
-	_backpack = "UK3CB_CSAT_G_O_B_ENG";
+if (_role in ["ag","atab","ammg","lr","ab"]) then {
+	_backpack = "UK3CB_CSAT_A_O_B_ENG";
 };
 if (_role isEqualTo "crew") then {
 	_helmet = "H_HelmetCrew_O";
 };
 if (_role isEqualTo "p") then {
 	_helmet = "H_PilotHelmetHeli_O";
-	_uniform = "UK3CB_CSAT_G_O_U_H_Pilot";
+	_uniform = "UK3CB_CSAT_A_O_U_H_Pilot";
 	_vest = "UK3CB_V_PlateCarrier1_oli";
 };
 if (_role isEqualTo "uav") then {
@@ -86,9 +86,9 @@ _LAT = ["rhs_weap_rpg26", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "rhs_rpg26_mag";
 _LAT_ReUsable = false;
 
-_MAT = ["rhs_weap_maaws", _silencer, _pointer, _sight, _bipod];
-_MAT_mag = "MRAWS_HEAT_F";
-_MAT_mag_HE = "MRAWS_HE_F";
+_MAT = ["launch_RPG32_green_F", _silencer, _pointer, _sight, _bipod];
+_MAT_mag = "RPG32_F";
+_MAT_mag_HE = "RPG32_HE_F";
 
 _HAT = ["launch_O_Vorona_brown_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";
@@ -104,9 +104,9 @@ _pdw_mag = "rhs_mag_9x19mm_7n31_44";
 
 _silencer = "";
 _pointer = "";
-_sight = "optic_LRPS";
-_bipod = "bipod_02_F_hex";
+_sight = "rhs_acc_pso1m21";
+_bipod = "";
 
-_rifleMarksman = ["srifle_DMR_05_hex_F", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "10Rnd_93x64_DMR_05_Mag";
-_rifleMarksman_mag_tr = "10Rnd_93x64_DMR_05_Mag";
+_rifleMarksman = ["rhs_weap_svdp_wd_npz", _silencer, _pointer, _sight, _bipod];
+_rifleMarksman_mag = "UK3CB_SVD_10rnd_762x54_GT";
+_rifleMarksman_mag_tr = "UK3CB_SVD_10rnd_762x54_GT";

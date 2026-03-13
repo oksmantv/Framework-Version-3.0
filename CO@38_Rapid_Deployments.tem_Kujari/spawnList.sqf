@@ -40,7 +40,7 @@ switch (_case) do {
 		[Trigger_1,false,[0,0,false,false],east,0,4,0,[5,false,false,1],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
 
 		// Hunters
-		_Vehicles = ["UK3CB_TKA_O_BTR80a", "UK3CB_TKA_O_BMP2", "UK3CB_TKA_O_BMP1", "UK3CB_TKA_O_BMP1", "UK3CB_TKA_O_MTLB_BMP", "UK3CB_TKA_O_Hilux_Spg9",  "UK3CB_TKA_O_Hilux_Spg9", "UK3CB_TKA_O_UAZ_SPG9", "UK3CB_TKA_O_T34"];
+		_Vehicles = ["UK3CB_TKA_O_BMP2", "UK3CB_TKA_O_BMP1", "UK3CB_TKA_O_BMP1", "UK3CB_TKA_O_MTLB_BMP", "UK3CB_TKA_O_Hilux_Spg9",  "UK3CB_TKA_O_Hilux_Spg9", "UK3CB_TKA_O_UAZ_SPG9", "UK3CB_TKA_O_T34"];
 		[Spawn_1, Spawn_1, NEKY_Hunt_Trigger_1, 4,900,east,_Vehicles,220] spawn OKS_fnc_Huntbase;
 		[Spawn_2, Spawn_2, NEKY_Hunt_Trigger_1, 4,900,east,_Vehicles,220] spawn OKS_fnc_Huntbase;
 		[Spawn_3, Spawn_3, NEKY_Hunt_Trigger_1, 4,900,east,_Vehicles,220] spawn OKS_fnc_Huntbase;
@@ -48,24 +48,16 @@ switch (_case) do {
 		// Artillery 
 		{
 			[east,_X,[15082.6,10770.3,0],7,300,120] spawn OKS_fnc_ArtyFire;
-			[_X,nil,nil,nil,nil,"Task_1"] spawn OKS_fnc_Destroy_Task;
-			sleep 5;
 		} foreach [arty_1,arty_2,arty_3,arty_4];
 
 		// Artillery Guards
 		[[[[14881.9,13837.6,0],239,"Up",[]],[[14924.5,13856.7,0],239,"Up",[]],[[14897.7,13874.1,0],264,"Up",[]],[[14890.3,13891.6,-1.90735e-006],167,"Up",[]],[[14906.8,13887.7,1.2828],55,"Up",[]],[[14902.9,13888.4,1.27286],168,"Up",[]],[[14896,13904.3,0],59,"Up",[]],[[14929,13935.1,0],219,"Up",[]],[[14892.7,13949.9,0],166,"Middle",[]],[[14923.4,13879.3,9.53674e-007],68,"Middle",[]],[[14948.4,13891.4,0],199,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 	
 		// Fort 183
-		[[[[15200.1,14010.7,-0.199978],348,"Middle",[]],[[15200.1,13985.1,-0.199977],17,"Middle",[]],[[15173.5,13962.9,-0.208318],55,"Middle",[]],[[15146.9,13964,0],175,"Up",[]],[[15123.3,13967.4,-0.199999],279,"Up",[]],[[15112.6,13986.2,-0.199999],163,"Middle",[]],[[15112.8,14007.9,1.90735e-006],214,"Middle",[]],[[15129.8,14010.5,-0.199999],264,"Middle",[]],[[15138.8,14007.5,-0.199997],229,"Middle",[]],[[15159.9,14014.7,-0.192772],223,"Middle",[]],[[15160,14028,-0.199999],171,"Middle",[]],[[15167.1,14037.6,-0.0448723],180,"Middle",[]],[[15187.3,14039.6,-0.199999],276,"Middle",[]],[[15196.8,14028.2,-0.201994],156,"Middle",[]],[[15179.5,14011.4,-0.200001],82,"Middle",[]],[[15139.4,13987.5,-0.200001],172,"Middle",[]]],[["UK3CB_TKA_O_BMP1",[15154.4,13990.2,0.000112534],176,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_TKA_O_BMP1",[15127.5,13994,0.000112534],183,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_TKA_O_BMP1",[15180,13995.7,1.90735e-006],146,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
-	
+		[[[[15139.9,13843.4,-0.00111389],348,"Up",[[301,0]],"sl"],[[15139.9,13817.8,0],17,"Up",[[301,0]],"r"],[[15113.3,13795.6,0],55,"Up",[[301,0]],"mat"],[[15086.7,13796.7,0],175,"Up",[[301,0]],"g"],[[15063.1,13800.1,0],279,"Up",[[301,1]],"ag"],[[15052.4,13818.9,0],163,"Up",[[301,0]],"ar"],[[15052.6,13840.6,0],214,"Up",[[301,0]],"mat"],[[15069.6,13843.2,0],264,"Up",[[301,1]],"ag"],[[15078.6,13840.2,0],229,"Up",[[301,0]],"r"],[[15099,13843.3,0],223,"Up",[[301,0]],"ar"],[[15073,13841.2,0],256,"Up",[[301,0]],"r"],[[15102.6,13791.8,1.90735e-06],278,"Middle",[[301,0]],"r"],[[15056.7,13804.2,0],226,"Up",[[301,0]],"ar"],[[15128.8,13807.1,0],156,"Up",[[301,0]],"r"],[[15119.3,13844.1,0],82,"Up",[[301,1]],"ag"],[[15079.2,13820.2,0.0303078],172,"Up",[[301,0]],"r"]],[["UK3CB_TKA_O_BMP1",[15094.5,13821.5,9.53674e-07],176,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0,"maljutka_hide_source",0]],[351,false]]],["UK3CB_TKA_O_BMP1",[15070.7,13824.5,0.217956],246,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",0,"maljutka_hide_source",0]],[351,false]]],["UK3CB_TKA_O_BMP1",[15120.7,13829.3,0],146,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]],[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
 	};
 
-	case 2: {
-
-		{
-			[_X,nil,nil,nil,nil,"Task_2"] spawn OKS_fnc_Destroy_Task;
-			sleep 5;
-		} foreach [support_1,support_2,support_3,support_4];	
+	case 2: {	
 
 		// Compound 1
 		[[[[14128.4,15125.9,0],283,"Up",[]],[[14112.9,15127.7,-9.53674e-007],115,"Up",[]],[[14111.7,15138.3,0.449832],115,"Up",[]],[[14115,15146.7,0.870539],58,"Up",[]],[[14115.2,15142.6,0.507829],151,"Up",[]],[[14124.3,15143,0.292004],115,"Up",[]],[[14132,15139,0.393819],125,"Up",[]],[[14124.8,15132.4,0.789651],231,"Up",[]],[[14128.5,15144.8,0],122,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
@@ -79,12 +71,21 @@ switch (_case) do {
 		// Ruined Buildings Sentries
 		[[[[14087.5,15138.5,0.351057],0,"Up",[]],[[14096,15145.2,0.889367],0,"Up",[]],[[14097.5,15157.5,0.34046],0,"Up",[]],[[14101.5,15178.5,0.946243],0,"Up",[]],[[14055.1,15166.2,1.00757],0,"Up",[]],[[14092.5,15185.5,0.53451],0,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 
+		// Trench Sentries.
+		[[[[14192.7,15182.9,0.0558662],220,"Middle",[[301,0]],"mat"],[[14196.1,15181,0.133732],194,"Up",[[301,0]],"lr"],[[14199,15179.5,0.0466995],189,"Up",[[301,0]],"mmg"],[[14205.7,15176.6,2.04557],193,"Middle",[[301,0]],"mmg"],[[14210,15183.3,0.853703],110,"Middle",[[301,0]],"mat"],[[14211.6,15187,-0.0788612],199,"Middle",[[301,0]],"lr"],[[14212,15188.4,0.309924],99,"Up",[[301,0]],"mmg"],[[14207,15177.4,2.10798],118,"Middle",[[301,0]],"mmg"],[[14204.5,15178.7,2.08419],243,"Middle",[[301,0]],"mmg"]],[],[],east] call GW_Common_fnc_spawnGroup;
+	
+		// Strongpoint Sentries.
+		[[[[14158.9,15232.7,1.33514e-05],200,"Up",[[301,0]],"mmg"],[[14163.6,15225.3,1.33514e-05],174,"Up",[[301,0]],"mmg"],[[14171.2,15228.7,0],142,"Up",[[301,0]],"mat"],[[14170.8,15232.2,0],109,"Up",[[301,0]],"mat"],[[14166.9,15238.5,1.90735e-06],23,"Up",[[301,0]],"mat"],[[14163.5,15234.9,0],59,"Middle",[[301,0]],"mat"],[[14167.2,15232.5,0],247,"Middle",[[301,0]],"mat"]],[["UK3CB_ADE_O_DSHkM_Mini_TriPod",[14160.2,15230.5,0],226,[["gunner",-1,[0]]],[[351,false]]],["UK3CB_ADR_O_SPG9",[14165.5,15226.4,0],157,[["gunner",-1,[0]]],[[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
+
+		// Artillery Nest
+		null = [Mortar_1,east,"precise","light",["auto",50],150,1200,20,-1,-1] spawn OKS_fnc_Mortars;
+		[[[[14049.4,15300.5,0.480527],133,"Up",[[301,0]],"mat"],[[14045.5,15298.1,0.915296],142,"Middle",[[301,0]],"mat"],[[14048.4,15299.2,0.740287],142,"Middle",[[301,0]],"mat"],[[14041.1,15304.5,0.0400877],74,"Middle",[[301,0]],"mat"],[[14049.3,15306.2,0],103,"Middle",[[301,0]],"mat"],[[14052.7,15304.4,0],59,"Middle",[[301,0]],"mat"],[[14057.1,15307.6,1.04402],58,"Middle",[[301,0]],"mat"],[[14057.7,15306.2,1.00201],80,"Middle",[[301,0]],"mat"],[[14038.8,15299.8,0.900122],252,"Middle",[[301,0]],"mat"],[[14030.6,15296.2,1.69578],230,"Middle",[[301,0]],"mat"],[[14029.9,15298,1.75719],267,"Middle",[[301,0]],"mat"]],[],[],east] call GW_Common_fnc_spawnGroup;
 	};
 
 	case 3: {
 
 		// Artillery Counter
-		_Vehicles = ["UK3CB_TKA_O_BTR80a", "UK3CB_TKA_O_BMP2", "UK3CB_TKA_O_BMP1", "UK3CB_TKA_O_BMP1", "UK3CB_TKA_O_MTLB_BMP"];
+		_Vehicles = ["UK3CB_TKA_O_BMP2", "UK3CB_TKA_O_BMP1", "UK3CB_TKA_O_BMP1", "UK3CB_TKA_O_MTLB_BMP"];
 		{
 			[_X,NEKY_Hunt_Trigger_1,selectRandom _Vehicles,5,east,2000] spawn OKS_fnc_Mechanized_Spawn;
 		} foreach [mech_1,mech_2,mech_3];
@@ -93,12 +94,16 @@ switch (_case) do {
 	case 4: {
 
 		// Support Counter
-		_Vehicles = ["UK3CB_TKA_O_BTR80a", "UK3CB_TKA_O_BMP2", "UK3CB_TKA_O_BMP1", "UK3CB_TKA_O_BMP1", "UK3CB_TKA_O_MTLB_BMP"];
+		_Vehicles = ["UK3CB_TKA_O_BMP2", "UK3CB_TKA_O_BMP1", "UK3CB_TKA_O_BMP1", "UK3CB_TKA_O_MTLB_BMP"];
 
 		// Artillery Counter
 		{
 			[_X,NEKY_Hunt_Trigger_1,selectRandom _Vehicles,5,east,2000] spawn OKS_fnc_Mechanized_Spawn;
 		} foreach [mech_4,mech_5,mech_6,mech_7];
+
+		["HQ","side","1st Platoon be advised, a large mechanized force is heading in from the north. 2 columns of mechanized infantry at least. Repel the incoming reinforcements, HQ out."] remoteExec ["OKS_fnc_Chat",0];
+		[ConvoySpawn_1,ConvoyWP_1,ConvoyEnd_1,independent,[4,["UK3CB_CSAT_A_O_BMP1","UK3CB_CSAT_A_O_BMP1","UK3CB_CSAT_A_O_BRM1K","UK3CB_CSAT_A_O_BMP1"],35,30,100],[true,8],[],false,false,["attack"],"offroad"] spawn OKS_fnc_Convoy_Spawn; sleep 15;
+		[ConvoySpawn_2,ConvoyWP_2,ConvoyEnd_2,independent,[4,["UK3CB_CSAT_A_O_BMP1","UK3CB_CSAT_A_O_BMP1","UK3CB_CSAT_A_O_BRM1K","UK3CB_CSAT_A_O_BMP1"],35,30,100],[true,8],[],false,false,["attack"],"offroad"] spawn OKS_fnc_Convoy_Spawn;
 	};
 
 	case 5: {
@@ -111,125 +116,3 @@ switch (_case) do {
 		ERROR(FORMAT_1("Case missing: %1", _case));
 	};
 };
-
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-		/*
-		   Dynamic Script Params
-		   0 - Trigger Name (Object)
-		   1 - Disabled - Keep False
-		   2 - Number of Infantry - [Static Integer,Patrol Integer,CreateSectorObjective?,LocalPatrols?] (Array) -
-		   3 - Wheeled Patrols (Integer/Number)
-		   4 - APC Patrols (Integer/Number)
-		   5 - Tank Patrols (Integer/Number)
-		   6 - Roadblocks [RoadBlocksCount,OnlyOnTarmac,LocalPatrols?,NumberChanceForVehicle(0-1)] (Array)
-		   7 - Mortar Pits [MortarCount,LocalPatrols?] (Array)
-		   8 - Random Objectives [ObjectiveCount,LocalPatrols?] (Array)
-		   9 - Hunt Array Bases [Infantry,Wheeled,APC,Tank,Helicopter]
-		   10 - Dynamic Civilians on? (Boolean)
-
-			Local Patrols - This means that the strongpoints / roadblocks / mortar pits / objectives have their own local patrols near their position.
-			If you use it on Parameter 2, 30% of the static contacts will be turned into patrols.
-
-		   Note:
-		   The Dynamic Scripts does work on its own however is very limited in selecting positions for strongpoints.
-		   You as an editor can assist the dynamic script by placing down locations for pinpointing different positions.
-		   In Eden-Editor "Location"s can be found in Systems (F5) and Game Logics > Locations.
-
-		   Area, Base, City, Evac Point, Resupply Point & Town -> Spawns Strongpoints & Sector Tasks (Selects Random Buildings in Area. Generally more contacts per building)
-		   Outpost -> Spawns Compounds & Sector Tasks (Selects all buildings in range of compoundSize (Settings) and spawns even-spread over all buildings)
-		   FOB -> Spawns Roadblocks, use the direction of the logic to define the direction of the roadblock.
-		   Respawn Point -> If you use HuntBases these locations will be picked, use the direction of the logic to choose the spawn direction 15-25m away from logic.
-		   Camp -> Static Objective positions, once again direction of logic defines direction of Objective compositions.
-		   Village -> Defines village area for the Dynamic Civilian presence, radius is found in Settings.sqf
-
-		   All Locations are not required, the script will find its own locations, however for the best experience and best result, help the dynamic script by placing these logics.
-
-		   Example:
-		   [Trigger_1,false,[0,0,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
-		*/
-
-		/* Example of Dynamic Scripts */
-		/*
-		if(isServer) then {
-			waitUntil{sleep 5; !(isNil "OKS_fnc_CreateZone")};
-
-			//// START OF ZONE /////
-			[	Trigger_1,  // Name of Trigger used as Spawn Area
-				false, 		// DO NOT EDIT
-				[
-					8,      // Number of Static Infantry - Preferred Game Logic Location 'Outpost'"
-					25,		// Number of Patrolling Infantry
-					false,  // Create Sector Objective on Garrison?
-					false   // Should have dedicated patrols near static positions
-				],
-				east, // Side of Enemy
-				0,    // Number of Wheeled on Patrol
-				0,    // Number of APCs on Patrol
-				0,    // Number of Tanks on Patrol
-				[
-					0,     // Number of Roadblocks - Preferred Game Logic Location 'FOB'"
-					true,  // Should be on tarmac.
-					false, // Should have dedicated patrol.
-					0  	   // Chance for Static Vehicle (1 = 100%, 0.5 = 50%)
-				],
-				[
-					0,     // Number of Mortars
-					false  // Should have dedicated patrols around it
-				],[
-					0,    // Number of Random Objectives - Preferred Game Logic Location 'Camp'"
-					false // Should have dedicated patrols around it
-				],
-				[0,0,0,0,0] // Infantry, Wheeled, APCs, Tanks, Air Assault - Hunt Bases - Preferred Game Logic Location 'Respawn Point'"
-				,false      // Should Enable Civilian Presence - Required Game Logic Location 'Village'"
-			] spawn OKS_fnc_CreateZone;
-			//// END OF ZONE ////
-
-		};
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-		/*
-		   	HuntBase Params
-
-		   	0 - Base Object (Object)
-		   	1 - Spawn Object (Object)
-		   	2 - Hunt Trigger (Trigger)
-		   	3 - Wave Count (Integer/Number)
-		   	4 - Respawn Delay in Seconds (Integer/Number)
-		   	5 - Enemy Side (Side)
-		   	6 - Unit Selection - (Integer/String/Array with Strings)
-		   	7 - Refresh Rate in Seconds (Integer/Number)
-
-			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,30,independent,6,30] spawn OKS_fnc_Huntbase;
-			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,"CUP_I_LR_MG_AAF",30] spawn OKS_fnc_Huntbase;
-			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,["CUP_I_LR_MG_AAF","CUP_I_LR_MG_AAF"],30] spawn OKS_fnc_Huntbase;
-		*/
-		/* Example of Hunt Bases */
-		/*
-		if(isServer && GOL_NEKY_HUNT isEqualTo 1) then {
-			waitUntil{sleep 5; !(isNil "OKS_fnc_Huntbase")};
-			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,600+(random 300),east,6,120+(120)] spawn OKS_fnc_Huntbase;
-		};
-
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-		/*
-		   AirBase Params
-
-		   0 - Base Object (Object)
-		   1 - Spawn Object (Object)
-		   2 - Hunt Trigger (Trigger)
-		   3 - Enemy Side (Side)
-		   4 - Classname of Helicopter (String)
-		   5 - Type of Insert (Unload ONLY) (String)
-		   6 - Gunner Split - [How many teams,Procent of Gunner] (Array)
-
-		   [Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
-		*/
-		/* Example of Air Bases */
-		/*
-		if(isServer && GOL_NEKY_AIRDROP isEqualTo 1) then {
-			waitUntil{sleep 5; !(isNil "OKS_fnc_Airbase")};
-			[Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
-		};
-

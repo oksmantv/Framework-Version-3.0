@@ -17,13 +17,52 @@
 */
 #include "script_Component.hpp"
 
-params ["_units","_vehicles","_waypoints"];
+params [
+	["_units", []],
+	["_vehicles", []],
+	["_waypoints", []],
+	["_side", nil]
+];
 
 collect3DENHistory {
-	([GVAR(Faction)] call FUNC(getGroupType)) params ["_side", "_leader","_unitList"];
+	// Resolve side: if nil or string, fall back to mission Faction setting (default EAST)
+	if (isNil "_side") then {
+		_side = GVAR(Faction);
+	};
+
+	if (_side isEqualType "") then {
+		switch (toLower _side) do {
+			case "west":          { _side = WEST; };
+			case "east":          { _side = EAST; };
+			case "independent":   { _side = INDEPENDENT; };
+			case "civilian":      { _side = civilian; };
+			default               { _side = EAST; };
+		};
+	};
+
+	if (_side isEqualType sideUnknown) then {
+		// GVAR(Faction) is stored as a string from CBA settings, convert it
+		switch (toLower str _side) do {
+			case "west":          { _side = WEST; };
+			case "east":          { _side = EAST; };
+			case "independent":   { _side = INDEPENDENT; };
+			case "civilian":      { _side = civilian; };
+			default               { _side = EAST; };
+		};
+	};
+	([_side] call FUNC(getGroupType)) params ["_side", "_leader","_unitList"];
 	{
-		_x params ["_pos","_dir"];
-		_unitClass = (selectRandom _unitList);
+		_x params ["_pos","_dir","_stance","_specials","_role"];
+		private _unitClass = "";
+		if !(_forEachIndex isEqualTo 0) then {
+			_unitClass = (selectRandom _unitList);
+		} else {
+			_unitClass = (selectRandom _leader);
+		};
+		if(!isNil "_role") then {
+			_unitClass = [_role, _side] call GW_Common_Fnc_getClassnameByRole;
+		};
+
 		if (isNil QGVAR(spawn)) then {
 			_unit = create3DENEntity ["Object", _unitClass, [0,0,0]];
 			_unit set3DENAttribute ["position", _pos];
@@ -53,17 +92,18 @@ collect3DENHistory {
 		{
 			_x params ["_vehPos","_turretPos"];
 			_unitClass = (selectRandom _unitList);
+			private ["_unit"];
+			// Create crew unit in the same group
 			if (isNil QGVAR(spawn)) then {
-				_unit = create3DENEntity ["Object", _unitClass, [0,0,0]];
-				_unit set3DENAttribute ["position", _pos];
-				_unit set3DENAttribute ["rotation", [0,0,_dir]];
+				_unit = create3DENEntity ["Object", _unitClass, _pos];
 				GVAR(spawn) = _unit;
 			} else {
-				_unit = (group GVAR(spawn)) create3DENEntity ["Object", _unitClass, [0,0,0]];
-				_unit set3DENAttribute ["position", _pos];
-				_unit set3DENAttribute ["rotation", [0,0,_dir]];
+				_unit = (group GVAR(spawn)) create3DENEntity ["Object", _unitClass, _pos];
 			};
-//			_unit moveInDriver _veh;	// Bi fucked this
+			
+			// Add crew connection to vehicle
+			_unit moveInTurret [0,_turretPos];
+			_unit moveInTurret [1,_turretPos];
 		} forEach _crew;
 
 		[_unit, _specials] call FUNC(setAttributes3DEN);
