@@ -26,39 +26,33 @@ systemChat format ["Spawn Case Activated: %1", _case];
 switch (_case) do {
 	case 0: {
 		// Beach Assault.
-		[[[[1579.6,2072.86,0],195,"Up",[[301,0]],"sl"],[[1576.49,2073.84,7.15256e-07],195,"Up",[[301,0]],"r"],[[1576.75,2075.61,4.76837e-07],195,"Middle",[[301,1]],"ag"],[[1581.75,2074.95,4.76837e-07],112,"Middle",[[301,0]],"mat"],[[1574.6,2075.3,7.15256e-07],252,"Up",[[301,0]],"lr"],[[1582.68,2073.11,7.15256e-07],195,"Up",[[301,0]],"lr"],[[1543.87,2087.12,0],195,"Up",[[301,0]],"sl"],[[1540.75,2088.1,0],195,"Up",[[301,0]],"r"],[[1541.02,2089.87,0],195,"Middle",[[301,1]],"ag"],[[1546.02,2089.21,0],112,"Middle",[[301,0]],"mat"],[[1538.87,2089.56,0],252,"Up",[[301,0]],"lr"],[[1546.95,2087.37,0],195,"Up",[[301,0]],"lr"]],[["UK3CB_ADG_O_PKM_High",[1578.12,2073.25,0.201468],188,[["gunner",-1,[0]]],[[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
-		[[[[1693.41,2048.6,0],195,"Up",[[301,0]],"sl"],[[1690.3,2049.58,0],195,"Up",[[301,0]],"r"],[[1690.56,2051.36,0],195,"Middle",[[301,1]],"ag"],[[1695.56,2050.69,0],112,"Middle",[[301,0]],"mat"],[[1688.42,2051.04,0],252,"Up",[[301,0]],"lr"],[[1696.5,2048.85,0],195,"Up",[[301,0]],"lr"],[[1661.56,2055.14,7.15256e-07],195,"Up",[[301,0]],"sl"],[[1657.69,2058.17,-0.0159011],187,"Up",[[301,0]],"r"],[[1658.59,2058.66,0.0852818],195,"Middle",[[301,1]],"ag"],[[1663.71,2057.24,4.76837e-07],112,"Middle",[[301,0]],"mat"],[[1656.56,2057.59,2.38419e-07],252,"Up",[[301,0]],"lr"],[[1664.64,2055.4,2.38419e-07],195,"Up",[[301,0]],"lr"]],[["UK3CB_ADG_O_PKM_High",[1660.03,2056.76,-0.00323701],188,[["gunner",-1,[0]]],[[351,false]]],["UK3CB_ADG_O_PKM_High",[1692.25,2049.96,0.241203],188,[["gunner",-1,[0]]],[[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
-		[[[[1619.21,2128.44,0],195,"Up",[[301,0]],"sl"],[[1637.75,2122.57,0],195,"Up",[[301,0]],"r"],[[1617.63,2129.19,-0.306494],195,"Middle",[[301,1]],"ag"],[[1625.72,2125.92,0],195,"Middle",[[301,0]],"mat"],[[1614.13,2128.64,-0.00365591],195,"Up",[[301,0]],"lr"],[[1631.85,2123.48,0],195,"Up",[[301,0]],"lr"]],[],[],east] call GW_Common_fnc_spawnGroup;
-		[[[[1706.24,2141.93,0],195,"Up",[[301,0]],"sl"],[[1724.78,2136.06,0],195,"Up",[[301,0]],"r"],[[1705.03,2142.12,0],195,"Middle",[[301,1]],"ag"],[[1712.74,2139.41,0],195,"Middle",[[301,0]],"mat"],[[1700.43,2143.45,0],195,"Up",[[301,0]],"lr"],[[1718.87,2136.97,0],195,"Up",[[301,0]],"lr"]],[],[],east] call GW_Common_fnc_spawnGroup;
-		[[[[1550.06,2169.08,0],195,"Up",[[301,0]],"sl"],[[1568.6,2163.21,0],195,"Up",[[301,0]],"r"],[[1548.84,2169.26,0],195,"Middle",[[301,1]],"ag"],[[1556.56,2166.55,0],195,"Middle",[[301,0]],"mat"],[[1544.25,2170.6,0],195,"Up",[[301,0]],"lr"],[[1562.69,2164.12,0],195,"Up",[[301,0]],"lr"]],[],[],east] call GW_Common_fnc_spawnGroup;
-		[[[[1890.38,2226.97,3.28818],166,"Up",[[301,0]],"ftl"],[[1888.71,2220.31,0.171875],343,"Up",[[301,0]],"g"],[[1884.04,2220.9,0.168781],319,"Up",[[301,0]],"mat"],[[1875.14,2215.81,0.365344],294,"Up",[[301,0]],"lr"],[[1870.91,2225.23,0.255544],323,"Up",[[301,0]],"mmg"],[[1868.37,2219.91,0.258849],125,"Up",[[301,0]],"mat"]],[],[],east] call GW_Common_fnc_spawnGroup;
-		[[[[1855.35,2247.87,0.170165],7,"Up",[[301,0]],"sl"],[[1844.22,2239.29,0.549549],91,"Up",[[301,0]],"g"],[[1845.25,2245.38,0.348008],10,"Up",[[301,0]],"mmg"],[[1840.56,2239.73,0.495225],192,"Up",[[301,0]],"mat"],[[1863.52,2252,0.101523],143,"Up",[[301,0]],"lr"],[[1840.2,2245.29,0.340143],174,"Up",[[301,0]],"r"]],[],[],east] call GW_Common_fnc_spawnGroup;
-		
-		[[],[["rhs_bmp1_msv",[1728.6,2337.91,0.469009],192,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0,"maljutka_hide_source",0]],[351,false]]],["rhs_bmp1_msv",[1673.27,2335.69,0.688135],192,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0,"maljutka_hide_source",0]],[351,false]]],["rhs_bmp1_msv",[1596.7,2347.74,0.630538],192,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0,"maljutka_hide_source",0]],[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
+		[[[[1576.74,2072.91,2.6226e-06],148,"Up",[[301,0]],"sl"],[[1574.66,2074.87,1.43051e-06],195,"Middle",[[301,1]],"ag"],[[1579.62,2074.43,1.43051e-06],112,"Middle",[[301,0]],"mat"],[[1582.68,2073.11,7.15256e-07],195,"Up",[[301,0]],"lr"],[[1542.48,2087.73,4.31538e-05],195,"Up",[[301,0]],"r"],[[1539.59,2089.54,2.00272e-05],195,"Middle",[[301,1]],"ag"],[[1546.02,2089.21,0],112,"Middle",[[301,0]],"mat"],[[1546.95,2087.37,0],195,"Up",[[301,0]],"lr"],[[1572.86,2073.34,2.40803e-05],164,"Up",[[301,0]],"lr"]],[],[],east] call GW_Common_fnc_spawnGroup;
+		[[[[1693.41,2048.6,0],195,"Up",[[301,0]],"sl"],[[1690.3,2049.58,0],195,"Up",[[301,0]],"r"],[[1695.56,2050.69,0],112,"Middle",[[301,0]],"mat"],[[1696.5,2048.85,0],195,"Up",[[301,0]],"lr"],[[1661.56,2055.14,7.15256e-07],195,"Up",[[301,0]],"sl"],[[1658.18,2055.43,4.29153e-05],187,"Up",[[301,0]],"r"],[[1656.56,2057.59,2.38419e-07],252,"Middle",[[301,0]],"lr"],[[1664.64,2055.4,2.38419e-07],195,"Up",[[301,0]],"lr"]],[],[],east] call GW_Common_fnc_spawnGroup;
+		[[[[1724.78,2136.06,0],195,"Up",[[301,0]],"r"],[[1712.74,2139.41,0],195,"Up",[[301,0]],"mat"],[[1700.43,2143.45,0],195,"Up",[[301,0]],"lr"],[[1718.87,2136.97,0],195,"Up",[[301,0]],"lr"],[[1619.21,2128.44,0],195,"Up",[[301,0]],"sl"],[[1637.75,2122.57,0],195,"Up",[[301,0]],"r"],[[1625.72,2125.92,0],195,"Up",[[301,0]],"mat"],[[1614.13,2128.64,-0.00365591],195,"Up",[[301,0]],"lr"],[[1568.6,2163.21,0],195,"Up",[[301,0]],"r"],[[1548.84,2169.26,0],195,"Up",[[301,1]],"ag"],[[1556.56,2166.55,0],195,"Up",[[301,0]],"mat"],[[1544.25,2170.6,0],195,"Up",[[301,0]],"lr"]],[],[],east] call GW_Common_fnc_spawnGroup;
+		[[[[1855.35,2247.87,0.170165],7,"Up",[[301,0]],"sl"],[[1844.22,2239.29,0.549549],91,"Up",[[301,0]],"g"],[[1845.25,2245.38,0.348008],10,"Up",[[301,0]],"mmg"],[[1840.56,2239.73,0.495225],192,"Up",[[301,0]],"mat"],[[1863.52,2252,0.101523],143,"Up",[[301,0]],"lr"],[[1840.2,2245.29,0.340143],174,"Up",[[301,0]],"r"],[[1890.38,2226.97,3.28818],166,"Up",[[301,0]],"ftl"],[[1884.04,2220.9,0.168781],319,"Up",[[301,0]],"mat"],[[1870.91,2225.23,0.255544],323,"Up",[[301,0]],"mmg"],[[1868.37,2219.91,0.258849],125,"Up",[[301,0]],"mat"]],[],[],east] call GW_Common_fnc_spawnGroup;
+				
 		[[],[
-			["rhs_btr80_msv",[1582.08,2115.77,0.471418],194,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_l4_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",1,"crate_r4_unhide",1,"water_1_unhide",0,"water_2_unhide",1,"wheel_1_unhide",1,"wheel_2_unhide",1]],[351,false]]],
-			["rhs_btr80_msv",[1664.87,2097.6,0.471418],194,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_l4_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",0,"crate_r4_unhide",1,"water_1_unhide",1,"water_2_unhide",1,"wheel_1_unhide",1,"wheel_2_unhide",0]],[351,false]]],
+			["rhs_bmp1_msv",[1728.6,2337.91,0.469009],192,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0,"maljutka_hide_source",0]],[351,false]]],
+			//["rhs_bmp1_msv",[1673.27,2335.69,0.688135],192,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0,"maljutka_hide_source",0]],[351,false]]],
+			["rhs_bmp1_msv",[1596.7,2347.74,0.630538],192,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0,"maljutka_hide_source",0]],[351,false]]]
+		],[],east] call GW_Common_fnc_spawnGroup;
+		[[],[
+			//["rhs_btr80_msv",[1582.08,2115.77,0.471418],194,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_l4_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",1,"crate_r4_unhide",1,"water_1_unhide",0,"water_2_unhide",1,"wheel_1_unhide",1,"wheel_2_unhide",1]],[351,false]]],
+			//["rhs_btr80_msv",[1664.87,2097.6,0.471418],194,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_l4_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",0,"crate_r4_unhide",1,"water_1_unhide",1,"water_2_unhide",1,"wheel_1_unhide",1,"wheel_2_unhide",0]],[351,false]]],
 			["rhs_btr80_msv",[1699.15,2342.52,0.471418],194,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_l4_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",1,"crate_r4_unhide",0,"water_1_unhide",0,"water_2_unhide",0,"wheel_1_unhide",1,"wheel_2_unhide",1]],[351,false]]]
 		],[],east] call GW_Common_fnc_spawnGroup;
 		
-		waitUntil {sleep 0.1; triggerActivated rampOpenTrigger};
+		waitUntil {sleep 0.2; triggerActivated rampOpenTrigger};
 		["USS Concord","side","Landing Party this is the USS Concord. Standby, ramp is opening. Marine Raiders will take the lead, support them as best you can. Good luck, Concord out."] remoteExec ["OKS_fnc_Chat",0];
-		[] spawn {
-			// [farty_1,[getPos target_1,getPos target_5,getPos target_9],west,1,1,true,false,30,false] spawn OKS_fnc_ArtySuppression; sleep 1;
-			// [farty_2,[getPos target_2,getPos target_6,getPos target_10],west,1,1,true,false,30,false] spawn OKS_fnc_ArtySuppression; sleep 1;
-			// [farty_3,[getPos target_3,getPos target_7,getPos target_11],west,1,1,true,false,30,false] spawn OKS_fnc_ArtySuppression; sleep 1;
-			// [farty_4,[getPos target_4,getPos target_8,getPos target_12],west,1,1,true,false,30,false] spawn OKS_fnc_ArtySuppression; sleep 1;
-			// [farty_5,[getPos target_13,getPos target_14,getPos target_15],west,3,1,true,false,30,false] spawn OKS_fnc_ArtySuppression;
-		};
 		sleep 5;
-		[mortarZone, 4] spawn OKS_fnc_MortarZone;
+		[mortarZone, 7] spawn OKS_fnc_MortarZone;
 		private _LHA_Aft = ((LHA_1 getVariable ["bis_carrierparts", []]) select {
 			(typeOf (_x #0)) isEqualTo "LHA_Aft"
 		}) #0#0;
 		_LHA_Aft animateSource ["ramp",1];
 		sleep 4;
 		null = [beachLandingSpawn_1, beachLandingTarget_1, "RHICC_GREEN", 4, west, "rush", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 0.5;
-		null = [beachLandingSpawn_2, beachLandingTarget_2, "RHICC_GREEN", 4, west, "rush", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 0.5;
+		//null = [beachLandingSpawn_2, beachLandingTarget_2, "RHICC_GREEN", 4, west, "rush", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 0.5;
 		null = [beachLandingSpawn_3, beachLandingTarget_3, "RHICC_GREEN", 4, west, "rush", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 0.5;
 		//null = [beachLandingSpawn_4, beachLandingTarget_4, "RHICC_GREEN", 4, west, "rush", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 0.5;
 		sleep 2;
@@ -66,35 +60,55 @@ switch (_case) do {
 		sleep 8;
 
 		[getpos jetspawn_1, jetstrike_1,getpos jetexit_1,selectRandom ["B_Plane_Fighter_01_Stealth_F"],west,100] spawn OKS_fnc_AirStrike; sleep 3;
-		[getpos jetspawn_2, jetstrike_2,getpos jetexit_2,selectRandom ["B_Plane_Fighter_01_Stealth_F"],west,100] spawn OKS_fnc_AirStrike; sleep 3;
-		[getpos jetspawn_3, jetstrike_3,getpos jetexit_3,selectRandom ["B_Plane_Fighter_01_Stealth_F"],west,100] spawn OKS_fnc_AirStrike; sleep 3;
-		[getpos jetspawn_4, jetstrike_4,getpos jetexit_4,selectRandom ["B_Plane_Fighter_01_Stealth_F"],west,100] spawn OKS_fnc_AirStrike; sleep 3;
+		[getpos jetspawn_2, jetstrike_2,getpos jetexit_2,selectRandom ["B_Plane_Fighter_01_Stealth_F"],west,100] spawn OKS_fnc_AirStrike;
 	};
 
 	case 21: {
-		[ConvoySpawn_1,ConvoyWP_1,ConvoyEnd_1,east,[3,["rhs_bmp1_msv", "rhs_brm1k_msv", "rhs_bmp1_msv"],40,35],[true,3],[],false,false,["rush"],false] spawn OKS_fnc_Convoy_Spawn; sleep 120;
-		[ConvoySpawn_2,ConvoyWP_2,ConvoyEnd_2,east,[3,["rhs_bmp1_msv", "rhs_brm1k_msv", "rhs_bmp1_msv"],35,50],[true,3],[],false,false,["rush"],false] spawn OKS_fnc_Convoy_Spawn; sleep 120;
-		[ConvoySpawn_3,ConvoyWP_3,ConvoyEnd_3,east,[3,["rhs_bmp1_msv", "rhs_brm1k_msv", "rhs_bmp1_msv"],35,50],[true,3],[],false,false,["rush"],false] spawn OKS_fnc_Convoy_Spawn;
+		[ConvoySpawn_1,ConvoyWP_1,ConvoyEnd_1,east,[3,["rhs_bmp1_msv", "rhs_brm1k_msv", "rhs_bmp1_msv"],40,35],[true,3],[],false,false,["rush"],"convoystop"] spawn OKS_fnc_Convoy_Spawn; sleep 180;
+		//[ConvoySpawn_2,ConvoyWP_2,ConvoyEnd_2,east,[3,["rhs_bmp1_msv", "rhs_brm1k_msv", "rhs_bmp1_msv"],35,50],[true,3],[],false,false,["rush"],"convoystop"] spawn OKS_fnc_Convoy_Spawn; sleep 180;
+		[ConvoySpawn_3,ConvoyWP_3,ConvoyEnd_3,east,[3,["rhs_bmp1_msv", "rhs_brm1k_msv", "rhs_bmp1_msv"],35,50],[true,3],[],false,false,["rush"],"convoystop"] spawn OKS_fnc_Convoy_Spawn;
 	};
 
 	case 1: {
 
 		// Trench east 1.
-		[[[[2023.22, 3062.14, 0.356453], 136, "Up", []], [[2050.24, 3097.83, 0.909592], 128, "Middle", []], [[2009.93, 3062.04, 0.565353], 172, "Up", []], [[2008.69, 3062.02, 0.242455], 172, "Up", []], [[2007.65, 3061.99, 0.0831909], 187, "Middle", []], [[2014.62, 3064.96, 1.0388], 224, "Middle", []], [[2014.22, 3067.44, 0.0777206], 152, "Middle", []], [[2016.16, 3067.46, 1.15195], 172, "Middle", []], [[2018.7, 3064.77, 0.970589], 105, "Middle", []], [[2022.47, 3061.96, 0.488556], 172, "Up", []], [[2049.17, 3099.26, 0.235031], 110, "Middle", []], [[2037.77, 3055.22, 3.46955], 207, "Up", []], [[2038.96, 3055.43, 3.38303], 149, "Up", []], [[2024.49, 3073.54, 0], 187, "Middle", []], [[2052.9, 3095.72, 0.409157], 130, "Up", []], [[2027.38, 3073.41, 0], 187, "Middle", []], [[2052.21, 3095.05, 0.591438], 180, "Up", []]], [["rhs_SPG9M_MSV", [2026.06, 3073.95, -7.62939e-06], 193, [["gunner", -1, [0]]], []]], []] call GW_Common_fnc_spawnGroup;
-		[[[[2006.08, 3165.62, -0.0355682], 223, "Middle", []], [[2001.59, 3174.59, 0.0470963], 180, "Middle", []], [[2023.39, 3161.02, 2.28882e-05], 223, "Up", []], [[2033.6, 3164.47, -1.52588e-05], 223, "Middle", []], [[2050.76, 3173.01, -2.28882e-05], 223, "Middle", []], [[2059.45, 3182.42, 4.57764e-05], 239, "Middle", []], [[2056.37, 3193.62, -7.62939e-06], 223, "Middle", []], [[2009.92, 3162.6, -7.62939e-06], 180, "Up", []], [[2058.48, 3177.44, 0.116806], 150, "Up", []], [[2014.18, 3165.03, -4.57764e-05], 299, "Middle", []]], [["rhs_bmp1_msv", [2030.96, 3177.68, -0.0308914], 134, [["driver", -1, []], ["gunner", -1, [0]]], [[6, ["standard", 1]], [7, ["crate_l1_unhide", 0, "crate_l2_unhide", 0, "crate_l3_unhide", 0, "crate_r1_unhide", 1, "crate_r2_unhide", 1, "crate_r3_unhide", 1, "wood_1_unhide", 0, "maljutka_hide_source", 0]]]]], []] call GW_Common_fnc_spawnGroup;
+		[[
+			[[2023.22, 3062.14, 0.356453], 136, "Up", []], [[2050.24, 3097.83, 0.909592], 128, "Middle", []], [[2009.93, 3062.04, 0.565353], 172, "Up", []], 
+			[[2008.69, 3062.02, 0.242455], 172, "Up", []], [[2007.65, 3061.99, 0.0831909], 187, "Middle", []], [[2014.62, 3064.96, 1.0388], 224, "Middle", []], 
+			[[2014.22, 3067.44, 0.0777206], 152, "Middle", []], [[2016.16, 3067.46, 1.15195], 172, "Middle", []], [[2018.7, 3064.77, 0.970589], 105, "Middle", []],
+			[[2022.47, 3061.96, 0.488556], 172, "Up", []], [[2049.17, 3099.26, 0.235031], 110, "Middle", []], [[2037.77, 3055.22, 3.46955], 207, "Up", []],
+			[[2038.96, 3055.43, 3.38303], 149, "Up", []], [[2024.49, 3073.54, 0], 187, "Middle", []], [[2052.9, 3095.72, 0.409157], 130, "Up", []],
+			[[2027.38, 3073.41, 0], 187, "Middle", []], [[2052.21, 3095.05, 0.591438], 180, "Up", []]
+		], [["rhs_SPG9M_MSV", [2026.06, 3073.95, -7.62939e-06], 193, [["gunner", -1, [0]]], []]], [], east] call GW_Common_fnc_spawnGroup;
+		[[
+			[[2006.08, 3165.62, -0.0355682], 223, "Middle", []], [[2001.59, 3174.59, 0.0470963], 180, "Middle", []], [[2023.39, 3161.02, 2.28882e-05], 223, "Up", []],
+			 [[2033.6, 3164.47, -1.52588e-05], 223, "Middle", []], [[2050.76, 3173.01, -2.28882e-05], 223, "Middle", []], [[2059.45, 3182.42, 4.57764e-05], 239, "Middle", []],
+			  [[2056.37, 3193.62, -7.62939e-06], 223, "Middle", []], [[2009.92, 3162.6, -7.62939e-06], 180, "Up", []], [[2058.48, 3177.44, 0.116806], 150, "Up", []],
+			   [[2014.18, 3165.03, -4.57764e-05], 299, "Middle", []]
+		], [
+			["rhs_bmp1_msv", [2030.96, 3177.68, -0.0308914], 134, [["driver", -1, []], ["gunner", -1, [0]]], [[6, ["standard", 1]], [7, ["crate_l1_unhide", 0, "crate_l2_unhide", 0, "crate_l3_unhide", 0, "crate_r1_unhide", 1, "crate_r2_unhide", 1, "crate_r3_unhide", 1, "wood_1_unhide", 0, "maljutka_hide_source", 0]]]]
+		], [], east] call GW_Common_fnc_spawnGroup;
 
 		// Trench west 1.
-		[[[[1538.68, 3070.3, 0.371468], 79, "Up", []], [[1534.94, 3075.7, 0.0691757], 116, "Middle", []], [[1538.79, 3069.34, 0.42308], 89, "Up", []], [[1538.68, 3068.52, 0.609947], 107, "Up", []], [[1533.92, 3066.34, 0.663414], 37, "Middle", []], [[1530.52, 3065.28, 0.468834], 102, "Middle", []], [[1536.59, 3067.65, 1.3399], 94, "Up", []], [[1534.03, 3077.26, 0.0869064], 107, "Middle", []]], [], []] call GW_Common_fnc_spawnGroup;
-		[[[[1414.9, 3284.01, 0.894569], 132, "Up", []], [[1414.09, 3284.01, 0.941658], 179, "Up", []], [[1413.93, 3286.56, 0.757195], 163, "Middle", []], [[1412.44, 3287.97, 0.438507], 140, "Middle", []], [[1460.23, 3229.13, 0], 162, "Middle", []], [[1462.91, 3230.24, 0], 162, "Middle", []]], [["rhs_SPG9M_MSV", [1461.47, 3230.09, -0.000198364], 161, [["gunner", -1, [0]]], []], ["rhs_bmp1_msv", [1397.16, 3295.07, -0.150078], 145, [["driver", -1, []], ["gunner", -1, [0]]], [[6, ["standard", 1]], [7, ["crate_l1_unhide", 0, "crate_l2_unhide", 0, "crate_l3_unhide", 0, "crate_r1_unhide", 1, "crate_r2_unhide", 1, "crate_r3_unhide", 1, "wood_1_unhide", 0, "maljutka_hide_source", 0]]]]], []] call GW_Common_fnc_spawnGroup;
-
+		[[[[1460.23,3229.13,0]	,162,"Up",[[301,0]],"g"],[[1462.91,3230.24,0],162,"Up",[[301,0]],"r"]],[["rhs_SPG9M_MSV",[1461.47,3230.09,-0.000198364],161,[["gunner",-1,[0]]],[[351,false]]],["rhs_bmp1_msv",[1402.43,3291.17,7.62939e-06],145,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]],[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
+		
 		// Mortar Trench.
 		[mortar_1, east, "precise", "light", ["auto", 50], 150, 500, 30] spawn OKS_fnc_Mortars;
-		[[[[1860, 3392.05, 0.274597], 256, "Middle", []], [[1862.35, 3392.6, 0.556938], 160, "Up", []], [[1866.35, 3393.04, 1.22398], 183, "Up", []], [[1874.62, 3388.75, 0.777359], 305, "Middle", []], [[1872.23, 3391.73, 1.08132], 243, "Middle", []], [[1848.49, 3388.18, -0.000106812], 176, "Middle", []], [[1849.14, 3394.16, 8.39233e-05], 266, "Middle", []], [[1846.17, 3400.31, 7.62939e-06], 151, "Middle", []], [[1842.27, 3389.63, 0.259064], 259, "Up", []], [[1841.33, 3383.06, 0.808571], 44, "Middle", []]], [["rhs_bmp1_msv", [1827.23, 3391.3, 0.000106812], 152, [["driver", -1, []], ["gunner", -1, [0]]], [[6, ["standard", 1]], [7, ["crate_l1_unhide", 0, "crate_l2_unhide", 0, "crate_l3_unhide", 0, "crate_r1_unhide", 1, "crate_r2_unhide", 1, "crate_r3_unhide", 1, "wood_1_unhide", 0, "maljutka_hide_source", 0]]]], ["UK3CB_ARD_O_SPG9", [1854.54, 3389.78, 0.489436], 167, [["gunner", -1, [0]]], []]], []] call GW_Common_fnc_spawnGroup;
-
+		[[[[1860,3392.05,0.274597],256,"Up",[[301,0]],"sl"],[[1848.49,3388.18,-0.000106812],176,"Up",[[301,0]],"r"],[[1849.14,3394.16,8.39233e-05],266,"Up",[[301,0]],"g"],[[1846.17,3400.31,7.62939e-06],151,"Up",[[301,0]],"r"],[[1842.27,3389.63,0.259064],259,"Up",[[301,1]],"ag"],[[1841.33,3383.06,0.808571],44,"Up",[[301,0]],"r"]],[["rhs_bmp1_msv",[1827.23,3391.3,0.366066],152,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]],[351,false]]],["UK3CB_ARD_O_SPG9",[1854.54,3389.78,0.489433],167,[["gunner",-1,[0]]],[[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
+		
 		// Trench Mid.
-		[[[[1781.41, 3249.01, -3.05176e-05], 0, "Middle", []], [[1780.36, 3246.41, -3.05176e-05], 186, "Up", []], [[1776.24, 3243.98, 0], 167, "Up", []], [[1772.75, 3243, 0.497757], 167, "Up", []], [[1771.74, 3242.87, 0.514946], 167, "Up", []], [[1765.97, 3241.96, -3.05176e-05], 271, "Middle", []], [[1769.33, 3244.68, -3.05176e-05], 209, "Middle", []], [[1741.46, 3235.16, 3.20106], 146, "Up", []], [[1740.27, 3234.62, 3.39729], 179, "Up", []], [[1739.08, 3234.07, 3.39661], 230, "Up", []]], [["rhs_bmp1_msv", [1787.29, 3304.04, 0], 120, [["driver", -1, []], ["gunner", -1, [0]]], [[6, ["standard", 1]], [7, ["crate_l1_unhide", 0, "crate_l2_unhide", 0, "crate_l3_unhide", 0, "crate_r1_unhide", 1, "crate_r2_unhide", 1, "crate_r3_unhide", 1, "wood_1_unhide", 0, "maljutka_hide_source", 0]]]]], []] call GW_Common_fnc_spawnGroup;
+		[[[[1781.41, 3249.01, -3.05176e-05], 0, "Middle", []], [[1780.36, 3246.41, -3.05176e-05], 186, "Up", []], [[1776.24, 3243.98, 0], 167, "Up", []], [[1772.75, 3243, 0.497757], 167, "Up", []], [[1771.74, 3242.87, 0.514946], 167, "Up", []], [[1765.97, 3241.96, -3.05176e-05], 271, "Middle", []], [[1769.33, 3244.68, -3.05176e-05], 209, "Middle", []], [[1741.46, 3235.16, 3.20106], 146, "Up", []], [[1740.27, 3234.62, 3.39729], 179, "Up", []], [[1739.08, 3234.07, 3.39661], 230, "Up", []]], [["rhs_bmp1_msv", [1787.29, 3304.04, 0], 120, [["driver", -1, []], ["gunner", -1, [0]]], [[6, ["standard", 1]], [7, ["crate_l1_unhide", 0, "crate_l2_unhide", 0, "crate_l3_unhide", 0, "crate_r1_unhide", 1, "crate_r2_unhide", 1, "crate_r3_unhide", 1, "wood_1_unhide", 0, "maljutka_hide_source", 0]]]]], [], east] call GW_Common_fnc_spawnGroup;
 
-		// Mechanized Village + Farm + Ambush west.
+		// AAA MGs.
+		[[], [["rhs_KORD_high_MSV", [2578.38, 3442.96, 0.00645447], 204, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [2608.42, 3473.42, 0.108658], 80, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [1723.68, 4019.03, 0.00640869], 204, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [1317.82, 4044.02, 0.190048], 204, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [2176.05, 3356.46, 11.0513], 204, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [2156.79, 3360.92, 10.9596], 204, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [3327.53, 3922.91, 0.0878296], 204, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [3352.22, 4558.04, 0.0716858], 230, [["gunner", -1, [0]]], []]], []] call GW_Common_fnc_spawnGroup;
+
+		// / AAA Green Mountain.
+		[[], [["UK3CB_CHD_O_Gaz66_ZU23", [3701.27, 5962.62, 0], 312, [["gunner", -1, [0]]], [[6, ["CHDKZ", 1]], [7, ["cover_hide", 0, "spare_hide", 0, "bench_hide", 0, "rear_numplate_hide", 1, "light_hide", 0]]]], ["UK3CB_CHD_O_Gaz66_ZU23", [3694.24, 6010.97, 0], 188, [["gunner", -1, [0]]], [[6, ["CHDKZ", 1]], [7, ["cover_hide", 0, "spare_hide", 0, "bench_hide", 0, "rear_numplate_hide", 1, "light_hide", 0]]]]], []] call GW_Common_fnc_spawnGroup;
+	};
+
+	case 22: {
+
+		// Mechanized Village + Farm + Ambush west
 		[[], [
 			["rhs_bmp1_msv", [1531.81, 3435.64, 7.62939e-06], 156, [["driver", -1, []], ["gunner", -1, [0]]], [[6, ["standard", 1]], [7, ["crate_l1_unhide", 0, "crate_l2_unhide", 0, "crate_l3_unhide", 0, "crate_r1_unhide", 1, "crate_r2_unhide", 1, "crate_r3_unhide", 1, "wood_1_unhide", 0, "maljutka_hide_source", 0]]]],
 			["rhs_bmp1_msv", [1353.96, 3877, 0.451431], 181, [["driver", -1, []], ["gunner", -1, [0]]], [[6, ["standard", 1]], [7, ["crate_l1_unhide", 0, "crate_l2_unhide", 0, "crate_l3_unhide", 0, "crate_r1_unhide", 1, "crate_r2_unhide", 1, "crate_r3_unhide", 1, "wood_1_unhide", 0, "maljutka_hide_source", 0]]]],
@@ -108,16 +122,6 @@ switch (_case) do {
 		[[[[1554.71, 3475.71, 0], 0, []], [[1559.71, 3470.71, 0], 0, []], [[1549.71, 3470.71, 0], 0, []], [[1564.71, 3465.71, 0], 0, []], [[1544.71, 3465.71, 0], 0, []], [[1569.71, 3460.71, 0], 0, []], [[1539.71, 3460.71, 0], 0, []], [[1574.71, 3455.71, 0], 0, []]], [], [[[1487.46, 3410.16, 0], [[0, "Move"], [1, "SAFE"]]], [[1384.1, 3320.84, 0], [[0, "Move"]]], [[1393.86, 3224.77, 0], [[0, "Move"]]], [[1455.62, 3132.17, 0], [[0, "Move"]]], [[1513.44, 3066.33, 0], [[0, "Move"]]], [[1457.87, 3134.87, 0], [[0, "Move"]]], [[1395.13, 3225.88, 0], [[0, "Move"]]], [[1381.19, 3321.93, 0], [[0, "Move"]]], [[1489.96, 3412.7, 0], [[0, "Move"]]], [[1556.5, 3476.64, 0], [[0, "Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[1664.52, 3623.17, 0], 0, []], [[1669.52, 3618.17, 0], 0, []], [[1659.52, 3618.17, 0], 0, []], [[1674.52, 3613.17, 0], 0, []], [[1654.52, 3613.17, 0], 0, []], [[1679.52, 3608.17, 3.05176e-05], 0, []], [[1649.52, 3608.17, 1.52588e-05], 0, []], [[1684.52, 3603.17, 1.52588e-05], 0, []]], [], [[[1786.14, 3463.76, 1.52588e-05], [[0, "Move"], [1, "SAFE"]]], [[1937.6, 3124.22, 7.62939e-06], [[0, "Move"]]], [[1809.7, 3062.78, 0], [[0, "Move"]]], [[1659.5, 3052.58, 0], [[0, "Move"]]], [[1569.43, 3100.5, 0], [[0, "Move"]]], [[1661.76, 3055.28, 0], [[0, "Move"]]], [[1810.96, 3063.88, 0], [[0, "Move"]]], [[1934.69, 3125.31, 0], [[0, "Move"]]], [[1788.65, 3466.31, 1.52588e-05], [[0, "Move"]]], [[1666.31, 3624.1, 0], [[0, "Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 
-		// AAA MGs.
-		[[], [["rhs_KORD_high_MSV", [2578.38, 3442.96, 0.00645447], 204, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [2608.42, 3473.42, 0.108658], 80, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [1723.68, 4019.03, 0.00640869], 204, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [1317.82, 4044.02, 0.190048], 204, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [2176.05, 3356.46, 11.0513], 204, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [2156.79, 3360.92, 10.9596], 204, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [3327.53, 3922.91, 0.0878296], 204, [["gunner", -1, [0]]], []], ["rhs_KORD_high_MSV", [3352.22, 4558.04, 0.0716858], 230, [["gunner", -1, [0]]], []]], []] call GW_Common_fnc_spawnGroup;
-
-		// AA
-		{
-			[getPos _X, east, 50, 300, 2000, 35] spawn OKS_fnc_IR_AA;
-		} forEach [aa_1, aa_2, aa_3, aa_4];
-
-		// / AAA Green Mountain.
-		[[], [["UK3CB_CHD_O_Gaz66_ZU23", [3701.27, 5962.62, 0], 312, [["gunner", -1, [0]]], [[6, ["CHDKZ", 1]], [7, ["cover_hide", 0, "spare_hide", 0, "bench_hide", 0, "rear_numplate_hide", 1, "light_hide", 0]]]], ["UK3CB_CHD_O_Gaz66_ZU23", [3694.24, 6010.97, 0], 188, [["gunner", -1, [0]]], [[6, ["CHDKZ", 1]], [7, ["cover_hide", 0, "spare_hide", 0, "bench_hide", 0, "rear_numplate_hide", 1, "light_hide", 0]]]]], []] call GW_Common_fnc_spawnGroup;
 	};
 
 	case 2: {
@@ -127,20 +131,17 @@ switch (_case) do {
 		[getpos LambsGroupSpawn_3, "hunt", 4, east, 500] spawn OKS_fnc_Lambs_SpawnGroup;
 
 		// Village Hostages.
-		[[[[1612.69, 3862.96, 0], 0, []], [[1617.69, 3857.96, 0], 0, []], [[1607.69, 3857.96, 0], 0, []], [[1622.69, 3852.96, 0], 0, []], [[1602.69, 3852.96, 0], 0, []], [[1627.69, 3847.96, 1.52588e-05], 0, []], [[1597.69, 3847.96, 1.52588e-05], 0, []], [[1632.69, 3842.96, 0], 0, []]], [], [[[1554.45, 3937.89, 0], [[0, "Move"], [1, "SAFE"]]], [[1413.95, 3989.34, 0], [[0, "Move"]]], [[1313.85, 3858.2, 0], [[0, "Move"]]], [[1146, 3930.63, 0], [[0, "Move"]]], [[1053.17, 4002.2, 0], [[0, "Move"]]], [[1148.25, 3933.33, 0], [[0, "Move"]]], [[1315.12, 3859.3, 0], [[0, "Move"]]], [[1411.04, 3990.42, 0], [[0, "Move"]]], [[1556.96, 3940.44, 0], [[0, "Move"]]], [[1614.48, 3863.88, 0], [[0, "Cycle"]]]]] call GW_Common_fnc_spawnGroup;
-		[[[[1676.25, 3952.16, 0], 0, []], [[1681.25, 3947.16, 0], 0, []], [[1671.25, 3947.16, 0], 0, []], [[1686.25, 3942.16, 0], 0, []], [[1666.25, 3942.16, 0], 0, []], [[1691.25, 3937.16, 0], 0, []], [[1661.25, 3937.16, 0], 0, []], [[1696.25, 3932.16, 0], 0, []]], [], [[[1664.31, 4017, 0], [[0, "Move"], [1, "SAFE"]]], [[1543.03, 3987.6, 0], [[0, "Move"]]], [[1440.25, 4028.52, 0], [[0, "Move"]]], [[1456.53, 4127.55, 0], [[0, "Move"]]], [[1310.84, 4221.04, 0], [[0, "Move"]]], [[1458.78, 4130.25, 0], [[0, "Move"]]], [[1441.51, 4029.63, 0], [[0, "Move"]]], [[1540.12, 3988.68, 0], [[0, "Move"]]], [[1666.82, 4019.55, 0], [[0, "Move"]]], [[1678.04, 3953.08, 0], [[0, "Cycle"]]]]] call GW_Common_fnc_spawnGroup;
+		{
+			[Group _X] spawn OKS_fnc_Hostage;
+		} foreach [hostage_1,hostage_6];
 
-		[[[[1721.58, 3803.03, 0.0782471], 221, "Middle", []], [[1740.75, 3793.97, -0.0211334], 228, "Middle", []], [[1682.56, 3761.91, 0], 76, "Middle", []], [[1682.17, 3772.17, 0], 246, "Up", []], [[1687.28, 3797.18, 0], 67, "Middle", []], [[1669.66, 3776.22, -1.52588e-05], 240, "Up", []], [[1664.99, 3791.03, 0.0765533], 341, "Up", []], [[1655.77, 3744.34, 1.52588e-05], 74, "Middle", []], [[1647.89, 3779.06, 0.402969], 36, "Up", []]], [], []] call GW_Common_fnc_spawnGroup;
-		[[[[1712.93, 3823.89, 0], 237, "Middle", []], [[1682.44, 3829.08, 0], 74, "Up", []], [[1675.23, 3821.88, 0], 222, "Up", []], [[1656.91, 3819.19, 0.115662], 262, "Up", []], [[1662.12, 3818.45, 0.136627], 272, "Up", []], [[1656.68, 3824.86, 0.116531], 329, "Up", []], [[1664.17, 3824.52, 0.158661], 67, "Up", []], [[1660.86, 3826.12, 0.142212], 351, "Up", []], [[1667.38, 3812.56, 0.161423], 262, "Up", []], [[1658.96, 3811.36, 0.12822], 3, "Up", []], [[1663.73, 3813.08, 0.140945], 218, "Up", []], [[1636.38, 3815.12, 1.52588e-05], 88, "Middle", []], [[1640.47, 3805.58, 3.42953], 90, "Up", []], [[1640.15, 3806.43, 3.42906], 90, "Up", []]], [["UK3CB_ADE_O_PKM_High", [1712.23, 3824.51, 0], 238, [["gunner", -1, [0]]], []]], []] call GW_Common_fnc_spawnGroup;
-		[[[[1649.81, 3846.65, 5.28227], 181, "Up", []], [[1653.5, 3847.91, 5.27103], 144, "Up", []]], [["rhs_KORD_high_VDV", [1652.22, 3847.71, 5.29765], 162, [["gunner", -1, [0]]], []]], []] call GW_Common_fnc_spawnGroup;
-		[[[[1314.62, 3835.28, -2.28882e-05], 165, "Up", []], [[1307.93, 3836.48, -3.8147e-05], 165, "Up", []], [[1298.64, 3840.28, 0], 236, "Up", []], [[1291.19, 3843.26, -9.15527e-05], 242, "Up", []], [[1304.66, 3839.59, -6.10352e-05], 292, "Middle", []], [[1312.26, 3834.93, -9.91821e-05], 298, "Middle", []]], [], []] call GW_Common_fnc_spawnGroup;
+		[[[[1612.69, 3862.96, 0], 0, []], [[1617.69, 3857.96, 0], 0, []], [[1607.69, 3857.96, 0], 0, []], [[1622.69, 3852.96, 0], 0, []], [[1602.69, 3852.96, 0], 0, []], [[1627.69, 3847.96, 1.52588e-05], 0, []], [[1597.69, 3847.96, 1.52588e-05], 0, []], [[1632.69, 3842.96, 0], 0, []]], [], [[[1554.45, 3937.89, 0], [[0, "Move"], [1, "SAFE"]]], [[1413.95, 3989.34, 0], [[0, "Move"]]], [[1313.85, 3858.2, 0], [[0, "Move"]]], [[1146, 3930.63, 0], [[0, "Move"]]], [[1053.17, 4002.2, 0], [[0, "Move"]]], [[1148.25, 3933.33, 0], [[0, "Move"]]], [[1315.12, 3859.3, 0], [[0, "Move"]]], [[1411.04, 3990.42, 0], [[0, "Move"]]], [[1556.96, 3940.44, 0], [[0, "Move"]]], [[1614.48, 3863.88, 0], [[0, "Cycle"]]]], east] call GW_Common_fnc_spawnGroup;
+		[[[[1676.25, 3952.16, 0], 0, []], [[1681.25, 3947.16, 0], 0, []], [[1671.25, 3947.16, 0], 0, []], [[1686.25, 3942.16, 0], 0, []], [[1666.25, 3942.16, 0], 0, []], [[1691.25, 3937.16, 0], 0, []], [[1661.25, 3937.16, 0], 0, []], [[1696.25, 3932.16, 0], 0, []]], [], [[[1664.31, 4017, 0], [[0, "Move"], [1, "SAFE"]]], [[1543.03, 3987.6, 0], [[0, "Move"]]], [[1440.25, 4028.52, 0], [[0, "Move"]]], [[1456.53, 4127.55, 0], [[0, "Move"]]], [[1310.84, 4221.04, 0], [[0, "Move"]]], [[1458.78, 4130.25, 0], [[0, "Move"]]], [[1441.51, 4029.63, 0], [[0, "Move"]]], [[1540.12, 3988.68, 0], [[0, "Move"]]], [[1666.82, 4019.55, 0], [[0, "Move"]]], [[1678.04, 3953.08, 0], [[0, "Cycle"]]]], east] call GW_Common_fnc_spawnGroup;
 
-		// Village Mobiles.
-		[[[[1647.52, 3751.76, 0], 226, []], [[1645.46, 3756.74, 0], 226, []]], [], []] call GW_Common_fnc_spawnGroup;
-		[[[[1629.49, 3799.64, 0], 226, []], [[1627.44, 3804.62, 1.52588e-05], 226, []]], [], []] call GW_Common_fnc_spawnGroup;
-		[[[[1757.63, 3825.5, 0], 226, []], [[1755.58, 3830.48, 0], 226, []]], [], []] call GW_Common_fnc_spawnGroup;
-		[[[[1672.9, 3823.43, 0], 226, []], [[1670.85, 3828.41, 0], 226, []]], [], []] call GW_Common_fnc_spawnGroup;
-		[[[[1667.23, 3858.5, 1.52588e-05], 226, []], [[1665.17, 3863.47, 0], 226, []]], [], []] call GW_Common_fnc_spawnGroup;
+		[[[[1721.58, 3803.03, 0.0782471], 221, "Middle", []], [[1740.75, 3793.97, -0.0211334], 228, "Middle", []], [[1682.56, 3761.91, 0], 76, "Middle", []], [[1682.17, 3772.17, 0], 246, "Up", []], [[1687.28, 3797.18, 0], 67, "Middle", []], [[1669.66, 3776.22, -1.52588e-05], 240, "Up", []], [[1664.99, 3791.03, 0.0765533], 341, "Up", []], [[1655.77, 3744.34, 1.52588e-05], 74, "Middle", []], [[1647.89, 3779.06, 0.402969], 36, "Up", []]], [], [], east] call GW_Common_fnc_spawnGroup;
+		[[[[1712.93, 3823.89, 0], 237, "Middle", []], [[1682.44, 3829.08, 0], 74, "Up", []], [[1675.23, 3821.88, 0], 222, "Up", []], [[1656.91, 3819.19, 0.115662], 262, "Up", []], [[1662.12, 3818.45, 0.136627], 272, "Up", []], [[1656.68, 3824.86, 0.116531], 329, "Up", []], [[1664.17, 3824.52, 0.158661], 67, "Up", []], [[1660.86, 3826.12, 0.142212], 351, "Up", []], [[1667.38, 3812.56, 0.161423], 262, "Up", []], [[1658.96, 3811.36, 0.12822], 3, "Up", []], [[1663.73, 3813.08, 0.140945], 218, "Up", []], [[1636.38, 3815.12, 1.52588e-05], 88, "Middle", []], [[1640.47, 3805.58, 3.42953], 90, "Up", []], [[1640.15, 3806.43, 3.42906], 90, "Up", []]], [["UK3CB_ADE_O_PKM_High", [1712.23, 3824.51, 0], 238, [["gunner", -1, [0]]], []]], [], east] call GW_Common_fnc_spawnGroup;
+		[[[[1649.81, 3846.65, 5.28227], 181, "Up", []], [[1653.5, 3847.91, 5.27103], 144, "Up", []]], [["rhs_KORD_high_VDV", [1652.22, 3847.71, 5.29765], 162, [["gunner", -1, [0]]], []]], [], east] call GW_Common_fnc_spawnGroup;
+		[[[[1314.62, 3835.28, -2.28882e-05], 165, "Up", []], [[1307.93, 3836.48, -3.8147e-05], 165, "Up", []], [[1298.64, 3840.28, 0], 236, "Up", []], [[1291.19, 3843.26, -9.15527e-05], 242, "Up", []], [[1304.66, 3839.59, -6.10352e-05], 292, "Middle", []], [[1312.26, 3834.93, -9.91821e-05], 298, "Middle", []]], [], [], east] call GW_Common_fnc_spawnGroup;
 	};
 
 	case 3: {
@@ -159,7 +160,7 @@ switch (_case) do {
 
 	case 5: {
 		// Village Hostages Counter-Attack.
-		[convoy_4, convoy_5, convoy_6, east, [4, ["UK3CB_CHD_O_BMD1", "UK3CB_CHD_O_Hilux_Open", "UK3CB_CHD_O_Hilux_Closed", "UK3CB_CHD_O_Pickup_SPG9"], 60, 50], [true, 6], [], false, false, ["hunt"]] spawn OKS_fnc_Convoy_Spawn;
+		[convoy_4, convoy_5, convoy_6, east, [4, ["UK3CB_CHD_O_BMD1", "UK3CB_CHD_O_Hilux_Open", "UK3CB_CHD_O_Hilux_Closed", "UK3CB_CHD_O_Pickup_SPG9"], 60, 50], [true, 6], [], false, false, ["hunt"], "convoystop"] spawn OKS_fnc_Convoy_Spawn;
 
 		_sleep = 240;
 		if (hasInterface && isServer) then {
