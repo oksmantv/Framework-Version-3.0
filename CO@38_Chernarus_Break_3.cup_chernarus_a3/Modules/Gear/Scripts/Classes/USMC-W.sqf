@@ -64,11 +64,11 @@ _rifleC_mag_tr = "30Rnd_65x39_caseless_black_mag_Tracer";
 _rifleL_mag = "JCA_20Rnd_762x51_Red_PMAG";
 _rifleL_mag_tr = "JCA_20Rnd_762x51_Tracer_Red_PMAG";
 
-_LMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, "JCA_optic_IHO_black_magnifier", _bipod];
-_LMG_mag = "UK3CB_BAF_762_200Rnd_T";
+_LMG = ["GOL_MMG_02_black_F", _silencer, _pointer, "optic_Hamr", _bipod];
+_LMG_mag = "GOL_130Rnd_338_Mag_red";
 
-_MMG = ["MMG_02_black_F", _silencer, _pointer, "JCA_optic_IHO_black_magnifier", _bipod];
-_MMG_mag = "130Rnd_338_Mag";
+_MMG = ["GOL_MMG_02_black_F", _silencer, _pointer, "optic_Hamr", _bipod];
+_MMG_mag = "GOL_130Rnd_338_Mag_red";
 
 _LAT = ["UK3CB_BAF_AT4_CS_AT_Launcher", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "UK3CB_BAF_AT4_CS_AT_Mag";

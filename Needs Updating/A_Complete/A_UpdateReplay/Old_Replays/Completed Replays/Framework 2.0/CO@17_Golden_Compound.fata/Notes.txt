@@ -1,0 +1,10 @@
+Medical Settings
+Compounds and Strongpoints, also now enable or disable markers in settings, need to disable marker for huntbase also
+AntiAir Objective
+EnablePath Script
+MarkerSize defined in script
+Creates Zone Enemy Type Marker & Area
+Fix Vehicle Waypoint script
+Fix Check Waypoint script
+Fix Finale Scripts
+Added Array for All Dynamic Units

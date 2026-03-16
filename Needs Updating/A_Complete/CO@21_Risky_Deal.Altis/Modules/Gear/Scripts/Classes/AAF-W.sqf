@@ -1,0 +1,107 @@
+
+_useMineDetector = false;
+_allowedNightStuff = true;
+
+_insignia = "insignia_block35";
+_goggles = ["Armband_Yellow_large"];
+_OfficerHelmet = "UK3CB_AAF_B_H_Beret_Army_Off";
+_helmet =  ["UK3CB_AAF_B_H_PASGT_DIGI_GRN"];
+_uniform =  ["UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_JumperUniform_DIGI_GRN"];
+_vest =  ["V_PlateCarrierIA2_dgtl"];
+_backpack = ["UK3CB_B_Backpack_Pocket_OLI"];
+_backpackRadio = _backpack;
+if (true) then {
+	_backpackRadio = ["UK3CB_B_O_Backpack_Radio_Chem_OLI"];
+};
+
+if(_role in ["r","g"]) then {
+	_goggles = "Armband_Red_large";
+};
+
+if (_role in ["ag","ammg","lr","ab"]) then {
+	_backpack = "UK3CB_B_Backpack_Med_OLI";
+	_goggles = "Armband_Blue_large";
+};
+if(_role in ["mmg","ar"]) then {
+	_goggles = "Armband_Blue_large";
+};
+if(_role in ["ftl"]) then {
+	_goggles = "Armband_Green_large";
+};
+
+if (_role isEqualTo "crew") then {
+	_helmet = "H_HelmetCrew_I";
+	_vest = "UK3CB_AAF_I_V_Falcon_1_DIGI_GRN";
+};
+if (_role isEqualTo "p") then {
+	_helmet = "H_PilotHelmetHeli_I";
+	_uniform = "U_I_HeliPilotCoveralls";
+	_vest = "UK3CB_AAF_I_V_Falcon_1_DIGI_GRN";
+
+};
+if (_role isEqualTo "uav") then {
+	_backpack = "I_UAV_01_backpack_F";
+	_gps = "I_UAVTerminal";
+
+};
+if (_role isEqualTo "jetp") then {
+	_goggles = "G_Aviator";
+	_helmet = "H_PilotHelmetFighter_B";
+	_uniform = "U_B_PilotCoveralls";
+	_vest = "V_Rangemaster_belt";
+	_backpack = "B_Parachute";
+};
+
+_silencer = "rhsusf_acc_SF3P556";
+_pointer = "";
+_sight = "JCA_optic_ICO_olive";
+_bipod = "JCA_bipod_04_olive";
+
+_rifle = ["JCA_arifle_M4A1_olive_F", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["JCA_arifle_M4A1_short_olive_F", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["JCA_arifle_M4A1_GL_olive_F", _silencer, _pointer, _sight, _bipod];
+_rifleL = ["JCA_arifle_SR25_olive_F", _silencer, _pointer, "RKSL_optic_LDS", "JCA_bipod_04_olive"];
+_rifle_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
+_rifle_mag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
+_rifleC_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
+_rifleC_mag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
+_rifleGL_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
+_rifleGL_mag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
+_rifleL_mag = "JCA_20Rnd_762x51_Yellow_PMAG";
+_rifleL_mag_tr = "JCA_20Rnd_762x51_Tracer_Yellow_PMAG";
+
+_LMG = ["LMG_Mk200_F", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "200Rnd_65x39_cased_Box_Tracer";
+
+_MMG = ["LMG_Mk200_F", _silencer, _pointer, _sight, _bipod];
+_MMG_mag = "200Rnd_65x39_cased_Box_Tracer";
+
+_LAT = ["UK3CB_BAF_AT4_CS_AP_Launcher", _silencer, _pointer, _sight, _bipod];
+_LAT_mag = "";
+_LAT_ReUsable = false;
+
+_MAT = ["rhs_weap_maaws", _silencer, _pointer, _sight, _bipod];
+_MAT_mag = "MRAWS_HE_F";
+_MAT_mag_HE = "MRAWS_HE_F";
+
+_HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
+_HAT_mag = "Vorona_HEAT";
+
+_AA = ["launch_I_Titan_F", _silencer, _pointer, _sight, _bipod];
+_AA_mag = "Titan_AA";
+
+_pistol = ["UK3CB_P320_KHK", _silencer, _pointer, _sight, _bipod];
+_pistol_mag = "UK3CB_P320_9x19_17Rnd";
+
+_pdw = ["UK3CB_MP5A4", _silencer, _pointer, _sight, _bipod];
+_pdw_mag = "UK3CB_MP5_30Rnd_9x19_Magazine_R";
+_pdw_mag_tr = "UK3CB_MP5_30Rnd_9x19_Magazine_RT";
+
+_silencer = "muzzle_snds_B_khk_F";
+_pointer = "acc_pointer_IR";
+_sight = "optic_LRPS_tna_F";
+_bipod = "bipod_03_F_oli";
+
+_rifleMarksman = ["srifle_DMR_03_woodland_F", _silencer, _pointer, _sight, _bipod];
+_rifleMarksman_mag = "20Rnd_762x51_Mag";
+_rifleMarksman_mag_tr = "20Rnd_762x51_Mag";

@@ -1,0 +1,1 @@
+﻿lapTopStart addAction ["<t color='#DC1717'>Start Mission</t>", { [1] remoteExec ["GW_Fnc_spawnList",2]; systemChat "Mission started!"; deleteVehicle pointred; deleteVehicle (_this select 0) }];

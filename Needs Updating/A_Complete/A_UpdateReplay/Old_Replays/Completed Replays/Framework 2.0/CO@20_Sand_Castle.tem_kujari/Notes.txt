@@ -1,0 +1,4 @@
+Fix Fallbacks for RifleL, Mag, TR etc.
+
+Austrian Kit - Fix Uniforms?
+ATrag undefined default.sqf Marksman
