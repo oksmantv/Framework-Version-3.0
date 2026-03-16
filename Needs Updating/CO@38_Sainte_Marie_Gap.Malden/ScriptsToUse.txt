@@ -1,0 +1,3 @@
+Artillery kills itself, fires no deletion of rounds? Ensure not HC
+AA doesn't fire ensure not HC
+Set Arty
