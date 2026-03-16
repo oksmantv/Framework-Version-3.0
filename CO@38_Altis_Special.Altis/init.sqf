@@ -10,5 +10,5 @@
 	Server Commands should be within the isServer check.
 */
 if(isServer) then {
-	
+	{[_X] spawn OKS_fnc_Destroy_Task} foreach [aa_1,aa_2,aa_3,aa_4];
 };
