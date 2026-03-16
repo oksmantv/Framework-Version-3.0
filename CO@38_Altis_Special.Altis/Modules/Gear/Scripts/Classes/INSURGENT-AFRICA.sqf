@@ -1,8 +1,8 @@
 _useMineDetector = false;
 _allowedNightStuff = false;
 
-
-_glHE = "rhs_VOG25P";
+_glHE = "rhs_VOG25";
+_glHEDP = "rhs_VOG25";
 _glsmokeW = "rhs_GRD40_White";
 _glsmokeB = "";
 _glsmokeG = "rhs_GRD40_Green";
@@ -25,7 +25,7 @@ _uniform = ["UK3CB_ADM_B_U_Tshirt_01_TCC","UK3CB_ADM_B_U_Tshirt_01_DPM","UK3CB_A
 _vest = ["rhs_6b2_chicom","rhs_6b2_holster","rhs_6b2_lifchik","rhs_6b2_RPK","rhs_6b2_SVD","rhs_6b2","UK3CB_TKP_I_V_6Sh92_Des","UK3CB_TKP_I_V_6Sh92_Radio_Des","UK3CB_TKA_I_V_6Sh92_Khk","UK3CB_TKA_I_V_6Sh92_Radio_Khk","UK3CB_V_CW_Chestrig_2_Small","UK3CB_V_Belt_Rig_Lite_KHK","UK3CB_V_Chestrig_2_Small_OLI","UK3CB_V_Chestrig_Lite_2_Small_KHK","UK3CB_V_Chestrig_OLI","UK3CB_V_Chestrig_Tan","UK3CB_TKA_I_V_vydra_3m_Tan"];
 _backpack = ["rhs_sidor","UK3CB_B_Alice_Bedroll_K","UK3CB_B_Alice_Bedroll_2_K","UK3CB_B_Alice_Med_K","UK3CB_B_Fieldpack","UK3CB_UN_B_B_ASS","UK3CB_B_Bedroll_Backpack"];
 _backpackRadio = _backpack;
-if (GVARMAIN(mod_TFAR)) then {
+if (true) then {
 	_backpackRadio = "UK3CB_B_I_Alice_Radio_Backpack";
 };
 
@@ -50,39 +50,40 @@ if (_role isEqualTo "jetp") then {
 };
 
 _silencer = "rhs_acc_dtk1983";
-_pointer = "";
+_pointer = "rhs_acc_2dpZenit";
 _sight = "";
 _bipod = "";
 
-_rifle = ["rhs_weap_aks74", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["rhs_weap_aks74_gp25", _silencer, _pointer, _sight, _bipod];
-_rifle_mag = "30Rnd_545x39_Mag_F";
-_rifle_mag_tr = "30Rnd_545x39_Mag_Tracer_F";
-_rifleGL_mag = "30Rnd_545x39_Mag_F";
-_rifleGL_mag_tr = "30Rnd_545x39_Mag_Tracer_F";
+_rifle = [["rhs_weap_akm","rhs_weap_akmn","rhs_weap_akms"], _silencer, _pointer, _sight, _bipod];
+_rifleGL = [["rhs_weap_akmn_gp25","rhs_weap_akms_gp25"], _silencer, _pointer, _sight, _bipod];
+_rifle_mag = "UK3CB_AK47_30Rnd_Magazine_RT";
+_rifle_mag_tr = "UK3CB_AK47_30Rnd_Magazine_RT";
+_rifleGL_mag = "UK3CB_AK47_30Rnd_Magazine_RT";
+_rifleGL_mag_tr = "UK3CB_AK47_30Rnd_Magazine_RT";
 
 
 _silencer = "rhs_acc_dtkakm";
+_pointer = "rhs_acc_2dpZenit";
+_sight = "rhs_acc_pso1m21";
+_bipod = "";
+
+_rifleL = ["UK3CB_SVD_OLD", _silencer, _pointer, _sight, _bipod];
+_rifleL_mag = "UK3CB_SVD_10rnd_762x54_RT";
+
+_silencer = "";
 _pointer = "";
 _sight = "";
 _bipod = "";
 
-_rifleL = ["rhs_weap_akms", _silencer, _pointer, _sight, _bipod];
-_rifleL_mag = "rhs_30Rnd_762x39mm_bakelite_tracer";
-
-_silencer = "rhs_acc_pgs64_74u";
-_pointer = "";
-_sight = "";
-_bipod = "";
-
-_rifleC = ["rhs_weap_aks74u", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["rhs_weap_m3a1", _silencer, _pointer, _sight, _bipod];
+_rifleC_mag = "rhsgref_30rnd_1143x23_M1T_2mag_SMG";
 
 
-_LMG = ["hlc_rifle_rpk74n", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "hlc_60Rnd_545x39_t_rpk";
+_LMG = ["rhs_weap_rpk74m", _silencer, "rhs_acc_2dpZenit", _sight, _bipod];
+_LMG_mag = "UK3CB_RPK74_60rnd_545x39_RT";
 
-_MMG = ["rhs_weap_pkm", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "rhs_100Rnd_762x54mmR_green";
+_MMG = ["LMG_Zafir_F", _silencer, _pointer, _sight, _bipod];
+_MMG_mag = "150Rnd_762x54_Box_Tracer_Red";
 
 if(random 1 > 0.5) then {
 	_LAT = ["rhs_weap_rpg75", _silencer, _pointer, _sight, _bipod];
@@ -96,6 +97,7 @@ if(random 1 > 0.5) then {
 
 _MAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "RPG7_F";
+_MAT_mag_HE = "rhs_rpg7_TBG7V_mag";
 
 _HAT = ["launch_O_Vorona_brown_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";
@@ -115,5 +117,5 @@ _sight = "rhs_acc_pso1m2";
 _bipod = "";
 
 _rifleMarksman = ["rhs_weap_svdp_wd", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "rhs_10Rnd_762x54mmR_7N1";
-_rifleMarksman_mag_tr = "rhs_10Rnd_762x54mmR_7N14";
+_rifleMarksman_mag = "UK3CB_SVD_10rnd_762x54_GT";
+_rifleMarksman_mag_tr = "UK3CB_SVD_10rnd_762x54_GT";

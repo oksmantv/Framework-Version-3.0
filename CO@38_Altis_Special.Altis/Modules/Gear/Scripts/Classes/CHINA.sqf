@@ -9,7 +9,7 @@ _uniform = selectRandom ["acp_gol_CN_Type_07_Universal_U_I_E_Uniform_CN_Type_07_
 _vest = "acp_gol_CN_Type_07_Universal_V_CarrierRigKBT_01_light_CN_Type_07_Universal_F";
 _backpack = "acp_gol_CN_Type_07_Universal_B_AssaultPackEnhanced_CN_Type_07_Universal_insignia";
 _backpackRadio = _backpack;
-if (GVARMAIN(mod_TFAR)) then {
+if (true) then {
 	_backpackRadio = "acp_gol_CN_Type_07_Universal_B_RadioBag_01_CN_Type_07_Universal_F";
 };
 
@@ -85,9 +85,9 @@ _pdw_mag = "rhs_mag_9x19mm_7n31_44";
 
 _silencer = "";
 _pointer = "";
-_sight = "optic_LRPS";
-_bipod = "bipod_02_F_hex";
+_sight = "rhs_acc_pso1m21";
+_bipod = "";
 
-_rifleMarksman = ["srifle_DMR_05_hex_F", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "10Rnd_93x64_DMR_05_Mag";
-_rifleMarksman_mag_tr = "10Rnd_93x64_DMR_05_Mag";
+_rifleMarksman = ["rhs_weap_svds", _silencer, _pointer, _sight, _bipod];
+_rifleMarksman_mag = "UK3CB_SVD_10rnd_762x54_GT";
+_rifleMarksman_mag_tr = "UK3CB_SVD_10rnd_762x54_GT";
