@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=16068;
+		nextID=16099;
 	};
 	class Camera
 	{
-		pos[]={7757.3242,63.373539,11047.617};
-		dir[]={0.49173585,-0.39832908,-0.77435094};
-		up[]={0.21354058,0.9172352,-0.3362675};
-		aside[]={-0.84420854,8.9872628e-08,-0.53609723};
+		pos[]={11656.019,71.496651,11749.499};
+		dir[]={-0.098130293,-0.40526724,0.9089337};
+		up[]={-0.043501336,0.91419268,0.40292907};
+		aside[]={0.99423867,6.2471372e-08,0.10734005};
 	};
 };
 binarizationWanted=0;
@@ -38403,7 +38403,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={11620.428,25.017292,11966.74};
+								position[]={11620.832,25.010529,11966.172};
 								angles[]={0.0026744273,2.1415565,6.2618566};
 							};
 							side="Empty";
@@ -38415,7 +38415,6 @@ class Mission
 							};
 							id=3526;
 							type="I_Heli_light_03_dynamicLoadout_F";
-							atlOffset=-0.00035476685;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -39084,7 +39083,7 @@ class Mission
 										health=0.89999998;
 										lock="UNLOCKED";
 										name="mhq_2";
-										textures="Sand";
+										textures="FIA_02";
 									};
 									id=6323;
 									type="UK3CB_AAF_O_M113_M2";
@@ -39116,7 +39115,7 @@ class Mission
 																		class data
 																		{
 																			singleType="STRING";
-																			value="Sand";
+																			value="FIA_02";
 																		};
 																	};
 																	class Item1
@@ -39137,13 +39136,13 @@ class Mission
 																singleType="ARRAY";
 																class value
 																{
-																	items=28;
+																	items=4;
 																	class Item0
 																	{
 																		class data
 																		{
 																			singleType="STRING";
-																			value="storage_front";
+																			value="IFF_Panels_Hide";
 																		};
 																	};
 																	class Item1
@@ -39151,7 +39150,7 @@ class Mission
 																		class data
 																		{
 																			singleType="SCALAR";
-																			value=0;
+																			value=1;
 																		};
 																	};
 																	class Item2
@@ -39159,7 +39158,7 @@ class Mission
 																		class data
 																		{
 																			singleType="STRING";
-																			value="storage_lr";
+																			value="hatchGunner";
 																		};
 																	};
 																	class Item3
@@ -39168,198 +39167,6 @@ class Mission
 																		{
 																			singleType="SCALAR";
 																			value=0;
-																		};
-																	};
-																	class Item4
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="storage_lf";
-																		};
-																	};
-																	class Item5
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=0;
-																		};
-																	};
-																	class Item6
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="storage_rf";
-																		};
-																	};
-																	class Item7
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item8
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="storage_rr";
-																		};
-																	};
-																	class Item9
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=0;
-																		};
-																	};
-																	class Item10
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="storage_rear";
-																		};
-																	};
-																	class Item11
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item12
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="storage_side";
-																		};
-																	};
-																	class Item13
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item14
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="id_mount";
-																		};
-																	};
-																	class Item15
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=0;
-																		};
-																	};
-																	class Item16
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="id";
-																		};
-																	};
-																	class Item17
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item18
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="fuel_rear";
-																		};
-																	};
-																	class Item19
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=0;
-																		};
-																	};
-																	class Item20
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="armor_comp";
-																		};
-																	};
-																	class Item21
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item22
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="armor_driverhatch";
-																		};
-																	};
-																	class Item23
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item24
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="towshackles";
-																		};
-																	};
-																	class Item25
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item26
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="towcable";
-																		};
-																	};
-																	class Item27
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
 																		};
 																	};
 																};
@@ -39465,7 +39272,7 @@ class Mission
 										health=0.89999998;
 										lock="UNLOCKED";
 										name="mhq_1";
-										textures="Sand";
+										textures="FIA_02";
 									};
 									id=6324;
 									type="UK3CB_AAF_O_M113_M2";
@@ -39497,7 +39304,7 @@ class Mission
 																		class data
 																		{
 																			singleType="STRING";
-																			value="Sand";
+																			value="FIA_02";
 																		};
 																	};
 																	class Item1
@@ -39518,13 +39325,13 @@ class Mission
 																singleType="ARRAY";
 																class value
 																{
-																	items=28;
+																	items=4;
 																	class Item0
 																	{
 																		class data
 																		{
 																			singleType="STRING";
-																			value="storage_front";
+																			value="IFF_Panels_Hide";
 																		};
 																	};
 																	class Item1
@@ -39532,7 +39339,7 @@ class Mission
 																		class data
 																		{
 																			singleType="SCALAR";
-																			value=0;
+																			value=1;
 																		};
 																	};
 																	class Item2
@@ -39540,7 +39347,7 @@ class Mission
 																		class data
 																		{
 																			singleType="STRING";
-																			value="storage_lr";
+																			value="hatchGunner";
 																		};
 																	};
 																	class Item3
@@ -39549,198 +39356,6 @@ class Mission
 																		{
 																			singleType="SCALAR";
 																			value=0;
-																		};
-																	};
-																	class Item4
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="storage_lf";
-																		};
-																	};
-																	class Item5
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=0;
-																		};
-																	};
-																	class Item6
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="storage_rf";
-																		};
-																	};
-																	class Item7
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item8
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="storage_rr";
-																		};
-																	};
-																	class Item9
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=0;
-																		};
-																	};
-																	class Item10
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="storage_rear";
-																		};
-																	};
-																	class Item11
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item12
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="storage_side";
-																		};
-																	};
-																	class Item13
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item14
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="id_mount";
-																		};
-																	};
-																	class Item15
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=0;
-																		};
-																	};
-																	class Item16
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="id";
-																		};
-																	};
-																	class Item17
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item18
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="fuel_rear";
-																		};
-																	};
-																	class Item19
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=0;
-																		};
-																	};
-																	class Item20
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="armor_comp";
-																		};
-																	};
-																	class Item21
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item22
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="armor_driverhatch";
-																		};
-																	};
-																	class Item23
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item24
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="towshackles";
-																		};
-																	};
-																	class Item25
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
-																		};
-																	};
-																	class Item26
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="towcable";
-																		};
-																	};
-																	class Item27
-																	{
-																		class data
-																		{
-																			singleType="SCALAR";
-																			value=1;
 																		};
 																	};
 																};
@@ -39854,7 +39469,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8263.7461,15.274193,10869.313};
+										position[]={8255.6396,15.246377,10870.583};
 									};
 									side="Empty";
 									flags=5;
@@ -39871,7 +39486,7 @@ class Mission
 						};
 					};
 					id=410;
-					atlOffset=130.1745;
+					atlOffset=130.56364;
 				};
 				class Item7
 				{
@@ -39901,7 +39516,7 @@ class Mission
 				};
 			};
 			id=3532;
-			atlOffset=13.832224;
+			atlOffset=13.831534;
 		};
 		class Item2
 		{
@@ -40130,7 +39745,7 @@ class Mission
 					};
 					id=4649;
 					type="O_Mortar_01_F";
-					atlOffset=9.5367432e-07;
+					atlOffset=8.4877014e-05;
 				};
 				class Item4
 				{
@@ -41490,7 +41105,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=218.39989;
-					angle=229.02736;
+					angle=229.02734;
 					id=4941;
 				};
 				class Item41
@@ -41504,7 +41119,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=218.39989;
-					angle=229.02736;
+					angle=229.02734;
 					id=4942;
 				};
 				class Item42
@@ -41518,7 +41133,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=37.476852;
-					angle=227.01337;
+					angle=227.01334;
 					id=4943;
 				};
 				class Item43
@@ -41532,7 +41147,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=37.476852;
-					angle=227.01337;
+					angle=227.01334;
 					id=4944;
 				};
 				class Item44
@@ -47034,7 +46649,7 @@ class Mission
 			colorName="ColorEAST";
 			a=0.60000002;
 			b=0.60000002;
-			angle=225.42207;
+			angle=225.42204;
 			id=6267;
 			class CustomAttributes
 			{
@@ -47367,7 +46982,7 @@ class Mission
 			class Attributes
 			{
 				name="vehicle_3";
-				textures="AAF";
+				textures="FIA_02";
 			};
 			id=6320;
 			type="UK3CB_AAF_I_M113_M2";
@@ -47399,7 +47014,7 @@ class Mission
 												class data
 												{
 													singleType="STRING";
-													value="AAF";
+													value="FIA_02";
 												};
 											};
 											class Item1
@@ -47476,7 +47091,7 @@ class Mission
 			class Attributes
 			{
 				name="vehicle_4";
-				textures="AAF";
+				textures="FIA_02";
 			};
 			id=6321;
 			type="UK3CB_AAF_I_M113_M2";
@@ -47508,7 +47123,7 @@ class Mission
 												class data
 												{
 													singleType="STRING";
-													value="AAF";
+													value="FIA_02";
 												};
 											};
 											class Item1
@@ -47585,7 +47200,7 @@ class Mission
 			class Attributes
 			{
 				name="vehicle_5";
-				textures="AAF";
+				textures="FIA_02";
 			};
 			id=6322;
 			type="UK3CB_AAF_I_M113_M2";
@@ -47617,7 +47232,7 @@ class Mission
 												class data
 												{
 													singleType="STRING";
-													value="AAF";
+													value="FIA_02";
 												};
 											};
 											class Item1
