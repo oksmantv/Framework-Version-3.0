@@ -27,7 +27,7 @@ _backpack = [
 	"UK3CB_B_Fieldpack","UK3CB_B_Hiker","UK3CB_ION_B_B_RIF_OLI_01","UK3CB_B_Largepack","UK3CB_KDF_B_B_Sidor_RIF_OLI","B_CivilianBackpack_01_Everyday_Black_F","B_Messenger_Olive_F","rhs_rd54"
 ];
 _backpackRadio = _backpack;
-if (GVARMAIN(mod_TFAR)) then {
+if (true) then {
 	_backpackRadio = "UK3CB_CW_SOV_O_LATE_B_ASS_BERGEN_Radio";
 };
 
@@ -86,6 +86,7 @@ if(random 1 > 0.5) then {
 
 _MAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "RPG7_F";
+_MAT_mag_HE = "rhs_rpg7_TBG7V_mag";
 
 _HAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "RPG7_F";

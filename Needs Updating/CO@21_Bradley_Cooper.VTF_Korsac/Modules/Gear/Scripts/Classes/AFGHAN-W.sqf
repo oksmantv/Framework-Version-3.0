@@ -9,7 +9,7 @@ _uniform = ["UK3CB_ANA_B_U_CombatUniform_01_SPEC4CE","UK3CB_ANA_B_U_CombatUnifor
 _vest = ["UK3CB_ANA_B_V_MD_Vest_WDL_01","UK3CB_ANA_B_V_MK_Vest_WDL_01","UK3CB_ANA_B_V_RFL_Vest_WDL_01","UK3CB_ANA_B_V_SL_Vest_WDL_01","UK3CB_ANA_B_V_Vest_WDL_01","UK3CB_ANA_B_V_CREW_Vest_WDL","UK3CB_ANA_B_V_MG_Vest_WDL_01"];
 _backpack = "rhs_rd54";
 _backpackRadio = _backpack;
-if (GVARMAIN(mod_TFAR)) then {
+if (true) then {
 	_backpackRadio = "UK3CB_ANA_B_B_RIF_Radio";
 };
 if(_role isEqualTo "r") then {
@@ -38,15 +38,16 @@ if (_role isEqualTo "jetp") then {
 	_backpack = "B_Parachute";
 };
 
+// Attachments
 _silencer = "";
-_pointer = "gvl_x2000_wide";
+_pointer = "";
 _sight = "";
 _bipod = "";
 
-_rifle = ["hlc_rifle_M4", _silencer, _pointer, _sight, _bipod];
-_rifleC = ["hlc_rifle_CQBR", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["hlc_rifle_m4m203", _silencer, _pointer, _sight, _bipod];
-_rifleL = ["hlc_rifle_CQBR", _silencer, _pointer, _sight, _bipod];
+_rifle = ["rhs_weap_m4a1_carryhandle", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["rhs_weap_m4a1_carryhandle", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["rhs_weap_m4a1_carryhandle_m203S", _silencer, _pointer, _sight, _bipod];
+_rifleL = ["rhs_weap_m4a1_carryhandle", _silencer, _pointer, _sight, _bipod];
 _rifle_mag = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
 _rifle_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
 _rifleGL_mag = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
@@ -56,11 +57,11 @@ _rifleC_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
 _rifleL_mag = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
 _rifleL_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
 
-_LMG = ["rhs_weap_m249", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "rhsusf_200rnd_556x45_mixed_box";
+_LMG = ["LMG_03_F", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "200Rnd_556x45_Box_Tracer_Red_F";
 
 _MMG = ["rhs_weap_m240G", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "hlc_100Rnd_762x51_T_M60E4";
+_MMG_mag = "rhsusf_100Rnd_762x51_m62_tracer";
 
 _sight = "";
 

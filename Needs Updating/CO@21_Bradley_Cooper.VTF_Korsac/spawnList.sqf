@@ -1,4 +1,4 @@
-/*
+﻿/*
 	AUTHOR: GuzzenVonLidl
 	Description:
 		What case tha should be called for the zone player is in
@@ -12,7 +12,7 @@
 
 
 
-#include "script_Component.hpp"
+#include "\OKS_GOL_MISC\script_Component.hpp"
 #define	COMPONENT spawnList
 
 if !(isServer) exitWith {false};
@@ -45,10 +45,10 @@ switch (_case) do {
 
 	case 1: {
 
-		[Group Hostage_1,getMarkerPos "respawn_west",west,false,nil] execVM "Scripts\OKS_Task\OKS_Evacuate_HVT.sqf";
+		[Group Hostage_1,getMarkerPos "respawn_west",west,false,nil] spawn OKS_fnc_Evacuate_HVT;
 
-		[Trigger_1,false,[0,18,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
-		[Trigger_2,false,[0,18,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
+		[Trigger_1,false,[0,18,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
+		[Trigger_2,false,[0,18,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
 
 		// Ambush 1 & 2
 		[[[[1453.51,6295.73,0],284,"Middle",[]],[[1454.36,6298.46,0],284,"Middle",[]],[[1455.32,6303.77,0],284,"Middle",[]],[[1456.95,6307.78,-6.10352e-005],284,"Middle",[]],[[1458.78,6311.55,6.10352e-005],284,"Middle",[]],[[1460.02,6313.52,0],284,"Middle",[]],[[1518.01,6431.41,0],270,"Middle",[]],[[1515.89,6411.7,0.00012207],270,"Middle",[]],[[1516.74,6415.8,6.10352e-005],270,"Middle",[]],[[1517.51,6426.58,0],270,"Middle",[]],[[1453.16,6292.24,0],284,"Middle",[]]],[[selectRandom _MG,[1452.98,6294.1,-0.00012207],306,[["gunner",-1,[0]]],[]],[selectRandom _AT,[1516.74,6418.65,0],272,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
@@ -68,7 +68,7 @@ switch (_case) do {
 		[[[[2046.44,5507.11,0],91,"Middle",[]],[[2037.29,5508.19,0.139099],145,"Middle",[]],[[2040.46,5530.49,0],138,"Middle",[]],[[2051.26,5514.74,0],19,"Middle",[]],[[2039.81,5516.05,1.677],114,"Middle",[]],[[2042.17,5513.07,1.41669],35,"Middle",[]],[[2043.14,5510.79,1.2981],293,"Middle",[]],[[2043.7,5522.43,0],317,"Middle",[]]],[[selectRandom _Vehicles,[2044.39,5532.68,0],317,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["Olive",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",0,"maljutka_hide_source",0]]]],[selectRandom _Vehicles,[2033.6,5517.26,6.10352e-005],284,[["driver",-1,[]],["gunner",-1,[0]],["gunner",-1,[1]]],[[6,["Olive",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",0,"maljutka_hide_source",0]]]],[selectRandom _AT,[2043.69,5515.64,4.57361],296,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 
 		// Anti-Air Nest 2
-		[aaa_2,east,false,2000,true] spawn GW_Ambient_AAA;
+		[aaa_2,east,false,2000,true] spawn OKS_fnc_Ambient_AAA;
 		[[[[1584.85,5611.45,0.0124512],27,"Middle",[]],[[1581.65,5612.83,0.216431],27,"Middle",[]],[[1575.31,5614.3,0.647766],0,"Up",[]],[[1566.49,5617.48,0],0,"Up",[]],[[1570.38,5616.53,0.472229],0,"Middle",[]],[[1554.6,5616.21,0],351,"Middle",[]],[[1555.63,5615.93,0],24,"Up",[]],[[1547.01,5615.76,0],351,"Middle",[]],[[1579.46,5595.36,0],258,"Middle",[]],[[1584.5,5583.54,0],261,"Middle",[]],[[1596.67,5607.44,0.0904541],2,"Middle",[]],[[1590.51,5593.04,0.0904541],271,"Up",[]],[[1565.28,5571.03,0],323,"Middle",[]]],[[selectRandom _MG,[1583.41,5611.76,0],27,[["gunner",-1,[0]]],[]],[selectRandom _AT,[1527.44,5549.99,0.357849],234,[["gunner",-1,[0]]],[]],[selectRandom _AT,[1613.84,5600.87,0.383972],13,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 
 		// Trench 1
@@ -81,10 +81,10 @@ switch (_case) do {
 		[[[[2236.91,6375.28,0.201782],303,"Up",[]],[[2232.46,6365.9,0],303,"Up",[]],[[2236.24,6370.96,0],303,"Up",[]],[[2231.8,6361.24,0],273,"Up",[]],[[2228.84,6356.03,6.10352e-005],301,"Up",[]],[[2100.44,6179.46,0.201782],358,"Up",[]],[[2090.18,6177.8,0],358,"Up",[]],[[2096.5,6177.56,0],358,"Up",[]],[[2085.98,6175.71,6.10352e-005],328,"Up",[]],[[2080,6175.19,6.10352e-005],356,"Up",[]],[[2082.71,6208.45,0.201782],0,"Up",[]],[[2072.41,6207.09,0],0,"Up",[]],[[2078.72,6206.67,0],0,"Up",[]],[[2068.15,6205.11,0.00012207],330,"Up",[]],[[2062.16,6204.77,0.00012207],358,"Up",[]]],[[selectRandom _Vehicles,[2092.12,6169.78,0],27,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["Olive",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],[selectRandom _Vehicles,[2231.17,6348.33,0],270,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["Olive",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
 
 		// Huntbase
-		[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 3,1200,east,_Vehicles,300] spawn NEKY_Hunt_HuntBase; sleep 60;
-		[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 3,1400,east,_Vehicles,300] spawn NEKY_Hunt_HuntBase; sleep 60;
-		[Base_3, Spawn_3, NEKY_Hunt_Trigger_1, 3,1600,east,_Vehicles,300] spawn NEKY_Hunt_HuntBase; sleep 60;
-		[Base_4, Spawn_4, NEKY_Hunt_Trigger_1, 3,1800,east,_Vehicles,300] spawn NEKY_Hunt_HuntBase;
+		[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 3,1200,east,_Vehicles,300] spawn OKS_fnc_Huntbase; sleep 60;
+		[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 3,1400,east,_Vehicles,300] spawn OKS_fnc_Huntbase; sleep 60;
+		[Base_3, Spawn_3, NEKY_Hunt_Trigger_1, 3,1600,east,_Vehicles,300] spawn OKS_fnc_Huntbase; sleep 60;
+		[Base_4, Spawn_4, NEKY_Hunt_Trigger_1, 3,1800,east,_Vehicles,300] spawn OKS_fnc_Huntbase;
 
 	};
 
@@ -120,8 +120,8 @@ switch (_case) do {
 		// Anti Air Nest 1
 		[[[[2679.62,5023.28,0],0,"Middle",[]],[[2677.03,5022.35,0],0,"Middle",[]],[[2683.02,5011.95,0],0,"Middle",[]],[[2699.56,5007.85,0],59,"Up",[]],[[2696.94,5009.01,0],3,"Up",[]],[[2697.07,4993.92,-6.10352e-005],310,"Up",[]],[[2705.69,4986.94,0],298,"Up",[]],[[2704.5,4980.52,0],158,"Middle",[]],[[2701.56,4979.48,0],132,"Middle",[]]],[["rhs_Igla_AA_pod_msv",[2698.97,4983.39,0],192,[["gunner",-1,[0]]],[]],["rhs_Igla_AA_pod_msv",[2682.31,5019.29,0],10,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 
-		[Trigger_3,false,[0,18,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
-		[Trigger_4,false,[0,18,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
+		[Trigger_3,false,[0,18,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
+		[Trigger_4,false,[0,18,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
 
 	};
 
@@ -220,13 +220,13 @@ switch (_case) do {
 		   All Locations are not required, the script will find its own locations, however for the best experience and best result, help the dynamic script by placing these logics.
 
 		   Example:
-		   [Trigger_1,false,[0,0,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
+		   [Trigger_1,false,[0,0,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
 		*/
 
 		/* Example of Dynamic Scripts */
 		/*
 		if(isServer) then {
-			waitUntil{sleep 5; !(isNil "OKS_CreateZone")};
+			waitUntil{sleep 5; !(isNil "OKS_fnc_CreateZone")};
 
 			//// START OF ZONE /////
 			[	Trigger_1,  // Name of Trigger used as Spawn Area
@@ -256,7 +256,7 @@ switch (_case) do {
 				],
 				[0,0,0,0,0] // Infantry, Wheeled, APCs, Tanks, Air Assault - Hunt Bases - Preferred Game Logic Location 'Respawn Point'"
 				,false      // Should Enable Civilian Presence - Required Game Logic Location 'Village'"
-			] spawn OKS_CreateZone;
+			] spawn OKS_fnc_CreateZone;
 			//// END OF ZONE ////
 
 		};
@@ -274,15 +274,15 @@ switch (_case) do {
 		   	6 - Unit Selection - (Integer/String/Array with Strings)
 		   	7 - Refresh Rate in Seconds (Integer/Number)
 
-			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,30,independent,6,30] spawn NEKY_Hunt_HuntBase;
-			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,"CUP_I_LR_MG_AAF",30] spawn NEKY_Hunt_HuntBase;
-			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,["CUP_I_LR_MG_AAF","CUP_I_LR_MG_AAF"],30] spawn NEKY_Hunt_HuntBase;
+			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,30,independent,6,30] spawn OKS_fnc_Huntbase;
+			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,"CUP_I_LR_MG_AAF",30] spawn OKS_fnc_Huntbase;
+			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,["CUP_I_LR_MG_AAF","CUP_I_LR_MG_AAF"],30] spawn OKS_fnc_Huntbase;
 		*/
 		/* Example of Hunt Bases */
 		/*
 		if(isServer && GOL_NEKY_HUNT isEqualTo 1) then {
-			waitUntil{sleep 5; !(isNil "NEKY_Hunt_HuntBase")};
-			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,600+(random 300),east,6,120+(120)] spawn NEKY_Hunt_HuntBase;
+			waitUntil{sleep 5; !(isNil "OKS_fnc_Huntbase")};
+			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,600+(random 300),east,6,120+(120)] spawn OKS_fnc_Huntbase;
 		};
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -298,11 +298,12 @@ switch (_case) do {
 		   5 - Type of Insert (Unload ONLY) (String)
 		   6 - Transport Split - [How many teams,Procent of Transport capacity] (Array)
 
-		   [Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn NEKY_Airbase;
+		   [Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
 		*/
 		/* Example of Air Bases */
 		/*
-		if(isServer && GOL_NEKY_AIRDROP isEqualTo 1) then {
-			waitUntil{sleep 5; !(isNil "NEKY_Airbase")};
-			[Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn NEKY_Airbase;
+		if(isServer && GOL_OKS_fnc_AirDrop isEqualTo 1) then {
+			waitUntil{sleep 5; !(isNil "OKS_fnc_Airbase")};
+			[Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
 		};
+

@@ -9,7 +9,7 @@ _uniform = ["U_I_C_Soldier_Para_2_F","U_I_C_Soldier_Para_3_F","U_I_C_Soldier_Par
 _vest = "V_TacVest_oli";
 _backpack = "B_FieldPack_khk";
 _backpackRadio = _backpack;
-if (GVARMAIN(mod_TFAR)) then {
+if (true) then {
 	_backpackRadio = "tfar_anprc155";
 };
 
@@ -42,19 +42,19 @@ _pointer = "";
 _sight = "";
 _bipod = "";
 
-_rifle = ["hlc_rifle_akm", _silencer, _pointer, _sight, _bipod];
+_rifle = ["rhs_weap_akm", _silencer, _pointer, _sight, _bipod];
 _rifleC = ["rhs_weap_akms", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["hlc_rifle_akmgl", _silencer, _pointer, _sight, _bipod];
-_rifleL = ["hlc_rifle_akm", _silencer, _pointer, _sight, _bipod];
-_rifle_mag = "hlc_30Rnd_762x39_b_ak";
-_rifle_mag_tr = "hlc_30Rnd_762x39_m_ak";
-_rifleGL_mag = "hlc_30Rnd_762x39_b_ak";
-_rifleGL_mag_tr = "hlc_30Rnd_762x39_m_ak";
-_rifleC_mag = "hlc_30Rnd_762x39_b_ak";
-_rifleC_mag_tr = "hlc_30Rnd_762x39_m_ak";
+_rifleGL = ["rhs_weap_akm_gp25", _silencer, _pointer, _sight, _bipod];
+_rifleL = ["rhs_weap_akm", _silencer, _pointer, _sight, _bipod];
+_rifle_mag = "rhs_30Rnd_762x39mm_89";
+_rifle_mag_tr = "rhs_30Rnd_762x39mm_tracer";
+_rifleGL_mag = "rhs_30Rnd_762x39mm_89";
+_rifleGL_mag_tr = "rhs_30Rnd_762x39mm_tracer";
+_rifleC_mag = "rhs_30Rnd_762x39mm_89";
+_rifleC_mag_tr = "rhs_30Rnd_762x39mm_tracer";
 
-_LMG = ["hlc_rifle_rpk", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "rhs_75Rnd_762x39mm_tracer";
+_LMG = ["rhs_weap_rpk74m", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "UK3CB_RPK74_60rnd_545x39_GT";
 
 _MMG = ["rhs_weap_pkm", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhs_100Rnd_762x54mmR_green";
@@ -74,9 +74,9 @@ _pdw_mag = "rhs_mag_9x19mm_7n31_44";
 
 _silencer = "";
 _pointer = "";
-_sight = "optic_LRPS";
+_sight = "rhsusf_acc_ACOG_USMC";
 _bipod = "bipod_03_F_oli";
 
 _rifleMarksman = ["srifle_DMR_06_hunter_F", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "20Rnd_762x51_Mag";
-_rifleMarksman_mag_tr = "20Rnd_762x51_Mag";
+_rifleMarksman_mag = "UK3CB_M14_20rnd_762x51_RT";
+_rifleMarksman_mag_tr = "UK3CB_M14_20rnd_762x51_RT";
