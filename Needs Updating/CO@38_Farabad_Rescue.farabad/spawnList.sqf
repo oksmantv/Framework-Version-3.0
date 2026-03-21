@@ -64,11 +64,11 @@ switch (_case) do {
 			} foreach (allGroups select {side _Group == west});
 		} foreach units _OutpostAttack;
 
-		[true,["Task_5","Task_1"], ["An enemy mortar section is targeting your outpost, find and eliminate the mortars, we suspect they are nearby, look for covered positions, find and silence the mortars!", "Search and Destroy Mortars", ""], nil,"ASSIGNED",-1, true, "destroy"] call BIS_fnc_taskCreate; sleep 4;
-		[true,["Task_4","Task_1"], ["The outpost is under attack! You must repel the attackers, attack the enemies surrounding the compound!", "Eliminate Attackers", ""], nil,"ASSIGNED",-1, true, "kill"] call BIS_fnc_taskCreate; sleep 4;
-
+		[true,["Task_5","Task_1"], ["An enemy mortar section is targeting your outpost, find and eliminate the mortars, we suspect they are nearby, look for covered positions, find and silence the mortars! You may also need to search the vicinity of the mortar sites for ammo caches.", "Search and Destroy Mortars", ""], nil,"ASSIGNED",-1, true, "destroy"] call BIS_fnc_taskCreate; sleep 4;
+		[true,["Task_4","Task_1"], ["The outpost is under attack! You must repel the attackers, attack the enemies surrounding the compound!", "Repel Attack", ""], nil,"ASSIGNED",-1, true, "kill"] call BIS_fnc_taskCreate; sleep 4;
+		[[DestroyObject_1,DestroyObject_2]] spawn OKS_fnc_Destroy_Task;
 		[] spawn {
-			waitUntil {sleep 15; {alive _X || getDammage _X < 0.5 || !(isNull _X)} count [mortar_1, mortar_2, mortar_3] == 0};
+			waitUntil {sleep 15; {alive _X || getDammage _X < 0.5} count [mortar_1, mortar_2, mortar_3] == 0};
 			["Task_5", "SUCCEEDED", true] call BIS_fnc_taskSetState;
 		};
 
@@ -124,10 +124,6 @@ switch (_case) do {
 			"task_5" call BIS_fnc_taskState == "SUCCEEDED" && "task_4" call BIS_fnc_taskState == "SUCCEEDED"
 		};
 		["Task_1", "SUCCEEDED", true] call BIS_fnc_taskSetState; sleep 5;
-
-		[true,["Task_6","Task_0"], ["Marines are pinned down in the city with casualties and have requested support. Leave the outpost and find the pinned friendlies and assist with casualties.", "Rescue Friendly Forces", ""], nil,"ASSIGNED",-1,false, "help"] call BIS_fnc_taskCreate; sleep 3;
-		[10, 2, getPos RescueFriendly_1, west, true, ["lot"], "Task_6"] spawn OKS_fnc_Rescue_Friendly; sleep 5;
-		[10, 2, getPos RescueFriendly_2, west, true, ["lot"], "Task_6"] spawn OKS_fnc_Rescue_Friendly;
 	};
 
 	case 2: {
@@ -163,13 +159,16 @@ switch (_case) do {
 		[[[[4510.12,5480.83,0],0,[]],[[4513.68,5479.39,0],0,[]],[[4509.25,5477.49,0],0,[]],[[4512.67,5474.55,0],0,[]],[[4508.56,5473.65,0],0,[]],[[4515.69,5476.37,0],0,[]],[[4514.51,5481.83,0],0,[]],[[4511.97,5477.33,0],0,[]]],[],[[[4446.88,5506.04,0],[[0,"Move"],[1,"SAFE"]]],[[4417.63,5520.54,0],[[0,"Move"]]],[[4308.81,5523.96,0],[[0,"Move"]]],[[4415.91,5519.38,0],[[0,"Move"]]],[[4448.97,5506.2,0],[[0,"Move"]]],[[4512.22,5482.84,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup; sleep 10;
 		[[[[4525.78,5415.06,0],0,[]],[[4529.34,5413.62,0],0,[]],[[4524.91,5411.71,0],0,[]],[[4528.33,5408.78,0],0,[]],[[4524.22,5407.88,0],0,[]],[[4531.35,5410.6,0],0,[]],[[4530.17,5416.06,0],0,[]],[[4527.63,5411.56,0],0,[]]],[],[[[4474.36,5437.3,0],[[0,"Move"],[1,"SAFE"]]],[[4453.11,5420.38,0],[[0,"Move"]]],[[4327.53,5469.96,0],[[0,"Move"]]],[[4451.4,5419.23,0],[[0,"Move"]]],[[4476.46,5437.46,0],[[0,"Move"]]],[[4527.88,5417.07,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup; sleep 10;
 
-		[HuntSpawn_1, HuntSpawn_1, NEKY_Hunt_Trigger_1, 5, 400, EAST, 4, 90] spawn OKS_fnc_HuntBase;
-		[HuntSpawn_2, HuntSpawn_2, NEKY_Hunt_Trigger_1, 5, 400, EAST, 4, 90] spawn OKS_fnc_HuntBase;
-		[HuntSpawn_3, HuntSpawn_3, NEKY_Hunt_Trigger_1, 5, 400, EAST, 4, 90] spawn OKS_fnc_HuntBase;
-		[HuntSpawn_4, HuntSpawn_4, NEKY_Hunt_Trigger_1, 5, 400, EAST, 4, 90] spawn OKS_fnc_HuntBase;
-		[HuntSpawn_5, HuntSpawn_5, NEKY_Hunt_Trigger_1, 5, 400, EAST, 4, 90] spawn OKS_fnc_HuntBase;
-		[HuntSpawn_6, HuntSpawn_6, NEKY_Hunt_Trigger_1, 5, 400, EAST, 4, 90] spawn OKS_fnc_HuntBase;
+		[HuntSpawn_1, HuntSpawn_1, NEKY_Hunt_Trigger_1, 5, 400, EAST, 4, 90] spawn OKS_fnc_HuntBase;sleep 5;
+		[HuntSpawn_2, HuntSpawn_2, NEKY_Hunt_Trigger_1, 5, 400, EAST, 4, 90] spawn OKS_fnc_HuntBase;sleep 5;
+		[HuntSpawn_3, HuntSpawn_3, NEKY_Hunt_Trigger_1, 5, 400, EAST, 4, 90] spawn OKS_fnc_HuntBase;sleep 5;
+		[HuntSpawn_4, HuntSpawn_4, NEKY_Hunt_Trigger_1, 5, 400, EAST, 4, 90] spawn OKS_fnc_HuntBase;sleep 5;
+		[HuntSpawn_5, HuntSpawn_5, NEKY_Hunt_Trigger_1, 5, 400, EAST, 4, 90] spawn OKS_fnc_HuntBase;sleep 5;
+		[HuntSpawn_6, HuntSpawn_6, NEKY_Hunt_Trigger_1, 5, 400, EAST, 4, 90] spawn OKS_fnc_HuntBase;sleep 5;
 
+		{
+			[_X,"rush",2,east,1500,[],objNull,90] spawn OKS_fnc_Lambs_Spawner; sleep 15;
+		} foreach [spawner_1, spawner_2, spawner_3, spawner_4, spawner_5, spawner_6, spawner_7];
 	};
 
 	case 5: {
@@ -185,6 +184,15 @@ switch (_case) do {
 	case 7: {
 		// East-Gate Rush Spawn.
 		[getpos LambsGroupSpawn_3, "rush", 9, EAST, 500] spawn OKS_fnc_Lambs_SpawnGroup;
+	};
+
+	case 8:{
+
+		/// Farabad Rescue.
+		[true,["Task_6","Task_0"], ["Marines are pinned down in the city with casualties and have requested support. Leave the outpost and find the pinned friendlies and assist with casualties.", "Rescue Friendly Forces", ""], nil,"ASSIGNED",-1,false, "help"] call BIS_fnc_taskCreate; sleep 3;
+		[10, 2, getPos RescueFriendly_1, west, true, ["lot"], "Task_6"] spawn OKS_fnc_Rescue_Friendly; sleep 5;
+		[10, 2, getPos RescueFriendly_2, west, true, ["lot"], "Task_6"] spawn OKS_fnc_Rescue_Friendly;		
+
 	};
 
 	default {

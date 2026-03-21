@@ -27,7 +27,7 @@ if (_role in ["ar","mmg"]) then {
 
 if (_role isEqualTo "crew") then {
 	_helmet = "rhsusf_cvc_green_helmet";
-	_vest = "rhsusf_plateframe_medic";
+	_vest = "rhsusf_spc_crewman";
 };
 if (_role isEqualTo "p") then {
 	_helmet = "rhsusf_hgu56p";
@@ -64,8 +64,8 @@ _rifleC_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
 _rifleL_mag = "JCA_20Rnd_762x51_Red_PMAG";
 _rifleL_mag_tr = "JCA_20Rnd_762x51_Tracer_Red_PMAG";
 
-_LMG = ["UK3CB_BAF_L110A2", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "UK3CB_BAF_556_200Rnd_T";
+_LMG = ["LMG_03_F", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "200Rnd_556x45_Box_Tracer_Red_F";
 
 _MMG = ["rhs_weap_m240B", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhsusf_100Rnd_762x51_m62_tracer";

@@ -50,30 +50,30 @@ if (_role isEqualTo "jetp") then {
 };
 
 // Attachments
-_silencer = "";
+_silencer = "rhsusf_acc_SFMB556";
 _pointer = "";
-_sight = "";
+_sight = "JCA_optic_ICO_sand";
 _bipod = "";
 
-_rifle = ["JCA_arifle_M4A4_VFG_sand_F", _silencer, _pointer, _sight, _bipod];
-_rifleC = ["JCA_arifle_M4A4_AFG_sand_F", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["JCA_arifle_M4A4_GL_sand_F", _silencer, _pointer, _sight, _bipod];
+_rifle = ["JCA_arifle_M4A1_sand_F", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["JCA_arifle_M4A1_short_sand_F", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["JCA_arifle_M4A1_GL_sand_F", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["rhs_weap_m16a4_imod", _silencer, _pointer, _sight, _bipod];
-_rifle_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-_rifle_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
-_rifleGL_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-_rifleGL_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
-_rifleC_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-_rifleC_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
-_rifleL_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-_rifleL_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
+_rifle_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
+_rifle_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
+_rifleGL_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
+_rifleGL_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
+_rifleC_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
+_rifleC_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
+_rifleL_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
+_rifleL_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
 
 
-_LMG = ["rhs_weap_m249_light_S", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "rhsusf_200rnd_556x45_mixed_box";
+_LMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "UK3CB_BAF_762_200Rnd_T";
 
-_MMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, _sight, ""];
-_MMG_mag = "UK3CB_BAF_762_200Rnd_T";
+_MMG = ["GOL_MMG_02_black_F", _silencer, _pointer, "JCA_optic_IHO_black", "JCA_bipod_04_black"];
+_MMG_mag = "GOL_130Rnd_338_Mag_red";
 
 _LAT = ["UK3CB_BAF_AT4_CS_AT_Launcher", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "UK3CB_BAF_AT4_CS_AT_Mag";
