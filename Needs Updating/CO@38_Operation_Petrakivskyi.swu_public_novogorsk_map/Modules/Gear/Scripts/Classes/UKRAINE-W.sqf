@@ -78,20 +78,20 @@ _rifle = [["rhs_weap_aks74n","rhs_weap_aks74","rhs_weap_ak74n_2","rhs_weap_ak74n
 _rifleC = ["rhs_weap_aks74un", _silencer, _pointer, _sight, _bipod];
 _rifleGL = [["rhs_weap_ak74n_2_gp25","rhs_weap_ak74n_gp25","rhs_weap_aks74_gp25","rhs_weap_aks74n_gp25","rhs_weap_ak74m_gp25","rhs_weap_ak74_gp25"], _silencer, _pointer, _sight, _bipod];
 _rifleL = ["srifle_DMR_07_blk_F", "muzzle_snds_65_TI_blk_F", _pointer, "rhsusf_acc_LEUPOLDMK4_2", ""];
-_rifle_mag = selectRandom ["rhs_30Rnd_545x39_7N22_plum_AK","rhs_30Rnd_545x39_7N10_2mag_plum_AK"];
-_rifle_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
-_rifleC_mag = selectRandom ["rhs_30Rnd_545x39_7N22_plum_AK","rhs_30Rnd_545x39_7N10_2mag_plum_AK"];
-_rifleC_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
-_rifleGL_mag = selectRandom ["rhs_30Rnd_545x39_7N22_plum_AK","rhs_30Rnd_545x39_7N10_2mag_plum_AK"];
-_rifleGL_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
+_rifle_mag = "UK3CB_AK12_30rnd_Magazine_R";
+_rifle_mag_tr = "UK3CB_AK12_30rnd_Magazine_RT";
+_rifleC_mag = "UK3CB_AK12_30rnd_Magazine_R";
+_rifleC_mag_tr = "UK3CB_AK12_30rnd_Magazine_RT";
+_rifleGL_mag = "UK3CB_AK12_30rnd_Magazine_R";
+_rifleGL_mag_tr = "UK3CB_AK12_30rnd_Magazine_RT";
 _rifleL_mag = "ACE_20Rnd_65_Creedmor_mag";
 _rifleL_mag_tr = "ACE_20Rnd_65_Creedmor_mag";
 
-_LMG = ["LMG_03_F", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "200Rnd_556x45_Box_Tracer_Red_F";
+_LMG = ["GOL_weap_pkp", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "GOL_100Rnd_762x54mmR_red";
 
-_MMG = ["rhs_weap_pkm", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "rhs_100Rnd_762x54mmR_green";
+_MMG = ["GOL_weap_pkp", _silencer, _pointer, _sight, _bipod];
+_MMG_mag = "GOL_100Rnd_762x54mmR_red";
 
 _LAT = ["rhs_weap_m72a7", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "";
