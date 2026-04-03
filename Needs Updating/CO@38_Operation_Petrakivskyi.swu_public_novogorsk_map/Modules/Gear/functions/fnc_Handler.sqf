@@ -357,6 +357,8 @@ if (_isMan) then {
 					[_unit, _glflareW, 20] call _fnc_AddObjectsCargo;
 				};
 				[_unit, _MAT_mag_HE, 10] call _fnc_AddObjectsCargo;
+				[_unit, _grenade, 50] call _fnc_AddObjectsCargo;
+				[_unit, "rhs_VG40TB", 50] call _fnc_AddObjectsCargo;
 				[_unit, _AA_mag, 30] call _fnc_AddObjectsCargo;
 				[_unit, (_AA select 0), 6] call _fnc_AddObjectsCargo;
 

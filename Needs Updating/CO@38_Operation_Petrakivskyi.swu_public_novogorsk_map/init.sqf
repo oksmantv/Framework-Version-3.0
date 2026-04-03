@@ -20,9 +20,15 @@ if(isServer) then {
 		meet_1,
 		west,
 		east,
-		["UK3CB_GAF_B_BMP1", "UK3CB_GAF_B_BMP2", "UK3CB_GAF_B_BTR80a", "UK3CB_GAF_B_T55"],
-		["UK3CB_CW_SOV_O_LATE_BMD1", "UK3CB_CW_SOV_O_LATE_BMP2", "UK3CB_CW_SOV_O_LATE_BMP1", "UK3CB_CW_SOV_O_LATE_BTR80a", "UK3CB_CW_SOV_O_LATE_MTLB_BMP", "UK3CB_CW_SOV_O_LATE_T55", "UK3CB_CW_SOV_O_LATE_T72A"],
-		east
+		["UK3CB_GAF_B_BMP1", "UK3CB_GAF_B_T55"],
+		["UK3CB_CW_SOV_O_LATE_BMD1", "UK3CB_CW_SOV_O_LATE_BMP1", "UK3CB_CW_SOV_O_LATE_MTLB_BMP", "UK3CB_CW_SOV_O_LATE_T55", "UK3CB_CW_SOV_O_LATE_T72A"],
+		east,
+		true,
+		300,
+		-1,
+		60,
+		2,
+		2000
   	] call OKS_fnc_AI_Battle; sleep 60;
 
   	_battleRef2 = [
@@ -31,9 +37,15 @@ if(isServer) then {
 		meet_2,
 		west,
 		east,
-		["UK3CB_GAF_B_BMP1", "UK3CB_GAF_B_BMP2", "UK3CB_GAF_B_BTR80a", "UK3CB_GAF_B_T55"],
-		["UK3CB_CW_SOV_O_LATE_BMD1", "UK3CB_CW_SOV_O_LATE_BMP2", "UK3CB_CW_SOV_O_LATE_BMP1", "UK3CB_CW_SOV_O_LATE_BTR80a", "UK3CB_CW_SOV_O_LATE_MTLB_BMP", "UK3CB_CW_SOV_O_LATE_T55", "UK3CB_CW_SOV_O_LATE_T72A"],
-		east
+		["UK3CB_GAF_B_BMP1", "UK3CB_GAF_B_T55"],
+		["UK3CB_CW_SOV_O_LATE_BMD1", "UK3CB_CW_SOV_O_LATE_BMP1", "UK3CB_CW_SOV_O_LATE_MTLB_BMP", "UK3CB_CW_SOV_O_LATE_T55", "UK3CB_CW_SOV_O_LATE_T72A"],
+		east,
+		true,
+		300,
+		-1,
+		60,
+		2,
+		2000
   	] call OKS_fnc_AI_Battle; sleep 60;
 
 	_battleRef3 = [
@@ -42,9 +54,15 @@ if(isServer) then {
 		meet_3,
 		west,
 		east,
-		["UK3CB_GAF_B_BMP1", "UK3CB_GAF_B_BMP2", "UK3CB_GAF_B_BTR80a", "UK3CB_GAF_B_T55"],
-		["UK3CB_CW_SOV_O_LATE_BMD1", "UK3CB_CW_SOV_O_LATE_BMP2", "UK3CB_CW_SOV_O_LATE_BMP1", "UK3CB_CW_SOV_O_LATE_BTR80a", "UK3CB_CW_SOV_O_LATE_MTLB_BMP", "UK3CB_CW_SOV_O_LATE_T55", "UK3CB_CW_SOV_O_LATE_T72A"],
-		east
+		["UK3CB_GAF_B_BMP1", "UK3CB_GAF_B_T55"],
+		["UK3CB_CW_SOV_O_LATE_BMD1", "UK3CB_CW_SOV_O_LATE_BMP1",  "UK3CB_CW_SOV_O_LATE_MTLB_BMP", "UK3CB_CW_SOV_O_LATE_T55", "UK3CB_CW_SOV_O_LATE_T72A"],
+		east,
+		true,
+		300,
+		-1,
+		60,
+		2,
+		2000
   	] call OKS_fnc_AI_Battle;
 
 	waitUntil { sleep 10; !isNil "Complete_Battle"};

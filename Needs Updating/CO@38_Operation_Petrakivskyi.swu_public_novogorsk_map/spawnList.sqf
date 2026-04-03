@@ -52,8 +52,8 @@ switch (_case) do {
 
 		// Reaction Landing.
 		true remoteExec ["showChat",0];
-		["hq","side","Rangers, be advised, Russian motorised reserves are converging on your area of operations from north and north east. Prepare for a counter-attack. Break."] remoteExec ["OKS_fnc_Chat",0]; sleep 6;
-		["hq","side","Additionally the mortar position has been uncovered and is getting ready to engage, they are located at the ruins to the north of the landing zone, good luck, HQ out."] remoteExec ["OKS_fnc_Chat",0]; sleep 6;
+		["BATTALION HQ","side","Rangers, be advised, Russian motorised reserves are converging on your area of operations from north and north east. Prepare for a counter-attack. Break."] remoteExec ["OKS_fnc_Chat",0]; sleep 6;
+		["BATTALION HQ","side","Additionally the mortar position has been uncovered and is getting ready to engage, they are located at the ruins to the north of the landing zone, good luck, HQ out."] remoteExec ["OKS_fnc_Chat",0]; sleep 6;
 		[mortar_1, east, "precise", "light", ["auto", 50], 150, 400, 30] spawn OKS_fnc_Mortars;
 
 		[convoy_7, convoy_8, convoy_9, east, [5, [
@@ -106,7 +106,7 @@ switch (_case) do {
 
 		// Crossroad Guards.
 		true remoteExec ["showChat",0];
-		["hq","side","Rangers, be advised, Russian infantry reserves are heading towards the Crossroad to reinforce it. Destroy these reserves and lock down the MSR. HQ out"] remoteExec ["OKS_fnc_Chat",0]; sleep 6;
+		["BATTALION HQ","side","Rangers, be advised, Russian infantry reserves are heading towards the Crossroad to reinforce it. Destroy these reserves and lock down the MSR. HQ out"] remoteExec ["OKS_fnc_Chat",0]; sleep 6;
 
 		_Group1 = [[[[1393.63,2621.76,-3.05176e-05],342,"Up",[]],[[1393.5,2618.88,0],261,"Up",[]],[[1380.12,2646.54,-1.52588e-05],205,"Up",[]],[[1364.95,2653.54,-3.05176e-05],210,"Middle",[]],[[1369.72,2642.97,0.858047],209,"Up",[]],[[1367.61,2643.65,0.732224],209,"Up",[]],[[1364.98,2644.92,0.550964],123,"Middle",[]],[[1378.02,2649.09,0.906128],160,"Up",[]],[[1376.57,2645.48,0.99649],266,"Up",[]],[[1375.5,2651.12,0.714386],183,"Up",[]],[[1369.31,2653.94,0.319473],339,"Up",[]],[[1373.02,2652.46,0.551559],53,"Up",[]],[[1365.86,2650.01,0.317841],293,"Up",[]],[[1367.02,2654.49,0.182159],190,"Up",[]],[[1371.3,2650.66,0.537949],230,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 		_Group2 = [[[[1431.24,2640.34,0.480698],283,"Up",[]],[[1437.45,2643.82,1.52588e-05],246,"Up",[]],[[1437.98,2646.46,0],296,"Up",[]],[[1429.21,2687.58,0.598389],140,"Up",[]],[[1433.35,2685.05,0.702621],227,"Up",[]],[[1423.66,2677.41,0.325226],55,"Up",[]],[[1426.58,2675.8,0.428162],352,"Up",[]],[[1430.76,2674.43,0.56514],352,"Up",[]],[[1433.45,2677.8,0.669434],265,"Up",[]],[[1425.69,2683.34,0.392944],210,"Up",[]],[[1385.99,2668.34,0.0588226],214,"Up",[]],[[1387.47,2667.57,0.162521],193,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
@@ -127,7 +127,7 @@ switch (_case) do {
 			} count units _Group2 <= 2
 		};
 		true remoteExec ["showChat",0];
-		["hq","side","Rangers, be advised, our frontline reports that Russian forces are in retreat. Expect the enemy to try and fallback through your crossroad, ETA 5 minutes. Close the pocket, HQ out."] remoteExec ["OKS_fnc_Chat",0]; sleep 6;
+		["BATTALION HQ","side","Rangers, be advised, our frontline reports that Russian forces are in retreat. Expect the enemy to try and fallback through your crossroad, ETA 5 minutes. Close the pocket, HQ out."] remoteExec ["OKS_fnc_Chat",0]; sleep 6;
 		Complete_Battle = true;
 		publicVariable "Complete_Battle";
 		sleep 300;
@@ -137,39 +137,49 @@ switch (_case) do {
 	case 6: {
 
 		// Convoy Attack.
-		["hq","side","Rangers, be advised, front line reports only have light resistance remains, the retreating forces are certainly inbound to the crossroad now. ETA Momentarily. Good luck, HQ out."] remoteExec ["OKS_fnc_Chat",0];
+		["BATTALION HQ","side","Rangers, be advised, our front line reports only having light resistance remaining, the retreating forces are certainly inbound to the crossroad now. ETA Momentarily. Good luck, HQ out."] remoteExec ["OKS_fnc_Chat",0];
 		_ConvoyArray = [];
-		[convoy_1, convoy_2, convoy_3, east, [8, [
+		[convoy_1, convoy_2, convoy_3, east, [9, [
 			"UK3CB_CW_SOV_O_LATE_T72A",
-			"UK3CB_CW_SOV_O_LATE_BMD1",
+			"UK3CB_CW_SOV_O_LATE_BMP1",
 			"UK3CB_CW_SOV_O_LATE_BTR40_ZU23",
-			"UK3CB_CW_SOV_O_LATE_BTR40_DSHKMS",
+			"UK3CB_CW_SOV_O_LATE_BTR40_MG",
 			"UK3CB_CW_SOV_O_LATE_BTR40",
 			"UK3CB_CW_SOV_O_LATE_BTR40",
 			"UK3CB_CW_SOV_O_LATE_BTR40",
-			"UK3CB_CW_SOV_O_LATE_BTR80"
-		], 25, 35], [true, 8], _ConvoyArray, false, false, ["rush"]] spawn OKS_fnc_Convoy_Spawn;
+			"UK3CB_CW_SOV_O_LATE_BTR80",
+			"UK3CB_CW_SOV_O_LATE_BTR40"
+		], 25, 35], [true, 8], _ConvoyArray, false, false, ["hunt"], "convoystop"] spawn OKS_fnc_Convoy_Spawn;
 
-		sleep 220;
-		[convoy_4, convoy_5, convoy_6, east, [5, [
+		sleep 300;
+		[convoy_4, convoy_5, convoy_6, east, [8, [
 			"UK3CB_CW_SOV_O_LATE_BRDM2", 
 			"UK3CB_CW_SOV_O_LATE_Gaz66_Covered",
+			"UK3CB_CW_SOV_O_LATE_BTR40_ZU23",
 			"UK3CB_CW_SOV_O_LATE_BRDM2",
 			"UK3CB_CW_SOV_O_LATE_Gaz66_Covered",
 			"UK3CB_CW_SOV_O_LATE_Gaz66_Covered"
-		], 25, 35], [true, 8], _ConvoyArray, false, false, ["rush"]] spawn OKS_fnc_Convoy_Spawn;
+		], 25, 35], [true, 8], _ConvoyArray, false, false, ["hunt"], "convoystop"] spawn OKS_fnc_Convoy_Spawn;
+		sleep 120;
 
+		[convoy_13, convoy_14, convoy_15, east, [6, [
+			"UK3CB_CW_SOV_O_LATE_BRDM2", 
+			"UK3CB_CW_SOV_O_LATE_Gaz66_Covered",
+			"UK3CB_CW_SOV_O_LATE_Gaz66_Covered",
+			"UK3CB_CW_SOV_O_LATE_Gaz66_Covered"
+		], 25, 35], [true, 8], _ConvoyArray, false, false, ["hunt"], "convoystop"] spawn OKS_fnc_Convoy_Spawn;		
+		sleep 120;
 		waitUntil {
 			sleep 10;
 			{
 				_Group = _X;
 				{
 					Alive _X && [_X] call ace_common_fnc_isAwake
-				} count units _Group <= 1;
+				} count units _Group <= 2;
 			} count _ConvoyArray == count _ConvoyArray
 		};
 		true remoteExec ["showChat",0];
-		["hq","side","Rangers, be advised, friendly forces have wiped out the remaining pockets of resistance. The salient is crushed, good work! Mission Complete."] remoteExec ["OKS_fnc_Chat",0];	
+		["BATTALION HQ","side","Rangers, be advised, friendly forces have wiped out the remaining pockets of resistance. The salient is crushed, good work! Mission Complete."] remoteExec ["OKS_fnc_Chat",0];	
 	};
 
 	default {
