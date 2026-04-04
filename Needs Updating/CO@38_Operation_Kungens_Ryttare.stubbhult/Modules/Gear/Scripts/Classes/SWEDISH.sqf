@@ -54,7 +54,7 @@ if (_role isEqualTo "jetp") then {
 };
 
 // Attachments
-_silencer = "";
+_silencer = "rhsusf_acc_SFMB556";
 _pointer = "";
 _sight = "JCA_optic_ICO_black";
 _bipod = "JCA_bipod_04_black";
@@ -64,20 +64,20 @@ _rifle = [["rhs_weap_hk416d145","rhs_weap_hk416d10_LMT","rhs_weap_hk416d145_wd"]
 _rifleC = ["rhs_weap_hk416d10", _silencer, _pointer, _sight, _bipod];
 _rifleGL = [["rhs_weap_hk416d10_m320","rhs_weap_hk416d145_m320"], _silencer, _pointer, _sight, _bipod];
 _rifleL = ["UK3CB_G3A3V_RIS", _silencer, _pointer, "optic_Hamr", "bipod_01_F_blk"];
-_rifle_mag = "rhs_mag_30Rnd_556x45_Mk262_Stanag";
-_rifle_mag_tr = "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red";
-_rifleGL_mag = "rhs_mag_30Rnd_556x45_Mk262_Stanag";
-_rifleGL_mag_tr = "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red";
-_rifleC_mag = "rhs_mag_30Rnd_556x45_Mk262_Stanag";
-_rifleC_mag_tr = "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red";
+_rifle_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
+_rifle_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
+_rifleGL_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
+_rifleGL_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
+_rifleC_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
+_rifleC_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
 _rifleL_mag = "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
 _rifleL_mag_tr = "ACE_20Rnd_762x51_Mag_Tracer";
 
-_LMG = ["LMG_03_F", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "200Rnd_556x45_Box_Tracer_Red_F";
+_LMG = ["GOL_weap_fnmag", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "rhsusf_100Rnd_762x51_m80a1epr";
 
-_MMG = ["rhs_weap_fnmag", _silencer, _pointer, _sight, ""];
-_MMG_mag = "rhsusf_100Rnd_762x51_m62_tracer";
+_MMG = ["GOL_weap_fnmag", _silencer, _pointer, _sight, ""];
+_MMG_mag = "rhsusf_100Rnd_762x51_m80a1epr";
 
 // Launchers
 _silencer = "";
