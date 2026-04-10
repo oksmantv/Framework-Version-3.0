@@ -42,19 +42,19 @@ switch (_case) do {
 		[[[[8223.12,1832.69,-5.96046e-08],0,[[301,0]],"sl"],[[8228.12,1827.69,-5.96046e-08],0,[[301,0]],"ar"],[[8218.12,1827.69,0],0,[[301,0]],"mmg"],[[8233.12,1822.69,0],0,[[301,0]],"ag"],[[8213.12,1822.69,1.19209e-07],0,[[301,0]],"lr"],[[8238.12,1817.69,-5.96046e-08],0,[[301,0]],"r"],[[8208.12,1817.69,-1.19209e-07],0,[[301,0]],"mat"],[[8243.12,1812.69,-5.96046e-08],0,[[301,1]],"ag"],[[8225.36,1815.22,0],0,[[301,0]],"ag"],[[8230.36,1810.22,0],0,[[301,0]],"r"],[[8235.36,1805.22,0],0,[[301,1]],"ag"]],[],[[[8178,1836.13,0],[[0,"Move"],[1,"SAFE"]]],[[8097.32,1892.72,3.8147e-06],[[0,"Move"]]],[[8020.31,1966.47,1.07288e-05],[[0,"Move"]]],[[7974.08,2065.72,8.34465e-07],[[0,"Move"]]],[[7886.06,2121.4,3.18885e-05],[[0,"Move"]]],[[7959.01,2063.79,4.1008e-05],[[0,"Move"]]],[[8011.29,1960.61,1.66893e-06],[[0,"Move"]]],[[8086.1,1877.19,-4.17233e-07],[[0,"Move"]]],[[8173.56,1817.65,4.17233e-06],[[0,"Move"]]],[[8216.7,1816.75,0],[[0,"Cycle"]]]],east] call GW_Common_fnc_spawnGroup;
 	
 		// Search Site 1 Sentry.
-		[[[[5797.26,4095.68,0.401595],50,"Auto",[[301,0]],"lr"],[[5795.44,4097.5,0.39431],28,"Auto",[[301,0]],"ar"],[[5796.47,4091.73,0.400704],38,"Middle",[[301,0]],"ar"],[[5793.13,4092.06,0.394682],20,"Auto",[[301,0]],"r"],[[5791.81,4094.93,0.399991],73,"Auto",[[301,0]],"r"]],[],[],east] call GW_Common_fnc_spawnGroup;
+		[[[[5797.26,4095.68,0.401595],50,"Up",[[301,0]],"lr"],[[5795.44,4097.5,0.39431],28,"Up",[[301,0]],"ar"],[[5796.47,4091.73,0.400704],38,"Middle",[[301,0]],"ar"],[[5793.13,4092.06,0.394682],20,"Up",[[301,0]],"r"],[[5791.81,4094.93,0.399991],73,"Up",[[301,0]],"r"]],[],[],east] call GW_Common_fnc_spawnGroup;
 		
 	};
 
 	case 2: {
 
 		// Counter-Attack Search 1
-		[getPos LambsGroupSpawn_1, "rush", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
-		[getPos LambsGroupSpawn_2, "hunt", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
-		[getPos LambsGroupSpawn_3, "rush", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
-		[getPos LambsGroupSpawn_4, "hunt", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
-		[getPos LambsGroupSpawn_5, "rush", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
-		[getPos LambsGroupSpawn_6, "hunt", 4, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_1, "hunt", 2, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_2, "hunt", 2, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_3, "hunt", 2, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_4, "hunt", 2, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_5, "hunt", 2, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_6, "hunt", 2, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
 
 		// Deliberate Counter-Attack
 		[[[[5768.34,3778.57,0],0,[[301,0]],"ftl"],[[5769.43,3776.6,0],0,[[301,0]],"ar"],[[5767.56,3774.55,0],0,[[301,0]],"g"],[[5769.75,3774.2,0],0,[[301,0]],"mat"]],[],[[[5931.17,3925.4,0],[[0,"Move"]]],[[5979.98,4060.28,0],[[0,"Move"]]],[[5968,4193.88,0],[[0,"SAD"]]]],east] call GW_Common_fnc_spawnGroup;
@@ -67,7 +67,7 @@ switch (_case) do {
 	case 3: {
 
 		// Search Site 2.
-		[[[[5463.61,4785.32,0],177,"Auto",[[301,0]],"sl"],[[5469.53,4805.76,0],198,"Auto",[[301,1]],"ag"],[[5454.88,4805.69,2.15734],130,"Middle",[[301,0]],"mmg"],[[5490.98,4805.49,0],145,"Auto",[[301,0]],"r"],[[5473.4,4803.24,0],108,"Middle",[[301,1]],"ag"],[[5487.74,4809.57,0],36,"Auto",[[301,1]],"ag"],[[5471.66,4780.39,0],198,"Middle",[[301,0]],"ar"],[[5474.84,4776.32,0],152,"Auto",[[301,0]],"r"],[[5480.82,4792.79,0],198,"Auto",[[301,0]],"ar"],[[5478.28,4794.18,1.90735e-06],198,"Middle",[[301,0]],"mmg"]],[],[],east] call GW_Common_fnc_spawnGroup;
+		[[[[5463.61,4785.32,0],177,"Up",[[301,0]],"sl"],[[5469.53,4805.76,0],198,"Up",[[301,1]],"ag"],[[5454.88,4805.69,2.15734],130,"Middle",[[301,0]],"mmg"],[[5490.98,4805.49,0],145,"Up",[[301,0]],"r"],[[5473.4,4803.24,0],108,"Middle",[[301,1]],"ag"],[[5487.74,4809.57,0],36,"Up",[[301,1]],"ag"],[[5471.66,4780.39,0],198,"Middle",[[301,0]],"ar"],[[5474.84,4776.32,0],152,"Up",[[301,0]],"r"],[[5480.82,4792.79,0],198,"Up",[[301,0]],"ar"],[[5478.28,4794.18,1.90735e-06],198,"Middle",[[301,0]],"mmg"]],[],[],east] call GW_Common_fnc_spawnGroup;
 	
 		// Patrols.
 		[[[[5518.88,4673.32,0],319,[[301,0]],"sl"],[[5520.84,4671.04,0],157,[[301,0]],"r"],[[5522.8,4668.77,1.90735e-06],285,[[301,0]],"mmg"],[[5521.16,4675.28,0],287,[[301,0]],"mmg"],[[5523.11,4673,0],154,[[301,0]],"r"],[[5525.07,4670.73,9.53674e-07],356,[[301,0]],"g"]],[],[[[5543.38,4644.93,0],[[0,"Move"],[1,"SAFE"],[4,"FILE"],[5,"LIMITED"],[6,[0,3,6]]]],[[5590.42,4685.11,0],[[0,"Move"],[6,[0,3,6]]]],[[5531.3,4708.75,0],[[0,"Move"],[6,[0,3,6]]]],[[5483.01,4691.37,0],[[0,"Move"],[6,[0,3,6]]]],[[5443.62,4648.6,1.90735e-06],[[0,"Move"],[6,[0,3,6]]]],[[5486.45,4650.2,0],[[0,"Move"],[6,[0,3,6]]]],[[5543.38,4644.93,0],[[0,"Cycle"]]]],east] call GW_Common_fnc_spawnGroup;
@@ -79,12 +79,12 @@ switch (_case) do {
 
 	case 4: {
 		// Counter Search 2.
-		[getPos LambsGroupSpawn_7, "hunt", 6, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
-		[getPos LambsGroupSpawn_8, "hunt", 6, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
-		[getPos LambsGroupSpawn_9, "hunt", 6, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
-		[getPos LambsGroupSpawn_10, "hunt", 6, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_7, "hunt", 3, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_8, "hunt", 3, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_9, "hunt", 3, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
+		[getPos LambsGroupSpawn_10, "hunt", 3, east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup;
 
-		[ConvoySpawn_2,ConvoyWP_2,ConvoyEnd_2,east,[4,["UK3CB_WEI_O_Landcruiser","UK3CB_WEI_O_Landcruiser","UK3CB_WEI_O_Landcruiser","UK3CB_WEI_O_Landcruiser"],35,50,30],[true,6],[],false,false,["rush"],"convoystop"] spawn OKS_fnc_Convoy_Spawn;
+		[ConvoySpawn_2,ConvoyWP_2,ConvoyEnd_2,east,[4,["UK3CB_WEI_O_Landcruiser","UK3CB_WEI_O_Landcruiser","UK3CB_WEI_O_Landcruiser","UK3CB_WEI_O_Landcruiser"],35,50,30],[true,3],[],false,false,["hunt"],"convoystop"] spawn OKS_fnc_Convoy_Spawn;
 	};
 
 	case 5: {
