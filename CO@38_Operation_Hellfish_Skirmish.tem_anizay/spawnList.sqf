@@ -27,7 +27,6 @@ private _firstVehicles = [
 	"UK3CB_TKM_O_MTLB_BMP", 
 	"UK3CB_TKM_O_MTLB_BMP", 
 	"UK3CB_TKM_O_MTLB_BMP", 
-	"UK3CB_TKM_O_BTR40_ZU23", 
 	"UK3CB_TKM_O_Hilux_Spg9", 
 	"UK3CB_TKM_O_LandRover_Opentop_SPG9", 
 	"UK3CB_TKM_O_UAZ_SPG9", 
@@ -35,18 +34,14 @@ private _firstVehicles = [
 	"UK3CB_TKM_O_LandRover_Opentop_M2"
 ];
 private _secondVehicles = [
-	"UK3CB_TKA_O_BTR40_ZU23", 
 	"UK3CB_TKA_O_BMP1", 
 	"UK3CB_TKA_O_BMP1", 
 	"UK3CB_TKA_O_BMP1", 
 	"UK3CB_TKA_O_BMP1", 
 	"UK3CB_TKA_O_BMP1", 
 	"UK3CB_TKA_O_BMP1", 
-	"UK3CB_TKA_O_BMP2", 
-	"UK3CB_TKA_O_BTR90", 
 	"UK3CB_TKA_O_MTLB_BMP", 
-	"UK3CB_TKA_O_T34", 
-	"UK3CB_TKA_O_GAZ_Vodnik_Cannon"
+	"UK3CB_TKA_O_T34"
 ];
 
 switch (_case) do {
@@ -54,8 +49,8 @@ switch (_case) do {
 	case 1: {
 
 		// Phase 1
-		_StaticCount = round (50 * _spawnMultiplier);
-		_PatrolCount = round (40 * _spawnMultiplier);
+		_StaticCount = round (70 * _spawnMultiplier);
+		_PatrolCount = round (50 * _spawnMultiplier);
 		_ApcCount = round (5 * _spawnMultiplier);
 		_MortarCount = 1;
 		_RespawnDelay = 400;
@@ -90,13 +85,13 @@ switch (_case) do {
 		],[],east] call GW_Common_fnc_spawnGroup;
 
 
-		[Spawn_1, Spawn_1, NEKY_Hunt_Trigger_1, round (15 * _spawnMultiplier), _RespawnDelay, east, _firstVehicles, 240] spawn OKS_fnc_HuntBase;
-		[Spawn_3, Spawn_3, NEKY_Hunt_Trigger_1, round (15 * _spawnMultiplier), _RespawnDelay, east, _firstVehicles, 240] spawn OKS_fnc_HuntBase;
-		[Spawn_5, Spawn_5, NEKY_Hunt_Trigger_1, round (15 * _spawnMultiplier), _RespawnDelay, east, _firstVehicles, 240] spawn OKS_fnc_HuntBase;
-		[Spawn_7, Spawn_7, NEKY_Hunt_Trigger_1, round (15 * _spawnMultiplier), _RespawnDelay, east, _firstVehicles, 240] spawn OKS_fnc_HuntBase;
-		[Spawn_9, Spawn_9, NEKY_Hunt_Trigger_1, round (15 * _spawnMultiplier), _RespawnDelay, east, _firstVehicles, 240] spawn OKS_fnc_HuntBase;
+		[Spawn_1, Spawn_1, NEKY_Hunt_Trigger_1, round (10 * _spawnMultiplier), _RespawnDelay, independent, _firstVehicles, 240] spawn OKS_fnc_HuntBase;
+		[Spawn_3, Spawn_3, NEKY_Hunt_Trigger_1, round (10 * _spawnMultiplier), _RespawnDelay, independent, _firstVehicles, 240] spawn OKS_fnc_HuntBase;
+		[Spawn_5, Spawn_5, NEKY_Hunt_Trigger_1, round (10 * _spawnMultiplier), _RespawnDelay, independent, _firstVehicles, 240] spawn OKS_fnc_HuntBase;
+		[Spawn_7, Spawn_7, NEKY_Hunt_Trigger_1, round (10 * _spawnMultiplier), _RespawnDelay, independent, _firstVehicles, 240] spawn OKS_fnc_HuntBase;
+		[Spawn_9, Spawn_9, NEKY_Hunt_Trigger_1, round (10 * _spawnMultiplier), _RespawnDelay, independent, _firstVehicles, 240] spawn OKS_fnc_HuntBase;
 		{
-			[getpos _X, "ambushrush", round(6 * _spawnMultiplier), independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
+			[getpos _X, "ambushhunt", round(6 * _spawnMultiplier), independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
 		} foreach [
 			LambsGroupSpawn_1, LambsGroupSpawn_2, LambsGroupSpawn_3, LambsGroupSpawn_4, LambsGroupSpawn_5, LambsGroupSpawn_6, LambsGroupSpawn_7, LambsGroupSpawn_8
 		];	
@@ -105,34 +100,40 @@ switch (_case) do {
 	case 2: {
 
 		// Phase 2
-		_StaticCount = round (60 * _spawnMultiplier);
+		_StaticCount = round (80 * _spawnMultiplier);
 		_PatrolCount = round (60 * _spawnMultiplier);
 		_ApcCount = round (7 * _spawnMultiplier);
 		_MortarCount = 1;
-		_RespawnDelay = 400;
+		_RespawnDelay = 600;
 		if(_spawnMultiplier < 0.9) then {
 			_MortarCount = 0;
-			_RespawnDelay = 600;
+			_RespawnDelay = 900;
 		};
 		if(_spawnMultiplier < 0.4) then {
-			_RespawnDelay = 900;
+			_RespawnDelay = 1200;
 		};
 
 		[ Trigger_2, false, [_StaticCount,_PatrolCount,false,true], east, 0, _ApcCount, 0, [0,true,false,0], [0,false], [_MortarCount,true], [0,0,0,0,0], false ] spawn OKS_fnc_CreateZone;
 
-		[Spawn_2, Spawn_2, NEKY_Hunt_Trigger_2, round (15 * _spawnMultiplier), _RespawnDelay, east, _secondVehicles, 240] spawn OKS_fnc_HuntBase;
-		[Spawn_4, Spawn_4, NEKY_Hunt_Trigger_2, round (15 * _spawnMultiplier), _RespawnDelay, east, _secondVehicles, 240] spawn OKS_fnc_HuntBase;
-		[Spawn_6, Spawn_6, NEKY_Hunt_Trigger_2, round (15 * _spawnMultiplier), _RespawnDelay, east, _secondVehicles, 240] spawn OKS_fnc_HuntBase;
-		[Spawn_8, Spawn_8, NEKY_Hunt_Trigger_2, round (15 * _spawnMultiplier), _RespawnDelay, east, _secondVehicles, 240] spawn OKS_fnc_HuntBase;
-		[Spawn_10, Spawn_10, NEKY_Hunt_Trigger_2, round (15 * _spawnMultiplier), _RespawnDelay, east, _secondVehicles, 240] spawn OKS_fnc_HuntBase;
-		[Spawn_11, Spawn_11, NEKY_Hunt_Trigger_2, round (15 * _spawnMultiplier), _RespawnDelay, east, _secondVehicles, 240] spawn OKS_fnc_HuntBase;
+		[Spawn_2, Spawn_2, NEKY_Hunt_Trigger_2, round (5 * _spawnMultiplier), _RespawnDelay, east, _secondVehicles, 240] spawn OKS_fnc_HuntBase;
+		[Spawn_4, Spawn_4, NEKY_Hunt_Trigger_2, round (5 * _spawnMultiplier), _RespawnDelay, east, _secondVehicles, 240] spawn OKS_fnc_HuntBase;
+		[Spawn_6, Spawn_6, NEKY_Hunt_Trigger_2, round (5 * _spawnMultiplier), _RespawnDelay, east, _secondVehicles, 240] spawn OKS_fnc_HuntBase;
+		[Spawn_8, Spawn_8, NEKY_Hunt_Trigger_2, round (5 * _spawnMultiplier), _RespawnDelay, east, _secondVehicles, 240] spawn OKS_fnc_HuntBase;
+		[Spawn_10, Spawn_10, NEKY_Hunt_Trigger_2, round (5 * _spawnMultiplier), _RespawnDelay, east, _secondVehicles, 240] spawn OKS_fnc_HuntBase;
+		[Spawn_11, Spawn_11, NEKY_Hunt_Trigger_2, round (5 * _spawnMultiplier), _RespawnDelay, east, _secondVehicles, 240] spawn OKS_fnc_HuntBase;
 
 		{
-			[getpos _X, "ambushrush", round(6 * _spawnMultiplier), independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
+			[getpos _X, "ambushhunt", round(6 * _spawnMultiplier), independent, 300] spawn OKS_fnc_Lambs_SpawnGroup;
 		} foreach [
 			LambsGroupSpawn_10, LambsGroupSpawn_11, LambsGroupSpawn_12, LambsGroupSpawn_13, LambsGroupSpawn_14, LambsGroupSpawn_9
 		];	
 
+		[] spawn {
+			while {true} do {
+				[AirSpawnPosition_1, AirSpawnTarget_1, "UK3CB_TKA_O_UH1H_GUNSHIP", east, false, "SAD", 250, ["PylonWeapon_300Rnd_20mm_shells","2500Rnd_gau1950cal_tracer_green_shells"]] spawn OKS_fnc_AirSpawn;
+				sleep 900;
+			};
+		};
 	};
 
 	case 3: {
@@ -145,6 +146,8 @@ switch (_case) do {
 		{
 			deleteVehicle _X
 		} foreach [Spawn_1, Spawn_2, Spawn_3, Spawn_4, Spawn_5, Spawn_6, Spawn_7, Spawn_8, Spawn_9, Spawn_10, Spawn_11];
+
+		[AirSpawnPosition_2, AirSpawnTarget_2, "UK3CB_TKA_O_UH1H_GUNSHIP", east, false, "SAD", 150, ["PylonWeapon_300Rnd_20mm_shells","2500Rnd_gau1950cal_tracer_green_shells"]] spawn OKS_fnc_AirSpawn;
 
 		// Counter-Attack
 		[getPos LambsGroupSpawn_15, "hunt", round(6 * _spawnMultiplier), east, 1500, []] spawn OKS_fnc_Lambs_SpawnGroup; sleep 3;
