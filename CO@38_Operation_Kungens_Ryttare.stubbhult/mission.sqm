@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13979;
+		nextID=14045;
 	};
 	class Camera
 	{
 		pos[]={11906.042,73.074524,479.18307};
-		dir[]={-0.95428866,-0.2987459,0.0091687329};
-		up[]={-0.29873213,0.95433271,0.0028701955};
-		aside[]={0.0096074808,0,0.99995393};
+		dir[]={0.83698511,-0.50865519,0.2018342};
+		up[]={0.49448475,0.86096942,0.11924197};
+		aside[]={0.23442644,2.2180029e-07,-0.97213972};
 	};
 };
 binarizationWanted=0;
-sourceName="CO@38_Operation_Kungens_Ryttare";
+sourceName="co@38_operation_kungens_ryttare";
 addons[]=
 {
 	"A3_Characters_F",
@@ -35536,6 +35536,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="Template Modules";
+			state=1;
 			class Entities
 			{
 				items=37;
@@ -40147,7 +40148,7 @@ class Mission
 									fillName="DiagGrid";
 									a=30;
 									b=183.93452;
-									angle=110.69544;
+									angle=110.69541;
 									id=5679;
 								};
 								class Item133
@@ -40161,7 +40162,7 @@ class Mission
 									fillName="SolidFull";
 									a=7.5;
 									b=183.93452;
-									angle=110.69544;
+									angle=110.69541;
 									id=5680;
 								};
 								class Item134
@@ -40847,7 +40848,7 @@ class Mission
 									fillName="DiagGrid";
 									a=30;
 									b=98.799255;
-									angle=222.39682;
+									angle=222.39677;
 									id=5754;
 								};
 								class Item183
@@ -40861,7 +40862,7 @@ class Mission
 									fillName="SolidFull";
 									a=7.5;
 									b=98.799255;
-									angle=222.39682;
+									angle=222.39677;
 									id=5755;
 								};
 								class Item184
@@ -40903,7 +40904,7 @@ class Mission
 									fillName="DiagGrid";
 									a=30;
 									b=113.55651;
-									angle=228.50304;
+									angle=228.50299;
 									id=5758;
 								};
 								class Item187
@@ -40917,7 +40918,7 @@ class Mission
 									fillName="SolidFull";
 									a=7.5;
 									b=113.55651;
-									angle=228.50304;
+									angle=228.50299;
 									id=5759;
 								};
 								class Item188
@@ -41379,7 +41380,7 @@ class Mission
 									fillName="DiagGrid";
 									a=30;
 									b=35.692924;
-									angle=114.51373;
+									angle=114.51372;
 									id=5792;
 								};
 								class Item221
@@ -41393,7 +41394,7 @@ class Mission
 									fillName="SolidFull";
 									a=7.5;
 									b=35.692924;
-									angle=114.51373;
+									angle=114.51372;
 									id=5793;
 								};
 								class Item222
@@ -42047,7 +42048,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1573.5096,7.0149674,10620.533};
-						angles[]={-0,1.8657908,6.2798738};
+						angles[]={0,1.8657908,6.2798738};
 					};
 					side="Empty";
 					flags=4;
@@ -58770,7 +58771,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={11693.642,35.858421,2213.4363};
-					angle=0.49093136;
+					angle=0.49093127;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -58789,7 +58790,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={11750.382,19.672285,2300.2356};
-					angle=0.49093133;
+					angle=0.49093124;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -58807,7 +58808,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={11680.522,21.488638,2297.5342};
-					angle=0.4909313;
+					angle=0.49093121;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -58825,7 +58826,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={11622.473,23,2244.7021};
-					angle=0.4909313;
+					angle=0.49093121;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -58843,7 +58844,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={11650.579,23.307005,2162.0696};
-					angle=0.4909313;
+					angle=0.49093121;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -58862,7 +58863,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={11664.445,19.473381,2072.4658};
-					angle=0.49093127;
+					angle=0.49093118;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -58881,7 +58882,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={11625.622,18.354492,2082.4338};
-					angle=0.49093124;
+					angle=0.49093115;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -58918,7 +58919,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={11560.486,19.923649,2144.0835};
-					angle=0.49093124;
+					angle=0.49093115;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -58937,7 +58938,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={6704.9219,15.08934,3670.4067};
-					angle=0.99793053;
+					angle=0.99793035;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -59394,7 +59395,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8275.6357,1.8142216,2704.7051};
+						position[]={8275.6357,1.8142217,2704.7051};
 						angles[]={0,3.4603901,0};
 					};
 					side="Empty";
@@ -59404,7 +59405,7 @@ class Mission
 					};
 					id=4110;
 					type="Land_HelipadEmpty_F";
-					atlOffset=2.7418137e-06;
+					atlOffset=2.8610229e-06;
 				};
 				class Item12
 				{
@@ -60806,7 +60807,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3392.5466,1.9501654,3227.6663};
+						position[]={3392.5466,1.9501655,3227.6663};
 						angles[]={0.011667843,6.2756772,6.2033553};
 					};
 					side="Empty";
@@ -60819,7 +60820,7 @@ class Mission
 					};
 					id=4563;
 					type="Land_ClutterCutter_small_F";
-					atlOffset=3.5762787e-06;
+					atlOffset=3.695488e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -61052,7 +61053,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3350.3921,1.4009557,2375.8096};
+						position[]={3350.3921,1.4009558,2375.8096};
 						angles[]={0.0049914722,0.2376139,0};
 					};
 					side="Empty";
@@ -61065,7 +61066,7 @@ class Mission
 					};
 					id=4568;
 					type="Land_ClutterCutter_small_F";
-					atlOffset=3.5762787e-06;
+					atlOffset=3.695488e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -61102,7 +61103,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3631.3213,1.3900036,2222.7703};
+						position[]={3631.3213,1.3900037,2222.7703};
 						angles[]={0,0.2376139,0};
 					};
 					side="Empty";
@@ -61115,7 +61116,7 @@ class Mission
 					};
 					id=4569;
 					type="Land_ClutterCutter_small_F";
-					atlOffset=3.5762787e-06;
+					atlOffset=3.695488e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -62552,7 +62553,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3945.0242,1.6464585,3135.8232};
+						position[]={3945.0242,1.6464586,3135.8232};
 						angles[]={0,4.3461666,0};
 					};
 					side="Empty";
@@ -62562,7 +62563,7 @@ class Mission
 					};
 					id=5039;
 					type="Land_DirtPatch_05_F";
-					atlOffset=3.4570694e-06;
+					atlOffset=3.5762787e-06;
 				};
 				class Item80
 				{
@@ -62586,7 +62587,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3952.5466,1.6467075,3021.8035};
+						position[]={3952.5466,1.6467077,3021.8035};
 						angles[]={0,0.96610826,0};
 					};
 					side="Empty";
@@ -62596,14 +62597,14 @@ class Mission
 					};
 					id=5062;
 					type="Land_DirtPatch_05_F";
-					atlOffset=3.4570694e-06;
+					atlOffset=3.5762787e-06;
 				};
 				class Item82
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3949.0496,1.7311931,3019.5789};
+						position[]={3949.0496,1.7311932,3019.5789};
 						angles[]={0,0.96610826,0};
 					};
 					side="Empty";
@@ -62613,7 +62614,7 @@ class Mission
 					};
 					id=5063;
 					type="Land_DirtPatch_05_F";
-					atlOffset=3.4570694e-06;
+					atlOffset=3.5762787e-06;
 				};
 				class Item83
 				{
@@ -62717,7 +62718,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3946.4202,1.9084424,3132.9521};
+						position[]={3946.4202,1.9084425,3132.9521};
 						angles[]={0,4.4015055,0};
 					};
 					side="Empty";
@@ -62727,7 +62728,7 @@ class Mission
 					};
 					id=5035;
 					type="Land_ManurePile_01_F";
-					atlOffset=3.4570694e-06;
+					atlOffset=3.5762787e-06;
 				};
 				class Item90
 				{
@@ -62818,7 +62819,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3953.8904,1.8721857,3019.3372};
+						position[]={3953.8904,1.8721858,3019.3372};
 						angles[]={0,4.1423717,0};
 					};
 					side="Empty";
@@ -62828,7 +62829,7 @@ class Mission
 					};
 					id=5060;
 					type="Land_ManurePile_01_F";
-					atlOffset=3.4570694e-06;
+					atlOffset=3.5762787e-06;
 				};
 				class Item96
 				{
@@ -63093,7 +63094,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3944.0427,1.9416356,3018.0396};
+						position[]={3944.0427,1.9416357,3018.0396};
 						angles[]={0,4.6999974,0};
 					};
 					side="Empty";
@@ -63103,7 +63104,7 @@ class Mission
 					};
 					id=5069;
 					type="Land_DirtPatch_05_F";
-					atlOffset=3.4570694e-06;
+					atlOffset=3.5762787e-06;
 				};
 				class Item113
 				{

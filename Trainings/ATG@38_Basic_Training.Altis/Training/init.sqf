@@ -14,6 +14,7 @@ OKS_Marksman_Qualification_WeaponSelect = compile preprocessFileLineNumbers "Tra
 
 MGSpawner = compile preprocessFileLineNumbers "Training\MGSpawner.sqf";
 LauncherGear = compile preprocessFileLineNumbers "Training\LauncherGear.sqf";
+MachineGunGear = compile preprocessFileLineNumbers "Training\MachineGunGear.sqf";
 AA_Spawner = compile preprocessFileLineNumbers "Training\AA_Spawner.sqf";
 AT_Spawner = compile preprocessFileLineNumbers "Training\AT_Spawner.sqf";
 AT_Static_Spawner = compile preprocessFileLineNumbers "Training\AT_Static_Spawner.sqf";
@@ -89,6 +90,27 @@ object_1 addAction ["<t color='#eb4034'>Initiate Targets</t>",
 				MGSPAWN_Course1_Target8, MGSPAWN_Course1_Target9
 			],
 			3,
+			false
+		] remoteExec ["MGSpawner",2];
+	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
+];
+object_1 addAction ["<t color='#FFA500'>Initiate Targets [Light Vehicle]</t>",
+	{
+		[_this select 0,_this select 1,Target_1,
+			[
+				MGSPAWN_Course1_Target1, MGSPAWN_Course1_Target10,
+				MGSPAWN_Course1_Target11, MGSPAWN_Course1_Target12,
+				MGSPAWN_Course1_Target13, MGSPAWN_Course1_Target14,
+				MGSPAWN_Course1_Target15, MGSPAWN_Course1_Target16,
+				MGSPAWN_Course1_Target17, MGSPAWN_Course1_Target18,
+				MGSPAWN_Course1_Target19, MGSPAWN_Course1_Target2,
+				MGSPAWN_Course1_Target20, MGSPAWN_Course1_Target21,
+				MGSPAWN_Course1_Target22, MGSPAWN_Course1_Target3,
+				MGSPAWN_Course1_Target4, MGSPAWN_Course1_Target5,
+				MGSPAWN_Course1_Target6, MGSPAWN_Course1_Target7,
+				MGSPAWN_Course1_Target8, MGSPAWN_Course1_Target9
+			],
+			3,
 			true
 		] remoteExec ["MGSpawner",2];
 	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
@@ -125,11 +147,46 @@ object_2 addAction ["<t color='#eb4034'>Initiate Targets</t>",
 				MGSPAWN_Course2_Target9
 			],
 			3,
+			false
+		] remoteExec ["MGSpawner",2];
+	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
+];
+object_2 addAction ["<t color='#FFA500'>Initiate Targets [Light Vehicle]</t>",
+	{
+		[_this select 0,_this select 1,Target_2,
+			[
+				MGSPAWN_Course2_Target1,
+				MGSPAWN_Course2_Target10,
+				MGSPAWN_Course2_Target11,
+				MGSPAWN_Course2_Target12,
+				MGSPAWN_Course2_Target13,
+				MGSPAWN_Course2_Target14,
+				MGSPAWN_Course2_Target15,
+				MGSPAWN_Course2_Target16,
+				MGSPAWN_Course2_Target17,
+				MGSPAWN_Course2_Target18,
+				MGSPAWN_Course2_Target19,
+				MGSPAWN_Course2_Target2,
+				MGSPAWN_Course2_Target20,
+				MGSPAWN_Course2_Target21,
+				MGSPAWN_Course2_Target22,
+				MGSPAWN_Course2_Target23,
+				MGSPAWN_Course2_Target24,
+				MGSPAWN_Course2_Target25,
+				MGSPAWN_Course2_Target26,
+				MGSPAWN_Course2_Target3,
+				MGSPAWN_Course2_Target4,
+				MGSPAWN_Course2_Target5,
+				MGSPAWN_Course2_Target6,
+				MGSPAWN_Course2_Target7,
+				MGSPAWN_Course2_Target8,
+				MGSPAWN_Course2_Target9
+			],
+			3,
 			true
 		] remoteExec ["MGSpawner",2];
 	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
-];	
-object_3 addAction ["<t color='#eb4034'>Initiate Targets</t>",
+];	object_3 addAction ["<t color='#eb4034'>Initiate Targets</t>",
 	{
 		[_this select 0,_this select 1,Target_3,
 			[
@@ -160,11 +217,45 @@ object_3 addAction ["<t color='#eb4034'>Initiate Targets</t>",
 				MGSPAWN_Course3_Target9
 			],
 			3,
+			false
+		] remoteExec ["MGSpawner",2];
+	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
+];
+object_3 addAction ["<t color='#FFA500'>Initiate Targets [Light Vehicle]</t>",
+	{
+		[_this select 0,_this select 1,Target_3,
+			[
+				MGSPAWN_Course3_Target1,
+				MGSPAWN_Course3_Target10,
+				MGSPAWN_Course3_Target11,
+				MGSPAWN_Course3_Target12,
+				MGSPAWN_Course3_Target13,
+				MGSPAWN_Course3_Target14,
+				MGSPAWN_Course3_Target15,
+				MGSPAWN_Course3_Target16,
+				MGSPAWN_Course3_Target17,
+				MGSPAWN_Course3_Target18,
+				MGSPAWN_Course3_Target18_1,
+				MGSPAWN_Course3_Target18_2,
+				MGSPAWN_Course3_Target18_3,
+				MGSPAWN_Course3_Target18_4,
+				MGSPAWN_Course3_Target18_5,
+				MGSPAWN_Course3_Target18_6,
+				MGSPAWN_Course3_Target18_7,
+				MGSPAWN_Course3_Target2,
+				MGSPAWN_Course3_Target3,
+				MGSPAWN_Course3_Target4,
+				MGSPAWN_Course3_Target5,
+				MGSPAWN_Course3_Target6,
+				MGSPAWN_Course3_Target7,
+				MGSPAWN_Course3_Target8,
+				MGSPAWN_Course3_Target9
+			],
+			3,
 			true
 		] remoteExec ["MGSpawner",2];
 	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
-];	
-object_4 addAction ["<t color='#eb4034'>Initiate Targets</t>",
+];	object_4 addAction ["<t color='#eb4034'>Initiate Targets</t>",
 	{
 		[_this select 0,_this select 1,Target_4,
 			[
@@ -188,11 +279,38 @@ object_4 addAction ["<t color='#eb4034'>Initiate Targets</t>",
 				MGSPAWN_Course4_Target9
 			],
 			3,
+			false
+		] remoteExec ["MGSpawner",2];
+	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
+];
+object_4 addAction ["<t color='#FFA500'>Initiate Targets [Light Vehicle]</t>",
+	{
+		[_this select 0,_this select 1,Target_4,
+			[
+				MGSPAWN_Course4_Target1,
+				MGSPAWN_Course4_Target10,
+				MGSPAWN_Course4_Target11,
+				MGSPAWN_Course4_Target12,
+				MGSPAWN_Course4_Target13,
+				MGSPAWN_Course4_Target14,
+				MGSPAWN_Course4_Target15,
+				MGSPAWN_Course4_Target16,
+				MGSPAWN_Course4_Target17,
+				MGSPAWN_Course4_Target18,
+				MGSPAWN_Course4_Target2,
+				MGSPAWN_Course4_Target3,
+				MGSPAWN_Course4_Target4,
+				MGSPAWN_Course4_Target5,
+				MGSPAWN_Course4_Target6,
+				MGSPAWN_Course4_Target7,
+				MGSPAWN_Course4_Target8,
+				MGSPAWN_Course4_Target9
+			],
+			3,
 			true
 		] remoteExec ["MGSpawner",2];
 	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
-];	
-object_5 addAction ["<t color='#eb4034'>Initiate Targets</t>",
+];	object_5 addAction ["<t color='#eb4034'>Initiate Targets</t>",
 	{
 		[_this select 0,_this select 1,Target_5,
 			[
@@ -216,11 +334,38 @@ object_5 addAction ["<t color='#eb4034'>Initiate Targets</t>",
 				MGSPAWN_Course5_Target9
 			],
 			3,
+			false
+		] remoteExec ["MGSpawner",2];
+	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
+];
+object_5 addAction ["<t color='#FFA500'>Initiate Targets [Light Vehicle]</t>",
+	{
+		[_this select 0,_this select 1,Target_5,
+			[
+				MGSPAWN_Course5_Target1,
+				MGSPAWN_Course5_Target10,
+				MGSPAWN_Course5_Target11,
+				MGSPAWN_Course5_Target12,
+				MGSPAWN_Course5_Target13,
+				MGSPAWN_Course5_Target14,
+				MGSPAWN_Course5_Target15,
+				MGSPAWN_Course5_Target16,
+				MGSPAWN_Course5_Target17,
+				MGSPAWN_Course5_Target18,
+				MGSPAWN_Course5_Target2,
+				MGSPAWN_Course5_Target3,
+				MGSPAWN_Course5_Target4,
+				MGSPAWN_Course5_Target5,
+				MGSPAWN_Course5_Target6,
+				MGSPAWN_Course5_Target7,
+				MGSPAWN_Course5_Target8,
+				MGSPAWN_Course5_Target9
+			],
+			3,
 			true
 		] remoteExec ["MGSpawner",2];
 	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
-];	
-object_6 addAction ["<t color='#eb4034'>Initiate Targets</t>",
+];	object_6 addAction ["<t color='#eb4034'>Initiate Targets</t>",
 	{
 		[_this select 0,_this select 1,Target_6,
 			[
@@ -246,10 +391,40 @@ object_6 addAction ["<t color='#eb4034'>Initiate Targets</t>",
 				MGSPAWN_Course6_Target9
 			],
 			3,
+			false
+		] remoteExec ["MGSpawner",2];
+	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
+];
+object_6 addAction ["<t color='#FFA500'>Initiate Targets [Light Vehicle]</t>",
+	{
+		[_this select 0,_this select 1,Target_6,
+			[
+				MGSPAWN_Course6_Target1,
+				MGSPAWN_Course6_Target10,
+				MGSPAWN_Course6_Target11,
+				MGSPAWN_Course6_Target12,
+				MGSPAWN_Course6_Target13,
+				MGSPAWN_Course6_Target14,
+				MGSPAWN_Course6_Target15,
+				MGSPAWN_Course6_Target16,
+				MGSPAWN_Course6_Target17,
+				MGSPAWN_Course6_Target18,
+				MGSPAWN_Course6_Target19,
+				MGSPAWN_Course6_Target2,
+				MGSPAWN_Course6_Target20,
+				MGSPAWN_Course6_Target3,
+				MGSPAWN_Course6_Target4,
+				MGSPAWN_Course6_Target5,
+				MGSPAWN_Course6_Target6,
+				MGSPAWN_Course6_Target7,
+				MGSPAWN_Course6_Target8,
+				MGSPAWN_Course6_Target9
+			],
+			3,
 			true
 		] remoteExec ["MGSpawner",2];
 	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
-];	
+];
 
 object_7 addAction ["<t color='#eb4034'>Initiate Targets</t>",
 	{
@@ -279,10 +454,42 @@ object_7 addAction ["<t color='#eb4034'>Initiate Targets</t>",
 				MGSPAWN_Course7_Target9
 			],
 			3,
+			false
+		] remoteExec ["MGSpawner",2];
+	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
+];
+object_7 addAction ["<t color='#FFA500'>Initiate Targets [Light Vehicle]</t>",
+	{
+		[_this select 0,_this select 1,Target_7,
+			[
+				MGSPAWN_Course7_Target1,
+				MGSPAWN_Course7_Target10,
+				MGSPAWN_Course7_Target11,
+				MGSPAWN_Course7_Target12,
+				MGSPAWN_Course7_Target13,
+				MGSPAWN_Course7_Target14,
+				MGSPAWN_Course7_Target15,
+				MGSPAWN_Course7_Target16,
+				MGSPAWN_Course7_Target17,
+				MGSPAWN_Course7_Target18,
+				MGSPAWN_Course7_Target19,
+				MGSPAWN_Course7_Target2,
+				MGSPAWN_Course7_Target20,
+				MGSPAWN_Course7_Target21,
+				MGSPAWN_Course7_Target22,
+				MGSPAWN_Course7_Target3,
+				MGSPAWN_Course7_Target4,
+				MGSPAWN_Course7_Target5,
+				MGSPAWN_Course7_Target6,
+				MGSPAWN_Course7_Target7,
+				MGSPAWN_Course7_Target8,
+				MGSPAWN_Course7_Target9
+			],
+			3,
 			true
 		] remoteExec ["MGSpawner",2];
 	},nil,1.5,true,true,"","_this distance _target < 10", 15,false,"",""
-];	
+];
 
 // AT Range
 OKS_AT_Spawn_Active = false; sleep 1;

@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17334;
+		nextID=17374;
 	};
 	class Camera
 	{
-		pos[]={12031.854,27.945705,15088.665};
-		dir[]={-0.08934319,-0.36823988,-0.92543};
-		up[]={-0.035386231,0.92973047,-0.36653668};
-		aside[]={-0.99537385,4.8530637e-09,0.096095324};
+		pos[]={8972.5713,47.931225,14492.177};
+		dir[]={0.75995696,-0.53044713,-0.37565327};
+		up[]={0.47553331,0.84771287,-0.23505963};
+		aside[]={-0.44313145,-1.139706e-07,-0.89647067};
 	};
 };
 binarizationWanted=0;
@@ -35948,8 +35948,8 @@ class Mission
 		windForced=1;
 		year=2035;
 		day=11;
-		hour=6;
-		minute=0;
+		hour=5;
+		minute=20;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 	};
@@ -36145,7 +36145,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12045.06,20.76,15070.979};
-						angles[]={-0,0.11193988,0};
+						angles[]={0,0.11193988,0};
 					};
 					title="Tent MHQ";
 					description="This is a tent MHQ, you can use this MHQ for small scale missions that you don't want to use the other scripted solutions for respawn. This tent can be moved by leaders with self-interaction, the missionSetting ""GOL_OKS_TentMHQ"" must be set to 1 to be used.";
@@ -36331,7 +36331,7 @@ class Mission
 						{
 							dataType="Trigger";
 							position[]={11803.077,6.2330418,13616.336};
-							angle=0.81508595;
+							angle=0.81508577;
 							class Attributes
 							{
 								name="SpawnTrigger_0";
@@ -40456,7 +40456,7 @@ class Mission
 						};
 					};
 					id=410;
-					atlOffset=-1.1219873;
+					atlOffset=-1.1219597;
 				};
 				class Item7
 				{
@@ -40518,7 +40518,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="First Intercept Objective";
-			state=1;
 			class Entities
 			{
 				items=25;
@@ -40527,12 +40526,13 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={9057.7969,22.657822,14433.295};
-						angles[]={6.268187,4.9266801,0.032487731};
+						position[]={9030.2686,20.938488,14475.044};
+						angles[]={6.268187,4.9266801,0.084796004};
 					};
 					name="Intercept_Start_1";
 					id=4681;
 					type="Logic";
+					atlOffset=1.9073486e-06;
 				};
 				class Item1
 				{
@@ -40623,8 +40623,8 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={8622.7451,14.86725,15948.155};
-						angles[]={6.2806959,2.4385967,0.0024897563};
+						position[]={8450.7598,12.398706,15948.895};
+						angles[]={6.255693,2.8885815,6.255693};
 					};
 					name="civilianStart_2";
 					id=4694;
@@ -40786,8 +40786,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9099.3789,23.578798,14350.805};
-						angles[]={6.2457032,2.9613903,0.010000871};
+						position[]={9048.5723,23.074579,14414.119};
+						angles[]={6.2482009,4.4913597,0.052451372};
 					};
 					side="Empty";
 					flags=4;
@@ -41161,8 +41161,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9073.2148,24.318565,14426.957};
-						angles[]={6.2382159,3.921994,0.012496647};
+						position[]={9002.8594,20.726963,14484.273};
+						angles[]={6.2606897,2.8801148,0.062418513};
 					};
 					side="Empty";
 					flags=4;
@@ -41172,7 +41172,6 @@ class Mission
 					};
 					id=5127;
 					type="UK3CB_MEC_C_SUV";
-					atlOffset=-4.9591064e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -41253,13 +41252,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9063.9424,23.783907,14417.652};
-						angles[]={6.2382159,4.5564032,0.014998405};
+						position[]={9008.1758,20.737715,14467.464};
+						angles[]={6.2756844,2.8260198,0.059928458};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
+						name="leadvehicle";
 						textures="Black_White";
 					};
 					id=5128;
@@ -41344,8 +41344,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9079.0889,23.881445,14415.265};
-						angles[]={6.2382145,5.6093674,0.017500184};
+						position[]={8994.6396,20.778004,14509.11};
+						angles[]={6.2531939,2.8393214,0.07237374};
 					};
 					side="Empty";
 					flags=4;
@@ -41432,13 +41432,12 @@ class Mission
 				};
 			};
 			id=4704;
-			atlOffset=3.0313873;
+			atlOffset=4.0912418;
 		};
 		class Item4
 		{
 			dataType="Layer";
 			name="Malari Intro";
-			state=1;
 			class Entities
 			{
 				items=127;
@@ -42670,7 +42669,7 @@ class Mission
 					{
 					};
 					id=5050;
-					atlOffset=-17.48;
+					atlOffset=9.5367432e-07;
 				};
 				class Item73
 				{
@@ -43725,7 +43724,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Dynamic Zones";
-			state=1;
 			class Entities
 			{
 				items=2;

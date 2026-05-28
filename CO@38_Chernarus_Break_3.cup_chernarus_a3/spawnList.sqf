@@ -59,15 +59,10 @@ switch (_case) do {
 		}) #0#0;
 		_LHA_Aft animateSource ["ramp",1];
 		sleep 4;
-		//null = [beachLandingSpawn_1, beachLandingTarget_1, "RHICC_GREEN", 4, west, "rush", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 0.5;
-		//null = [beachLandingSpawn_2, beachLandingTarget_2, "RHICC_GREEN", 4, west, "rush", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 0.5;
-		//null = [beachLandingSpawn_3, beachLandingTarget_3, "RHICC_GREEN", 4, west, "rush", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 0.5;
-		//null = [beachLandingSpawn_4, beachLandingTarget_4, "RHICC_GREEN", 4, west, "rush", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 0.5;
-
-		// [[],[["B_T_Boat_Armed_01_minigun_F",[1749.29,1580.87,97.6051],357,[["driver",-1,[]],["commander",-1,[0]],["turret",0,[1]],["turret",1,[2]],["turret",2,[3]],["turret",3,[4]]],[[6,["AAF",1]],[7,["ClanLogo_Hide",0]],[351,false]]]],[[[1731.74,1812.89,13.8374],[[0,"Move"]]],[[1732.69,2031.16,0],[[0,"GetOut"]]],[[1727.69,2282.83,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
-		// [[],[["B_T_Boat_Armed_01_minigun_F",[1794.84,1583.44,90.6528],357,[["driver",-1,[]],["commander",-1,[0]],["turret",0,[1]],["turret",1,[2]],["turret",2,[3]],["turret",3,[4]]],[[6,["AAF",1]],[7,["ClanLogo_Hide",0]],[351,false]]]],[[[1777.29,1815.47,8.57399],[[0,"Move"]]],[[1778.24,2033.74,0],[[0,"GetOut"]]],[[1773.25,2285.41,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
-		// [[],[["B_T_Boat_Armed_01_minigun_F",[1629.15,1588.15,87.5243],357,[["driver",-1,[]],["commander",-1,[0]],["turret",0,[1]],["turret",1,[2]],["turret",2,[3]],["turret",3,[4]]],[[6,["AAF",1]],[7,["ClanLogo_Hide",0]],[351,false]]]],[[[1611.6,1820.18,10.8966],[[0,"Move"]]],[[1612.55,2038.45,0],[[0,"GetOut"]]],[[1637.41,2291.73,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
-		// [[],[["B_T_Boat_Armed_01_minigun_F",[1585.59,1587.95,95.1106],357,[["driver",-1,[]],["commander",-1,[0]],["turret",0,[1]],["turret",1,[2]],["turret",2,[3]],["turret",3,[4]]],[[6,["AAF",1]],[7,["ClanLogo_Hide",0]],[351,false]]]],[[[1568.04,1819.97,14.7885],[[0,"Move"]]],[[1568.99,2038.24,0],[[0,"GetOut"]]],[[1579.43,2334.49,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+		null = [beachLandingSpawn_1, beachLandingTarget_1, "RHICC_GREEN", 4, west, "hunt", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 0.5;
+		null = [beachLandingSpawn_2, beachLandingTarget_2, "RHICC_GREEN", 4, west, "hunt", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 0.5;
+		null = [beachLandingSpawn_3, beachLandingTarget_3, "RHICC_GREEN", 4, west, "hunt", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 0.5;
+		null = [beachLandingSpawn_4, beachLandingTarget_4, "RHICC_GREEN", 4, west, "hunt", 1500, ""] spawn OKS_fnc_BeachLanding; sleep 0.5;
 		sleep 2;
 		LHA_1 enableSimulation false;
 		sleep 8;
@@ -80,9 +75,9 @@ switch (_case) do {
 	};
 
 	case 21: {
-		[ConvoySpawn_1,ConvoyWP_1,ConvoyEnd_1,east,[2,["rhs_bmp1_msv", "rhs_brm1k_msv"],45,45],[true,3],[],false,false,["rush"],"convoystop"] spawn OKS_fnc_Convoy_Spawn; sleep 90;
-		[ConvoySpawn_2,ConvoyWP_2,ConvoyEnd_2,east,[2,["rhs_bmp1_msv", "rhs_brm1k_msv"],45,45],[true,3],[],false,false,["rush"],"convoystop"] spawn OKS_fnc_Convoy_Spawn; sleep 180;
-		[ConvoySpawn_3,ConvoyWP_3,ConvoyEnd_3,east,[2,["rhs_bmp1_msv", "rhs_brm1k_msv"],45,45],[true,3],[],false,false,["rush"],"convoystop"] spawn OKS_fnc_Convoy_Spawn;
+		[ConvoySpawn_1,ConvoyWP_1,ConvoyEnd_1,east,[2,["rhs_bmp1_msv", "rhs_brm1k_msv"],45,45],[true,3],[],false,false,["rush"],"convoystop", [nil,true,true,"destroy"]] spawn OKS_fnc_Convoy_Spawn; sleep 90;
+		[ConvoySpawn_2,ConvoyWP_2,ConvoyEnd_2,east,[2,["rhs_bmp1_msv", "rhs_brm1k_msv"],45,45],[true,3],[],false,false,["rush"],"convoystop", [nil,true,true,"destroy"]] spawn OKS_fnc_Convoy_Spawn; sleep 180;
+		[ConvoySpawn_3,ConvoyWP_3,ConvoyEnd_3,east,[2,["rhs_bmp1_msv", "rhs_brm1k_msv"],45,45],[true,3],[],false,false,["rush"],"convoystop", [nil,true,true,"destroy"]] spawn OKS_fnc_Convoy_Spawn;
 	};
 
 	case 1: {

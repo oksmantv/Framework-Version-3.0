@@ -25,8 +25,8 @@ switch (_case) do {
 
 	case 0: {
 		// Players observes near Malari.
-		[DynamicZone_1, false, [0,0,false,false], civilian, 4, 0, 0, [0,true,false,0], [0,false], [0,false], [0,0,0,0,0], true] spawn OKS_fnc_CreateZone;
-		[DynamicZone_2, false, [0,0,false,false], civilian, 4, 0, 0, [0,true,false,0], [0,false], [0,false], [0,0,0,0,0], true] spawn OKS_fnc_CreateZone;
+		[DynamicZone_1, false, [0,0,false,false], civilian, 4, 0, 0, [0,true,false,0], [0,false], [0,false], [0,0,0,0,0], false] spawn OKS_fnc_CreateZone;
+		[DynamicZone_2, false, [0,0,false,false], civilian, 4, 0, 0, [0,true,false,0], [0,false], [0,false], [0,0,0,0,0], false] spawn OKS_fnc_CreateZone;
 
 		["AFRICOM","side","1st Platoon, you are confirming what we suspected. The Militia has slaughtered the villagers of Malari. The butcher and his men are close, land and investigate on foot, HQ out."] spawn OKS_fnc_ChatGlobal;
 		sleep 4;
@@ -40,15 +40,15 @@ switch (_case) do {
 			// casualty rescued — do follow-up
 			["ClueTask","SUCCEEDED"] call BIS_fnc_taskSetState;
 			[Rescue_1,"local","Thank you, you saved my life. I wrote some last words.. take it, bring justice for Malari."] spawn OKS_fnc_ChatGlobal;
-			[Rescue_1, "The Paramilitary Militias came out of the jungle from the west of Malari, twenty men who rode SUVs. They killed everyone, slit their throats, piled their bodies and burned them.<br/><br/>They shot me, and left me for dead, but I managed to crawl away, Im bleeding out, I dont know if I will make it.<br/>If anyone finds this, it was Abbas Haddad and his men.<br/><br/>Please deliver justice, avenge us.", "Survivor Intel", "ScoutTask", []] spawn OKS_fnc_GiveIntelToNearestPlayer;
+			[Rescue_1, "The Paramilitary Militias came out of the jungle from the west of Malari, twenty men who rode SUVs. They killed everyone, slit their throats, piled their bodies and burned them.\n\nThey shot me, and left me for dead, but I managed to crawl away, Im bleeding out, I dont know if I will make it.\nIf anyone finds this, it was Abbas Haddad and his men.\n\nPlease deliver justice, avenge us.", "Survivor Intel", "ScoutTask", []] spawn OKS_fnc_GiveIntelToNearestPlayer;
 			sleep 10;
 			["AFRICOM","side","1st Platoon, we have incoming early reports of suspected location of Abbas Haddad. Get your force into the air and stand by for coordinates, HQ out."] spawn OKS_fnc_ChatGlobal;
-			waitUntil { sleep 10; {vehicle _X != _X && vehicle _X isKindOf "air"} count AllPlayers > floor(count AllPlayers * 0.7)};
+			waitUntil { sleep 10; {vehicle _X != _X && vehicle _X isKindOf "air"} count AllPlayers > floor(count (AllPlayers - entities "HeadlessClient_F") * 0.7)};
 			[1] spawn GW_Fnc_spawnList;
 		} else {
 			// casualty died or was not stabilized in time
 			["AFRICOM","side","1st Platoon, we have incoming early reports of suspected location of Abbas Haddad. Get your force into the air and stand by for coordinates, HQ out."] spawn OKS_fnc_ChatGlobal;
-			waitUntil { sleep 10; {vehicle _X != _X && vehicle _X isKindOf "air"} count AllPlayers > floor(count AllPlayers * 0.7)};
+			waitUntil { sleep 10; {vehicle _X != _X && vehicle _X isKindOf "air"} count AllPlayers > floor(count (AllPlayers - entities "HeadlessClient_F") * 0.7)};
 			[1] spawn GW_Fnc_spawnList;
 		};
 	};
@@ -83,9 +83,9 @@ switch (_case) do {
 			getPosATL Intercept_End_1,
 			[east, east],
 			"GARRISON",
-			objNull,
+			leadvehicle,
 			[15, 20],
-			[14, 30],
+			[14, 30, 40],
 			[false, "MainTask", true, "hvt1.paa"],
 			true,
 			getMarkerPos "respawn_west",

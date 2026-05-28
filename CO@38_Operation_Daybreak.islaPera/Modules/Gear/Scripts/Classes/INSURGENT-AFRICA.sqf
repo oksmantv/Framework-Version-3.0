@@ -50,7 +50,7 @@ if (_role isEqualTo "jetp") then {
 };
 
 _silencer = "rhs_acc_dtk1983";
-_pointer = "rhs_acc_2dpZenit";
+_pointer = "";
 _sight = "";
 _bipod = "";
 
@@ -63,7 +63,7 @@ _rifleGL_mag_tr = "UK3CB_AK47_30Rnd_Magazine_RT";
 
 
 _silencer = "rhs_acc_dtkakm";
-_pointer = "rhs_acc_2dpZenit";
+_pointer = "";
 _sight = "rhs_acc_pso1m21";
 _bipod = "";
 
@@ -97,6 +97,7 @@ if(random 1 > 0.5) then {
 
 _MAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "RPG7_F";
+_MAT_mag_HE = "rhs_rpg7_TBG7V_mag";
 
 _HAT = ["launch_O_Vorona_brown_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";

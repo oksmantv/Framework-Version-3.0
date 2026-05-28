@@ -50,7 +50,7 @@ if (_role isEqualTo "jetp") then {
 };
 
 _silencer = "rhs_acc_dtk1983";
-_pointer = "rhs_acc_2dpZenit";
+_pointer = "";
 _sight = "";
 _bipod = "";
 
@@ -63,7 +63,7 @@ _rifleGL_mag_tr = "UK3CB_AK47_30Rnd_Magazine_RT";
 
 
 _silencer = "rhs_acc_dtkakm";
-_pointer = "rhs_acc_2dpZenit";
+_pointer = "";
 _sight = "rhs_acc_pso1m21";
 _bipod = "";
 

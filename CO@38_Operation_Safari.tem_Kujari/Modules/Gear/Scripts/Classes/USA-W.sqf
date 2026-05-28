@@ -51,8 +51,8 @@ _pointer = "";
 _sight = "JCA_optic_ACOG_black";
 _bipod = "";
 
-_rifle = ["JCA_arifle_M4A4_VFG_black_F", _silencer, _pointer, _sight, _bipod];
-_rifleC = ["JCA_arifle_M4A4_VFG_black_F", _silencer, _pointer, _sight, _bipod];
+_rifle = ["GOL_arifle_HK437_VFG_black_F", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["GOL_arifle_HK437_VFG_black_F", _silencer, _pointer, _sight, _bipod];
 _rifleGL = ["JCA_arifle_M4A4_GL_black_F", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["rhs_weap_m27iar_grip", _silencer, _pointer, _sight, _bipod];
 _rifle_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";

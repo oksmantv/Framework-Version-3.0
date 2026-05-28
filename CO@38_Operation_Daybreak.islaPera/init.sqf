@@ -12,14 +12,8 @@ if (isServer) then {
 
 	[[DestroyObject_1,DestroyObject_2,DestroyObject_3,DestroyObject_4,DestroyObject_5], nil, nil, nil, "destroy", "Task_1"] spawn OKS_fnc_Destroy_Task;
 	[[DestroyObject_6,DestroyObject_7,DestroyObject_8], nil, nil, nil, "destroy", "Task_1"] spawn OKS_fnc_Destroy_Task;
-	[Group officer_1, HVT_ExtractTrigger, west, false, "Task_2", true, true, "You have been tasked with rescuing a capture SEAL operative behind enemy lines. Bring him home, get him to the aircraft carrier."] spawn OKS_fnc_Evacuate_HVT;
-	[Group officer_2, HVT_ExtractTrigger, west, false, "Task_2", true, true, "You have been tasked with rescuing a capture SEAL operative behind enemy lines. Bring him home, get him to the aircraft carrier."] spawn OKS_fnc_Evacuate_HVT;
-	[Group officer_3, HVT_ExtractTrigger, west, false, "Task_2", true, true, "You have been tasked with rescuing a capture SEAL operative behind enemy lines. Bring him home, get him to the aircraft carrier."] spawn OKS_fnc_Evacuate_HVT;
-	[Group officer_4, HVT_ExtractTrigger, west, false, "Task_2", true, true, "You have been tasked with rescuing a capture SEAL operative behind enemy lines. Bring him home, get him to the aircraft carrier."] spawn OKS_fnc_Evacuate_HVT;
-	[Group officer_5, HVT_ExtractTrigger, west, false, "Task_2", true, true, "You have been tasked with rescuing a capture SEAL operative behind enemy lines. Bring him home, get him to the aircraft carrier."] spawn OKS_fnc_Evacuate_HVT;
-	[Group officer_6, HVT_ExtractTrigger, west, false, "Task_2", true, true, "You have been tasked with rescuing a capture SEAL operative behind enemy lines. Bring him home, get him to the aircraft carrier."] spawn OKS_fnc_Evacuate_HVT;
-	[Group officer_7, HVT_ExtractTrigger, west, false, "Task_2", true, true, "You have been tasked with rescuing a capture SEAL operative behind enemy lines. Bring him home, get him to the aircraft carrier."] spawn OKS_fnc_Evacuate_HVT;
-	[Group officer_8, HVT_ExtractTrigger, west, false, "Task_2", true, true, "You have been tasked with rescuing a capture SEAL operative behind enemy lines. Bring him home, get him to the aircraft carrier."] spawn OKS_fnc_Evacuate_HVT;
+	[Group officer_1, HVT_ExtractTrigger, west, false, "Task_2", true, true, nil] spawn OKS_fnc_Evacuate_HVT;
+	[Group officer_6, HVT_ExtractTrigger, west, false, "Task_2", true, true, nil] spawn OKS_fnc_Evacuate_HVT;
 	[[DestroyObject_9,DestroyObject_10,DestroyObject_11], nil, nil, nil, "destroy", "Task_1"] spawn OKS_fnc_Destroy_Task;
 	[[DestroyObject_12,DestroyObject_13], nil, nil, nil, "destroy", "Task_1"] spawn OKS_fnc_Destroy_Task;
 	[[DestroyObject_14,DestroyObject_15], nil, nil, nil, "destroy", "Task_1"] spawn OKS_fnc_Destroy_Task;

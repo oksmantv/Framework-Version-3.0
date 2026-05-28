@@ -431,7 +431,7 @@ switch (_case) do {
 
 		["SSG COMMAND","side","1st Platoon, an enemy thrust is inbound from the north. Repel the convoy, HQ out"] remoteExec ["OKS_fnc_Chat"];
 		_ConvoyTotal = [];
-		[convoy_1, convoy_2, convoy_3, east, [6, ["rhs_t80a","rhs_btr80_vdv","RHS_Ural_VDV_01","RHS_Ural_VDV_01","RHS_Ural_VDV_01","rhs_t80a"], 40, 45], [true, 6], _ConvoyTotal, false, false, ["assault"], "convoystop"] spawn OKS_fnc_Convoy_Spawn;
+		[convoy_1, convoy_2, convoy_3, east, [6, ["rhs_t80a","rhs_btr80_vdv","RHS_Ural_VDV_01","RHS_Ural_VDV_01","RHS_Ural_VDV_01","rhs_t80a"], 40, 45], [true, 6], _ConvoyTotal, false, false, ["assault"], "convoystop", ["Task_2", false, true, "attack"]] call OKS_fnc_Convoy_spawn;
 
 		_time = 360;
 		_multiplier = 1;
@@ -443,7 +443,7 @@ switch (_case) do {
 
 		["SSG COMMAND","side","1st Platoon, another enemy thrust is inbound from the east. Repel the attack, HQ out"] remoteExec ["OKS_fnc_Chat"];
 		_ConvoyExtra = [];
-		[convoy_4, convoy_5, convoy_6, east, [7, ["rhs_t80a","rhs_btr80_vdv","RHS_Ural_VDV_01","RHS_Ural_VDV_01","RHS_Ural_VDV_01","rhs_t80a","rhs_prp3_msv"], 40, 45], [true, 6], _ConvoyExtra, false, false, ["assault"], "convoystop"] spawn OKS_fnc_Convoy_Spawn; 180;
+		[convoy_4, convoy_5, convoy_6, east, [7, ["rhs_t80a","rhs_btr80_vdv","RHS_Ural_VDV_01","RHS_Ural_VDV_01","RHS_Ural_VDV_01","rhs_t80a","rhs_prp3_msv"], 40, 45], [true, 6], _ConvoyExtra, false, false, ["assault"], "convoystop", ["Task_2", false, true, "attack"]] call OKS_fnc_Convoy_spawn; 180;
 
 		_ConvoyTotal append _ConvoyExtra;
 		sleep 90;
@@ -582,7 +582,7 @@ switch (_case) do {
 
 		// Hökhult Enemy Reinforcements - Pre Offensive.
 		["SSG COMMAND","side","1st Platoon, an insurgent convoy is inbound from the north-east towards Hölhult. We suspect they aim to reinforce the village. HQ out."] remoteExec ["OKS_fnc_Chat"];
-		[convoy_7, convoy_8, convoy_9, independent, [4, ["rhsgref_BRDM2_vdv", "rhs_gaz66_vdv", "rhs_gaz66_vdv", "rhs_gaz66_vdv"], 40, 45, 15], [true, 6], [], false, false, ["defend"], "offroad"] spawn OKS_fnc_Convoy_Spawn;
+		[convoy_7, convoy_8, convoy_9, independent, [4, ["rhsgref_BRDM2_vdv", "rhs_gaz66_vdv", "rhs_gaz66_vdv", "rhs_gaz66_vdv"], 40, 45, 15], [true, 6], [], false, false, ["defend"], "offroad", ["Task_3", false, true, "attack"]] call OKS_fnc_Convoy_spawn;
 	};
 
 	case 9: {
@@ -620,10 +620,8 @@ switch (_case) do {
 		["SSG COMMAND","side","1st Platoon, a Russian convoy is inbound from the village of Mjälahult to the south-east. We suspect they aim to reinforce the Bohult base. Ambush or intercept them before they reinforce the garrison. HQ out."] remoteExec ["OKS_fnc_Chat"];
 		
 		_ConvoyReinforce = [];
-		[ConvoySpawn_1,ConvoyWP_1,ConvoyEnd_1,east,[5,["rhs_btr80_msv","RHS_Ural_MSV_01","RHS_Ural_MSV_01","RHS_Ural_MSV_01","RHS_Ural_MSV_01"],35,50,30],[true,5],_ConvoyReinforce,false,false,["defend"],"convoystop"] spawn OKS_fnc_Convoy_Spawn;
-		sleep 30;
-		_LeaderVehicle = vehicle leader (_ConvoyReinforce select 0);
-		[_LeaderVehicle, "Intercept Convoy", nil, "You have been tasked with intercepting a convoy.","attack","Task_1", true, true] spawn OKS_fnc_Destroy_Task;	
+		[ConvoySpawn_1,ConvoyWP_1,ConvoyEnd_1,east,[5,["rhs_btr80_msv","RHS_Ural_MSV_01","RHS_Ural_MSV_01","RHS_Ural_MSV_01","RHS_Ural_MSV_01"],35,50,30],[true,5],_ConvoyReinforce,false,false,["defend"],"convoystop",["Task_3", false, true, "attack"]] call OKS_fnc_Convoy_spawn;
+		sleep 10;
 
 		// Bohult Patrols.
 		[[[[2289.83,4714.78,0],0,[[301,0]],"ftl"],[[2294.83,4709.78,0],0,[[301,0]],"ar"],[[2284.83,4709.78,0],0,[[301,0]],"g"],[[2299.83,4704.78,0],0,[[301,0]],"mat"]],[],[[[2142.26,4626.47,0],[[0,"Move"],[1,"SAFE"]]],[[2066.71,4678.69,0],[[0,"Move"]]],[[2242.06,4781.33,0],[[0,"Move"]]],[[2285.85,4729.31,0],[[0,"Cycle"]]]],east] call GW_Common_fnc_spawnGroup;
@@ -651,7 +649,7 @@ switch (_case) do {
 		// Bohult Counter-Attack - North 
 		["SSG COMMAND","side","1st Platoon, be advised, a Russian convoy is inbound from the north-west towards Bohult along the MSR. We suspect they aim to reinforce the base. ETA 5 minutes, ambush, intercept or ignore them. HQ out."] remoteExec ["OKS_fnc_Chat"];
 		
-		_time = 300;
+		_time = 600;
 		_multiplier = 1;
 		if(!isDedicated) then {
 			_multiplier = 0.1;
@@ -660,10 +658,7 @@ switch (_case) do {
 		sleep _time;
 
 		_ConvoyReinforce = [];
-		[ConvoySpawn_2,ConvoyWP_2,ConvoyEnd_2,east,[7,["rhs_btr80_msv","RHS_Ural_MSV_01","RHS_Ural_MSV_01","RHS_Ural_MSV_01","RHS_Ural_MSV_01","rhs_t80a","rhs_prp3_msv"],35,50,30],[true,5],_ConvoyReinforce,false,false,["defend"],"convoystop"] spawn OKS_fnc_Convoy_Spawn;
-		sleep 30;
-		_LeaderVehicle = vehicle leader (_ConvoyReinforce select 0);
-		[_LeaderVehicle, "Intercept Convoy", nil, "You have been tasked with intercepting a convoy.","attack","Task_1", true, true] spawn OKS_fnc_Destroy_Task;
+		[ConvoySpawn_2,ConvoyWP_2,ConvoyEnd_2,east,[7,["rhs_btr80_msv","RHS_Ural_MSV_01","RHS_Ural_MSV_01","RHS_Ural_MSV_01","RHS_Ural_MSV_01","rhs_t80a","rhs_prp3_msv"],35,50,30],[true,5],_ConvoyReinforce,false,false,["defend"],"convoystop", ["Task_3", false, true, "attack"]] call OKS_fnc_Convoy_spawn;
 	};
 
 	case 12: {
