@@ -59,11 +59,13 @@ _rifle = ["rhs_weap_aks74", _silencer, _pointer, _sight, _bipod];
 _rifleC = ["rhs_weap_aks74u", _silencer, _pointer, _sight, _bipod];
 _rifleGL = ["rhs_weap_aks74_gp25", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["rhs_weap_akms", "rhs_acc_dtkakm", _pointer, _sight, _bipod];
-_rifle_mag = "30Rnd_545x39_Mag_F";
-_rifle_mag_tr = "30Rnd_545x39_Mag_Tracer_F";
-_rifleGL_mag = "30Rnd_545x39_Mag_F";
-_rifleGL_mag_tr = "30Rnd_545x39_Mag_Tracer_F";
-_rifleL_mag = "rhs_30Rnd_762x39mm_bakelite_tracer";
+_rifle_mag = "rhs_30Rnd_545x39_7N22_plum_AK";
+_rifle_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
+_rifleC_mag = "rhs_30Rnd_545x39_7N22_plum_AK";
+_rifleC_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
+_rifleGL_mag = "rhs_30Rnd_545x39_7N22_plum_AK";
+_rifleGL_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
+_rifleL_mag = "GOL_75Rnd_762x39_Tracer_Green";
 
 _LMG = ["GOL_weap_pkm", _silencer, _pointer, _sight, _bipod];
 _LMG_mag = "GOL_100Rnd_762x54mmR_green";
@@ -75,8 +77,9 @@ _LAT = ["rhs_weap_rpg18", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "rhs_rpg18_mag";
 _LAT_ReUsable = false;
 
-_MAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
-_MAT_mag = "RPG7_F";
+_MAT = ["GOL_weap_PSRL1", _silencer, _pointer, "rhs_acc_pgo7v3", _bipod];
+_MAT_mag = "GOL_mag_rpg7_Modern";
+_MAT_mag_HE = "GOL_mag_rpg7_OG7V";
 
 _HAT = ["launch_O_Vorona_brown_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";
