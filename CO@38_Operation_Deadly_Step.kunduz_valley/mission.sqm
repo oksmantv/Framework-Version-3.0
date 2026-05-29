@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=14100;
+		nextID=14129;
 	};
 	class Camera
 	{
@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="CO@38_Operation_Deadly_Step";
+sourceName="co@38_operation_deadly_step";
 addons[]=
 {
 	"A3_Characters_F",
@@ -43901,7 +43901,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={7050.335,5.7719383,7547.3223};
-					angle=2.9955494;
+					angle=2.9955492;
 					class Attributes
 					{
 						text="HideTrigger";
