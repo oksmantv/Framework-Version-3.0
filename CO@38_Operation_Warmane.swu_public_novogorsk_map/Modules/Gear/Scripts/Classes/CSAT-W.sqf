@@ -82,13 +82,13 @@ _MMG_mag = "UK3CB_M60_100rnd_762x51_YT";
 
 _sight = "";
 
-_LAT = ["JCA_launch_M72_olive_F", _silencer, _pointer, _sight, _bipod];
-_LAT_mag = "";
+_LAT = ["rhs_weap_rpg26", _silencer, _pointer, _sight, _bipod];
+_LAT_mag = "rhs_rpg26_mag";
 _LAT_ReUsable = false;
 
-_MAT = ["launch_RPG32_ghex_F", _silencer, _pointer, _sight, _bipod];
-_MAT_mag = "RPG32_F";
-_MAT_mag_HE = "RPG32_HE_F";
+_MAT = ["rhs_weap_maaws", _silencer, _pointer, _sight, _bipod];
+_MAT_mag = "MRAWS_HEAT_F";
+_MAT_mag_HE = "MRAWS_HE_F";
 
 _HAT = ["launch_O_Vorona_brown_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";

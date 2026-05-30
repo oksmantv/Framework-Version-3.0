@@ -17,20 +17,28 @@ _glflareW = "rhs_VG40OP_white";
 
 _insignia = "";
 _goggles = "";
-_helmet = ["rhs_ssh60"];
+_helmet = ["rhs_ssh68_2"];
 _OfficerHelmet = "rhs_pilotka";
-_uniform = "rhs_uniform_afghanka_ttsko_2";
-_vest = ["rhs_6b2_chicom","rhs_6b2_lifchik","rhs_6b2_RPK"];
+_uniform = "rhs_uniform_flora_patchless";
+_vest = ["rhs_6b23_rifleman","rhs_6b23_engineer","rhs_6b23_rifleman"];
 _backpack = "rhs_sidor";
 _backpackRadio = _backpack;
 if (true) then {
 	_backpackRadio = "UK3CB_B_O_Tactical_Backpack_Radio";
 };
 
-if (_role in ["ag","ammg","lr","ab"]) then {
-	_backpack = "rhs_rd54";
+if(_role in ["ftl","sl","pl","fac"]) then {
+	_helmet = ["rhs_beret_vdv1_GOL","rhs_beret_vdv2_GOL","rhs_beret_vdv3_GOL"];
 };
 
+if (_role in ["ag","ammg","lr","ab"]) then {
+	_backpack = "rhs_rd54";
+	_vest = "rhs_6b23_medic";
+};
+if(_role in ["crew"]) then {
+	_vest = "rhs_6b23_crew";
+	_helmet = "rhs_tsh4_ess";
+};
 if (_role isEqualTo "p") then {
 	_helmet = "rhs_zsh7a_mike_green";
 	_uniform = "rhs_uniform_df15_tan";
@@ -71,8 +79,9 @@ _LAT = ["rhs_weap_rpg18", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "rhs_rpg18_mag";
 _LAT_ReUsable = false;
 
-_MAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
-_MAT_mag = "RPG7_F";
+_MAT = ["GOL_weap_PSRL1", _silencer, _pointer, "rhs_acc_pgo7v3", _bipod];
+_MAT_mag = "GOL_mag_rpg7_Modern";
+_MAT_mag_HE = "GOL_mag_rpg7_OG7V";
 
 _HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";

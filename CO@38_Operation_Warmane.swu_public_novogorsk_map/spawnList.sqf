@@ -30,9 +30,9 @@ switch (_case) do {
 		[true, ["taskvillage","task_0"], [format["The village of Novoshy holds the 84th Mechanized Company who are positioned to block any forces approaching from the north. You have been tasked with clearing the path for the main force, destroy the enemy forces and their barricades."], "Secure Novoshy", "Air Defence"], nil,"CREATED",-1, false,"attack", false] call BIS_fnc_taskCreate;
 
 		[Group HVT_1,getMarkerPos "respawn_east",east,false,nil,false] spawn OKS_fnc_Evacuate_HVT;
-		[[barricade_1],"taskvillage"] spawn OKS_fnc_Destroy_Barricade;
-		[[barricade_2],"taskvillage"] spawn OKS_fnc_Destroy_Barricade;
-		[[barricade_3],"taskvillage"] spawn OKS_fnc_Destroy_Barricade;
+		[[barricade_1],"taskvillage", true] spawn OKS_fnc_Destroy_Barricade;
+		[[barricade_2],"taskvillage", true] spawn OKS_fnc_Destroy_Barricade;
+		[[barricade_3],"taskvillage", true] spawn OKS_fnc_Destroy_Barricade;
 
 		// Trench 1
 		[[[[4370.04,2305.67,1.20732],0,"Middle",[]],[[4379.88,2306.1,1.26445],0,"Middle",[]],[[4387.29,2305.17,1.90465],0,"Middle",[]],[[4400.59,2304.17,1.1114],0,"Middle",[]],[[4407.83,2302.65,1.27287],0,"Middle",[]],[[4436.12,2241.57,0.00212097],64,"Up",[]],[[4430.41,2239.87,0],319,"Up",[]],[[4438.43,2236.13,0.115479],96,"Up",[]],[[4427.34,2240.35,0.502441],10,"Up",[]],[[4397.76,2256.03,0.709335],40,"Middle",[]],[[4394.43,2258.79,0.521805],40,"Middle",[]]],[["UK3CB_LDF_B_BMP1",[4376.98,2279.23,0],10,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_LDF_B_BMP1",[4471.9,2238.82,-0.0480042],30,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
@@ -63,7 +63,7 @@ switch (_case) do {
 		// Trench 1 Counter-Attack
 		private _ArrayOfCounterAttack = [];
 		[true, ["taskcounter","task0"], [format["An enemy counter-attack is inbound to retake Strongpoint K. Repel the attack! Infantry and mechanized forces are inbound!"], "Repel Counter-Attack", "Defend"], [4332.62,2203.67,0],"ASSIGNED",-1, false,"defend", true] call BIS_fnc_taskCreate;
-		["hq","side","1-1 be advised, an enemy counter-attack is inbound on your position. Expect enemy forces from the south and west. Good luck, out"] remoteExec ["OKS_fnc_Chat",0];
+		["Alfa Command","side","1-1 be advised, an enemy counter-attack is inbound on your position. Expect enemy forces from the south and west. Good luck, out"] remoteExec ["OKS_fnc_Chat",0];
 		
 		sleep 30;
 
