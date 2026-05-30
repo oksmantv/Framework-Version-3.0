@@ -1,7 +1,7 @@
 _useMineDetector = false;
 _allowedNightStuff = true;
 
-_insignia = "insignia_block82";
+_insignia = "";
 _goggles = ["rhs_googles_clear","rhs_googles_black","rhs_ess_black","UK3CB_G_KLR_TAN","UK3CB_G_Neck_Shemag_KLR_tan","rhsusf_shemagh_od","rhsusf_shemagh2_od","rhsusf_shemagh_gogg_od","rhsusf_shemagh2_gogg_od","rhsusf_oakley_goggles_clr","G_Shades_Black","G_Bandanna_tan"];
 _helmet = ["rhsusf_lwh_helmet_marpatwd_ess","rhsusf_lwh_helmet_marpatwd","rhsusf_lwh_helmet_marpatwd_headset","rhsusf_lwh_helmet_marpatwd_headset_blk","rhsusf_lwh_helmet_marpatwd_headset_blk2","rhsusf_lwh_helmet_marpatwd_ess","rhsusf_mich_helmet_marpatwd","rhsusf_mich_helmet_marpatwd_alt","rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_mich_helmet_marpatwd_headset","rhsusf_mich_helmet_marpatwd_norotos","rhsusf_mich_helmet_marpatwd_norotos_arc","rhsusf_mich_helmet_marpatwd_norotos_arc_headset","rhsusf_mich_helmet_marpatwd_norotos_headset"];
 _OfficerHelmet = "rhs_8point_marpatwd";
@@ -64,8 +64,8 @@ _rifleC_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
 _rifleL_mag = "JCA_20Rnd_762x51_Red_PMAG";
 _rifleL_mag_tr = "JCA_20Rnd_762x51_Tracer_Red_PMAG";
 
-_LMG = ["rhs_weap_m249_light_L", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "rhsusf_200rnd_556x45_mixed_box";
+_LMG = ["LMG_03_F", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "200Rnd_556x45_Box_Tracer_Red_F";
 
 _MMG = ["rhs_weap_m240B", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhsusf_100Rnd_762x51_m62_tracer";
@@ -93,6 +93,6 @@ _pdw_mag_tr = "JCA_25Rnd_45ACP_UMP_Tracer_Red_Mag";
 
 _silencer = "";
 _pointer = "";
-_rifleMarksman = ["JCA_srifle_AWM_black_F", _silencer, _pointer, "JCA_optic_HPPO_black", "JCA_bipod_AWM_black"];
-_rifleMarksman_mag = "JCA_5Rnd_338LM_AWM_Mag";
-_rifleMarksman_mag_tr = "JCA_5Rnd_338LM_AWM_Tracer_Red_Mag";
+_rifleMarksman = ["UK3CB_M21_Bipod_Railed", _silencer, _pointer, "rhsusf_acc_ACOG2_USMC", ""];
+_rifleMarksman_mag = "UK3CB_M14_20rnd_762x51_RT";
+_rifleMarksman_mag_tr = "UK3CB_M14_20rnd_762x51_RT";

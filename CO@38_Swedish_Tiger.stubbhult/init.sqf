@@ -1,16 +1,14 @@
-	MISSION_ROOT = call { private "_arr"; _arr = toArray __FILE__; _arr resize (count _arr - 8); toString _arr};
+/*
+	Initialization script for FW.
 
-	/* Set GOL Mission Settings */
-	Call Compile PreProcessFileLineNumbers "MissionSettings.sqf";	
-	Sleep 5;
+	Use this file if you want to run code at the start of the mission.
+	If you want tasks to appear on the briefing screen, place the task creations below here.
 
-	execVM "Scripts\GOL_PlayerSetup\init.sqf";
-	execVM "Scripts\OKS_Vehicles\Init.sqf";	
-	if(GOL_NEKY_SERVICESTATION isEqualTo 1) then { execVM "Scripts\NEKY_ServiceStation\Init.sqf"};
-	if(GOL_NEKY_AIRDROP isEqualTo 1) then {	execVM "Scripts\NEKY_AirDrop\Init.sqf"};
-	if(GOL_NEKY_HUNT isEqualTo 1) then { execVM "Scripts\NEKY_Hunt\Init.sqf"};
-	if(GOL_OKS_AMBIENCE isEqualTo 1) then { execVM "Scripts\OKS_Ambience\Init.sqf"};
-	if(GOL_OKS_SPAWN isEqualTo 1) then { execVM "Scripts\OKS_Spawn\Init.sqf"};
-	if(GOL_OKS_DYNAMIC isEqualTo 1) then { execVM "Scripts\OKS_Dynamic\Init.sqf"};
-	if(GOL_NEKY_TASK isEqualTo 1) then { execVM "Scripts\NEKY_Tasks\Init.sqf"};	
-	if(GOL_OKS_TASK isEqualTo 1) then { execVM "Scripts\OKS_TASK\Init.sqf"};
+	Global Commands can be used here, but be wary of locality issues. Do not spawn global effects "globally" (All clients)
+	Example: Spawn a vehicle globally means, every single client will spawn a vehicle, resulting in.. a lot of vehicles.
+
+	Server Commands should be within the isServer check.
+*/
+if(isServer) then {
+	
+};

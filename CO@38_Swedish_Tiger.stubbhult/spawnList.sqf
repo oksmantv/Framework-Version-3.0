@@ -1,4 +1,4 @@
-/*
+﻿/*
 	AUTHOR: GuzzenVonLidl
 	Description:
 		What case tha should be called for the zone player is in
@@ -12,7 +12,7 @@
 
 
 
-#include "script_Component.hpp"
+#include "\OKS_GOL_MISC\script_Component.hpp"
 #define	COMPONENT spawnList
 
 if !(isServer) exitWith {false};
@@ -36,7 +36,7 @@ switch (_case) do {
 			[100,500], // Loiter Altitude, Range
 			["","","","","","",""],
 			true
-		] spawn OKS_Scout;
+		] spawn OKS_fnc_AirScout;
 
 		[
 			getPos drone_2,
@@ -47,8 +47,8 @@ switch (_case) do {
 			[1000,4],
 			[100,500],
 			["","","","","","",""],
-			true
-		] spawn OKS_Scout;		
+			false
+		] spawn OKS_fnc_AirScout;		
 
 		[
 			getPos drone_3,
@@ -60,7 +60,7 @@ switch (_case) do {
 			[150,500],
 			["","","","","","",""],
 			true
-		] spawn OKS_Scout;	
+		] spawn OKS_fnc_AirScout;	
 
 		// Early Patrols.
 		[[[[10600.4,1904.4,1.90735e-06],0,[]],[[10605.4,1899.4,1.90735e-06],0,[]],[[10595.4,1899.4,5.72205e-06],0,[]],[[10610.4,1894.4,1.90735e-06],0,[]],[[10590.4,1894.4,1.90735e-06],0,[]],[[10615.4,1889.4,1.90735e-06],0,[]],[[10585.4,1889.4,1.90735e-06],0,[]],[[10620.4,1884.4,1.90735e-06],0,[]]],[],[[[10544.1,2114.52,0],[[0,"Move"]]],[[10574.1,2294.66,-7.24792e-05],[[0,"Move"]]],[[10748.6,2782.83,1.14441e-05],[[0,"Move"]]],[[10589.1,2295.41,-1.14441e-05],[[0,"Move"]]],[[10551.8,2125.06,3.8147e-06],[[0,"Move"]]],[[10605.6,1911.92,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
@@ -73,10 +73,10 @@ switch (_case) do {
 		[[[[9006.31,1359.62,0],171,"Middle",[]],[[9006.39,1363.04,0],66,"Middle",[]],[[8806.75,1444.96,0],176,"Middle",[]],[[8807.12,1448.35,0],71,"Middle",[]],[[8923.26,1226.11,0],132,"Middle",[]],[[8921.16,1228.8,0],27,"Middle",[]]],[["UK3CB_ADE_O_DSHKM",[9006.07,1360.96,-1.90735e-06],82,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_DSHKM",[8806.61,1446.29,-1.90735e-06],87,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_DSHKM",[8922.22,1227,0],42,[["gunner",-1,[0]]],[]],["rhs_bmp1_msv",[8930.91,1998.86,1],9,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["rhs_bmp1_msv",[8888.35,2156.28,0.107763],27,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
 		[[],[["UK3CB_CW_SOV_O_LATE_BMD1",[8995,1032.6,5.72205e-06],22,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["SOV",1]],[7,["maljutka_hide_source",0,"crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",0,"wood_2_unhide",1,"antena2_hide",1]]]],["UK3CB_CW_SOV_O_LATE_BMD1",[8839.13,1286.67,5.72205e-06],75,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["SOV",1]],[7,["maljutka_hide_source",0,"crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",0,"wood_2_unhide",1,"antena2_hide",1]]]],["UK3CB_CW_SOV_O_LATE_BMD1",[8786.17,1463.84,5.72205e-06],39,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["SOV",1]],[7,["maljutka_hide_source",0,"crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",0,"wood_2_unhide",1,"antena2_hide",1]]]],["UK3CB_CW_SOV_O_LATE_BMD1",[9053.7,1509,5.72205e-06],350,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["SOV",1]],[7,["maljutka_hide_source",0,"crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",0,"wood_2_unhide",1,"antena2_hide",1]]]]],[]] call GW_Common_fnc_spawnGroup;
 
-		// Bäckhästen - AA - Heavy Weapons - BMP.
+		// BÃ¤ckhÃ¤sten - AA - Heavy Weapons - BMP.
 		[[[[8246.82,2658.66,2.38419e-07],137,"Middle",[]],[[8244.94,2661.51,2.38419e-07],31,"Middle",[]],[[8220.05,2786.31,0],137,"Middle",[]],[[8218.17,2789.16,0],31,"Middle",[]]],[["rhs_bmp1_msv",[8226.07,2584.41,-2.38419e-07],16,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["rhs_bmp1_msv",[8262.1,2563.24,1],286,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_ADE_O_DSHKM",[8245.89,2659.68,-0.000277638],47,[["gunner",-1,[0]]],[]],["rhs_bmp1_msv",[8227.26,2767.21,0],16,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_ADE_O_DSHKM",[8219.13,2787.38,-0.000222445],47,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 
-		// Norra Bökeberg - AA - Heavy Weapons - BMP.
+		// Norra BÃ¶keberg - AA - Heavy Weapons - BMP.
 		[[[[7262.07,2163.72,0],172,"Middle",[]],[[7262.22,2167.13,0],67,"Middle",[]],[[7254.58,2260.37,0],148,"Middle",[]],[[7253.31,2263.54,0],43,"Middle",[]]],[["rhs_bmp1_msv",[7231.46,2130.65,0],100,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_ADE_O_DSHKM",[7261.95,2165.11,0],83,[["gunner",-1,[0]]],[]],["rhs_bmp1_msv",[7261.29,2244.08,0],89,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_ADE_O_DSHKM",[7253.89,2261.59,0],59,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 		[[],[["rhs_bmp1_msv",[7284.56,2152.97,1],107,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
 		
@@ -89,22 +89,22 @@ switch (_case) do {
 		
 		// Anti-Air and Objectives
 		{
-			[_X,east,false,2000,true] spawn GW_Ambient_AAA;
-			[_X,"Neutralize AAA","ZU-23 truck","You need to destroy this %1 to open up the airspace for our support assets.","danger","Task_aac",true,false] spawn OKS_Destroy_Task;
+			[_X,east,false,2500,true] spawn OKS_fnc_Ambient_AAA;
+			[_X,"Neutralize AAA","ZU-23 truck","You need to destroy this %1 to open up the airspace for our support assets.","danger","Task_aac",true,false] spawn OKS_fnc_Destroy_Task;
 			sleep 5;
 		} foreach [aaa_1,aaa_2,aaa_3,aaa_4,aaa_5];
 
-		[Radar_1,["rhs_gaz66_zu23_msv","UK3CB_ADE_O_DSHKM"]] spawn OKS_Radar;
-		[Radar_1,"Destroy Radar","PRV-13 Radar","You need to destroy this %1 to open up the airspace for our support assets by disrupting their AAA guidance.","destroy","Task_aac",true,false] spawn OKS_Destroy_Task;
+		[Radar_1,["rhs_gaz66_zu23_msv","UK3CB_ADE_O_DSHKM"]] spawn OKS_fnc_Radar;
+		[Radar_1,"Destroy Radar","PRV-13 Radar","You need to destroy this %1 to open up the airspace for our support assets by disrupting their AAA guidance.","destroy","Task_aac",true,false] spawn OKS_fnc_Destroy_Task;
 
-		[Group officer_1,[10859.3,3599.13,0],west,false,"Task_3",false] spawn OKS_Evacuate_HVT;
+		[Group officer_1,[10859.3,3599.13,0],west,false,"Task_3",false] spawn OKS_fnc_Evacuate_HVT;
 
 	};
 
 	case 2: {
 		// Ambush Site 1
 		{
-			[getPos _X,"rush",4,east,1500,[]] spawn OKS_Lambs_SpawnGroup;
+			[getPos _X,"rush",4,east,1500,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 		} foreach [ambush_1_1,ambush_1_2,ambush_1_3,ambush_1_4,ambush_1_5];
 
 		[[],[["rhs_bmp1_msv",[10407.1,1025.3,1.71661e-05],20,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
@@ -117,7 +117,7 @@ switch (_case) do {
 		[[[[8796.83,2168.05,9.53674e-07],308,[]],[[8801.05,2168.56,9.53674e-07],308,[]],[[8802.28,2170.13,0],308,[]],[[8803.51,2171.7,0],308,[]]],[],[[[8776.66,2273.53,0],[[0,"Move"],[1,"SAFE"]]],[[8819.28,2317.44,0],[[0,"Move"]]],[[8922.88,2315.34,0],[[0,"Move"]]],[[8862.15,2247.76,0],[[0,"Move"]]],[[8803.35,2179.87,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[8916.49,2046.46,0],70,"Up",[]],[[8906.33,2061.62,0.871344],70,"Up",[]],[[8893.71,2080.73,0.838213],70,"Up",[]],[[8897.33,2101.63,0.390083],70,"Up",[]],[[8917.25,2116,0.223638],72,"Up",[]],[[8923.85,2125.84,0],52,"Up",[]],[[8923.76,2143.44,0.0867252],70,"Up",[]],[[8919.35,2152.67,-9.53674e-07],149,"Middle",[]],[[8908.89,2163.71,-1.90735e-06],57,"Up",[]],[[8903.32,2176.37,0],70,"Up",[]],[[8908.37,2189.66,0],196,"Middle",[]],[[8907.73,2200.13,0],30,"Up",[]],[[8898.96,2209.9,-1.90735e-06],73,"Up",[]],[[8893.59,2215.54,0],137,"Middle",[]],[[8888.43,2220.95,0],43,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 	
-		// Bäckhästen Trench.
+		// BÃ¤ckhÃ¤sten Trench.
 		[[[[8316.65,2498.37,1.19209e-06],308,[]],[[8320.86,2498.88,1.90735e-06],308,[]],[[8322.09,2500.45,0],308,[]],[[8323.33,2502.03,9.53674e-07],308,[]]],[],[[[8296.48,2603.86,0],[[0,"Move"],[1,"SAFE"]]],[[8339.09,2647.77,2.02656e-06],[[0,"Move"]]],[[8442.69,2645.67,0],[[0,"Move"]]],[[8381.96,2578.09,0],[[0,"Move"]]],[[8323.17,2510.19,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[8148.29,2979.16,9.53674e-07],11,[]],[[8150.64,2975.63,1.90735e-06],11,[]],[[8152.6,2975.23,9.53674e-07],11,[]],[[8154.56,2974.84,1.90735e-06],11,[]]],[],[[[8233.35,3044.72,0],[[0,"Move"],[1,"SAFE"]]],[[8291.76,3026.48,2.86102e-06],[[0,"Move"]]],[[8336.6,2933.06,0],[[0,"Move"]]],[[8248.89,2956.8,4.76837e-07],[[0,"Move"]]],[[8161.78,2978.67,9.53674e-07],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[8234.32,2543.94,7.05569],353,"Middle",[]],[[8236.85,2543.18,6.9838],353,"Middle",[]],[[8242.68,2523.64,14.0581],353,"Middle",[]],[[8257.96,2581.91,10.1228],353,"Middle",[]],[[8245.76,2668.36,-2.5034e-06],70,"Up",[]],[[8235.6,2683.53,-2.5034e-06],70,"Up",[]],[[8222.98,2702.63,-2.5034e-06],70,"Up",[]],[[8226.6,2723.54,-2.5034e-06],70,"Up",[]],[[8246.52,2737.91,-2.5034e-06],72,"Up",[]],[[8253.12,2747.75,-2.5034e-06],52,"Up",[]],[[8253.03,2765.34,-2.5034e-06],70,"Up",[]],[[8248.62,2774.58,-2.38419e-06],149,"Middle",[]],[[8238.16,2785.62,0.00200415],57,"Up",[]],[[8232.59,2798.27,-2.5034e-06],70,"Up",[]],[[8237.64,2811.56,0.000235796],196,"Middle",[]],[[8237,2822.03,-2.6226e-06],30,"Up",[]],[[8228.23,2831.81,-2.6226e-06],73,"Up",[]],[[8219.33,2841.01,-3.8147e-06],137,"Middle",[]],[[8213.96,2852.71,-2.86102e-06],43,"Up",[]],[[8213.92,2870.43,-2.38419e-06],13,"Up",[]],[[8214.1,2886.4,-2.86102e-06],36,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
@@ -150,7 +150,7 @@ switch (_case) do {
 
 
 	case 6: {
-		// Norra Bökeberg Trench
+		// Norra BÃ¶keberg Trench
 		[[[[7266.23,1887.75,0],308,[]],[[7270.44,1888.25,0],308,[]],[[7271.68,1889.83,0],308,[]],[[7272.91,1891.4,0],308,[]]],[],[[[7246.06,1993.23,0],[[0,"Move"],[1,"SAFE"]]],[[7293.67,2064.04,0],[[0,"Move"]]],[[7506.87,2062.88,0],[[0,"Move"]]],[[7509.77,1976.56,0],[[0,"Move"]]],[[7272.75,1899.57,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[7175.92,2260.2,9.53674e-07],308,[]],[[7180.13,2260.71,9.53674e-07],308,[]],[[7181.37,2262.28,0],308,[]],[[7182.6,2263.85,9.53674e-07],308,[]]],[],[[[7155.75,2365.69,0],[[0,"Move"],[1,"SAFE"]]],[[7198.37,2409.59,1.66893e-06],[[0,"Move"]]],[[7301.97,2407.5,0],[[0,"Move"]]],[[7241.24,2339.91,0],[[0,"Move"]]],[[7182.44,2272.02,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[7309.21,2126.85,1.27355],119,"Middle",[]],[[7317.67,2161.21,1.24464],119,"Middle",[]],[[7314.58,2168.65,0],89,"Up",[]],[[7314.21,2154.04,-1.90735e-06],189,"Middle",[]],[[7311.94,2137.35,-3.62396e-05],134,"Up",[]],[[7298.43,2121.91,1.33514e-05],235,"Middle",[]],[[7280.87,2114.56,-1.04904e-05],259,"Middle",[]],[[7265.84,2113.83,8.01086e-05],210,"Up",[]],[[7271.76,2114.28,4.673e-05],156,"Up",[]],[[7314.35,2142.02,1.23645],109,"Middle",[]],[[7314.52,2144.18,1.20857],109,"Middle",[]],[[7298.08,2119.08,1.32545],109,"Middle",[]],[[7296.27,2117.42,1.32289],109,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
@@ -160,7 +160,7 @@ switch (_case) do {
 	case 7: {
 		// Ambush Site 2.
 		{
-			[getPos _X,"rush",3,east,1500,[]] spawn OKS_Lambs_SpawnGroup;
+			[getPos _X,"rush",3,east,1500,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 		} foreach [ambush_2_1,ambush_2_2,ambush_2_3,ambush_2_4,ambush_2_5,ambush_2_6];
 		[[],[["rhs_btr80a_msv",[5918.87,2672.31,0],108,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_l4_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",1,"crate_r4_unhide",0,"water_1_unhide",0,"water_2_unhide",0,"wheel_1_unhide",1,"wheel_2_unhide",1]]]]],[[[6974.49,2452.66,0],[[0,"Move"],[1,"SAFE"]]],[[7444.53,2468.34,0],[[0,"Hold"]]]]] call GW_Common_fnc_spawnGroup;
 	};
@@ -177,7 +177,7 @@ switch (_case) do {
 	case 9: {
 		// Ambush Site 3.
 		{
-			[getPos _X,"rush",4,east,1500,[]] spawn OKS_Lambs_SpawnGroup;
+			[getPos _X,"rush",4,east,1500,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 		} foreach [ambush_3_1,ambush_3_2,ambush_3_3,ambush_3_4,ambush_3_5];
 		[[],[["rhs_btr80a_msv",[5040.58,847.425,3.33786e-05],79,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_l4_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",1,"crate_r4_unhide",0,"water_1_unhide",0,"water_2_unhide",0,"wheel_1_unhide",1,"wheel_2_unhide",1]]]]],[[[5438.55,851.854,0],[[0,"Move"],[1,"SAFE"]]],[[6088.97,919.493,0],[[0,"Hold"]]]]] call GW_Common_fnc_spawnGroup;	};
 
@@ -209,10 +209,10 @@ switch (_case) do {
 	This can be replaced with a position to create an explosive on the position using getPos bomb_1.
 
 	Code:
-	[bomb_1,600] spawn OKS_Defuse_Explosive;
+	[bomb_1,600] spawn OKS_fnc_Defuse_Explosive;
 
 	Params:
-	[bomb_1,600,bombtarget_1,"BombDetonated","BombDefused"] spawn OKS_Defuse_Explosive;
+	[bomb_1,600,bombtarget_1,"BombDetonated","BombDefused"] spawn OKS_fnc_Defuse_Explosive;
 	Bomb Object or Position, Time Delay (Seconds), Target Object (Destroyed upon detonation), VariableName to set to true if failed, VariableName to set to true if succeeded.
 
 	=======================================
@@ -220,7 +220,7 @@ switch (_case) do {
 	Sets up a generator to be disabled by action to turn off light sources in the area around it. 
 
 	Code:
-	[Generator_1,true,true,1000] spawn OKS_PowerGenerator;
+	[Generator_1,true,true,1000] spawn OKS_fnc_PowerGenerator;
 
 	Params:
 	Generator Object, Should Add Action to disable, Turn Off Lights when disabled, Range of disabled lights from Generator
@@ -230,7 +230,7 @@ switch (_case) do {
 	Setup a scripted AAA that fires randomly into the air until it finds a target and locks on. It has less accuracy than standard AAA positions for balance.
 
 	Code:
-	[aaa_1,east,false,1500,true] spawn GW_Ambient_AAA;
+	[aaa_1,east,false,1500,true] spawn OKS_fnc_Ambient_AAA;
 
 	Params:
 	AAA Object, side of crew, Is an HMG, Range of AAA, Should be assisted by nearby radar
@@ -241,7 +241,7 @@ switch (_case) do {
 	This might fail, so make sure the target is not near friendly positions or bases.
 
 	Code:
-	[east,arty_1,getpos ArtyTarget_1,7,300,180,false] spawn OKS_ArtyFire;
+	[east,arty_1,getpos ArtyTarget_1,7,300,180,false] spawn OKS_fnc_ArtyFire;
 
 	Params:
 	Side of Crew, Artillery Object, Artillery Target, Rounds per Salvo, Rearm Delay, Reload Delay, Should give full crew.
@@ -251,7 +251,7 @@ switch (_case) do {
 	Setup an active artillery barrage on specified targets until destroyed.
 
 	Code:
-	[livearty_1,[getPos ArtySuppress_1,getPos ArtySuppress_2,getPos ArtySuppress_3],east,1,1,true,true,300,true] spawn OKS_ArtySupression;
+	[livearty_1,[getPos ArtySuppress_1,getPos ArtySuppress_2,getPos ArtySuppress_3],east,1,1,true,true,300,true] spawn OKS_fnc_ArtySuppression;
 
 	Params:
 	Artillery Object, Array with Target positions, Side of Crew, Rounds per target, Delay per target, Unlimited Ammo, Should Loop until Destroyed, Delay per Salvo, Mark with Red Smoke on Target.
@@ -261,7 +261,7 @@ switch (_case) do {
 	Setup a destroy/kill objective on a target.
 
 	Code:
-	[officer_1,"Kill the Officer","Enemy Officer","You need to kill this %1 because it needs to happen","kill",nil,true,true] spawn OKS_Destroy_Task;
+	[officer_1,"Kill the Officer","Enemy Officer","You need to kill this %1 because it needs to happen","kill",nil,true,true] spawn OKS_fnc_Destroy_Task;
 
 	Params:
 	Target Object, Task Title, Target Type, Task Description, Task Icon, Task Parent, Should Mark Position on Map, Should Show Popup when created/completed
@@ -271,7 +271,7 @@ switch (_case) do {
 	Setup a HVT Capture Objective. The last variable sets true/false if they target should be set to captive (tied hands). False for enemy officers, true for friendly captives.
 
 	Code:
-	[Group HVT_1,getMarkerPos "respawn_west",west,false,nil,true] spawn OKS_Evacuate_HVT;
+	[Group HVT_1,getMarkerPos "respawn_west",west,false,nil,true] spawn OKS_fnc_Evacuate_HVT;
 
 	Params:
 	Group of HVT, Exfil Position (Either pickup (Extract On) or dropoff (Extract off)), Side of Extract Helicopter, Should Send AI Helicopter Evac, Parent Task, Is Captive
@@ -281,7 +281,7 @@ switch (_case) do {
 	Setup Barricade Objective. Objective to destroy objects lined up as a blockade on a road. Make sure the object is destructible by testing it.
 
 	Code:
-	[[barricade_1,barricade_2]] spawn OKS_Destroy_Barricade;
+	[[barricade_1,barricade_2]] spawn OKS_fnc_Destroy_Barricade;
 
 	Params:
 	Array with Barricade Objects
@@ -291,7 +291,7 @@ switch (_case) do {
 	Spawn a convoy that moves until engaged, they will dismount, armed vehicles will hunt and dismounts will rush.
 
 	Code:
-	[spawn_1,waypoint_1,end_1,west,[4,["rhs_btr60_msv"], 6, 25],[true,6],[], false, false] spawn OKS_Convoy_Spawn;
+	[spawn_1,waypoint_1,end_1,west,[4,["rhs_btr60_msv"], 6, 25],[true,6],[], false, false] spawn OKS_fnc_Convoy_Spawn;
 
 	Params:
 	Spawn Position, First Waypoint, End Waypoint (Scattered formation), Side of Convoy, Convoy Array [](Number, [TypeArray]), Speed meters/second, dispersion]
@@ -302,7 +302,7 @@ switch (_case) do {
 	Spawns a team that either creep/rush/hunt based on LAMBS. Used for quick and intense counter-attacks by enemy infantry.
 
 	Code:
-	[SpawnPos,"rush",UnitsPerBase,Side,Range,[]] spawn OKS_Lambs_SpawnGroup;
+	[SpawnPos,"rush",UnitsPerBase,Side,Range,[]] spawn OKS_fnc_Lambs_SpawnGroup;
 
 	Params:
 	Position, Type of Waypoint (rush,creep,hunt), Units to spawn, Side of units, Range of waypoint (around the spawn), unit array that gets populated with the units.
@@ -341,13 +341,13 @@ switch (_case) do {
 		   All Locations are not required, the script will find its own locations, however for the best experience and best result, help the dynamic script by placing these logics.
 
 		   Example:
-		   [Trigger_1,false,[0,0,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_CreateZone;
+		   [Trigger_1,false,[0,0,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
 		*/
 
 		/* Example of Dynamic Scripts */
 		/*
 		if(isServer) then {
-			waitUntil{sleep 5; !(isNil "OKS_CreateZone")};
+			waitUntil{sleep 5; !(isNil "OKS_fnc_CreateZone")};
 
 			//// START OF ZONE /////
 			[	Trigger_1,  // Name of Trigger used as Spawn Area
@@ -377,7 +377,7 @@ switch (_case) do {
 				],
 				[0,0,0,0,0] // Infantry, Wheeled, APCs, Tanks, Air Assault - Hunt Bases - Preferred Game Logic Location 'Respawn Point'"
 				,false      // Should Enable Civilian Presence - Required Game Logic Location 'Village'"
-			] spawn OKS_CreateZone;
+			] spawn OKS_fnc_CreateZone;
 			//// END OF ZONE ////
 
 		};
@@ -395,15 +395,15 @@ switch (_case) do {
 		   	6 - Unit Selection - (Integer/String/Array with Strings)
 		   	7 - Refresh Rate in Seconds (Integer/Number)
 
-			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,30,independent,6,30] spawn NEKY_Hunt_HuntBase;
-			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,"CUP_I_LR_MG_AAF",30] spawn NEKY_Hunt_HuntBase;
-			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,["CUP_I_LR_MG_AAF","CUP_I_LR_MG_AAF"],30] spawn NEKY_Hunt_HuntBase;
+			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,30,independent,6,30] spawn OKS_fnc_Huntbase;
+			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,"CUP_I_LR_MG_AAF",30] spawn OKS_fnc_Huntbase;
+			[Base_2, Spawn_2, NEKY_Hunt_Trigger_1, 5,30,independent,["CUP_I_LR_MG_AAF","CUP_I_LR_MG_AAF"],30] spawn OKS_fnc_Huntbase;
 		*/
 		/* Example of Hunt Bases */
 		/*
 		if(isServer && GOL_NEKY_HUNT isEqualTo 1) then {
-			waitUntil{sleep 5; !(isNil "NEKY_Hunt_HuntBase")};
-			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,600+(random 300),east,6,120+(120)] spawn NEKY_Hunt_HuntBase;
+			waitUntil{sleep 5; !(isNil "OKS_fnc_Huntbase")};
+			[Base_1, Spawn_1, NEKY_Hunt_Trigger_1, 5,600+(random 300),east,6,120+(120)] spawn OKS_fnc_Huntbase;
 		};
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -419,11 +419,12 @@ switch (_case) do {
 		   5 - Type of Insert (Unload ONLY) (String)
 		   6 - gunner Split - [How many teams,Procent of gunner] (Array)
 
-		   [Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn NEKY_Airbase;
+		   [Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
 		*/
 		/* Example of Air Bases */
 		/*
-		if(isServer && GOL_NEKY_AIRDROP isEqualTo 1) then {
-			waitUntil{sleep 5; !(isNil "NEKY_Airbase")};
-			[Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn NEKY_Airbase;
+		if(isServer && GOL_OKS_fnc_AirDrop isEqualTo 1) then {
+			waitUntil{sleep 5; !(isNil "OKS_fnc_Airbase")};
+			[Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
 		};
+

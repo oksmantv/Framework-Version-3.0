@@ -66,6 +66,7 @@ _LAT_ReUsable = false;
 
 _MAT = ["launch_MRAWS_green_rail_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "MRAWS_HEAT_F";
+_MAT_mag_HE = "MRAWS_HE_F";
 
 _HAT = ["rhs_weap_fgm148", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "rhs_fgm148_magazine_AT";
@@ -82,9 +83,9 @@ _pdw_mag_tr = "UK3CB_MP5_30Rnd_9x19_Magazine_RT";
 
 _silencer = "";
 _pointer = "";
-_sight = "optic_LRPS";
+_sight = "UK3CB_BAF_SUIT";
 _bipod = "";
 
-_rifleMarksman = ["UK3CB_BAF_L115A3", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "UK3CB_BAF_338_5Rnd";
-_rifleMarksman_mag_tr = "UK3CB_BAF_338_5Rnd_Tracer";
+_rifleMarksman = ["UK3CB_BAF_L1A1", _silencer, _pointer, _sight, _bipod];
+_rifleMarksman_mag = "UK3CB_BAF_762_20Rnd_T";
+_rifleMarksman_mag_tr = "UK3CB_BAF_762_20Rnd_T";
