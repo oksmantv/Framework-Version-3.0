@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=1.5707964;
 	scaleGridStep=10;
 	autoGroupingDist=10;
-	toggles=1537;
+	toggles=521;
 	mods[]=
 	{
 		"3denEnhanced"
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=11047;
+		nextID=11124;
 	};
 	class Camera
 	{
-		pos[]={4432.3975,369.58023,2264.2874};
-		dir[]={-0.12557513,-0.27606475,0.95290041};
-		up[]={-0.036068525,0.96113908,0.27369839};
-		aside[]={0.99142832,0,0.13065241};
+		pos[]={4597.3994,235.16982,2685.5613};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -33858,7 +33858,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4633.6343,196.94673,2961.937};
-					angle=2.9437463;
+					angle=2.9437461;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -33877,7 +33877,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4645.5063,200.45302,2905.8708};
-					angle=2.9437461;
+					angle=2.9437459;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -33896,7 +33896,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4645.1743,203.13573,2854.7297};
-					angle=-3.0713456;
+					angle=-3.0713453;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -33915,7 +33915,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4641.0659,204.11472,2808.5273};
-					angle=2.9437461;
+					angle=2.9437459;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -69982,7 +69982,7 @@ class Mission
 							fillName="SolidFull";
 							a=1.7;
 							b=6.359766;
-							angle=228.78088;
+							angle=228.78087;
 							id=5303;
 							atlOffset=-0.019607544;
 						};
@@ -70850,7 +70850,7 @@ class Mission
 							fillName="SolidFull";
 							a=1.147;
 							b=15.249059;
-							angle=7.1270423;
+							angle=7.1270418;
 							id=3320;
 							atlOffset=0.12683105;
 						};
@@ -71226,7 +71226,7 @@ class Mission
 							fillName="SolidFull";
 							a=9.376545;
 							b=7.4721761;
-							angle=108.35975;
+							angle=108.35974;
 							id=5275;
 						};
 						class Item7
@@ -71240,7 +71240,7 @@ class Mission
 							fillName="SolidFull";
 							a=9.376545;
 							b=7.4721761;
-							angle=108.35975;
+							angle=108.35974;
 							id=5276;
 							atlOffset=1.5258789e-05;
 						};
@@ -72851,7 +72851,7 @@ class Mission
 					};
 					id=5638;
 					type="UK3CB_LDF_B_T810_Reammo";
-					atlOffset=0.088485718;
+					atlOffset=0.088516235;
 				};
 				class Item14
 				{
@@ -72885,7 +72885,6 @@ class Mission
 					};
 					id=5635;
 					type="UK3CB_LDF_B_T810_Refuel";
-					atlOffset=1.5258789e-05;
 				};
 				class Item16
 				{
@@ -72902,11 +72901,10 @@ class Mission
 					};
 					id=5636;
 					type="UK3CB_LDF_B_T810_Repair";
-					atlOffset=4.5776367e-05;
 				};
 			};
 			id=5904;
-			atlOffset=0.019332886;
+			atlOffset=0.01940918;
 		};
 		class Item8
 		{
@@ -74202,13 +74200,13 @@ class Mission
 						angles[]={6.2511897,6.0460429,6.2751918};
 					};
 					side="West";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=5968;
 					type="B_UAV_AI";
-					atlOffset=-3.0517578e-05;
+					atlOffset=2.930481;
 				};
 			};
 			class Attributes
@@ -74267,13 +74265,13 @@ class Mission
 						angles[]={0,0.52492267,6.2751918};
 					};
 					side="West";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=5976;
 					type="B_UAV_AI";
-					atlOffset=-0.00061035156;
+					atlOffset=3.1153259;
 				};
 			};
 			class Attributes
@@ -74333,13 +74331,13 @@ class Mission
 						angles[]={0.0080009829,0.52492267,0.015998369};
 					};
 					side="West";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=5985;
 					type="B_UAV_AI";
-					atlOffset=0.00016784668;
+					atlOffset=2.8498993;
 				};
 			};
 			class Attributes
@@ -81756,7 +81754,7 @@ class Mission
 			colorName="ColorEAST";
 			a=0.60000002;
 			b=0.60000002;
-			angle=198.77798;
+			angle=198.77797;
 			id=6251;
 			class CustomAttributes
 			{
@@ -81785,7 +81783,7 @@ class Mission
 			colorName="ColorEAST";
 			a=0.60000002;
 			b=0.60000002;
-			angle=214.53455;
+			angle=214.53453;
 			id=6252;
 			class CustomAttributes
 			{

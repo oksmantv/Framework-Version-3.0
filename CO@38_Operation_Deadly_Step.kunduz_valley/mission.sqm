@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=14158;
+		nextID=14187;
 	};
 	class Camera
 	{
@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="co@38_operation_deadly_step";
+sourceName="CO@38_Operation_Deadly_Step";
 addons[]=
 {
 	"A3_Characters_F",
@@ -41083,7 +41083,6 @@ class Mission
 					};
 					id=4307;
 					type="Box_FIA_Support_F";
-					atlOffset=0.00036621094;
 				};
 				class Item17
 				{
@@ -42322,14 +42321,13 @@ class Mission
 						angles[]={6.2635961,2.9037302,0.028710097};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						name="DestroyObject_16";
 					};
 					id=3520;
 					type="Box_FIA_Support_F";
-					atlOffset=0.0007724762;
+					atlOffset=2.768919;
 				};
 				class Item16
 				{
@@ -42417,14 +42415,13 @@ class Mission
 						angles[]={0,0.94466954,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						name="DestroyObject_15";
 					};
 					id=3519;
 					type="Box_FIA_Support_F";
-					atlOffset=0.0039520264;
+					atlOffset=1.3212299;
 				};
 				class Item22
 				{
@@ -42632,7 +42629,7 @@ class Mission
 				};
 			};
 			id=3449;
-			atlOffset=-0.39562035;
+			atlOffset=-0.39565086;
 		};
 		class Item5
 		{

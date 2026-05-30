@@ -98,7 +98,6 @@ switch (_case) do {
 		[Radar_1,"Destroy Radar","PRV-13 Radar","You need to destroy this %1 to open up the airspace for our support assets by disrupting their AAA guidance.","destroy","Task_aac",true,false] spawn OKS_fnc_Destroy_Task;
 
 		[Group officer_1,[10859.3,3599.13,0],west,false,"Task_3",false] spawn OKS_fnc_Evacuate_HVT;
-
 	};
 
 	case 2: {
