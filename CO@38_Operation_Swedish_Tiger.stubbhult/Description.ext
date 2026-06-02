@@ -107,7 +107,15 @@ class Params {
 		texts[] = { "Yes", "No" };
 		values[] = { 1, 0 };
 		default = 1;
-	};		
+	};	
+
+	class EnableAtgmThreat
+	{
+		title = "Enable ATGM Threat?";
+		texts[] = { "Yes", "No" };
+		values[] = { 1, 0 };
+		default = 1;
+	};			
 };
 
 class CfgFunctions {
