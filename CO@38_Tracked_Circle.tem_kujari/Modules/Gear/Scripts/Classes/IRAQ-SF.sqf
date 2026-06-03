@@ -55,8 +55,8 @@ _rifleGL_mag_tr = "UK3CB_G36_30rnd_556x45_RT";
 _rifleL_mag = "UK3CB_DMR_20rnd_762x51_R";
 _rifleL_mag_tr = "UK3CB_M14_20rnd_762x51_RT";
 
-_LMG = ["rhs_weap_m249", _silencer, _pointer, _sight, "rhsusf_acc_saw_bipod"];
-_LMG_mag = "rhsusf_200rnd_556x45_mixed_box";
+_LMG = ["LMG_03_F", _silencer, _pointer, _sight, "rhsusf_acc_saw_bipod"];
+_LMG_mag = "200Rnd_556x45_Box_Tracer_Red_F";
 
 _MMG = ["rhs_weap_pkp", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhs_100Rnd_762x54mmR_green";
@@ -93,5 +93,5 @@ _sight = "rhs_acc_pso1m21";
 _bipod = "";
 
 _rifleMarksman = ["rhs_weap_svdp_wd", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "rhs_10Rnd_762x54mmR_7N1";
-_rifleMarksman_mag_tr = "rhs_10Rnd_762x54mmR_7N14";
+_rifleMarksman_mag = "UK3CB_SVD_10rnd_762x54_RT";
+_rifleMarksman_mag_tr = "UK3CB_SVD_10rnd_762x54_RT";
