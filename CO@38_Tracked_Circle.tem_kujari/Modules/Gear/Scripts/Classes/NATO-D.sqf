@@ -13,18 +13,34 @@ if (true) then {
 	_backpackRadio = "UK3CB_B_B_Alice_pack_frame_radio_01";
 };
 
+if(_role in ["pl","ftl","sl","fac"]) then {
+	_vest = "rhs_6b3_R148";
+	_goggles = "G_Armband_grn_F";
+};
+
 if (_role in ["ag","ammg","lr","ab","atab"]) then {
 	_backpack = "UK3CB_B_Alice_pack_04";
 	_Vest = "rhs_6b3_RPK";
+	_goggles = "G_Armband_dblu_F";
+};
+
+if(_role in ["sm","pm"]) then {
+	_goggles = "G_Armband_Cross_F";
+};
+
+if (_role in ["ar","mmg"]) then {
+	_goggles = "G_Armband_dblu_F";
 };
 
 if(_role in ["g","amat"]) then {
-	_vest = ["rhs_6b3_VOG","rhs_6b3_VOG_2"]
+	_vest = ["rhs_6b3_VOG","rhs_6b3_VOG_2"];
+	_goggles = "G_Armband_red_F";
 };
 
-if(_role in ["pl","ftl","sl","fac"]) then {
-	_vest = "rhs_6b3_R148";
+if(_role in ["r","hat"]) then {
+	_goggles = "G_Armband_red_F";
 };
+
 if (_role isEqualTo "crew") then {
 	_helmet = "H_HelmetCrew_B";
 	_vest = "rhs_6b3_holster";
@@ -47,15 +63,15 @@ if (_role isEqualTo "jetp") then {
 	_backpack = "B_Parachute";
 };
 
-_silencer = "";
-_pointer = "";
-_sight = "JCA_optic_IHO_sand_magnifier";
+_silencer = "rhsusf_acc_SFMB556";
+_pointer = "JCA_acc_LaserModule_sand_Pointer";
+_sight = "JCA_optic_AICO_sand";
 _bipod = "rhsusf_acc_grip2_tan";
 
 _rifle = ["rhs_weap_m4a1_blockII_d", _silencer, _pointer, _sight, _bipod];
 _rifleC = ["rhs_weap_mk18_d", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["rhs_weap_m4a1_blockII_M203_d", _silencer, _pointer, _sight, _bipod];
-_rifleL = ["rhs_weap_SCARH_LB", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["rhs_weap_m4a1_blockII_M203_d", _silencer, _pointer, _sight, "rhsusf_acc_grip_m203_d"];
+_rifleL = ["rhs_weap_SCARH_FDE_STD", _silencer, _pointer, _sight, _bipod];
 _rifle_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
 _rifle_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
 _rifleGL_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
@@ -63,10 +79,10 @@ _rifleGL_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
 _rifleL_mag = "rhs_mag_20Rnd_SCAR_762x51_mk316_special_bk";
 _rifleL_mag_tr = "rhs_mag_20Rnd_SCAR_762x51_m62_tracer_bk";
 
-_LMG = ["GOL_MMG_01_tan_F", _silencer, _pointer, "JCA_optic_MROS_sand_magnifier", "JCA_bipod_04_sand"];
+_LMG = ["GOL_MMG_01_tan_F", _silencer, _pointer, "JCA_optic_AICO_sand", "JCA_bipod_04_sand"];
 _LMG_mag = "GOL_200Rnd_93x64_Mag_SLAP_Tracer_Red";
 
-_MMG = ["GOL_MG3_KWS_B", _silencer, _pointer, "JCA_optic_MROS_black_magnifier", _bipod];
+_MMG = ["GOL_MG3_KWS_B", _silencer, "JCA_acc_LaserModule_black_Pointer", "optic_Hamr", ""];
 _MMG_mag = "GOL_MG3_250Rnd_762x51_M993_SLAP_Tracer_Red";
 
 _sight = "";
@@ -75,7 +91,7 @@ _LAT = ["GOL_launch_NLAW_F", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "";
 _LAT_ReUsable = false;
 
-_MAT = ["launch_MRAWS_olive_F", _silencer, _pointer, _sight, _bipod];
+_MAT = ["launch_MRAWS_green_rail_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "MRAWS_HEAT_F";
 _MAT_mag_HE = "MRAWS_HE_F";
 

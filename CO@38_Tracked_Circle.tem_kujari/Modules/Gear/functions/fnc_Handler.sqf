@@ -221,48 +221,8 @@ if (_isMan) then {
 	};
 
 	if !(_errorCode) then {
-		// Strip magazine entries from container cargo before setUnitLoadout.
-		// setUnitLoadout generates "not stored" RPT when a container overflows — stripping mags
-		// first prevents that entirely. Non-magazine items (ACE bandages etc.) are left in place.
-		// All stripped mags are re-added via addMagazines which distributes silently.
-		private _containerMagQueue = createHashMap;
-		{
-			private _containerEntry = _loadout select _x;
-			if (count _containerEntry >= 2) then {
-				private _kept = [];
-				{
-					// COUNT_MAGS expands to [class, count, ammoPerMag] (3-element).
-					// Standard setUnitLoadout items are [class, count] (2-element).
-					// Accept both formats; CfgMagazines check distinguishes mags from items.
-					if (_x isEqualType [] && {count _x >= 2} && {(_x#0) isEqualType ""} && {(_x#1) isEqualType 0}
-						&& {isClass (configFile >> "CfgMagazines" >> (_x#0))}) then {
-						_containerMagQueue set [_x#0, (_containerMagQueue getOrDefault [_x#0, 0]) + (_x#1)];
-					} else {
-						_kept pushBack _x;
-					};
-				} forEach (_containerEntry#1);
-				_containerEntry set [1, _kept];
-			};
-		} forEach [3, 4, 5];
-
 		_unit setUnitLoadout _loadout;
 		_unit setVariable ["GW_Gear_appliedGear", true, true];
-
-		// Distribute container mags manually: vest → uniform → backpack.
-		// Using addMagazines would log "not stored in Vest or Uniform" whenever
-		// backpack is used. Explicit per-item placement avoids that code path entirely.
-		{
-			private _class = _x;
-			for "_i" from 1 to _y do {
-				if (_unit canAddItemToVest _class) then {
-					_unit addItemToVest _class;
-				} else { if (_unit canAddItemToUniform _class) then {
-					_unit addItemToUniform _class;
-				} else {
-					_unit addItemToBackpack _class;
-				}};
-			};
-		} forEach _containerMagQueue;
 
 		if (_isPlayer && _useFactionRadio && _roleUseRadio) then {
 			if(!isNIl "zade_boc_fnc_removeChestpack" && !isNil "zade_boc_fnc_chestpack") then {
