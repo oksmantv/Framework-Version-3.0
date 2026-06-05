@@ -54,7 +54,7 @@ if (_role isEqualTo "jetp") then {
 // Attachments
 _silencer = "rhsusf_acc_SFMB556";
 _pointer = "";
-_sight = "JCA_optic_ICO_black";
+_sight = "JCA_optic_ACOG_black";
 _bipod = "";
 
 _rifle = ["JCA_arifle_M4A1_black_F", _silencer, _pointer, _sight, _bipod];
@@ -70,19 +70,19 @@ _rifleC_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
 _rifleL_mag = "ACE_20Rnd_762x51_M993_AP_Mag";
 _rifleL_mag_tr = "ACE_20Rnd_762x51_Mag_Tracer";
 
-_LMG = ["LMG_03_F", "rhsusf_acc_ARDEC_M240", _pointer, _sight, _bipod];
-_LMG_mag = "200Rnd_556x45_Box_Tracer_Red_F";
+_LMG = ["GOL_weap_m249_pip", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "GOL_rhsusf_200rnd_556x45_AP45_tracer_red";
 
-_MMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, _sight, ""];
-_MMG_mag = "UK3CB_BAF_762_200Rnd_T";
+_MMG = ["GOL_weap_fnmag", _silencer, _pointer, _sight, ""];
+_MMG_mag = "GOL_FNMAG_200Rnd_762x51_M993_SLAP_Tracer_Red";
 
 _LAT = ["UK3CB_BAF_AT4_CS_AT_Launcher", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "UK3CB_BAF_AT4_CS_AT_Mag";
 _LAT_ReUsable = false;
 
-_MAT = ["rhs_weap_maaws", _silencer, _pointer, "rhs_optic_maaws", _bipod];
-_MAT_mag = "rhs_mag_maaws_HEAT";
-_MAT_mag_HE = "rhs_mag_maaws_HE";
+_MAT = ["launch_MRAWS_green_rail_F", "", "", "", ""];
+_MAT_mag = "MRAWS_HEAT_F";
+_MAT_mag_HE = "MRAWS_HE_F";
 
 _HAT = ["rhs_weap_fgm148", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "rhs_fgm148_magazine_AT";
