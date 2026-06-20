@@ -1,17 +1,15 @@
 /*
-	Author: GuzzenVonLidl
-	Applies gear to aa soldier automaticly appon spawning it.
-	Players are not affected by this
-	Disable autogear by setting it to false
+	Author: Oksman
+	Gets the role correlated to the units classname and display name.
+	This is used to determine the loadout for a unit based on their role.
 
 	Usage:
-	[this, "sl"] call GW_Gear_Fnc_getLoadoutClass;
+	_LoadoutEnum = [this] call GW_Gear_Fnc_getLoadoutClass;
 
 	Arguments:
 	0: Unit <OBJECT>
-	1: Role <STRING>	NOTE: THIS PARAM IS OPTIONAL AND SHOULD ONLY BE USED IF YOU WANT TO FORCE A ROLE
 
-	Return Value: NO
+	Return Value: YES - Loadout Enum
 
 	Public: NO
 */

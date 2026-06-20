@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8897;
+		nextID=9089;
 	};
 	class Camera
 	{
-		pos[]={3694.2117,73.462814,6021.1914};
-		dir[]={0.43187609,-0.37160575,0.82184482};
-		up[]={0.1728659,0.92838734,0.32895809};
-		aside[]={0.88523406,1.8454739e-07,-0.46518695};
+		pos[]={3989.27,32.176884,6258.7969};
+		dir[]={0.48595768,-0.48342761,0.72811025};
+		up[]={0.26836818,0.87538427,0.40209615};
+		aside[]={0.83176053,-1.0570511e-07,-0.55513632};
 	};
 };
 binarizationWanted=0;
-sourceName="CO@38_Operation_Desert_Storm";
+sourceName="co@38_operation_desert_storm";
 addons[]=
 {
 	"A3_Characters_F",
@@ -32002,6 +32002,8 @@ class Mission
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
 		year=2035;
 		day=28;
 		hour=6;
@@ -32753,7 +32755,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5942.1514,1.8405712,9634.5146};
+						position[]={5942.1514,1.8405714,9634.5146};
 						angles[]={6.1795578,3.9685142,6.2372179};
 					};
 					side="Empty";
@@ -32765,7 +32767,7 @@ class Mission
 					};
 					id=4297;
 					type="Land_ClutterCutter_small_F";
-					atlOffset=3.5762787e-06;
+					atlOffset=3.8146973e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -52193,7 +52195,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5785.8862,1.3619494,8366.9053};
+						position[]={5785.8862,1.3619497,8366.9053};
 						angles[]={0,4.5370831,0};
 					};
 					side="Empty";
@@ -52203,14 +52205,14 @@ class Mission
 					};
 					id=4202;
 					type="Land_BagFence_Long_F";
-					atlOffset=0.002638042;
+					atlOffset=0.0026382804;
 				};
 				class Item128
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5779.5313,1.2966958,8366.6729};
+						position[]={5779.5313,1.2966961,8366.6729};
 						angles[]={0.051953323,4.734221,6.2312322};
 					};
 					side="Empty";
@@ -52220,7 +52222,7 @@ class Mission
 					};
 					id=4203;
 					type="Land_BagFence_Long_F";
-					atlOffset=4.0531158e-06;
+					atlOffset=4.2915344e-06;
 				};
 				class Item129
 				{
@@ -52858,7 +52860,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5780.0791,1.15435,8368.9414};
+						position[]={5780.0791,1.1543503,8368.9414};
 						angles[]={0.051953323,2.2010036,0};
 					};
 					side="Empty";
@@ -52868,14 +52870,14 @@ class Mission
 					};
 					id=4198;
 					type="Land_BagFence_Round_F";
-					atlOffset=4.4703484e-06;
+					atlOffset=4.7087669e-06;
 				};
 				class Item168
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5779.8516,1.3609372,8364.1895};
+						position[]={5779.8516,1.3609375,8364.1895};
 						angles[]={0.0019834081,0.96211523,0};
 					};
 					side="Empty";
@@ -52885,14 +52887,14 @@ class Mission
 					};
 					id=4199;
 					type="Land_BagFence_Round_F";
-					atlOffset=4.7683716e-06;
+					atlOffset=5.0067902e-06;
 				};
 				class Item169
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5785.6953,1.4267579,8364.3643};
+						position[]={5785.6953,1.4267582,8364.3643};
 						angles[]={0.1016485,5.3280029,0};
 					};
 					side="Empty";
@@ -52902,14 +52904,14 @@ class Mission
 					};
 					id=4200;
 					type="Land_BagFence_Round_F";
-					atlOffset=0.0026381016;
+					atlOffset=0.00263834;
 				};
 				class Item170
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5784.9692,1.357729,8369.2725};
+						position[]={5784.9692,1.3577292,8369.2725};
 						angles[]={0,3.821279,0.051953323};
 					};
 					side="Empty";
@@ -52919,7 +52921,7 @@ class Mission
 					};
 					id=4201;
 					type="Land_BagFence_Round_F";
-					atlOffset=4.4703484e-06;
+					atlOffset=4.7087669e-06;
 				};
 				class Item171
 				{
@@ -59699,7 +59701,7 @@ class Mission
 					fillName="DiagGrid";
 					a=11.086123;
 					b=79.420731;
-					angle=114.34024;
+					angle=114.34022;
 					id=2765;
 					atlOffset=9.9102325;
 				};

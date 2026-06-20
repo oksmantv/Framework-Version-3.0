@@ -45,6 +45,20 @@ if (_group isEqualTo grpNull) then {
 	_group setVariable [QEGVAR(Performance,autoDelete), false];
 };
 
+private _multiplier = missionNamespace getVariable ["GOL_SpawnMultiplier", 100];
+if (_multiplier < 100) then {
+	if ((count _unitArray) > 0) then {
+		private _keepCount = ceil ((count _unitArray) * (_multiplier / 100));
+		_unitArray = _unitArray call BIS_fnc_arrayShuffle;
+		_unitArray = _unitArray select [0, _keepCount];
+	};
+	if ((count _vehicleArray) > 0) then {
+		private _keepCount = ceil ((count _vehicleArray) * (_multiplier / 100));
+		_vehicleArray = _vehicleArray call BIS_fnc_arrayShuffle;
+		_vehicleArray = _vehicleArray select [0, _keepCount];
+	};
+};
+
 if !((count _unitArray) isEqualTo 0) then {
 	{
 		_x params [

@@ -1,11 +1,11 @@
-_useMineDetector = false;
+_useMineDetector = true;
 _allowedNightStuff = true;
 
 _insignia = "GOL_Insignia_PZG371";
-_goggles = "";
-_helmet = "acp_gol_DE_Tropentarn_H_HelmetSpecB_DE_Tropentarn_insignia";
+_goggles = "JCA_G_balaclava_01_sand_F";
+_helmet = "acp_gol_DE_Tropentarn_H_HelmetSpecB_DE_Tropentarn";
 _OfficerHelmet = "UK3CB_LNM_B_H_BoonieHat_FLK_03";
-_uniform = ["acp_gol_DE_Tropentarn_U_I_E_Uniform_shortsleeve_DE_Tropentarn_01_F_flag","acp_gol_DE_Tropentarn_U_I_E_Uniform_DE_Tropentarn_01_F_insignia"];
+_uniform = ["acp_gol_DE_Tropentarn_U_I_CombatUniform_DE_Tropentarn"];
 _vest = [
 	"acp_gol_DE_Tropentarn_V_CarrierRigKBT_01_light_DE_Tropentarn_F",
 	"acp_gol_DE_Tropentarn_V_CarrierRigKBT_01_DE_Tropentarn_F",
@@ -49,28 +49,28 @@ if (_role isEqualTo "jetp") then {
 // Attachments
 _silencer = "rhsusf_acc_SFMB556";
 _pointer = "";
-_sight = "JCA_optic_ACOG_black";
+_sight = "optic_Arco_blk_F";
 _bipod = "JCA_bipod_04_black";
 
 // Primary Weapon
-_rifle = ["JCA_arifle_HK433_black_F", _silencer, _pointer, _sight, _bipod];
-_rifleC = ["JCA_arifle_HK437_VFG_black_F", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["JCA_arifle_HK433_black_F", _silencer, _pointer, _sight, _bipod];
+_rifle = ["GOL_arifle_HK437_VFG_black_F", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["GOL_arifle_HK437_AFG_black_F", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["rhs_weap_hk416d10_m320", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["UK3CB_PSG1A1_RIS", _silencer, _pointer, "JCA_optic_AICO_black", _bipod];
-_rifle_mag = "GOL_30Rnd_556x45_AP45";
+_rifle_mag = "GOL_30Rnd_556x45_AP45_Reload_Tracer_Red";
 _rifle_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
-_rifleGL_mag = "GOL_30Rnd_556x45_AP45";
+_rifleGL_mag = "GOL_30Rnd_556x45_AP45_Reload_Tracer_Red";
 _rifleGL_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
-_rifleC_mag = "JCA_30Rnd_300BLK_Red_EMAG";
-_rifleC_mag_tr = "JCA_30Rnd_300BLK_Tracer_Red_EMAG";
+_rifleC_mag = "GOL_30Rnd_556x45_AP45_Reload_Tracer_Red";
+_rifleC_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
 _rifleL_mag = "ACE_20Rnd_762x51_M993_AP_Mag";
 _rifleL_mag_tr = "ACE_20Rnd_762x51_Mag_Tracer";
 
 _LMG = ["GOL_MMG_01_tan_F", _silencer, _pointer, "optic_Arco_blk_F", "bipod_01_F_blk"];
-_LMG_mag = "GOL_150Rnd_93x64_Mag_Tracer_Red";
+_LMG_mag = "GOL_200Rnd_93x64_Mag_SLAP_Tracer_Red";
 
 _MMG = ["GOL_MG3_KWS_B", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "UK3CB_MG3_250rnd_762x51_RT";
+_MMG_mag = "GOL_MG3_250Rnd_762x51_M993_Tracer_Red";
 
 // Launchers
 _silencer = "";
@@ -93,13 +93,8 @@ _AA = ["rhs_weap_fim92", _silencer, _pointer, _sight, _bipod];
 _AA_mag = "Titan_AA";
 
 // Pistol
-if(_role in ["g","sl","pl","fac","amat","ftl"]) then {
-	_pistol = ["rhs_weap_M320", _silencer, _pointer, _sight, _bipod];
-	_pistol_mag = _glHEDP;
-} else {
-	_pistol = ["rhsusf_weap_glock17g4", _silencer, _pointer, _sight, _bipod];
-	_pistol_mag = "rhsusf_mag_17Rnd_9x19_JHP";
-};
+_pistol = ["rhsusf_weap_glock17g4", _silencer, _pointer, _sight, _bipod];
+_pistol_mag = "rhsusf_mag_17Rnd_9x19_JHP";
 
 _pdw = ["UK3CB_MP5A4", _silencer, _pointer, _sight, _bipod];
 _pdw_mag = "UK3CB_MP5_30Rnd_9x19_Magazine_R";

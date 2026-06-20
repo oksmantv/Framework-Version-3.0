@@ -1,0 +1,40 @@
+Welcome to Operation Borealis.
+
+We are on Chernarus, fighting as a joint force of Chernarussian government forces and local guerrillas against the Movement of the Red Star CHedaki, we will be starting at two different locations, with two different goals. GOL will be breaking through enemy lines in a motorised convoy to reach Outpost Harvest, and Stygian will be defending Outpost Harvest until relieved.
+
+Once we have regrouped we will combine into a single platoon of two squads. GOL will form 1-1 and Stygian will form 1-2. Platoon callsign is 1-Actual.
+
+GOL Squad, 1-1 has Channel 1, Frequency 10 for Squad communications.
+Stygian Squad, 1-2 has Channel 2, Frequency 20 for Squad communications.
+Platoon and FAC communications will be on, Channel 5, Frequency 50.1.
+
+GOL Notes:
+No pylon changes on helicopters.
+No targeting of religious sites or critical civilian infrastructure.
+Minefields are present but marked, defuse with explosives.
+Wirecutters available for Riflemen, if you hit razorwires with the vehicles, you will lose all your wheels.
+Reinserts from Staging Area, Helipad present near the spawn.
+Resupply boxes available from start of staging area.
+Use Explosives to clear minefields.
+HQ will load up on resupply and deliver to the rest of the squad.
+During phase 2, AAC will bring 3 crates for CDF, and 2 crates for NAPA, only required once we have regrouped at OP Harvest.
+Abandon the vehicles at phase 2.
+
+Both:
+Suggest extra FRAG rounds from the gearbox for Riflemen and Grenadiers.
+Bring Light Anti-Tank weapons.
+
+Stygian Notes
+You will be operating active defence at Outpost Harvest.
+Tasks will update as you progress through the defence, CDF Command will advise through radio/text.
+ACE DAGR available for Squad Leader & Fire-team leader roles.
+PSRL-1 Sight Guide available.
+Resupply located in small boxes around the camp. Suggest extra grenades for Stygian.
+Respawn is located at the underground bunker.
+CTABs are present in the kit should remain for BLUFORCE tracking. Unbind to avoid conflict. (Default Ctrl + H / H)
+
+
+=============
+
+Counter-Attack repeats SpawnTrigger_11, triggerActivated not working at all on Dedicated?
+

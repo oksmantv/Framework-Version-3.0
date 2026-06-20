@@ -11,8 +11,8 @@ PREPMAINFOLDER(spawnList);
 
 LOG("Prepping all main variables");
 enableSaving [false, false];
-enableEngineArtillery true;
-enableSentences false;
+enableEngineArtillery false;
+enableSentences true;
 enableRadio false;
 enableTeamSwitch false;
 useAISteeringComponent true;

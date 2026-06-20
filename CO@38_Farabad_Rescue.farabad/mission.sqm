@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13971;
+		nextID=13993;
 	};
 	class Camera
 	{
-		pos[]={4379.3613,36.900757,5312.9058};
-		dir[]={0.091586404,-0.38216928,0.91954261};
-		up[]={0.037876636,0.92409229,0.38028768};
-		aside[]={0.99507654,0,-0.099109575};
+		pos[]={3904.3948,39.405678,5790.5645};
+		dir[]={0.84373319,-0.43359774,-0.31641957};
+		up[]={0.40599421,0.90110296,-0.15225647};
+		aside[]={-0.35114503,-9.6042641e-09,-0.93632782};
 	};
 };
 binarizationWanted=0;
@@ -35615,7 +35615,7 @@ class Mission
 						{
 							dataType="Trigger";
 							position[]={4084.416,4.980608,5666.1982};
-							angle=5.0163722;
+							angle=5.0163717;
 							class Attributes
 							{
 								text="Spawn Trigger 2";
@@ -35655,7 +35655,7 @@ class Mission
 						{
 							dataType="Trigger";
 							position[]={3973.3101,4.2158451,5748.728};
-							angle=2.632724;
+							angle=2.6327238;
 							class Attributes
 							{
 								text="Spawn Trigger 1";
@@ -35712,7 +35712,7 @@ class Mission
 						{
 							dataType="Trigger";
 							position[]={4459.085,4.1500001,5527.8618};
-							angle=3.629185;
+							angle=3.6291847;
 							class Attributes
 							{
 								text="Spawn Trigger 4";
@@ -49440,7 +49440,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4069.0786,4.877449,5473.0161};
-					angle=1.96153;
+					angle=1.9615299;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -49631,7 +49631,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4244.1812,7.3550701,5769.5088};
-					angle=1.9378604;
+					angle=1.9378603;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -49650,7 +49650,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4311.8784,5.4734406,5743.0449};
-					angle=1.9378603;
+					angle=1.93786;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -49669,7 +49669,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4265.0991,6.5191913,5682.0249};
-					angle=1.9378603;
+					angle=1.93786;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -49688,7 +49688,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4167.9585,7.6201801,5773.6636};
-					angle=1.9378603;
+					angle=1.93786;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -49707,7 +49707,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4219.9985,6.5960975,5719.0254};
-					angle=1.93786;
+					angle=1.9378599;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -49726,7 +49726,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4282.1113,6.7390151,5732.9585};
-					angle=1.93786;
+					angle=1.9378599;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -49745,7 +49745,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4126.3271,5.3628788,5755.4048};
-					angle=1.93786;
+					angle=1.9378599;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -49764,7 +49764,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4111.6406,6.8590393,5714.6284};
-					angle=1.9378599;
+					angle=1.9378598;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -49783,7 +49783,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4159.394,6.5603995,5829.9517};
-					angle=1.9378599;
+					angle=1.9378598;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -49879,7 +49879,7 @@ class Mission
 					};
 					id=4532;
 					type="Box_FIA_Support_F";
-					atlOffset=-1.4305115e-05;
+					atlOffset=-4.7683716e-06;
 				};
 				class Item4
 				{
@@ -49900,7 +49900,7 @@ class Mission
 				};
 			};
 			id=3935;
-			atlOffset=1.6604991;
+			atlOffset=1.6603727;
 		};
 		class Item5
 		{
