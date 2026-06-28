@@ -26,6 +26,7 @@ switch (_case) do {
 
 	case 1: {
 
+
 		/// AAA
 		[[],[
 			["UK3CB_TKA_O_MTLB_ZU23",[3068.41,12435.8,0],178,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]],["cargo",-1,[0,0]]],[[6,["TKA",1]]]],
@@ -33,7 +34,13 @@ switch (_case) do {
 			["UK3CB_TKA_O_MTLB_ZU23",[3540.99,11609.1,0],148,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]],["cargo",-1,[0,0]]],[[6,["TKA",1]]]]
 		],[]] call GW_Common_fnc_spawnGroup;
 
-		/// Trench 2
+		// AT Fort AAA-
+		[[],[["RHS_ZU23_MSV",[2684.45,13286.7,0],220,[["gunner",-1,[0]]],[[7,["Unfold",0]],[351,false]]],["RHS_ZU23_MSV",[1829.44,13489.9,0],128,[["gunner",-1,[0]]],[[7,["Unfold",0]],[351,false]]],["RHS_ZU23_MSV",[3730.62,14152.8,0],277,[["gunner",-1,[0]]],[[7,["Unfold",0]],[351,false]]],["RHS_ZU23_MSV",[2383.82,14264.9,0],142,[["gunner",-1,[0]]],[[7,["Unfold",0]],[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
+
+		/// SHORAD
+		[[],[["UK3CB_CW_SOV_O_LATE_ZsuTank",[1286.22,16050,0],186,[["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["SOV",1]],[351,false]]],["UK3CB_CW_SOV_O_LATE_ZsuTank",[555.272,15347.6,3.8147e-06],215,[["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["SOV",1]],[351,false]]],["UK3CB_CW_SOV_O_LATE_ZsuTank",[208.707,16163.5,3.8147e-06],95,[["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["SOV",1]],[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
+
+		/// Trench 1
 		[[
 			[[4494.97,10920,1.05025],104,"Up",[]],
 			//[[4502.31,10929.2,0.212093],133,"Middle",[]],
@@ -91,6 +98,9 @@ switch (_case) do {
 			[[4353.91,10828.5,2.8302],104,"Up",[]]
 		],[],[]] call GW_Common_fnc_spawnGroup;
 
+		// Anti-Tank Fort Trench 1
+		[[[[5085.21,11499.1,0.141609],200,"Up",[[301,0]],"mmg"],[[5061.35,11500.5,0.380833],161,"Up",[[301,0]],"mmg"],[[5099.58,11522.8,0.0870171],194,"Middle",[[301,0]],"r"],[[5079.86,11494.5,-0.011322],334,"Middle",[[301,0]],"r"],[[5069.83,11493.6,-0.157719],192,"Up",[[301,0]],"r"]],[["rhsgref_ins_SPG9",[5087.3,11498.8,3.62616],140,[["gunner",-1,[0]]],[[351,false]]],["rhsgref_ins_SPG9",[5059.07,11501.4,3.78916],246,[["gunner",-1,[0]]],[[351,false]]],["rhsgref_ins_SPG9",[5096.54,11527.9,3.95552],112,[["gunner",-1,[0]]],[[351,false]]],["UK3CB_TKA_O_T55",[5090.95,11506.5,0.217941],120,[["gunner",-1,[0]]],[[6,["TKA",1]],[7,["Barrels_Hide",0]],[351,false]]],["UK3CB_TKA_O_T55",[5073.95,11499.5,0.157833],173,[["gunner",-1,[0]]],[[6,["TKA",1]],[7,["Barrels_Hide",0]],[351,false]]],["UK3CB_TKA_O_T55",[5061.74,11523.1,0.114239],269,[["gunner",-1,[0]]],[[6,["TKA",1]],[7,["Barrels_Hide",0]],[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
+
 		// AA GUARD
 		_AA1 = [getPosATL aa_1,east,50,600,2000,120] call OKS_fnc_IR_AA; sleep 5;
 		_AA2 = [getPosATL aa_2,east,50,600,2000,120] call OKS_fnc_IR_AA; sleep 5;
@@ -108,6 +118,12 @@ switch (_case) do {
 			["","","","","","",""],
 			false
 		] spawn OKS_fnc_AirScout;
+
+		null = [east,Arty_1,getpos ArtyTarget_1,7,300,30,false] spawn OKS_fnc_ArtyFire; sleep (random 3);
+		null = [east,Arty_2,getpos ArtyTarget_2,7,300,30,false] spawn OKS_fnc_ArtyFire; sleep (random 3);
+		null = [east,Arty_3,getpos ArtyTarget_3,7,300,30,false] spawn OKS_fnc_ArtyFire; sleep (random 3);
+		null = [east,Arty_4,getpos ArtyTarget_4,7,300,30,false] spawn OKS_fnc_ArtyFire; sleep (random 3);
+		null = [east,Arty_5,getpos ArtyTarget_5,7,300,30,false] spawn OKS_fnc_ArtyFire; sleep (random 3);
 
 		waitUntil {sleep 20; {Alive _X || [_X] call ace_common_fnc_isAwake} count [_AA1,_AA2,_AA3,_AA4] == 0};
 		AA_COMPLETE = true;
@@ -214,8 +230,8 @@ switch (_case) do {
 		[Spawn_10, Spawn_10, NEKY_Hunt_Trigger_1, 5,900,east,_Vehicles,300] spawn OKS_fnc_Huntbase; sleep 15;
 		[Spawn_11, Spawn_11, NEKY_Hunt_Trigger_1, 5,900,east,_Vehicles,300] spawn OKS_fnc_Huntbase; sleep 15;
 
-		[mortar_1, east, "precise", "light", ["auto", 20],250,1000,20] spawn OKS_fnc_Mortars; sleep 5;
-		[mortar_2, east, "precise", "light", ["auto", 20],250,1000,20] spawn OKS_fnc_Mortars;
+		[mortar_1, east, "precise", "light", ["auto", 35],250,1000,20] spawn OKS_fnc_Mortars; sleep 5;
+		[mortar_2, east, "precise", "light", ["auto", 35],250,1000,20] spawn OKS_fnc_Mortars;
 
 			[
 				getPos scout_2,
@@ -278,7 +294,7 @@ switch (_case) do {
 		],[],[]] call GW_Common_fnc_spawnGroup;
 	
 		// Gray Building 2 Story
-		[[[[3251.63,11928,6.8268],184,"Middle",[]],[[3254.68,11934.9,3.62946],345,"Middle",[]],[[3252.42,11931.9,0.533409],140,"Middle",[]],[[3248.59,11932.7,0.97506],174,"Middle",[]],[[3261.09,11948.5,5.34058e-005],244,"Middle",[]],[[3259.37,11966.9,0.302822],261,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
+		[[[[3251.63,11928,6.8268],184,"Up",[[301,0]],"ftl"],[[3254.68,11934.9,3.62946],345,"Up",[[301,0]],"r"],[[3252.42,11931.9,0.533409],140,"Up",[[301,0]],"r"],[[3248.59,11932.7,0.97506],174,"Up",[[301,0]],"g"]],[],[],east] call GW_Common_fnc_spawnGroup;
 		[[3245.07,11955.8,0],300,EAST] spawn OKS_fnc_Populate_StaticWeapons;
 
 		[
@@ -375,7 +391,7 @@ switch (_case) do {
 	case 6: {
 
 		// Radio Tower Objective 
-		[[],[["UK3CB_TKA_O_BMP1",[5482.93,14135.9,-8.58307e-06],193,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_TKA_O_BMP1",[5390.45,14199.9,0],227,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_TKA_O_BMP1",[5373.47,14222.1,-0.000663757],227,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_TKA_O_BMP2",[5497.89,14209.9,-0.0100489],193,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["konkurs_hide_source",0,"crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0]]]]],[]] call GW_Common_fnc_spawnGroup;
+		[[],[["UK3CB_TKA_O_BMP1",[5482.93,14135.9,-8.58307e-06],193,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_TKA_O_BMP1",[5390.45,14199.9,0],227,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_TKA_O_BMP1",[5373.47,14222.1,-0.000663757],227,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_TKA_O_BMP1",[5497.89,14209.9,-0.0100489],193,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["konkurs_hide_source",0,"crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0]]]]],[]] call GW_Common_fnc_spawnGroup;
 
 		[[[[5473.98,14202.3,2.28882e-05],133,"Up",[]],[[5450.53,14207.8,2.09808e-05],112,"Up",[]],[[5463.85,14219.4,2.09808e-05],7,"Up",[]],[[5477.27,14215.9,2.28882e-05],14,"Up",[]],[[5470.12,14234.2,2.09808e-05],174,"Up",[]],[[5460.06,14227.8,2.28882e-05],110,"Up",[]],[[5488.2,14244,0],184,"Middle",[]],[[5461.3,14220.5,2.73542],124,"Middle",[]],[[5474.81,14217.1,2.71301],50,"Middle",[]],[[5478.45,14236.3,2.64901],128,"Middle",[]],[[5462.84,14238.2,2.56274],113,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 
@@ -405,6 +421,7 @@ switch (_case) do {
 
 	case 8: {
 
+
 		// Forts.
 		[[[[2692.93,13274.5,1.90735e-06],157,"Up",[[301,0]],"mmg"],[[2699.12,13290.4,0.388008],155,"Up",[[301,0]],"mmg"],[[2699.42,13293.5,0.403219],15,"Up",[[301,0]],"mmg"],[[2696.71,13294.3,-1.90735e-06],347,"Middle",[[301,0]],"r"],[[2700.4,13286.3,0],218,"Middle",[[301,0]],"r"],[[2692.54,13310.2,-7.62939e-06],173,"Middle",[[301,0]],"r"]],[["UK3CB_TKA_O_T55",[2685.74,13275.1,-0.00417137],145,[["gunner",-1,[0]]],[[6,["TKA",1]],[7,["Barrels_Hide",0]],[351,false]]],["rhsgref_ins_SPG9",[2699.72,13292.2,3.83628],136,[["gunner",-1,[0]]],[[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
 		[[[[2677.44,13270.8,0.0267925],225,"Up",[[301,0]],"mmg"],[[2680.09,13271.8,0.0126762],82,"Up",[[301,0]],"mmg"],[[2682.81,13310.1,0],256,"Middle",[[301,0]],"lr"],[[2684.38,13297.9,1.18077],329,"Up",[[301,0]],"r"],[[2688.37,13299,1.19675],164,"Up",[[301,0]],"r"],[[2684.97,13307.6,1.21477],329,"Up",[[301,0]],"r"],[[2689.33,13307.8,1.21012],58,"Up",[[301,0]],"r"],[[2670.66,13268.9,5.72205e-06],359,"Middle",[[301,0]],"r"],[[2681.51,13298.7,0],144,"Middle",[[301,0]],"r"],[[2673.88,13290.3,0.719021],303,"Middle",[[301,0]],"r"],[[2676.14,13289.1,0.667973],114,"Up",[[301,0]],"r"],[[2674.4,13288.1,0.648901],231,"Middle",[[301,0]],"r"]],[["rhsgref_ins_SPG9",[2679.19,13269.7,3.54925],165,[["gunner",-1,[0]]],[[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
@@ -416,7 +433,10 @@ switch (_case) do {
 		[[[[2357.29,14258.5,0.742884],186,"Up",[[301,0]],"mmg"],[[2357.21,14261.7,0.767763],329,"Up",[[301,0]],"mmg"],[[2362.16,14248.7,0.322916],216,"Up",[[301,0]],"r"],[[2370.53,14265.3,0.655933],329,"Middle",[[301,0]],"r"],[[2374.76,14266.7,0.702723],302,"Middle",[[301,0]],"r"],[[2377.03,14265.6,0.655933],113,"Up",[[301,0]],"r"],[[2375.29,14264.5,0.655933],231,"Middle",[[301,0]],"r"]],[["rhsgref_ins_SPG9",[2355.62,14260.2,4.2324],271,[["gunner",-1,[0]]],[[351,false]]],["UK3CB_TKA_O_T55",[2368.33,14252.3,0.171307],197,[["gunner",-1,[0]]],[[6,["TKA",1]],[7,["Barrels_Hide",0]],[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
 		[[[[2378.42,14247.3,0.080452],225,"Up",[[301,0]],"mmg"],[[2381.06,14248.3,0.0403252],82,"Up",[[301,0]],"mmg"],[[2393.89,14251.1,0.0149937],156,"Up",[[301,0]],"mmg"],[[2371.65,14245.3,0.219225],358,"Middle",[[301,0]],"r"]],[["rhsgref_ins_SPG9",[2380.18,14246.1,3.636],165,[["gunner",-1,[0]]],[[351,false]]],["UK3CB_TKA_O_T55",[2386.7,14251.6,0.00793648],144,[["gunner",-1,[0]]],[[6,["TKA",1]],[7,["Barrels_Hide",0]],[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
 		[[[[2400,14267,0.395657],155,"Up",[[301,0]],"mmg"],[[2400.29,14270.1,0.395714],15,"Up",[[301,0]],"mmg"],[[2397.57,14270.8,-0.0149307],347,"Middle",[[301,0]],"r"],[[2401.3,14262.9,0.00764847],218,"Middle",[[301,0]],"r"]],[["rhsgref_ins_SPG9",[2400.61,14268.8,3.84152],136,[["gunner",-1,[0]]],[[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
-		
+		[[[[3735.9,14174,-0.0536423],285,"Middle",[[301,0]],"lr"],[[3731.35,14162.6,1.14713],358,"Up",[[301,0]],"r"],[[3735.34,14161.5,1.16311],194,"Up",[[301,0]],"r"],[[3736.57,14170.7,1.16311],358,"Up",[[301,0]],"r"],[[3740.47,14168.7,1.16311],87,"Up",[[301,0]],"r"],[[3729.24,14164.7,-0.0336418],173,"Middle",[[301,0]],"r"],[[3744.46,14169.3,-0.0447578],202,"Middle",[[301,0]],"r"],[[3711.5,14168.2,-0.042244],251,"Middle",[[301,0]],"r"],[[3713.53,14166,0.684643],66,"Middle",[[301,0]],"r"],[[3700.66,14165.2,0.466923],358,"Up",[[301,0]],"mmg"],[[3705.84,14172.5,0.0501785],46,"Middle",[[301,0]],"lr"]],[["UK3CB_TKA_O_T55",[3717.49,14175.2,-0.0656528],323,[["gunner",-1,[0]]],[[6,["TKA",1]],[7,["Barrels_Hide",0]],[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
+		[[[[3712.06,14142.2,0.0831509],254,"Up",[[301,0]],"mmg"],[[3718.45,14161,0.731432],332,"Middle",[[301,0]],"r"],[[3719.86,14158.9,0.684643],143,"Up",[[301,0]],"r"],[[3717.82,14158.8,0.684643],261,"Middle",[[301,0]],"r"],[[3705.21,14143.8,0.0575523],28,"Middle",[[301,0]],"r"],[[3698.59,14151.4,0.0727253],246,"Up",[[301,0]],"r"],[[3714.88,14141.8,0.0690346],111,"Up",[[301,0]],"mmg"],[[3699.16,14162.3,0.464243],215,"Up",[[301,0]],"mmg"],[[3714.06,14161.8,0.684643],358,"Middle",[[301,0]],"r"]],[["rhsgref_ins_SPG9",[3713.04,14140.4,3.60552],194,[["gunner",-1,[0]]],[[351,false]]],["UK3CB_TKA_O_T55",[3705.75,14151.5,0.0563602],227,[["gunner",-1,[0]]],[[6,["TKA",1]],[7,["Barrels_Hide",0]],[351,false]]],["UK3CB_TKA_O_T55",[3721.43,14141.9,0.0366459],174,[["gunner",-1,[0]]],[[6,["TKA",1]],[7,["Barrels_Hide",0]],[351,false]]],["rhsgref_ins_SPG9",[3698.57,14164.7,3.91369],300,[["gunner",-1,[0]]],[[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
+		[[[[3727.42,14137.9,0.0437031],186,"Up",[[301,0]],"mmg"],[[3740.56,14148.8,0.424366],185,"Up",[[301,0]],"mmg"],[[3742.34,14151.4,0.424423],45,"Up",[[301,0]],"mmg"],[[3740.33,14153.3,0.0137787],17,"Middle",[[301,0]],"r"],[[3739.69,14144.6,0.0363579],247,"Middle",[[301,0]],"r"]],[["rhsgref_ins_SPG9",[3741.99,14150.1,3.87023],166,[["gunner",-1,[0]]],[[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;		
+
 		[[[[3476.89,14260.9,1.01716],218.707,"UP",[[301,0]],"r"],[[3454.75,14244.4,0.997414],263.707,"UP",[[301,0]],"ftl"],[[3514.15,14212.2,0.46024],173.707,"UP",[[301,0]],"ag"],[[3514.03,14214.2,0.422787],263.707,"UP",[[301,0]],"r"],[[3518.25,14190.9,0.718257],173.707,"UP",[[301,0]],"r"],[[3516.04,14304.3,0.236137],203.707,"UP",[[301,0]],"r"],[[3486.73,14236.5,0.00132561],173.707,"UP",[[301,0]],"ab"],[[3465.36,14236.2,1.11667],263.707,"UP",[[301,0]],"r"],[[3464.15,14208.8,1.16616],113.707,"UP",[[301,0]],"r"],[[3449.63,14244.8,0.78068],203.707,"UP",[[301,0]],"ftl"],[[3521.64,14181.4,0.410427],173.707,"UP",[[301,0]],"ag"],[[3458.41,14211.3,1.10443],203.707,"UP",[[301,0]],"r"],[[3465.65,14266.8,0.468186],113.707,"UP",[[301,0]],"r"],[[3481.03,14214.8,0.00138378],203.707,"UP",[[301,0]],"r"],[[3517.02,14299.6,0.385946],173.707,"UP",[[301,0]],"ab"],[[3477.63,14285.6,0.973393],246.286,"UP",[[301,0]],"r"],[[3457.19,14287.2,0.79174],137.653,"MIDDLE",[[301,0]],"r"],[[3467.52,14286.6,1.23595],258.337,"UP",[[301,0]],"r"],[[3485.16,14211.2,1.10054],6.51295,"UP",[[301,0]],"r"],[[3466.45,14244.4,0.00154877],1.46101,"UP",[[301,0]],"r"]],[],[]] call GW_Common_fnc_spawnGroup;
 		
 		// Headquarters Objective
@@ -431,7 +451,15 @@ switch (_case) do {
 			//[[1846.96,13981.2,5.37953],0,"Up",[]],
 			[[1848.52,13977.7,5.17748],0,"Up",[]],
 			[[1845.49,13975.9,5.22001],245,"Up",[]]
-		],[["UK3CB_TKA_O_BRDM2",[1767.43,13905.2,-1.33514e-05],139,[["driver",-1,[]],["commander",-1,[0]],["gunner",-1,[1]]],[[6,["TKA",1]]]],["UK3CB_TKA_O_BRDM2",[2211.21,14259.5,0],197,[["driver",-1,[]],["commander",-1,[0]],["gunner",-1,[1]]],[[6,["TKA",1]]]],["UK3CB_TKA_O_Hilux_Spg9",[1968.14,13981.2,0],174,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["TKA",1]],[7,["ClanLogo_Hide",1,"Bonnet_Armour_Hide",1,"Central_Armour_Hide",1,"Front_Armour_Hide",1,"Rear_Armour_Hide",1,"Roof_Armour_Hide",1,"Wheel_Armour_Hide",1,"Windscreen_Armour_Hide",1,"Running_Board_Hide",0,"Roof_Rack_Hide",0,"Aerial_Hide",0,"Wipers_Hide",0]]]],["UK3CB_TKA_O_BMP1",[1937.88,13946,8.01086e-05],142,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",0,"maljutka_hide_source",0]]]],["UK3CB_TKA_O_BMP1",[1880.55,14013.2,1.90735e-06],136,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_TKA_O_BMP1",[1912.91,14002.7,0],233,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_TKA_O_BMP1",[1838.86,13951.3,7.62939e-06],57,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
+		],[
+			["UK3CB_TKA_O_BRDM2",[1767.43,13905.2,-1.33514e-05],139,[["driver",-1,[]],["commander",-1,[0]],["gunner",-1,[1]]],[[6,["TKA",1]]]],
+			["UK3CB_TKA_O_BRDM2",[2211.21,14259.5,0],197,[["driver",-1,[]],["commander",-1,[0]],["gunner",-1,[1]]],[[6,["TKA",1]]]],
+			["UK3CB_TKA_O_Hilux_Spg9",[1968.14,13981.2,0],174,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["TKA",1]],[7,["ClanLogo_Hide",1,"Bonnet_Armour_Hide",1,"Central_Armour_Hide",1,"Front_Armour_Hide",1,"Rear_Armour_Hide",1,"Roof_Armour_Hide",1,"Wheel_Armour_Hide",1,"Windscreen_Armour_Hide",1,"Running_Board_Hide",0,"Roof_Rack_Hide",0,"Aerial_Hide",0,"Wipers_Hide",0]]]],
+			["UK3CB_TKA_O_BMP1",[1937.88,13946,8.01086e-05],142,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",0,"maljutka_hide_source",0]]]],
+			["UK3CB_TKA_O_BMP1",[1880.55,14013.2,1.90735e-06],136,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]],
+			["UK3CB_TKA_O_BMP1",[1925.61,14002.3,0],233,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]],
+			["UK3CB_TKA_O_BMP1",[1838.86,13951.3,7.62939e-06],57,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["TKA",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]]]]
+		],[]] call GW_Common_fnc_spawnGroup;
 		[[
 			[[1907.44,13956.4,0.87303],321,"Up",[]],
 			//[[1910.73,13958.6,0.844501],302,"Middle",[]],
@@ -468,6 +496,11 @@ switch (_case) do {
 		[[[[1949.35,13976.7,0],282,[]],[[1952.31,13981.2,0],282,[]]],[],[[[1949.4,14017.4,0],[[0,"Move"]]],[[1919.75,13972.6,1.90735e-06],[[0,"Move"]]],[[1949.49,13973.4,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[1871.16,13922,7.62939e-06],0,[]],[[1876.16,13920,7.62939e-06],0,[]]],[],[[[1936.06,13915.6,0],[[0,"Move"]]],[[1908.34,13950.6,1.90735e-06],[[0,"Move"]]],[[1871.08,13925.4,4.3869e-05],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 
+		null = [east,Arty_9,getpos ArtyTarget_9,7,300,30,false] spawn OKS_fnc_ArtyFire; sleep (random 3);
+		null = [east,Arty_8,getpos ArtyTarget_8,7,300,30,false] spawn OKS_fnc_ArtyFire; sleep (random 3);
+		null = [east,Arty_7,getpos ArtyTarget_7,7,300,30,false] spawn OKS_fnc_ArtyFire; sleep (random 3);
+		null = [east,Arty_6,getpos ArtyTarget_6,7,300,30,false] spawn OKS_fnc_ArtyFire; sleep (random 3);
+
 		_Vehicles = [
 			["UK3CB_TKA_O_BMP1","UK3CB_TKA_O_BMP1"], 
 			["UK3CB_TKA_O_T55","UK3CB_TKA_O_BMP1"],  
@@ -480,6 +513,16 @@ switch (_case) do {
 		[Spawn_5, Spawn_5, NEKY_Hunt_Trigger_3, 5,900,east,_Vehicles,600] spawn OKS_fnc_Huntbase; sleep 10;
 		[Spawn_6, Spawn_6, NEKY_Hunt_Trigger_3, 5,900,east,_Vehicles,600] spawn OKS_fnc_Huntbase; sleep 10;
 		[Spawn_7, Spawn_7, NEKY_Hunt_Trigger_3, 5,900,east,_Vehicles,600] spawn OKS_fnc_Huntbase;
+	};
+
+	case 9:{
+
+		/// Patrols Last East Objective.
+		[[[[3476.46,13989.2,0.808796],0,[[301,0]],"sl"],[[3481.46,13984.2,1.21829],0,[[301,0]],"ar"],[[3471.46,13984.2,0.382853],0,[[301,0]],"mmg"],[[3486.46,13979.2,1.60947],0,[[301,0]],"ag"],[[3466.46,13979.2,0.505515],0,[[301,0]],"lr"],[[3491.46,13974.2,1.81702],0,[[301,0]],"r"],[[3461.46,13974.2,0.813224],0,[[301,0]],"mat"],[[3496.46,13969.2,1.66442],0,[[301,1]],"ag"]],[],[[[3523.48,14044.4,-1.74145],[[0,"Move"],[1,"SAFE"]]],[[3572.19,14122.3,5.34058e-05],[[0,"Move"]]],[[3526.07,14135.3,-0.000161171],[[0,"Move"]]],[[3466.35,14011.9,7.15256e-06],[[0,"Move"]]],[[3466.75,13986.8,-0.761502],[[0,"Cycle"]]]],east] call GW_Common_fnc_spawnGroup;
+		[[[[3241.96,14175.7,0],0,[[301,0]],"sl"],[[3246.96,14170.7,0.812643],0,[[301,0]],"ar"],[[3236.96,14170.7,0.196486],0,[[301,0]],"mmg"],[[3251.96,14165.7,2.14013],0,[[301,0]],"ag"],[[3231.96,14165.7,0.393818],0,[[301,0]],"lr"],[[3256.96,14160.7,3.78592],0,[[301,0]],"r"],[[3226.96,14160.7,0.58897],0,[[301,0]],"mat"],[[3261.96,14155.7,5.4973],0,[[301,1]],"ag"]],[],[[[3288.98,14230.9,0],[[0,"Move"],[1,"SAFE"]]],[[3367.18,14430.5,0.292144],[[0,"Move"]]],[[3312.89,14473.1,1.90735e-06],[[0,"Move"]]],[[3184.45,14335.2,0],[[0,"Move"]]],[[3232.25,14173.3,0],[[0,"Cycle"]]]],east] call GW_Common_fnc_spawnGroup;
+		[[[[3413.03,14230.8,0.808788],0,[[301,0]],"sl"],[[3418.03,14225.8,1.21828],0,[[301,0]],"ar"],[[3408.03,14225.8,0.382845],0,[[301,0]],"mmg"],[[3423.03,14220.8,1.60946],0,[[301,0]],"ag"],[[3403.03,14220.8,0.505507],0,[[301,0]],"lr"],[[3428.03,14215.8,1.81702],0,[[301,0]],"r"],[[3398.03,14215.8,0.813217],0,[[301,0]],"mat"],[[3433.03,14210.8,1.66441],0,[[301,1]],"ag"]],[],[[[3460.05,14286.1,0],[[0,"Move"],[1,"SAFE"]]],[[3508.76,14363.9,4.57764e-05],[[0,"Move"]]],[[3462.64,14377,3.27304],[[0,"Move"]]],[[3402.92,14253.6,0],[[0,"Move"]]],[[3403.32,14228.5,0],[[0,"Cycle"]]]],east] call GW_Common_fnc_spawnGroup;
+		[[[[3477.69,14151.7,0.808821],0,[[301,0]],"sl"],[[3482.69,14146.7,1.21832],0,[[301,0]],"ar"],[[3472.69,14146.7,0.382877],0,[[301,0]],"mmg"],[[3487.69,14141.7,1.60949],0,[[301,0]],"ag"],[[3467.69,14141.7,0.505539],0,[[301,0]],"lr"],[[3492.69,14136.7,1.81705],0,[[301,0]],"r"],[[3462.69,14136.7,0.81325],0,[[301,0]],"mat"],[[3497.69,14131.7,1.66444],0,[[301,1]],"ag"]],[],[[[3533.63,14211.5,0],[[0,"Move"],[1,"SAFE"]]],[[3573.42,14284.8,7.82013e-05],[[0,"Move"]]],[[3531.95,14346,3.27308],[[0,"Move"]]],[[3471.17,14190.3,0],[[0,"Move"]]],[[3467.98,14149.3,3.24249e-05],[[0,"Cycle"]]]],east] call GW_Common_fnc_spawnGroup;
+
 	};
 
 	default {

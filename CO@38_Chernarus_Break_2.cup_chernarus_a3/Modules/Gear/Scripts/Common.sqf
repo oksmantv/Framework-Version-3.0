@@ -186,7 +186,8 @@ _handFlareG = "";
 _handFlareR = "";
 _handFlareW = "";
 _handFlareY = "";
-if (true) then {
+
+	/// AACE
 	_barrel = "ACE_SpareBarrel";
 	_wirecutter = "ACE_wirecutter";
 	_cables = "ACE_CableTie";
@@ -211,7 +212,6 @@ if (true) then {
 	_entrenchingTool = "ACE_EntrenchingTool";
 	_notepad = "acex_intelitems_notepad";
 	_FacPanels = "42cdo_vs17_item";
-};
 
 /*
 	_gps = _microDAGR;

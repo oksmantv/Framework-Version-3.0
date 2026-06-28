@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="CO@38_Operation_Bradley_Cooper";
+sourceName="~CO@38_Operation_Bradley_Cooper";
 addons[]=
 {
 	"CUP_WarfareBuildings",

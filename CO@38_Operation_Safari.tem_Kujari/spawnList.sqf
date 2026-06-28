@@ -43,12 +43,17 @@ switch (_case) do {
 			[Rescue_1, "The Paramilitary Militias came out of the jungle from the west of Malari, twenty men who rode SUVs. They killed everyone, slit their throats, piled their bodies and burned them.\n\nThey shot me, and left me for dead, but I managed to crawl away, Im bleeding out, I dont know if I will make it.\nIf anyone finds this, it was Abbas Haddad and his men.\n\nPlease deliver justice, avenge us.", "Survivor Intel", "ScoutTask", []] spawn OKS_fnc_GiveIntelToNearestPlayer;
 			sleep 10;
 			["AFRICOM","side","1st Platoon, we have incoming early reports of suspected location of Abbas Haddad. Get your force into the air and stand by for coordinates, HQ out."] spawn OKS_fnc_ChatGlobal;
+			[true, ["GetInAir","ScoutTask"], ["We have received early reports of sightings on Abbas Haddad. We need your force ready to intercept, exfiltrate from the area and get into the air.", "Get in the Air", "marker2"], nil, 1, 3, true, "heli"] call BIS_fnc_taskCreate;
 			waitUntil { sleep 10; {vehicle _X != _X && vehicle _X isKindOf "air"} count AllPlayers > floor(count (AllPlayers - entities "HeadlessClient_F") * 0.7)};
+			["GetInAir","SUCCEEDED"] call BIS_fnc_taskSetState;
 			[1] spawn GW_Fnc_spawnList;
 		} else {
 			// casualty died or was not stabilized in time
 			["AFRICOM","side","1st Platoon, we have incoming early reports of suspected location of Abbas Haddad. Get your force into the air and stand by for coordinates, HQ out."] spawn OKS_fnc_ChatGlobal;
+			[true, ["GetInAir","ScoutTask"], ["We have received early reports of sightings on Abbas Haddad. We need your force ready to intercept, exfiltrate from the area and get into the air.", "Get in the Air", "marker2"], nil, 1, 3, true, "heli"] call BIS_fnc_taskCreate;
+
 			waitUntil { sleep 10; {vehicle _X != _X && vehicle _X isKindOf "air"} count AllPlayers > floor(count (AllPlayers - entities "HeadlessClient_F") * 0.7)};
+			["GetInAir","SUCCEEDED"] call BIS_fnc_taskSetState;
 			[1] spawn GW_Fnc_spawnList;
 		};
 	};
@@ -79,13 +84,13 @@ switch (_case) do {
 
 		// First Catch.
 		private _hvt = [
-			getPosATL Intercept_Start_1,
-			getPosATL Intercept_End_1,
+			Intercept_Start_1,
+			Intercept_End_1,
 			[east, east],
 			"GARRISON",
-			leadvehicle,
-			[15, 20],
-			[14, 30, 40],
+			[vehiclehvt_1, vehiclehvt_2, vehiclehvt_3],
+			30,
+			[17, 25, 40],
 			[false, "MainTask", true, "hvt1.paa"],
 			true,
 			getMarkerPos "respawn_west",

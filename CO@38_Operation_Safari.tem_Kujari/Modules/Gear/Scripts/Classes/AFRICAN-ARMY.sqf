@@ -54,36 +54,33 @@ if (_role isEqualTo "jetp") then {
 	_backpack = "B_Parachute";
 };
 
-_silencer = "rhs_acc_dtk1983";
+_silencer = "";
 _pointer = "";
-_sight = "";
+_sight = "optic_Arco_blk_F";
 _bipod = "";
 
-_rifle = ["rhs_weap_aks74", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["rhs_weap_aks74_gp25", _silencer, _pointer, _sight, _bipod];
-_rifle_mag = "30Rnd_545x39_Mag_F";
-_rifle_mag_tr = "30Rnd_545x39_Mag_Tracer_F";
-_rifleGL_mag = "30Rnd_545x39_Mag_F";
-_rifleGL_mag_tr = "30Rnd_545x39_Mag_Tracer_F";
+_rifle = ["arifle_CTAR_blk_F", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["arifle_CTAR_GL_blk_F", _silencer, _pointer, _sight, _bipod];
+_rifle_mag = "UK3CB_DBP88_30rnd_580x42_G";
+_rifle_mag_tr = "UK3CB_DBP88_30rnd_580x42_GT";
+_rifleGL_mag = "UK3CB_DBP88_30rnd_580x42_G";
+_rifleGL_mag_tr = "UK3CB_DBP88_30rnd_580x42_GT";
 
 
-_silencer = "rhs_acc_dtkakm";
-_pointer = "";
-_sight = "";
+_silencer = "";
+_pointer = "ACE_DBAL_A3_Green";
+_sight = "optic_SOS";
 _bipod = "";
 
-_rifleL = ["rhs_weap_akms", _silencer, _pointer, _sight, _bipod];
-_rifleL_mag = "rhs_30Rnd_762x39mm_bakelite_tracer";
+_rifleL = ["srifle_DMR_07_blk_F", _silencer, _pointer, _sight, _bipod];
+_rifleL_mag = "ACE_10Rnd_580x42_DBP88_Mag";
 
-_silencer = "rhs_acc_pgs64_74u";
-_pointer = "";
-_sight = "";
-_bipod = "";
+_rifleC = ["UK3CB_Uzi_Stock", _silencer, _pointer, _sight, _bipod];
+_rifleC_mag = "UK3CB_Uzi_32Rnd_Magazine_G";
+_rifleC_mag_tr = "UK3CB_Uzi_32Rnd_Magazine_GT";
 
-_rifleC = ["rhs_weap_aks74u", _silencer, _pointer, _sight, _bipod];
-
-_LMG = ["rhs_weap_rpk74m", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "UK3CB_RPK74_60rnd_545x39_GT";
+_LMG = ["arifle_CTARS_blk_F", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "UK3CB_DBP88_100rnd_580x42_GT";
 
 _MMG = ["rhs_weap_pkm", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhs_100Rnd_762x54mmR_green";

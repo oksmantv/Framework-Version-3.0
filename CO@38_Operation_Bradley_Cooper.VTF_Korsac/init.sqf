@@ -31,4 +31,20 @@ if(isServer) then {
 	[[arty_1,arty_2,arty_3],"Silence Artillery",nil,nil,"destroy","Main2",true] spawn OKS_fnc_Destroy_Task;
 	[[DestroyObject_25,DestroyObject_26,DestroyObject_27,DestroyObject_28,DestroyObject_29,DestroyObject_30],"Destroy Fuel Depot",nil,nil,"truck","Main2",true] spawn OKS_fnc_Destroy_Task;
 	[[DestroyObject_33,DestroyObject_34,DestroyObject_35],"Destroy MLRS",nil,nil,"truck","Main2",true] spawn OKS_fnc_Destroy_Task;
+	sleep 0.1;
+
+	if(["OKS_Dynamic",1] call BIS_fnc_getParamValue == 1) then {
+
+		// Delete Moto Vehicles
+		{
+			deleteVehicle _X
+		} foreach [Vehicle_4, Vehicle_5, Vehicle_6,  Vehicle_15, Vehicle_16, Vehicle_17];
+	} else {
+
+		// Delete Mech Vehicles
+		{
+			deleteVehicle _X
+		} foreach [Vehicle_14, Vehicle_11, Vehicle_12, Vehicle_13, Vehicle_1, Vehicle_10, Vehicle_3, Vehicle_2];
+	};
+
 };

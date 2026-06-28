@@ -1,15 +1,17 @@
 /*
-	Author: Oksman
-	Gets the role correlated to the units classname and display name.
-	This is used to determine the loadout for a unit based on their role.
+	Author: GuzzenVonLidl
+	Applies gear to aa soldier automaticly appon spawning it.
+	Players are not affected by this
+	Disable autogear by setting it to false
 
 	Usage:
-	_LoadoutEnum = [this] call GW_Gear_Fnc_getLoadoutClass;
+	[this, "sl"] call GW_Gear_Fnc_getLoadoutClass;
 
 	Arguments:
 	0: Unit <OBJECT>
+	1: Role <STRING>	NOTE: THIS PARAM IS OPTIONAL AND SHOULD ONLY BE USED IF YOU WANT TO FORCE A ROLE
 
-	Return Value: YES - Loadout Enum
+	Return Value: NO
 
 	Public: NO
 */
@@ -52,8 +54,8 @@ private _rolePatterns = [
     [["Machinegunner","Machine Gunner","Machine Gunner Assistant","Heavy Gunner","Gunner (HMG)"], "mmg"],
     [["Crewman","Crew"], "crew"],
     [["Helicopter Pilot","Pilot"], "p"],
+    [["Spotter","Marksman"], "lr"],
     [["Sniper"], "marksman"],
-    [["Marksman","Spotter"], "lr"],
     [["Missile Specialist (AA)","AA Specialist","Anti-Air Specialist","Anti Aircraft"], "aa"]
 ];
 
