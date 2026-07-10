@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13841;
+		nextID=13875;
 	};
 	class Camera
 	{
-		pos[]={9440.0625,150.09715,955.03766};
-		dir[]={-0.90567839,-0.33927324,-0.25425559};
-		up[]={-0.32664639,0.94068766,-0.09170109};
-		aside[]={-0.27028719,-2.5960617e-08,0.9627828};
+		pos[]={3913.7275,918.72308,7243.6563};
+		dir[]={-0.19415627,-0.24843781,0.94899291};
+		up[]={-0.049797095,0.96864796,0.243397};
+		aside[]={0.97970814,1.1583325e-08,0.20044068};
 	};
 };
 binarizationWanted=0;
@@ -35269,7 +35269,7 @@ class Mission
 						{
 							dataType="Trigger";
 							position[]={2474.5527,1.7277832,-61.74942};
-							angle=5.364337;
+							angle=5.3643365;
 							class Attributes
 							{
 								text="Spawn Trigger 1";
@@ -35290,22 +35290,24 @@ class Mission
 						class Item3
 						{
 							dataType="Trigger";
-							position[]={4157.647,11.924805,8422.6865};
-							angle=3.1804442;
+							position[]={4157.647,11.924615,8422.6865};
+							angle=3.1804435;
 							class Attributes
 							{
 								text="Spawn Trigger 5";
 								condition="call{!({(isNull (objectParent _x))} count thislist isEqualTo 0) && isServer}";
 								onActivation="call{null = [5] spawn GW_Fnc_spawnList;}";
 								sizeA=2552.9189;
-								sizeB=1470.5061;
-								sizeC=0;
+								sizeB=1470.506;
+								sizeC=500;
+								timeout[]={15,15,15};
+								interuptable=1;
 								activationBy="ANYPLAYER";
 								isServerOnly=1;
 							};
 							id=840;
 							type="EmptyDetectorAreaR50";
-							atlOffset=11.41719;
+							atlOffset=11.417;
 						};
 						class Item4
 						{
@@ -35386,7 +35388,7 @@ class Mission
 						};
 					};
 					id=434;
-					atlOffset=1.780908;
+					atlOffset=1.780902;
 				};
 				class Item10
 				{
@@ -43119,7 +43121,7 @@ class Mission
 													};
 													id=3525;
 													type="Land_ShellCrater_02_extralarge_F";
-													atlOffset=2.7418137e-06;
+													atlOffset=2.8610229e-06;
 												};
 												class Item160
 												{
@@ -48099,7 +48101,7 @@ class Mission
 															};
 															id=3859;
 															type="Land_ShellCrater_02_extralarge_F";
-															atlOffset=2.2649765e-06;
+															atlOffset=2.3841858e-06;
 														};
 														class Item154
 														{
@@ -51310,7 +51312,7 @@ class Mission
 															};
 															id=5400;
 															type="Land_ShellCrater_02_extralarge_F";
-															atlOffset=9.5367432e-07;
+															atlOffset=1.0728836e-06;
 														};
 														class Item347
 														{
@@ -53150,7 +53152,7 @@ class Mission
 															};
 															id=5451;
 															type="CUP_kmen_1_buk";
-															atlOffset=0.031683326;
+															atlOffset=0.031683207;
 														};
 														class Item48
 														{
@@ -56894,7 +56896,7 @@ class Mission
 					text="Vector: 301 - Altitude: 250";
 					type="hd_dot";
 					colorName="ColorWEST";
-					angle=300.99997;
+					angle=300.99994;
 					id=3317;
 					atlOffset=49.485039;
 					class CustomAttributes
@@ -57201,7 +57203,7 @@ class Mission
 					fillName="SolidFull";
 					a=10;
 					b=90;
-					angle=224.44069;
+					angle=224.44067;
 					id=4568;
 					atlOffset=77.269943;
 					class CustomAttributes
@@ -60591,7 +60593,7 @@ class Mission
 			fillName="SolidFull";
 			a=38.876999;
 			b=5351.105;
-			angle=89.704994;
+			angle=89.704987;
 			id=5768;
 			atlOffset=27.303675;
 			class CustomAttributes
@@ -60620,7 +60622,7 @@ class Mission
 			text=" Phaseline Red";
 			type="mil_dot";
 			colorName="ColorRed";
-			angle=142.35098;
+			angle=142.35097;
 			id=5769;
 			atlOffset=25.537657;
 			class CustomAttributes
