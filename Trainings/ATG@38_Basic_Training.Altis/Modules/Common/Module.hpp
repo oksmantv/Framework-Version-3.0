@@ -22,6 +22,7 @@
 				"B_medic_F",
 				"B_Soldier_GL_F",
 				"B_HeavyGunner_F",
+				"B_soldier_M_F",
 				"B_Soldier_F",
 				"B_Soldier_F",
 				"B_Soldier_F",
@@ -39,6 +40,7 @@
 				"O_medic_F",
 				"O_Soldier_GL_F",
 				"O_HeavyGunner_F",
+				"O_soldier_M_F",
 				"O_Soldier_F",
 				"O_Soldier_F",
 				"O_Soldier_F",
@@ -55,7 +57,8 @@
 				"I_Soldier_AR_F",
 				"I_medic_F",
 				"I_Soldier_GL_F",
-				"I_support_MG_F",
+				"I_HeavyGunner_F",
+				"I_soldier_M_F",
 				"I_Soldier_F",
 				"I_Soldier_F",
 				"I_Soldier_F",
@@ -72,7 +75,8 @@
 				"I_Soldier_AR_F",
 				"I_medic_F",
 				"I_Soldier_GL_F",
-				"I_support_MG_F",
+				"I_HeavyGunner_F",
+				"I_soldier_M_F",
 				"I_Soldier_F",
 				"I_Soldier_F",
 				"I_Soldier_F",
@@ -82,7 +86,7 @@
 		class Civilian {
 			Side = 3;
 			Leaders[] = {"C_man_1"};
-			Units[] = {"C_Man_casual_1_F","C_Man_casual_2_F","C_Man_casual_3_F"};
+			Units[] = {"C_Man_casual_4_F","C_Man_casual_5_F","C_Man_casual_6_F"};
 		};
 	};
 #endif
