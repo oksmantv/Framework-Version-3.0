@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10228;
+		nextID=10468;
 	};
 	class Camera
 	{
-		pos[]={6967.3188,243.0143,11518.416};
-		dir[]={-0.46358773,-0.55281568,0.6924569};
-		up[]={-0.30754364,0.83330119,0.45937529};
-		aside[]={0.83097374,6.0535967e-08,0.55632395};
+		pos[]={6930.3521,70.14814,11668.279};
+		dir[]={-0.83005637,-0.21606046,-0.51412922};
+		up[]={-0.18368094,0.97637951,-0.11377031};
+		aside[]={-0.52656668,7.5087883e-09,0.85013664};
 	};
 };
 binarizationWanted=0;
-sourceName="CO@38_Rasman_Down";
+sourceName="co@38_rasman_down";
 addons[]=
 {
 	"A3_Characters_F",
@@ -476,7 +476,7 @@ randomSeed=15706391;
 class ScenarioData
 {
 	author="Oksman";
-	overviewText="Framework Version 3.0.8.210226";
+	overviewText="Framework Version 3.1.1.080326";
 	overViewPicture="\OKS_GOL_Misc\data\images\loadImage.jpg";
 	overViewPictureLocked="\OKS_GOL_Misc\data\images\loadImage.jpg";
 	loadScreen="\OKS_GOL_Misc\data\images\loadImage.jpg";
@@ -13983,7 +13983,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0.2;
+														value=1.25;
 													};
 												};
 												class Item1
@@ -14010,7 +14010,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0.84366417;
+														value=0.2;
 													};
 												};
 												class Item1
@@ -14037,7 +14037,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0.83290285;
+														value=1.2;
 													};
 												};
 												class Item1
@@ -14064,7 +14064,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0.60692137;
+														value=0;
 													};
 												};
 												class Item1
@@ -16989,7 +16989,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0.029999999;
+														value=0.039999999;
 													};
 												};
 												class Item1
@@ -31723,24 +31723,26 @@ class Mission
 	class Intel
 	{
 		briefingName="Rasman Down";
-		overviewText="Framework Version 3.0.8.210226";
+		overviewText="Framework Version 3.1.1.080326";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
-		startWeather=0;
+		startWeather=0.49155986;
 		startWind=0.1;
 		startLightnings=1;
 		startWaves=0.1;
-		forecastWeather=0;
+		forecastWeather=0.49437317;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=1;
 		rainForced=1;
 		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
 		year=2035;
 		month=10;
-		hour=22;
-		minute=0;
+		hour=4;
+		minute=-30;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 	};
@@ -54126,7 +54128,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=36.674911;
-					angle=113.49568;
+					angle=113.49564;
 					id=4998;
 				};
 				class Item74
@@ -54140,7 +54142,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=36.674911;
-					angle=113.49568;
+					angle=113.49564;
 					id=4999;
 				};
 				class Item75
@@ -54406,7 +54408,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=37.496944;
-					angle=101.58928;
+					angle=101.58923;
 					id=5018;
 				};
 				class Item94
@@ -54420,7 +54422,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=37.496944;
-					angle=101.58928;
+					angle=101.58923;
 					id=5019;
 				};
 				class Item95
@@ -54462,7 +54464,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=37.496254;
-					angle=101.48385;
+					angle=101.4838;
 					id=5022;
 				};
 				class Item98
@@ -54476,7 +54478,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=37.496254;
-					angle=101.48385;
+					angle=101.4838;
 					id=5023;
 				};
 				class Item99
@@ -54490,7 +54492,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=196.51146;
-					angle=100.66034;
+					angle=100.66029;
 					id=5024;
 				};
 				class Item100
@@ -54504,7 +54506,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=196.51146;
-					angle=100.66034;
+					angle=100.66029;
 					id=5025;
 				};
 				class Item101
@@ -54547,7 +54549,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=137.15359;
-					angle=106.06852;
+					angle=106.06851;
 					id=5028;
 				};
 				class Item104
@@ -54561,7 +54563,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=137.15359;
-					angle=106.06852;
+					angle=106.06851;
 					id=5029;
 				};
 				class Item105
@@ -54575,7 +54577,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=37.250256;
-					angle=112.68961;
+					angle=112.68958;
 					id=5030;
 				};
 				class Item106
@@ -54589,7 +54591,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=37.250256;
-					angle=112.68961;
+					angle=112.68958;
 					id=5031;
 				};
 				class Item107
@@ -54856,7 +54858,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=37.256378;
-					angle=111.94497;
+					angle=111.94492;
 					id=5050;
 				};
 				class Item126
@@ -54870,7 +54872,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=37.256378;
-					angle=111.94497;
+					angle=111.94492;
 					id=5051;
 				};
 				class Item127
@@ -54884,7 +54886,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=116.19115;
-					angle=105.4078;
+					angle=105.40775;
 					id=5052;
 				};
 				class Item128
@@ -54898,7 +54900,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=116.19115;
-					angle=105.4078;
+					angle=105.40775;
 					id=5053;
 				};
 				class Item129
@@ -55080,7 +55082,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=34.798225;
-					angle=110.83558;
+					angle=110.83553;
 					id=5066;
 				};
 				class Item142
@@ -55094,7 +55096,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=34.798225;
-					angle=110.83558;
+					angle=110.83553;
 					id=5067;
 				};
 				class Item143
@@ -55361,7 +55363,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=36.501083;
-					angle=99.576309;
+					angle=99.576302;
 					id=5086;
 				};
 				class Item162
@@ -55375,7 +55377,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=36.501083;
-					angle=99.576309;
+					angle=99.576302;
 					id=5087;
 				};
 				class Item163
@@ -55389,7 +55391,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=153.02228;
-					angle=112.8336;
+					angle=112.83354;
 					id=5088;
 				};
 				class Item164
@@ -55403,7 +55405,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=153.02228;
-					angle=112.8336;
+					angle=112.83354;
 					id=5089;
 				};
 				class Item165
@@ -55781,7 +55783,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=91.586685;
-					angle=91.789955;
+					angle=91.789948;
 					id=5116;
 				};
 				class Item192
@@ -55795,7 +55797,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=91.586685;
-					angle=91.789955;
+					angle=91.789948;
 					id=5117;
 				};
 			};

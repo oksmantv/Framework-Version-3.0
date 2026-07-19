@@ -16,11 +16,11 @@ _glflareR = "rhs_VG40OP_red";
 _glflareW = "rhs_VG40OP_white";
 
 _insignia = "";
-_goggles = "rhsusf_oakley_goggles_clr";
-_helmet = ["UK3CB_TKA_O_H_6b7_1m_bala2_DES"];
+_goggles = ["JCA_G_balaclava_01_sand_F","JCA_G_balaclava_01_sand_F","rhsusf_oakley_goggles_clr","rhsusf_shemagh2_gogg_tan","rhsusf_shemagh_gogg_tan","rhsusf_shemagh2_tan","rhsusf_shemagh_tan","UK3CB_G_Balaclava_DES"];
+_helmet = ["rhsusf_opscore_ut_pelt_nsw_cam","rhsusf_opscore_ut_pelt_nsw","rhsusf_opscore_ut_pelt_cam","rhsusf_opscore_ut_pelt"];
 _OfficerHelmet = "H_Beret_blk";
-_uniform = ["UK3CB_TKA_O_U_CombatUniform_01_ADPM","UK3CB_TKA_O_U_CombatUniform_02_ADPM","UK3CB_TKA_O_U_CombatUniform_03_ADPM"];
-_vest = ["UK3CB_ARD_B_V_6b5_Rifleman_Desert","UK3CB_ARD_B_V_6b5_Sniper_Desert","UK3CB_ARD_B_V_6b5_Desert"];
+_uniform = ["UK3CB_TKA_I_U_CombatUniform_01_TKA_Brush","UK3CB_TKA_I_U_CombatUniform_02_TKA_Brush"];
+_vest = ["rhsusf_spc_iar","rhsusf_spc_mg","rhsusf_spc_rifleman"];
 _backpack = "UK3CB_B_Alice_K";
 _backpackRadio = _backpack;
 
@@ -29,7 +29,7 @@ if (true) then {
 };
 
 if(_role in ["pl","sl","fac"]) then {
-	_vest = "UK3CB_ARD_B_V_6b5_Officer_Desert";
+	_vest = "rhsusf_spc_teamleader";
 };
 
 if(_role in ["r","lr"]) then {
@@ -38,7 +38,7 @@ if(_role in ["r","lr"]) then {
 
 if (_role in ["ag","ammg","sm"]) then {
 	_backpack = "UK3CB_B_Alice_Med_K";
-	_vest = "UK3CB_ARD_B_V_6b5_Medic_Desert";
+	_vest = "rhsusf_spc_corpsman";
 };
 
 if (_role isEqualTo "p") then {
@@ -61,7 +61,7 @@ if (_role isEqualTo "jetp") then {
 
 // Attachments
 _silencer = "rhs_acc_dtk4short";
-_pointer = "JCA_acc_LaserModule_black_Pointer";
+_pointer = "GOL_OX3000";
 _sight = "JCA_optic_ARO_black";
 _bipod = "rhsusf_acc_rvg_blk";
 
