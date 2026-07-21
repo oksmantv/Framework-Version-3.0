@@ -3,7 +3,7 @@
 
 // GRENADE
 _grenade = "HandGrenade";
-_grenademini = "MiniGrenade";
+_grenademini = if (isClass (configFile >> "CfgMagazines" >> "GOL_HandGrenade_Mini")) then {"GOL_HandGrenade_Mini"} else {"MiniGrenade"};
 _grenadeIR = "B_IR_Grenade";
 _smokegrenadeW = "SmokeShell";
 _smokegrenadeB = "SmokeShellBlue";
@@ -30,7 +30,7 @@ _glsmokeY = "1Rnd_SmokeYellow_Grenade_shell";
 
 _glflareG = "ACE_40mm_Flare_green";
 _glflareR = "ACE_40mm_Flare_red";
-_glflareW = "ACE_40mm_Flare_white";
+_glflareW = "GOL_1Rnd_UGL_FlareWhite";
 
 // Mortar Items.
 _1rndMortarHE = "UK3CB_BAF_1Rnd_60mm_Mo_Shells";
@@ -101,8 +101,8 @@ _epi = "ACE_epinephrine";
 _morph = "ACE_morphine";
 _tourn = "ACE_tourniquet";
 _pak = "ACE_personalAidKit";
-_saline = "ACE_salineIV";
-_salineSm = "ACE_SalineIV_500";
+_saline = "ACE_plasmaIV";
+_salineSm = "ACE_plasmaIV_500";
 
 _IFAK = [[_bandage,17],[_tourn,2],[_morph,5]];
 

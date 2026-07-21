@@ -83,7 +83,7 @@ _sight = "";
 _bipod = "";
 
 _rifle = [["rhs_weap_aks74n","rhs_weap_aks74","rhs_weap_ak74n_2","rhs_weap_ak74n","rhs_weap_ak74m_fullplum","rhs_weap_ak74m"], _silencer, _pointer, _sight, _bipod];
-_rifleC = ["rhs_weap_aks74un", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["rhs_weap_aks74", _silencer, _pointer, _sight, _bipod];
 _rifleGL = [["rhs_weap_ak74n_2_gp25","rhs_weap_ak74n_gp25","rhs_weap_aks74_gp25","rhs_weap_aks74n_gp25","rhs_weap_ak74m_gp25","rhs_weap_ak74_gp25"], _silencer, _pointer, _sight, _bipod];
 _rifleL = ["srifle_DMR_07_blk_F", "muzzle_snds_65_TI_blk_F", _pointer, "rhsusf_acc_LEUPOLDMK4_2", ""];
 _rifle_mag = selectRandom ["rhs_30Rnd_545x39_7N22_plum_AK","rhs_30Rnd_545x39_7N10_2mag_plum_AK"];
