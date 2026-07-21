@@ -14,7 +14,7 @@ if (true) then {
 	_backpackRadio = "acp_gol_GB_DPM95_B_RadioBag_01_GB_DPM95_F";
 };
 
-if (_role in ["ag","ammg","lr","ab"]) then {
+if (_role in ["ag","ammg","lr","ab","atab"]) then {
 	_backpack = "acp_gol_GB_DPM95_B_Carryall_GB_DPM95";
 };
 if (_role isEqualTo "crew") then {
@@ -23,7 +23,7 @@ if (_role isEqualTo "crew") then {
 };
 if (_role isEqualTo "p") then {
 	_helmet = "rhsusf_hgu56p_visor_black";
-	_uniform = "UK3CB_ADM_B_U_CombatUniform_01_WDL";
+	_uniform = "acp_gol_GB_DPM95_U_I_E_Uniform_sweater_GB_DPM95_01_F_insignia";
 	_vest = "acp_gol_GB_DPM95_V_PlateCarrier1_GB_DPM95";
 };
 if (_role isEqualTo "uav") then {

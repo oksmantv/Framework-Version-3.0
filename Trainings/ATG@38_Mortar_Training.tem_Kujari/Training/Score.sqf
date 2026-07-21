@@ -13,9 +13,13 @@ _Object addAction
 			_Players = units group _caller;
 			_Names = "Team: ";
 			{
-				_Names = _Names + format["%1, ", name _X];
+				if(_foreachIndex == (count _Players - 1)) then {
+					_Names = _Names + format["%1.", name _X];
+				} else {
+					_Names = _Names + format["%1, ", name _X];
+				};
 			} forEach _Players;
-			["hq","side",format["%1 scored an average time of %2 seconds on %3 targets.",_Names,_averageScore,count _score]] remoteExec ["OKS_fnc_Chat",0];
+			format["%1 scored an average time of %2 seconds on %3 targets.",_Names,_averageScore,count _score] remoteExec ["sideChat",0];
 		};
 	},
 	nil,
@@ -39,10 +43,14 @@ _Object addAction
 		_Players = units group _caller;
 		_Names = "Team: ";
 		{
-			_Names = _Names + format["%1, ", name _X];
+			if(_foreachIndex == (count _Players - 1)) then {
+				_Names = _Names + format["%1.", name _X];
+			} else {
+				_Names = _Names + format["%1, ", name _X];
+			};
 		} forEach _Players;
 		group _caller setVariable ["OKS_TimeArray",[],true];
-		["hq","side",format["%1 reset their score.",_Names]] remoteExec ["OKS_fnc_Chat",0];
+		format["%1 reset their score.",_Names] remoteExec ["sideChat",0];
 	},
 	nil,
 	1.5,

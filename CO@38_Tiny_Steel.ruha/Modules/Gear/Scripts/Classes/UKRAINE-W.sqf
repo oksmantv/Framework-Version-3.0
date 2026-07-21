@@ -26,10 +26,18 @@ _goggles = [
 	"UK3CB_G_Tactical_Gloves_Green_Shemagh_Green_Headset",
 	"UK3CB_G_Tactical_Gloves_Green"
 ];
-_helmet = ["rhssaf_helmet_m97_olive_nocamo","rhssaf_helmet_m97_olive_nocamo_black_ess","rhssaf_helmet_m97_olive_nocamo_black_ess_bare"];
+_helmet = ["UK3CB_GAF_B_H_Opscore_Mar_OLI_02","UK3CB_GAF_B_H_Opscore_Mar_OLI_01"];
 _OfficerHelmet = "UK3CB_ANA_B_H_OFF_Beret_GRN";
-_uniform = ["UK3CB_GAF_B_U_SF_CombatSmock_02_MULTICAM","UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM","UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM"];
-_vest = ["UK3CB_V_MBAV_MG_OLI","UK3CB_V_MBAV_RIFLEMAN_OLI","UK3CB_V_MBAV_LIGHT_OLI","UK3CB_V_MBAV_RIFLEMAN_OLI","UK3CB_V_MBAV_GRENADIER_OLI"];
+_uniform = [
+	"UK3CB_GAF_B_U_SF_CombatSmock_02_MULTICAM","UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM","UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM",
+	"UK3CB_GAF_B_U_SF_CombatSmock_02_MULTICAM_OLIVE","UK3CB_GAF_B_U_SF_CombatSmock_08_MULTICAM_OLIVE","UK3CB_GAF_B_U_SF_CombatSmock_05_MULTICAM_OLIVE",
+	"UK3CB_GAF_B_U_CombatSmock_01_DIGI","UK3CB_GAF_B_U_CombatSmock_02_DIGI"
+];
+_vest = [
+	"UK3CB_GAF_B_MBAV_MEDIC_DIGI_OLI_02","UK3CB_GAF_B_MBAV_MEDIC_DIGI_OLI_03",
+	"UK3CB_GAF_B_MBAV_MEDIC_OLI_03","UK3CB_GAF_B_MBAV_MEDIC_OLI_02",
+	"UK3CB_GAF_B_MBAV_MG_OLI_02", "UK3CB_GAF_B_MBAV_MG_DIGI_03"
+];
 _backpack = "UK3CB_ION_B_B_RIF_OLI_01";
 _backpackRadio = _backpack;
 
@@ -39,7 +47,7 @@ if (true) then {
 
 if(_role in ["ag","ammg"]) then {
 	_backpack = "UK3CB_GAF_B_B_ENG_OLI";
-	_vest = "UK3CB_V_MBAV_MEDIC_OLI";
+	_vest = "UK3CB_GAF_B_MBAV_MEDIC_DIGI_OLI_02";
 };
 if (_role isEqualTo "p") then {
 	_goggles = "";
@@ -51,9 +59,9 @@ if (_role isEqualTo "p") then {
 
 if(_role isEqualTo "crew") then {
 	_goggles = "";
-	_helmet = "rhs_tsh4";
+	_helmet = "UK3CB_GAF_B_H_6b27m_GRN";
 	_uniform = "UK3CB_GAF_B_U_SF_CombatUniform_02_MULTICAM";
-	_vest = "UK3CB_V_MBAV_LIGHT_OLI";
+	_vest = "UK3CB_GAF_B_MBAV_LIGHT_DIGI_OLI";
 };
 if (_role isEqualTo "uav") then {
 	_backpack = "O_UAV_01_backpack_F";
@@ -87,15 +95,16 @@ _rifleGL_mag_tr = "rhs_30Rnd_545x39_AK_plum_green";
 _rifleL_mag = "ACE_20Rnd_65_Creedmor_mag";
 _rifleL_mag_tr = "ACE_20Rnd_65_Creedmor_mag";
 
-_LMG = ["LMG_03_F", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "200Rnd_556x45_Box_Tracer_Red_F";
+_LMG = ["GOL_weap_pkp", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "GOL_100Rnd_762x54mmR_red";
 
-_MMG = ["rhs_weap_pkm", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "rhs_100Rnd_762x54mmR_green";
+_MMG = ["GOL_weap_fnmag", _silencer, _pointer, _sight, _bipod];
+_MMG_mag = "GOL_FNMAG_200Rnd_762x51_M993_Tracer_Red";
 
-_LAT = ["rhs_weap_m72a7", _silencer, _pointer, _sight, _bipod];
-_LAT_mag = "";
-_LAT_ReUsable = false;
+_LAT = ["GOL_weap_PSRL1", _silencer, _pointer, "rhs_acc_pgo7v3", _bipod];
+_LAT_mag = "GOL_mag_rpg7_Modern";
+_LAT_mag_HE = "GOL_mag_rpg7_OG7V";
+_LAT_ReUsable = true;
 
 _MAT = ["launch_MRAWS_olive_rail_F", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "MRAWS_HEAT_F";

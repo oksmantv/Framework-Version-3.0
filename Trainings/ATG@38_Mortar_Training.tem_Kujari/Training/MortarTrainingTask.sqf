@@ -110,7 +110,7 @@ _RandomId = format ["%1_Task_%2",groupId _PlayerGroup,random 9999];
 	private ["_Time"];
 	_Time = 0;
 
-	while {{Alive _X && [_X] call ace_common_fnc_isAwake} count units _Group <= 1} do {
+	while {{Alive _X && [_X] call ace_common_fnc_isAwake} count units _Group > 1} do {
 		sleep 1;
 		_Time = _Time + 1;
 		_PlayerGroup setVariable ["OKS_Timer",_Time,true];
@@ -134,11 +134,15 @@ _PlayerGroup setVariable ['CurrentMortarTarget',false,true];
 _Time = _PlayerGroup getVariable ["OKS_Timer",0];
 
 _Players = units _PlayerGroup;
-_Names = "T: ";
+_Names = "";
 {
-	_Names = _Names + format["%1, ", name _X];
+	if(_foreachIndex == (count _Players - 1)) then {
+		_Names = _Names + format["%1.", name _X];
+	} else {
+		_Names = _Names + format["%1, ", name _X];
+	};
 } forEach _Players;
-["hq","side",format["%1. Time of %2 seconds %3",_Names,_Time,_TaskText]] remoteExec ["OKS_fnc_Chat",0];
+format["SCOREBOARD: %1. Time of %2 seconds %3",_Names,_Time,_TaskText] remoteExec ["sideChat",0];
 
 _TimeArray = _PlayerGroup getVariable ["OKS_TimeArray",[]];
 _TimeArray pushBackUnique _Time;

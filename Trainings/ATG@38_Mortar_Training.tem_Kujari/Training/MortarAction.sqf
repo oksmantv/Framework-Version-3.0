@@ -22,9 +22,20 @@ private _snapfireAction = [
     {
         params ["_target", "_player", "_params"];
 		_params params ["_TargetArray","_Side"];
-        [_player,_target,_TargetArray,_Side,true] remoteExec ["MortarTrainingTask",2];
+        [
+            _player,
+            vehicle _player,
+            _TargetArray,
+            _Side,
+            true
+        ] remoteExec ["MortarTrainingTask",2];
     },
-    {!((group _player) getVariable ['ActiveMortarTask',false])}, // Condition: always available (customize as needed)
+    {
+        params ["_target", "_player", "_params"];
+        ([vehicle _player] call OKS_fnc_isMortarVehicle)
+        &&
+        !((group _player) getVariable ['ActiveMortarTask',false])
+    },
     {},
     [_TargetArray, _Side]
 ] call ace_interact_menu_fnc_createAction;
@@ -36,12 +47,23 @@ private _markerGuidedAction = [
     "",
     {
         params ["_target", "_player", "_params"];
-		_params params ["_TargetArray","_Side"];
-        [_player,_target,_TargetArray,_Side, false] remoteExec ["MortarTrainingTask",2];
+		_params params ["_GuidedArray","_Side"];
+        [
+            _player,
+            vehicle _player,
+            _GuidedArray,
+            _Side,
+            false
+        ] remoteExec ["MortarTrainingTask",2];
     },
-    {!((group _player) getVariable ['ActiveMortarTask',false])}, // Condition: always available (customize as needed)
+    {
+        params ["_target", "_player", "_params"];
+        ([vehicle _player] call OKS_fnc_isMortarVehicle)
+        &&
+        !((group _player) getVariable ['ActiveMortarTask',false])
+    },
     {},
-    [_TargetArray, _Side]
+    [_GuidedArray, _Side]
 ] call ace_interact_menu_fnc_createAction;
 
 // --- Mortar Training parent action
@@ -50,7 +72,10 @@ private _mortarTrainingAction = [
     "Mortar Training",
     "",
     {},
-    {true},
+    {
+        params ["_target", "_player", "_params"];
+        [vehicle _player] call OKS_fnc_isMortarVehicle
+    },
     {},
     []
 ] call ace_interact_menu_fnc_createAction;
@@ -65,31 +90,104 @@ private _targetCameraAction = [
         _player spawn ShowTarget;
     },
     {
-        // Condition: Only show if group variable 'CurrentMortarTarget' is an OBJECT
-        typeName ((group player) getVariable ['CurrentMortarTarget', false]) == 'OBJECT'
+        params ["_target", "_player", "_params"];
+        // Any buddy in the same group can view the active target camera.
+        typeName ((group _player) getVariable ['CurrentMortarTarget', false]) == 'OBJECT'
     },
     {},
     []
 ] call ace_interact_menu_fnc_createAction;
 
-// Rearm action for vehicles
+private _isM6Condition = {
+    params ["_target", "_player", "_params"];
+    vehicle _player isKindOf "UK3CB_BAF_Static_M6"
+};
+
+private _isNonM6MortarCondition = {
+    params ["_target", "_player", "_params"];
+    ([vehicle _player] call OKS_fnc_isMortarVehicle)
+    &&
+    !(vehicle _player isKindOf "UK3CB_BAF_Static_M6")
+};
+
+// Rearm action for non-M6 mortar vehicles
 private _rearmAction = [
-    "Rearm", // Action title
+    "Rearm",
     "Rearm Weapon",
     "\A3\ui_f\data\map\vehicleicons\iconCrateAmmo_ca.paa", // Icon
     {
         params ["_target", "_player", "_params"];
-
-        if(typeof vehicle _player == "UK3CB_BAF_Static_M6") exitWith {
-            systemChat "You cannot rearm this weapon. Unpack or get more packed ammunition from the gear box";
-        };
         vehicle _player setVehicleAmmo 1;
         systemChat format ["%1 have rearmed the %2", name _player, [configFile >> "CfgVehicles" >> typeOf vehicle _player] call BIS_fnc_displayName];
     },
+    _isNonM6MortarCondition,
+    {},
+    []
+] call ace_interact_menu_fnc_createAction;
+
+// Parent node for M6-specific packed rounds.
+private _m6RearmParentAction = [
+    "RearmM6Parent",
+    "Rearm (M6 Ammunition)",
+    "\A3\ui_f\data\map\vehicleicons\iconCrateAmmo_ca.paa",
+    {},
+    _isM6Condition,
+    {},
+    []
+] call ace_interact_menu_fnc_createAction;
+
+private _m6FlareAction = [
+    "RearmM6Flare",
+    "Get Packed Flare Round",
+    "",
     {
-        // Condition: Should be in vehicle
-        vehicle player isKindOf "LandVehicle" && vehicle player != player
-    }, 
+        params ["_target", "_player", "_params"];
+        _player addItem "Unpack_60mm_Flare";
+        systemChat "Received: Unpack_60mm_Flare";
+    },
+    _isM6Condition,
+    {},
+    []
+] call ace_interact_menu_fnc_createAction;
+
+private _m6SmokeAction = [
+    "RearmM6Smoke",
+    "Get Packed Smoke Round",
+    "",
+    {
+        params ["_target", "_player", "_params"];
+        _player addItem "Unpack_60mm_Smoke";
+        systemChat "Received: Unpack_60mm_Smoke";
+    },
+    _isM6Condition,
+    {},
+    []
+] call ace_interact_menu_fnc_createAction;
+
+private _m6HEABAction = [
+    "RearmM6HEAB",
+    "Get Packed HEAB Round",
+    "",
+    {
+        params ["_target", "_player", "_params"];
+        _player addItem "Unpack_60mm_HEAB";
+        systemChat "Received: Unpack_60mm_HEAB";
+    },
+    _isM6Condition,
+    {},
+    []
+] call ace_interact_menu_fnc_createAction;
+
+private _m6HEAction = [
+    "RearmM6HE",
+    "Get Packed HE Round",
+    "",
+    {
+        params ["_target", "_player", "_params"];
+        _player addItem "Unpack_60mm_HE";
+        systemChat "Received: Unpack_60mm_HE";
+    },
+    _isM6Condition,
     {},
     []
 ] call ace_interact_menu_fnc_createAction;
@@ -100,4 +198,9 @@ private _rearmAction = [
 [player, 1, ["ACE_SelfActions", "MortarTraining"], _markerGuidedAction] call ace_interact_menu_fnc_addActionToObject;
 [player, 1, ["ACE_SelfActions", "MortarTraining"], _targetCameraAction] call ace_interact_menu_fnc_addActionToObject;
 [player, 1, ["ACE_SelfActions", "MortarTraining"], _rearmAction] call ace_interact_menu_fnc_addActionToObject;
+[player, 1, ["ACE_SelfActions", "MortarTraining"], _m6RearmParentAction] call ace_interact_menu_fnc_addActionToObject;
+[player, 1, ["ACE_SelfActions", "MortarTraining", "RearmM6Parent"], _m6FlareAction] call ace_interact_menu_fnc_addActionToObject;
+[player, 1, ["ACE_SelfActions", "MortarTraining", "RearmM6Parent"], _m6SmokeAction] call ace_interact_menu_fnc_addActionToObject;
+[player, 1, ["ACE_SelfActions", "MortarTraining", "RearmM6Parent"], _m6HEABAction] call ace_interact_menu_fnc_addActionToObject;
+[player, 1, ["ACE_SelfActions", "MortarTraining", "RearmM6Parent"], _m6HEAction] call ace_interact_menu_fnc_addActionToObject;
 

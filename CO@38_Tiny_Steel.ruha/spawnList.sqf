@@ -78,30 +78,42 @@ switch (_case) do {
 	
 		// Hunt
 		_Vehicles = [
-			"rhsgref_ins_t72ba", 
-			"UK3CB_CW_SOV_O_EARLY_T55", 
-			"rhs_bmp1_msv", 
-			"UK3CB_CW_SOV_O_LATE_MTLB_BMP",
-			"UK3CB_CW_SOV_O_EARLY_T55", 
-			"rhs_bmp1_msv", 
-			"UK3CB_CW_SOV_O_LATE_MTLB_BMP",
-			"UK3CB_CW_SOV_O_EARLY_T55", 
-			"rhs_bmp1_msv", 
-			"UK3CB_CW_SOV_O_LATE_MTLB_BMP",
-			"UK3CB_CW_SOV_O_EARLY_T55", 
-			"rhs_bmp1_msv", 
-			"UK3CB_CW_SOV_O_LATE_MTLB_BMP",
-			"UK3CB_CW_SOV_O_EARLY_T55", 
-			"rhs_bmp1_msv", 
-			"UK3CB_CW_SOV_O_LATE_MTLB_BMP"
+			[
+				"rhsgref_ins_t72ba", 
+				"UK3CB_CW_SOV_O_EARLY_T55", 
+				"rhs_bmp1_msv"
+			], 
+			[
+				"UK3CB_CW_SOV_O_EARLY_T55","UK3CB_CW_SOV_O_LATE_MTLB_BMP"
+			],
+			[
+				"UK3CB_CW_SOV_O_EARLY_T55", 
+				"rhs_bmp1_msv", 
+				"UK3CB_CW_SOV_O_LATE_MTLB_BMP"
+			],
+			[
+				"UK3CB_CW_SOV_O_EARLY_T55", 
+				"rhs_bmp1_msv", 
+				"UK3CB_CW_SOV_O_LATE_MTLB_BMP"
+			],
+			[
+				"UK3CB_CW_SOV_O_EARLY_T55", 
+				"UK3CB_CW_SOV_O_LATE_MTLB_BMP",
+				"rhs_bmp1_msv"
+			],
+			[
+				"rhs_bmp1_msv", 
+				"UK3CB_CW_SOV_O_LATE_MTLB_BMP",
+				"UK3CB_CW_SOV_O_EARLY_T55"
+			]
 		];
 
-		[Spawn_1, Spawn_1, NEKY_Hunt_Trigger_1, 8, 900,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
-		[Spawn_2, Spawn_2, NEKY_Hunt_Trigger_1, 8, 900,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
-		[Spawn_3, Spawn_3, NEKY_Hunt_Trigger_1, 8, 900,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
-		[Spawn_4, Spawn_4, NEKY_Hunt_Trigger_1, 8, 900,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
-		[Spawn_5, Spawn_5, NEKY_Hunt_Trigger_1, 8, 900,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
-		[Spawn_6, Spawn_6, NEKY_Hunt_Trigger_1, 8, 900,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
+		[Spawn_1, Spawn_1, NEKY_Hunt_Trigger_1, 8, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
+		[Spawn_2, Spawn_2, NEKY_Hunt_Trigger_1, 8, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
+		[Spawn_3, Spawn_3, NEKY_Hunt_Trigger_1, 8, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
+		[Spawn_4, Spawn_4, NEKY_Hunt_Trigger_1, 8, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
+		[Spawn_5, Spawn_5, NEKY_Hunt_Trigger_1, 8, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
+		[Spawn_6, Spawn_6, NEKY_Hunt_Trigger_1, 8, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
 	};
 
 	case 2: {

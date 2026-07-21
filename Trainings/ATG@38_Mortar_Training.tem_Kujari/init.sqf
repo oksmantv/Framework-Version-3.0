@@ -6,6 +6,12 @@
 		east setFriend [independent,0];
 	};
 
+	OKS_MortarWhitelist = [
+		"StaticMortar",
+		"UK3CB_BAF_Static_L16_Des"
+	];
+	publicVariable "OKS_MortarWhitelist";
+
 	[] execVM "Training\Init.sqf";
 	player addItem "ACE_artilleryTable";
 
@@ -43,10 +49,27 @@
 		publicVariable "MarkerMortarTargets";
 	};
 
-	publicVariable "MarkerMortarTargets";
-	publicVariable "SnapMortarTargets";
-	waitUntil {!(isNil "MortarAction")};
-	[SnapMortarTargets,MarkerMortarTargets] call MortarAction;
+	if (hasInterface) then {
+		[] spawn {
+			waitUntil {
+				!isNil "MortarAction"
+				&&
+				!isNil "OKS_fnc_isMortarVehicle"
+				&&
+				!isNull player
+				&&
+				!isNil "ace_interact_menu_fnc_createAction"
+				&&
+				!isNil "SnapMortarTargets"
+				&&
+				!isNil "MarkerMortarTargets"
+			};
+
+			[SnapMortarTargets,MarkerMortarTargets] call MortarAction;
+		};
+	};
+
+	waitUntil {!isNil "SnapMortarTargets" && !isNil "MarkerMortarTargets"};
 	[flag_west_1] execVM "Training\Score.sqf";
 
 	[helo_1, getpos helospawn_1, getDir helospawn_1, ["helicopter"]] execVM "Training\VehicleRequest.sqf";
