@@ -29,6 +29,10 @@ switch (_case) do {
 		[aaa_1,east,false,1500,true] spawn OKS_fnc_Ambient_AAA;
 		[aaa_2,east,false,1500,true] spawn OKS_fnc_Ambient_AAA;
 
+		// Northern AI Fight
+		[AIBattle_SpawnA_1,AIBattle_SpawnB_1,AIBattle_Meet_1,west,east,["RHS_M2A2_wd","UK3CB_CW_US_B_LATE_LAV25"],["rhs_bmp1_msv","rhs_bmp1d_msv","rhs_bmp1p_msv","UK3CB_O_G_T34"],west,true,180,-1,30,2,4000] call OKS_fnc_AI_Battle;
+		[AIBattle_SpawnA_2,AIBattle_SpawnB_2,AIBattle_Meet_2,west,east,["RHS_M2A2_wd","UK3CB_CW_US_B_LATE_LAV25"],["rhs_bmp1_msv","rhs_bmp1d_msv","rhs_bmp1p_msv","UK3CB_O_G_T34"],west,true,120,-1,30,2,4000] call OKS_fnc_AI_Battle;
+
 		// HMG
 		[[],[
 			["UK3CB_CW_SOV_O_LATE_VDV_UAZ_MG",[1172.7,2985.48,1.90735e-06],171,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["SOV2",1]],[7,["light_hide",0,"spare_hide",0]]]],
@@ -108,12 +112,12 @@ switch (_case) do {
 			]
 		];
 
-		[Spawn_1, Spawn_1, NEKY_Hunt_Trigger_1, 8, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
-		[Spawn_2, Spawn_2, NEKY_Hunt_Trigger_1, 8, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
-		[Spawn_3, Spawn_3, NEKY_Hunt_Trigger_1, 8, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
-		[Spawn_4, Spawn_4, NEKY_Hunt_Trigger_1, 8, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
-		[Spawn_5, Spawn_5, NEKY_Hunt_Trigger_1, 8, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
-		[Spawn_6, Spawn_6, NEKY_Hunt_Trigger_1, 8, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
+		[Spawn_1, Spawn_1, NEKY_Hunt_Trigger_1, 4, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
+		[Spawn_2, Spawn_2, NEKY_Hunt_Trigger_1, 4, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
+		[Spawn_3, Spawn_3, NEKY_Hunt_Trigger_1, 4, 1200,east,_Vehicles,180] spawn OKS_fnc_Huntbase; sleep 5;
+		[Spawn_4, Spawn_4, NEKY_Hunt_Trigger_1, 4, 1200,east,_Vehicles,300] spawn OKS_fnc_Huntbase; sleep 5;
+		[Spawn_5, Spawn_5, NEKY_Hunt_Trigger_1, 4, 1200,east,_Vehicles,300] spawn OKS_fnc_Huntbase; sleep 5;
+		[Spawn_6, Spawn_6, NEKY_Hunt_Trigger_1, 4, 1200,east,_Vehicles,300] spawn OKS_fnc_Huntbase;
 	};
 
 	case 2: {

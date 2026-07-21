@@ -98,17 +98,16 @@ _rifleL_mag_tr = "ACE_20Rnd_65_Creedmor_mag";
 _LMG = ["GOL_weap_pkp", _silencer, _pointer, _sight, _bipod];
 _LMG_mag = "GOL_100Rnd_762x54mmR_red";
 
-_MMG = ["GOL_weap_fnmag", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "GOL_FNMAG_200Rnd_762x51_M993_Tracer_Red";
+_MMG = ["GOL_MG3_KWS_B", _silencer, _pointer, _sight, _bipod];
+_MMG_mag = "GOL_MG3_250Rnd_762x51_M993_Tracer_Red";
 
-_LAT = ["GOL_weap_PSRL1", _silencer, _pointer, "rhs_acc_pgo7v3", _bipod];
-_LAT_mag = "GOL_mag_rpg7_Modern";
-_LAT_mag_HE = "GOL_mag_rpg7_OG7V";
-_LAT_ReUsable = true;
+_LAT = ["UK3CB_BAF_AT4_CS_AT_Launcher", _silencer, _pointer, _sight, _bipod];
+_LAT_mag = "UK3CB_BAF_AT4_CS_AT_Mag";
+_LAT_ReUsable = false;
 
-_MAT = ["launch_MRAWS_olive_rail_F", _silencer, _pointer, _sight, _bipod];
-_MAT_mag = "MRAWS_HEAT_F";
-_MAT_mag_HE = "MRAWS_HE_F";
+_MAT = ["GOL_weap_PSRL1", _silencer, _pointer, _sight, _bipod];
+_MAT_mag = "GOL_mag_rpg7_Modern";
+_MAT_mag_HE = "GOL_mag_rpg7_OG7V";
 
 _HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";

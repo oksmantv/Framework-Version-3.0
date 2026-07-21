@@ -261,7 +261,7 @@ switch (toLower(_role)) do {
 		[_LAT, _LAT_mag, ""] call _addLaunchers;
 		if(_MAT select 0 == "") then {
 			if (_LAT_ReUsable) then {
-				[[_LAT_mag,1]] call _addToBackpack;
+				[[_LAT_mag,2]] call _addToBackpack;
 			} else {
 				///((_loadout select 5) select 1) append [[_LAT,1]];
 				((_loadout select 5) select 1) append [[[(_LAT select 0),"","","",[],[],""],1]];
