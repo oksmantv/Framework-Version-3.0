@@ -26,6 +26,7 @@ switch (_case) do {
 	case 1: {
 
 		// AAA Objectives.
+
 		[aaa_1,east,false,1500,true] spawn OKS_fnc_Ambient_AAA;
 		[aaa_2,east,false,1500,true] spawn OKS_fnc_Ambient_AAA;
 
@@ -33,7 +34,7 @@ switch (_case) do {
 		[AIBattle_SpawnA_1,AIBattle_SpawnB_1,AIBattle_Meet_1,west,east,["RHS_M2A2_wd","UK3CB_CW_US_B_LATE_LAV25"],["rhs_bmp1_msv","rhs_bmp1d_msv","rhs_bmp1p_msv","UK3CB_O_G_T34"],west,true,180,-1,30,2,4000] call OKS_fnc_AI_Battle;
 		[AIBattle_SpawnA_2,AIBattle_SpawnB_2,AIBattle_Meet_2,west,east,["RHS_M2A2_wd","UK3CB_CW_US_B_LATE_LAV25"],["rhs_bmp1_msv","rhs_bmp1d_msv","rhs_bmp1p_msv","UK3CB_O_G_T34"],west,true,120,-1,30,2,4000] call OKS_fnc_AI_Battle;
 
-		// HMG
+		// HMG AA
 		[[],[
 			["UK3CB_CW_SOV_O_LATE_VDV_UAZ_MG",[1172.7,2985.48,1.90735e-06],171,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["SOV2",1]],[7,["light_hide",0,"spare_hide",0]]]],
 			["UK3CB_CW_SOV_O_LATE_VDV_UAZ_MG",[2769.26,3501.11,1.90735e-06],271,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["SOV2",1]],[7,["light_hide",0,"spare_hide",0]]]],
@@ -51,7 +52,6 @@ switch (_case) do {
 		[east,arty_2,getpos ArtyTarget,7,300,180,false] spawn OKS_fnc_ArtyFire; sleep 5;
 		[east,arty_3,getpos ArtyTarget,7,300,180,false] spawn OKS_fnc_ArtyFire;
 
-
 		// AAA Guard.
 		[[[[2058.63,2876.74,1.90735e-06],82,"Up",[]],[[2043.54,2882.67,3.8147e-06],225,"Up",[]],[[2069.64,2900.68,0],78,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 
@@ -65,7 +65,7 @@ switch (_case) do {
 		// Trenches 2 - Artillery
 		[[[[2291.66,2668.08,-3.24249e-05],175,"Middle",[]],[[2281.64,2666.32,0],282,"Middle",[]],[[2276.39,2657.04,-3.8147e-06],164,"Up",[]],[[2264.58,2657.99,-3.43323e-05],196,"Up",[]],[[2267.53,2660.15,-0.0567818],175,"Middle",[]],[[2265.29,2678.62,0],165,"Up",[]],[[2257.81,2674.29,0],207,"Up",[]],[[2255.43,2676.33,-0.0319462],175,"Up",[]],[[2256.06,2695.77,0],175,"Up",[]],[[2258.19,2685.57,0],175,"Middle",[]],[[2276.46,2679.17,0.0577106],228,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 		[[[[2271.33,2716.9,5.72205e-06],190,"Middle",[]],[[2294.2,2731.97,1.90735e-06],255,"Middle",[]],[[2305.71,2735.08,0],282,"Middle",[]],[[2315.32,2727.83,0],111,"Middle",[]],[[2301.66,2709.89,3.70982],212,"Up",[]],[[2293.18,2711.74,3.63217],173,"Up",[]]],[["UK3CB_CHD_O_SPG9",[2282.48,2728.14,0],331,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
-		[[[[2317.42,2686.06,0.745981],173,"Up",[]],[[2311.78,2687,0.563923],264,"Up",[]],[[2283.26,2688.04,0.225895],38,"Up",[]],[[2278.45,2684.28,0.130957],257,"Up",[]]],[["rhs_bmp1_msv",[2320.51,2703.94,-0.0020504],97,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",1]]]],["UK3CB_CHD_O_SPG9",[2314.5,2692.06,0],86,[["gunner",-1,[0]]],[]],["UK3CB_CHD_O_SPG9",[2226.6,2440.33,0.0224991],318,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
+		[[[[2317.42,2686.06,0.745981],173,"Up",[]],[[2311.78,2687,0.563923],264,"Up",[]],[[2283.26,2688.04,0.225895],38,"Up",[]],[[2278.45,2684.28,0.130957],257,"Up",[]]],[["rhs_bmp1_msv",[2318.02,2704.26,0.20110245],97,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",1]]]],["UK3CB_CHD_O_SPG9",[2314.5,2692.06,0],86,[["gunner",-1,[0]]],[]],["UK3CB_CHD_O_SPG9",[2226.6,2440.33,0.0224991],318,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 	
 		// Patrols.
 		[[[[2102.16,2478.3,0],0,[]],[[2107.16,2473.3,0],0,[]],[[2097.16,2473.3,0],0,[]],[[2112.16,2468.3,0],0,[]]],[],[[[2258.99,2517.64,0],[[0,"Move"],[1,"SAFE"]]],[[2262.35,2450.19,-5.72205e-06],[[0,"Move"]]],[[2106.63,2427.67,-8.01086e-05],[[0,"Move"]]],[[2105.79,2463.45,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
