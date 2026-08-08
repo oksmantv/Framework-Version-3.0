@@ -33,13 +33,13 @@ if(typeName _Target != "OBJECT") exitWith {
 };
 
 cameraEffectEnableHUD true;
-_Position = _Target getPos [75,(_Target getDir _User)];
-_Camera = "camera" camCreate [_Position select 0,_Position select 1,75];
+_Position = _Target getPos [250,(_Target getDir _User)];
+_Camera = "camera" camCreate [_Position select 0,_Position select 1,100];
 _Camera camSetTarget (getPos _Target);
-_Camera camSetFov 0.4;
+_Camera camSetFov 0.20;
 _Camera cameraEffect ["EXTERNAL", "back"];
 _Camera camCommit 0;
-[_Camera,_Target] spawn _CameraRotation;
+//[_Camera,_Target] spawn _CameraRotation;
 _User setVariable ["CameraObject",_Camera,true];
 (findDisplay 46) displayAddEventHandler ["MouseButtonDown", {
 	_Camera = player getVariable ["CameraObject",nil];

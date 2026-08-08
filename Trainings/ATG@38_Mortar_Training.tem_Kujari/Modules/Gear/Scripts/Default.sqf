@@ -81,7 +81,7 @@ switch (toLower(_role)) do {
 		[_rifleC, _rifleC_mag, ""] call _addPrimary;
 		[_pistol, _pistol_mag, ""] call _addHandGun;
 		_IFAK call _addToUniform;
-		[[_microDAGRGps,1],[_notepad,1],[_mortarRangeCard,1],[_mapTools,1],[_rifleC_mag_tr,3],[_rifleC_mag,4]] call _addToUniform;
+		[[_gps,1],[_notepad,1],["OKS_M6_RangeCard",1],[_mapTools,1],[_rifleC_mag_tr,3],[_rifleC_mag,4]] call _addToUniform;
 		[[_pistol_mag,2],[_grenade,2]] call _addToUniform;
 		[[_1rndMortarHE,6],[_packedHEABround,2]] call _addToVest;
 		[[_packedHEround,4]] call _addToBackpack;

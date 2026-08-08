@@ -32,8 +32,6 @@ private _snapfireAction = [
     },
     {
         params ["_target", "_player", "_params"];
-        ([vehicle _player] call OKS_fnc_isMortarVehicle)
-        &&
         !((group _player) getVariable ['ActiveMortarTask',false])
     },
     {},
@@ -58,8 +56,6 @@ private _markerGuidedAction = [
     },
     {
         params ["_target", "_player", "_params"];
-        ([vehicle _player] call OKS_fnc_isMortarVehicle)
-        &&
         !((group _player) getVariable ['ActiveMortarTask',false])
     },
     {},
@@ -74,7 +70,7 @@ private _mortarTrainingAction = [
     {},
     {
         params ["_target", "_player", "_params"];
-        [vehicle _player] call OKS_fnc_isMortarVehicle
+        true
     },
     {},
     []

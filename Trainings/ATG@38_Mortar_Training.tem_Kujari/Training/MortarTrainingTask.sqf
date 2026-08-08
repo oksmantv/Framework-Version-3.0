@@ -88,6 +88,12 @@ if(_Snapfiring) then {
 };
 
 _RandomId = format ["%1_Task_%2",groupId _PlayerGroup,random 9999];
+private _flareGroup = createGroup sideLogic;
+private _flareModule = "JCA_ModuleSignalFlare_Red_F" createUnit [
+	getPos _MortarTarget,
+	_flareGroup,
+	"this setVariable ['BIS_fnc_initModules_disableAutoActivation',false,true]"
+];
 [
 	_PlayerGroup,
 	_RandomId,
@@ -126,6 +132,14 @@ waitUntil {sleep 1; {Alive _X && [_X] call ace_common_fnc_isAwake} count units _
 _MortarTarget setVariable ["IsActiveTarget",false,true];		
 _PlayerGroup setVariable ['ActiveMortarTask',false,true];
 _PlayerGroup setVariable ['CurrentMortarTarget',false,true];
+
+if(!isNil "_flareGroup") then {
+	deleteGroup _flareGroup;
+};
+if(!isNil "_flareModule") then {
+	deleteVehicle _flareModule;
+};
+{deleteVehicle _x} forEach ((getPos _MortarTarget) nearObjects ["JCA_GrenadeAmmo_SignalFlare_Red", 100]);
 
 {
 	_X setDamage 1;
