@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8126;
+		nextID=8153;
 	};
 	class Camera
 	{
@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="atg@38_mortar_training";
+sourceName="ATG@38_Mortar_Training";
 addons[]=
 {
 	"A3_Characters_F",
@@ -15827,7 +15827,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="STRING";
-														value="BAF-D";
+														value="FRANCE-D";
 													};
 												};
 												class Item1
@@ -34383,7 +34383,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={5467.1836,13.467789,14416.651};
-					angle=-0.24410942;
+					angle=-0.24410941;
 					class Attributes
 					{
 						text="HideTrigger";

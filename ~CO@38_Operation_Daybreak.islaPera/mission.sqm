@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="CO@38_Operation_Daybreak";
+sourceName="~CO@38_Operation_Daybreak";
 addons[]=
 {
 	"A3_Characters_F",

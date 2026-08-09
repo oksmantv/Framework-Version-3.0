@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8249;
+		nextID=8297;
 	};
 	class Camera
 	{
@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="ATG@38_Mortar_Training";
+sourceName="atg@38_mortar_training";
 addons[]=
 {
 	"A3_Characters_F",
@@ -15860,7 +15860,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="STRING";
-														value="FINLAND-W";
+														value="GERMAN-W";
 													};
 												};
 												class Item1
@@ -33427,7 +33427,7 @@ class Mission
 											colorName="ColorWEST";
 											a=0.69999999;
 											b=0.69999999;
-											angle=55.123291;
+											angle=55.123283;
 											id=3080;
 										};
 										class Item3

@@ -47,7 +47,7 @@ if (_role isEqualTo "jetp") then {
 };
 
 _silencer = "JCA_muzzle_snds_556_advanced_olive";
-_pointer = "JCA_acc_DualMount_olive_Pointer";
+_pointer = "GOL_OX3000";
 _sight = "JCA_optic_IHO_olive";
 _bipod = "JCA_bipod_04_olive";
 
@@ -55,17 +55,17 @@ _rifle = ["JCA_arifle_M4A4_VFG_olive_F", _silencer, _pointer, _sight, _bipod];
 _rifleC = ["JCA_arifle_M4A4_AFG_olive_F", _silencer, _pointer, _sight, _bipod];
 _rifleGL = ["JCA_arifle_M4A4_GL_olive_F", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["JCA_arifle_SR10_VFG_olive_F", _silencer, _pointer, _sight, _bipod];
-_rifle_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-_rifle_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
-_rifleGL_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-_rifleGL_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
-_rifleC_mag = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-_rifleC_mag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
+_rifle_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
+_rifle_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
+_rifleGL_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
+_rifleGL_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
+_rifleC_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
+_rifleC_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
 _rifleL_mag = "JCA_20Rnd_762x51_Red_PMAG";
 _rifleL_mag_tr = "JCA_20Rnd_762x51_Tracer_Red_PMAG";
 
-_LMG = ["rhs_weap_m249_light_S", _silencer, "JCA_acc_LaserModule_olive_Pointer", _sight, "rhsusf_acc_grip4_bipod"];
-_LMG_mag = "rhsusf_200Rnd_556x45_M855_mixed_soft_pouch";
+_LMG = ["GOL_weap_m249_pip", "JCA_muzzle_snds_556_advanced_black", "", _sight, "rhsusf_acc_saw_bipod"];
+_LMG_mag = "GOL_rhsusf_200rnd_556x45_AP45_tracer_red";
 
 _MMG = ["UK3CB_BAF_L110_762", "UK3CB_BAF_Silencer_L110", "JCA_acc_LaserModule_olive_Pointer", _sight, _bipod];
 _MMG_mag = "UK3CB_BAF_762_200Rnd_T";
@@ -85,7 +85,7 @@ _AA = ["rhs_weap_fim92", _silencer, _pointer, _sight, _bipod];
 _AA_mag = "Titan_AA";
 
 _pistol = ["JCA_hgun_P226_black_F", _silencer, _pointer, _sight, _bipod];
-_pistol_mag = "JCA_15Rnd_9x21_P226_Red_Mag";
+_pistol_mag = "JCA_15Rnd_9x19_P226_Mag";
 
 _pdw = ["JCA_smg_UMP_black_F", _silencer, _pointer, _sight, _bipod];
 _pdw_mag = "JCA_25Rnd_45ACP_UMP_Red_Mag";
