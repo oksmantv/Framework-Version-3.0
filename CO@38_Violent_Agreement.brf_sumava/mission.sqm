@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17407;
+		nextID=17438;
 	};
 	class Camera
 	{
-		pos[]={8808.4404,155.52907,7463.7393};
-		dir[]={-0.15818052,-0.51579893,0.84198004};
-		up[]={-0.095235698,0.85670966,0.50693065};
-		aside[]={0.98280668,0,0.18463725};
+		pos[]={9485.168,26.319302,10991.657};
+		dir[]={0.34414908,-0.34691685,-0.87250197};
+		up[]={0.12729649,0.93788707,-0.32272792};
+		aside[]={-0.93027198,-2.1758024e-07,-0.36693463};
 	};
 };
 binarizationWanted=0;
@@ -39447,7 +39447,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={9483.7813,15.192981,10942.382};
+								position[]={9484.0566,15.226049,10943.856};
 								angles[]={0.0016194459,6.1805868,0};
 							};
 							side="Empty";
@@ -39459,7 +39459,6 @@ class Mission
 							};
 							id=2586;
 							type="RHS_UH60M_d";
-							atlOffset=-0.035526276;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -39878,8 +39877,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={9521.4268,15.694744,10976.44};
-								angles[]={0,4.6509361,0};
+								position[]={9521.8125,15.694744,10976.233};
+								angles[]={-0,4.6509361,0};
 							};
 							side="Empty";
 							flags=4;
@@ -39985,8 +39984,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={9453.2969,15.684744,10937.288};
-								angles[]={0,6.2136512,0};
+								position[]={9450.625,15.684744,10937.726};
+								angles[]={-0,6.2136512,0};
 							};
 							side="Empty";
 							flags=4;
@@ -41329,7 +41328,7 @@ class Mission
 					};
 					id=9135;
 					type="81mm_mortar_case_quad";
-					atlOffset=0.00034046173;
+					atlOffset=-0.27582932;
 				};
 				class Item22
 				{
@@ -41346,7 +41345,7 @@ class Mission
 					};
 					id=9136;
 					type="81mm_mortar_case_quad";
-					atlOffset=0.0001335144;
+					atlOffset=-0.27603722;
 				};
 				class Item23
 				{
@@ -41363,6 +41362,7 @@ class Mission
 					};
 					id=9137;
 					type="81mm_mortar_case_quad";
+					atlOffset=-0.26779747;
 				};
 				class Item24
 				{
@@ -46707,7 +46707,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={10248.829,14.000404,8547.0313};
+								position[]={10248.829,14.000404,8547.0312};
 								angles[]={6.2282419,1.0859779,6.2033563};
 							};
 							side="Empty";
@@ -47546,7 +47546,7 @@ class Mission
 				};
 			};
 			id=403;
-			atlOffset=0.56770897;
+			atlOffset=0.55194855;
 		};
 		class Item2
 		{
@@ -47613,7 +47613,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={8850.7959,4.0646372,7613.2046};
-					angle=-1.9321789;
+					angle=-1.9321787;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -47689,7 +47689,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={8815.6992,5.0722604,7555.3062};
-					angle=3.7938261;
+					angle=3.7938259;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -47708,7 +47708,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={8747.3926,14.021765,7466.5293};
-					angle=3.7938259;
+					angle=3.7938256;
 					class Attributes
 					{
 						text="HideTrigger";
@@ -49947,7 +49947,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=33.032566;
-					angle=114.05329;
+					angle=114.05328;
 					id=8834;
 				};
 				class Item73
@@ -49961,7 +49961,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=33.032566;
-					angle=114.05329;
+					angle=114.05328;
 					id=8835;
 				};
 				class Item74
@@ -50261,7 +50261,7 @@ class Mission
 				class Item95
 				{
 					dataType="Marker";
-					position[]={11923.663,129.14128,8444.5313};
+					position[]={11923.663,129.14128,8444.5312};
 					name="FLNSEG_WEST_29_INNER";
 					markerType="RECTANGLE";
 					type="";
@@ -50724,7 +50724,7 @@ class Mission
 				class Item112
 				{
 					dataType="Marker";
-					position[]={4812.2813,64.62941,7951.2012};
+					position[]={4812.2812,64.62941,7951.2012};
 					name="marker_11";
 					type="UK3CB_Marker_CW_SOV";
 					a=0.5;
@@ -51743,7 +51743,7 @@ class Mission
 					a=0.75;
 					b=0.75;
 					id=8941;
-					atlOffset=4.7619934;
+					atlOffset=3.8146973e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -54643,7 +54643,6 @@ class Mission
 					a=0.5;
 					b=0.5;
 					id=9268;
-					atlOffset=0.025131226;
 					class CustomAttributes
 					{
 						class Attribute0

@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=14216;
+		nextID=14245;
 	};
 	class Camera
 	{
-		pos[]={8297.1299,44.688686,6781.8682};
-		dir[]={0.72145617,-0.69248003,0.0026629835};
-		up[]={0.69247657,0.72143048,0.0025568546};
-		aside[]={0.0036950153,-1.0312124e-06,-1.0000098};
+		pos[]={8303.8682,37.215092,6783.5068};
+		dir[]={0.85294408,-0.51222372,-0.10056455};
+		up[]={0.50870019,0.85885209,-0.059977207};
+		aside[]={-0.11709183,3.7252903e-09,-0.99312115};
 	};
 };
 binarizationWanted=0;
@@ -35546,7 +35546,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=18;
+		items=14;
 		class Item0
 		{
 			dataType="Layer";
@@ -35771,7 +35771,7 @@ class Mission
 						class Item5
 						{
 							dataType="Trigger";
-							position[]={8791.6563,20.713131,5025};
+							position[]={8791.6562,20.713131,5025};
 							angle=6.2188663;
 							class Attributes
 							{
@@ -36919,7 +36919,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8319.5313,14.161434,6781.4707};
+										position[]={8319.5312,14.161434,6781.4707};
 										angles[]={0,3.2337666,0};
 									};
 									side="East";
@@ -44204,7 +44204,7 @@ class Mission
 					};
 					id=3597;
 					type="Land_CzechHedgehog_01_old_F";
-					atlOffset=-0.00024414063;
+					atlOffset=-0.00024414062;
 				};
 				class Item17
 				{
@@ -44432,7 +44432,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8659.21,15.483159,5530.2813};
+						position[]={8659.21,15.483159,5530.2812};
 						angles[]={0,4.6950493,6.2791886};
 					};
 					side="Empty";
@@ -45279,7 +45279,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8654.5313,15.92065,5566.9648};
+						position[]={8654.5312,15.92065,5566.9648};
 						angles[]={0,4.7587662,0};
 					};
 					side="Empty";
@@ -49072,7 +49072,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8659.0313,16.057838,5544.0107};
+						position[]={8659.0312,16.057838,5544.0107};
 						angles[]={6.2765818,4.7587595,0.0011452842};
 					};
 					side="Empty";
@@ -52185,7 +52185,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={8723.9434,16.044477,4231.1563};
+								position[]={8723.9434,16.044477,4231.1562};
 								angles[]={0,6.2538309,0};
 							};
 							side="Empty";
@@ -52743,126 +52743,6 @@ class Mission
 			atlOffset=-0.67740059;
 		};
 		class Item13
-		{
-			dataType="Marker";
-			position[]={11278.779,7.1010742,43366.383};
-			name="marker_10";
-			markerType="RECTANGLE";
-			type="";
-			fillName="SolidFull";
-			a=35550;
-			b=35550;
-			id=4794;
-			atlOffset=-53.318924;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ENH_markerShape";
-					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="NONE";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item14
-		{
-			dataType="Marker";
-			position[]={45053.117,49.144531,3193.7837};
-			name="marker_11";
-			markerType="RECTANGLE";
-			type="";
-			fillName="SolidFull";
-			a=35550;
-			b=35550;
-			id=4795;
-			atlOffset=-7.951683;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ENH_markerShape";
-					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="NONE";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item15
-		{
-			dataType="Marker";
-			position[]={-28843.803,52.75415,4770.6504};
-			name="marker_12";
-			markerType="RECTANGLE";
-			type="";
-			fillName="SolidFull";
-			a=35550;
-			b=35550;
-			id=4796;
-			atlOffset=-2.6277428;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ENH_markerShape";
-					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="NONE";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item16
-		{
-			dataType="Marker";
-			position[]={9729.5547,24.37207,-31604.547};
-			name="marker_13";
-			markerType="RECTANGLE";
-			type="";
-			fillName="SolidFull";
-			a=35550;
-			b=35550;
-			id=4797;
-			atlOffset=-28.995258;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ENH_markerShape";
-					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="NONE";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item17
 		{
 			dataType="Layer";
 			name="FARP Laxon";

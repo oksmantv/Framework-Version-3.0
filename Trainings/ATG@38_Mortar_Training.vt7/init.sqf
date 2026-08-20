@@ -1,9 +1,10 @@
 	MISSION_ROOT = call { private "_arr"; _arr = toArray __FILE__; _arr resize (count _arr - 8); toString _arr};
 
 	if(!isNil "FriendlySquad") then {
-		east setFriend [west,1];
+		east setFriend [west,0];
 		west setFriend [east,0];
 		east setFriend [independent,0];
+		independent setFriend [east,0];
 	};
 
 	OKS_MortarWhitelist = [

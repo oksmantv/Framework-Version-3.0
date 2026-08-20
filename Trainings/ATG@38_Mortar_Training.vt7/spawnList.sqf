@@ -24,6 +24,33 @@ params [
 switch (_case) do {
 
 	case 1: {
+
+		["Battalion HQ","side","Mortar Course Initiated - Spawning Enemies"] spawn OKS_fnc_ChatGlobal;
+		[[
+			[[15261.1,16198.8,2.50645],198,"Middle",[[301,0]],"mmg"],[[15278,16204.1,0.998634],198,"Up",[[301,0]],"mmg"],
+			[[15313.4,16183.9,0.582781],109,"Up",[[301,0]],"mmg"],[[15313.5,16172.7,0.377056],169,"Up",[[301,0]],"mmg"],
+			[[15298.2,16178.4,0.404589],198,"Up",[[301,0]],"mmg"],[[15288.3,16185.2,0.41984],150,"Middle",[[301,0]],"ab"],
+			[[15265.7,16200.8,0.763462],73,"Middle",[[301,0]],"ab"],[[15291.7,16212.3,0.320665],186,"Middle",[[301,0]],"ab"],
+			[[15287.6,16226.8,0.266455],161,"Middle",[[301,0]],"ab"],[[15288.7,16232.5,0.42926],281,"Up",[[301,0]],"ab"],
+			[[15300.4,16214.9,0.523249],150,"Middle",[[301,0]],"ab"],[[15302.1,16194.1,0.284185],316,"Middle",[[301,0]],"ab"],
+			[[15293,16179.7,0.656393],207,"Middle",[[301,0]],"ab"],[[15218.5,16329.1,0.266573],200,"Up",[[301,0]],"ab"],
+			[[15205,16336.6,0.594179],200,"Up",[[301,0]],"ab"],[[15186.2,16345.9,0.881924],124,"Up",[[301,0]],"ab"],
+			[[15155,16364,0.832592],147,"Up",[[301,0]],"ab"],[[15169.3,16353.3,1.0028],206,"Up",[[301,0]],"ab"],
+			[[15181.2,16344.8,0.741762],31,"Middle",[[301,0]],"ab"],[[15197.6,16365.6,1.11003],195,"Middle",[[301,0]],"ab"],
+			[[15212,16363.9,0.278027],281,"Middle",[[301,0]],"ab"],[[15229.2,16356.9,0.451101],121,"Middle",[[301,0]],"ab"],
+			[[15200.5,16368.4,0.653822],47,"Up",[[301,0]],"ab"],[[15189.4,16378.9,1.02582],198,"Middle",[[301,0]],"ab"],
+			[[15181.5,16374.4,0.557426],83,"Middle",[[301,0]],"ab"],[[15163.4,16387.8,0.363796],181,"Up",[[301,0]],"ab"],
+			[[15191.6,16381.4,0.94046],50,"Middle",[[301,0]],"ab"],[[15192.6,16339.8,0.15226],198,"Up",[[301,0]],"mmg"],
+			[[15163.1,16356.1,1.29988],203,"Up",[[301,0]],"mmg"],[[15181.9,16361.8,0.172405],198,"Middle",[[301,0]],"mmg"]
+		],[],[],east] call GW_Common_fnc_spawnGroup;
+
+		[[],[
+			["rhs_KORD_MSV",[15285.3,16196.9,0.0644093],228,[["gunner",-1,[0]]],[[351,false]]],
+			["rhs_KORD_MSV",[15181.3,16344.5,2.00447],190,[["gunner",-1,[0]]],[[351,false]]],
+			["UK3CB_CHD_O_LR_SF_WMIK_PKM_PKM",[15349.2,16218.3,0.121626],178,[["driver",-1,[]],["gunner",-1,[3]],["commander",-1,[4]]],[[6,["CHDKZ",1]],[7,["Axe_Hide",1,"Exhaust_Cover_Hide",1,"Front_Fuel_Boxes_Hide",1,"Light_Covers_Hide",1,"Pole_Hide",1,"Rear_Cargo_Box_Hide",1,"Shovel_Hide",1,"Side_Rails_Hide",1,"Wirecutter_Hide",1,"DoorRearLeft_Hide",0,"DoorRearRight_Hide",0,"Spare_Wheel_2_Hide",0,"DoorFrontLeft_Hide",0,"DoorFrontRight_Hide",0,"DoorsRear_Hide",0,"Front_Grill_Hide",0,"Plate_1_Hide",0,"Plate_2_Hide",0,"Radio_Hide",0,"Spare_Wheel_Hide",0,"Spare_Wheel_1_Hide",0]],[351,false]]],
+			["UK3CB_CHD_O_LR_SF_WMIK_PKM_PKM",[15252,16351.7,-0.00242615],177,[["driver",-1,[]],["gunner",-1,[3]],["commander",-1,[4]]],[[6,["CHDKZ",1]],[7,["Axe_Hide",1,"Exhaust_Cover_Hide",1,"Front_Fuel_Boxes_Hide",1,"Light_Covers_Hide",1,"Pole_Hide",1,"Rear_Cargo_Box_Hide",1,"Shovel_Hide",1,"Side_Rails_Hide",1,"Wirecutter_Hide",1,"DoorRearLeft_Hide",0,"DoorRearRight_Hide",0,"Spare_Wheel_2_Hide",0,"DoorFrontLeft_Hide",0,"DoorFrontRight_Hide",0,"DoorsRear_Hide",0,"Front_Grill_Hide",0,"Plate_1_Hide",0,"Plate_2_Hide",0,"Radio_Hide",0,"Spare_Wheel_Hide",0,"Spare_Wheel_1_Hide",0]],[351,false]]]
+		],[],east] call GW_Common_fnc_spawnGroup;
+
 	};
 
 	case 2: {

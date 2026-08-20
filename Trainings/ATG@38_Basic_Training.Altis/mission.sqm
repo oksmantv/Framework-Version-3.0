@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=31294;
+		nextID=31451;
 	};
 	class Camera
 	{
-		pos[]={14956.504,35.127537,16970.662};
-		dir[]={0.76230264,-0.62284207,0.17596206};
-		up[]={0.60688388,0.78234756,0.1400868};
-		aside[]={0.22491544,0,-0.97437841};
+		pos[]={14942.11,137.87115,17209.633};
+		dir[]={0.85365033,-0.50348264,0.13336819};
+		up[]={0.49744862,0.86400545,0.077717789};
+		aside[]={0.15436043,1.3154931e-08,-0.98801523};
 	};
 };
 binarizationWanted=0;
@@ -54549,7 +54549,7 @@ class Mission
 				};
 			};
 			id=856;
-			atlOffset=2.4377975;
+			atlOffset=1.9846077;
 		};
 		class Item11
 		{
@@ -66371,7 +66371,7 @@ class Mission
 									};
 									id=17637;
 									type="Land_HelipadEmpty_F";
-									atlOffset=3.3909893;
+									atlOffset=3.1960335;
 								};
 								class Item28
 								{
@@ -66388,7 +66388,7 @@ class Mission
 									};
 									id=17638;
 									type="Land_HelipadEmpty_F";
-									atlOffset=3.4000015;
+									atlOffset=3.1883659;
 								};
 								class Item29
 								{
@@ -66404,7 +66404,7 @@ class Mission
 									};
 									id=17639;
 									type="Land_HelipadEmpty_F";
-									atlOffset=3.4085999;
+									atlOffset=0.0017910004;
 								};
 								class Item30
 								{
@@ -66469,7 +66469,7 @@ class Mission
 									};
 									id=17643;
 									type="Land_HelipadEmpty_F";
-									atlOffset=7.3750343;
+									atlOffset=0.18309021;
 								};
 								class Item34
 								{
@@ -72020,7 +72020,7 @@ class Mission
 													};
 													id=11673;
 													type="Target_PopUp4_Moving_90deg_F";
-													atlOffset=0.76823282;
+													atlOffset=0.76823258;
 												};
 												class Item6
 												{
@@ -72037,7 +72037,7 @@ class Mission
 													};
 													id=11677;
 													type="Target_PopUp4_Moving_90deg_F";
-													atlOffset=0.76823282;
+													atlOffset=0.76823258;
 												};
 												class Item7
 												{
@@ -77601,7 +77601,7 @@ class Mission
 											};
 											id=12395;
 											type="Land_Boat_04_wreck_F";
-											atlOffset=-1.2018548;
+											atlOffset=-1.2018549;
 										};
 										class Item6
 										{
@@ -78551,7 +78551,7 @@ class Mission
 													};
 													id=12444;
 													type="Target_PopUp4_Moving_90deg_F";
-													atlOffset=0.77117872;
+													atlOffset=0.77117848;
 												};
 												class Item1
 												{
@@ -78636,7 +78636,7 @@ class Mission
 													};
 													id=12449;
 													type="Target_PopUp4_Moving_90deg_F";
-													atlOffset=0.71188021;
+													atlOffset=0.71187997;
 												};
 												class Item6
 												{
@@ -78653,7 +78653,7 @@ class Mission
 													};
 													id=12450;
 													type="Target_PopUp4_Moving_90deg_F";
-													atlOffset=0.71188021;
+													atlOffset=0.71187997;
 												};
 												class Item7
 												{
@@ -85218,7 +85218,7 @@ class Mission
 													};
 													id=13956;
 													type="Target_PopUp4_Moving_90deg_F";
-													atlOffset=0.77045679;
+													atlOffset=0.77045655;
 												};
 												class Item6
 												{
@@ -85235,7 +85235,7 @@ class Mission
 													};
 													id=13957;
 													type="Target_PopUp4_Moving_90deg_F";
-													atlOffset=0.77045679;
+													atlOffset=0.77045655;
 												};
 												class Item7
 												{
@@ -91800,7 +91800,7 @@ class Mission
 													};
 													id=13573;
 													type="Target_PopUp4_Moving_90deg_F";
-													atlOffset=0.76664591;
+													atlOffset=0.76664567;
 												};
 												class Item6
 												{
@@ -91817,7 +91817,7 @@ class Mission
 													};
 													id=13574;
 													type="Target_PopUp4_Moving_90deg_F";
-													atlOffset=0.76664591;
+													atlOffset=0.76664567;
 												};
 												class Item7
 												{
@@ -91838,7 +91838,7 @@ class Mission
 												};
 											};
 											id=13567;
-											atlOffset=0.83662605;
+											atlOffset=0.83662558;
 										};
 										class Item8
 										{
@@ -98349,7 +98349,7 @@ class Mission
 													};
 													id=14339;
 													type="Target_PopUp4_Moving_90deg_F";
-													atlOffset=0.77498674;
+													atlOffset=0.77498651;
 												};
 												class Item6
 												{
@@ -98366,7 +98366,7 @@ class Mission
 													};
 													id=14340;
 													type="Target_PopUp4_Moving_90deg_F";
-													atlOffset=0.77498674;
+													atlOffset=0.77498651;
 												};
 												class Item7
 												{
