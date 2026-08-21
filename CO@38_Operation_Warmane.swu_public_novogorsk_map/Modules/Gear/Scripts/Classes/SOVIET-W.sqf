@@ -17,8 +17,8 @@ _glflareW = "rhs_VG40OP_white";
 
 _insignia = "";
 _goggles = "";
-_helmet = ["rhs_ssh68_2"];
-_OfficerHelmet = "rhs_pilotka";
+_helmet = ["rhsgref_ssh68_vsr_GOL"];
+_OfficerHelmet = "rhs_beret_vdv3_GOL";
 _uniform = "rhs_uniform_flora_patchless";
 _vest = ["rhs_6b23_rifleman","rhs_6b23_engineer","rhs_6b23_rifleman"];
 _backpack = "rhs_sidor";

@@ -63,7 +63,7 @@ private [
 	"_HAT","_HAT_mag","_HAT_mag_HE",
 	"_AA","_AA_Mag",
 	"_pistol","_pistol_mag","_pistol_mag_tr",
-	"_useFactionRadio","_roleUseRadio","_useMineDetector","_mortarRangeCard","_ATrag",
+	"_useFactionRadio","_roleUseRadio","_useMineDetector","_mortarRangeCard","_m6RangeCard","_ATrag",
 	"_Kestrel","_wirecutter","_UAVTerminal","_UAVTerminalB","_UAVTerminalO","_UAVTerminalI","_entrenchingTool","_notepad","_minedetector","_FacPanels",
 	"_mineDetectorVMM3","_mineDetectorVMH3","_mineDetectorVMM3Weapon","_mineDetectorVMH3Weapon",
 	"_mineAperMineDispenserMag","_mineClaymoreMag","_mineSlamMag","_mineAperBoundingMag",
@@ -221,48 +221,8 @@ if (_isMan) then {
 	};
 
 	if !(_errorCode) then {
-		// Strip magazine entries from container cargo before setUnitLoadout.
-		// setUnitLoadout generates "not stored" RPT when a container overflows — stripping mags
-		// first prevents that entirely. Non-magazine items (ACE bandages etc.) are left in place.
-		// All stripped mags are re-added via addMagazines which distributes silently.
-		private _containerMagQueue = createHashMap;
-		{
-			private _containerEntry = _loadout select _x;
-			if (count _containerEntry >= 2) then {
-				private _kept = [];
-				{
-					// COUNT_MAGS expands to [class, count, ammoPerMag] (3-element).
-					// Standard setUnitLoadout items are [class, count] (2-element).
-					// Accept both formats; CfgMagazines check distinguishes mags from items.
-					if (_x isEqualType [] && {count _x >= 2} && {(_x#0) isEqualType ""} && {(_x#1) isEqualType 0}
-						&& {isClass (configFile >> "CfgMagazines" >> (_x#0))}) then {
-						_containerMagQueue set [_x#0, (_containerMagQueue getOrDefault [_x#0, 0]) + (_x#1)];
-					} else {
-						_kept pushBack _x;
-					};
-				} forEach (_containerEntry#1);
-				_containerEntry set [1, _kept];
-			};
-		} forEach [3, 4, 5];
-
 		_unit setUnitLoadout _loadout;
 		_unit setVariable ["GW_Gear_appliedGear", true, true];
-
-		// Distribute container mags manually: vest → uniform → backpack.
-		// Using addMagazines would log "not stored in Vest or Uniform" whenever
-		// backpack is used. Explicit per-item placement avoids that code path entirely.
-		{
-			private _class = _x;
-			for "_i" from 1 to _y do {
-				if (_unit canAddItemToVest _class) then {
-					_unit addItemToVest _class;
-				} else { if (_unit canAddItemToUniform _class) then {
-					_unit addItemToUniform _class;
-				} else {
-					_unit addItemToBackpack _class;
-				}};
-			};
-		} forEach _containerMagQueue;
 
 		if (_isPlayer && _useFactionRadio && _roleUseRadio) then {
 			if(!isNIl "zade_boc_fnc_removeChestpack" && !isNil "zade_boc_fnc_chestpack") then {
@@ -394,7 +354,7 @@ if (_isMan) then {
 				};
 
 				if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {
-					[_unit, _glflareW, 20] call _fnc_AddObjectsCargo;
+					[_unit, _glflareW, 50] call _fnc_AddObjectsCargo;
 				};
 				[_unit, _MAT_mag_HE, 10] call _fnc_AddObjectsCargo;
 				[_unit, _AA_mag, 30] call _fnc_AddObjectsCargo;
@@ -601,6 +561,7 @@ if (_isMan) then {
 				[_unit, _toolKit, 10] call _fnc_AddObjectsCargo;
 				[_unit, _mapTools, 10] call _fnc_AddObjectsCargo;
 				[_unit, _mortarRangeCard, 10] call _fnc_AddObjectsCargo;
+				[_unit, _m6RangeCard, 10] call _fnc_AddObjectsCargo;
 				[_unit, _mineDetectorVMM3, 5] call _fnc_AddObjectsCargo;
 				[_unit, _mineDetectorVMH3, 5] call _fnc_AddObjectsCargo;
 				[_unit, _mineAperMineDispenserMag, 10] call _fnc_AddObjectsCargo;
@@ -714,7 +675,7 @@ if (_isMan) then {
 				[_unit, _cables, 15] call _fnc_AddObjectsCargo;
 
 				if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {
-					[_unit, _glflareW, 16] call _fnc_AddObjectsCargo;
+					[_unit, _glflareW, 24] call _fnc_AddObjectsCargo;
 					[_unit, _glflareR, 8] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareG, 8] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareW, 8] call _fnc_AddObjectsCargo;
@@ -747,16 +708,16 @@ if (_isMan) then {
 				[_unit, _HAT_mag, 3] call _fnc_AddObjectsCargo;
 				[_unit, _AA_mag, 4] call _fnc_AddObjectsCargo;
 				[_unit, _demoCharge, 4] call _fnc_AddObjectsCargo;
-				[_unit, _packedHEround, 5] call _fnc_AddObjectsCargo;
-				[_unit, _packedHEABround, 5] call _fnc_AddObjectsCargo;
-				[_unit, _packedSmokeRound, 5] call _fnc_AddObjectsCargo;
+				[_unit, _packedHEround, 8] call _fnc_AddObjectsCargo;
+				[_unit, _packedHEABround, 2] call _fnc_AddObjectsCargo;
+				[_unit, _packedSmokeRound, 4] call _fnc_AddObjectsCargo;
 				
 				[_unit, _packedDroneAT, 4] call _fnc_AddObjectsCargo;
 				[_unit, _packedDroneAP, 4] call _fnc_AddObjectsCargo;
 				[_unit, _packedDroneRecon, 1] call _fnc_AddObjectsCargo;				
 
 				if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {
-					[_unit, _glflareW, 16] call _fnc_AddObjectsCargo;
+					[_unit, _glflareW, 24] call _fnc_AddObjectsCargo;
 					[_unit, _glflareR, 8] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareG, 8] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareW, 8] call _fnc_AddObjectsCargo;
@@ -813,8 +774,8 @@ if (_isMan) then {
 				[_unit, _demoCharge, 4] call _fnc_AddObjectsCargo;
 
 				if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {
-					[_unit, _glflareW, 24] call _fnc_AddObjectsCargo;
-					[_unit, _glflareR, 10] call _fnc_AddObjectsCargo;
+					[_unit, _glflareW, 40] call _fnc_AddObjectsCargo;
+					[_unit, _glflareR, 20] call _fnc_AddObjectsCargo;
 					[_unit, _glflareG, 10] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareG, 10] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareW, 10] call _fnc_AddObjectsCargo;

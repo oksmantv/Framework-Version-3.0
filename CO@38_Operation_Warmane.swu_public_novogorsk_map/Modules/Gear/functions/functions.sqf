@@ -44,52 +44,17 @@ _addEquipment = {
 	};
 };
 
-// Per-mission cache for CBA_fnc_compatibleItems results.
-// Keyed on "weaponClass|slot" — each unique pair is resolved only once across all unit loadouts.
-if (isNil "GOL_fnc_compatCache") then {
-	GOL_fnc_compatCache = createHashMap;
-};
-_fnc_compatCheck = {
-	params ["_weapon", "_item", "_slot"];
-	if (_item isEqualTo "") exitWith { "" };
-	private _key = _weapon + "|" + _slot;
-	if !(_key in GOL_fnc_compatCache) then {
-		GOL_fnc_compatCache set [_key, ([_weapon, _slot] call CBA_fnc_compatibleItems)];
-	};
-	if (_item in (GOL_fnc_compatCache get _key)) then { _item } else { "" }
-};
-
 _addPrimary = {
-	private _weaponData = _this select 0;
-	private _weapon = if (typeName (_weaponData select 0) == "ARRAY") then {
-		selectRandom (_weaponData select 0)
-	} else {
-		_weaponData select 0
+	if(typeName ((_this select 0) select 0) == "ARRAY") then {
+		_loadout set [0, [selectRandom((_this select 0) select 0),(_this select 0 select 1),(_this select 0 select 2),(_this select 0 select 3),ADD_MAG(_this select 1),ADD_MAG(_this select 2),(_this select 0 select 4)]]
+	}
+	else
+	{
+		_loadout set [0, [(_this select 0 select 0),(_this select 0 select 1),(_this select 0 select 2),(_this select 0 select 3),ADD_MAG(_this select 1),ADD_MAG(_this select 2),(_this select 0 select 4)]]
 	};
-	private _muzzle = [_weapon, _weaponData select 1, "muzzle"]     call _fnc_compatCheck;
-	private _flash  = [_weapon, _weaponData select 2, "flashlight"] call _fnc_compatCheck;
-	private _optic  = [_weapon, _weaponData select 3, "optics"]     call _fnc_compatCheck;
-	private _bipod  = [_weapon, _weaponData select 4, "bipod"]      call _fnc_compatCheck;
-	_loadout set [0, [_weapon, _muzzle, _flash, _optic, ADD_MAG(_this select 1), ADD_MAG(_this select 2), _bipod]];
 };
-_addLaunchers = {
-	private _weaponData = _this select 0;
-	private _weapon = _weaponData select 0;
-	private _muzzle = [_weapon, _weaponData select 1, "muzzle"]     call _fnc_compatCheck;
-	private _flash  = [_weapon, _weaponData select 2, "flashlight"] call _fnc_compatCheck;
-	private _optic  = [_weapon, _weaponData select 3, "optics"]     call _fnc_compatCheck;
-	private _bipod  = [_weapon, _weaponData select 4, "bipod"]      call _fnc_compatCheck;
-	_loadout set [1, [_weapon, _muzzle, _flash, _optic, ADD_MAG(_this select 1), ADD_MAG(_this select 2), _bipod]];
-};
-_addHandGun = {
-	private _weaponData = _this select 0;
-	private _weapon = _weaponData select 0;
-	private _muzzle = [_weapon, _weaponData select 1, "muzzle"]     call _fnc_compatCheck;
-	private _flash  = [_weapon, _weaponData select 2, "flashlight"] call _fnc_compatCheck;
-	private _optic  = [_weapon, _weaponData select 3, "optics"]     call _fnc_compatCheck;
-	private _bipod  = [_weapon, _weaponData select 4, "bipod"]      call _fnc_compatCheck;
-	_loadout set [2, [_weapon, _muzzle, _flash, _optic, ADD_MAG(_this select 1), ADD_MAG(_this select 2), _bipod]];
-};
+_addLaunchers = {_loadout set [1, [(_this select 0 select 0),(_this select 0 select 1),(_this select 0 select 2),(_this select 0 select 3),ADD_MAG(_this select 1),ADD_MAG(_this select 2),(_this select 0 select 4)]]};
+_addHandGun = {_loadout set [2, [(_this select 0 select 0),(_this select 0 select 1),(_this select 0 select 2),(_this select 0 select 3),ADD_MAG(_this select 1),ADD_MAG(_this select 2),(_this select 0 select 4)]]};
 _addToUniform = {
 	if !(count (_loadout select 3) isEqualTo 0) then {
 		{
