@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17403;
+		nextID=17441;
 	};
 	class Camera
 	{
@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="CO@38_Operation_Boyevaya_Mashina";
+sourceName="~CO@38_Operation_Boyevaya_Mashina";
 addons[]=
 {
 	"A3_Characters_F",
@@ -44606,7 +44606,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=144.25388;
-					angle=227.72586;
+					angle=227.72585;
 					id=4764;
 				};
 				class Item21
@@ -44620,7 +44620,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=144.25388;
-					angle=227.72586;
+					angle=227.72585;
 					id=4765;
 				};
 				class Item22
@@ -44662,7 +44662,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=126.74385;
-					angle=220.66734;
+					angle=220.66733;
 					id=4768;
 				};
 				class Item25
@@ -44676,7 +44676,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=126.74385;
-					angle=220.66734;
+					angle=220.66733;
 					id=4769;
 				};
 				class Item26
@@ -45278,7 +45278,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=112.92379;
-					angle=229.08542;
+					angle=229.0854;
 					id=4812;
 				};
 				class Item69
@@ -45292,7 +45292,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=112.92379;
-					angle=229.08542;
+					angle=229.0854;
 					id=4813;
 				};
 				class Item70

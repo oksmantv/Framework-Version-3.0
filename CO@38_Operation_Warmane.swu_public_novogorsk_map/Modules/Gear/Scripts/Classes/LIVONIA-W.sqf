@@ -78,12 +78,12 @@ _MMG_mag = "UK3CB_UKM_100rnd_762x51_RT";
 
 _sight = "";
 
-_LAT = ["uk3cb_m72a1_law_loaded", _silencer, _pointer, _sight, _bipod];
-_LAT_mag = "uk3cb_1nd_m72a1_law_rocket";
+_LAT = ["GOL_weap_RPG17_Type69", _silencer, _pointer, _sight, _bipod];
+_LAT_mag = "GOL_mag_rpg17_Type69";
 _LAT_ReUsable = false;
 
-_MAT = ["launch_RPG7_F", _silencer, _pointer, _sight, _bipod];
-_MAT_mag = "rhs_rpg7_PG7V_mag";
+_MAT = ["GOL_weap_RPG7_F", _silencer, _pointer, _sight, _bipod];
+_MAT_mag = "GOL_mag_rpg7_Type69II";
 _MAT_mag_HE = "rhs_rpg7_type69_airburst_mag";
 
 _HAT = ["launch_I_Titan_short_F", _silencer, _pointer, _sight, _bipod];
