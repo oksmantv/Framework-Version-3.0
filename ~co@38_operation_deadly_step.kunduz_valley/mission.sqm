@@ -24,14 +24,14 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8497.2031,71.200829,6346.9199};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={7883.5898,36.070438,5436.6792};
+		dir[]={0.026239442,-0.38341221,0.92320621};
+		up[]={0.010893021,0.92357653,0.38325906};
+		aside[]={0.99959648,2.9715011e-08,-0.02841052};
 	};
 };
 binarizationWanted=0;
-sourceName="co@38_operation_deadly_step";
+sourceName="~co@38_operation_deadly_step";
 addons[]=
 {
 	"A3_Characters_F",

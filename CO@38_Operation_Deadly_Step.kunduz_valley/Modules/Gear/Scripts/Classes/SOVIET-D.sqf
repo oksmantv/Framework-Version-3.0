@@ -17,7 +17,7 @@ _glflareW = "rhs_VG40OP_white";
 
 _insignia = "";
 _goggles = "G_Armband_darred_F";
-_helmet = ["rhs_ssh6_GOL","UK3CB_H_SSH60_Helmet_Covered_TAN_GOL"];
+_helmet = ["rhs_ssh68_2_GOL","UK3CB_H_SSH60_Helmet_Covered_TAN_GOL"];
 _OfficerHelmet = "rhs_pilotka";
 _uniform = "rhs_uniform_afghanka_para";
 _vest = ["rhs_6b2_lifchik_GOL","rhs_6b2_RPK_GOL","rhs_6b2_SVD_GOL","rhs_6b2_chicom_GOL","rhs_6b2_AK_GOL"];

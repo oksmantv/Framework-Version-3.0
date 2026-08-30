@@ -254,7 +254,7 @@ switch (_case) do {
 
 		_AttackGroups = [];
 
-		[ConvoySpawn_6,ConvoyWP_6,ConvoyEnd_6,east,[6,["rhs_t80","rhs_gaz66_msv","rhs_gaz66_msv","rhs_gaz66_msv","rhs_prp3_msv","rhs_gaz66_msv"],35,50,30],[true,6],_AttackGroups,false,false,["attack"],"offroad"] spawn OKS_fnc_Convoy_Spawn; sleep 120;
+		[ConvoySpawn_6,ConvoyWP_6,ConvoyEnd_6,east,[6,["rhs_t80","rhs_t80","rhs_gaz66_msv","rhs_gaz66_msv","rhs_bmp1_msv","rhs_prp3_msv","rhs_gaz66_msv"],35,50,30],[true,6],_AttackGroups,false,false,["attack"],"offroad"] spawn OKS_fnc_Convoy_Spawn; sleep 120;
 		[ConvoySpawn_7,ConvoyWP_7,ConvoyEnd_7,east,[6,["rhs_bmp1_msv","rhs_t80","rhs_gaz66_msv","rhs_gaz66_msv"],35,50,30],[true,6],_AttackGroups,false,false,["attack"],"offroad"] spawn OKS_fnc_Convoy_Spawn;
 		_Group1 = [[[[10573.1,8294.86,0],302,[[301,0]],"sl"],[[10580,8296.43,0.0247664],302,[[301,0]],"ar"],[[10574.7,8287.96,-0.13922],302,[[301,0]],"mmg"],[[10586.9,8298.01,0.509704],302,[[301,0]],"ag"],[[10576.3,8281.07,-0.468807],302,[[301,0]],"lr"],[[10593.8,8299.59,0.721272],302,[[301,0]],"r"],[[10577.8,8274.18,-0.882334],302,[[301,0]],"mat"],[[10600.7,8301.16,1.00161],302,[[301,1]],"ag"]],[],[[[10443.2,8374.44,-7.15256e-07],[[0,"Move"]]],[[10376.6,8405.97,0],[[0,"Hold"]]]],east] call GW_Common_fnc_spawnGroup;
 		_Group2 = [[[[10542.2,8219.7,1.63803],302,[[301,0]],"sl"],[[10549,8221.27,1.56128],302,[[301,0]],"ar"],[[10543.7,8212.8,1.64604],302,[[301,0]],"mmg"],[[10555.9,8222.85,1.90961],302,[[301,0]],"ag"],[[10545.3,8205.91,1.65777],302,[[301,0]],"lr"],[[10562.8,8224.43,2.16301],302,[[301,0]],"r"],[[10546.9,8199.02,1.63982],302,[[301,0]],"mat"],[[10569.7,8226,2.34958],302,[[301,1]],"ag"]],[],[[[10412.3,8299.28,1.23918],[[0,"Move"]]],[[10345.6,8330.81,1.73508],[[0,"Hold"]]]],east] call GW_Common_fnc_spawnGroup;
