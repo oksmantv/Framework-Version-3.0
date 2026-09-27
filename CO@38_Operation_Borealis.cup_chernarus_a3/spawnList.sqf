@@ -25,69 +25,86 @@ switch (_case) do {
 
 	case 1: {
 
-		// Railroad Contacts.
-		[[
-			[[2009.17,11346.6,0.169708],322,"Up",[[301,0]],"ar"],
-			[[2010.95,11351.7,0.176758],322,"Up",[[301,0]],"ar"],
-			//[[2003.54,11330,0.246811],319,"Up",[[301,0]],"ar"],
-			[[2007.09,11326.4,1.43033],327,"Up",[[301,0]],"ab"],
-			//[[2021.82,11362.6,0.0205688],292,"Middle",[[301,0]],"ab"],
-			[[2003.63,11402.8,-1.52588e-05],279,"Middle",[[301,0]],"ab"]
-		],[],[],east] call GW_Common_fnc_spawnGroup;
-
-		// Tanks at Airfield.
-		[[],[["UK3CB_CHD_O_T72A",[4221.03,10365.8,0],233,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["FIA",1]],[7,["Tanks_Hide",0]],[351,false]]],
+		// Enemy Tanks at Airfield.
+		[[],[
+			["UK3CB_CHD_O_T72A",[4539.12,9866.45,0],178,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["FIA",1]],[7,["Tanks_Hide",0]],[351,false]]],
+			["UK3CB_CHD_O_T72A",[4651.7,10690.9,0],321,[["gunner",-1,[0]]],[[6,["FIA",1]],[7,["Tanks_Hide",0]],[351,false]]],
+			["UK3CB_CHD_O_T72A",[5139.38,9775.17,0],86,[["gunner",-1,[0]]],[[6,["FIA",1]],[7,["Tanks_Hide",0]],[351,false]]],
+			["UK3CB_CHD_O_T72A",[4221.03,10365.8,0],233,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["FIA",1]],[7,["Tanks_Hide",0]],[351,false]]],
 			["UK3CB_CHD_O_T72A",[4497.91,9493.08,-0.00274658],214,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["FIA",1]],[7,["Tanks_Hide",0]],[351,false]]]
 		],[],east] call GW_Common_fnc_spawnGroup;
-		[[],[["UK3CB_CHD_O_T72A",[4651.7,10690.9,0],321,[["gunner",-1,[0]]],[[6,["FIA",1]],[7,["Tanks_Hide",0]],[351,false]]],["UK3CB_CHD_O_T72A",[5139.38,9775.17,0],86,[["gunner",-1,[0]]],[[6,["FIA",1]],[7,["Tanks_Hide",0]],[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
-		[[],[["UK3CB_CHD_O_T72A",[4539.12,9866.45,0],178,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["FIA",1]],[7,["Tanks_Hide",0]],[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
-
-		// Artillery fire
-		null = [west,Arty_1,getpos ArtyTarget_1,7,300,30,false] spawn OKS_fnc_ArtyFire; sleep 2;
-		null = [west,Arty_8,getpos ArtyTarget_1,7,300,30,false] spawn OKS_fnc_ArtyFire; sleep 3;
-		null = [west,Arty_9,getpos ArtyTarget_1,7,300,30,false] spawn OKS_fnc_ArtyFire;
-
-		[[[[2009.17,11346.6,0.169708],322,"Up",[[301,0]],"ar"],[[2010.95,11351.7,0.176758],322,"Up",[[301,0]],"ar"],[[2003.54,11330,0.246811],319,"Up",[[301,0]],"ar"],[[2007.09,11326.4,1.43033],327,"Up",[[301,0]],"ab"],[[2021.82,11362.6,0.0205688],292,"Middle",[[301,0]],"ab"],[[2003.63,11402.8,-1.52588e-05],279,"Middle",[[301,0]],"ab"]],[],[],east] call GW_Common_fnc_spawnGroup;
-		
-		// Patrols Vavivlo
-		[[[[2227.61,11055.2,0],194,[[301,0]],"ftl"],[[2224.01,11061.3,0.851776],194,[[301,0]],"ar"],[[2233.7,11058.8,3.05176e-05],194,[[301,0]],"g"],[[2227.09,11065.9,0],194,[[301,0]],"mat"]],[],[[[2169.1,11089.5,0],[[0,"Move"],[1,"SAFE"]]],[[2218.25,11195.6,3.05176e-05],[[0,"Move"]]],[[2248.07,11093.7,0],[[0,"Move"]]],[[2232.29,11062,3.05176e-05],[[0,"Cycle"]]]],east] call GW_Common_fnc_spawnGroup;
-		[[[[2209.01,10966.5,0],327,[[301,0]],"ftl"],[[2215.93,10965.1,0.851807],327,[[301,0]],"ar"],[[2207.58,10959.6,0],327,[[301,0]],"g"],[[2222.86,10963.7,0],327,[[301,0]],"mat"]],[],[[[2239.98,11002.3,0],[[0,"Move"],[1,"SAFE"]]],[[2278.81,10975.5,0],[[0,"Move"]]],[[2254.24,10941.2,0],[[0,"Move"]]],[[2217.24,10962.5,0],[[0,"Cycle"]]]],east] call GW_Common_fnc_spawnGroup;
-		
-		// Statics Vavilovo
-		[[[[2224.84,11119.1,0],253,"Middle",[[301,0]],"ab"],[[2234.38,11092.3,0],275,"Middle",[[301,0]],"ab"],[[2225.32,11047.7,0],327,"Middle",[[301,0]],"ab"],[[2253.69,10977.4,0],312,"Middle",[[301,0]],"ab"],[[2187.51,11091.3,3.40796],64,"Up",[[301,0]],"ab"],[[2215.35,11011.1,0],349,"Middle",[[301,0]],"ab"],[[2249.93,10890.8,0],317,"Up",[[301,0]],"ab"],[[2248.55,10871.5,0],307,"Up",[[301,0]],"ar"]],[],[],east] call GW_Common_fnc_spawnGroup;
-
-		// HMGs Vavilovo and West Sentry.
-		[[],[["UK3CB_CHD_O_UAZ_MG",[2544.9,11002.6,0],296,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",1,"spare_hide",0]],[351,false]]],["UK3CB_CHD_O_UAZ_MG",[1534.8,10441,9.15527e-05],354,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",1,"spare_hide",0]],[351,false]]],["UK3CB_CHD_O_UAZ_MG",[1547.04,10373.6,0],326,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",1,"spare_hide",0]],[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
 
 		/// AAA
 		[[],[
+			["UK3CB_CW_SOV_O_EARLY_VDV_Ural_Zu23",[3980.68,4726.62,0],55,[["gunner",-1,[0]]],[[6,["SOV",1]],[7,["light_hide",0,"spare_hide",0,"bench_hide",0,"people_tag_hide",0,"rear_numplate_hide",1]],[351,false]]],
+			["UK3CB_CHD_O_Gaz66_ZU23",[5255.04,3780.04,1.52588e-05],344,[["driver",-1,[]],["gunner",-1,[0]],["turret",1,[1]]],[[6,["CHDKZ",1]],[7,["cover_hide",0,"spare_hide",0,"bench_hide",0,"rear_numplate_hide",1,"light_hide",0]],[351,false]]],
+			["UK3CB_CW_SOV_O_Early_VDV_ZU23",[6167.87,7787.88,1],0,[["gunner",-1,[0]]],[[7,["Unfold",0]],[351,false]]],
+			["UK3CB_CSAT_A_O_ZU23",[704.659,8790.15,1],0,[["gunner",-1,[0]]],[[7,["Unfold",0]],[351,false]]],
+			["UK3CB_CW_SOV_O_LATE_Gaz66_ZU23",[5971.93,10159.7,0.00234985],332,[["gunner",-1,[0]]],[[6,["SOV2",1]],[7,["cover_hide",0,"spare_hide",0,"bench_hide",0,"rear_numplate_hide",1,"light_hide",0]],[351,false]]],
 			["UK3CB_CHD_O_Ural_Zu23",[4363.68,10443.7,0],325,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",0,"spare_hide",0,"bench_hide",0,"people_tag_hide",0,"rear_numplate_hide",1]],[351,false]]],
 			["UK3CB_CHD_O_Ural_Zu23",[3726.67,8248.39,0.319214],325,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",0,"spare_hide",0,"bench_hide",0,"people_tag_hide",0,"rear_numplate_hide",1]],[351,false]]],
 			["UK3CB_CHD_O_Ural_Zu23",[3588.73,6926.48,0.559418],325,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",0,"spare_hide",0,"bench_hide",0,"people_tag_hide",0,"rear_numplate_hide",1]],[351,false]]],
 			["UK3CB_CHD_O_Ural_Zu23",[8058.17,9232.57,0.319153],325,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",0,"spare_hide",0,"bench_hide",0,"people_tag_hide",0,"rear_numplate_hide",1]],[351,false]]]
 		],[],east] call GW_Common_fnc_spawnGroup;
+
+		// AA UAZ MGs around Castle.
 		[[],[
-			["UK3CB_CW_SOV_O_Early_VDV_ZU23",[6167.87,7787.88,-3.05176e-05],0,[["gunner",-1,[0]]],[[7,["Unfold",0]],[351,false]]],
-			["UK3CB_CSAT_A_O_ZU23",[704.659,8790.15,-3.05176e-05],0,[["gunner",-1,[0]]],[[7,["Unfold",0]],[351,false]]]
-		],[],east] call GW_Common_fnc_spawnGroup;
-		null = [aaa_1,civilian,false,1500,false] spawn OKS_fnc_Ambient_AAA;
-		[[],[
-			["UK3CB_CHD_O_Gaz66_ZU23",[5255.04,3780.04,1.52588e-05],344,[["driver",-1,[]],["gunner",-1,[0]],["turret",1,[1]]],[[6,["CHDKZ",1]],[7,["cover_hide",0,"spare_hide",0,"bench_hide",0,"rear_numplate_hide",1,"light_hide",0]],[351,false]]]
+			["UK3CB_CHD_O_UAZ_MG",[6438.71,6534.44,0.454407],179,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",1,"spare_hide",0]],[351,false]]],
+			["UK3CB_CHD_O_UAZ_MG",[6427.08,6544.44,0.506317],194,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",1,"spare_hide",0]],[351,false]]],
+			["UK3CB_CHD_O_UAZ_MG",[7681.89,5337.99,0.985931],228,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",1,"spare_hide",0]],[351,false]]],
+			["UK3CB_CHD_O_UAZ_MG",[7660.92,5351.79,0.687805],228,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",1,"spare_hide",0]],[351,false]]],
+			["UK3CB_CHD_O_UAZ_MG",[7507.66,4710.61,0.0732574],18,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",1,"spare_hide",0]],[351,false]]],
+			["UK3CB_CHD_O_UAZ_MG",[7690.73,4911.72,0.262161],341,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",1,"spare_hide",0]],[351,false]]]
 		],[],east] call GW_Common_fnc_spawnGroup;
 
+		null = [aaa_1,civilian,false,1500,false] spawn OKS_fnc_Ambient_AAA;
+
 		// AA.
-		[[],[["rhs_Igla_AA_pod_msv",[6907.38,4936.91,0.317902],0,[["gunner",-1,[0]]],[[351,false]]],["rhs_Igla_AA_pod_msv",[6887.35,4929.03,0.00396729],0,[["gunner",-1,[0]]],[[351,false]]]],[],east] call GW_Common_fnc_spawnGroup;
-		
-		
-		null = [east,Arty_2,getpos ArtyTarget_2,4,240,90,false] spawn OKS_fnc_ArtyFire; sleep 1.2;
-		null = [east,Arty_3,getpos ArtyTarget_2,4,300,90,false] spawn OKS_fnc_ArtyFire; sleep 0.7;
-		null = [east,Arty_7,getpos ArtyTarget_3,4,243,90,false] spawn OKS_fnc_ArtyFire;
-		sleep 15;
-		[[],[["rhsgref_cdf_b_Mi24D_Early",[13.7468,13635.3,71.5584],177,[["driver",-1,[]]],[[6,["Camo7",1]],[351,false]]]],[[[282.151,12509.2,0],[[0,"Move"],[1,"CARELESS"],[2,"BLUE"],[5,"FULL"]]],[[1064.77,12076.1,-3.05176e-05],[[0,"Move"]]],[[7693.27,9149.82,-3.05176e-05],[[0,"Move"]]],[[7890.08,6365.46,0],[[0,"Move"]]],[[5417.5,4249.15,0],[[0,"Move"]]],[[1009.41,8359.47,0],[[0,"Move"]]],[[12617.5,14592.2,0],[[0,"Move"],[7,["true","deleteVehicle vehicle _this; {deleteVehicle (vehicle _X); deleteVehicle _X} foreach thisList;"]]]]],west] call GW_Common_fnc_spawnGroup;
-		sleep 60;	
-		[[],[["rhsgref_cdf_b_Mi24D_Early",[13.7468,13635.3,71.5584],177,[["driver",-1,[]]],[[6,["Camo7",1]],[351,false]]]],[[[282.151,12509.2,0],[[0,"Move"],[1,"CARELESS"],[2,"BLUE"],[5,"FULL"]]],[[1064.77,12076.1,-3.05176e-05],[[0,"Move"]]],[[7693.27,9149.82,-3.05176e-05],[[0,"Move"]]],[[7890.08,6365.46,0],[[0,"Move"]]],[[5417.5,4249.15,0],[[0,"Move"]]],[[1009.41,8359.47,0],[[0,"Move"]]],[[12617.5,14592.2,0],[[0,"Move"],[7,["true","deleteVehicle vehicle _this; {deleteVehicle (vehicle _X); deleteVehicle _X} foreach thisList;"]]]]],west] call GW_Common_fnc_spawnGroup;
-		sleep 60;
-		[[],[["rhsgref_cdf_b_Mi24D_Early",[13.7468,13635.3,71.5584],177,[["driver",-1,[]]],[[6,["Camo7",1]],[351,false]]]],[[[282.151,12509.2,0],[[0,"Move"],[1,"CARELESS"],[2,"BLUE"],[5,"FULL"]]],[[1064.77,12076.1,-3.05176e-05],[[0,"Move"]]],[[7693.27,9149.82,-3.05176e-05],[[0,"Move"]]],[[7890.08,6365.46,0],[[0,"Move"]]],[[5417.5,4249.15,0],[[0,"Move"]]],[[1009.41,8359.47,0],[[0,"Move"]]],[[12617.5,14592.2,0],[[0,"Move"],[7,["true","deleteVehicle vehicle _this; {deleteVehicle (vehicle _X); deleteVehicle _X} foreach thisList;"]]]]],west] call GW_Common_fnc_spawnGroup;
+		[[],[
+			["rhs_Igla_AA_pod_msv",[6907.38,4936.91,0.317902],0,[["gunner",-1,[0]]],[[351,false]]],
+			["rhs_Igla_AA_pod_msv",[6887.35,4929.03,0.00396729],0,[["gunner",-1,[0]]],[[351,false]]]
+		],[],east] call GW_Common_fnc_spawnGroup;	
+
+		if(BOREALIS_MISSION_CODE != 2) then {
+			// Enemy Railroad Contacts.
+			[[
+				[[2009.17,11346.6,0.169708],322,"Up",[[301,0]],"ar"],
+				[[2010.95,11351.7,0.176758],322,"Up",[[301,0]],"ar"],
+				//[[2003.54,11330,0.246811],319,"Up",[[301,0]],"ar"],
+				[[2007.09,11326.4,1.43033],327,"Up",[[301,0]],"ab"],
+				//[[2021.82,11362.6,0.0205688],292,"Middle",[[301,0]],"ab"],
+				[[2003.63,11402.8,-1.52588e-05],279,"Middle",[[301,0]],"ab"]
+			],[],[],east] call GW_Common_fnc_spawnGroup;
+
+			// Friendly Artillery fire
+			null = [west,Arty_1,getpos ArtyTarget_1,7,300,30,false] spawn OKS_fnc_ArtyFire; sleep 2;
+			null = [west,Arty_8,getpos ArtyTarget_1,7,300,30,false] spawn OKS_fnc_ArtyFire; sleep 3;
+			null = [west,Arty_9,getpos ArtyTarget_1,7,300,30,false] spawn OKS_fnc_ArtyFire;
+	
+			// Enemy Patrols Vavivlo
+			[[[[2227.61,11055.2,0],194,[[301,0]],"ftl"],[[2224.01,11061.3,0.851776],194,[[301,0]],"ar"],[[2233.7,11058.8,3.05176e-05],194,[[301,0]],"g"],[[2227.09,11065.9,0],194,[[301,0]],"mat"]],[],[[[2169.1,11089.5,0],[[0,"Move"],[1,"SAFE"]]],[[2218.25,11195.6,3.05176e-05],[[0,"Move"]]],[[2248.07,11093.7,0],[[0,"Move"]]],[[2232.29,11062,3.05176e-05],[[0,"Cycle"]]]],east] call GW_Common_fnc_spawnGroup;
+			[[[[2209.01,10966.5,0],327,[[301,0]],"ftl"],[[2215.93,10965.1,0.851807],327,[[301,0]],"ar"],[[2207.58,10959.6,0],327,[[301,0]],"g"],[[2222.86,10963.7,0],327,[[301,0]],"mat"]],[],[[[2239.98,11002.3,0],[[0,"Move"],[1,"SAFE"]]],[[2278.81,10975.5,0],[[0,"Move"]]],[[2254.24,10941.2,0],[[0,"Move"]]],[[2217.24,10962.5,0],[[0,"Cycle"]]]],east] call GW_Common_fnc_spawnGroup;
+			
+			// Enemy Statics Vavilovo
+			[[[[2224.84,11119.1,0],253,"Middle",[[301,0]],"ab"],[[2234.38,11092.3,0],275,"Middle",[[301,0]],"ab"],[[2225.32,11047.7,0],327,"Middle",[[301,0]],"ab"],[[2253.69,10977.4,0],312,"Middle",[[301,0]],"ab"],[[2187.51,11091.3,3.40796],64,"Up",[[301,0]],"ab"],[[2215.35,11011.1,0],349,"Middle",[[301,0]],"ab"],[[2249.93,10890.8,0],317,"Up",[[301,0]],"ab"],[[2248.55,10871.5,0],307,"Up",[[301,0]],"ar"]],[],[],east] call GW_Common_fnc_spawnGroup;
+
+			// HMGs Vavilovo and West Sentry.
+			[[],[
+				["UK3CB_CHD_O_UAZ_MG",[2544.9,11002.6,0],296,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",1,"spare_hide",0]],[351,false]]],
+				["UK3CB_CHD_O_UAZ_MG",[1534.8,10441,9.15527e-05],354,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",1,"spare_hide",0]],[351,false]]],
+				["UK3CB_CHD_O_UAZ_MG",[1547.04,10373.6,0],326,[["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["light_hide",1,"spare_hide",0]],[351,false]]]
+			],[],east] call GW_Common_fnc_spawnGroup;
+	
+			null = [east,Arty_2,getpos ArtyTarget_2,4,240,90,false] spawn OKS_fnc_ArtyFire; sleep 1.2;
+			null = [east,Arty_3,getpos ArtyTarget_2,4,300,90,false] spawn OKS_fnc_ArtyFire; sleep 0.7;
+			null = [east,Arty_7,getpos ArtyTarget_3,4,243,90,false] spawn OKS_fnc_ArtyFire;
+			sleep 15;
+			[[],[["rhsgref_cdf_b_Mi24D_Early",[13.7468,13635.3,71.5584],177,[["driver",-1,[]]],[[6,["Camo7",1]],[351,false]]]],[[[282.151,12509.2,0],[[0,"Move"],[1,"CARELESS"],[2,"BLUE"],[5,"FULL"]]],[[1064.77,12076.1,-3.05176e-05],[[0,"Move"]]],[[7693.27,9149.82,-3.05176e-05],[[0,"Move"]]],[[7890.08,6365.46,0],[[0,"Move"]]],[[5417.5,4249.15,0],[[0,"Move"]]],[[1009.41,8359.47,0],[[0,"Move"]]],[[12617.5,14592.2,0],[[0,"Move"],[7,["true","deleteVehicle vehicle _this; {deleteVehicle (vehicle _X); deleteVehicle _X} foreach thisList;"]]]]],west] call GW_Common_fnc_spawnGroup;
+			sleep 60;	
+			[[],[["rhsgref_cdf_b_Mi24D_Early",[13.7468,13635.3,71.5584],177,[["driver",-1,[]]],[[6,["Camo7",1]],[351,false]]]],[[[282.151,12509.2,0],[[0,"Move"],[1,"CARELESS"],[2,"BLUE"],[5,"FULL"]]],[[1064.77,12076.1,-3.05176e-05],[[0,"Move"]]],[[7693.27,9149.82,-3.05176e-05],[[0,"Move"]]],[[7890.08,6365.46,0],[[0,"Move"]]],[[5417.5,4249.15,0],[[0,"Move"]]],[[1009.41,8359.47,0],[[0,"Move"]]],[[12617.5,14592.2,0],[[0,"Move"],[7,["true","deleteVehicle vehicle _this; {deleteVehicle (vehicle _X); deleteVehicle _X} foreach thisList;"]]]]],west] call GW_Common_fnc_spawnGroup;
+			sleep 60;
+			[[],[["rhsgref_cdf_b_Mi24D_Early",[13.7468,13635.3,71.5584],177,[["driver",-1,[]]],[[6,["Camo7",1]],[351,false]]]],[[[282.151,12509.2,0],[[0,"Move"],[1,"CARELESS"],[2,"BLUE"],[5,"FULL"]]],[[1064.77,12076.1,-3.05176e-05],[[0,"Move"]]],[[7693.27,9149.82,-3.05176e-05],[[0,"Move"]]],[[7890.08,6365.46,0],[[0,"Move"]]],[[5417.5,4249.15,0],[[0,"Move"]]],[[1009.41,8359.47,0],[[0,"Move"]]],[[12617.5,14592.2,0],[[0,"Move"],[7,["true","deleteVehicle vehicle _this; {deleteVehicle (vehicle _X); deleteVehicle _X} foreach thisList;"]]]]],west] call GW_Common_fnc_spawnGroup;
+		};
 	};
 
 	case 2: {
@@ -189,7 +206,7 @@ switch (_case) do {
 		// Ambush 1
 		[getPos LambsGroupSpawn_1, "ambushhunt", 6, east, 500, []] spawn OKS_fnc_Lambs_SpawnGroup;
 
-		["CDF Command", "side", "1st Platoon this is CDF Command, friendly SU-25s are rolling in for attack runs on the flanks of the village, Command out.","CDF COMMAND", 25000, 100, west] spawn OKS_fnc_ChatGlobal;
+		["CDF Command", "side", "1st Platoon this is CDF Command, friendly SU-25s are rolling in for attack runs on the flanks of the village, Command out.", "CDF Command", 25000, 100, west] spawn OKS_fnc_ChatGlobal;
 		[getPos jetspawn_3, jetstrike_3, getPos jetexit_3, "FIR_Su25SM3_Enemy", west, 100] spawn OKS_fnc_AirStrike; sleep 2;
 
 		// Lopatino.
@@ -462,10 +479,10 @@ switch (_case) do {
 
 		private _FinalWave = [];
 		["west_task_1","SUCCEEDED"] call BIS_fnc_taskSetState;
-		["independent_task_1","SUCCEEDED"] call BIS_fnc_taskSetState;
+		["indep_task_1","SUCCEEDED"] call BIS_fnc_taskSetState;
 		sleep 5;
 		[true, ["main_task_1"], ["The Chedaki are mounting for a final attack, dig in and repel the final attackers.", "Defend OP Harvest", "Defend Harvest"], [6552,5596.44,0.00143433], "ASSIGNED", 2, true, "defend"] call BIS_fnc_taskCreate;
-		["CDF Command", "side", "Task Force Alpha this is CDF Command, the Chedaki are mounting for a final attack, dig in and repel the final attackers, ETA 3 minutes, Command out."] spawn OKS_fnc_ChatGlobal;
+		["CDF Command", "side", "Task Force Alpha this is CDF Command, the Chedaki are mounting for a final attack, dig in and repel the final attackers, ETA 3 minutes, Command out.", "CDF Command", 25000, 100, independent] spawn OKS_fnc_ChatGlobal;
 		sleep 180;
 		
 		_FinalWaveGroup1 = [[[[6439.54,5499.8,0],0,[[301,0]],"sl"],[[6444.54,5494.8,0],0,[[301,0]],"ar"],[[6435.22,5497.59,0],0,[[301,0]],"mmg"],[[6447.64,5493.44,0],0,[[301,0]],"ag"],[[6438.38,5491.35,0],0,[[301,0]],"lr"],[[6440.03,5496.87,0],0,[[301,0]],"r"],[[6441.79,5491.86,0],0,[[301,0]],"mat"],[[6445.03,5491.87,3.05176e-05],0,[[301,1]],"ag"]],[],[[[6458.97,5518.31,0],[[0,"Move"],[1,"AWARE"],[4,"DIAMOND"],[5,"FULL"]]],[[6484.96,5547.21,0],[[0,"Move"]]],[[6509.39,5570.1,0],[[0,"Move"]]],[[6533.47,5596.82,0],[[0,"Move"]]]],east] call GW_Common_fnc_spawnGroup;
@@ -492,16 +509,16 @@ switch (_case) do {
 		{
 			_X setMarkerAlpha 0;
 		} foreach ["marker_394", "marker_395", "marker_396", "marker_397", "marker_398", "marker_399", "marker_400"];
-		["CDF Command", "side", "Task Force Alpha this is CDF Command, the Chedaki are falling back, excellent work, over."] spawn OKS_fnc_ChatGlobal; sleep 10;
-		["CDF Command", "side", "The nearby villages of Mogilevka and Nadezhdino are occupied by artillery elements, we must silence the guns to help the frontline, Command out."] spawn OKS_fnc_ChatGlobal;
+		["CDF Command", "side", "Task Force Alpha this is CDF Command, the Chedaki are falling back, excellent work, over.", "CDF Command", 25000, 100, independent] spawn OKS_fnc_ChatGlobal; sleep 10;
+		["CDF Command", "side", "The nearby villages of Mogilevka and Nadezhdino are occupied by artillery elements, we must silence the guns to help the frontline, Command out.", "CDF Command", 25000, 100, independent] spawn OKS_fnc_ChatGlobal;
 		sleep 5;
 		[true, ["main_task_2"], ["The Chedaki artillery forces are dug in around the area near OP Harvest, in the village of Nadezhdino. We have repelled their reserves, we must advance and silence the guns.", "Attack Nadezhdino", "Nadezhdino"], [5835.22,4764.14,0], "created", 2, true, "attack"] call BIS_fnc_taskCreate;
-		[true, ["main_task_2_1","main_task_2"], ["You have been tasked with hunting down the artillery forces in Nadezhdino. Secure the village and clear out the Chedaki forces, this village will be used for blocking logistics in the coming hours.", "Seize Nadezhdino", "Nadezhdino"], [5838.84,4745.61,0], "created", 2, false, "attack"] call BIS_fnc_taskCreate;
+		[true, ["main_task_2_1","main_task_2"], ["You have been tasked with hunting down the artillery forces in Nadezhdino. Secure the village and clear out the Chedaki forces, this village will be used for blocking logistics in the coming hours.", "Seize Nadezhdino", "Nadezhdino"], nil, "created", 2, false, "attack"] call BIS_fnc_taskCreate;
 		[[Arty_2,Arty_3,Arty_4],"Destroy Artillery","2S1 Self-propelled artillery","You must silence the %2 %1 artillery guns in the area. These barrage the frontlines and cause major casualties.","destroy","main_task_2", false, false] spawn OKS_fnc_Destroy_Task;
 		
 		sleep 5;
-		[true, ["main_task_3"], ["The Chedaki artillery forces are dug in around the area near OP Harvest, in the village of Mogilevka. We have repelled their reserves, we must advance and silence the guns.", "Attack Mogilevka", "Mogilevka"], [5835.22,4764.14,0], "created", 2, true, "attack"] call BIS_fnc_taskCreate;
-		[true, ["main_task_3_1","main_task_3"], ["You have been tasked with hunting down the artillery forces in Mogilevka. Secure the village and clear out the Chedaki forces, this village will be used for blocking logistics in the coming hours.", "Seize Mogilevka", "Nadezhdino"], [5838.84,4745.61,0], "created", 2, false, "attack"] call BIS_fnc_taskCreate;
+		[true, ["main_task_3"], ["The Chedaki artillery forces are dug in around the area near OP Harvest, in the village of Mogilevka. We have repelled their reserves, we must advance and silence the guns.", "Attack Mogilevka", "Mogilevka"], [7544,5153.15,0.00143433], "created", 2, true, "attack"] call BIS_fnc_taskCreate;
+		[true, ["main_task_3_1","main_task_3"], ["You have been tasked with hunting down the artillery forces in Mogilevka. Secure the village and clear out the Chedaki forces, this village will be used for blocking logistics in the coming hours.", "Seize Mogilevka", "Nadezhdino"], nil, "created", 2, false, "attack"] call BIS_fnc_taskCreate;
 		[[Arty_5,Arty_6,Arty_7],"Destroy Artillery","2S1 Self-propelled artillery","You must silence the %2 %1 artillery guns in the area. These barrage the frontlines and cause major casualties.","destroy","main_task_3", false, false] spawn OKS_fnc_Destroy_Task;
 
 		// Enemy Villages - Early Spawn.
@@ -731,7 +748,7 @@ switch (_case) do {
 
 		// Friendly Reinforcements Nadezdhino
 		["main_task_2_1","SUCCEEDED"] call BIS_fnc_taskSetState;
-		["CDF Command", "side", "Task Force Alpha, this is NAPA Group Zulu, friendly forces are coming in from the west. Check your fire, we will garrison the village, Zulu out."] spawn OKS_fnc_ChatGlobal;
+		["CDF Command", "side", "Task Force Alpha, this is NAPA Group Zulu, friendly forces are coming in from the west. Check your fire, we will garrison the village, Zulu out.", "CDF Command", 25000, 100, independent] spawn OKS_fnc_ChatGlobal;
 
 		[[[[5489.18,4492.9,0],65,[[301,0]],"ftl"],[[5486.81,4486.23,0],65,[[301,0]],"ar"],[[5482.51,4495.26,1.52588e-05],65,[[301,0]],"g"],[[5484.45,4479.57,0],65,[[301,0]],"mat"]],[],[[[5791.24,4676.84,0],[[0,"Move"],[1,"AWARE"],[2,"YELLOW"],[4,"COLUMN"],[5,"NORMAL"]]],[[5873.4,4659.72,0.246597],[[0,"guard"]]]],independent] call GW_Common_fnc_spawnGroup;
 		[[[[5469.67,4536.67,0],65,[[301,0]],"ftl"],[[5467.31,4530.01,0],65,[[301,0]],"ar"],[[5463,4539.03,1.52588e-05],65,[[301,0]],"g"],[[5464.95,4523.34,1.52588e-05],65,[[301,0]],"mat"]],[],[[[5771.74,4720.62,0],[[0,"Move"],[1,"AWARE"],[2,"YELLOW"],[4,"COLUMN"],[5,"NORMAL"]]],[[5837.8,4719.8,0],[[0,"guard"]]]],independent] call GW_Common_fnc_spawnGroup;
@@ -746,7 +763,7 @@ switch (_case) do {
 
 		// Friendly Reinforcements Mogilevka
 		["main_task_3_1","SUCCEEDED"] call BIS_fnc_taskSetState;
-		["CDF Command", "side", "Task Force Alpha, this is NAPA Group Victor, friendly forces are coming in from the north. Check your fire, we will garrison the village, Victor out."] spawn OKS_fnc_ChatGlobal;
+		["CDF Command", "side", "Task Force Alpha, this is NAPA Group Victor, friendly forces are coming in from the north. Check your fire, we will garrison the village, Victor out.", "CDF Command", 25000, 100, independent] spawn OKS_fnc_ChatGlobal;
 		[[[[7614.21,5638.29,0.1],190,[[301,0]],"ftl"],[[7610.19,5644.11,0.1],190,[[301,0]],"ar"],[[7620.02,5642.31,0.1],190,[[301,0]],"g"],[[7606.16,5649.92,0.1],190,[[301,0]],"mat"]],[],[[[7634.72,5277.11,0.1],[[0,"Move"],[1,"AWARE"],[2,"YELLOW"],[4,"COLUMN"],[5,"NORMAL"]]],[[7575.66,5139.71,0.1],[[0,"guard"]]]],independent] call GW_Common_fnc_spawnGroup;
 		[[[[7570.42,5644.46,0.1],190,[[301,0]],"ftl"],[[7566.39,5650.28,0.1],190,[[301,0]],"ar"],[[7576.23,5648.48,0.1],190,[[301,0]],"g"],[[7562.37,5656.09,0.1],190,[[301,0]],"mat"]],[],[[[7590.93,5283.27,0.1],[[0,"Move"],[1,"AWARE"],[2,"YELLOW"],[4,"COLUMN"],[5,"NORMAL"]]],[[7503.27,5157.99,0.1],[[0,"guard"]]]],independent] call GW_Common_fnc_spawnGroup;
 		[[[[7525.06,5637.73,0.1],190,[[301,0]],"ftl"],[[7521.04,5643.54,0.1],190,[[301,0]],"ar"],[[7530.88,5641.75,0.1],190,[[301,0]],"g"],[[7517.02,5649.36,0.1],190,[[301,0]],"mat"]],[],[[[7545.58,5276.54,0.1],[[0,"Move"],[1,"AWARE"],[2,"YELLOW"],[4,"COLUMN"],[5,"NORMAL"]]],[[7508.77,5102.46,0.1],[[0,"guard"]]]],independent] call GW_Common_fnc_spawnGroup;
@@ -915,12 +932,24 @@ switch (_case) do {
 
 	case 100: {
 
+		private _CompressSleep = {
+			params ["_sleepTime"];
+
+			if(isDedicated) exitWith { _sleepTime };
+
+			private _newSleepTime = _sleepTime * 0.05;
+			systemChat format ["Compressing sleep time from %1 to %2", _sleepTime, _newSleepTime];
+			_newSleepTime = _newSleepTime min 1;
+			_newSleepTime;
+		};
+
 		// Have Independent Players
 		if({Alive _X && side group _X == independent} count allPlayers > 0) then {
 
 			// Setup Tasks
 			[independent, ["indep_task_2","indep_task_1"], ["The Chedaki militia forces are gathering for an attack from the south-east, deploy to sector echo and defend the position.", "Defend Sector Echo", "Defend Echo"], getpos sector_echo, "ASSIGNED", 2, true, "defend"] call BIS_fnc_taskCreate;
-			sleep 60;
+			
+			sleep ([60] call _CompressSleep);
 
 			// Command Warning 1
 			["CDF Command", "side", "Outpost Harvest, this is CDF Command, enemy mortars are zeroing in on your position. Dig in, the attack is imminent, Command out.", "CDF Command", 25000, 100, independent] spawn OKS_fnc_ChatGlobal;
@@ -1011,11 +1040,11 @@ switch (_case) do {
 			if(triggerActivated SpawnTrigger_10) exitWith { systemChat "Attacks cancelled, reinforcements have arrived in the area."};
 			sleep 5;
 			["CDF Command", "side", "Outpost Harvest, this is CDF Command, good work on taking out the mortars. Fallback ASAP, more forces are staging to attack. ETA 5 minutes.", "CDF Command", 25000, 100, independent] spawn OKS_fnc_ChatGlobal;
-			sleep 300;
+			sleep ([300] call _CompressSleep);
 
 			if(triggerActivated SpawnTrigger_10) exitWith { systemChat "Attacks cancelled, reinforcements have arrived in the area."};
 			private _ThirdWave = [];
-			[[],[["UK3CB_CHD_O_Mi8",[7808.61,9412.08,58.5951],0,[["driver",-1,[]],["turret",-1,[0]],["turret",-1,[1]],["turret",-1,[2]]],[[6,["CHDKZ",1]],[7,["intake_hide",1,"bench_hide",0,"RearDoors",0]],[8,["",""]],[351,false]]]],[[[6539.96,5589.84,0],[[0,"Loiter"],[1,"SAFE"],[5,"NORMAL"]]]],east] call GW_Common_fnc_spawnGroup;
+			[[],[["UK3CB_CHD_O_Mi8",[7808.61,9412.08,58.5951],0,[["driver",-1,[]],["turret",-1,[0]],["turret",-1,[1]],["turret",-1,[2]]],[[6,["CHDKZ",1]],[7,["intake_hide",1,"bench_hide",0,"RearDoors",0]],[8,[]],[351,false]]]],[[[6539.96,5589.84,0],[[0,"Loiter"],[1,"SAFE"],[5,"NORMAL"]]]],east] call GW_Common_fnc_spawnGroup;
 			["CDF Command", "side", "Outpost Harvest, this is CDF Command, enemy forces are converging on the northern sector, repel the attackers, Command out.", "CDF Command", 25000, 100, independent] spawn OKS_fnc_ChatGlobal;
 			[independent, ["indep_task_5","indep_task_1"], ["A new force is pushing in from the northern sector. Deploy to Sector November and repel the attack.", "Defend Sector November", "November"], getpos sector_november, "ASSIGNED", 2, true, "defend"] call BIS_fnc_taskCreate;
 			_Wave3Group1 = [[[[6546.58,5831.37,0],127,[[301,0]],"sl"],[[6539.58,5830.37,0],127,[[301,0]],"ar"],[[6545.59,5838.37,0],127,[[301,0]],"mmg"],[[6544.04,5833.49,0],127,[[301,0]],"ag"],[[6542.43,5838.85,0],127,[[301,0]],"lr"],[[6537.04,5832.5,0],127,[[301,0]],"r"],[[6539.3,5838.85,0],127,[[301,0]],"mat"],[[6536.7,5836.24,3.05176e-05],127,[[301,1]],"ag"]],[],[[[6550.54,5765.41,0],[[0,"Move"],[1,"AWARE"],[2,"RED"],[4,"DIAMOND"],[5,"FULL"]]],[[6549,5693.8,0],[[0,"Move"]]],[[6546.31,5635.94,0],[[0,"Move"]]],[[6536.34,5584.72,0],[[0,"Move"]]]],east] call GW_Common_fnc_spawnGroup;
@@ -1037,7 +1066,7 @@ switch (_case) do {
 			["indep_task_5","SUCCEEDED"] call BIS_fnc_taskSetState;
 			if(triggerActivated SpawnTrigger_10) exitWith { systemChat "Attacks cancelled, reinforcements have arrived in the area."};
 			["CDF Command", "side", "Outpost Harvest, this is CDF Command, the force to the north is diminished. Imminent attack from the east, enemy mechanized convoy inbound. Redeploy to Echo! Command out.", "CDF Command", 25000, 100, independent] spawn OKS_fnc_ChatGlobal;
-			sleep 120;
+			sleep ([120] call _CompressSleep);
 
 			if(triggerActivated SpawnTrigger_10) exitWith { systemChat "Attacks cancelled, reinforcements have arrived in the area."};
 			[independent, ["indep_task_5","indep_task_1"], ["A mechanized force is heading in from the east. Defend Sector Echo! Get your anti-tank weapons ready.", "Defend Sector Echo", "Echo"], getpos sector_echo, "ASSIGNED", 2, true, "defend"] call BIS_fnc_taskCreate;
@@ -1068,16 +1097,16 @@ switch (_case) do {
 			sleep 60;
 
 			["CDF Command", "side", "Outpost Harvest, this is CDF Command, enemy paratroopers inbound from the north. Hold them off, Command out.", "CDF Command", 25000, 100, independent] spawn OKS_fnc_ChatGlobal;
+			[ConvoySpawn_9,ConvoyWP_9,ConvoyEnd_9,east,[5,["UK3CB_CHD_O_Hilux_Open","UK3CB_CHD_O_Hilux_Closed","UK3CB_CHD_O_Hilux_Open","UK3CB_CHD_O_Hilux_Closed"],45,40,15],[true,4],[],false,false,["hunt"],"convoystop"] spawn OKS_fnc_Convoy_Spawn;		
 			[east, "UK3CB_CHD_O_Mi8AMT", False, "drop", "AirDropSpawn", paradrop_1, "AirDropDespawn", [2,1], [[6530.56,5596.63,0]]] spawn OKS_fnc_AirDrop; sleep 5;
 			[east, "UK3CB_CHD_O_Mi8AMT", False, "drop", "AirDropSpawn_1", paradrop_2, "AirDropDespawn_1", [2,1], [[6569.47,5599.8,0]]] spawn OKS_fnc_AirDrop; sleep 5;
 			[east, "UK3CB_CHD_O_Mi8AMT", False, "drop", "AirDropSpawn_2", paradrop_3, "AirDropDespawn_2", [2,1], [[6586.87,5597.42,0]]] spawn OKS_fnc_AirDrop; sleep 180;
 			sleep 15; 
-			[[],[["UK3CB_CHD_O_Mi8",[7808.61,9412.08,58.5951],0,[["driver",-1,[]],["turret",-1,[0]],["turret",-1,[1]],["turret",-1,[2]]],[[6,["CHDKZ",1]],[7,["intake_hide",1,"bench_hide",0,"RearDoors",0]],[8,["",""]],[351,false]]]],[[[6539.96,5589.84,0],[[0,"Loiter"],[1,"SAFE"],[5,"NORMAL"]]]],east] call GW_Common_fnc_spawnGroup;
-
+			[[],[["UK3CB_CHD_O_Mi8",[7808.61,9412.08,58.5951],0,[["driver",-1,[]],["turret",-1,[0]],["turret",-1,[1]],["turret",-1,[2]]],[[6,["CHDKZ",1]],[7,["intake_hide",1,"bench_hide",0,"RearDoors",0]],[8,[]],[351,false]]]],[[[6539.96,5589.84,0],[[0,"Loiter"],[1,"SAFE"],[5,"NORMAL"]]]],east] call GW_Common_fnc_spawnGroup;
+			
 			if(triggerActivated SpawnTrigger_10 || BOREALIS_MISSION_CODE == 2) exitWith { 
 				systemChat "Attacks complete or reinforcements have arrived in the area or no rescue coming.";
-				sleep 300;
-				["CDF Command", "side", "Outpost Harvest, this is CDF Command, enemy ground forces are falling back to regroup, complete your engagements and proceed with a counter-attack, Command out.", "CDF Command", 25000, 100, independent] spawn OKS_fnc_ChatGlobal;
+				sleep ([400] call _CompressSleep);
 				[11] spawn GW_Fnc_spawnList;
 			};
 			["CDF Command", "side", "Outpost Harvest, this is CDF Command, infantry forces advancing from the west and south, Command out.", "CDF Command", 25000, 100, independent] spawn OKS_fnc_ChatGlobal;

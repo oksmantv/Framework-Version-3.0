@@ -56,3 +56,4 @@
 		}, _this, 0.1] call CBA_fnc_waitAndExecute;
 	}, true, [], true] call CBA_fnc_addClassEventHandler;
 }] call CBA_fnc_addEventHandler;
+

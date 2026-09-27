@@ -25,6 +25,8 @@ switch (_case) do {
 
 	case 1: {
 
+
+
 		[Speaker_1, "dynamic", 600, 0, 2, []] spawn OKS_fnc_IncomingAlarm;
 		[mortar_1, east, "precise", "light", ["auto", 80], 150, 400, 15] spawn OKS_fnc_Mortars;
 		
@@ -54,6 +56,8 @@ switch (_case) do {
 			["UK3CB_ADE_O_DSHkM_Mini_TriPod",[4224.18,6020.53,6.45037],227,[["gunner",-1,[0]]],[]]
 		],[]] call GW_Common_fnc_spawnGroup;
 
+		[[[[4439.59,5948.35,19.7244],243,"Up",[[301,0]],"marksman"],[[4444.9,5962.24,19.7262],243,"Up",[[301,0]],"marksman"],[[4369.03,5978.65,3.30351],245,"Up",[[301,0]],"marksman"],[[4416.42,6142.27,7.36094],245,"Up",[[301,0]],"marksman"],[[4622.67,5631.77,14.2001],243,"Up",[[301,0]],"marksman"],[[4468.78,5285.86,11.3538],83,"Middle",[[301,0]],"marksman"],[[4526.46,5331.73,10.7307],289,"Middle",[[301,0]],"marksman"],[[4708.5,5385.88,8.84452],309,"Middle",[[301,0]],"marksman"],[[4723.08,5394.67,3.42999],291,"Middle",[[301,0]],"marksman"],[[4696.44,5339.13,11.1215],290,"Middle",[[301,0]],"marksman"],[[4689.42,5334.35,13.8089],297,"Down",[[301,0]],"marksman"]],[],[],east] call GW_Common_fnc_spawnGroup;
+
 		{
 			_EnemyUnit = _X;
 			{
@@ -67,10 +71,6 @@ switch (_case) do {
 		[true,["Task_5","Task_1"], ["An enemy mortar section is targeting your outpost, find and eliminate the mortars, we suspect they are nearby, look for covered positions, find and silence the mortars! You may also need to search the vicinity of the mortar sites for ammo caches.", "Search and Destroy Mortars", ""], nil,"ASSIGNED",-1, true, "destroy"] call BIS_fnc_taskCreate; sleep 4;
 		[true,["Task_4","Task_1"], ["The outpost is under attack! You must repel the attackers, attack the enemies surrounding the compound!", "Repel Attack", ""], nil,"ASSIGNED",-1, true, "kill"] call BIS_fnc_taskCreate; sleep 4;
 		[[DestroyObject_1,DestroyObject_2]] spawn OKS_fnc_Destroy_Task;
-		[] spawn {
-			waitUntil {sleep 15; {alive _X || getDammage _X < 0.5} count [mortar_1, mortar_2, mortar_3] == 0};
-			["Task_5", "SUCCEEDED", true] call BIS_fnc_taskSetState;
-		};
 
 		// Mobile Attackers.
 		_Attack1 = [[[[4177.5,6090.45,0],220,[]],[[4176.9,6097.5,0],220,[]],[[4184.54,6091.05,0],220,[]],[[4176.3,6104.55,0],220,[]],[[4191.59,6091.65,0],220,[]],[[4175.71,6111.59,0],220,[]],[[4198.64,6092.25,0],220,[]],[[4175.11,6118.64,1.43051e-06],220,[]]],[],[[[4129.71,6084.43,1.19209e-05],[[0,"Move"]]],[[4004.84,5959.96,2.26498e-05],[[0,"Move"]]],[getMarkerPos "respawn_west",[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup; sleep 10;

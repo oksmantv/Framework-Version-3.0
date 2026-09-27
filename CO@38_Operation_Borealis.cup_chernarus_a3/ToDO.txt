@@ -36,5 +36,3 @@ CTABs are present in the kit should remain for BLUFORCE tracking. Unbind to avoi
 
 =============
 
-Counter-Attack repeats SpawnTrigger_11, triggerActivated not working at all on Dedicated?
-

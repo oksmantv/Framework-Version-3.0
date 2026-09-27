@@ -94,11 +94,19 @@ _pistol_mag = "10Rnd_9x21_Mag";
 _pdw = ["rhs_weap_pp2000", _silencer, _pointer, _sight, _bipod];
 _pdw_mag = "rhs_mag_9x19mm_7n31_44";
 
-_silencer = "";
+_silencer = "rhsusf_acc_m24_muzzlehider_black";
 _pointer = "";
-_sight = "rhs_acc_pso1m21";
-_bipod = "";
+_sight = "rhsusf_acc_LEUPOLDMK4_2_mrds";
+_bipod = "rhsusf_acc_harris_swivel";
 
-_rifleMarksman = ["rhs_weap_svdp_wd", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "UK3CB_SVD_10rnd_762x54_GT";
-_rifleMarksman_mag_tr = "UK3CB_SVD_10rnd_762x54_GT";
+_rifleMarksman = ["rhs_weap_m24sws", _silencer, _pointer, _sight, _bipod];
+_rifleMarksman_mag = "rhsusf_5Rnd_762x51_m118_special_Mag";
+_rifleMarksman_mag_tr = "rhsusf_5Rnd_762x51_m118_special_Mag";
+
+if(_role == "marksman") then {
+	_helmet = "";
+	_uniform = "UK3CB_TKP_I_U_CIB_CombatUniform_DBLU";
+	_vest = "UK3CB_ADA_B_V_TacVest_BLK";
+	_goggles = "JCA_G_balaclava_01_black_F";
+	_backpack = "UK3CB_TKP_O_B_ASS_BLK";
+};

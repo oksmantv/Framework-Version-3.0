@@ -58,11 +58,11 @@ _rifleC_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
 _rifleL_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
 _rifleL_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
 
-_LMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, "JCA_optic_IHO_black", _bipod];
-_LMG_mag = "UK3CB_BAF_762_200Rnd_T";
+_LMG = ["GOL_weap_m249_pip", _silencer, _pointer, "JCA_optic_IHO_black", "rhsusf_acc_saw_bipod"];
+_LMG_mag = "GOL_rhsusf_200rnd_556x45_AP45_tracer_red";
 
 _MMG = ["GOL_MMG_02_black_F", _silencer, _pointer, "JCA_optic_IHO_black", "JCA_bipod_04_black"];
-_MMG_mag = "GOL_130Rnd_338_Mag_red";
+_MMG_mag = "GOL_200Rnd_338_Mag_red";
 
 _LAT = ["UK3CB_BAF_AT4_CS_AT_Launcher", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "UK3CB_BAF_AT4_CS_AT_Mag";
@@ -78,8 +78,8 @@ _HAT_mag = "rhs_fgm148_magazine_AT";
 _AA = ["rhs_weap_fim92", _silencer, _pointer, _sight, _bipod];
 _AA_mag = "Titan_AA";
 
-_pistol = ["JCA_hgun_P226_black_F", _silencer, _pointer, _sight, _bipod];
-_pistol_mag = "JCA_15Rnd_9x21_P226_Red_Mag";
+_pistol = ["JCA_hgun_G17_sand_F", _silencer, _pointer, _sight, _bipod];
+_pistol_mag = "JCA_17Rnd_9x19_G17_Red_Mag";
 
 _pdw = ["JCA_smg_UMP_black_F", _silencer, _pointer, _sight, _bipod];
 _pdw_mag = "JCA_25Rnd_45ACP_UMP_Red_Mag";

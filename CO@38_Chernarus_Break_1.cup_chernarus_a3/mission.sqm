@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=9633;
+		nextID=9713;
 	};
 	class Camera
 	{
-		pos[]={4963.0771,13.296117,2355.3945};
-		dir[]={0.92111409,-0.34434617,-0.18186425};
-		up[]={0.33784428,0.93883759,-0.066703737};
-		aside[]={-0.19371411,6.9034286e-08,-0.98111713};
+		pos[]={4963.0771,20.063766,2355.3945};
+		dir[]={0.96831918,-0.24974151,0.0093733082};
+		up[]={0.24975571,0.96830815,0.0024176715};
+		aside[]={0.0096772574,-2.08438e-07,-1.0000118};
 	};
 };
 binarizationWanted=0;
@@ -55,6 +55,7 @@ addons[]=
 	"ace_goggles",
 	"ace_nightvision",
 	"ace_attach",
+	"Chemlight_WeightReduction",
 	"ace_chemlights",
 	"A3_Weapons_F_Items",
 	"ace_medical_treatment",
@@ -149,10 +150,10 @@ addons[]=
 	"A3_Structures_F_EPB_Civ_Accessories",
 	"A3_Static_F_HMG_02",
 	"A3_Supplies_F_Exp_Ammoboxes",
+	"ace_explosives",
 	"A3_Structures_F_EPB_Items_Military",
 	"A3_Structures_F_Walls",
 	"A3_Modules_F_Curator_Mines",
-	"ace_explosives",
 	"A3_Weapons_F_Exp",
 	"A3_Structures_F_Oldman_Decals",
 	"A3_Structures_F_Enoch_Ruins",
@@ -501,7 +502,7 @@ class AddonsMetaData
 		class Item50
 		{
 			className="A3_Ui_F_Enoch";
-			name="Arma 3 Enoch - User Interface";
+			name="Arma 3 Contact Platform - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -1004,7 +1005,7 @@ class CustomAttributes
 		class Attribute1
 		{
 			property="ENH_saveLoadout";
-			expression="if (!isMultiplayer || !_value || is3DEN || !hasInterface) exitWith {};        0 spawn        {            waitUntil {sleep 1; !isNull player};            player setVariable ['ENH_savedLoadout', getUnitloadout player];            player addMPEventHandler ['MPRespawn',            {                params ['_unit'];                private _loadout = _unit getVariable ['ENH_savedLoadout', []];                if (_loadout isNotEqualTo []) then {_unit setUnitLoadout _loadout};            }];        };";
+			expression="_value = [0, 1, 2, 3] select _value;    if (!isMultiplayer || _value == 0 || is3DEN || !hasInterface) exitWith {};    _value spawn    {        params ['_value'];        waitUntil [{!isNull player}, -1, 1];        switch _value do        {            case 1:            {                player setVariable ['ENH_SavedLoadout', getUnitloadout player];                player addEventHandler ['Respawn',                {                    private _loadout = player getVariable ['ENH_SavedLoadout', []];                    if (_loadout isNotEqualTo []) then {player setUnitLoadout _loadout};                }];            };            case 2:            {                player addEventHandler ['Killed',  {player setVariable ['ENH_SavedLoadout', getUnitLoadout player]}];                player addEventHandler ['Respawn',                {                    private _loadout = player getVariable ['ENH_SavedLoadout', []];                    if (_loadout isNotEqualTo []) then {player setUnitLoadout _loadout};                }];            };            case 3:            {" \n "                player setVariable ['ENH_SavedLoadout', getUnitloadout player];                player addEventHandler ['Respawn',                {                    private _loadout = player getVariable ['ENH_SavedLoadout', []];                    if (_loadout isNotEqualTo []) then {player setUnitLoadout _loadout};                }];                                [missionNamespace, 'arsenalClosed', {player setVariable ['ENH_SavedLoadout', getUnitloadout player]}] call BIS_fnc_addScriptedEventHandler;            };" \n "            default {};        };    };";
 			class Value
 			{
 				class data
@@ -1017,7 +1018,7 @@ class CustomAttributes
 		class Attribute2
 		{
 			property="ENH_dynamicGroups";
-			expression="                if (!is3DEN && isMultiplayer && _value) then                {                    if (isServer) then {['Initialize'] call BIS_fnc_dynamicGroups};                    if (hasInterface) then                    {                        0 spawn                        {                            scriptName 'ENH_Attribute_DynamicGroups';                            waitUntil {!isNull player};                            ['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;                        };                    };                };            ";
+			expression="                if (!is3DEN && isMultiplayer && _value) then                {                    if (isServer) then {['Initialize'] call BIS_fnc_dynamicGroups};                    if (hasInterface) then                    {                        spawn                        {                            scriptName 'ENH_Attribute_DynamicGroups';                            waitUntil [{!isNull player}, -1, 1];                            ['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;                        };                    };                };            ";
 			class Value
 			{
 				class data
@@ -31878,7 +31879,7 @@ class CustomAttributes
 		class Attribute1
 		{
 			property="ENH_SPR";
-			expression="if (!is3DEN && _value # 0 > 0 && !isMultiplayer) then            {                ENH_SPR_Ruleset = _value param [0, 0];                ENH_SPR_Delay = _value param [1, 20];                ENH_SPR_CanDie = _value param [2, false];                ENH_SPR_RestoreLoadout = _value param [3, false];                ENH_SPR_OnRespawnCode = compile (_value param [4, '']);                ENH_SPR_Positions =                [                    allMapMarkers select {'respawn_east' in toLower _x} apply {getMarkerPos _x},                    allMapMarkers select {'respawn_west' in toLower _x} apply {getMarkerPos _x},                    allMapMarkers select {'respawn_guerilla' in toLower _x} apply {getMarkerPos _x},                    allMapMarkers select {'respawn_civilian' in toLower _x} apply {getMarkerPos _x}                ];                {                    _x setVariable ['ENH_SPR_OriginalSide', side group _x];                    _x setVariable ['ENH_SPR_OriginalLoadout', getUnitLoadout _x];                    _x addEventHandler ['handleDamage',                    {                        params ['_unit', '', '_damage', '', '', '_index'];                        if (!alive _unit || lifeState _unit isEqualTo 'INCAPACITATED') exitWith {0};                        if (_unit getVariable ['ENH_SPR_Tickets', 0] == 0) then                        {                            _unit removeEventHandler ['handleDamage', _thisEventHandler];                            _damage;                        };                        if (ENH_SPR_CanDie && _index in [1, 2] && _damage >= 1) exitWith                        {                            _unit removeEventHandler ['handleDamage', _thisEventHandler];                            1;                        };                        if (_index < 8 && (_damage min 0.95) == 0.95) then                        {                            setAccTime 1;                            _unit allowDamage false;                            _unit setCaptive true;                            _unit setUnconscious true;                            _unit setVariable ['ENH_SPR_Tickets', (_unit getVariable ['ENH_SPR_Tickets', 0]) - 1];                            if (isPlayer _unit) then {enableTeamSwitch false} else {removeSwitchableUnit _unit};                            moveOut _unit;                            _unit spawn ENH_fnc_SPR_respawnTimer;                        };                        _damage min 0.95;                    }];                } forEach (allUnits select {_x getVariable ['ENH_SPR_Tickets', 0] > 0});                                ENH_fnc_SPR_respawn =                {                    scriptName 'ENH_Attribute_SPR_Respawn';                    params ['_unit'];                    if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};                    if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};                    private _sideID = (_unit getVariable 'ENH_SPR_OriginalSide') call BIS_fnc_sideID;                    private _positions = ENH_SPR_Positions select _sideID;                    if (_positions isNotEqualTo []) then                    {                        switch (ENH_SPR_Ruleset) do                        {                            case 3:                            {                                _unit setPos (([_positions, [], {_unit distance _x}, 'ASCEND'] call BIS_fnc_sortBy) select 0);                            };                            case 2:                            {                                _unit setPos selectRandom _positions;                            };                        };                    };                    _unit setUnconscious false;                    _unit allowDamage true;                    _unit setDamage 0;                    _unit switchMove '';                    _unit call ENH_SPR_OnRespawnCode;                    _unit spawn                    {                        sleep 8;                        _this setCaptive false;                    };                };                                ENH_fnc_SPR_respawnTimer =                {                    scriptName 'ENH_Attribute_SPR_RespawnTimer';                    params ['_unit'];                    private _respawnTime = time + ENH_SPR_Delay;                    if (isPlayer _unit) then                    {                        private _ctrlRespawnTimer = (call BIS_fnc_displayMission) ctrlCreate ['RscStructuredText',-1];                        _ctrlRespawnTimer ctrlSetPosition [0.25, 0, 0.5, 0.06];                        _ctrlRespawnTimer ctrlSetBackgroundColor [0, 0, 0, 0.1];                        _ctrlRespawnTimer ctrlCommit 0;                        ENH_SPR_OriginalVolume = [soundVolume, musicVolume, radioVolume, speechVolume, environmentVolume];                        0 cutText ['', 'BLACK OUT', 0.3];                        0.3 fadeSound 0;                        0.3 fadeMusic 0;                        0.3 fadeRadio 0;                        0.3 fadeSpeech 0;                        0.3 fadeEnvironment 0;                        showChat false;                        while {time < _respawnTime} do                        {                            _ctrlRespawnTimer ctrlSetStructuredText parseText format ['<t size=''1.25'' color=''#218a36'' align=''center''>%1</t>', [(_respawnTime - time), 'HH:MM'] call BIS_fnc_timeToString];                            sleep 0.1;                        };                        ctrlDelete _ctrlRespawnTimer;                        0 cutText ['', 'BLACK IN', 8];                        8 fadeSound (ENH_SPR_OriginalVolume # 0);                        8 fadeMusic (ENH_SPR_OriginalVolume # 1);                        8 fadeRadio (ENH_SPR_OriginalVolume # 2);                        8 fadeSpeech (ENH_SPR_OriginalVolume # 3);                        8 fadeEnvironment (ENH_SPR_OriginalVolume # 4);                        showChat true;                        [                            ['Respawned'],                            [format ['GRID: %1', mapGridPosition _unit]],                            [format ['Tickets left: %1', _unit getVariable 'ENH_SPR_Tickets']]                        ] spawn BIS_fnc_EXP_camp_SITREP;                    }                    else                    {                        private _respawnEH = -1;                        if ((side player getFriend (_unit getVariable 'ENH_SPR_OriginalSide')) >= 0.6) then                        {                            _respawnEH = addMissionEventHandler                            [                                'draw3D',                                {                                    drawIcon3D ['\a3\Modules_f\data\portraitRespawn_ca.paa', [0.13, 0.54, 0.21, 0.8], ASLToAGL ((_thisArgs # 0) modelToWorldVisualWorld [0, 0, 1]), 1, 1, 0, str round ((_thisArgs # 1) - time), 2];                                },                                [_unit, _respawnTime]                            ];                        };                        sleep ENH_SPR_Delay;                        removeMissionEventHandler ['draw3D', _respawnEH];                        [str _unit, 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;                    };                    _unit call ENH_fnc_SPR_respawn;                };            }";
+			expression="if (!is3DEN && _value # 0 > 0 && !isMultiplayer) then            {                ENH_SPR_Ruleset = _value param [0, 0];                ENH_SPR_Delay = _value param [1, 20];                ENH_SPR_CanDie = _value param [2, false];                ENH_SPR_RestoreLoadout = _value param [3, false];                ENH_SPR_OnRespawnCode = compileFinal (_value param [4, '']);                ENH_SPR_Positions =                [                    allMapMarkers select {'respawn_east' in toLower _x} apply {getMarkerPos _x},                    allMapMarkers select {'respawn_west' in toLower _x} apply {getMarkerPos _x},                    allMapMarkers select {'respawn_guerilla' in toLower _x} apply {getMarkerPos _x},                    allMapMarkers select {'respawn_civilian' in toLower _x} apply {getMarkerPos _x}                ];                {                    _x setVariable ['ENH_SPR_OriginalSide', side group _x];                    _x setVariable ['ENH_SPR_OriginalLoadout', getUnitLoadout _x];                    _x addEventHandler ['HandleDamage',                    {                        params ['_unit', '', '_damage', '', '', '_index'];                        if (!alive _unit || lifeState _unit isEqualTo 'INCAPACITATED') exitWith {0};                        if (_unit getVariable ['ENH_SPR_Tickets', 0] == 0) then                        {                            _unit removeEventHandler ['handleDamage', _thisEventHandler];                            _damage;                        };                        if (ENH_SPR_CanDie && _index in [1, 2] && _damage >= 1) exitWith                        {                            _unit removeEventHandler ['handleDamage', _thisEventHandler];                            1;                        };                        if (_index < 8 && (_damage min 0.95) == 0.95) then                        {                            setAccTime 1;                            _unit allowDamage false;                            _unit setCaptive true;                            _unit setUnconscious true;                            _unit setVariable ['ENH_SPR_Tickets', (_unit getVariable ['ENH_SPR_Tickets', 0]) - 1];                            if (isPlayer _unit) then {enableTeamSwitch false} else {removeSwitchableUnit _unit};                            moveOut _unit;                            _unit spawn ENH_fnc_SPR_respawnTimer;                        };                        _damage min 0.95;                    }];                } forEach (allUnits select {_x getVariable ['ENH_SPR_Tickets', 0] > 0});                                if (isNil 'ENH_fnc_SPR_respawn') then                {                    ENH_fnc_SPR_respawn = compileFinal                    {                        scriptName 'ENH_Attribute_SPR_Respawn';                        params ['_unit'];                        if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};                        if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};                        private _sideID = (_unit getVariable 'ENH_SPR_OriginalSide') call BIS_fnc_sideID;                        private _positions = ENH_SPR_Positions select _sideID;                        if (_positions isNotEqualTo []) then                        {                            switch (ENH_SPR_Ruleset) do                            {                                case 3:                                {                                    _unit setPos (([_positions, [], {_unit distance _x}, 'ASCEND'] call BIS_fnc_sortBy) select 0);                                };                                case 2:                                {                                    _unit setPos selectRandom _positions;                                };                            };                        };                        _unit setUnconscious false;                        _unit allowDamage true;                        _unit setDamage 0;                        _unit switchMove '';                        _unit call ENH_SPR_OnRespawnCode;                        _unit spawn                        {                            sleep 8;                            _this setCaptive false;                        };                    };                                        ENH_fnc_SPR_respawnTimer = compileFinal                    {                        scriptName 'ENH_Attribute_SPR_RespawnTimer';                        params ['_unit'];                        private _respawnTime = time + ENH_SPR_Delay;                        if (isPlayer _unit) then                        {                            private _ctrlRespawnTimer = (call BIS_fnc_displayMission) ctrlCreate ['RscStructuredText',-1];                            _ctrlRespawnTimer ctrlSetPosition [0.25, 0, 0.5, 0.06];                            _ctrlRespawnTimer ctrlSetBackgroundColor [0, 0, 0, 0.1];                            _ctrlRespawnTimer ctrlCommit 0;                            ENH_SPR_OriginalVolume = [soundVolume, musicVolume, radioVolume, speechVolume, environmentVolume];                            0 cutText ['', 'BLACK OUT', 0.3];                            0.3 fadeSound 0;                            0.3 fadeMusic 0;                            0.3 fadeRadio 0;                            0.3 fadeSpeech 0;                            0.3 fadeEnvironment 0;                            showChat false;                            while {time < _respawnTime} do                            {                                _ctrlRespawnTimer ctrlSetStructuredText parseText format ['<t size=''1.25'' color=''#218a36'' align=''center''>%1</t>', [(_respawnTime - time), 'HH:MM'] call BIS_fnc_timeToString];                                sleep 0.1;                            };                            ctrlDelete _ctrlRespawnTimer;                            0 cutText ['', 'BLACK IN', 8];                            8 fadeSound (ENH_SPR_OriginalVolume # 0);                            8 fadeMusic (ENH_SPR_OriginalVolume # 1);                            8 fadeRadio (ENH_SPR_OriginalVolume # 2);                            8 fadeSpeech (ENH_SPR_OriginalVolume # 3);                            8 fadeEnvironment (ENH_SPR_OriginalVolume # 4);                            showChat true;                            [                                ['Respawned'],                                [format ['GRID: %1', mapGridPosition _unit]],                                [format ['Tickets left: %1', _unit getVariable 'ENH_SPR_Tickets']]                            ] spawn BIS_fnc_EXP_camp_SITREP;                        }                        else                        {                            private _respawnEH = -1;                            if ((side player getFriend (_unit getVariable 'ENH_SPR_OriginalSide')) >= 0.6) then                            {                                _respawnEH = addMissionEventHandler                                [                                    'draw3D',                                    {                                        drawIcon3D ['\a3\Modules_f\data\portraitRespawn_ca.paa', [0.13, 0.54, 0.21, 0.8], ASLToAGL ((_thisArgs # 0) modelToWorldVisualWorld [0, 0, 1]), 1, 1, 0, str round ((_thisArgs # 1) - time), 2];                                    },                                    [_unit, _respawnTime]                                ];                            };                            sleep ENH_SPR_Delay;                            removeMissionEventHandler ['draw3D', _respawnEH];                        };                        _unit call ENH_fnc_SPR_respawn;                    };                };            }";
 			class Value
 			{
 				class data
@@ -38840,7 +38841,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5336.0703,334.89456,8681.0313};
+								position[]={5336.0703,334.89456,8681.0312};
 								angles[]={6.2698488,1.3433837,0.010664274};
 							};
 							side="Empty";
@@ -44148,14 +44149,14 @@ class Mission
 							fillName="SolidFull";
 							a=50;
 							b=149.75139;
-							angle=53.950802;
+							angle=53.950798;
 							id=3302;
 							atlOffset=105.18173;
 						};
 						class Item29
 						{
 							dataType="Marker";
-							position[]={7804.2212,471.50934,7637.4063};
+							position[]={7804.2212,471.50934,7637.4062};
 							name="marker_104";
 							markerType="RECTANGLE";
 							type="";
@@ -46117,7 +46118,7 @@ class Mission
 							name="enemy_5_1";
 							type="group_3";
 							id=9890;
-							atlOffset=-0.00024414063;
+							atlOffset=-0.00024414062;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -47040,7 +47041,7 @@ class Mission
 				class Item106
 				{
 					dataType="Marker";
-					position[]={5322.7622,334.44,8676.5313};
+					position[]={5322.7622,334.44,8676.5312};
 					name="marker_202";
 					type="b_art";
 					a=0.5;
@@ -47244,7 +47245,7 @@ class Mission
 				class Item115
 				{
 					dataType="Marker";
-					position[]={9425.2813,162.84741,3030.6372};
+					position[]={9425.2812,162.84741,3030.6372};
 					name="enemy_4_2";
 					type="mil_arrow2";
 					colorName="ColorEAST";
@@ -48228,7 +48229,7 @@ class Mission
 													dataType="Object";
 													class PositionInfo
 													{
-														position[]={7551.5313,214.40485,5202.356};
+														position[]={7551.5312,214.40485,5202.356};
 														angles[]={6.2272472,1.8988705,6.2698536};
 													};
 													side="Empty";
@@ -48376,7 +48377,7 @@ class Mission
 													dataType="Object";
 													class PositionInfo
 													{
-														position[]={7424.9063,218.4655,5171.749};
+														position[]={7424.9062,218.4655,5171.749};
 														angles[]={6.2671871,5.9158549,6.2618566};
 													};
 													side="Empty";
@@ -48927,7 +48928,7 @@ class Mission
 					};
 					id=10897;
 					type="Land_Matches_F";
-					atlOffset=0.00024414063;
+					atlOffset=0.00024414062;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -51876,7 +51877,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9123.7813,224.33002,3853.2568};
+						position[]={9123.7812,224.33002,3853.2568};
 						angles[]={6.2751918,0.62020558,0};
 					};
 					side="Empty";
@@ -55172,7 +55173,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={9343.5234,196.29893,4593.0313};
+										position[]={9343.5234,196.29893,4593.0312};
 										angles[]={6.1997242,4.5481434,0.13777596};
 									};
 									side="Empty";
@@ -55207,7 +55208,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={9342.5557,198.26207,4593.7813};
+										position[]={9342.5557,198.26207,4593.7812};
 										angles[]={0,0.26749742,0};
 									};
 									side="Empty";
@@ -59011,7 +59012,7 @@ class Mission
 								};
 							};
 							id=12026;
-							atlOffset=0.39257813;
+							atlOffset=0.39257812;
 						};
 						class Item4
 						{
@@ -60188,7 +60189,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8765.5361,275.35992,4010.1563};
+										position[]={8765.5361,275.35992,4010.1562};
 										angles[]={0.0067495331,4.7348304,0.0059532812};
 									};
 									side="Empty";
@@ -65853,7 +65854,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={6351.5313,325.74484,6324.0771};
+												position[]={6351.5312,325.74484,6324.0771};
 												angles[]={6.1759615,3.853323,6.2452679};
 											};
 											side="Empty";
@@ -69772,7 +69773,7 @@ class Mission
 																	dataType="Object";
 																	class PositionInfo
 																	{
-																		position[]={6379.6563,325.39371,6303.3125};
+																		position[]={6379.6562,325.39371,6303.3125};
 																		angles[]={5.7106667,0.89091349,6.166163};
 																	};
 																	side="Empty";
@@ -71034,7 +71035,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={6373.2813,327.06512,6335.5596};
+										position[]={6373.2812,327.06512,6335.5596};
 										angles[]={5.0416746,5.8856201,5.1017141};
 									};
 									side="Empty";
@@ -72294,7 +72295,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6343.4063,328.13223,6328.8838};
+								position[]={6343.4062,328.13223,6328.8838};
 								angles[]={4.563077,3.0893416,0.65075421};
 							};
 							side="Empty";
@@ -73034,7 +73035,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={6354.2813,326.20276,6324.5088};
+												position[]={6354.2812,326.20276,6324.5088};
 												angles[]={6.2416348,0.78750348,6.1436558};
 											};
 											side="Empty";
@@ -78660,7 +78661,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={6121.4033,322.52255,6511.7813};
+										position[]={6121.4033,322.52255,6511.7812};
 										angles[]={0.12274323,1.0841322,6.1788173};
 									};
 									side="Empty";
@@ -79513,7 +79514,7 @@ class Mission
 							};
 							id=10616;
 							type="Land_ShellCrater_01_F";
-							atlOffset=-0.19726563;
+							atlOffset=-0.19726562;
 						};
 						class Item40
 						{
@@ -82962,7 +82963,7 @@ class Mission
 							};
 							id=10718;
 							type="Land_FoodSack_01_full_brown_F";
-							atlOffset=0.39257813;
+							atlOffset=0.39257812;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -84897,7 +84898,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6207.4316,362.92697,6893.9063};
+								position[]={6207.4316,362.92697,6893.9062};
 								angles[]={0,4.6941328,0};
 							};
 							side="Empty";
@@ -86186,7 +86187,7 @@ class Mission
 					};
 					id=12279;
 					type="Land_ManurePile_01_F";
-					atlOffset=0.29101563;
+					atlOffset=0.29101562;
 				};
 				class Item133
 				{
@@ -86599,7 +86600,7 @@ class Mission
 					};
 					id=3744;
 					type="rhsgref_ins_ural_Zu23";
-					atlOffset=-0.00024414063;
+					atlOffset=-0.00024414062;
 					class CustomAttributes
 					{
 						class Attribute0

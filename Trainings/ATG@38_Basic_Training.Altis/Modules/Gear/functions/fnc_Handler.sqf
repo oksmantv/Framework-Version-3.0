@@ -42,7 +42,7 @@ private [
 	"_smokegrenadeW","_smokegrenadeB","_smokegrenadeG","_smokegrenadeO","_smokegrenadeP","_smokegrenadeR","_smokegrenadeY",
 	"_chemB","_chemG","_chemR","_chemY",
 	"_glHE","_glHEDP","_glsmokeW","_glsmokeB","_glsmokeG","_glsmokeO","_glsmokeP","_glsmokeR","_glsmokeY","_glflareG","_glflareR","_glflareW",
-	"_map","_gps","_compass","_watch","_nvg","_parachute","_demoCharge","_satchelCharge","_toolKit",
+	"_map","_gps","_compass","_watch","_nvg","_nvgPilot","_parachute","_demoCharge","_satchelCharge","_toolKit",
 	"_cTab","_Android","_microDAGR","_microDAGRGps","_HelmetCam",
 	"_bandage","_blood","_epi","_morph","_IFAK","_FAKSmall","_FAKMedium","_FAKSquad","_FAKPlatoon","_pak","_saline","_salineSm",
 	"_barrel","_cables","_clacker","_defusalKit","_IRStrobe","_mapFlashLight","_mapTools","_rangefinder","_laserDesignator","_battery","_rangecard",
@@ -201,8 +201,8 @@ if (_isMan) then {
 		[_goggles,_helmet,_uniform,_vest,_backpack] call _addEquipment;
 		["", "", "", "", "", ""] call _addLinkedItems;
 	} else {
-		if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {
-			_nvg = "ACE_NVG_Gen4_Black";
+		if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {	
+			if(!isNil "_nvg") then {_nvg = "ACE_NVG_Wide_Black_WP"};
 		};
 
 		if !(_isPlayer || (_unit in switchableUnits)) then {
@@ -354,12 +354,17 @@ if (_isMan) then {
 				};
 
 				if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {
-					[_unit, _glflareW, 20] call _fnc_AddObjectsCargo;
+					[_unit, _glflareW, 50] call _fnc_AddObjectsCargo;
 				};
 				[_unit, _MAT_mag_HE, 10] call _fnc_AddObjectsCargo;
 				[_unit, _AA_mag, 30] call _fnc_AddObjectsCargo;
 				[_unit, (_AA select 0), 6] call _fnc_AddObjectsCargo;
-				[_unit, (_LAT select 0), 30] call _fnc_AddObjectsCargo;
+
+				if (_LAT_ReUsable) then {
+					[_unit, _LAT_mag_HE, 10] call _fnc_AddObjectsCargo;
+				} else {
+					[_unit, (_LAT select 0), 30] call _fnc_AddObjectsCargo;
+				};
 				if (_aceCombatDeafnessEnabled) then {
 					[_unit, _Earplugs, 50] call _fnc_AddObjectsCargo;
 				};
@@ -545,47 +550,9 @@ if (_isMan) then {
 					missionNamespace setVariable [format["GOL_ArsenalGL_%1",_realSide], _ArsenalGL, true];
 					missionNamespace setVariable [format["GOL_ArsenalLMG_%1",_realSide], _ArsenalLMG, true];
 
-					// TFAR wireless intercom — collect all headgear from the
-					// arsenal item list and set them as allowed wireless
-					// intercom headgear so crew/passengers can use intercom
-					// without being hard-wired.
-					// Accumulates across factions (Blufor/Opfor/Independent)
-					// so each gearbox init appends rather than overwrites.
-					// Sets the runtime array TFAR_externalIntercomWirelessHeadgear
-					// directly (the parsed form TFAR actually checks at runtime).
-					if (!isNil "TFAR_fnc_setIntercomChannel") then {
-						private _existingVal = missionNamespace getVariable ["TFAR_externalIntercomWirelessHeadgear", []];
-						private _intercomHeadgear = if (_existingVal isEqualType []) then { _existingVal } else { [] };
-
-						// Collect base helmet pool
-						if (_helmet isEqualType []) then {
-							{ _intercomHeadgear pushBackUnique _x } forEach _helmet;
-						} else {
-							if (_helmet != "") then { _intercomHeadgear pushBackUnique _helmet };
-						};
-
-						// Collect officer helmet
-						if (!isNil "_OfficerHelmet" && {_OfficerHelmet != ""}) then {
-							if (_OfficerHelmet isEqualType []) then {
-								{ _intercomHeadgear pushBackUnique _x } forEach _OfficerHelmet;
-							} else {
-								_intercomHeadgear pushBackUnique _OfficerHelmet;
-							};
-						};
-
-						// Scan compatibleItems for any headgear we may have
-						// missed (ItemInfo type 605 = headgear in CfgWeapons)
-						{
-							private _cfg = configFile >> "CfgWeapons" >> _x >> "ItemInfo";
-							if (isClass _cfg && {getNumber (_cfg >> "type") == 605}) then {
-								_intercomHeadgear pushBackUnique _x;
-							};
-						} forEach _compatibleItems;
-
-						if (count _intercomHeadgear > 0) then {
-							TFAR_externalIntercomWirelessHeadgear = _intercomHeadgear;
-							publicVariable "TFAR_externalIntercomWirelessHeadgear";
-						};
+					// TFAR wireless intercom headgear — delegate to addon
+					if (!isNil "OKS_fnc_CollectIntercomHeadgear") then {
+						[_helmet, _OfficerHelmet, _compatibleItems] call OKS_fnc_CollectIntercomHeadgear;
 					};
 				};
 			};
@@ -611,15 +578,15 @@ if (_isMan) then {
 				[_unit, _UAVTerminalI, 10] call _fnc_AddObjectsCargo;
 
 				[_unit, _mortarWeapon, 5] call _fnc_AddObjectsCargo;
-				[_unit, _packedHEround, 15] call _fnc_AddObjectsCargo;
-				[_unit, _packedHEABround, 15] call _fnc_AddObjectsCargo;
-				[_unit, _packedSmokeRound, 15] call _fnc_AddObjectsCargo;
-				[_unit, _packedFlareRound, 15] call _fnc_AddObjectsCargo;
-				[_unit, _1rndMortarHE, 30] call _fnc_AddObjectsCargo;
-				[_unit, _1rndMortarAB, 30] call _fnc_AddObjectsCargo;
-				[_unit, _1rndMortarFlareW, 20] call _fnc_AddObjectsCargo;
-				[_unit, _1rndMortarWPSmokeW, 20] call _fnc_AddObjectsCargo;
-				[_unit, _1rndMortarSmokeW, 20] call _fnc_AddObjectsCargo;
+				[_unit, _packedHEround, 50] call _fnc_AddObjectsCargo;
+				[_unit, _packedHEABround, 50] call _fnc_AddObjectsCargo;
+				[_unit, _packedSmokeRound, 50] call _fnc_AddObjectsCargo;
+				[_unit, _packedFlareRound, 50] call _fnc_AddObjectsCargo;
+				[_unit, _1rndMortarHE, 200] call _fnc_AddObjectsCargo;
+				[_unit, _1rndMortarAB, 200] call _fnc_AddObjectsCargo;
+				[_unit, _1rndMortarFlareW, 200] call _fnc_AddObjectsCargo;
+				[_unit, _1rndMortarWPSmokeW, 200] call _fnc_AddObjectsCargo;
+				[_unit, _1rndMortarSmokeW, 200] call _fnc_AddObjectsCargo;
 
 				[_unit, _packedHMG, 6] call _fnc_AddObjectsCargo;
 				[_unit, _packedGMG, 6] call _fnc_AddObjectsCargo;
@@ -698,12 +665,16 @@ if (_isMan) then {
 				[_unit, _LMG_mag, (COUNT_AR_MAGS(_LMG_mag) * 1.5)] call _fnc_AddObjectsCargo;
 				[_unit, _MAT_mag, 4] call _fnc_AddObjectsCargo;
 				[_unit, _MAT_mag_HE, 4] call _fnc_AddObjectsCargo;
-				[_unit, (_LAT select 0), 3] call _fnc_AddObjectsCargo;
+				if (_LAT_ReUsable) then {
+					[_unit, _LAT_mag_HE, 4] call _fnc_AddObjectsCargo;
+				} else {
+					[_unit, (_LAT select 0), 4] call _fnc_AddObjectsCargo;
+				};
 				[_unit, _demoCharge, 4] call _fnc_AddObjectsCargo;
 				[_unit, _cables, 15] call _fnc_AddObjectsCargo;
 
 				if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {
-					[_unit, _glflareW, 16] call _fnc_AddObjectsCargo;
+					[_unit, _glflareW, 24] call _fnc_AddObjectsCargo;
 					[_unit, _glflareR, 8] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareG, 8] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareW, 8] call _fnc_AddObjectsCargo;
@@ -745,7 +716,7 @@ if (_isMan) then {
 				[_unit, _packedDroneRecon, 1] call _fnc_AddObjectsCargo;				
 
 				if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {
-					[_unit, _glflareW, 16] call _fnc_AddObjectsCargo;
+					[_unit, _glflareW, 24] call _fnc_AddObjectsCargo;
 					[_unit, _glflareR, 8] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareG, 8] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareW, 8] call _fnc_AddObjectsCargo;
@@ -791,6 +762,7 @@ if (_isMan) then {
 				[_unit, _packedDroneRecon, 2] call _fnc_AddObjectsCargo;
 				if (_LAT_ReUsable) then {
 					[_unit, _LAT_mag, 6] call _fnc_AddObjectsCargo;
+					[_unit, _LAT_mag_HE, 4] call _fnc_AddObjectsCargo;
 				} else {
 					[_unit, (_LAT select 0), 6] call _fnc_AddObjectsCargo;
 				};
@@ -801,8 +773,8 @@ if (_isMan) then {
 				[_unit, _demoCharge, 4] call _fnc_AddObjectsCargo;
 
 				if ((call EFUNC(Common,isNight)) && _allowedNightStuff) then {
-					[_unit, _glflareW, 24] call _fnc_AddObjectsCargo;
-					[_unit, _glflareR, 10] call _fnc_AddObjectsCargo;
+					[_unit, _glflareW, 40] call _fnc_AddObjectsCargo;
+					[_unit, _glflareR, 20] call _fnc_AddObjectsCargo;
 					[_unit, _glflareG, 10] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareG, 10] call _fnc_AddObjectsCargo;
 					[_unit, _handFlareW, 10] call _fnc_AddObjectsCargo;
