@@ -146,6 +146,7 @@ _laserDesignator = "Laserdesignator";
 _battery = "Laserbatteries";
 _rangecard = "";
 _mortarRangeCard = "";
+_m6RangeCard = "OKS_M6_RangeCard";
 _minedetector = "ACE_MineDetector";
 _mineDetectorVMM3 = "ACE_VMM3";
 _mineDetectorVMH3 = "ACE_VMH3";

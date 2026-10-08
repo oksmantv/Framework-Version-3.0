@@ -100,6 +100,10 @@ switch (toLower _role) do {
 		// Anti-Air Specialist
 		_classname = _sidePrefix + "soldier_AA_F";
 	};
+	case "dummy": {
+		// Dummy / VR Entity
+		_classname = _sidePrefix + "Soldier_VR_F";
+	};
 	case "r";
 	default {
 		// Rifleman (default)

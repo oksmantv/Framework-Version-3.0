@@ -8,6 +8,7 @@ MortarTrainingTask = compile preprocessFileLineNumbers "Training\MortarTrainingT
 MortarAction = compile preprocessFileLineNumbers "Training\MortarAction.sqf";
 ShowTarget = compile preprocessFileLineNumbers "Training\ShowTarget.sqf";
 OKS_fnc_isMortarVehicle = compile preprocessFileLineNumbers "Training\IsMortarVehicle.sqf";
+OKS_fnc_SetupRooftopAssault = compile preprocessFileLineNumbers "Training\SetupRooftopAssault.sqf";
 
 // Mortar class configuration.
 // You can add exact classes or parent classes (isKindOf-compatible).

@@ -56,7 +56,8 @@ private _rolePatterns = [
     [["Helicopter Pilot","Pilot"], "p"],
     [["Spotter","Marksman"], "lr"],
     [["Sniper"], "marksman"],
-    [["Missile Specialist (AA)","AA Specialist","Anti-Air Specialist","Anti Aircraft"], "aa"]
+    [["Missile Specialist (AA)","AA Specialist","Anti-Air Specialist","Anti Aircraft"], "aa"],
+	[["VR Entity"], "dummy"]
 ];
 
 // Try to resolve role by display name using the patterns

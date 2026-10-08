@@ -45,6 +45,15 @@ switch (toLower(_role)) do {
 		[_map, "", "ItemRadio", _compass, _watch, ""] call _addLinkedItems;
 	};
 
+	case "dummy": {
+		["",_helmet,"",_vest,""] call _addEquipment;
+		[_rifle, "", ""] call _addPrimary;
+		if(((call EFUNC(Common,isNight)) && _allowedNightStuff) || _ForceNVG isEqualTo true) then {
+			_nvg call _addNVG;
+		};	
+	};
+
+
 	case "pl": {
 		[_goggles,_helmet,_uniform,_vest,_backpackRadio] call _addEquipment;
 		[_rifle, _rifle_mag_tr, ""] call _addPrimary;
@@ -70,6 +79,19 @@ switch (toLower(_role)) do {
 			_nvg call _addNVG;
 		};
 	};
+
+	case "sm": {
+		[_goggles,_helmet,_uniform,_vest,_backpack] call _addEquipment;
+		[_rifleC, _rifleC_mag_tr, ""] call _addPrimary;
+		_IFAK call _addToUniform;
+		[[_rifleC_mag_tr,2],[_grenademini,2]] call _addToUniform;
+		[[_rifleC_mag_tr,14]] call _addToVest;
+		["", "", "", "", "", ""] call _addLinkedItems;
+		(_FAKSquad) call _addToBackpack;
+		if(((call EFUNC(Common,isNight)) && _allowedNightStuff) || _ForceNVG isEqualTo true) then {
+			_nvg call _addNVG;
+		};	
+	};	
 
 	case "ftl": {
 		[_goggles,_helmet,_uniform,_vest,_backpack] call _addEquipment;
