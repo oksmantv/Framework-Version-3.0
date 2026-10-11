@@ -3,7 +3,7 @@
 
 // GRENADE
 _grenade = "HandGrenade";
-_grenademini = "MiniGrenade";
+_grenademini = if (isClass (configFile >> "CfgMagazines" >> "GOL_HandGrenade_Mini")) then {"GOL_HandGrenade_Mini"} else {"MiniGrenade"};
 _grenadeIR = "B_IR_Grenade";
 _smokegrenadeW = "SmokeShell";
 _smokegrenadeB = "SmokeShellBlue";
@@ -30,7 +30,7 @@ _glsmokeY = "1Rnd_SmokeYellow_Grenade_shell";
 
 _glflareG = "ACE_40mm_Flare_green";
 _glflareR = "ACE_40mm_Flare_red";
-_glflareW = "ACE_40mm_Flare_white";
+_glflareW = "GOL_1Rnd_UGL_FlareWhite";
 
 // Mortar Items.
 _1rndMortarHE = "UK3CB_BAF_1Rnd_60mm_Mo_Shells";
@@ -51,33 +51,28 @@ _map = "ItemMap";
 _gps = "ItemGPS";
 _compass = "ItemCompass";
 _watch = "ItemWatch";
-_nvg = "ACE_NVG_Gen4_Black";
+_nvg = "ACE_NVG_Wide_Black_WP";
+_nvgPilot = "ACE_NVG_Wide_Black_WP";
 _parachute = "B_Parachute";
 
 _demoCharge = "DemoCharge_Remote_Mag";			// Small
 _satchelCharge = "SatchelCharge_Remote_Mag";	// Big
-
-if (true) then {
-	_cTab = "ItemcTab";
-	_Android = "ItemAndroid";
-	_microDAGR = "ItemMicroDAGR";
-	_microDAGRGps = "ItemMicroDAGR";
-	_HelmetCam = "ItemcTabHCam";
-	_UAVTerminal = "B_UavTerminal";
-	_UAVTerminalB = "B_UavTerminal";
-	_UAVTerminalO = "O_UavTerminal";
-	_UAVTerminalI = "I_UavTerminal";
-	_gps = "";
-	if(hasInterface) then {
-		if(_role in ["sm","lightdragon"]) then {
-			_gps = _microDAGR;
-		};
-		if (_role in ["pl","fac","crew","sl","ftl","pm"]) then {
-			_gps = _Android;
-		};
-		if (_role in ["p","pj","dragon","marksman"]) then {
-			_gps = _cTab;
-		};
+_cTab = "ItemcTab";
+_Android = "ItemAndroid";
+_microDAGR = "ItemMicroDAGR";
+_microDAGRGps = "ItemMicroDAGR";
+_HelmetCam = "ItemcTabHCam";
+_UAVTerminal = "B_UavTerminal";
+_UAVTerminalB = "B_UavTerminal";
+_UAVTerminalO = "O_UavTerminal";
+_UAVTerminalI = "I_UavTerminal";
+_gps = "";
+if(hasInterface) then {
+	if (_role in ["pl","fac","crew","sl","ftl","pm","sm","lightdragon"]) then {
+		_gps = _Android;
+	};
+	if (_role in ["p","pj","dragon","marksman"]) then {
+		_gps = _cTab;
 	};
 };
 
@@ -103,8 +98,8 @@ _epi = "ACE_epinephrine";
 _morph = "ACE_morphine";
 _tourn = "ACE_tourniquet";
 _pak = "ACE_personalAidKit";
-_saline = "ACE_salineIV";
-_salineSm = "ACE_SalineIV_500";
+_saline = "ACE_plasmaIV";
+_salineSm = "ACE_plasmaIV_500";
 
 _IFAK = [[_bandage,17],[_tourn,2],[_morph,5]];
 
@@ -151,6 +146,7 @@ _laserDesignator = "Laserdesignator";
 _battery = "Laserbatteries";
 _rangecard = "";
 _mortarRangeCard = "";
+_m6RangeCard = "OKS_M6_RangeCard";
 _minedetector = "ACE_MineDetector";
 _mineDetectorVMM3 = "ACE_VMM3";
 _mineDetectorVMH3 = "ACE_VMH3";

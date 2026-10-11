@@ -26,17 +26,41 @@ SystemChat format ["SpawnList Executed - Case: %1", _case];
 switch (_case) do {
 
 	case 0: {
-		OKS_Battle_Case0 = [west_4,east_4,meet_4,west,east,["UK3CB_CW_US_B_EARLY_M1A1"],["UK3CB_CHD_O_T72A"],sideUnknown] call OKS_fnc_AI_Battle;  
+		OKS_Battle_Case0 = [west_4,east_4,meet_4,west,east,["UK3CB_CW_US_B_EARLY_M1A1"],["UK3CB_CHD_O_T72A"],sideUnknown, true, 600, 3, 60, 2] call OKS_fnc_AI_Battle;  
 	};
 
 	case 1: {
 
 		// Statics
-		[[[[6054.88,7800.44,0.547638],291,"Up",[]],[[6054.8,7807.8,0.558258],342,"Up",[]],[[6058.16,7801.75,3.82327],179,"Up",[]],[[6052.8,7811.32,3.81827],326,"Up",[]],[[6053.91,7812.15,3.82785],334,"Up",[]],[[6033.92,7779.15,0.592621],102,"Up",[]],[[6032.08,7767.35,0.615295],57,"Up",[]],[[6027.16,7775.68,1.10599],137,"Up",[]],[[6043.33,7768.64,0.567932],195,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
-		[[[[6066.21,7742.15,0.988953],333,"Up",[]],[[6064.67,7740.3,0.988953],331,"Up",[]],[[6075.13,7741.67,0.973419],39,"Up",[]],[[6079.64,7734.58,0.968964],242,"Up",[]],[[6074.37,7729.97,0.968964],265,"Up",[]]],[["UK3CB_CHD_O_BMP1",[6056.29,7746.1,0],340,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["chedaki",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
-		[[[[6164.61,7679.62,0.246796],297,"Up",[]],[[6166.99,7683.09,0.3125],110,"Up",[]],[[6176.82,7676.77,0.220093],291,"Up",[]],[[6170.54,7675.06,0.21405],291,"Up",[]],[[6174.81,7684,0.253357],4,"Up",[]]],[["UK3CB_CHD_O_BMP1",[6184.01,7695.57,0],304,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["chedaki",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
-		[[[[6561.73,6129.07,0.209961],0,"Up",[[301,0]],"mmg"],[[6558.81,6128.56,0.172546],0,"Up",[[301,0]],"mat"],[[6559.58,6124.23,0.107819],246,"Middle",[[301,0]],"ar"],[[6562.88,6122.81,0.107788],235,"Middle",[[301,0],[302,1]],"ab"],[[6556.21,6127.65,0.178345],0,"Up",[[301,0]],"mat"]],[],[],east] call GW_Common_fnc_spawnGroup;
-		[[[[5611.84,7346.9,-1.56412],58,"Up",[[301,0]],"sl"],[[5629.25,7328.12,-0.886353],52,"Up",[[301,0]],"g"],[[5683.27,7265.83,3.05176e-05],175,"Up",[[301,0]],"r"],[[5651.98,7305.25,0],45,"Up",[[301,0]],"g"],[[5681.42,7273.12,1.00812],52,"Up",[[301,0]],"mat"],[[5667.42,7296.12,0],39,"Up",[[301,0]],"lr"],[[5742.52,7258.03,0],125,"Up",[[301,0]],"r"],[[5731.85,7264.69,-3.05176e-05],326,"Up",[[301,0]],"r"]],[["rhs_brm1k_msv",[5684.5,7270.17,0],37,[["driver",-1,[]],["gunner",0,[0]],["turret",-1,[1]]],[[6,["standard",1]],[7,["konkurs_hide_source",0,"crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",1]],[351,false]]],["rhs_brm1k_msv",[5738.15,7263.23,0],40,[["driver",-1,[]],["gunner",0,[0]],["turret",-1,[1]]],[[6,["standard",1]],[7,["konkurs_hide_source",0,"crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",1]],[351,false]]],["rhs_brm1k_msv",[5636.35,7320.72,0],58,[["driver",-1,[]],["gunner",0,[0]],["turret",-1,[1]]],[[6,["standard",1]],[7,["konkurs_hide_source",0,"crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",1]],[351,false]]],["rhs_brm1k_msv",[5609.51,7349.96,0],40,[["driver",-1,[]],["gunner",0,[0]],["turret",-1,[1]]],[[6,["standard",1]],[7,["konkurs_hide_source",0,"crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",1]],[351,false]]]],[],independent] call GW_Common_fnc_spawnGroup;
+		[[
+			[[6054.88,7800.44,0.547638],291,"Up",[]],[[6054.8,7807.8,0.558258],342,"Up",[]],
+			//[[6058.16,7801.75,3.82327],179,"Up",[]],[[6052.8,7811.32,3.81827],326,"Up",[]],
+			[[6053.91,7812.15,3.82785],334,"Up",[]],[[6033.92,7779.15,0.592621],102,"Up",[]],
+			//[[6032.08,7767.35,0.615295],57,"Up",[]],[[6027.16,7775.68,1.10599],137,"Up",[]],
+			[[6043.33,7768.64,0.567932],195,"Up",[]]
+		],[],[]] call GW_Common_fnc_spawnGroup;
+		[[
+			[[6066.21,7742.15,0.988953],333,"Up",[]],[[6064.67,7740.3,0.988953],331,"Up",[]],
+			//[[6075.13,7741.67,0.973419],39,"Up",[]],[[6079.64,7734.58,0.968964],242,"Up",[]],
+			[[6074.37,7729.97,0.968964],265,"Up",[]]
+		],[["UK3CB_CHD_O_BMP1",[6056.29,7746.1,0],340,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["chedaki",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
+		[[
+			[[6164.61,7679.62,0.246796],297,"Up",[]],[[6166.99,7683.09,0.3125],110,"Up",[]],
+			//[[6176.82,7676.77,0.220093],291,"Up",[]],[[6170.54,7675.06,0.21405],291,"Up",[]],
+			[[6174.81,7684,0.253357],4,"Up",[]]
+		],[["UK3CB_CHD_O_BMP1",[6184.01,7695.57,0],304,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["chedaki",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
+		[[
+			[[6561.73,6129.07,0.209961],0,"Up",[[301,0]],"mmg"],[[6558.81,6128.56,0.172546],0,"Up",[[301,0]],"mat"],
+			[[6559.58,6124.23,0.107819],246,"Middle",[[301,0]],"ar"],
+			//[[6562.88,6122.81,0.107788],235,"Middle",[[301,0],[302,1]],"ab"],
+			[[6556.21,6127.65,0.178345],0,"Up",[[301,0]],"mat"]
+		],[],[],east] call GW_Common_fnc_spawnGroup;
+		[[
+			[[5611.84,7346.9,-1.56412],58,"Up",[[301,0]],"sl"],[[5629.25,7328.12,-0.886353],52,"Up",[[301,0]],"g"],
+			//[[5683.27,7265.83,3.05176e-05],175,"Up",[[301,0]],"r"],[[5651.98,7305.25,0],45,"Up",[[301,0]],"g"],
+			[[5681.42,7273.12,1.00812],52,"Up",[[301,0]],"mat"],[[5667.42,7296.12,0],39,"Up",[[301,0]],"lr"],
+			[[5742.52,7258.03,0],125,"Up",[[301,0]],"r"],[[5731.85,7264.69,-3.05176e-05],326,"Up",[[301,0]],"r"]
+		],[["rhs_brm1k_msv",[5684.5,7270.17,0],37,[["driver",-1,[]],["gunner",0,[0]],["turret",-1,[1]]],[[6,["standard",1]],[7,["konkurs_hide_source",0,"crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",1]],[351,false]]],["rhs_brm1k_msv",[5738.15,7263.23,0],40,[["driver",-1,[]],["gunner",0,[0]],["turret",-1,[1]]],[[6,["standard",1]],[7,["konkurs_hide_source",0,"crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",1]],[351,false]]],["rhs_brm1k_msv",[5636.35,7320.72,0],58,[["driver",-1,[]],["gunner",0,[0]],["turret",-1,[1]]],[[6,["standard",1]],[7,["konkurs_hide_source",0,"crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",1]],[351,false]]],["rhs_brm1k_msv",[5609.51,7349.96,0],40,[["driver",-1,[]],["gunner",0,[0]],["turret",-1,[1]]],[[6,["standard",1]],[7,["konkurs_hide_source",0,"crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",1]],[351,false]]]],[],independent] call GW_Common_fnc_spawnGroup;
 
 		// Vehicles.
 		[[],[["UK3CB_CHD_O_BMP1",[6290.75,7208.8,2],342,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_l4_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"crate_r4_unhide",1,"water_1_unhide",0,"water_2_unhide",1,"wheel_1_unhide",0,"wheel_2_unhide",0]]]],["UK3CB_CHD_O_BMP1",[6300.56,7842.83,2],251,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["standard",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_l4_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"crate_r4_unhide",0,"water_1_unhide",0,"water_2_unhide",0,"wheel_1_unhide",0,"wheel_2_unhide",1]]]]],[]] call GW_Common_fnc_spawnGroup;
@@ -74,19 +98,19 @@ switch (_case) do {
 		[[],[["UK3CB_CHD_O_BMP1",[6655.99,5885.23,0],317,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["CHDKZ",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
 		sleep 10; 
 		
-		OKS_Battle_Case1 = [west_3,east_3,meet_3,west,east,["UK3CB_CW_US_B_LATE_LAV25","rhsusf_M1117_W"],["UK3CB_CHD_O_BMP1"],east] call OKS_fnc_AI_Battle;
+		OKS_Battle_Case1 = [west_3,east_3,meet_3,west,east,["UK3CB_CW_US_B_LATE_LAV25","rhsusf_M1117_W"],["UK3CB_CHD_O_BMP1"],east, true, 600, 3, 60, 1] call OKS_fnc_AI_Battle;
 		null = [] spawn {
 			while {true} do {
 				{
 					_X Params ["_PlaneStart","_PlaneEnd"];
-					[_PlaneStart,_PlaneEnd,selectRandom ["UK3CB_B_Osprey_IDWS_HMG_USMC_D"],west,true,"MOVE",400,[]] spawn OKS_fnc_AirSpawn; sleep 120;
+					[_PlaneStart,_PlaneEnd,selectRandom ["UK3CB_B_Osprey_IDWS_HMG_USMC_D"],west,true,"MOVE",400,[]] spawn OKS_fnc_AirSpawn; sleep 180;
 				} foreach [
 					[getpos Plane_1,getpos PlaneExit_1],
 					[getpos Plane_2,getpos PlaneExit_2],
 					[getpos Plane_3,getpos PlaneExit_3],
 					[getpos Plane_4,getpos PlaneExit_4]
 				];
-				sleep 300;
+				sleep 1000;
 			};	
 		};
 	};
@@ -119,7 +143,7 @@ switch (_case) do {
 		[Trigger_2,false,[0,0,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
 		null = [radar_2,["rhsgref_ins_ural_Zu23","UK3CB_CW_SOV_O_LATE_BTR40_ZU23"],3500,3500,30] spawn OKS_fnc_Radar;
 		OKS_Battle_Case1 setVariable ["OKS_AIBattle_On", false, true];
-		OKS_Battle_Case2 = [west_2,east_2,meet_2,west,east,["UK3CB_CW_US_B_EARLY_M1A1","UK3CB_CW_US_B_LATE_LAV25","rhsusf_M1117_W"],["UK3CB_CHD_O_T72A","UK3CB_CHD_O_BMP1"],east] call OKS_fnc_AI_Battle;    
+		OKS_Battle_Case2 = [west_2,east_2,meet_2,west,east,["UK3CB_CW_US_B_EARLY_M1A1","UK3CB_CW_US_B_LATE_LAV25","rhsusf_M1117_W"],["UK3CB_CHD_O_T72A","UK3CB_CHD_O_BMP1"],east, true, 600, 3, 60, 2] call OKS_fnc_AI_Battle;    
 	};
 
 	case 3: {
@@ -128,7 +152,7 @@ switch (_case) do {
 		["Secure2","SUCCEEDED"] call BIS_fnc_taskSetState;
 		sleep 5;
 		[true, ["Defend_1","Sub0"], ["Surveillance suggest a large force of infantry is heading towards Vyshnoye from the south-west and from the east. Prepare to defend the village!", "Defend Vyshnoye", "AD"], [6551.67,6056.52,0.00143433], "CREATED", 2, true,"defend"] call BIS_fnc_taskCreate;
-		["hq","side","1st Platoon, be advised, a counter-attack is imminent. Hold your positions and prepare to defend."] remoteExec ["OKS_fnc_Chat",0];
+		["Battalion HQ","side","1st Platoon, be advised, a counter-attack is imminent. Hold your positions and prepare to defend."] remoteExec ["OKS_fnc_Chat",0];
 		sleep 15;
 		{[_X,8,1,east,1000,"counter1variable"] spawn OKS_fnc_LambsChargeSpawn; sleep 4.5} foreach [charge_1,charge_2,charge_3,charge_4];
 
@@ -136,14 +160,13 @@ switch (_case) do {
 		null = [AirSpawnPosition_2, AirSpawnTarget_2, [["UK3CB_CW_SOV_O_LATE_MIG21",["","rhs_mag_fab250","rhs_mag_fab250",""]]], east] spawn OKS_fnc_AirSpawn;
 		null = [AirSpawnPosition_3, AirSpawnTarget_3, [["RHS_Su25SM_vvsc",["rhs_mag_kmgu2_ptm1","rhs_mag_kmgu2_ptm1","rhs_mag_fab100","rhs_mag_fab100","rhs_mag_b8m1_s8kom","rhs_mag_b8m1_s8kom","PylonWeapon_300Rnd_20mm_shells","PylonWeapon_300Rnd_20mm_shells","rhs_mag_R60","rhs_mag_R60","rhs_ASO2_CMFlare_Chaff_Magazine_x4"]]], east] spawn OKS_fnc_AirSpawn;
 
-
 		_vehicle1 = [[],[["UK3CB_CHD_O_UAZ_MG",[6917.56,5620.97,3.05176e-005],346,[["driver",-1,[]],["gunner",-1,[1]]],[[6,["CHDKZ",1]],[7,["Radio_Hide",0,"Front_Grill_Hide",0,"Light_Covers_Hide",0,"Fuel_Cans_Hide",0,"ClanLogo_Hide",1]]]]],[[[6580.15,6023.12,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup; sleep 30;
 		_Vehicle2 = [[],[["UK3CB_CHD_O_LR_SPG9",[6930.11,5591.89,3.05176e-005],333,[["driver",-1,[]],["gunner",-1,[1]]],[[6,["CHDKZ",1]],[7,["Radio_Hide",0,"Front_Grill_Hide",0,"Light_Covers_Hide",0,"Fuel_Cans_Hide",0,"ClanLogo_Hide",1]]]]],[[[6413.04,6195.45,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
 		
 		// Mogilevka Setup
 		[destroyTrigger_3,false,[8,10]] spawn OKS_fnc_Destroy_Houses;
 		OKS_Battle_Case2 setVariable ["OKS_AIBattle_On", false, true];
-		OKS_Battle_Case3 = [west_1,east_1,meet_1,west,east,["UK3CB_CW_US_B_EARLY_M1A1","UK3CB_CW_US_B_LATE_LAV25"],["UK3CB_CHD_O_T72A","UK3CB_CHD_O_BMP1"],east] call OKS_fnc_AI_Battle;    
+		OKS_Battle_Case3 = [west_1,east_1,meet_1,west,east,["UK3CB_CW_US_B_EARLY_M1A1","UK3CB_CW_US_B_LATE_LAV25"],["UK3CB_CHD_O_T72A","UK3CB_CHD_O_BMP1"],east, true, 600, 3, 60, 2] call OKS_fnc_AI_Battle;    
 
 		waitUntil {
 			sleep 1; 
@@ -178,7 +201,7 @@ switch (_case) do {
 	
 		[Trigger_3,false,[0,0,false,false],east,0,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
 		OKS_Battle_Case3 setVariable ["OKS_AIBattle_On", false, true];
-		OKS_Battle_Case4 = [west_2,east_2,east_2,west,east,["UK3CB_CW_US_B_EARLY_M1A1","UK3CB_CW_US_B_LATE_LAV25"],["UK3CB_CHD_O_T72A","UK3CB_CHD_O_BMP1"],sideUnknown] call OKS_fnc_AI_Battle;    
+		OKS_Battle_Case4 = [west_2,east_2,east_2,west,east,["UK3CB_CW_US_B_EARLY_M1A1","UK3CB_CW_US_B_LATE_LAV25"],["UK3CB_CHD_O_T72A","UK3CB_CHD_O_BMP1"],sideUnknown, true, 600, 3, 60, 2] call OKS_fnc_AI_Battle;    
 	};
 
 	case 5: {
@@ -188,7 +211,7 @@ switch (_case) do {
 		sleep 5;
 		[true, ["Defend_2","Sub0"], ["Surveillance suggest a large force of infantry is heading towards Mogilevka from the south-west. Prepare to defend the village!", "Defend Mogilevka", "AD"], [7536.9,5138.46,0.00144958], "ASSIGNED", 2, true,"defend"] call BIS_fnc_taskCreate;
 		OKS_Battle_Case4 setVariable ["OKS_AIBattle_On", false, true];
-		["hq","side","1st Platoon be advised, a large counter-attack is building up to the south-east and south-west. Expect two columns and infantry support. ETA Momentarily.","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
+		["Battalion HQ","side","1st Platoon be advised, a large counter-attack is building up to the south-east and south-west. Expect two columns and infantry support. ETA Momentarily.","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
 		sleep 15;
 		deleteVehicle alarm_2;
 		{
@@ -201,9 +224,9 @@ switch (_case) do {
 
 		sleep 15;
 		_ConvoyArray = [];
-		[ConvoySpawn_1,ConvoyWP_1,ConvoyEnd_1,east,[6,["UK3CB_CHD_W_O_BMP1","UK3CB_CHD_W_O_BMP1","UK3CB_CHD_W_O_BMP1","UK3CB_CHD_W_O_Gaz66_Open","UK3CB_CHD_W_O_Gaz66_Open","UK3CB_CHD_W_O_Gaz66_Open"],35,50],[true,4],_ConvoyArray,false,false,["rush"],false] spawn OKS_fnc_Convoy_Spawn;
+		[ConvoySpawn_1,ConvoyWP_1,ConvoyEnd_1,east,[6,["UK3CB_CHD_W_O_BMP1","UK3CB_CHD_W_O_BMP1","UK3CB_CHD_W_O_BMP1","UK3CB_CHD_W_O_Gaz66_Open","UK3CB_CHD_W_O_Gaz66_Open","UK3CB_CHD_W_O_Gaz66_Open"],35,50],[true,4],_ConvoyArray,false,false,["rush"],"convoystop"] spawn OKS_fnc_Convoy_Spawn;
 		sleep 15;
-		[ConvoySpawn_2,ConvoyWP_2,ConvoyEnd_2,independent,[6,["UK3CB_FIA_O_Quadbike"],60,35],[true,1],_ConvoyArray,false,false,["rush"],false] spawn OKS_fnc_Convoy_Spawn;
+		[ConvoySpawn_2,ConvoyWP_2,ConvoyEnd_2,independent,[6,["UK3CB_FIA_O_Quadbike"],60,35],[true,1],_ConvoyArray,false,false,["rush"],"convoystop"] spawn OKS_fnc_Convoy_Spawn;
 		null = [AirSpawnPosition_2, AirSpawnTarget_2, [["UK3CB_CW_SOV_O_LATE_MIG21",["rhs_mag_fab250","rhs_mag_fab250","rhs_mag_fab250","rhs_mag_fab250"]]], east] spawn OKS_fnc_AirSpawn;
 		waitUntil {
 			sleep 15;
@@ -239,7 +262,7 @@ switch (_case) do {
 
 		// Pusta Defence
 		[true, ["Defend_3","Sub0"], ["Surveillance suggest a large force air assault group has just left Balota, we suspect air assault infantry is heading towards Pusta for a combat drop. We also detect a follow up mechanized force is detaching from the siege of Elektrozavodsk. Prepare to defend the village!", "Defend Pusta", "AD"], [9173.2,3833.5,0], "CREATED", 2, true,"defend"] call BIS_fnc_taskCreate;
-		["hq","side","1st Platoon be advised, radar has picked up a large helicopter formation heading towards your position, we also picked up on a mechanized force detaching from the siege of Elektrozavodsk to counter-attack. ETA 3 minutes","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
+		["Battalion HQ","side","1st Platoon be advised, radar has picked up a large helicopter formation heading towards your position, we also picked up on a mechanized force detaching from the siege of Elektrozavodsk to counter-attack. ETA 3 minutes","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
 		sleep 300;
 
 		null = [AirSpawnPosition_1, AirSpawnTarget_1, [["RHS_Su25SM_vvsc",["rhs_mag_kmgu2_ptm1","rhs_mag_kmgu2_ptm1","rhs_mag_fab100","rhs_mag_fab100","rhs_mag_b8m1_s8kom","rhs_mag_b8m1_s8kom","PylonWeapon_300Rnd_20mm_shells","PylonWeapon_300Rnd_20mm_shells","rhs_mag_R60","rhs_mag_R60","rhs_ASO2_CMFlare_Chaff_Magazine_x4"]]], east] spawn OKS_fnc_AirSpawn;
@@ -254,7 +277,7 @@ switch (_case) do {
 
 		// Convoy Attack.
 		_AttackGroups = [];
-		[ConvoySpawn_3,ConvoyWP_3,ConvoyEnd_3,independent,[7,["rhs_t80","rhs_t80","rhs_bmp1_vmf","rhs_bmp1_vmf","rhs_kamaz5350_msv","rhs_kamaz5350_msv","rhs_t80"],25,40],[true,6],_AttackGroups,false,false,["hunt"],false] spawn OKS_fnc_Convoy_Spawn;
+		[ConvoySpawn_3,ConvoyWP_3,ConvoyEnd_3,independent,[7,["rhs_t80","rhs_t80","rhs_bmp1_vmf","rhs_bmp1_vmf","rhs_kamaz5350_msv","rhs_kamaz5350_msv","rhs_t80"],25,40],[true,6],_AttackGroups,false,false,["hunt"],"convoystop"] spawn OKS_fnc_Convoy_Spawn;
 		sleep 10;
 		_AttackingHelicopters = vehicles select {typeOf _X == "UK3CB_CHD_O_Mi8AMT"};
 		{
@@ -294,12 +317,12 @@ switch (_case) do {
 			"enemy_5","enemy_5_1","enemy_5_2",
 			"enemy_7","enemy_7_1","enemy_7_2"
 		];		
-		["hq","side","1st Platoon, the counter-attack has been defeated. Good work! Fresh reserves will arrive shorly to relieve Elektrozavodsk. Mission Complete, HQ out.","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
+		["Battalion HQ","side","1st Platoon, the counter-attack has been defeated. Good work! Fresh reserves will arrive shorly to relieve Elektrozavodsk. Mission Complete, HQ out.","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
 	};
 
 	case 8: {
 		// MLRS Strikes.
-		["hq","side","1-1 Be advised, friendly artillery is targeting Mogilevka to assist your assault, HQ out","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
+		["Battalion HQ","side","1-1 Be advised, friendly artillery is targeting Mogilevka to assist your assault, HQ out","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
 
 		[mlrs_1,[getPos target_5,getPos target_6],west,3,1,true,false,30,false] spawn OKS_fnc_ArtySuppression;
 		[mlrs_2,[getPos target_7,getPos target_8],west,3,1,true,false,30,false] spawn OKS_fnc_ArtySuppression;
@@ -307,7 +330,7 @@ switch (_case) do {
 
 	case 9: {
 		// Vyshnoye Artillery Strikes.
-		["hq","side","1-1 Be advised, friendly artillery is targeting Zub Castle to neutralize the strongpoint, HQ out","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
+		["Battalion HQ","side","1-1 Be advised, friendly artillery is targeting Zub Castle to neutralize the strongpoint, HQ out","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
 
 		[mlrs_1,[getPos target_1,getPos target_2],west,3,1,true,false,30,false] spawn OKS_fnc_ArtySuppression;
 		[mlrs_2,[getPos target_3,getPos target_4],west,3,1,true,false,30,false] spawn OKS_fnc_ArtySuppression;
@@ -320,7 +343,7 @@ switch (_case) do {
 		"reinforceMarker_1" setMarkerAlpha 1; "enemy_1" setMarkerAlpha 0; "enemy_1_1" setMarkerAlpha 0;  
 		[reinforce_1,reinforce_2,reinforce_3,west,[2,["UK3CB_B_BTR40_M2_CDF","UK3CB_B_BTR40_M2_CDF"],60,50],[true,2],[],false,false,["defend"],false] spawn OKS_fnc_Convoy_Spawn;
 		//[reinforce_1,reinforce_2,reinforce_3,west,[2,["rhsgref_BRDM2_b"], 15, 30],[true,5], false, "Reinforced1"] spawn OKS_fnc_Convoy_Reinforce;
-		["hq","side","1-1 be advised, we are inbound from the north-west to garrison the village of Stary Sobor, get clear of the MSR. 2-Actual out.","2nd Platoon"] remoteExec ["OKS_fnc_Chat",0];
+		["Battalion HQ","side","1-1 be advised, we are inbound from the north-west to garrison the village of Stary Sobor, get clear of the MSR. 2-Actual out.","2nd Platoon"] remoteExec ["OKS_fnc_Chat",0];
 	
 		{_X setMarkerAlpha 1} foreach [
 			"break_1","break_2","break_3","break_4","break_5","break_6"
@@ -342,7 +365,7 @@ switch (_case) do {
 
 		//[reinforce_4,reinforce_5,reinforce_6,west,[2,["rhsgref_BRDM2_b"], 15, 30],[true,5], false, "Reinforced2"] spawn OKS_fnc_Convoy_Reinforce;
 
-		["hq","side","1-1 be advised, friendly forces inbound from the north to garrison the village of Vyshnoye, clear the road for us. 3-Actual out.","3rd Platoon"] remoteExec ["OKS_fnc_Chat",0];
+		["Battalion HQ","side","1-1 be advised, friendly forces inbound from the north to garrison the village of Vyshnoye, clear the road for us. 3-Actual out.","3rd Platoon"] remoteExec ["OKS_fnc_Chat",0];
 	};
 
 	case 12: {
@@ -353,7 +376,7 @@ switch (_case) do {
 
 		//[reinforce_7,reinforce_8,reinforce_9,west,[2,["rhsgref_BRDM2_b"], 15, 25],[true,5], false, "Reinforced3"] spawn OKS_fnc_Convoy_Reinforce;
 
-		["hq","side","1-1 be advised, we are about to arrive from the north-west to garrison the village of Mogilevka, clear the road. 4-Actual out.","4th Platoon"] remoteExec ["OKS_fnc_Chat",0];
+		["Battalion HQ","side","1-1 be advised, we are about to arrive from the north-west to garrison the village of Mogilevka, clear the road. 4-Actual out.","4th Platoon"] remoteExec ["OKS_fnc_Chat",0];
 	};
 
 	case 13: {
@@ -364,7 +387,7 @@ switch (_case) do {
 		
 		//[reinforce_10,reinforce_11,reinforce_12,west,[2,["rhsgref_BRDM2_b"], 15, 25],[true,5], false, "Reinforced4","small",true,false] spawn OKS_fnc_Convoy_Reinforce;
 
-		["hq","side","1-1 be advised 5th Platoon are inbound from the north-west to garrison the village of Pusta, clear the road.","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
+		["Battalion HQ","side","1-1 be advised 5th Platoon are inbound from the north-west to garrison the village of Pusta, clear the road.","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
 
 		"reinforceMarker_4" setMarkerAlpha 1; "enemy_4" setMarkerAlpha 0; "enemy_4_1" setMarkerAlpha 0;
 	};

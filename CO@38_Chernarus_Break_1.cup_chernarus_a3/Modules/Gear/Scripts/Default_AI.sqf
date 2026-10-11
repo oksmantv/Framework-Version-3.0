@@ -63,13 +63,26 @@ switch (toLower(_role)) do {
 		[_rifle, _rifle_mag, ""] call _addPrimary;
 		_IFAK call _addToUniform;
 		[[_rifle_mag_tr,4]] call _addToUniform;
-		[[_grenademini,1],[_rifle_mag_tr,5]] call _addToVest;
+		[[_grenademini,2],[_rifle_mag_tr,5]] call _addToVest;
 		[[_rifle_mag,7]] call _addToBackpack;
 		[_map, "", "ItemRadio", _compass, _watch, ""] call _addLinkedItems;
 		if (((call EFUNC(Common,isNight)) && _allowedNightStuff) || _ForceNVG isEqualTo true) then {
 			_nvg call _addNVG;
 		};
 	};
+
+	case "sm": {
+		[_goggles,_helmet,_uniform,_vest,_backpack] call _addEquipment;
+		[_rifleC, _rifleC_mag_tr, ""] call _addPrimary;
+		_IFAK call _addToUniform;
+		[[_rifleC_mag_tr,2],[_grenademini,2]] call _addToUniform;
+		[[_rifleC_mag_tr,14]] call _addToVest;
+		["", "", "", "", "", ""] call _addLinkedItems;
+		(_FAKSquad) call _addToBackpack;
+		if(((call EFUNC(Common,isNight)) && _allowedNightStuff) || _ForceNVG isEqualTo true) then {
+			_nvg call _addNVG;
+		};	
+	};	
 
 	case "ftl": {
 		[_goggles,_helmet,_uniform,_vest,_backpack] call _addEquipment;
@@ -79,7 +92,7 @@ switch (toLower(_role)) do {
 			[_rifle, _rifle_mag_tr, ""] call _addPrimary;
 		};
 		_IFAK call _addToUniform;
-		[[_rifle_mag_tr,2],[_grenademini,1]] call _addToUniform;
+		[[_rifle_mag_tr,2],[_grenademini,2]] call _addToUniform;
 		[[_rifle_mag_tr,13],[_glHE,1]] call _addToVest;
 		[_map, "", "ItemRadio", _compass, _watch, ""] call _addLinkedItems;
 		if (((call EFUNC(Common,isNight)) && _allowedNightStuff) || _ForceNVG isEqualTo true) then {
@@ -151,7 +164,7 @@ switch (toLower(_role)) do {
 			[_rifle, _rifle_mag_tr, ""] call _addPrimary;
 		};
 		_IFAK call _addToUniform;
-		[[_rifle_mag_tr,2],[_grenademini,1]] call _addToUniform;
+		[[_rifle_mag_tr,2],[_grenademini,2]] call _addToUniform;
 		[[_rifle_mag_tr,13]] call _addToVest;
 		["", "", "", "", "", ""] call _addLinkedItems;
 		if ((random 1) <= _LAT_Chance) then {
@@ -170,7 +183,7 @@ switch (toLower(_role)) do {
 		[_goggles,_helmet,_uniform,_vest,_backpack] call _addEquipment;
 		[_rifle, _rifle_mag_tr, ""] call _addPrimary;
 		_IFAK call _addToUniform;
-		[[_rifle_mag_tr,2],[_grenademini,1]] call _addToUniform;
+		[[_rifle_mag_tr,2],[_grenademini,2]] call _addToUniform;
 		[[_rifle_mag_tr,14]] call _addToVest;
 		["", "", "", "", "", ""] call _addLinkedItems;
 

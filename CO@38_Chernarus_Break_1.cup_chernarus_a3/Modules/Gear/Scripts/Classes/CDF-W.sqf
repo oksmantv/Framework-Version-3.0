@@ -61,9 +61,8 @@ if (_role isEqualTo "jetp") then {
 	_backpack = "B_Parachute";
 };
 
-
 _silencer = "rhs_acc_dtk2";
-_pointer = "acc_flashlight";
+_pointer = "GOL_OX3000_FL_Low";
 _sight = "optic_Arco_blk_F";
 _bipod = "rhsusf_acc_kac_grip";
 
