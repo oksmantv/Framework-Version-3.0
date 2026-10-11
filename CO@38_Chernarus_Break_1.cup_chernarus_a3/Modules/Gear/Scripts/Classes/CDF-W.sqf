@@ -64,11 +64,11 @@ if (_role isEqualTo "jetp") then {
 
 _silencer = "rhs_acc_dtk2";
 _pointer = "acc_flashlight";
-_sight = "optic_MRCO";
+_sight = "optic_Arco_blk_F";
 _bipod = "rhsusf_acc_kac_grip";
 
 _rifle = [["rhs_weap_ak74mr","rhs_weap_ak105_zenitco01_b33","UK3CB_AK12"], _silencer, _pointer, _sight, _bipod];
-_rifleC = ["UK3CB_AEK971", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["rhs_weap_ak74mr", _silencer, _pointer, _sight, _bipod];
 _rifleGL = [["rhs_weap_ak74mr_gp25","UK3CB_AK12_GL"], _silencer, _pointer, _sight, _bipod];
 _rifleL = ["rhs_weap_ak74mr", _silencer, _pointer, _sight, _bipod];
 _rifle_mag = "UK3CB_RPK74_60rnd_545x39_RM";
@@ -78,19 +78,19 @@ _rifleGL_mag_tr = "UK3CB_RPK74_60rnd_545x39_RT";
 _rifleL_mag = "UK3CB_RPK74_60rnd_545x39_RM";
 _rifleL_mag_tr = "UK3CB_RPK74_60rnd_545x39_RT";
 
-_LMG = ["UK3CB_BAF_L110_762", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "UK3CB_BAF_762_200Rnd_T";
+_LMG = ["GOL_weap_fnmag", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "GOL_FNMAG_200Rnd_762x51_M993_Tracer_Red";
 
 _MMG = ["rhs_weap_pkp", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhs_100Rnd_762x54mmR_green";
 
-_LAT = ["UK3CB_BAF_AT4_CS_AT_Launcher", _silencer, _pointer, _sight, _bipod];
+_LAT = ["JCA_launch_M72_olive_F", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "";
 _LAT_ReUsable = false;
 
-_MAT = ["launch_MRAWS_green_F", _silencer, _pointer, _sight, _bipod];
-_MAT_mag = "MRAWS_HEAT_F";
-_MAT_mag_HE = "rhs_mag_maaws_HE";
+_MAT = ["GOL_weap_RPG7_RHS", _silencer, _pointer, _sight, _bipod];
+_MAT_mag = "GOL_mag_rpg7_Modern";
+_MAT_mag_HE = "GOL_mag_rpg7_OG7V";
 
 _HAT = ["launch_O_Vorona_green_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Vorona_HEAT";

@@ -3,7 +3,7 @@ _useMineDetector = false;
 _allowedNightStuff = true;
 
 _insignia = "insignia_block35";
-_goggles = ["JCA_G_balaclava_01_sand_F"];
+_goggles = ["JCA_G_balaclava_01_sand_F","rhsusf_shemagh_tan","rhsusf_shemagh_od","rhsusf_oakley_goggles_clr","G_Armband_aaf_F","rhs_googles_clear"];
 _OfficerHelmet = "H_MilCap_dgtl";
 _helmet =  ["UK3CB_AAF_B_H_PASGT_DIGI_BRN"];
 _uniform =  ["UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_BRN","UK3CB_AAF_B_U_CombatUniform_DIGI_BRN"];
@@ -41,15 +41,15 @@ if (_role isEqualTo "jetp") then {
 	_backpack = "B_Parachute";
 };
 
-_silencer = "rhsusf_acc_SFMB556";
-_pointer = "";
-_sight = "optic_MRCO";
-_bipod = "";
+_silencer = "JCA_muzzle_snds_556_enhanced_black";
+_pointer = "GOL_OX3000";
+_sight = "optic_Aco";
+_bipod = "rhsusf_acc_grip2";
 
-_rifle = ["arifle_Mk20_plain_F", _silencer, _pointer, _sight, _bipod];
-_rifleC = ["arifle_Mk20C_plain_F", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["arifle_Mk20_GL_plain_F", _silencer, _pointer, _sight, _bipod];
-_rifleL = ["arifle_Mk20_plain_F", _silencer, _pointer, _sight, _bipod];
+_rifle = ["rhs_weap_mk18", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["rhs_weap_m4a1", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["rhs_weap_mk18_m320", _silencer, _pointer, _sight, _bipod];
+_rifleL = ["JCA_arifle_M16A4_FG_sand_F", _silencer, _pointer, "JCA_optic_ACOG_sand", "bipod_02_F_hex"];
 _rifle_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
 _rifle_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
 _rifleGL_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
@@ -59,8 +59,8 @@ _rifleL_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
 _rifleC_mag = "GOL_30Rnd_556x45_AP45_Mixed_Red";
 _rifleC_mag_tr = "GOL_30Rnd_556x45_AP45_Tracer_Red";
 
-_LMG = ["GOL_LMG_Zafir_F", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "150Rnd_762x54_Box_Tracer_Red";
+_LMG = ["GOL_LMG_Mk200_F", "muzzle_snds_65_TI_blk_F", _pointer, _sight, "JCA_bipod_04_black"];
+_LMG_mag = "GOL_200Rnd_65x39_cased_Box_Tracer_Red";
 
 _MMG = ["LMG_Mk200_F", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "200Rnd_65x39_cased_Box_Tracer_Red";
@@ -79,8 +79,8 @@ _HAT_mag = "Vorona_HEAT";
 _AA = ["launch_I_Titan_F", _silencer, _pointer, _sight, _bipod];
 _AA_mag = "Titan_AA";
 
-_pistol = ["hgun_ACPC2_F", _silencer, _pointer, _sight, _bipod];
-_pistol_mag = "9Rnd_45ACP_Mag";
+_pistol = ["JCA_hgun_G17_black_F", _silencer, _pointer, _sight, _bipod];
+_pistol_mag = "JCA_17Rnd_9x19_G17_Red_Mag";
 
 _pdw = ["UK3CB_MP5A4", _silencer, _pointer, _sight, _bipod];
 _pdw_mag = "UK3CB_MP5_30Rnd_9x19_Magazine_R";

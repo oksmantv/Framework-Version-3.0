@@ -93,6 +93,9 @@ switch (_case) do {
 
 	case 2: {
 
+
+		null = [AirSpawnPosition_3, AirSpawnTarget_3, [["RHS_Su25SM_vvsc",["rhs_mag_kmgu2_ptm1","rhs_mag_kmgu2_ptm1","rhs_mag_fab100","rhs_mag_fab100","rhs_mag_b8m1_s8kom","rhs_mag_b8m1_s8kom","PylonWeapon_300Rnd_20mm_shells","PylonWeapon_300Rnd_20mm_shells","rhs_mag_R60","rhs_mag_R60","rhs_ASO2_CMFlare_Chaff_Magazine_x4"]]], east] spawn OKS_fnc_AirSpawn;
+
 		// Vyshnoye.
 		[[
 			[[6583.17,6045.7,1.94095],26,"Up",[]],[[6584.7,6044.24,1.85986],26,"Up",[]],[[6580.28,6040.85,2.00485],283,"Up",[]],[[6533.51,6109.72,3.32629],152,"Up",[]],
@@ -131,6 +134,8 @@ switch (_case) do {
 
 		sleep 20;
 		null = [AirSpawnPosition_2, AirSpawnTarget_2, [["UK3CB_CW_SOV_O_LATE_MIG21",["","rhs_mag_fab250","rhs_mag_fab250",""]]], east] spawn OKS_fnc_AirSpawn;
+		null = [AirSpawnPosition_3, AirSpawnTarget_3, [["RHS_Su25SM_vvsc",["rhs_mag_kmgu2_ptm1","rhs_mag_kmgu2_ptm1","rhs_mag_fab100","rhs_mag_fab100","rhs_mag_b8m1_s8kom","rhs_mag_b8m1_s8kom","PylonWeapon_300Rnd_20mm_shells","PylonWeapon_300Rnd_20mm_shells","rhs_mag_R60","rhs_mag_R60","rhs_ASO2_CMFlare_Chaff_Magazine_x4"]]], east] spawn OKS_fnc_AirSpawn;
+
 
 		_vehicle1 = [[],[["UK3CB_CHD_O_UAZ_MG",[6917.56,5620.97,3.05176e-005],346,[["driver",-1,[]],["gunner",-1,[1]]],[[6,["CHDKZ",1]],[7,["Radio_Hide",0,"Front_Grill_Hide",0,"Light_Covers_Hide",0,"Fuel_Cans_Hide",0,"ClanLogo_Hide",1]]]]],[[[6580.15,6023.12,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup; sleep 30;
 		_Vehicle2 = [[],[["UK3CB_CHD_O_LR_SPG9",[6930.11,5591.89,3.05176e-005],333,[["driver",-1,[]],["gunner",-1,[1]]],[[6,["CHDKZ",1]],[7,["Radio_Hide",0,"Front_Grill_Hide",0,"Light_Covers_Hide",0,"Fuel_Cans_Hide",0,"ClanLogo_Hide",1]]]]],[[[6413.04,6195.45,0],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
@@ -164,6 +169,8 @@ switch (_case) do {
 		[[[[7573.81,5083.74,1.52588e-005],0,[]],[[7578.81,5078.74,3.05176e-005],0,[]],[[7568.81,5078.74,0],0,[]],[[7583.81,5073.74,3.05176e-005],0,[]]],[],[[[7576.55,5135.65,0],[[0,"Move"],[1,"SAFE"]]],[[7488.71,5138.63,0],[[0,"Move"]]],[[7500.62,5079.47,0],[[0,"Move"]]],[[7558.22,5078.69,1.52588e-005],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[7458.78,5064.76,0],0,[]],[[7463.78,5059.76,1.52588e-005],0,[]],[[7453.78,5059.76,1.52588e-005],0,[]],[[7468.78,5054.76,1.52588e-005],0,[]]],[],[[[7441.34,5142.68,0],[[0,"Move"],[1,"SAFE"]]],[[7293.27,5183.04,1.52588e-005],[[0,"Move"]]],[[7371.77,5057.05,0],[[0,"Move"]]],[[7443.19,5059.71,1.52588e-005],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 
+		null = [AirSpawnPosition_4, AirSpawnTarget_4, [["RHS_Su25SM_vvsc",["rhs_mag_kmgu2_ptm1","rhs_mag_kmgu2_ptm1","rhs_mag_fab100","rhs_mag_fab100","rhs_mag_b8m1_s8kom","rhs_mag_b8m1_s8kom","PylonWeapon_300Rnd_20mm_shells","PylonWeapon_300Rnd_20mm_shells","rhs_mag_R60","rhs_mag_R60","rhs_ASO2_CMFlare_Chaff_Magazine_x4"]]], east] spawn OKS_fnc_AirSpawn;
+
 		// Statics.
 		[[[[7493.41,5112.16,0.457886],281,"Up",[]],[[7492.08,5119.52,0.448807],49,"Up",[]],[[7503.39,5111.86,0.450531],182,"Up",[]],[[7501.03,5115.18,0.438568],112,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 		[[[[7524.78,5149.59,0.165253],13,"Up",[]],[[7526.62,5157.01,0.168259],260,"Up",[]],[[7517.68,5160.63,0.2043],281,"Up",[]],[[7520.56,5164.11,0.20755],281,"Up",[]],[[7523.37,5158.82,0.172104],281,"Up",[]]],[],[]] call GW_Common_fnc_spawnGroup;
@@ -190,6 +197,7 @@ switch (_case) do {
 		} foreach [charge_5,charge_6,charge_7,charge_8,charge_9];
 
 		null = [AirSpawnPosition_2, AirSpawnTarget_2, [["UK3CB_CW_SOV_O_LATE_MIG21",["rhs_mag_fab250","rhs_mag_fab250","rhs_mag_fab250","rhs_mag_fab250"]]], east] spawn OKS_fnc_AirSpawn;
+		null = [AirSpawnPosition_5, AirSpawnTarget_5, [["RHS_Su25SM_vvsc",["rhs_mag_kmgu2_ptm1","rhs_mag_kmgu2_ptm1","rhs_mag_fab100","rhs_mag_fab100","rhs_mag_b8m1_s8kom","rhs_mag_b8m1_s8kom","PylonWeapon_300Rnd_20mm_shells","PylonWeapon_300Rnd_20mm_shells","rhs_mag_R60","rhs_mag_R60","rhs_ASO2_CMFlare_Chaff_Magazine_x4"]]], east] spawn OKS_fnc_AirSpawn;
 
 		sleep 15;
 		_ConvoyArray = [];
@@ -233,6 +241,10 @@ switch (_case) do {
 		[true, ["Defend_3","Sub0"], ["Surveillance suggest a large force air assault group has just left Balota, we suspect air assault infantry is heading towards Pusta for a combat drop. We also detect a follow up mechanized force is detaching from the siege of Elektrozavodsk. Prepare to defend the village!", "Defend Pusta", "AD"], [9173.2,3833.5,0], "CREATED", 2, true,"defend"] call BIS_fnc_taskCreate;
 		["hq","side","1st Platoon be advised, radar has picked up a large helicopter formation heading towards your position, we also picked up on a mechanized force detaching from the siege of Elektrozavodsk to counter-attack. ETA 3 minutes","Battalion Headquarters"] remoteExec ["OKS_fnc_Chat",0];
 		sleep 300;
+
+		null = [AirSpawnPosition_1, AirSpawnTarget_1, [["RHS_Su25SM_vvsc",["rhs_mag_kmgu2_ptm1","rhs_mag_kmgu2_ptm1","rhs_mag_fab100","rhs_mag_fab100","rhs_mag_b8m1_s8kom","rhs_mag_b8m1_s8kom","PylonWeapon_300Rnd_20mm_shells","PylonWeapon_300Rnd_20mm_shells","rhs_mag_R60","rhs_mag_R60","rhs_ASO2_CMFlare_Chaff_Magazine_x4"]]], east] spawn OKS_fnc_AirSpawn;
+		null = [AirSpawnPosition_3, AirSpawnTarget_3, [["RHS_Su25SM_vvsc",["rhs_mag_kmgu2_ptm1","rhs_mag_kmgu2_ptm1","rhs_mag_fab100","rhs_mag_fab100","rhs_mag_b8m1_s8kom","rhs_mag_b8m1_s8kom","PylonWeapon_300Rnd_20mm_shells","PylonWeapon_300Rnd_20mm_shells","rhs_mag_R60","rhs_mag_R60","rhs_ASO2_CMFlare_Chaff_Magazine_x4"]]], east] spawn OKS_fnc_AirSpawn;
+
 
 		[independent, "UK3CB_CHD_O_Mi8AMT", False, "paradrop", enemyair_1, enemydrop_1, enemyend_1, [1,0.5], [village_1]] spawn OKS_fnc_AirDrop; sleep 5;
 		[independent, "UK3CB_CHD_O_Mi8AMT", true, "paradrop", enemyair_2, enemydrop_2, enemyend_2, [1,0.5], [village_1]] spawn OKS_fnc_AirDrop; sleep 5;
