@@ -22,7 +22,7 @@ switch (_case) do {
 
 	case 0: {
 
-		["hq","side","1-1 be advised, friendly INDEP forces are starting their attack from the north and south. Check your fire, out."] remoteExec ["OKS_fnc_Chat",0];
+		["BATTALION HQ","side","1-1 be advised, friendly INDEP forces are starting their attack on Landcaster from the north and south. Check your fire, out."] remoteExec ["OKS_fnc_Chat",0];
 
 		// Friendly Attack
 		[friendly_1,attack_1,8,independent,true] spawn OKS_fnc_Attack_SpawnGroup; 
@@ -56,8 +56,8 @@ switch (_case) do {
 	
 		[aaa_1,east,false,1500,true] spawn OKS_fnc_Ambient_AAA;
 
-		[officer_6,0.5,50,true,false] spawn OKS_fnc_Surrender;
-		[officer_5,0.5,50,true,false] spawn OKS_fnc_Surrender;
+		[officer_6] spawn OKS_fnc_Surrender;
+		[officer_5] spawn OKS_fnc_Surrender;
 
 	};
 
@@ -75,8 +75,8 @@ switch (_case) do {
 	
 		[Trigger_2,false,[0,16,false,false],east,0,1,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
 
-		[officer_4,0.5,50,true,false] spawn OKS_fnc_Surrender;
-		[officer_3,0.5,50,true,false] spawn OKS_fnc_Surrender;
+		[officer_4] spawn OKS_fnc_Surrender;
+		[officer_3] spawn OKS_fnc_Surrender;
 
 		[east,arty_1,getMarkerPos "marker_23",5,300,300] spawn OKS_fnc_ArtyFire; sleep 3;
 		[east,arty_2,getMarkerPos "marker_23",5,300,300] spawn OKS_fnc_ArtyFire; sleep 3;
@@ -103,8 +103,8 @@ switch (_case) do {
 	
 		[Trigger_3,false,[0,18,false,false],east,0,1,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],false] spawn OKS_fnc_CreateZone;
 
-		[officer_2,0.5,50,true,false] spawn OKS_fnc_Surrender;
-		[officer_1,0.5,50,true,false] spawn OKS_fnc_Surrender;
+		[officer_2] spawn OKS_fnc_Surrender;
+		[officer_1] spawn OKS_fnc_Surrender;
 		
 		[aaa_3,east,false,1500,true] spawn OKS_fnc_Ambient_AAA;
 		[aaa_4,east,false,1500,true] spawn OKS_fnc_Ambient_AAA;

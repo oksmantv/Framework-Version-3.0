@@ -8,10 +8,8 @@ _OfficerHelmet = "H_Beret_blk";
 _uniform = selectRandom ["UK3CB_TKA_O_U_CombatUniform_01_ADPM","UK3CB_TKA_O_U_CombatUniform_02_ADPM"];
 _vest = selectRandom ["rhs_6b2_chicom","rhs_6b2_lifchik","rhs_6b2_RPK"];
 _backpack = "UK3CB_B_Alice_K";
-_backpackRadio = _backpack;
-if (GVARMAIN(mod_TFAR)) then {
-	_backpackRadio = "UK3CB_B_O_Alice_Radio_Backpack";
-};
+_backpackRadio = "UK3CB_B_O_Alice_Radio_Backpack";
+
 
 if(_role in ["r","lr"]) then {
 	_backpack = "rhs_rpg_2";
@@ -41,23 +39,23 @@ _pointer = "";
 _sight = "";
 _bipod = "";
 
-_rifleC = ["hlc_rifle_aks74u", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["rhs_weap_aks74u", _silencer, _pointer, _sight, _bipod];
 
 _silencer = "rhs_acc_dtk1983";
 _pointer = "";
 _sight = "";
 _bipod = "";
 
-_rifle = ["hlc_rifle_aks74", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["hlc_rifle_aks74_GL", _silencer, _pointer, _sight, _bipod];
-_rifleL = ["hlc_rifle_aks74", _silencer, _pointer, _sight, _bipod];
+_rifle = ["rhs_weap_ak74", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["rhs_weap_ak74_gp25", _silencer, _pointer, _sight, _bipod];
+_rifleL = ["rhs_weap_ak74", _silencer, _pointer, _sight, _bipod];
 _rifle_mag = "30Rnd_545x39_Mag_F";
-_rifle_mag_tr = "30Rnd_545x39_Mag_Tracer_F";
+_rifle_mag_tr = "UK3CB_AEK971_30rnd_Magazine_GT";
 _rifleGL_mag = "30Rnd_545x39_Mag_F";
-_rifleGL_mag_tr = "30Rnd_545x39_Mag_Tracer_F";
+_rifleGL_mag_tr = "UK3CB_AEK971_30rnd_Magazine_GT";
 
-_LMG = ["hlc_rifle_rpk74n", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "hlc_60Rnd_545x39_t_rpk";
+_LMG = ["UK3CB_RPK", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "UK3CB_RPK_75rnd_762x39_GT";
 
 _MMG = ["rhs_weap_pkm", _silencer, _pointer, _sight, _bipod];
 _MMG_mag = "rhs_100Rnd_762x54mmR_green";

@@ -6,13 +6,9 @@ _goggles = selectRandom ["rhsusf_shemagh_tan","rhsusf_shemagh2_tan","rhsusf_oakl
 _helmet = "acp_gol_GB_DDPM_H_MK7_GB_DDPM_F";
 _OfficerHelmet = "UK3CB_ANA_B_H_Beret_GRN";
 _uniform = selectRandom ["acp_gol_GB_DDPM_U_I_CombatUniform_shortsleeve_GB_DDPM_insignia","acp_gol_GB_DDPM_U_I_CombatUniform_GB_DDPM_insignia"];
-_vest = "acp_gol_GB_DDPM_V_CarrierRigKBT_01_light_GB_DDPM_F";
+_vest =["acp_gol_GB_DDPM_V_CarrierRigKBT_01_light_GB_DDPM_F","acp_gol_GB_DDPM_V_PlateCarrier1_GB_DDPM"];
 _backpack = "acp_gol_GB_DDPM_B_TacticalPack_GB_DDPM";
-_backpackRadio = _backpack;
-
-if (GVARMAIN(mod_TFAR)) then {
-	_backpackRadio = "acp_gol_GB_DDPM_B_RadioBag_01_GB_DDPM_F";
-};
+_backpackRadio = ["acp_gol_GB_DDPM_B_RadioBag_01_GB_DDPM_F","UK3CB_B_B_Backpack_Radio_Chem"];
 
 if (_role in ["ag","ammg","lr","ab"]) then {
 	_backpack = "acp_gol_GB_DDPM_B_TacticalPack_GB_DDPM";

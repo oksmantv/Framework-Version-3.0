@@ -18,7 +18,7 @@ class GW_FRAMEWORK {	// NOTE: SENSETIVE, UPPERCASE ONLY FOR BOOL
 	class Naming {		
 		//	NOTE: Changing any of these settings will require mission reload for it to be affected
 		#define GAME_MODE "COOP"								// GameMode
-		#define PLAYER_COUNT "36"								// Player Count - Do not go above 36 - Server Limit 
+		#define PLAYER_COUNT "40"								// Player Count - Do not go above 36 - Server Limit 
 		#define BRIEFING_NAME "Operation Mongoose"					// Mission Name
 		#define LOBBY_DESCRIPTION ""							// Description in mission select
 		#define ON_LOAD_TEXT __EVAL("Framework Version " + QUOTE(VERSION))	// Description on loading
@@ -100,9 +100,9 @@ class Params {
 
 	class SpawnMultiplier
 	{
-		title = "Spawn Multiplier";
-		texts[] = { "100%", "90%", "80%", "70%", "60%", "50%", "40%", "30%", "20%", "10%" };
-		values[] = { 100, 90, 80, 70, 60, 50, 40, 30, 20, 10 };
+		title = "Force Spawn Multiplier";
+		texts[] = { "100%", "95%", "90%", "85%", "80%", "75%", "70%", "65%", "60%", "55%", "50%" };
+		values[] = { 100, 95, 90, 85, 80, 75, 70, 65, 60, 55, 50 };
 		default = 100;
 	};
 
