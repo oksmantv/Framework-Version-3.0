@@ -1,4 +1,4 @@
-/*
+﻿/*
 	AUTHOR: GuzzenVonLidl
 	Description:
 		What case tha should be called for the zone player is in
@@ -28,10 +28,18 @@ switch (_case) do {
 		/// AAA
 		{[_X,["UK3CB_CSAT_B_O_Ural_Zu23"]] spawn OKS_fnc_Radar;} foreach [radar_1,radar_2,radar_3,radar_4];
 
+		// Huntbase
+		[Spawn_1, Spawn_1, NEKY_Hunt_Trigger_1, 5, 300, east,["UK3CB_CSAT_B_O_T55", "UK3CB_CSAT_B_O_T72A", "UK3CB_CSAT_B_O_BRM1K", "O_APC_Tracked_02_cannon_F"],120] spawn OKS_fnc_HuntBase;
+		[Spawn_2, Spawn_2, NEKY_Hunt_Trigger_1, 5, 300, east,["UK3CB_CSAT_B_O_T55", "UK3CB_CSAT_B_O_T72A", "UK3CB_CSAT_B_O_BRM1K", "O_APC_Tracked_02_cannon_F","UK3CB_CSAT_B_O_GAZ_Vodnik_Cannon", "UK3CB_CSAT_B_O_GAZ_Vodnik_KVPT", "UK3CB_CSAT_B_O_UAZ_SPG9", "UK3CB_CSAT_B_O_BRDM2"],120] spawn OKS_fnc_HuntBase;
+		[Spawn_3, Spawn_3, NEKY_Hunt_Trigger_1, 5, 300, east,["UK3CB_CSAT_B_O_T55", "UK3CB_CSAT_B_O_T72A", "UK3CB_CSAT_B_O_BRM1K", "O_APC_Tracked_02_cannon_F","UK3CB_CSAT_B_O_GAZ_Vodnik_Cannon", "UK3CB_CSAT_B_O_GAZ_Vodnik_KVPT", "UK3CB_CSAT_B_O_UAZ_SPG9", "UK3CB_CSAT_B_O_BRDM2"],120] spawn OKS_fnc_HuntBase;
+	
+		[Group officer_1,getMarkerPos "respawn_west",west,false,nil,false] spawn OKS_fnc_Evacuate_HVT;
+
 		// BMP3s
 		[[],[["UK3CB_CSAT_B_O_BMP3MERA",[20889.9,19374.8,0],260,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]]]],["UK3CB_CSAT_B_O_BMP3MERA",[20521.7,19304.6,0],230,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]]]],["UK3CB_CSAT_B_O_BMP3MERA",[22854.8,20038.8,-1.90735e-05],274,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]]]]],[]] call GW_Common_fnc_spawnGroup;
 
-		[Group officer_1,getMarkerPos "respawn_west",west,false,nil,false] spawn OKS_fnc_Evacuate_HVT;
+		// Tanks Second Line 
+		[[],[["UK3CB_CSAT_B_O_T55",[20946.8,17964.1,-0.000179291],322,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]],[7,["Barrels_Hide",0]]]],["UK3CB_CSAT_B_O_T55",[21206.3,18361.8,0],287,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]],[7,["Barrels_Hide",0]]]],["UK3CB_CSAT_B_O_T55",[21552.4,18325.2,-0.000173569],277,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]],[7,["Barrels_Hide",0]]]],["UK3CB_CSAT_B_O_T55",[21440.2,18032.1,-0.000175476],297,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]],[7,["Barrels_Hide",0]]]],["UK3CB_CSAT_B_O_T55",[20620.2,18788.6,0],170,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]],[7,["Barrels_Hide",0]]]],["UK3CB_CSAT_B_O_T55",[21759.7,19220.4,-0.000175476],234,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]],[7,["Barrels_Hide",0]]]]],[]] call GW_Common_fnc_spawnGroup;		
 
 		// Trenches
 		[[[[19883.3,19016.7,0],234,"Up",[]],[[19880.3,19031.6,0],234,"Up",[]],[[19873.6,19047.1,0],226,"Up",[]],[[19846,19054.3,0],291,"Middle",[]],[[19838.6,19048.3,0.235504],232,"Up",[]],[[19842.1,19046.7,0.23951],197,"Up",[]],[[19844.6,19046.1,0.252052],194,"Up",[]],[[19843.4,19050.9,0.176437],86,"Middle",[]],[[19890.4,19054.5,0],234,"Middle",[]],[[19906.2,19035.8,0],13,"Middle",[]]],[["UK3CB_CHD_W_O_SPG9",[19893.6,19052.4,-0.00012207],219,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
@@ -40,12 +48,7 @@ switch (_case) do {
 
 		/// IFVs Sentries
 		[[],[["UK3CB_CSAT_B_O_T72A",[19412.9,19171.3,0],214,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["CSAT_B",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",1]]]],["UK3CB_CSAT_B_O_BMP1",[19976.9,19627.8,0],183,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["CSAT_B",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",1]]]],["UK3CB_CSAT_B_O_BMP1",[20584.1,20105.9,0],229,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["CSAT_B",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",1]]]],["UK3CB_CSAT_B_O_BMP1",[20333.2,18761.4,0],262,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["CSAT_B",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",1]]]]],[]] call GW_Common_fnc_spawnGroup;
-
-		// Huntbase
-		[Spawn_1, Spawn_1, NEKY_Hunt_Trigger_1, 5, 300, east,["UK3CB_CSAT_B_O_T55", "UK3CB_CSAT_B_O_T72A", "UK3CB_CSAT_B_O_BRM1K", "O_APC_Tracked_02_cannon_F"],120] spawn OKS_fnc_HuntBase;
-		[Spawn_2, Spawn_2, NEKY_Hunt_Trigger_1, 5, 300, east,["UK3CB_CSAT_B_O_T55", "UK3CB_CSAT_B_O_T72A", "UK3CB_CSAT_B_O_BRM1K", "O_APC_Tracked_02_cannon_F","UK3CB_CSAT_B_O_GAZ_Vodnik_Cannon", "UK3CB_CSAT_B_O_GAZ_Vodnik_KVPT", "UK3CB_CSAT_B_O_UAZ_SPG9", "UK3CB_CSAT_B_O_BRDM2"],120] spawn OKS_fnc_HuntBase;
-		[Spawn_3, Spawn_3, NEKY_Hunt_Trigger_1, 5, 300, east,["UK3CB_CSAT_B_O_T55", "UK3CB_CSAT_B_O_T72A", "UK3CB_CSAT_B_O_BRM1K", "O_APC_Tracked_02_cannon_F","UK3CB_CSAT_B_O_GAZ_Vodnik_Cannon", "UK3CB_CSAT_B_O_GAZ_Vodnik_KVPT", "UK3CB_CSAT_B_O_UAZ_SPG9", "UK3CB_CSAT_B_O_BRDM2"],120] spawn OKS_fnc_HuntBase;
-	
+		
 		// IFV Phase 2
 		[[],[["UK3CB_CSAT_B_O_T72A",[21583.5,19606.4,0],256,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["CSAT_B",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0,"maljutka_hide_source",1]]]],["UK3CB_CSAT_B_O_BMP1",[22048.9,19539.8,0],247,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["CSAT_B",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0,"maljutka_hide_source",1]]]]],[]] call GW_Common_fnc_spawnGroup;
 		[[],[["UK3CB_CSAT_B_O_BMP1",[22384.6,20606.4,-0.000217438],218,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["CSAT_B",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0,"maljutka_hide_source",1]]]],["UK3CB_CSAT_B_O_T72A",[22903.1,20256,0],304,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["CSAT_B",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0,"maljutka_hide_source",1]]]],["UK3CB_CSAT_B_O_BMP1",[23134.4,19927.1,-9.53674e-007],238,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["CSAT_B",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",0,"maljutka_hide_source",1]]]]],[]] call GW_Common_fnc_spawnGroup;
@@ -86,10 +89,8 @@ switch (_case) do {
 			[_X] spawn OKS_fnc_Destroy_Task;
 			sleep 5;
 		} foreach [support_1,support_2,support_3];		
-
-		// Tanks Second Line 
-		[[],[["UK3CB_CSAT_B_O_T55",[20946.8,17964.1,-0.000179291],322,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]],[7,["Barrels_Hide",0]]]],["UK3CB_CSAT_B_O_T55",[21206.3,18361.8,0],287,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]],[7,["Barrels_Hide",0]]]],["UK3CB_CSAT_B_O_T55",[21552.4,18325.2,-0.000173569],277,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]],[7,["Barrels_Hide",0]]]],["UK3CB_CSAT_B_O_T55",[21440.2,18032.1,-0.000175476],297,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]],[7,["Barrels_Hide",0]]]],["UK3CB_CSAT_B_O_T55",[20620.2,18788.6,0],170,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]],[7,["Barrels_Hide",0]]]],["UK3CB_CSAT_B_O_T55",[21759.7,19220.4,-0.000175476],234,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["CSAT_B",1]],[7,["Barrels_Hide",0]]]]],[]] call GW_Common_fnc_spawnGroup;		
 	};
+
 
 	case 2: {
 
@@ -105,7 +106,7 @@ switch (_case) do {
 			};
 		};
 
-		// High-Ground
+		// High-Ground - SECOND LINE
 		[[[[22061.1,19524.9,-9.15527e-05],274,"Middle",[]],[[22062.9,19524,-0.000114441],199,"Middle",[]],[[22070.1,19521.7,-1.52588e-05],298,"Middle",[]],[[22074,19509.1,-0.00038147],273,"Up",[]],[[22081,19501.9,-0.00118256],199,"Middle",[]],[[22087.7,19504.4,-0.000389099],262,"Middle",[]],[[22069,19502.1,0.522408],263,"Up",[]],[[22070.8,19500.2,0.398277],215,"Up",[]],[[22072.9,19497.7,0.470825],223,"Up",[]],[[22075.5,19499.9,0.0910339],357,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 		[[[[22040.4,19536.8,0.323704],284,"Middle",[]],[[22048.7,19532.9,-0.326447],88,"Middle",[]],[[22053,19523.6,-0.0886688],228,"Middle",[]]],[["UK3CB_CSAT_B_O_SPG9",[22045.9,19542.3,-8.01086e-05],260,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 		[[],[["UK3CB_CSAT_B_O_BMP1",[22404.5,19435,-3.43323e-05],238,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["CSAT_B",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",1]]]],["UK3CB_CSAT_B_O_BMP1",[22089,19516.8,-0.00252533],261,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["CSAT_B",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",1]]]],["UK3CB_CSAT_B_O_BMP1",[21580.2,19620.2,0.111481],264,[["driver",-1,[]],["Gunner",-1,[0]]],[[6,["CSAT_B",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",1]]]]],[]] call GW_Common_fnc_spawnGroup;
@@ -310,11 +311,12 @@ switch (_case) do {
 		   5 - Type of Insert (Unload ONLY) (String)
 		   6 - gunner Split - [How many teams,Procent of gunner] (Array)
 
-		   [Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn NEKY_Airbase;
+		   [Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
 		*/
 		/* Example of Air Bases */
 		/*
-		if(isServer && GOL_NEKY_AIRDROP isEqualTo 1) then {
-			waitUntil{sleep 5; !(isNil "NEKY_Airbase")};
-			[Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn NEKY_Airbase;
+		if(isServer && GOL_OKS_fnc_AirDrop isEqualTo 1) then {
+			waitUntil{sleep 5; !(isNil "OKS_fnc_Airbase")};
+			[Base_3,Spawn_3, NEKY_Hunt_Trigger_1,independent,"I_Heli_Transport_02_F","Random",[2,1]] spawn OKS_fnc_Airbase;
 		};
+
