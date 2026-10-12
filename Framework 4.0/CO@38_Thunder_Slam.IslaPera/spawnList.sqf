@@ -1,4 +1,4 @@
-/*
+﻿/*
 	AUTHOR: GuzzenVonLidl
 	Description:
 		What case tha should be called for the zone player is in
@@ -48,7 +48,7 @@ switch (_case) do {
 		[ Trigger_1, false, [0,15,false,false], east, 0, 0, 0, [0,true,false,0], [0,false], [0,false], [0,0,0,0,0], false ] spawn OKS_fnc_CreateZone;
 
 		{
-			 [east, _X, [3757.81,6354.22,0.00143886], 7, 300, 30] spawn OKS_fnc_ArtyFire;
+			 [east, _X, [3757.81,6354.22,0.00143886], 7, 300, 30] spawn OKS_fnc_ArtyFire; sleep 0.5;
 		} foreach [arty_1,arty_2,arty_3];
 
 		//[[],[["UK3CB_ADE_O_DSHKM",[5671.43,5015.28,0],165,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_DSHKM",[5744.82,5250.32,-5.96046e-08],155,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_DSHKM",[6017.35,5253.1,-5.96046e-08],204,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_DSHKM",[6294.88,5183.99,4.76837e-07],264,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_DSHKM",[6165.22,5425.97,0],228,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_DSHKM",[6736.08,5050.03,0],228,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_DSHKM",[6657.64,5338.15,0],245,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_DSHKM",[6676.27,5307.22,0],245,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_DSHKM",[6505.58,4974.66,1.19209e-07],245,[["gunner",-1,[0]]],[]],["UK3CB_ADE_O_DSHKM",[6084.49,4757.21,0],228,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
@@ -79,9 +79,9 @@ switch (_case) do {
 	
 		[ Trigger_2, false, [20,15,false,false], east, 0, 0, 0, [0,true,false,0], [0,false], [0,false], [0,0,0,0,0], false ] spawn OKS_fnc_CreateZone;
 
-		_Vehicles = ["UK3CB_CCM_O_Datsun_Pkm", "UK3CB_CCM_O_Datsun_Open", "UK3CB_CCM_O_Hilux_Civ_Closed", "UK3CB_CCM_O_Hilux_Civ_Open", "UK3CB_CCM_O_Kamaz_Covered", "UK3CB_CCM_O_Kamaz_Open", "UK3CB_CCM_O_LR_Closed", "UK3CB_CCM_O_LR_M2", "UK3CB_CCM_O_UAZ_Closed", "UK3CB_CCM_O_Ural", "UK3CB_CCM_O_UAZ_Open"];
+		_Vehicles = [["UK3CB_CCM_O_Datsun_Pkm", "UK3CB_CCM_O_Datsun_Open", "UK3CB_CCM_O_Hilux_Civ_Closed"], ["UK3CB_CCM_O_Hilux_Civ_Open", "UK3CB_CCM_O_Kamaz_Covered"], ["UK3CB_CCM_O_Kamaz_Open", "UK3CB_CCM_O_LR_Closed"], ["UK3CB_CCM_O_LR_M2", "UK3CB_CCM_O_UAZ_Closed", "UK3CB_CCM_O_Ural"], "UK3CB_CCM_O_UAZ_Open"];
 		{
-			[_X, _X, HuntTrigger_1, 10, 180, east, _Vehicles, 60] spawn OKS_fnc_HuntBase; sleep 10;
+			[_X, _X, HuntTrigger_1, 4, 900, east, _Vehicles, 60] spawn OKS_fnc_HuntBase; sleep 10;
 		} foreach [spawn_1, spawn_2, spawn_3, spawn_4, spawn_5];
 
 		{
