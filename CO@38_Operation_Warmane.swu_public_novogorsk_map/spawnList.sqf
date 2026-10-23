@@ -25,26 +25,17 @@ switch (_case) do {
 
 	case 1: {
 
-		[true, ["taskarty","task_0"], [format["You have been tasked with silencing the enemy artillery positions along the frontline. Destroy all targets and spike the guns."], "Neutralize Artillery Support", "Artillery"], nil,"CREATED",-1, false,"attack", false] call BIS_fnc_taskCreate;
-		[true, ["taskaaa","task_0"], [format["You have been tasked with disrupting the enemies air defence. Find the Anti-air positions and neutralize them."], "Neutralize Air Defences", "Air Defence"], nil,"CREATED",-1, false,"attack", false] call BIS_fnc_taskCreate;
-		[true, ["taskvillage","task_0"], [format["The village of Novoshy holds the 84th Mechanized Company who are positioned to block any forces approaching from the north. You have been tasked with clearing the path for the main force, destroy the enemy forces and their barricades."], "Secure Novoshy", "Air Defence"], nil,"CREATED",-1, false,"attack", false] call BIS_fnc_taskCreate;
-
-		[Group HVT_1,getMarkerPos "respawn_east",east,false,nil,false] spawn OKS_fnc_Evacuate_HVT;
-		[[barricade_1],"taskvillage", true] spawn OKS_fnc_Destroy_Barricade;
-		[[barricade_2],"taskvillage", true] spawn OKS_fnc_Destroy_Barricade;
-		[[barricade_3],"taskvillage", true] spawn OKS_fnc_Destroy_Barricade;
-
 		// Trench 1
 		[[
 			[[4370.04,2305.67,1.20732],0,"Middle",[]],[[4379.88,2306.1,1.26445],0,"Middle",[]],
 			//[[4387.29,2305.17,1.90465],0,"Middle",[]],[[4400.59,2304.17,1.1114],0,"Middle",[]],
 			[[4407.83,2302.65,1.27287],0,"Middle",[]],[[4436.12,2241.57,0.00212097],64,"Up",[]],
-			//[[4430.41,2239.87,0],319,"Up",[]],[[4438.43,2236.13,0.115479],96,"Up",[]],
+			[[4430.41,2239.87,0],319,"Up",[]],[[4438.43,2236.13,0.115479],96,"Up",[]],
 			//[[4427.34,2240.35,0.502441],10,"Up",[]],[[4397.76,2256.03,0.709335],40,"Middle",[]],
 			[[4394.43,2258.79,0.521805],40,"Middle",[]]
 		],[["UK3CB_LDF_B_BMP1",[4376.98,2279.23,0],10,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_LDF_B_BMP1",[4471.9,2238.82,-0.0480042],30,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
 		[[
-			//[[4428.33,2220.27,4.57764e-05],10,"Middle",[]],[[4426.94,2200.75,0.000106812],359,"Middle",[]],
+			[[4428.33,2220.27,4.57764e-05],10,"Middle",[]],[[4426.94,2200.75,0.000106812],359,"Middle",[]],
 			//[[4417.36,2223.55,1.52588e-05],356,"Up",[]],[[4390.04,2221.46,0],55,"Up",[]],
 			[[4397.56,2215.68,0],38,"Up",[]],[[4373.82,2203.45,0],40,"Middle",[]]
 		],[["UK3CB_LDF_B_BMP1",[4391.28,2214.43,0.10498],39,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
@@ -55,11 +46,11 @@ switch (_case) do {
 		],[["UK3CB_AAF_B_M2_TriPod",[4350.96,2221.48,0.135178],62,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 		[[
 			//[[4388.13,2261.77,0],40,"Middle",[]],[[4379.24,2255.59,0],57,"Middle",[]],
-			//[[4391.97,2248.76,0],355,"Middle",[]],[[4374.87,2257.79,1.52588e-05],109,"Middle",[]],
+			[[4391.97,2248.76,0],355,"Middle",[]],[[4374.87,2257.79,1.52588e-05],109,"Middle",[]],
 			[[4368.73,2259.38,0],303,"Middle",[]],[[4371.28,2260.68,1.06436],359,"Middle",[]]
 		],[],[]] call GW_Common_fnc_spawnGroup;
 		[[
-			//[[4336.28,2256.23,0],23,"Up",[]],[[4326.97,2250.81,0.223434],39,"Middle",[]],
+			[[4336.28,2256.23,0],23,"Up",[]],[[4326.97,2250.81,0.223434],39,"Middle",[]],
 			[[4319.25,2255.63,0.971893],23,"Middle",[]],[[4333.03,2249.34,0],32,"Middle",[]]
 		],[["UK3CB_LDF_B_BMP1",[4281.1,2266.78,-0.0480042],7,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",0,"crate_l2_unhide",0,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",1,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;
 
@@ -79,16 +70,23 @@ switch (_case) do {
 		
 		{
 			[west,_X,getPos ArtyTarget_1,7,300,180] spawn OKS_fnc_ArtyFire; sleep 0.5 + (random 1.5);
-			[_X,"Neutralize D-30","D-30 Artillery","You need to neutralize this %1. It is pounding our infantry forces to the north. Eliminate it before it disrupts the main attacking force!","destroy","taskarty",true,false,true] spawn OKS_fnc_Destroy_Task;
-		} foreach [arty_1,arty_2,arty_3,arty_4,arty_5,arty_6];
+		} foreach [arty_1,arty_2,arty_3,arty_5,arty_6];
 
 		{
 			[_X,west,false,2000,true] spawn OKS_fnc_Ambient_AAA;	
-			[_X,"Eliminate Air Defence","ZU-23","You need to neutralize this %1. It is stopping the freedom of movement for our air assets!","destroy","taskaaa",true,false,true] spawn OKS_fnc_Destroy_Task;
 			sleep 2;
-		} foreach [aaa_1,aaa_2,aaa_3,aaa_4];
+		} foreach [aaa_1,aaa_2,aaa_3,aaa_4,aaa_5];
 
 		[[],[["UK3CB_LNM_B_BMP1",[3473.67,1189.69,0],53,[["gunner",-1,[0]]],[[6,["LNM",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]],[351,false]]],["UK3CB_LNM_B_BMP1",[3433.88,1253.44,3.05176e-05],53,[["gunner",-1,[0]]],[[6,["LNM",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]],[351,false]]],["UK3CB_LNM_B_BMP1",[3401.41,1278.25,0],53,[["gunner",-1,[0]]],[[6,["LNM",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]],[351,false]]],["UK3CB_LNM_B_BMP1",[3591.53,1045.65,3.05176e-05],23,[["gunner",-1,[0]]],[[6,["LNM",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]],[351,false]]]],[],west] call GW_Common_fnc_spawnGroup;
+
+		[getPos AA_1,west,25,500,2000,30] spawn OKS_fnc_IR_AA;
+		[getPos AA_2,west,25,500,2000,30] spawn OKS_fnc_IR_AA;
+		[getPos AA_3,west,25,500,2000,30] spawn OKS_fnc_IR_AA;
+		[getPos AA_4,west,25,500,2000,30] spawn OKS_fnc_IR_AA;
+		[getPos AA_5,west,25,500,2000,30] spawn OKS_fnc_IR_AA;
+
+		null = [Mortar_1,west,"barrage","light",["auto",25],150,750,30,-1,-1] spawn OKS_fnc_Mortars; sleep 5;
+		null = [Mortar_2,west,"barrage","light",["auto",25],150,750,30,-1,-1] spawn OKS_fnc_Mortars;
 	};
 
 	case 2: {
@@ -97,17 +95,13 @@ switch (_case) do {
 		private _ArrayOfCounterAttack = [];
 		[true, ["taskcounter","task0"], [format["An enemy counter-attack is inbound to retake Strongpoint K. Repel the attack! Infantry and mechanized forces are inbound!"], "Repel Counter-Attack", "Defend"], [4332.62,2203.67,0],"ASSIGNED",-1, false,"defend", true] call BIS_fnc_taskCreate;
 		["Alfa Command","side","1-1 be advised, an enemy counter-attack is inbound on your position. Expect enemy forces from the south and west. Good luck, out"] remoteExec ["OKS_fnc_Chat",0];
-		
-		sleep 30;
 
 		{
-			[_X,"rush",2,west,1000,_ArrayOfCounterAttack] spawn OKS_fnc_Lambs_SpawnGroup; sleep 5;
+			[_X,"rush",4,west,1000,_ArrayOfCounterAttack] spawn OKS_fnc_Lambs_SpawnGroup; sleep 5;
 		} foreach [rush_1,rush_2,rush_3,rush_4,rush_5];
 
-		sleep 60;
-
 		{
-			[_X,NEKY_Hunt_Trigger_1,"UK3CB_LDF_B_BMP1",3,west,1000,_ArrayOfCounterAttack] spawn OKS_fnc_Mechanized_Spawn; sleep 20;
+			[_X,NEKY_Hunt_Trigger_1,"UK3CB_LDF_B_BMP1",6,west,1000,_ArrayOfCounterAttack] spawn OKS_fnc_Mechanized_Spawn; sleep 20;
 		} foreach [mech_1,mech_2,mech_1];
 
 		waitUntil{sleep 5; {Alive _X || [_X] call ace_common_fnc_isAwake} count _ArrayOfCounterAttack == 0};
@@ -162,6 +156,30 @@ switch (_case) do {
 		[[[[3695.06,2070.49,0],0,[]],[[3700.06,2065.49,0],0,[]],[[3690.06,2065.49,0],0,[]],[[3705.06,2060.49,0],0,[]]],[],[[[3669.55,2191.9,0],[[0,"Move"],[1,"SAFE"]]],[[3727.55,2172.93,0.654694],[[0,"Move"]]],[[3728.12,2080.6,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 	};
 
+	case 31: {
+		// Trench 2 Counter-Attack. South
+		[[],[["UK3CB_LDF_B_M998_4DR",[3415.44,1577.01,0],23,[["driver",-1,[]],["turret",4,[0]],["turret",3,[1]],["turret",0,[2]],["turret",1,[3]]],[[7,["hide_CIP",1,"hide_BFT",1,"hide_backTop",1,"hide_frontTop",1,"hide_middleTop",1,"hide_snorkel",1,"hide_Antenna",0,"hide_A2_Parts",0,"Hide_A2Bumper",0,"Hide_Brushguard",1]],[351,false]]]],[[[3521.72,1838.4,1.52588e-05],[[0,"Move"]]],[[3606.86,1989.43,0],[[0,"Move"]]],[[3667.29,2094.67,0],[[0,"GetOut"]]],[[3701.95,2234.79,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[],[["UK3CB_LDF_B_M998_4DR",[3384.28,1735.25,0],23,[["driver",-1,[]],["turret",4,[0]],["turret",3,[1]],["turret",0,[2]],["turret",1,[3]]],[[7,["hide_CIP",1,"hide_BFT",1,"hide_backTop",1,"hide_frontTop",1,"hide_middleTop",1,"hide_snorkel",1,"hide_Antenna",0,"hide_A2_Parts",0,"Hide_A2Bumper",0,"Hide_Brushguard",1]],[351,false]]]],[[[3481.45,1923.73,0],[[0,"Move"]]],[[3543.89,1961.27,0],[[0,"Move"]]],[[3642.28,2101.67,0],[[0,"GetOut"]]],[[3895.42,2324.25,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[],[["UK3CB_LDF_B_M998_4DR",[3425.88,1504.67,0],23,[["driver",-1,[]],["turret",4,[0]],["turret",3,[1]],["turret",0,[2]],["turret",1,[3]]],[[7,["hide_CIP",1,"hide_BFT",1,"hide_backTop",1,"hide_frontTop",1,"hide_middleTop",1,"hide_snorkel",1,"hide_Antenna",0,"hide_A2_Parts",0,"Hide_A2Bumper",0,"Hide_Brushguard",1]],[351,false]]]],[[[3568.28,1806.73,0],[[0,"Move"]]],[[3683.37,1915.57,0],[[0,"Move"]]],[[3694.77,2033.73,0],[[0,"GetOut"]]],[[3709.28,2203.74,1.52588e-05],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[],[["UK3CB_LDF_B_T810_Closed",[3499.38,1351.02,1.52588e-05],55,[["driver",-1,[]],["cargo",0,[]],["cargo",1,[]],["cargo",2,[]],["cargo",3,[]],["turret",10,[0]],["turret",-1,[1]],["turret",11,[2]],["turret",12,[3]]],[[6,["LDF",1]],[7,["ClanLogo_Hide",1]],[351,false]]]],[[[3695,1509.42,0],[[0,"Move"]]],[[3745.96,1724.1,0],[[0,"Move"]]],[[3757.71,1814.42,0],[[0,"GetOut"]]],[[3718.63,2165.01,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+	
+		["Alfa HQ","side","1st Platoon be advised, we have reports of an enemy drone team targeting your advance. Expect incoming FPV drones. Over."] spawn OKS_fnc_ChatGlobal;
+		null = [DroneSpawn_1, DroneHuntZone_1, "" , west] spawn OKS_fnc_DroneHuntZone; sleep 5;
+		null = [DroneSpawn_2, DroneHuntZone_1, "" , west] spawn OKS_fnc_DroneHuntZone; sleep 5;
+		null = [DroneSpawn_3, DroneHuntZone_1, "" , west] spawn OKS_fnc_DroneHuntZone; sleep 5;
+		null = [DroneSpawn_4, DroneHuntZone_1, "" , west] spawn OKS_fnc_DroneHuntZone;
+	};
+
+	case 32: {
+		// Trench 2 Counter-Attack. North
+		[[],[["UK3CB_LDF_B_M998_4DR",[3292.63,2559.73,0],140,[["driver",-1,[]],["turret",4,[0]],["turret",3,[1]],["turret",0,[2]],["turret",1,[3]]],[[7,["hide_CIP",1,"hide_BFT",1,"hide_backTop",1,"hide_frontTop",1,"hide_middleTop",1,"hide_snorkel",1,"hide_Antenna",0,"hide_A2_Parts",0,"Hide_A2Bumper",0,"Hide_Brushguard",1]],[351,false]]]],[[[3341.13,2504.06,0],[[0,"Move"]]],[[3439.62,2424.05,-3.05176e-05],[[0,"Move"]]],[[3552.2,2360.36,0],[[0,"GetOut"]]],[[3699.57,2320.68,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[],[["UK3CB_LDF_B_M998_4DR",[3202.68,2696.59,0],140,[["driver",-1,[]],["turret",4,[0]],["turret",3,[1]],["turret",0,[2]],["turret",1,[3]]],[[7,["hide_CIP",1,"hide_BFT",1,"hide_backTop",1,"hide_frontTop",1,"hide_middleTop",1,"hide_snorkel",1,"hide_Antenna",0,"hide_A2_Parts",0,"Hide_A2Bumper",0,"Hide_Brushguard",1]],[351,false]]]],[[[3363.93,2578.77,0],[[0,"Move"]]],[[3460.07,2492.58,0],[[0,"Move"]]],[[3556.49,2419.16,0],[[0,"GetOut"]]],[[3670.75,2290.58,9.78793],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[],[["UK3CB_LDF_B_M998_4DR",[3156.76,2850.33,0],119,[["driver",-1,[]],["turret",4,[0]],["turret",3,[1]],["turret",0,[2]],["turret",1,[3]]],[[7,["hide_CIP",1,"hide_BFT",1,"hide_backTop",1,"hide_frontTop",1,"hide_middleTop",1,"hide_snorkel",1,"hide_Antenna",0,"hide_A2_Parts",0,"Hide_A2Bumper",0,"Hide_Brushguard",1]],[351,false]]]],[[[3334.24,2734.58,0],[[0,"Move"]]],[[3617.4,2515.62,1.52588e-05],[[0,"Move"]]],[[3681.31,2425.89,0],[[0,"GetOut"]]],[[3696.78,2296.66,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[],[["UK3CB_LDF_B_M998_4DR",[3182.01,2869.64,0],119,[["driver",-1,[]],["turret",4,[0]],["turret",3,[1]],["turret",0,[2]],["turret",1,[3]]],[[7,["hide_CIP",1,"hide_BFT",1,"hide_backTop",1,"hide_frontTop",1,"hide_middleTop",1,"hide_snorkel",1,"hide_Antenna",0,"hide_A2_Parts",0,"Hide_A2Bumper",0,"Hide_Brushguard",1]],[351,false]]]],[[[3359.72,2753.82,0],[[0,"Move"]]],[[3664.96,2533.81,0],[[0,"Move"]]],[[3703.11,2436.18,0],[[0,"GetOut"]]],[[3716.32,2301.46,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[],[["UK3CB_LDF_B_BMP1",[3207.57,3014.18,0],131,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",1,"crate_r1_unhide",1,"crate_r2_unhide",0,"crate_r3_unhide",1,"wood_1_unhide",1,"maljutka_hide_source",0]],[351,false]]]],[[[3454.24,2785.32,0],[[0,"Move"]]],[[3550.15,2587.24,0],[[0,"Move"]]],[[3664.48,2374.55,-1.52588e-05],[[0,"Move"]]],[[3694.66,2281.37,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[],[["UK3CB_B_LAV25_US_WDL",[3010.96,2505.28,0],152,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["WDL",1]],[7,["Duke_Hide",0,"Basket_Hide",1,"Sparewheel_3_Hide",1,"ClanLogo_Hide",1,"ClanSign_Hide",1,"Backpacks_Front_Left_Hide",1,"Backpacks_Front_Right_Hide",1,"Backpacks_Rear_Left_Hide",1,"Backpacks_Rear_Right_Hide",1,"Camonet_Roll_Hide",1,"Jerrycan_Left_Hide",1,"Jerrycan_Right_Hide",1,"Sparewheel_1_Hide",1,"Sparewheel_2_Hide",1,"Shovels_Hide",1,"Tools_Hide",1,"Tow_Rope_Hide",1]],[351,false]]]],[[[3169.94,2343.95,0],[[0,"Move"],[1,"SAFE"],[5,"LIMITED"]]],[[3522.04,2258.68,-1.52588e-05],[[0,"Move"]]],[[3687.99,2208.65,0],[[0,"SAD"],[1,"COMBAT"]]]],west] call GW_Common_fnc_spawnGroup;
+	};
+
 	case 4: {
 
 		// Trench 3
@@ -202,6 +220,34 @@ switch (_case) do {
 		[[[[2938.58,2472.33,0],0,[]],[[2943.58,2467.33,0],0,[]],[[2933.58,2467.33,0],0,[]],[[2948.58,2462.33,0],0,[]]],[],[[[2942.4,2547.15,0],[[0,"Move"],[1,"SAFE"]]],[[3007.07,2531.39,0.654663],[[0,"Move"]]],[[2997.15,2455.04,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		[[[[3009.27,2362.01,0],0,[]],[[3014.27,2357.01,0],0,[]],[[3004.27,2357.01,0],0,[]],[[3019.27,2352.01,0],0,[]]],[],[[[2991.43,2439.37,0],[[0,"Move"],[1,"SAFE"]]],[[3021.11,2444.53,0.654709],[[0,"Move"]]],[[3041.08,2380.27,0],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 
+		// Air Scout
+		null = [getPos AirScout_1,getPos AirScoutTarget_1,civilian,"UK3CB_CW_US_B_LATE_UH1H_GUNSHIP",["LOITER",false],[500,4],[250,500],nil,true] spawn OKS_fnc_AirScout;
+	};
+
+	case 41:{
+		
+		// Counter-Attack AA Trench - Middle
+		[[],[["UK3CB_LDF_B_T810_Closed_PKM",[2310.67,2321.88,0.344635],162,[["driver",-1,[]],["cargo",0,[]],["cargo",1,[]],["cargo",2,[]],["cargo",3,[]],["cargo",4,[]],["gunner",-1,[0]],["turret",-1,[1]],["turret",10,[2]],["turret",11,[3]]],[[6,["LDF",1]],[7,["ClanLogo_Hide",1]],[351,false]]]],[[[2830.25,2144.95,0],[[0,"Move"],[1,"SAFE"]]],[[2872.99,2329.72,0],[[0,"GetOut"]]],[[3080.7,2493.06,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[],[["UK3CB_LDF_B_T810_Closed_PKM",[2303.53,2346.71,0.34462],162,[["driver",-1,[]],["cargo",0,[]],["cargo",1,[]],["cargo",2,[]],["cargo",3,[]],["cargo",4,[]],["gunner",-1,[0]],["turret",-1,[1]],["turret",10,[2]],["turret",11,[3]]],[[6,["LDF",1]],[7,["ClanLogo_Hide",1]],[351,false]]]],[[[2830.25,2144.95,0],[[0,"Move"],[1,"SAFE"]]],[[2892.96,2294.87,0],[[0,"GetOut"]]],[[3057.44,2528.26,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[],[["UK3CB_LDF_B_T810_Closed_PKM",[2297.98,2368.59,0],162,[["driver",-1,[]],["cargo",0,[]],["cargo",1,[]],["cargo",2,[]],["cargo",3,[]],["cargo",4,[]],["gunner",-1,[0]],["turret",-1,[1]],["turret",10,[2]],["turret",11,[3]]],[[6,["LDF",1]],[7,["ClanLogo_Hide",1]],[351,false]]]],[[[2830.25,2144.95,0],[[0,"Move"],[1,"SAFE"]]],[[2901.74,2255.35,0],[[0,"GetOut"]]],[[3090.79,2424.43,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+
+		["Alfa HQ","side","1st Platoon be advised, we have reports of an enemy drone team targeting your advance. Expect incoming FPV drones. Over."] spawn OKS_fnc_ChatGlobal;
+		null = [DroneSpawn_1, DroneHuntZone_1, "" , west] spawn OKS_fnc_DroneHuntZone; sleep 5;
+		null = [DroneSpawn_2, DroneHuntZone_1, "" , west] spawn OKS_fnc_DroneHuntZone; sleep 5;
+		null = [DroneSpawn_3, DroneHuntZone_1, "" , west] spawn OKS_fnc_DroneHuntZone; sleep 5;
+		null = [DroneSpawn_4, DroneHuntZone_1, "" , west] spawn OKS_fnc_DroneHuntZone;
+
+	};
+
+	case 42:{
+
+		// Counter-Attack AA Trench - End
+		[[],[["UK3CB_LDF_B_BMP1",[2775.78,2613.17,-1.52588e-05],61,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["LDF",1]],[7,["Tanks_Hide",0]],[351,false]]]],[[[2981.96,2558.42,1.52588e-05],[[0,"Move"]]],[[3020.78,2488.14,0],[[0,"Move"]]],[[3049.92,2427.33,0],[[0,"Move"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[],[["UK3CB_LDF_B_BMP1",[2746.36,2594.97,0],61,[["driver",-1,[]],["gunner",-1,[0]],["commander",-1,[0,0]]],[[6,["LDF",1]],[7,["Tanks_Hide",0]],[351,false]]]],[[[2969.36,2587.77,0],[[0,"Move"]]],[[3010.29,2506.42,0],[[0,"Move"]]],[[3032.37,2464.86,1.52588e-05],[[0,"Move"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[[[2954.72,2734.99,0],0,[[301,0]],"r"],[[2957.72,2731.99,0],0,[[301,0]],"ftl"],[[2959.72,2731.99,1.52588e-05],0,[[301,1]],"ag"],[[2961.72,2731.99,0],0,[[301,0]],"lr"],[[2963.72,2731.99,-1.52588e-05],0,[[301,0]],"r"],[[2965.72,2731.99,-1.52588e-05],0,[[301,0]],"r"],[[2967.72,2731.99,0],0,[[301,0],[302,1]],"ab"],[[2969.72,2731.99,0],0,[[301,0]],"r"]],[],[[[2989.44,2662.67,1.52588e-05],[[0,"Move"]]],[[3010.27,2595.62,0],[[0,"Move"]]],[[3042.92,2498.57,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[[[3004.72,2738.41,0],0,[[301,0]],"r"],[[3007.72,2735.41,1.52588e-05],0,[[301,0]],"ftl"],[[3009.72,2735.41,0],0,[[301,1]],"ag"],[[3011.72,2735.41,0],0,[[301,0]],"lr"],[[3013.72,2735.41,1.52588e-05],0,[[301,0]],"r"],[[3015.72,2735.41,0],0,[[301,0]],"r"],[[3017.72,2735.41,0],0,[[301,0],[302,1]],"ab"],[[3019.72,2735.41,0],0,[[301,0]],"r"]],[],[[[3039.44,2666.09,0],[[0,"Move"]]],[[3060.28,2599.04,0],[[0,"Move"]]],[[3092.92,2501.99,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;
+		[[[[3079.83,2763.69,3.05176e-05],0,[[301,0]],"r"],[[3082.83,2760.69,1.52588e-05],0,[[301,0]],"ftl"],[[3084.83,2760.69,0],0,[[301,1]],"ag"],[[3086.83,2760.69,0],0,[[301,0]],"lr"],[[3088.83,2760.69,1.52588e-05],0,[[301,0]],"r"],[[3090.83,2760.69,1.52588e-05],0,[[301,0]],"r"],[[3092.83,2760.69,0],0,[[301,0],[302,1]],"ab"],[[3094.83,2760.69,3.05176e-05],0,[[301,0]],"r"]],[],[[[3093.1,2671.93,0],[[0,"Move"]]],[[3106.81,2594.76,1.52588e-05],[[0,"Move"]]],[[3075.36,2475.54,0],[[0,"SAD"]]]],west] call GW_Common_fnc_spawnGroup;		
+
 	};
 
 	case 5: {
@@ -214,7 +260,12 @@ switch (_case) do {
 		[[[[2447.13,2821.21,0],201,[]],[[2444.3,2827.69,0],201,[]],[[2453.61,2824.03,0],201,[]],[[2441.48,2834.17,0],201,[]]],[],[[[2311.58,2742.18,3.05176e-05],[[0,"Move"]]],[[2528.99,2689.27,0.131287],[[0,"Move"]]],[[2474.87,2811.24,1.08569],[[0,"Cycle"]]]]] call GW_Common_fnc_spawnGroup;
 		
 
-		[[],[["UK3CB_LDF_B_BMP1",[2721.59,2602.78,0],114,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_LDF_B_BMP1",[2616.08,2685.56,0],77,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_LDF_B_BMP1",[2502.04,2762.84,0],55,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["UK3CB_LDF_B_BMP1",[2263.46,2781.7,1.52588e-05],73,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],["RHS_M2StaticMG_D",[2397.88,2722.89,0.108871],147,[["gunner",-1,[0]]],[]],["rhsgref_cdf_b_SPG9",[2422.18,2783.08,0],113,[["gunner",-1,[0]]],[]],["rhsgref_cdf_b_SPG9",[2526.1,2722.9,0],113,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
+		[[],[
+			["UK3CB_LDF_B_BMP1",[2721.59,2602.78,0],114,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],
+			["UK3CB_LDF_B_BMP1",[2616.08,2685.56,0],77,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],
+			["UK3CB_LDF_B_BMP1",[2502.04,2762.84,0],55,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],
+			["UK3CB_LDF_B_BMP1",[2268.49,2793.6,0.50184631],73,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",1,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",1,"maljutka_hide_source",0]]]],
+			["RHS_M2StaticMG_D",[2397.88,2722.89,0.108871],147,[["gunner",-1,[0]]],[]],["rhsgref_cdf_b_SPG9",[2422.18,2783.08,0],113,[["gunner",-1,[0]]],[]],["rhsgref_cdf_b_SPG9",[2526.1,2722.9,0],113,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 		[[
 			[[2714.14,2591.3,0.796112],25,"Up",[]],[[2710.25,2592.82,0.487244],12,"Up",[]],
 			//[[2713.72,2589.1,0.720596],109,"Up",[]],[[2712.61,2587.31,0.59787],209,"Up",[]],
@@ -255,6 +306,14 @@ switch (_case) do {
 			[getPos _X,"rush",2,west,1500,[],StopSpawn] spawn OKS_fnc_Lambs_Spawner;
 		} foreach [hunt_1,hunt_2,hunt_3,hunt_4];
 	
+	};
+
+	case 51: {
+		[ConvoySpawn_3,ConvoyWP_3,ConvoyEnd_3,west,[4,["UK3CB_LNM_B_T72A","UK3CB_LDF_B_BMP1","UK3CB_LDF_B_T810_Closed_PKM","UK3CB_LDF_B_T810_Closed_PKM"],35,50,30],[true,4],[],false,false,["rush"],"convoystop"] spawn OKS_fnc_Convoy_Spawn;
+	};
+
+	case 52: {
+		[ConvoySpawn_4,ConvoyWP_4,ConvoyEnd_4,west,[4,["UK3CB_LNM_B_T72A","UK3CB_LDF_B_BMP1","UK3CB_LDF_B_T810_Closed_PKM","UK3CB_LDF_B_T810_Closed_PKM"],35,50,30],[true,4],[],false,false,["rush"],"convoystop"] spawn OKS_fnc_Convoy_Spawn;
 	};
 
 	case 6: {
@@ -301,6 +360,9 @@ switch (_case) do {
 			//[[1722.58,2492.07,7.03848],231,"Middle",[]],[[1726.98,2484.28,6.64355],207,"Middle",[]],
 			[[1729.73,2492.58,0.546707],258,"Middle",[]],[[1740.4,2498.15,0.820801],11,"Up",[]]
 		],[["UK3CB_LDF_B_BMP1",[1702.33,2458.43,3.05176e-05],57,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["LDF",1]],[7,["crate_l1_unhide",1,"crate_l2_unhide",0,"crate_l3_unhide",0,"crate_r1_unhide",0,"crate_r2_unhide",0,"crate_r3_unhide",0,"wood_1_unhide",0,"maljutka_hide_source",0]]]]],[]] call GW_Common_fnc_spawnGroup;	
+	
+		// Air Scout
+		null = [getPos AirScout_2,getPos AirScoutTarget_2,civilian,"UK3CB_CW_US_B_LATE_UH1H_GUNSHIP",["LOITER",false],[500,4],[250,500],nil,true] spawn OKS_fnc_AirScout;
 	};
 
 	case 7: {

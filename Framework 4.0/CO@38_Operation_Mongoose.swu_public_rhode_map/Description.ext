@@ -73,46 +73,7 @@ class Params {
 		#include "Gear\Module.hpp"
 	#undef LOAD_PARAMS
 
-	class Daytime
-	{
-		title = "Mission Time";
-		texts[] = { "Mission Defined", "Dawn", "Noon", "Afternoon", "Evening", "Night" };
-		values[] = { -1, 5.6, 12, 16, 19, 23 };
-		default = -1;
-		function = "GW_fnc_paramDaytime";
-	};
-
-	class ShouldGiveMedicalToAsstGunner
-	{
-		title = "Should Asst. Gunner have medical supplies?";
-		texts[] = { "No", "Yes" };
-		values[] = { 0, 1 };
-		default = 0;
-	};	
-
-	class ShouldGiveServiceStationToVehicle
-	{
-		title = "Should non-MHQ vehicles have service station?";
-		texts[] = { "Yes", "No" };
-		values[] = { 1, 0 };
-		default = 1;
-	};
-
-	class SpawnMultiplier
-	{
-		title = "Force Spawn Multiplier";
-		texts[] = { "100%", "95%", "90%", "85%", "80%", "75%", "70%", "65%", "60%", "55%", "50%" };
-		values[] = { 100, 95, 90, 85, 80, 75, 70, 65, 60, 55, 50 };
-		default = 100;
-	};
-
-	class GOL_AISkillOverride
-	{
-		title = "AI Skill Preset Override";
-		texts[] = { "No Override", "Special Forces", "Commando", "Regulars", "Insurgents", "Farmer" };
-		values[] = { -1, 0, 1, 2, 3, 4 };
-		default = -1;
-	};
+	#include "\OKS_GOL_Misc\configs\CfgMissionParams.hpp"
 };
 
 class CfgFunctions {

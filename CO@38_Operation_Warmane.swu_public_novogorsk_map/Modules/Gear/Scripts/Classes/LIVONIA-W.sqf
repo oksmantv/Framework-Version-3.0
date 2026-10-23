@@ -59,22 +59,24 @@ _pointer = "";
 _sight = "";
 _bipod = "";
 
-_rifle = ["rhs_weap_savz58p_black", _silencer, _pointer, _sight, _bipod];
-_rifleC = ["rhs_weap_m92", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["rhs_weap_m70b3n_pbg40", _silencer, _pointer, _sight, _bipod];
-_rifleL = ["rhs_weap_m76", _silencer, _pointer, "rhs_acc_pso1m21", ""];
-_rifle_mag = "rhs_30Rnd_762x39mm_Savz58_tracer";
-_rifle_mag_tr = "rhs_30Rnd_762x39mm_Savz58_tracer";
-_rifleC_mag = "UK3CB_AK47_30Rnd_Magazine_RT";
-_rifleGL_mag = "UK3CB_AK47_30Rnd_Magazine_RT";
-_rifleGL_mag_tr = "UK3CB_AK47_30Rnd_Magazine_RT";
-_rifleL_mag = "rhssaf_10Rnd_792x57_m76_tracer";
+_rifle = ["UK3CB_M16A1", _silencer, _pointer, _sight, _bipod];
+_rifleC = ["UK3CB_M16_Carbine", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["UK3CB_M16A2_UGL", _silencer, _pointer, _sight, _bipod];
+_rifleL = ["UK3CB_M16A1_LSW", _silencer, _pointer, "optic_AMS", ""];
+_rifle_mag = "rhs_mag_30Rnd_556x45_M193_Stanag";
+_rifle_mag_tr = "rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red";
+_rifleC_mag = "rhs_mag_30Rnd_556x45_M193_Stanag";
+_rifleC_mag_tr = "rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red";
+_rifleGL_mag = "rhs_mag_30Rnd_556x45_M193_Stanag";
+_rifleGL_mag_tr = "rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red";
+_rifleL_mag = "rhs_mag_30Rnd_556x45_M193_Stanag";
+_rifleL_mag_tr = "rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red";
 
-_LMG = ["UK3CB_UK59", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "UK3CB_UK59_100Rnd_762x54mmR_Magazine_RT";
+_LMG = ["rhs_weap_m249", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "rhsusf_200rnd_556x45_M855_box";
 
-_MMG = ["UK3CB_UKM2000P", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "UK3CB_UKM_100rnd_762x51_RT";
+_MMG = ["UK3CB_M60", _silencer, _pointer, _sight, _bipod];
+_MMG_mag = "UK3CB_BAF_762_200Rnd_T";
 
 _sight = "";
 
@@ -82,9 +84,9 @@ _LAT = ["GOL_weap_RPG17_Type69", _silencer, _pointer, _sight, _bipod];
 _LAT_mag = "GOL_mag_rpg17_Type69";
 _LAT_ReUsable = false;
 
-_MAT = ["GOL_weap_RPG7_F", _silencer, _pointer, _sight, _bipod];
-_MAT_mag = "GOL_mag_rpg7_Type69II";
-_MAT_mag_HE = "rhs_rpg7_type69_airburst_mag";
+_MAT = ["GOL_weap_RPG7_RHS", _silencer, _pointer, _sight, _bipod];
+_MAT_mag = "GOL_mag_rpg7_Type69";
+_MAT_mag_HE = "rhs_rpg7_OG7V_mag";
 
 _HAT = ["launch_I_Titan_short_F", _silencer, _pointer, _sight, _bipod];
 _HAT_mag = "Titan_AT";
