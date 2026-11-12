@@ -1,4 +1,4 @@
-version=54;
+﻿version=54;
 class EditorData
 {
 	moveGridStep=1;
@@ -493,7 +493,7 @@ class CustomAttributes
 				class data
 				{
 					singleType="BOOL";
-					value=1;
+					value=0;
 				};
 			};
 		};
@@ -17195,7 +17195,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="STRING";
-														value="USMC-W";
+														value="CUSTOM-W";
 													};
 												};
 												class Item1
@@ -17222,7 +17222,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="STRING";
-														value="INSURGENT-ME";
+														value="CUSTOM-E";
 													};
 												};
 												class Item1
@@ -17249,7 +17249,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="STRING";
-														value="ISLAMICSTATE";
+														value="CUSTOM-I";
 													};
 												};
 												class Item1
@@ -43517,3 +43517,5 @@ class Mission
 		};
 	};
 };
+
+
