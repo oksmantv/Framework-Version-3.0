@@ -1,5 +1,3 @@
-SetCaptive for all group MG course.
-Add Sniper Sights and force target, not engaging at 500+ meters. Unable to find target?
-Add Suppressive fire command?
-Two more courses or Three?
-QL eod training course
+QL EOD training course
+Add Bandage Casualty - When bleeding is stopped, complete the round.
+Add Condition - If the casualty is in the starting position and not moved, the course fails.

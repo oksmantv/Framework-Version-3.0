@@ -53,6 +53,13 @@ switch (toLower(_role)) do {
 		};	
 	};
 
+	case "unarmed": {
+		["",_helmet,_uniform,_vest,""] call _addEquipment;
+		[_rifle, "", ""] call _addPrimary;
+		if(((call EFUNC(Common,isNight)) && _allowedNightStuff) || _ForceNVG isEqualTo true) then {
+			_nvg call _addNVG;
+		};	
+	};
 
 	case "pl": {
 		[_goggles,_helmet,_uniform,_vest,_backpackRadio] call _addEquipment;

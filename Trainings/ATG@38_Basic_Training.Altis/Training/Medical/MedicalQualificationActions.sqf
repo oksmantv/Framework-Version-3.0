@@ -1,11 +1,11 @@
 params ["_object","_spawn","_barrier"];
 
-_object addAction ["<t color='#FF0000'>--Medical Qualification--</t>", {},[],2,true,true,"","true",5];
+_object addAction ["<img image='\a3\ui_f\data\igui\cfg\simpletasks\types\heal_ca.paa'/> <t color='#FF0000'> Medical Qualification</t>", {},[],0.4,false,false,"","true",5];
 _object addAction ["<t color='#04F51F'>Initiate Qualification (Level 1)</t>", {
 		[(_this select 0),(_this select 1), (_this select 3 select 0),(_this select 3 select 1),1] remoteExec ["MedicalQualificationPatients",2]
 	},
 	[_spawn,_barrier],
-	1.5,
+	0.3,
 	true,
 	true,
 	"",
@@ -19,7 +19,7 @@ _object addAction ["<t color='#04F51F'>Initiate Qualification (Level 2)</t>", {
 		[(_this select 0),(_this select 1), (_this select 3 select 0),(_this select 3 select 1),2] remoteExec ["MedicalQualificationPatients",2]
 	},
 	[_spawn,_barrier],
-	1.5,
+	0.2,
 	true,
 	true,
 	"",
@@ -33,7 +33,7 @@ _object addAction ["<t color='#04F51F'>Initiate Qualification (Level 3)</t>", {
 		[(_this select 0),(_this select 1), (_this select 3 select 0),(_this select 3 select 1),3] remoteExec ["MedicalQualificationPatients",2]
 	},
 	[_spawn,_barrier],
-	1.5,
+	0.1,
 	true,
 	true,
 	"",

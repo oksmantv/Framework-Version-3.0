@@ -21,7 +21,7 @@ params [
 	"_case"
 ];
 
-format["SpawnList Case: %1", _case] spawn OKS_LogDebug;
+format["SpawnList Case: %1", _case] spawn OKS_fnc_LogDebug;
 
 switch (_case) do {
 

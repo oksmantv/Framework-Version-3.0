@@ -1,16 +1,29 @@
 params ["_Terminal", "_Qualifier", "_SpawnPos","_Barrier","_Level"];
 private ["_TimeLimit"];
 
-	[_Barrier,false] remoteExec ["hideObjectGlobal",2];
-    if(!isNull _Terminal) then {
-        [_Terminal,3] call BIS_fnc_dataTerminalAnimate;
-        playSound3D [MISSION_ROOT + "activated.wav", _Terminal];
-        sleep 3.5;
-    };
-    _previousUnits = _Terminal getVariable ["AttachedUnits",[]];
-    {deleteVehicle _X} foreach _previousUnits;
-    sleep 0.5;
-    _Group = createGroup west;
+if (!isServer) exitWith {};
+if (isNull _Terminal || isNull _Qualifier || {!alive _Qualifier} || {_Qualifier distance _Terminal > 12}) exitWith {};
+if !(_Level in [1, 2, 3]) exitWith {};
+if (_Terminal getVariable ["MED_ExerciseActive", false]) exitWith {
+	"This medical station is already in use." remoteExec ["systemChat", _Qualifier];
+};
+
+_Terminal setVariable ["MED_ExerciseActive", true, true];
+_Qualifier setVariable ["GOL_Qualification_Time", 0, true];
+private _TaskId = format ["MedicalQualification_%1_%2", netId _Terminal, floor (diag_tickTime * 1000)];
+[_TaskId, "CREATED", format ["Medical Qualification Level %1", _Level], format ["Stabilize all Level %1 casualties within the time limit.", _Level], _Terminal] remoteExec ["MedicalTask", _Qualifier];
+
+[_Barrier,false] remoteExec ["hideObjectGlobal",2];
+if(!isNull _Terminal) then {
+	[_Terminal,3] call BIS_fnc_dataTerminalAnimate;
+	playSound3D [MISSION_ROOT + "activated.wav", _Terminal];
+	sleep 3.5;
+};
+_previousUnits = _Terminal getVariable ["AttachedUnits",[]];
+{deleteVehicle _X} foreach _previousUnits;
+_Terminal setVariable ["AttachedUnits", [], true];
+sleep 0.5;
+_Group = createGroup west;
 	_Group setVariable ["GW_Gear_BlackList",true,true];
     _Group setVariable ["acex_headless_blacklist",true,true];
 
@@ -45,7 +58,7 @@ private ["_TimeLimit"];
 			_Unit addItemToUniform "ACE_ElasticBandage"
 		};
 
-		//[_Unit,true] remoteExec ["hideObjectGlobal",2];
+		[_Unit,true] remoteExec ["hideObjectGlobal",2];
 		[_Unit,"CARELESS"] remoteExec ["setBehaviour",0];
 		[_Unit,"MOVE"]remoteExec ["disableAI",0];
 		_Unit remoteExec ["DoStop",0];
@@ -87,6 +100,7 @@ private ["_TimeLimit"];
 				_Casualty = _X;
 				(([_Casualty] call ace_medical_status_fnc_getCardiacOutput > 0.07) &&
 				[_Casualty] call ace_medical_status_fnc_getBloodLoss < 0.001 &&
+				_Casualty getVariable ["MED_CPRCompleted", false] &&
 				{
 					[_Casualty, _X] call ace_medical_treatment_fnc_hasTourniquetAppliedTo
 				} count ["LeftLeg","RightLeg","LeftArm","RightArm"] == 0)
@@ -104,6 +118,7 @@ private ["_TimeLimit"];
 				
 				(([_Casualty] call ace_medical_status_fnc_getCardiacOutput > 0.07) &&
 				[_Casualty] call ace_medical_status_fnc_getBloodLoss < 0.001 &&
+				_Casualty getVariable ["MED_CPRCompleted", false] &&
 				{
 					[_Casualty, _X] call ace_medical_treatment_fnc_hasTourniquetAppliedTo
 				} count ["LeftLeg","RightLeg","LeftArm","RightArm"] == 0)
@@ -114,30 +129,45 @@ private ["_TimeLimit"];
 	} forEach units _Group;
 	[_Barrier,true] remoteExec ["hideObjectGlobal",2];
 	playSound3D [MISSION_ROOT + "tier1.wav", _Terminal];
-	["HQ","side",format["%2: Started Qualification Level %3 - Time Limit: %1",_TimeLimit,name _Qualifier,_Level]] remoteExec ["OKS_fnc_Chat",0];
+	["Medical Instructor","side",format["%2: Started Qualification Level %3 - Time Limit: %1",_TimeLimit,name _Qualifier,_Level]] remoteExec ["OKS_fnc_Chat",0];
 	waitUntil{sleep 0.1; {_X getVariable ["GOL_Qualification_Complete",false]} count units _Group == count units _Group || {!Alive _X} count units _Group > 0};
+	private _TaskState = "SUCCEEDED";
+	private _TaskDebrief = "All casualties were stabilized within the time limit.";
 	if({!Alive _X} count units _Group > 0) then {
-		["HQ","side",format["%2: Failed Qualification - Casualty Died",(_Qualifier getVariable ["GOL_Qualification_Time",0]),name _Qualifier]] remoteExec ["OKS_fnc_Chat",0];
+		["Medical Instructor","side",format["%2: Failed Qualification - Casualty Died",(_Qualifier getVariable ["GOL_Qualification_Time",0]),name _Qualifier]] remoteExec ["OKS_fnc_Chat",0];
 		playSound3D [MISSION_ROOT + "failure.wav", _Terminal];
+		_TaskState = "FAILED";
+		_TaskDebrief = "Qualification failed because a casualty died.";
 	} else {
 		_Time = (_Qualifier getVariable ["GOL_Qualification_Time",0]);
 		if(_Time > _TimeLimit) then {
-			["HQ","side",format["%2: Failed Qualification by %1 seconds",(_Time - _TimeLimit),name _Qualifier]] remoteExec ["OKS_fnc_Chat",0];
+			["Medical Instructor","side",format["%2: Failed Qualification by %1 seconds",(_Time - _TimeLimit),name _Qualifier]] remoteExec ["OKS_fnc_Chat",0];
 			playSound3D [MISSION_ROOT + "failure.wav", _Terminal];
+			_TaskState = "FAILED";
+			_TaskDebrief = format ["Qualification failed: exceeded the time limit by %1 seconds.", _Time - _TimeLimit];
 		} else {
 			// if({(_X getVariable ["GOL_CPR_COMPLETED",0]) < 2} count units _Group == count units _Group) then {
 			// 	["HQ","side",format["%2: Failed Qualification in %1 seconds - Did not apply CPR at least 2 times per casualty",_Time,name _Qualifier]] remoteExec ["OKS_fnc_Chat",0];	
 			// } else {
-				["HQ","side",format["%2: Succeeded Qualification (Level %3) in %1 seconds",_Time,name _Qualifier,_Level]] remoteExec ["OKS_fnc_Chat",0];
+				["Medical Instructor","side",format["%2: Succeeded Qualification (Level %3) in %1 seconds",_Time,name _Qualifier,_Level]] remoteExec ["OKS_fnc_Chat",0];
 				playSound3D [MISSION_ROOT + "victory.wav", _Terminal];
 			//}			
 		};		
 	};
+	[_TaskId, _TaskState, format ["Medical Qualification Level %1", _Level], _TaskDebrief] remoteExec ["MedicalTask", _Qualifier];
 	
 	sleep 3;
+
 	{
+		_Pos = getPosATL _X;
+		_Corpses = allDeadMen select { _X distance _Pos < 6 };
+		{
+			deleteVehicle _X;
+		} foreach _Corpses;
 		deleteVehicle _X;
 	} forEach units _Group;
+	_Terminal setVariable ["AttachedUnits", [], true];
+	_Terminal setVariable ["MED_ExerciseActive", false, true];
 	_Qualifier setPosATL (_Terminal getPos [2,(_SpawnPos getDir _Terminal)]);
 	_Qualifier setDir (_Qualifier getDir _Terminal);
 	[_Barrier,false] remoteExec ["hideObjectGlobal",2];

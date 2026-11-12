@@ -25,7 +25,11 @@ if(_isAssessment) then {
 
 _SelectedSeverity = _Severe;
 if((toLower _Severe) isEqualTo "random") then {
-	_SelectedSeverity = selectRandom["some","lot","large","fatal","dead"];
+	_SelectedSeverity = selectRandom["some","lot","alot","fatal"];
+};
+
+if (_SelectedSeverity isEqualTo "alot") then {
+	_SelectedSeverity = "large";
 };
 
 //systemChat format["Severity Random: %1",_SelectedSeverity];
@@ -99,19 +103,27 @@ switch (_SelectedSeverity) do {
 	case "qualification": {
 		_unit allowDamage false;
 		_unit setVariable ["ace_medical_bloodVolume", 3.5, true];
-		_Unit setUnitPos "DOWN";
+		_unit setUnitPos "DOWN";
 
 		[_unit, true] call ace_medical_fnc_setUnconscious;
 
 		for "_j" from 0 to 3 do {
-			[_Unit, selectRandom [0.15,0.175,0.2], selectRandom ["LeftLeg", "RightLeg"], selectRandom ["avulsion", "stab"]] remoteExec ["ace_medical_fnc_addDamageToUnit", 2];
-			[_Unit, selectRandom [0.15,0.175,0.2], selectRandom ["LeftArm", "RightArm"], selectRandom ["avulsion", "stab"]] remoteExec ["ace_medical_fnc_addDamageToUnit", 2];
+			[_unit, selectRandom [0.15,0.175,0.2], selectRandom ["LeftLeg", "RightLeg"], selectRandom ["avulsion", "stab"]] remoteExec ["ace_medical_fnc_addDamageToUnit", 2];
+			[_unit, selectRandom [0.15,0.175,0.2], selectRandom ["LeftArm", "RightArm"], selectRandom ["avulsion", "stab"]] remoteExec ["ace_medical_fnc_addDamageToUnit", 2];
 			sleep 0.1;
 		};
 		//[_Unit, 0.2, "Body", selectRandom ["avulsion","stab"]] remoteExec ["ace_medical_fnc_addDamageToUnit", 2];
 		//[_Unit, 0.25, "Body", selectRandom ["avulsion","stab"]] remoteExec ["ace_medical_fnc_addDamageToUnit", 2];
-		[_Unit, 0.15, "Body", selectRandom ["avulsion"]] remoteExec ["ace_medical_fnc_addDamageToUnit", 2];
+		[_unit, 0.15, "Body", selectRandom ["avulsion"]] remoteExec ["ace_medical_fnc_addDamageToUnit", 2];
 		//[_Unit, 0.2, "Head", selectRandom ["avulsion", "stab"]] remoteExec ["ace_medical_fnc_addDamageToUnit", 2];
+
+		_unit spawn {
+			_unit = _this;
+			sleep 2.5;
+			private _randomCardiacArrestTimer = selectRandom [30,35,40,45,50,55,60];
+			_Unit setVariable ["ace_medical_statemachine_cardiacArrestTimeLeft", _randomCardiacArrestTimer, true];
+			systemChat format ["[MEDICAL] Cardiac Arrest Timer: %1 seconds", _randomCardiacArrestTimer];
+		};
 	};
 
 	case "dead": {
@@ -130,12 +142,17 @@ switch (_SelectedSeverity) do {
 	};
 };
 if (_SelectedSeverity isEqualTo "dead") then {
-	_Unit hideObjectGlobal false;
 	_Unit setDamage 1;
+};
+
+if (_SelectedSeverity in ["fatal", "qualification"]) then {
+	_Unit setVariable ["MED_CPRRequired", true, true];
+	[_Unit] spawn MedicalCardiacArrest;
 };
 
 sleep 3;
 _Unit setVariable ["GOL_Qualification_Ready", true, true];
+_Unit setVariable ["MED_PatientReady", true, true];
 if (_SelectedSeverity in ["easy", "medium", "heavy", "lot", "large", "fatal", "dead"]) then {
 	playSound3D [MISSION_ROOT + "blood_loss.wav", _Unit];
 };

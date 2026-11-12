@@ -81,6 +81,7 @@ switch (_case) do {
 		_Group4 = [[[[929.895,2473.94,0],233,[]],[[930.859,2480.95,0],233,[]],[[936.9,2472.98,0],233,[]],[[931.824,2487.95,0],233,[]],[[943.904,2472.01,0],233,[]],[[932.788,2494.96,0],233,[]],[[950.91,2471.05,0],233,[]],[[933.753,2501.96,0.199223],233,[]]],[],[[[770.347,2368.78,0],[[0,"Move"],[4,"LINE"]]],[[604.442,2250.28,0.332165],[[0,"SAD"]]]]] call GW_Common_fnc_spawnGroup;
 		_Group5 = [[],[["UK3CB_ADA_O_BTR40_MG",[1121.32,1993.28,0],283,[["driver",-1,[]],["gunner",-1,[0]]],[[6,["ADA",1]],[7,["Beacons_Hide",1,"Hull_Flag_Hide",1]]]]],[[[732.102,2067.07,0],[[0,"Move"]]],[[664.28,2146.32,0],[[0,"Hold"]]]]] call GW_Common_fnc_spawnGroup;
 		sleep 120;
+		
 		// Rush Attack Waves
 		[[attack_1,attack_2,attack_3,attack_4,attack_5,attack_6,attack_7],2,3,180,"rush",east,1500,"Wave1Complete"] spawn OKS_fnc_Lambs_Wavespawn;
 		sleep 60;

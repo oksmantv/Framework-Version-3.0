@@ -3,7 +3,7 @@
 
 Params ["_ActionBox","_SpawnPosition"];
 
-_ActionBox addAction ["<t color='#ce2ef8'>Initiate Casualty Assessment</t>", {
+_ActionBox addAction ["<img image='\a3\ui_f\data\igui\cfg\simpletasks\types\search_ca.paa'/> <t color='#ce2ef8'> Initiate Casualty Assessment</t>", {
 	[
 		((_this select 3) select 0),
 		((_this select 3) select 1),
@@ -16,7 +16,8 @@ _ActionBox addAction ["<t color='#ce2ef8'>Initiate Casualty Assessment</t>", {
 	[
 		_ActionBox,
 		_SpawnPosition
-	]
+	],
+	0.5
 ];
 
 //_ActionBox addAction ["<t color='#FF0000'>Delete Patient", { { if(!isPlayer _X) then {deleteVehicle _X}} foreach (((_this select 3) select 0) nearEntities 10)},[_SpawnPosition]];
