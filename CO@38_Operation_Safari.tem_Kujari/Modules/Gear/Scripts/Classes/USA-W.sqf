@@ -2,7 +2,7 @@ _useMineDetector = false;
 _allowedNightStuff = true;
 
 _insignia = "insignia_block78";
-_goggles = "JCA_G_balaclava_01_sand_F";
+_goggles = "";
 _helmet = ["rhsusf_mich_bare_alt","rhsusf_mich_bare_headset","rhsusf_mich_bare_alt","rhsusf_mich_bare"];
 _OfficerHelmet = "rhs_8point_marpatwd";
 _uniform = "rhs_uniform_g3_mc";

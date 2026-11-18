@@ -93,7 +93,7 @@ _rifleMarksman_mag = "rhs_5Rnd_338lapua_t5000";
 _rifleMarksman_mag_tr = "rhs_5Rnd_338lapua_t5000";
 
 if (_role isEqualTo "marksman") then {
-	_goggles = "JCA_G_balaclava_01_black_F";
+	_goggles = "";
 	_uniform = "UK3CB_MEE_O_U_07";
 	_helmet = "UK3CB_TPD_B_H_PASGT_neckprot_black";
 	_vest = "UK3CB_ADA_B_V_TacVest_BLK";

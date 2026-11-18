@@ -16,7 +16,7 @@ _glflareR = "rhs_VG40OP_red";
 _glflareW = "rhs_VG40OP_white";
 
 _insignia = "";
-_goggles = ["JCA_G_balaclava_01_sand_F","JCA_G_balaclava_01_sand_F","rhsusf_oakley_goggles_clr","rhsusf_shemagh2_gogg_tan","rhsusf_shemagh_gogg_tan","rhsusf_shemagh2_tan","rhsusf_shemagh_tan","UK3CB_G_Balaclava_DES"];
+_goggles = ["rhsusf_oakley_goggles_clr","rhsusf_shemagh2_gogg_tan","rhsusf_shemagh_gogg_tan","rhsusf_shemagh2_tan","rhsusf_shemagh_tan","UK3CB_G_Balaclava_DES"];
 _helmet = ["rhsusf_opscore_ut_pelt_nsw_cam","rhsusf_opscore_ut_pelt_nsw","rhsusf_opscore_ut_pelt_cam","rhsusf_opscore_ut_pelt"];
 _OfficerHelmet = "H_Beret_blk";
 _uniform = ["UK3CB_TKA_I_U_CombatUniform_01_TKA_Brush","UK3CB_TKA_I_U_CombatUniform_02_TKA_Brush"];

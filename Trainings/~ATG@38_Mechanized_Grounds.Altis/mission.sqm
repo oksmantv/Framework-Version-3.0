@@ -24,7 +24,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={23315.773,28.45875,17189.031};
+		pos[]={23306.623,28.45875,17194.99};
 		dir[]={0.07087151,-0.43742093,0.89645976};
 		up[]={0.034473665,0.89925683,0.43606034};
 		aside[]={0.99688947,0,-0.078811191};
@@ -43,12 +43,13 @@ addons[]=
 	"A3_Weapons_F_Acc",
 	"ace_realisticnames",
 	"ace_scopes",
+	"BettIR_Attachments_Compat_Core",
 	"ace_laserpointer",
+	"BettIR_Attachments_Compat_ACE",
 	"A3_Weapons_F",
 	"ace_smallarms",
 	"ace_ballistics",
 	"A3_Weapons_F_Pistols_P07",
-	"jsrs2025_config_c",
 	"ace_optics",
 	"ace_goggles",
 	"BettIR_NVG",
@@ -181,31 +182,30 @@ class AddonsMetaData
 		};
 		class Item6
 		{
+			className="BettIR_Attachments";
+			name="BettIR Attachments";
+			author="Vestarr";
+		};
+		class Item7
+		{
 			className="ace_laserpointer";
 			name="ACE3 - Laser Pointer";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item7
+		class Item8
 		{
 			className="ace_smallarms";
 			name="ACE3 - Small Arms";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item8
+		class Item9
 		{
 			className="ace_ballistics";
 			name="ACE3 - Ballistics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
-		};
-		class Item9
-		{
-			className="jsrs2025_config_c";
-			name="JSRS SOUNDMOD 2025";
-			author="LordJarhead";
-			url="https://www.arma3.com";
 		};
 		class Item10
 		{

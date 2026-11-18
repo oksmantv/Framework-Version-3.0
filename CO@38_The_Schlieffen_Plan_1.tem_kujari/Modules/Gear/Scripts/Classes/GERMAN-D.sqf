@@ -2,7 +2,7 @@ _useMineDetector = true;
 _allowedNightStuff = true;
 
 _insignia = "GOL_Insignia_PZG371";
-_goggles = "JCA_G_balaclava_01_sand_F";
+_goggles = "";
 _helmet = "acp_gol_DE_Tropentarn_H_HelmetSpecB_DE_Tropentarn";
 _OfficerHelmet = "UK3CB_LNM_B_H_BoonieHat_FLK_03";
 _uniform = ["acp_gol_DE_Tropentarn_U_I_CombatUniform_DE_Tropentarn"];

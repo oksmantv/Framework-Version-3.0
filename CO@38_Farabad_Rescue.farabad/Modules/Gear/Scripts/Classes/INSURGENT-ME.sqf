@@ -107,6 +107,6 @@ if(_role == "marksman") then {
 	_helmet = "";
 	_uniform = "UK3CB_TKP_I_U_CIB_CombatUniform_DBLU";
 	_vest = "UK3CB_ADA_B_V_TacVest_BLK";
-	_goggles = "JCA_G_balaclava_01_black_F";
+	_goggles = "";
 	_backpack = "UK3CB_TKP_O_B_ASS_BLK";
 };

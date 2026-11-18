@@ -2,7 +2,7 @@ _useMineDetector = false;
 _allowedNightStuff = true;
 
 _insignia = "";
-_goggles = ["JCA_G_FaceMask_01_olive_F","JCA_G_balaclava_01_olive_F","rhsusf_shemagh_grn","rhsusf_oakley_goggles_clr"];
+_goggles = ["","rhsusf_shemagh_grn","rhsusf_oakley_goggles_clr"];
 _OfficerHelmet = "UK3CB_AAF_B_H_Beret_SF_Off";
 _helmet = ["UK3CB_AAF_I_H_MKVI_Helmet_B_GRN","H_HelmetHBK_chops_F","H_HelmetHBK_ear_F","H_HelmetHBK_F"];
 _uniform = ["UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","U_I_CombatUniform_tshirt"];

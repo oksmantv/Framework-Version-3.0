@@ -2,7 +2,7 @@ _useMineDetector = false;
 _allowedNightStuff = true;
 
 _insignia = "";
-_goggles = ["JCA_G_balaclava_01_sand_F"];
+_goggles = [""];
 _helmet = ["rhsusf_opscore_fg_pelt_nsw","rhsusf_opscore_fg_pelt_cam","rhsusf_opscore_fg_pelt","rhsusf_opscore_fg"];
 _OfficerHelmet = "rhs_8point_marpatwd";
 _uniform = ["UK3CB_ADM_B_U_CombatUniform_01_MAR","UK3CB_ADM_B_U_CombatUniform_Shortsleeve_01_MAR"];

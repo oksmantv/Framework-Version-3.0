@@ -4,7 +4,7 @@ _allowedNightStuff = false;
 _insignia = "";
 _goggles = "G_Armband_napa_alt_F";
 _helmet = [
-	"JCA_H_balaclava_01_black_F"
+	""
 ];
 _OfficerHelmet = "rhs_beret_vdv3";
 _uniform = [

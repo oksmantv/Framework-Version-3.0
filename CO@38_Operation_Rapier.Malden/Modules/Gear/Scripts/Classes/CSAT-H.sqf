@@ -16,7 +16,7 @@ _glflareR = "rhs_VG40OP_red";
 _glflareW = "rhs_VG40OP_white";
 
 _insignia = "";
-_goggles = "JCA_G_FaceMask_01_black_F";
+_goggles = "";
 _helmet = ["UK3CB_CSAT_B_O_H_6b27m","UK3CB_TKP_O_H_Beret","UK3CB_CSAT_B_O_H_BoonieHat","","UK3CB_CSAT_O_H_Woolhat_HS_KHK"];
 _OfficerHelmet = "H_Beret_CSAT_01_F";
 _uniform = ["UK3CB_CSAT_B_O_U_CombatUniform","UK3CB_CSAT_B_O_U_CombatUniform_Shortsleeve"];

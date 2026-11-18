@@ -16,7 +16,7 @@ _glflareR = "rhs_VG40OP_red";
 _glflareW = "rhs_VG40OP_white";
 
 _insignia = "";
-_goggles = ["JCA_G_FaceMask_01_olive_F","JCA_G_balaclava_01_olive_F","G_Headband_red_alt_F","","rhsusf_shemagh_grn","G_Armband_red_alt_F"];
+_goggles = ["","G_Headband_red_alt_F","","rhsusf_shemagh_grn","G_Armband_red_alt_F"];
 _helmet = ["rhs_altyn_novisor","rhs_altyn_novisor_ess","rhs_altyn"];
 _OfficerHelmet = "rhs_beret_vdv3_GOL";
 _uniform = "rhs_uniform_afghanka_vsr_2";

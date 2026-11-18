@@ -16,7 +16,7 @@ _glflareR = "rhs_VG40OP_red";
 _glflareW = "rhs_VG40OP_white";
 
 _insignia = "";
-_goggles = "JCA_G_balaclava_01_olive_F";
+_goggles = "";
 _helmet = ["rhs_altyn","rhs_altyn_visordown","rhs_altyn_novisor_ess"] call BIS_fnc_selectRandom;
 _OfficerHelmet = "UK3CB_ANA_B_H_OFF_Beret_GRN";
 _uniform = ["rhsgref_uniform_ttsko_mountain"];

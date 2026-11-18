@@ -15,7 +15,7 @@ _glflareR = "3rnd_UGL_FlareRed_Illumination_F";
 _glflareW = "3rnd_UGL_FlareWhite_Illumination_F";
 
 _insignia = "";
-_goggles = ["JCA_G_balaclava_01_olive_F","rhsusf_shemagh_od","rhsusf_shemagh2_od","JCA_G_balaclava_01_olive_F","JCA_G_balaclava_01_olive_F","UK3CB_G_KR_TAN","UK3CB_G_KLR_TAN","rhsusf_oakley_goggles_blk","rhsusf_oakley_goggles_clr"];
+_goggles = ["","rhsusf_shemagh_od","rhsusf_shemagh2_od","","","UK3CB_G_KR_TAN","UK3CB_G_KLR_TAN","rhsusf_oakley_goggles_blk","rhsusf_oakley_goggles_clr"];
 _helmet = ["rhsusf_mich_bare_norotos_alt","rhsusf_mich_bare_norotos","rhsusf_mich_bare_norotos_alt_headset","rhsusf_mich_bare_norotos_arc","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_headset"];
 _OfficerHelmet = "rhs_8point_marpatwd";
 _uniform = ["UK3CB_ADM_B_U_CombatUniform_01_MAR","UK3CB_ADM_B_U_CombatUniform_Shortsleeve_01_MAR"];
