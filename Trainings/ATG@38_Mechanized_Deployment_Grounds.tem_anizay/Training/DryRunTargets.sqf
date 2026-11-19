@@ -1,69 +1,110 @@
-
 // [] spawn DryRunTargets;
+// Server only. Running it again resets the course (all targets shown, lowered, and re-armed).
 
-// Reset All Targets.
-waitUntil {!isNil "Dry_Array_1" && !isNil "Dry_Array_2" && !isNil "Dry_Array_3" };
+if (!isServer) exitWith {};
+
+// Wait for all target compounds to exist.
+waitUntil {!isNil "Dry_Array_1" && !isNil "Dry_Array_2" && !isNil "Dry_Array_3"};
+
+// Stop anything left over from a previous run (main loop + fade-outs).
+{terminate _x} forEach (missionNamespace getVariable ["DRT_Handles", []]);
+DRT_Handles = [];
+
 nopop = true;
 publicVariable "nopop";
+
+private _Compounds = [Dry_Array_1, Dry_Array_2, Dry_Array_3];
+private _PopRangeMin = 50;    // Each target gets its own random pop range between min and max.
+private _PopRangeMax = 150;
+private _FaceOffset = 180;    // Models are inverted: target front = model back. Set to 0 if they end up facing away.
+private _TurnInterval = 0.1;  // Seconds between updates.
+private _MinTurn = 2;         // Ignore direction changes smaller than this (degrees).
+private _DeathDelay = 2;      // Seconds between being downed and starting the fade-out.
+
+// Reset: show every target, lower it, clear its state and give it its own pop range.
+private _Live = [];
 {
-	_TargetArray = _X;
 	{
-		_X animateSource ["terc", 1]
-	} forEach _TargetArray;
-} foreach [Dry_Array_1,Dry_Array_2,Dry_Array_3];
+		_x hideObjectGlobal false;
+		_x animateSource ["terc", 1];
+		_x setVariable ["DRT_Hit", false];
+		_x setVariable ["DRT_Active", false];
+		_x setVariable ["DRT_Popped", false];
+		_x setVariable ["DRT_Range", _PopRangeMin + random (_PopRangeMax - _PopRangeMin)];
 
-// Select Array Randomly
-private _SelectRandomArray = {
-	Params [
-		["_RandomSelect",nil,[0]]
-	];
-
-	if(isNil "_RandomSelect") then {
-		_RandomSelect = ceil(random 3);
-	};
-
-	_TargetArray = [];
-	switch (_RandomSelect) do {
-		case 1: { 
-			_TargetArray = Dry_Array_1;
+		// Register hits once per target (the handler survives resets).
+		if (isNil {_x getVariable "DRT_EH"}) then {
+			_x setVariable ["DRT_EH", _x addEventHandler ["Hit", {
+				(_this select 0) setVariable ["DRT_Hit", true];
+			}]];
 		};
 
-		case 2: { 
-			_TargetArray = Dry_Array_2;		
-		};
+		_Live pushBack _x;
+	} forEach _x;
+} forEach _Compounds;
 
-		case 3: { 
-			_TargetArray = Dry_Array_3;	
-		};
+// Flicker out (inspired by AI_Death.sqf) and finish fully hidden. Reset brings it back.
+private _FadeOut = {
+	params ["_Target", "_DeathDelay"];
 
-		default { systemChat format["No selection found. Value: %1",_RandomSelect]}
-	};
-	[_TargetArray,_RandomSelect]
+	sleep _DeathDelay;
+	{
+		_x params ["_Count", "_Time"];
+		for "_i" from 1 to _Count do {
+			_Target hideObjectGlobal true;  sleep _Time;
+			_Target hideObjectGlobal false; sleep _Time;
+		};
+	} forEach [[3, 0.15], [3, 0.10], [4, 0.05]];
+	_Target hideObjectGlobal true;
 };
 
-private _ActivateCompound = {
-	Params ["_TargetArray"];
-	// Wait Until Players in Range
-	waitUntil{
-		sleep 0.25;
-		{_X distance2d (selectRandom _TargetArray) < 110} count AllPlayers > 0
-	};
+// One loop for every target. Each target:
+//  - stays down until a player comes within its own range, then pops up on its own,
+//  - turns to face the nearest player while it is up,
+//  - once shot, stops turning, waits, then fades out.
+private _Run = {
+	params ["_Live", "_FaceOffset", "_TurnInterval", "_MinTurn", "_DeathDelay", "_FadeOut"];
 
-	// Animate Targets to Pop-up
-	{
-		_X animateSource ["terc", 0]
-	} foreach _TargetArray;
+	while {_Live isNotEqualTo []} do {
+		private _Players = allPlayers select {alive _x};
+
+		{
+			private _Target = _x;
+			private _Pairs = _Players apply {[_Target distance2D _x, _x]};
+			_Pairs sort true;
+			private _Nearest = if (_Pairs isEqualTo []) then {[1e10, objNull]} else {_Pairs select 0};
+
+			if !(_Target getVariable "DRT_Active") then {
+				if ((_Nearest select 0) < (_Target getVariable "DRT_Range")) then {
+					_Target setVariable ["DRT_Active", true];
+					_Target animateSource ["terc", 0];
+				};
+			} else {
+				private _Phase = _Target animationSourcePhase "terc";
+				if (_Phase < 0.5) then {_Target setVariable ["DRT_Popped", true]};
+
+				if (_Target getVariable "DRT_Hit" || {_Target getVariable "DRT_Popped" && {_Phase > 0.9}}) then {
+					// Downed: stop turning, keep it down, then fade it out.
+					_Live deleteAt (_Live find _Target);
+					_Target animateSource ["terc", 1];
+					DRT_Handles pushBack ([_Target, _DeathDelay] spawn _FadeOut);
+				} else {
+					if (!isNull (_Nearest select 1)) then {
+						private _Dir = (_Target getDir (_Nearest select 1)) + _FaceOffset;
+						if (abs (((_Dir - (getDir _Target)) + 540) % 360 - 180) > _MinTurn) then {
+							_Target setDir _Dir;
+						};
+					};
+				};
+			};
+		} forEach +_Live;
+
+		sleep _TurnInterval;
+	};
 };
 
-// Compound
-_Array = [] call _SelectRandomArray;
-_Array Params ["_TargetArray","_RandomSelected"];
-SystemChat format ["Compound %1 Selected",_RandomSelected];
-[_TargetArray] spawn _ActivateCompound;
+// Short pause after the reset, then tell everyone the course is live.
+sleep 0.4;
+["INSTRUCTOR", "side", "Dry run course started"] spawn OKS_fnc_ChatGlobal;
 
-_AllRandomNumbers = [1,2,3];
-_AllRandomNumbers deleteAt (_RandomSelected - 1);
-_RandomSelect = selectRandom _AllRandomNumbers;
-_Array = [_RandomSelect] call _SelectRandomArray;
-[_TargetArray] spawn _ActivateCompound;
-SystemChat format ["Compound %1 Selected",_RandomSelect];
+DRT_Handles pushBack ([_Live, _FaceOffset, _TurnInterval, _MinTurn, _DeathDelay, _FadeOut] spawn _Run);

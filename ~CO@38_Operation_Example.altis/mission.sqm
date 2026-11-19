@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=16161;
+		nextID=16192;
 	};
 	class Camera
 	{
-		pos[]={7760.3896,54.142315,11036.968};
-		dir[]={0.70253003,-0.46673316,-0.5372259};
-		up[]={0.37075388,0.88439816,-0.28351614};
-		aside[]={-0.60744798,-1.4901161e-08,-0.79435939};
+		pos[]={7833.9507,54.142315,11003.713};
+		dir[]={0.84733522,-0.42661697,-0.31626186};
+		up[]={0.39968494,0.90443188,-0.14917958};
+		aside[]={-0.34967959,3.3236574e-08,-0.9368704};
 	};
 };
 binarizationWanted=0;
@@ -41163,7 +41163,7 @@ class Mission
 					fillName="DiagGrid";
 					a=30;
 					b=37.476852;
-					angle=227.01329;
+					angle=227.01326;
 					id=4943;
 				};
 				class Item43
@@ -41177,7 +41177,7 @@ class Mission
 					fillName="SolidFull";
 					a=7.5;
 					b=37.476852;
-					angle=227.01329;
+					angle=227.01326;
 					id=4944;
 				};
 				class Item44
@@ -46678,7 +46678,7 @@ class Mission
 			colorName="ColorEAST";
 			a=0.60000002;
 			b=0.60000002;
-			angle=225.422;
+			angle=225.42197;
 			id=6267;
 			class CustomAttributes
 			{
